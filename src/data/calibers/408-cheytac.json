@@ -1,0 +1,79 @@
+{
+  "name": ".408 CheyTac",
+  "designation": ".408 CheyTac",
+  "aliases": [".408 CT", "10.36×77mm"],
+  "category": "magnum_rifle",
+  "slug": "408-cheytac",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.408,
+    "neck_diameter_in": 0.440,
+    "case_length_in": 3.040,
+    "overall_length_in": 4.300,
+    "rim_diameter_in": 0.580,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [2800, 3000],
+  "typical_energy_ft_lbs": [7500, 9500],
+  "typical_bullet_weight_gr": [305, 419],
+  "effective_range_yd": 2200,
+  "max_range_yd": 4200,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 55.0,
+    "reference_firearm": "CheyTac M200 Intervention (29\" barrel, 27 lbs)",
+    "subjective": "very_heavy"
+  },
+
+  "year_introduced": 2001,
+  "country_of_origin": "USA",
+  "military_usage": ["Special operations units (various nations)", "Turkish Armed Forces (JMK .408)", "Polish GROM (CheyTac M200)"],
+  "le_usage": [],
+  "primary_use_cases": ["extreme long-range precision", "anti-personnel sniping", "military sniping"],
+
+  "popularity_tier": "rare",
+  "cost_per_round_usd": [6.00, 12.00],
+  "common_firearms": ["CheyTac M200 Intervention", "CheyTac M300", "EDM Arms Windrunner"],
+
+  "loads": [
+    {
+      "name": "CheyTac 419 gr Solid Copper",
+      "bullet_weight_gr": 419,
+      "bullet_type": "Solid Copper (Lathe-Turned)",
+      "muzzle_velocity_fps": 2850,
+      "muzzle_energy_ft_lbs": 9528,
+      "barrel_length_in": 29.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2850, "energy_ft_lbs": 9528, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2782, "energy_ft_lbs": 9080, "drop_in": -1.3 },
+        { "distance_yd": 200, "velocity_fps": 2715, "energy_ft_lbs": 8648, "drop_in": -5.4 },
+        { "distance_yd": 300, "velocity_fps": 2649, "energy_ft_lbs": 8230, "drop_in": -12.5 },
+        { "distance_yd": 400, "velocity_fps": 2584, "energy_ft_lbs": 7825, "drop_in": -22.8 },
+        { "distance_yd": 500, "velocity_fps": 2520, "energy_ft_lbs": 7435, "drop_in": -36.7 },
+        { "distance_yd": 600, "velocity_fps": 2457, "energy_ft_lbs": 7058, "drop_in": -54.4 },
+        { "distance_yd": 800, "velocity_fps": 2334, "energy_ft_lbs": 6342, "drop_in": -101.6 },
+        { "distance_yd": 1000, "velocity_fps": 2214, "energy_ft_lbs": 5691, "drop_in": -167.5 }
+      ]
+    },
+    {
+      "name": "Peterson 305 gr Hornady A-TIP",
+      "bullet_weight_gr": 305,
+      "bullet_type": "A-TIP Match",
+      "muzzle_velocity_fps": 3000,
+      "muzzle_energy_ft_lbs": 6099,
+      "barrel_length_in": 29.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 3000, "energy_ft_lbs": 6099, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2918, "energy_ft_lbs": 5770, "drop_in": -1.2 },
+        { "distance_yd": 200, "velocity_fps": 2837, "energy_ft_lbs": 5452, "drop_in": -5.0 },
+        { "distance_yd": 300, "velocity_fps": 2758, "energy_ft_lbs": 5147, "drop_in": -11.6 },
+        { "distance_yd": 400, "velocity_fps": 2680, "energy_ft_lbs": 4854, "drop_in": -21.3 },
+        { "distance_yd": 500, "velocity_fps": 2604, "energy_ft_lbs": 4573, "drop_in": -34.4 },
+        { "distance_yd": 600, "velocity_fps": 2529, "energy_ft_lbs": 4304, "drop_in": -51.2 },
+        { "distance_yd": 800, "velocity_fps": 2383, "energy_ft_lbs": 3798, "drop_in": -96.5 },
+        { "distance_yd": 1000, "velocity_fps": 2242, "energy_ft_lbs": 3340, "drop_in": -161.0 }
+      ]
+    }
+  ]
+}

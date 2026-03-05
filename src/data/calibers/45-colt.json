@@ -1,0 +1,71 @@
+{
+  "name": ".45 Colt",
+  "designation": ".45 Colt",
+  "aliases": [".45 Long Colt", ".45 LC", "11.43×35mmR"],
+  "category": "magnum_handgun",
+  "slug": "45-colt",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.452,
+    "neck_diameter_in": 0.480,
+    "case_length_in": 1.285,
+    "overall_length_in": 1.600,
+    "rim_diameter_in": 0.512,
+    "case_type": "rimmed, straight"
+  },
+
+  "typical_velocity_fps": [750, 1000],
+  "typical_energy_ft_lbs": [350, 600],
+  "typical_bullet_weight_gr": [200, 300],
+  "effective_range_yd": 50,
+  "max_range_yd": 1600,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 8.5,
+    "reference_firearm": "Ruger Vaquero (4.62\" barrel, 40 oz)",
+    "subjective": "moderate"
+  },
+
+  "year_introduced": 1872,
+  "country_of_origin": "USA",
+  "military_usage": ["U.S. Army standard sidearm cartridge (1873–1892)", "Philippine–American War", "Indian Wars"],
+  "le_usage": ["U.S. frontier law enforcement (historical)", "Texas Rangers (historical)"],
+  "primary_use_cases": ["cowboy action shooting", "hunting", "self-defense", "lever-action rifle cartridge", "recreational shooting"],
+
+  "popularity_tier": "common",
+  "cost_per_round_usd": [0.50, 1.75],
+  "common_firearms": ["Ruger Vaquero", "Colt Single Action Army", "Smith & Wesson Model 25", "Ruger Blackhawk", "Taurus Judge", "Henry Big Boy"],
+
+  "loads": [
+    {
+      "name": "Federal American Eagle 225 gr JSP",
+      "bullet_weight_gr": 225,
+      "bullet_type": "JSP",
+      "muzzle_velocity_fps": 830,
+      "muzzle_energy_ft_lbs": 344,
+      "barrel_length_in": 4.75,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 830, "energy_ft_lbs": 344, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 802, "energy_ft_lbs": 322, "drop_in": -0.5 },
+        { "distance_yd": 50, "velocity_fps": 776, "energy_ft_lbs": 301, "drop_in": -2.3 },
+        { "distance_yd": 75, "velocity_fps": 752, "energy_ft_lbs": 283, "drop_in": -5.9 },
+        { "distance_yd": 100, "velocity_fps": 729, "energy_ft_lbs": 266, "drop_in": -11.7 }
+      ]
+    },
+    {
+      "name": "Hornady LEVERevolution 225 gr FTX",
+      "bullet_weight_gr": 225,
+      "bullet_type": "FTX",
+      "muzzle_velocity_fps": 960,
+      "muzzle_energy_ft_lbs": 460,
+      "barrel_length_in": 4.75,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 960, "energy_ft_lbs": 460, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 925, "energy_ft_lbs": 428, "drop_in": -0.3 },
+        { "distance_yd": 50, "velocity_fps": 893, "energy_ft_lbs": 398, "drop_in": -1.5 },
+        { "distance_yd": 75, "velocity_fps": 862, "energy_ft_lbs": 371, "drop_in": -4.1 },
+        { "distance_yd": 100, "velocity_fps": 833, "energy_ft_lbs": 347, "drop_in": -8.3 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "name": ".450 Bushmaster",
+  "designation": ".450 Bushmaster",
+  "aliases": [".450 BM"],
+  "category": "rifle",
+  "slug": "450-bushmaster",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.452,
+    "neck_diameter_in": 0.480,
+    "case_length_in": 1.700,
+    "overall_length_in": 2.260,
+    "rim_diameter_in": 0.473,
+    "case_type": "rimless (rebated), straight-wall"
+  },
+
+  "typical_velocity_fps": [1800, 2200],
+  "typical_energy_ft_lbs": [2100, 2700],
+  "typical_bullet_weight_gr": [158, 300],
+  "effective_range_yd": 250,
+  "max_range_yd": 2000,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 22.0,
+    "reference_firearm": "Ruger American Ranch (16.12\" barrel, 6.5 lbs)",
+    "subjective": "heavy"
+  },
+
+  "year_introduced": 2007,
+  "country_of_origin": "USA",
+  "military_usage": ["No military adoption"],
+  "le_usage": ["No significant law enforcement adoption"],
+  "primary_use_cases": ["deer hunting (straight-wall states)", "big game hunting", "hog hunting", "brush gun"],
+
+  "popularity_tier": "niche",
+  "cost_per_round_usd": [1.20, 3.00],
+  "common_firearms": ["Ruger American Ranch", "Savage 110 Brush Hunter", "Bushmaster XM-15", "AR-15 upper receivers", "Ruger Scout"],
+
+  "loads": [
+    {
+      "name": "Hornady BLACK 250 gr FTX",
+      "bullet_weight_gr": 250,
+      "bullet_type": "FTX",
+      "muzzle_velocity_fps": 2200,
+      "muzzle_energy_ft_lbs": 2686,
+      "barrel_length_in": 20.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2200, "energy_ft_lbs": 2686, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 1934, "energy_ft_lbs": 2078, "drop_in": -4.0 },
+        { "distance_yd": 200, "velocity_fps": 1691, "energy_ft_lbs": 1588, "drop_in": -16.4 },
+        { "distance_yd": 300, "velocity_fps": 1474, "energy_ft_lbs": 1207, "drop_in": -40.5 },
+        { "distance_yd": 400, "velocity_fps": 1290, "energy_ft_lbs": 924, "drop_in": -80.2 },
+        { "distance_yd": 500, "velocity_fps": 1145, "energy_ft_lbs": 728, "drop_in": -140.0 }
+      ]
+    },
+    {
+      "name": "Federal Power-Shok 300 gr JHP",
+      "bullet_weight_gr": 300,
+      "bullet_type": "JHP",
+      "muzzle_velocity_fps": 1900,
+      "muzzle_energy_ft_lbs": 2405,
+      "barrel_length_in": 20.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1900, "energy_ft_lbs": 2405, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 1651, "energy_ft_lbs": 1817, "drop_in": -5.6 },
+        { "distance_yd": 200, "velocity_fps": 1431, "energy_ft_lbs": 1364, "drop_in": -22.5 },
+        { "distance_yd": 300, "velocity_fps": 1247, "energy_ft_lbs": 1037, "drop_in": -55.0 },
+        { "distance_yd": 400, "velocity_fps": 1107, "energy_ft_lbs": 817, "drop_in": -108.0 },
+        { "distance_yd": 500, "velocity_fps": 1005, "energy_ft_lbs": 673, "drop_in": -188.0 }
+      ]
+    }
+  ]
+}

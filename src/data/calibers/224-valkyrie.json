@@ -1,0 +1,73 @@
+{
+  "name": ".224 Valkyrie",
+  "designation": ".224 Valkyrie",
+  "aliases": [".224 Valk"],
+  "category": "rifle",
+  "slug": "224-valkyrie",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.224,
+    "neck_diameter_in": 0.256,
+    "case_length_in": 1.600,
+    "overall_length_in": 2.260,
+    "rim_diameter_in": 0.422,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [2650, 3300],
+  "typical_energy_ft_lbs": [1300, 1650],
+  "typical_bullet_weight_gr": [60, 90],
+  "effective_range_yd": 800,
+  "max_range_yd": 4500,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 4.0,
+    "reference_firearm": "AR-15 platform (20\" barrel, 7.5 lbs)",
+    "subjective": "very_low"
+  },
+
+  "year_introduced": 2018,
+  "country_of_origin": "USA",
+  "military_usage": ["No military adoption"],
+  "le_usage": ["No significant law enforcement adoption"],
+  "primary_use_cases": ["long-range target shooting from AR-15", "varmint hunting", "predator hunting", "competition"],
+
+  "popularity_tier": "niche",
+  "cost_per_round_usd": [0.80, 2.50],
+  "common_firearms": ["AR-15 variants (6.8 SPC bolt)", "Savage MSR 15 Valkyrie", "CMMG Endeavor", "JP Enterprises LRP-07"],
+
+  "loads": [
+    {
+      "name": "Federal Gold Medal 90 gr SMK",
+      "bullet_weight_gr": 90,
+      "bullet_type": "SMK",
+      "muzzle_velocity_fps": 2700,
+      "muzzle_energy_ft_lbs": 1457,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2700, "energy_ft_lbs": 1457, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2557, "energy_ft_lbs": 1307, "drop_in": -2.0 },
+        { "distance_yd": 200, "velocity_fps": 2418, "energy_ft_lbs": 1168, "drop_in": -8.3 },
+        { "distance_yd": 300, "velocity_fps": 2284, "energy_ft_lbs": 1042, "drop_in": -19.6 },
+        { "distance_yd": 400, "velocity_fps": 2155, "energy_ft_lbs": 928, "drop_in": -36.1 },
+        { "distance_yd": 500, "velocity_fps": 2030, "energy_ft_lbs": 824, "drop_in": -58.4 }
+      ]
+    },
+    {
+      "name": "Federal American Eagle 75 gr TMJ",
+      "bullet_weight_gr": 75,
+      "bullet_type": "TMJ",
+      "muzzle_velocity_fps": 3000,
+      "muzzle_energy_ft_lbs": 1499,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 3000, "energy_ft_lbs": 1499, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2774, "energy_ft_lbs": 1282, "drop_in": -1.6 },
+        { "distance_yd": 200, "velocity_fps": 2559, "energy_ft_lbs": 1091, "drop_in": -7.1 },
+        { "distance_yd": 300, "velocity_fps": 2354, "energy_ft_lbs": 924, "drop_in": -17.0 },
+        { "distance_yd": 400, "velocity_fps": 2159, "energy_ft_lbs": 777, "drop_in": -32.2 },
+        { "distance_yd": 500, "velocity_fps": 1974, "energy_ft_lbs": 649, "drop_in": -53.8 }
+      ]
+    }
+  ]
+}

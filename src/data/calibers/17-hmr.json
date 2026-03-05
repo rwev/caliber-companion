@@ -1,0 +1,73 @@
+{
+  "name": ".17 Hornady Magnum Rimfire",
+  "designation": ".17 Hornady Magnum Rimfire",
+  "aliases": [".17 HMR"],
+  "category": "rifle",
+  "slug": "17-hmr",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.172,
+    "neck_diameter_in": 0.190,
+    "case_length_in": 1.058,
+    "overall_length_in": 1.349,
+    "rim_diameter_in": 0.286,
+    "case_type": "rimmed, bottleneck"
+  },
+
+  "typical_velocity_fps": [2350, 2650],
+  "typical_energy_ft_lbs": [200, 260],
+  "typical_bullet_weight_gr": [15, 20],
+  "effective_range_yd": 200,
+  "max_range_yd": 1800,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 1.0,
+    "reference_firearm": "Savage 93R17 (21\" barrel, 5.0 lbs)",
+    "subjective": "very_low"
+  },
+
+  "year_introduced": 2002,
+  "country_of_origin": "USA",
+  "military_usage": [],
+  "le_usage": [],
+  "primary_use_cases": ["small game hunting", "varmint hunting", "pest control", "plinking", "target shooting"],
+
+  "popularity_tier": "common",
+  "cost_per_round_usd": [0.20, 0.45],
+  "common_firearms": ["Savage 93R17", "Ruger 77/17", "CZ 455", "Marlin 917", "Henry Varmint Express"],
+
+  "loads": [
+    {
+      "name": "Hornady V-Max 17 gr",
+      "bullet_weight_gr": 17,
+      "bullet_type": "V-Max (Polymer Tip)",
+      "muzzle_velocity_fps": 2550,
+      "muzzle_energy_ft_lbs": 245,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2550, "energy_ft_lbs": 245, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2042, "energy_ft_lbs": 157, "drop_in": -2.5 },
+        { "distance_yd": 200, "velocity_fps": 1601, "energy_ft_lbs": 97, "drop_in": -12.8 },
+        { "distance_yd": 300, "velocity_fps": 1243, "energy_ft_lbs": 58, "drop_in": -36.8 },
+        { "distance_yd": 400, "velocity_fps": 1018, "energy_ft_lbs": 39, "drop_in": -82.5 },
+        { "distance_yd": 500, "velocity_fps": 893, "energy_ft_lbs": 30, "drop_in": -160.0 }
+      ]
+    },
+    {
+      "name": "CCI TNT 17 gr Jacketed Hollow Point",
+      "bullet_weight_gr": 17,
+      "bullet_type": "JHP (TNT)",
+      "muzzle_velocity_fps": 2550,
+      "muzzle_energy_ft_lbs": 245,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2550, "energy_ft_lbs": 245, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2023, "energy_ft_lbs": 154, "drop_in": -2.6 },
+        { "distance_yd": 200, "velocity_fps": 1571, "energy_ft_lbs": 93, "drop_in": -13.2 },
+        { "distance_yd": 300, "velocity_fps": 1214, "energy_ft_lbs": 56, "drop_in": -38.0 },
+        { "distance_yd": 400, "velocity_fps": 1003, "energy_ft_lbs": 38, "drop_in": -85.0 },
+        { "distance_yd": 500, "velocity_fps": 886, "energy_ft_lbs": 30, "drop_in": -164.5 }
+      ]
+    }
+  ]
+}

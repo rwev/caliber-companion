@@ -1,0 +1,73 @@
+{
+  "name": ".223 Remington",
+  "designation": ".223 Remington",
+  "aliases": [".223 Rem", ".223"],
+  "category": "rifle",
+  "slug": "223-remington",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.224,
+    "neck_diameter_in": 0.253,
+    "case_length_in": 1.76,
+    "overall_length_in": 2.26,
+    "rim_diameter_in": 0.378,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [2700, 3300],
+  "typical_energy_ft_lbs": [1100, 1300],
+  "typical_bullet_weight_gr": [40, 77],
+  "effective_range_yd": 500,
+  "max_range_yd": 3875,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 3.5,
+    "reference_firearm": "AR-15 (20\" barrel, 7.5 lbs)",
+    "subjective": "very_low"
+  },
+
+  "year_introduced": 1964,
+  "country_of_origin": "USA",
+  "military_usage": ["Commercial equivalent of 5.56×45mm NATO", "Used in training and civilian marksmanship programs"],
+  "le_usage": ["Patrol rifle cartridge for most U.S. law enforcement agencies", "SWAT entry teams", "FBI"],
+  "primary_use_cases": ["varmint hunting", "target shooting", "home defense", "competition", "plinking"],
+
+  "popularity_tier": "ubiquitous",
+  "cost_per_round_usd": [0.25, 1.50],
+  "common_firearms": ["AR-15 (various manufacturers)", "Ruger Mini-14", "Ruger American Ranch", "Savage Axis", "Remington 700", "CZ 527"],
+
+  "loads": [
+    {
+      "name": "Federal American Eagle 55 gr FMJ",
+      "bullet_weight_gr": 55,
+      "bullet_type": "FMJ-BT",
+      "muzzle_velocity_fps": 3240,
+      "muzzle_energy_ft_lbs": 1282,
+      "barrel_length_in": 20.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 3240, "energy_ft_lbs": 1282, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2854, "energy_ft_lbs": 995, "drop_in": -1.1 },
+        { "distance_yd": 200, "velocity_fps": 2500, "energy_ft_lbs": 764, "drop_in": -5.3 },
+        { "distance_yd": 300, "velocity_fps": 2171, "energy_ft_lbs": 576, "drop_in": -14.0 },
+        { "distance_yd": 400, "velocity_fps": 1868, "energy_ft_lbs": 426, "drop_in": -28.6 },
+        { "distance_yd": 500, "velocity_fps": 1595, "energy_ft_lbs": 311, "drop_in": -50.9 }
+      ]
+    },
+    {
+      "name": "Hornady Black 75 gr BTHP",
+      "bullet_weight_gr": 75,
+      "bullet_type": "BTHP",
+      "muzzle_velocity_fps": 2790,
+      "muzzle_energy_ft_lbs": 1296,
+      "barrel_length_in": 20.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2790, "energy_ft_lbs": 1296, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2590, "energy_ft_lbs": 1117, "drop_in": -1.6 },
+        { "distance_yd": 200, "velocity_fps": 2399, "energy_ft_lbs": 958, "drop_in": -7.0 },
+        { "distance_yd": 300, "velocity_fps": 2215, "energy_ft_lbs": 817, "drop_in": -16.9 },
+        { "distance_yd": 400, "velocity_fps": 2039, "energy_ft_lbs": 692, "drop_in": -32.1 },
+        { "distance_yd": 500, "velocity_fps": 1872, "energy_ft_lbs": 583, "drop_in": -53.4 }
+      ]
+    }
+  ]
+}

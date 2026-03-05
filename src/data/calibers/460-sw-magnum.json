@@ -1,0 +1,71 @@
+{
+  "name": ".460 S&W Magnum",
+  "designation": ".460 Smith & Wesson Magnum",
+  "aliases": [".460 S&W", ".460 Mag"],
+  "category": "magnum_handgun",
+  "slug": "460-sw-magnum",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.452,
+    "neck_diameter_in": 0.478,
+    "case_length_in": 1.800,
+    "overall_length_in": 2.290,
+    "rim_diameter_in": 0.520,
+    "case_type": "rimmed, straight"
+  },
+
+  "typical_velocity_fps": [1400, 2300],
+  "typical_energy_ft_lbs": [1400, 2900],
+  "typical_bullet_weight_gr": [200, 395],
+  "effective_range_yd": 150,
+  "max_range_yd": 2800,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 40.0,
+    "reference_firearm": "Smith & Wesson Model 460XVR (8.38\" barrel, 72.5 oz)",
+    "subjective": "very_heavy"
+  },
+
+  "year_introduced": 2005,
+  "country_of_origin": "USA",
+  "military_usage": ["No military adoption"],
+  "le_usage": ["No standard law enforcement adoption"],
+  "primary_use_cases": ["handgun hunting", "dangerous game defense", "long-range handgun shooting", "bear defense"],
+
+  "popularity_tier": "rare",
+  "cost_per_round_usd": [2.00, 5.00],
+  "common_firearms": ["Smith & Wesson Model 460XVR", "Magnum Research BFR"],
+
+  "loads": [
+    {
+      "name": "Hornady SST 200 gr FTX",
+      "bullet_weight_gr": 200,
+      "bullet_type": "FTX",
+      "muzzle_velocity_fps": 2300,
+      "muzzle_energy_ft_lbs": 2350,
+      "barrel_length_in": 8.38,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2300, "energy_ft_lbs": 2350, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 2200, "energy_ft_lbs": 2149, "drop_in": 0.0 },
+        { "distance_yd": 50, "velocity_fps": 2104, "energy_ft_lbs": 1965, "drop_in": -0.2 },
+        { "distance_yd": 75, "velocity_fps": 2011, "energy_ft_lbs": 1796, "drop_in": -0.6 },
+        { "distance_yd": 100, "velocity_fps": 1922, "energy_ft_lbs": 1641, "drop_in": -1.4 }
+      ]
+    },
+    {
+      "name": "Federal Power-Shok 275 gr EXPJHP",
+      "bullet_weight_gr": 275,
+      "bullet_type": "EXPJHP",
+      "muzzle_velocity_fps": 1800,
+      "muzzle_energy_ft_lbs": 1979,
+      "barrel_length_in": 8.38,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1800, "energy_ft_lbs": 1979, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 1725, "energy_ft_lbs": 1817, "drop_in": -0.1 },
+        { "distance_yd": 50, "velocity_fps": 1654, "energy_ft_lbs": 1670, "drop_in": -0.4 },
+        { "distance_yd": 75, "velocity_fps": 1586, "energy_ft_lbs": 1536, "drop_in": -1.1 },
+        { "distance_yd": 100, "velocity_fps": 1522, "energy_ft_lbs": 1414, "drop_in": -2.3 }
+      ]
+    }
+  ]
+}

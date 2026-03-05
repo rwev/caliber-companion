@@ -1,0 +1,71 @@
+{
+  "name": "20 Gauge",
+  "designation": "20 Gauge (15.63mm)",
+  "aliases": ["20 GA", "20 Bore"],
+  "category": "shotgun",
+  "slug": "20-gauge",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.615,
+    "neck_diameter_in": 0.686,
+    "case_length_in": 2.75,
+    "overall_length_in": 2.75,
+    "rim_diameter_in": 0.740,
+    "case_type": "rimmed, straight (plastic hull)"
+  },
+
+  "typical_velocity_fps": [1100, 1400],
+  "typical_energy_ft_lbs": [800, 1800],
+  "typical_bullet_weight_gr": [246, 437],
+  "effective_range_yd": 40,
+  "max_range_yd": 150,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 15.0,
+    "reference_firearm": "Remington 870 Express 20 GA (26\" barrel, 6.5 lbs)",
+    "subjective": "moderate"
+  },
+
+  "year_introduced": 1800,
+  "country_of_origin": "United Kingdom",
+  "military_usage": [],
+  "le_usage": ["Some police departments (reduced-recoil patrol shotgun)"],
+  "primary_use_cases": ["hunting", "sport shooting", "home defense", "clay target sports", "youth shooting"],
+
+  "popularity_tier": "very_common",
+  "cost_per_round_usd": [0.30, 2.50],
+  "common_firearms": ["Remington 870 Express 20 GA", "Mossberg 500 20 GA", "Benelli Montefeltro 20 GA", "Browning Citori 20 GA", "Beretta A400 20 GA"],
+
+  "loads": [
+    {
+      "name": "Federal Power-Shok 20 GA #3 Buckshot (2¾\")",
+      "bullet_weight_gr": 340,
+      "bullet_type": "#3 Buckshot (20 pellets, .250\" diameter)",
+      "muzzle_velocity_fps": 1200,
+      "muzzle_energy_ft_lbs": 1085,
+      "barrel_length_in": 26.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1200, "energy_ft_lbs": 1085, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 1065, "energy_ft_lbs": 856, "drop_in": -0.6 },
+        { "distance_yd": 50, "velocity_fps": 955, "energy_ft_lbs": 688, "drop_in": -3.2 },
+        { "distance_yd": 75, "velocity_fps": 875, "energy_ft_lbs": 578, "drop_in": -8.5 },
+        { "distance_yd": 100, "velocity_fps": 810, "energy_ft_lbs": 495, "drop_in": -17.0 }
+      ]
+    },
+    {
+      "name": "Remington Slugger 5/8 oz Rifled Slug",
+      "bullet_weight_gr": 273,
+      "bullet_type": "Rifled Slug",
+      "muzzle_velocity_fps": 1580,
+      "muzzle_energy_ft_lbs": 1513,
+      "barrel_length_in": 26.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1580, "energy_ft_lbs": 1513, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 1460, "energy_ft_lbs": 1293, "drop_in": -0.3 },
+        { "distance_yd": 50, "velocity_fps": 1350, "energy_ft_lbs": 1106, "drop_in": -1.6 },
+        { "distance_yd": 75, "velocity_fps": 1250, "energy_ft_lbs": 948, "drop_in": -4.5 },
+        { "distance_yd": 100, "velocity_fps": 1165, "energy_ft_lbs": 823, "drop_in": -9.2 }
+      ]
+    }
+  ]
+}

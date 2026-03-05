@@ -1,0 +1,73 @@
+{
+  "name": "5.56×45mm NATO",
+  "designation": "5.56×45mm",
+  "aliases": ["5.56 NATO", ".223 Remington (commercial equivalent)"],
+  "category": "rifle",
+  "slug": "556x45mm-nato",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.224,
+    "neck_diameter_in": 0.253,
+    "case_length_in": 1.760,
+    "overall_length_in": 2.260,
+    "rim_diameter_in": 0.378,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [2750, 3260],
+  "typical_energy_ft_lbs": [1100, 1380],
+  "typical_bullet_weight_gr": [55, 77],
+  "effective_range_yd": 500,
+  "max_range_yd": 3600,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 3.8,
+    "reference_firearm": "M4 Carbine (14.5\" barrel, 6.4 lbs)",
+    "subjective": "low"
+  },
+
+  "year_introduced": 1964,
+  "country_of_origin": "USA",
+  "military_usage": ["NATO standard rifle cartridge", "U.S. Military (M4 Carbine, M16, M249 SAW)", "Most NATO and allied armed forces"],
+  "le_usage": ["FBI", "U.S. Border Patrol", "Most U.S. police patrol rifles"],
+  "primary_use_cases": ["military service rifle", "law enforcement patrol rifle", "home defense", "target shooting", "varmint hunting", "competition"],
+
+  "popularity_tier": "ubiquitous",
+  "cost_per_round_usd": [0.30, 1.20],
+  "common_firearms": ["AR-15 variants", "M4 Carbine", "FN SCAR 16S", "Ruger Mini-14", "IWI Tavor"],
+
+  "loads": [
+    {
+      "name": "Federal XM193 55 gr FMJ",
+      "bullet_weight_gr": 55,
+      "bullet_type": "FMJ",
+      "muzzle_velocity_fps": 3165,
+      "muzzle_energy_ft_lbs": 1225,
+      "barrel_length_in": 20.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 3165, "energy_ft_lbs": 1225, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2854, "energy_ft_lbs": 996, "drop_in": -2.0 },
+        { "distance_yd": 200, "velocity_fps": 2563, "energy_ft_lbs": 803, "drop_in": -8.5 },
+        { "distance_yd": 300, "velocity_fps": 2290, "energy_ft_lbs": 641, "drop_in": -20.7 },
+        { "distance_yd": 400, "velocity_fps": 2034, "energy_ft_lbs": 506, "drop_in": -40.2 },
+        { "distance_yd": 500, "velocity_fps": 1796, "energy_ft_lbs": 394, "drop_in": -69.0 }
+      ]
+    },
+    {
+      "name": "Federal Gold Medal 77 gr SMK",
+      "bullet_weight_gr": 77,
+      "bullet_type": "OTM",
+      "muzzle_velocity_fps": 2720,
+      "muzzle_energy_ft_lbs": 1265,
+      "barrel_length_in": 20.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2720, "energy_ft_lbs": 1265, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2511, "energy_ft_lbs": 1079, "drop_in": -2.6 },
+        { "distance_yd": 200, "velocity_fps": 2312, "energy_ft_lbs": 914, "drop_in": -10.4 },
+        { "distance_yd": 300, "velocity_fps": 2121, "energy_ft_lbs": 770, "drop_in": -24.3 },
+        { "distance_yd": 400, "velocity_fps": 1939, "energy_ft_lbs": 643, "drop_in": -45.5 },
+        { "distance_yd": 500, "velocity_fps": 1767, "energy_ft_lbs": 534, "drop_in": -75.6 }
+      ]
+    }
+  ]
+}

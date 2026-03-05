@@ -1,0 +1,73 @@
+{
+  "name": ".30 Carbine",
+  "designation": ".30 Carbine",
+  "aliases": ["7.62×33mm"],
+  "category": "rifle",
+  "slug": "30-carbine",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.308,
+    "neck_diameter_in": 0.336,
+    "case_length_in": 1.290,
+    "overall_length_in": 1.680,
+    "rim_diameter_in": 0.360,
+    "case_type": "rimless, straight"
+  },
+
+  "typical_velocity_fps": [1900, 2000],
+  "typical_energy_ft_lbs": [900, 975],
+  "typical_bullet_weight_gr": [110, 110],
+  "effective_range_yd": 200,
+  "max_range_yd": 2000,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 4.0,
+    "reference_firearm": "M1 Carbine (18\" barrel, 5.2 lbs)",
+    "subjective": "very_low"
+  },
+
+  "year_introduced": 1940,
+  "country_of_origin": "USA",
+  "military_usage": ["U.S. Military standard carbine cartridge (WWII and Korean War)", "M1 Carbine, M1A1, M2 Carbine platforms", "Various allied and post-war militaries worldwide"],
+  "le_usage": ["U.S. police departments (1950s–1970s)"],
+  "primary_use_cases": ["military carbine", "home defense", "target shooting", "plinking"],
+
+  "popularity_tier": "common",
+  "cost_per_round_usd": [0.40, 1.20],
+  "common_firearms": ["M1 Carbine", "M2 Carbine", "Ruger Blackhawk revolver", "Auto-Ordnance M1 Carbine", "Inland M1 Carbine"],
+
+  "loads": [
+    {
+      "name": "Federal American Eagle 110 gr FMJ",
+      "bullet_weight_gr": 110,
+      "bullet_type": "FMJ",
+      "muzzle_velocity_fps": 1990,
+      "muzzle_energy_ft_lbs": 967,
+      "barrel_length_in": 18.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1990, "energy_ft_lbs": 967, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 1754, "energy_ft_lbs": 752, "drop_in": -5.5 },
+        { "distance_yd": 200, "velocity_fps": 1541, "energy_ft_lbs": 580, "drop_in": -21.0 },
+        { "distance_yd": 300, "velocity_fps": 1356, "energy_ft_lbs": 449, "drop_in": -50.5 },
+        { "distance_yd": 400, "velocity_fps": 1205, "energy_ft_lbs": 355, "drop_in": -99.0 },
+        { "distance_yd": 500, "velocity_fps": 1094, "energy_ft_lbs": 292, "drop_in": -172.0 }
+      ]
+    },
+    {
+      "name": "Hornady FTX 110 gr",
+      "bullet_weight_gr": 110,
+      "bullet_type": "FTX",
+      "muzzle_velocity_fps": 2000,
+      "muzzle_energy_ft_lbs": 977,
+      "barrel_length_in": 18.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2000, "energy_ft_lbs": 977, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 1789, "energy_ft_lbs": 782, "drop_in": -5.3 },
+        { "distance_yd": 200, "velocity_fps": 1596, "energy_ft_lbs": 622, "drop_in": -19.8 },
+        { "distance_yd": 300, "velocity_fps": 1422, "energy_ft_lbs": 494, "drop_in": -47.0 },
+        { "distance_yd": 400, "velocity_fps": 1272, "energy_ft_lbs": 395, "drop_in": -91.5 },
+        { "distance_yd": 500, "velocity_fps": 1152, "energy_ft_lbs": 324, "drop_in": -158.0 }
+      ]
+    }
+  ]
+}

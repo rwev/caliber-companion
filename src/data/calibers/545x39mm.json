@@ -1,0 +1,73 @@
+{
+  "name": "5.45×39mm",
+  "designation": "5.45×39mm",
+  "aliases": ["5.45 Soviet", "5.45×39"],
+  "category": "rifle",
+  "slug": "545x39mm",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.221,
+    "neck_diameter_in": 0.249,
+    "case_length_in": 1.535,
+    "overall_length_in": 2.244,
+    "rim_diameter_in": 0.394,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [2800, 3150],
+  "typical_energy_ft_lbs": [900, 1100],
+  "typical_bullet_weight_gr": [52, 80],
+  "effective_range_yd": 500,
+  "max_range_yd": 3150,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 3.0,
+    "reference_firearm": "AK-74 (16.3\" barrel, 7.3 lbs)",
+    "subjective": "very_low"
+  },
+
+  "year_introduced": 1974,
+  "country_of_origin": "Soviet Union",
+  "military_usage": ["Soviet/Russian standard rifle cartridge (1974–present)", "AK-74 and AK-74M platforms", "RPK-74 light machine gun", "Various former Soviet and allied nation militaries"],
+  "le_usage": ["Russian interior ministry forces"],
+  "primary_use_cases": ["military service rifle", "target shooting", "varmint hunting"],
+
+  "popularity_tier": "common",
+  "cost_per_round_usd": [0.25, 0.80],
+  "common_firearms": ["AK-74", "AK-74M", "AKS-74U", "RPK-74", "IWI Galil ACE 5.45"],
+
+  "loads": [
+    {
+      "name": "7N6 53 gr FMJ (surplus)",
+      "bullet_weight_gr": 53,
+      "bullet_type": "FMJ",
+      "muzzle_velocity_fps": 2953,
+      "muzzle_energy_ft_lbs": 1026,
+      "barrel_length_in": 16.3,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2953, "energy_ft_lbs": 1026, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2666, "energy_ft_lbs": 837, "drop_in": -2.3 },
+        { "distance_yd": 200, "velocity_fps": 2397, "energy_ft_lbs": 676, "drop_in": -9.5 },
+        { "distance_yd": 300, "velocity_fps": 2145, "energy_ft_lbs": 542, "drop_in": -22.8 },
+        { "distance_yd": 400, "velocity_fps": 1910, "energy_ft_lbs": 430, "drop_in": -43.5 },
+        { "distance_yd": 500, "velocity_fps": 1694, "energy_ft_lbs": 338, "drop_in": -73.8 }
+      ]
+    },
+    {
+      "name": "Hornady V-MAX 60 gr",
+      "bullet_weight_gr": 60,
+      "bullet_type": "Polymer Tip",
+      "muzzle_velocity_fps": 2810,
+      "muzzle_energy_ft_lbs": 1052,
+      "barrel_length_in": 16.3,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2810, "energy_ft_lbs": 1052, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2571, "energy_ft_lbs": 881, "drop_in": -2.5 },
+        { "distance_yd": 200, "velocity_fps": 2345, "energy_ft_lbs": 733, "drop_in": -10.2 },
+        { "distance_yd": 300, "velocity_fps": 2132, "energy_ft_lbs": 606, "drop_in": -24.0 },
+        { "distance_yd": 400, "velocity_fps": 1931, "energy_ft_lbs": 497, "drop_in": -45.2 },
+        { "distance_yd": 500, "velocity_fps": 1743, "energy_ft_lbs": 405, "drop_in": -76.0 }
+      ]
+    }
+  ]
+}

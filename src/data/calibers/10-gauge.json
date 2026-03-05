@@ -1,0 +1,71 @@
+{
+  "name": "10 Gauge",
+  "designation": "10 Gauge (19.69mm)",
+  "aliases": ["10 GA", "10 Bore"],
+  "category": "shotgun",
+  "slug": "10-gauge",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.775,
+    "neck_diameter_in": 0.860,
+    "case_length_in": 3.50,
+    "overall_length_in": 3.50,
+    "rim_diameter_in": 0.920,
+    "case_type": "rimmed, straight (plastic hull)"
+  },
+
+  "typical_velocity_fps": [1100, 1300],
+  "typical_energy_ft_lbs": [2000, 3500],
+  "typical_bullet_weight_gr": [546, 875],
+  "effective_range_yd": 55,
+  "max_range_yd": 200,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 40.0,
+    "reference_firearm": "Browning BPS 10 GA (28\" barrel, 10.5 lbs)",
+    "subjective": "very_heavy"
+  },
+
+  "year_introduced": 1800,
+  "country_of_origin": "United Kingdom",
+  "military_usage": [],
+  "le_usage": [],
+  "primary_use_cases": ["waterfowl hunting", "turkey hunting", "goose hunting"],
+
+  "popularity_tier": "niche",
+  "cost_per_round_usd": [1.00, 3.50],
+  "common_firearms": ["Browning BPS 10 GA", "Browning Gold 10 GA", "Remington SP-10"],
+
+  "loads": [
+    {
+      "name": "Federal Premium 10 GA BB Steel Shot (3½\")",
+      "bullet_weight_gr": 875,
+      "bullet_type": "BB Steel Shot (2 oz)",
+      "muzzle_velocity_fps": 1200,
+      "muzzle_energy_ft_lbs": 2800,
+      "barrel_length_in": 28.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1200, "energy_ft_lbs": 2800, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 1095, "energy_ft_lbs": 2330, "drop_in": -0.6 },
+        { "distance_yd": 50, "velocity_fps": 1005, "energy_ft_lbs": 1963, "drop_in": -3.0 },
+        { "distance_yd": 75, "velocity_fps": 935, "energy_ft_lbs": 1700, "drop_in": -7.8 },
+        { "distance_yd": 100, "velocity_fps": 880, "energy_ft_lbs": 1505, "drop_in": -15.5 }
+      ]
+    },
+    {
+      "name": "Remington Nitro Magnum 10 GA #4 Lead (3½\")",
+      "bullet_weight_gr": 765,
+      "bullet_type": "#4 Lead Shot (1.75 oz)",
+      "muzzle_velocity_fps": 1260,
+      "muzzle_energy_ft_lbs": 2700,
+      "barrel_length_in": 28.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1260, "energy_ft_lbs": 2700, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 1130, "energy_ft_lbs": 2172, "drop_in": -0.5 },
+        { "distance_yd": 50, "velocity_fps": 1025, "energy_ft_lbs": 1787, "drop_in": -2.7 },
+        { "distance_yd": 75, "velocity_fps": 945, "energy_ft_lbs": 1519, "drop_in": -7.2 },
+        { "distance_yd": 100, "velocity_fps": 885, "energy_ft_lbs": 1332, "drop_in": -14.5 }
+      ]
+    }
+  ]
+}

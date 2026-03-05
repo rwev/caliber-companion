@@ -1,0 +1,73 @@
+{
+  "name": ".204 Ruger",
+  "designation": ".204 Ruger",
+  "aliases": [".204"],
+  "category": "rifle",
+  "slug": "204-ruger",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.204,
+    "neck_diameter_in": 0.2311,
+    "case_length_in": 1.850,
+    "overall_length_in": 2.260,
+    "rim_diameter_in": 0.378,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [3600, 4400],
+  "typical_energy_ft_lbs": [900, 1350],
+  "typical_bullet_weight_gr": [24, 45],
+  "effective_range_yd": 400,
+  "max_range_yd": 3000,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 3.0,
+    "reference_firearm": "Ruger Model 77 (26\" barrel, 7.5 lbs)",
+    "subjective": "very_low"
+  },
+
+  "year_introduced": 2004,
+  "country_of_origin": "USA",
+  "military_usage": [],
+  "le_usage": [],
+  "primary_use_cases": ["varmint hunting", "predator hunting", "prairie dog shooting", "target shooting"],
+
+  "popularity_tier": "niche",
+  "cost_per_round_usd": [0.60, 1.80],
+  "common_firearms": ["Ruger Model 77", "Savage 12", "Ruger American", "Cooper Model 21", "Browning X-Bolt"],
+
+  "loads": [
+    {
+      "name": "Hornady V-Max 32 gr",
+      "bullet_weight_gr": 32,
+      "bullet_type": "V-Max (Polymer Tip)",
+      "muzzle_velocity_fps": 4225,
+      "muzzle_energy_ft_lbs": 1268,
+      "barrel_length_in": 26.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 4225, "energy_ft_lbs": 1268, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 3632, "energy_ft_lbs": 937, "drop_in": -0.5 },
+        { "distance_yd": 200, "velocity_fps": 3114, "energy_ft_lbs": 689, "drop_in": -3.3 },
+        { "distance_yd": 300, "velocity_fps": 2656, "energy_ft_lbs": 501, "drop_in": -9.8 },
+        { "distance_yd": 400, "velocity_fps": 2247, "energy_ft_lbs": 359, "drop_in": -21.2 },
+        { "distance_yd": 500, "velocity_fps": 1882, "energy_ft_lbs": 252, "drop_in": -39.1 }
+      ]
+    },
+    {
+      "name": "Hornady Superformance 40 gr V-Max",
+      "bullet_weight_gr": 40,
+      "bullet_type": "V-Max (Polymer Tip)",
+      "muzzle_velocity_fps": 3900,
+      "muzzle_energy_ft_lbs": 1351,
+      "barrel_length_in": 26.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 3900, "energy_ft_lbs": 1351, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 3451, "energy_ft_lbs": 1057, "drop_in": -0.7 },
+        { "distance_yd": 200, "velocity_fps": 3046, "energy_ft_lbs": 824, "drop_in": -3.8 },
+        { "distance_yd": 300, "velocity_fps": 2679, "energy_ft_lbs": 637, "drop_in": -10.6 },
+        { "distance_yd": 400, "velocity_fps": 2343, "energy_ft_lbs": 487, "drop_in": -22.0 },
+        { "distance_yd": 500, "velocity_fps": 2036, "energy_ft_lbs": 368, "drop_in": -39.5 }
+      ]
+    }
+  ]
+}

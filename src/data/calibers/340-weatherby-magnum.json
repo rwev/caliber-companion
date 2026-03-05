@@ -1,0 +1,73 @@
+{
+  "name": ".340 Weatherby Magnum",
+  "designation": ".340 Weatherby Magnum",
+  "aliases": [".340 Wby Mag"],
+  "category": "magnum_rifle",
+  "slug": "340-weatherby-magnum",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.338,
+    "neck_diameter_in": 0.369,
+    "case_length_in": 2.825,
+    "overall_length_in": 3.560,
+    "rim_diameter_in": 0.513,
+    "case_type": "belted, bottleneck"
+  },
+
+  "typical_velocity_fps": [2800, 3100],
+  "typical_energy_ft_lbs": [4100, 5100],
+  "typical_bullet_weight_gr": [200, 250],
+  "effective_range_yd": 600,
+  "max_range_yd": 4500,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 35.0,
+    "reference_firearm": "Weatherby Mark V Accumark (26\" barrel, 8.5 lbs)",
+    "subjective": "very_heavy"
+  },
+
+  "year_introduced": 1962,
+  "country_of_origin": "USA",
+  "military_usage": [],
+  "le_usage": [],
+  "primary_use_cases": ["elk hunting", "moose hunting", "long-range big game", "African plains game"],
+
+  "popularity_tier": "niche",
+  "cost_per_round_usd": [3.50, 7.00],
+  "common_firearms": ["Weatherby Mark V", "Weatherby Mark V Accumark", "Weatherby Vanguard"],
+
+  "loads": [
+    {
+      "name": "Weatherby Select Plus 225 gr Barnes TTSX",
+      "bullet_weight_gr": 225,
+      "bullet_type": "TTSX (Tipped Triple-Shock X)",
+      "muzzle_velocity_fps": 2970,
+      "muzzle_energy_ft_lbs": 4402,
+      "barrel_length_in": 26.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2970, "energy_ft_lbs": 4402, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2780, "energy_ft_lbs": 3860, "drop_in": -1.5 },
+        { "distance_yd": 200, "velocity_fps": 2597, "energy_ft_lbs": 3370, "drop_in": -6.2 },
+        { "distance_yd": 300, "velocity_fps": 2421, "energy_ft_lbs": 2928, "drop_in": -14.8 },
+        { "distance_yd": 400, "velocity_fps": 2253, "energy_ft_lbs": 2536, "drop_in": -27.8 },
+        { "distance_yd": 500, "velocity_fps": 2092, "energy_ft_lbs": 2186, "drop_in": -45.8 }
+      ]
+    },
+    {
+      "name": "Weatherby Select Plus 250 gr Nosler Partition",
+      "bullet_weight_gr": 250,
+      "bullet_type": "Nosler Partition",
+      "muzzle_velocity_fps": 2863,
+      "muzzle_energy_ft_lbs": 4551,
+      "barrel_length_in": 26.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2863, "energy_ft_lbs": 4551, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2665, "energy_ft_lbs": 3944, "drop_in": -1.6 },
+        { "distance_yd": 200, "velocity_fps": 2475, "energy_ft_lbs": 3403, "drop_in": -6.9 },
+        { "distance_yd": 300, "velocity_fps": 2294, "energy_ft_lbs": 2922, "drop_in": -16.6 },
+        { "distance_yd": 400, "velocity_fps": 2120, "energy_ft_lbs": 2497, "drop_in": -31.2 },
+        { "distance_yd": 500, "velocity_fps": 1955, "energy_ft_lbs": 2123, "drop_in": -51.5 }
+      ]
+    }
+  ]
+}

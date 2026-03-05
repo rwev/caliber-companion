@@ -1,0 +1,71 @@
+{
+  "name": ".454 Casull",
+  "designation": ".454 Casull",
+  "aliases": [".454"],
+  "category": "magnum_handgun",
+  "slug": "454-casull",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.452,
+    "neck_diameter_in": 0.480,
+    "case_length_in": 1.383,
+    "overall_length_in": 1.770,
+    "rim_diameter_in": 0.512,
+    "case_type": "rimmed, straight"
+  },
+
+  "typical_velocity_fps": [1400, 1900],
+  "typical_energy_ft_lbs": [1200, 2000],
+  "typical_bullet_weight_gr": [240, 360],
+  "effective_range_yd": 100,
+  "max_range_yd": 2500,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 30.0,
+    "reference_firearm": "Ruger Super Redhawk (7.5\" barrel, 53 oz)",
+    "subjective": "very_heavy"
+  },
+
+  "year_introduced": 1957,
+  "country_of_origin": "USA",
+  "military_usage": ["No significant military adoption"],
+  "le_usage": ["Wildlife management officers (bear country)"],
+  "primary_use_cases": ["handgun hunting", "dangerous game defense", "bear defense", "silhouette shooting"],
+
+  "popularity_tier": "niche",
+  "cost_per_round_usd": [1.25, 3.00],
+  "common_firearms": ["Freedom Arms Model 83", "Ruger Super Redhawk", "Taurus Raging Bull", "Magnum Research BFR"],
+
+  "loads": [
+    {
+      "name": "Hornady XTP 240 gr JHP",
+      "bullet_weight_gr": 240,
+      "bullet_type": "JHP",
+      "muzzle_velocity_fps": 1900,
+      "muzzle_energy_ft_lbs": 1923,
+      "barrel_length_in": 7.5,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1900, "energy_ft_lbs": 1923, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 1820, "energy_ft_lbs": 1764, "drop_in": -0.1 },
+        { "distance_yd": 50, "velocity_fps": 1742, "energy_ft_lbs": 1616, "drop_in": -0.4 },
+        { "distance_yd": 75, "velocity_fps": 1668, "energy_ft_lbs": 1482, "drop_in": -1.1 },
+        { "distance_yd": 100, "velocity_fps": 1598, "energy_ft_lbs": 1360, "drop_in": -2.3 }
+      ]
+    },
+    {
+      "name": "Federal Fusion 300 gr SP",
+      "bullet_weight_gr": 300,
+      "bullet_type": "SP",
+      "muzzle_velocity_fps": 1520,
+      "muzzle_energy_ft_lbs": 1539,
+      "barrel_length_in": 7.5,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1520, "energy_ft_lbs": 1539, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 1465, "energy_ft_lbs": 1429, "drop_in": -0.1 },
+        { "distance_yd": 50, "velocity_fps": 1413, "energy_ft_lbs": 1330, "drop_in": -0.6 },
+        { "distance_yd": 75, "velocity_fps": 1363, "energy_ft_lbs": 1238, "drop_in": -1.7 },
+        { "distance_yd": 100, "velocity_fps": 1316, "energy_ft_lbs": 1154, "drop_in": -3.5 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ComparisonTool from '../components/islands/ComparisonTool';
+import { getCollection } from 'astro:content';
+
+const calibers = await getCollection('caliberData');
+
+const allCaliberData = calibers.map(c => ({
+  name: c.data.name,
+  designation: c.data.designation,
+  slug: c.data.slug,
+  category: c.data.category,
+  dimensions: {
+    bullet_diameter_in: c.data.dimensions.bullet_diameter_in,
+    case_length_in: c.data.dimensions.case_length_in,
+    overall_length_in: c.data.dimensions.overall_length_in,
+    case_type: c.data.dimensions.case_type,
+  },
+  typical_velocity_fps: c.data.typical_velocity_fps,
+  typical_energy_ft_lbs: c.data.typical_energy_ft_lbs,
+  typical_bullet_weight_gr: c.data.typical_bullet_weight_gr,
+  effective_range_yd: c.data.effective_range_yd,
+  recoil: {
+    free_recoil_ft_lbs: c.data.recoil.free_recoil_ft_lbs,
+    subjective: c.data.recoil.subjective,
+  },
+  year_introduced: c.data.year_introduced,
+  country_of_origin: c.data.country_of_origin,
+  popularity_tier: c.data.popularity_tier,
+  cost_per_round_usd: c.data.cost_per_round_usd,
+  loads: c.data.loads,
+}));
+---
+
+<BaseLayout title="Compare Calibers">
+  <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
+    <div class="mb-8">
+      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+        Compare Calibers
+      </h1>
+      <p class="mt-2 font-mono text-sm text-text-muted">
+        Side-by-side specifications and ballistics
+      </p>
+    </div>
+
+    <ComparisonTool client:load calibers={allCaliberData} basePath="/caliber-companion" />
+  </div>
+</BaseLayout>

@@ -1,0 +1,73 @@
+{
+  "name": ".280 Ackley Improved",
+  "designation": ".280 Ackley Improved",
+  "aliases": [".280 AI"],
+  "category": "rifle",
+  "slug": "280-ackley-improved",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.284,
+    "neck_diameter_in": 0.315,
+    "case_length_in": 2.540,
+    "overall_length_in": 3.330,
+    "rim_diameter_in": 0.473,
+    "case_type": "rimless, bottleneck (40-degree shoulder)"
+  },
+
+  "typical_velocity_fps": [2800, 3200],
+  "typical_energy_ft_lbs": [2600, 3100],
+  "typical_bullet_weight_gr": [120, 175],
+  "effective_range_yd": 800,
+  "max_range_yd": 4900,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 16.0,
+    "reference_firearm": "Nosler M48 (24\" barrel, 8.0 lbs)",
+    "subjective": "moderate"
+  },
+
+  "year_introduced": 1957,
+  "country_of_origin": "USA",
+  "military_usage": ["No significant military adoption"],
+  "le_usage": ["No significant law enforcement adoption"],
+  "primary_use_cases": ["elk hunting", "long-range hunting", "mountain hunting", "deer hunting", "handloading"],
+
+  "popularity_tier": "common",
+  "cost_per_round_usd": [1.50, 3.50],
+  "common_firearms": ["Nosler M48", "Kimber Mountain Ascent", "Browning X-Bolt", "Cooper Model 52", "Christensen Arms Ridgeline"],
+
+  "loads": [
+    {
+      "name": "Nosler Trophy Grade 150 gr AccuBond",
+      "bullet_weight_gr": 150,
+      "bullet_type": "AccuBond",
+      "muzzle_velocity_fps": 3000,
+      "muzzle_energy_ft_lbs": 2997,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 3000, "energy_ft_lbs": 2997, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2808, "energy_ft_lbs": 2626, "drop_in": -1.6 },
+        { "distance_yd": 200, "velocity_fps": 2624, "energy_ft_lbs": 2293, "drop_in": -7.0 },
+        { "distance_yd": 300, "velocity_fps": 2447, "energy_ft_lbs": 1993, "drop_in": -16.7 },
+        { "distance_yd": 400, "velocity_fps": 2277, "energy_ft_lbs": 1727, "drop_in": -31.5 },
+        { "distance_yd": 500, "velocity_fps": 2114, "energy_ft_lbs": 1488, "drop_in": -52.0 }
+      ]
+    },
+    {
+      "name": "Hornady Precision Hunter 162 gr ELD-X",
+      "bullet_weight_gr": 162,
+      "bullet_type": "ELD-X",
+      "muzzle_velocity_fps": 2850,
+      "muzzle_energy_ft_lbs": 2922,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2850, "energy_ft_lbs": 2922, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2680, "energy_ft_lbs": 2583, "drop_in": -1.8 },
+        { "distance_yd": 200, "velocity_fps": 2516, "energy_ft_lbs": 2276, "drop_in": -7.8 },
+        { "distance_yd": 300, "velocity_fps": 2357, "energy_ft_lbs": 1999, "drop_in": -18.2 },
+        { "distance_yd": 400, "velocity_fps": 2204, "energy_ft_lbs": 1748, "drop_in": -33.5 },
+        { "distance_yd": 500, "velocity_fps": 2057, "energy_ft_lbs": 1522, "drop_in": -54.8 }
+      ]
+    }
+  ]
+}

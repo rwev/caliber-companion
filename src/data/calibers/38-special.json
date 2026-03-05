@@ -1,0 +1,71 @@
+{
+  "name": ".38 Special",
+  "designation": ".38 Smith & Wesson Special",
+  "aliases": [".38 Spl", ".38 S&W Special"],
+  "category": "handgun",
+  "slug": "38-special",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.357,
+    "neck_diameter_in": 0.379,
+    "case_length_in": 1.155,
+    "overall_length_in": 1.550,
+    "rim_diameter_in": 0.440,
+    "case_type": "rimmed, straight"
+  },
+
+  "typical_velocity_fps": [770, 1000],
+  "typical_energy_ft_lbs": [200, 310],
+  "typical_bullet_weight_gr": [110, 158],
+  "effective_range_yd": 50,
+  "max_range_yd": 1500,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 3.5,
+    "reference_firearm": "Smith & Wesson Model 10 (4\" barrel, 30 oz)",
+    "subjective": "low"
+  },
+
+  "year_introduced": 1898,
+  "country_of_origin": "USA",
+  "military_usage": ["U.S. Military standard sidearm (1899–1985)", "WWII Victory Model revolvers"],
+  "le_usage": ["Standard U.S. police revolver (1920s–1990s)", "Some agencies still issue for backup"],
+  "primary_use_cases": ["self-defense", "target shooting", "law enforcement (legacy)", "concealed carry (snub-nose revolvers)"],
+
+  "popularity_tier": "very_common",
+  "cost_per_round_usd": [0.25, 0.90],
+  "common_firearms": ["Smith & Wesson Model 10", "Smith & Wesson Model 642", "Ruger SP101", "Ruger LCR", "Colt Detective Special", "Taurus 856"],
+
+  "loads": [
+    {
+      "name": "Winchester USA 130 gr FMJ",
+      "bullet_weight_gr": 130,
+      "bullet_type": "FMJ",
+      "muzzle_velocity_fps": 890,
+      "muzzle_energy_ft_lbs": 229,
+      "barrel_length_in": 4.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 890, "energy_ft_lbs": 229, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 856, "energy_ft_lbs": 211, "drop_in": -0.4 },
+        { "distance_yd": 50, "velocity_fps": 824, "energy_ft_lbs": 196, "drop_in": -2.2 },
+        { "distance_yd": 75, "velocity_fps": 795, "energy_ft_lbs": 182, "drop_in": -5.8 },
+        { "distance_yd": 100, "velocity_fps": 768, "energy_ft_lbs": 170, "drop_in": -11.6 }
+      ]
+    },
+    {
+      "name": "Speer Gold Dot 135 gr +P JHP",
+      "bullet_weight_gr": 135,
+      "bullet_type": "JHP",
+      "muzzle_velocity_fps": 950,
+      "muzzle_energy_ft_lbs": 270,
+      "barrel_length_in": 4.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 950, "energy_ft_lbs": 270, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 914, "energy_ft_lbs": 250, "drop_in": -0.3 },
+        { "distance_yd": 50, "velocity_fps": 881, "energy_ft_lbs": 233, "drop_in": -1.8 },
+        { "distance_yd": 75, "velocity_fps": 850, "energy_ft_lbs": 217, "drop_in": -4.8 },
+        { "distance_yd": 100, "velocity_fps": 822, "energy_ft_lbs": 202, "drop_in": -9.8 }
+      ]
+    }
+  ]
+}

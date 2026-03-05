@@ -1,0 +1,71 @@
+{
+  "name": ".30 Super Carry",
+  "designation": ".30 Super Carry",
+  "aliases": [".30 SC", "7.65×21.5mm"],
+  "category": "handgun",
+  "slug": "30-super-carry",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.312,
+    "neck_diameter_in": 0.336,
+    "case_length_in": 0.827,
+    "overall_length_in": 1.169,
+    "rim_diameter_in": 0.344,
+    "case_type": "rimless, tapered"
+  },
+
+  "typical_velocity_fps": [1150, 1250],
+  "typical_energy_ft_lbs": [300, 375],
+  "typical_bullet_weight_gr": [100, 115],
+  "effective_range_yd": 50,
+  "max_range_yd": 1800,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 3.8,
+    "reference_firearm": "Smith & Wesson M&P Shield Plus (3.1\" barrel, 20 oz)",
+    "subjective": "low"
+  },
+
+  "year_introduced": 2022,
+  "country_of_origin": "USA",
+  "military_usage": [],
+  "le_usage": [],
+  "primary_use_cases": ["concealed carry", "self-defense"],
+
+  "popularity_tier": "niche",
+  "cost_per_round_usd": [0.45, 1.10],
+  "common_firearms": ["Smith & Wesson M&P Shield Plus", "Nighthawk Custom President", "Smith & Wesson M&P Shield EZ"],
+
+  "loads": [
+    {
+      "name": "Federal American Eagle 100 gr FMJ",
+      "bullet_weight_gr": 100,
+      "bullet_type": "FMJ",
+      "muzzle_velocity_fps": 1250,
+      "muzzle_energy_ft_lbs": 347,
+      "barrel_length_in": 3.1,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1250, "energy_ft_lbs": 347, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 1195, "energy_ft_lbs": 317, "drop_in": -0.2 },
+        { "distance_yd": 50, "velocity_fps": 1145, "energy_ft_lbs": 291, "drop_in": -0.9 },
+        { "distance_yd": 75, "velocity_fps": 1100, "energy_ft_lbs": 269, "drop_in": -2.6 },
+        { "distance_yd": 100, "velocity_fps": 1060, "energy_ft_lbs": 249, "drop_in": -5.5 }
+      ]
+    },
+    {
+      "name": "Federal HST 100 gr JHP",
+      "bullet_weight_gr": 100,
+      "bullet_type": "JHP",
+      "muzzle_velocity_fps": 1200,
+      "muzzle_energy_ft_lbs": 320,
+      "barrel_length_in": 3.1,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1200, "energy_ft_lbs": 320, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 1150, "energy_ft_lbs": 294, "drop_in": -0.2 },
+        { "distance_yd": 50, "velocity_fps": 1105, "energy_ft_lbs": 271, "drop_in": -1.0 },
+        { "distance_yd": 75, "velocity_fps": 1063, "energy_ft_lbs": 251, "drop_in": -2.8 },
+        { "distance_yd": 100, "velocity_fps": 1025, "energy_ft_lbs": 234, "drop_in": -5.9 }
+      ]
+    }
+  ]
+}

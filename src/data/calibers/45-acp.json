@@ -1,0 +1,71 @@
+{
+  "name": ".45 ACP",
+  "designation": ".45 Auto",
+  "aliases": [".45 Auto", "11.43×23mm"],
+  "category": "handgun",
+  "slug": "45-acp",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.452,
+    "neck_diameter_in": 0.473,
+    "case_length_in": 0.898,
+    "overall_length_in": 1.275,
+    "rim_diameter_in": 0.480,
+    "case_type": "rimless, straight"
+  },
+
+  "typical_velocity_fps": [830, 1050],
+  "typical_energy_ft_lbs": [350, 500],
+  "typical_bullet_weight_gr": [185, 230],
+  "effective_range_yd": 50,
+  "max_range_yd": 1600,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 7.5,
+    "reference_firearm": "1911 Government (5\" barrel, 39 oz)",
+    "subjective": "moderate"
+  },
+
+  "year_introduced": 1905,
+  "country_of_origin": "USA",
+  "military_usage": ["U.S. Military (M1911, M1A1 Thompson)", "NATO secondary sidearm cartridge", "Various allied forces (WWII era)"],
+  "le_usage": ["FBI (historical)", "U.S. Marshals (historical)", "Various U.S. police departments"],
+  "primary_use_cases": ["self-defense", "military sidearm", "law enforcement", "target shooting", "competition"],
+
+  "popularity_tier": "very_common",
+  "cost_per_round_usd": [0.30, 1.00],
+  "common_firearms": ["1911 (various manufacturers)", "Glock 21", "SIG Sauer P220", "Springfield XD", "HK USP .45"],
+
+  "loads": [
+    {
+      "name": "Federal American Eagle 230 gr FMJ",
+      "bullet_weight_gr": 230,
+      "bullet_type": "FMJ",
+      "muzzle_velocity_fps": 890,
+      "muzzle_energy_ft_lbs": 405,
+      "barrel_length_in": 5.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 890, "energy_ft_lbs": 405, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 860, "energy_ft_lbs": 378, "drop_in": -0.4 },
+        { "distance_yd": 50, "velocity_fps": 833, "energy_ft_lbs": 354, "drop_in": -1.8 },
+        { "distance_yd": 75, "velocity_fps": 808, "energy_ft_lbs": 333, "drop_in": -4.6 },
+        { "distance_yd": 100, "velocity_fps": 785, "energy_ft_lbs": 315, "drop_in": -9.3 }
+      ]
+    },
+    {
+      "name": "Federal HST 230 gr JHP",
+      "bullet_weight_gr": 230,
+      "bullet_type": "JHP",
+      "muzzle_velocity_fps": 890,
+      "muzzle_energy_ft_lbs": 405,
+      "barrel_length_in": 5.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 890, "energy_ft_lbs": 405, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 857, "energy_ft_lbs": 375, "drop_in": -0.4 },
+        { "distance_yd": 50, "velocity_fps": 828, "energy_ft_lbs": 350, "drop_in": -1.9 },
+        { "distance_yd": 75, "velocity_fps": 800, "energy_ft_lbs": 327, "drop_in": -4.8 },
+        { "distance_yd": 100, "velocity_fps": 775, "energy_ft_lbs": 307, "drop_in": -9.7 }
+      ]
+    }
+  ]
+}

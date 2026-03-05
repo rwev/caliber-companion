@@ -1,0 +1,73 @@
+{
+  "name": ".444 Marlin",
+  "designation": ".444 Marlin",
+  "aliases": [".444"],
+  "category": "rifle",
+  "slug": "444-marlin",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.429,
+    "neck_diameter_in": 0.453,
+    "case_length_in": 2.225,
+    "overall_length_in": 2.570,
+    "rim_diameter_in": 0.514,
+    "case_type": "rimmed, straight"
+  },
+
+  "typical_velocity_fps": [2100, 2400],
+  "typical_energy_ft_lbs": [2800, 3600],
+  "typical_bullet_weight_gr": [240, 300],
+  "effective_range_yd": 250,
+  "max_range_yd": 3000,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 24.0,
+    "reference_firearm": "Marlin 444 (22\" barrel, 7.5 lbs)",
+    "subjective": "heavy"
+  },
+
+  "year_introduced": 1964,
+  "country_of_origin": "USA",
+  "military_usage": [],
+  "le_usage": [],
+  "primary_use_cases": ["hunting", "brush gun", "large game", "dangerous game", "bear defense"],
+
+  "popularity_tier": "niche",
+  "cost_per_round_usd": [1.50, 3.50],
+  "common_firearms": ["Marlin 444", "Henry Big Boy Steel", "CVA Scout", "Ruger No. 1"],
+
+  "loads": [
+    {
+      "name": "Hornady Superformance 265 gr FP",
+      "bullet_weight_gr": 265,
+      "bullet_type": "FP (Flat Point InterLock)",
+      "muzzle_velocity_fps": 2400,
+      "muzzle_energy_ft_lbs": 3389,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2400, "energy_ft_lbs": 3389, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2072, "energy_ft_lbs": 2526, "drop_in": -2.9 },
+        { "distance_yd": 200, "velocity_fps": 1774, "energy_ft_lbs": 1853, "drop_in": -12.6 },
+        { "distance_yd": 300, "velocity_fps": 1510, "energy_ft_lbs": 1342, "drop_in": -31.8 },
+        { "distance_yd": 400, "velocity_fps": 1293, "energy_ft_lbs": 985, "drop_in": -63.5 },
+        { "distance_yd": 500, "velocity_fps": 1131, "energy_ft_lbs": 754, "drop_in": -112.0 }
+      ]
+    },
+    {
+      "name": "Federal Power-Shok 240 gr Jacketed Hollow Point",
+      "bullet_weight_gr": 240,
+      "bullet_type": "JHP (Jacketed Hollow Point)",
+      "muzzle_velocity_fps": 2350,
+      "muzzle_energy_ft_lbs": 2942,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2350, "energy_ft_lbs": 2942, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 1997, "energy_ft_lbs": 2124, "drop_in": -3.2 },
+        { "distance_yd": 200, "velocity_fps": 1686, "energy_ft_lbs": 1515, "drop_in": -14.0 },
+        { "distance_yd": 300, "velocity_fps": 1420, "energy_ft_lbs": 1075, "drop_in": -35.8 },
+        { "distance_yd": 400, "velocity_fps": 1213, "energy_ft_lbs": 785, "drop_in": -73.0 },
+        { "distance_yd": 500, "velocity_fps": 1070, "energy_ft_lbs": 610, "drop_in": -131.0 }
+      ]
+    }
+  ]
+}

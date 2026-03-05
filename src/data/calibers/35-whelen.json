@@ -1,0 +1,73 @@
+{
+  "name": ".35 Whelen",
+  "designation": ".35 Whelen",
+  "aliases": [".35 Whelen Improved"],
+  "category": "rifle",
+  "slug": "35-whelen",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.358,
+    "neck_diameter_in": 0.385,
+    "case_length_in": 2.494,
+    "overall_length_in": 3.340,
+    "rim_diameter_in": 0.473,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [2300, 2800],
+  "typical_energy_ft_lbs": [2800, 3800],
+  "typical_bullet_weight_gr": [180, 310],
+  "effective_range_yd": 400,
+  "max_range_yd": 3800,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 22.0,
+    "reference_firearm": "Remington 700 (22\" barrel, 8.0 lbs)",
+    "subjective": "heavy"
+  },
+
+  "year_introduced": 1922,
+  "country_of_origin": "USA",
+  "military_usage": [],
+  "le_usage": [],
+  "primary_use_cases": ["hunting", "large game", "dangerous game", "elk hunting"],
+
+  "popularity_tier": "niche",
+  "cost_per_round_usd": [1.50, 3.50],
+  "common_firearms": ["Remington 700", "Ruger M77 Hawkeye", "CVA Paramount", "Cooper Model 52"],
+
+  "loads": [
+    {
+      "name": "Federal Premium 225 gr Trophy Bonded Bear Claw",
+      "bullet_weight_gr": 225,
+      "bullet_type": "TBBC (Trophy Bonded Bear Claw)",
+      "muzzle_velocity_fps": 2600,
+      "muzzle_energy_ft_lbs": 3378,
+      "barrel_length_in": 22.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2600, "energy_ft_lbs": 3378, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2393, "energy_ft_lbs": 2862, "drop_in": -2.1 },
+        { "distance_yd": 200, "velocity_fps": 2196, "energy_ft_lbs": 2410, "drop_in": -8.8 },
+        { "distance_yd": 300, "velocity_fps": 2009, "energy_ft_lbs": 2016, "drop_in": -21.3 },
+        { "distance_yd": 400, "velocity_fps": 1833, "energy_ft_lbs": 1678, "drop_in": -40.8 },
+        { "distance_yd": 500, "velocity_fps": 1669, "energy_ft_lbs": 1392, "drop_in": -69.2 }
+      ]
+    },
+    {
+      "name": "Remington Core-Lokt 250 gr Pointed Soft Point",
+      "bullet_weight_gr": 250,
+      "bullet_type": "PSP (Pointed Soft Point)",
+      "muzzle_velocity_fps": 2400,
+      "muzzle_energy_ft_lbs": 3197,
+      "barrel_length_in": 22.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2400, "energy_ft_lbs": 3197, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2187, "energy_ft_lbs": 2654, "drop_in": -2.6 },
+        { "distance_yd": 200, "velocity_fps": 1985, "energy_ft_lbs": 2189, "drop_in": -10.8 },
+        { "distance_yd": 300, "velocity_fps": 1796, "energy_ft_lbs": 1791, "drop_in": -26.0 },
+        { "distance_yd": 400, "velocity_fps": 1621, "energy_ft_lbs": 1460, "drop_in": -50.1 },
+        { "distance_yd": 500, "velocity_fps": 1464, "energy_ft_lbs": 1190, "drop_in": -85.3 }
+      ]
+    }
+  ]
+}

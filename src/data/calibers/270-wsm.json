@@ -1,0 +1,75 @@
+{
+  "name": ".270 WSM",
+  "designation": ".270 Winchester Short Magnum",
+  "aliases": [".270 WSM", ".270 Win Short Mag"],
+  "category": "magnum_rifle",
+  "slug": "270-wsm",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.277,
+    "neck_diameter_in": 0.3140,
+    "case_length_in": 2.10,
+    "overall_length_in": 2.86,
+    "rim_diameter_in": 0.535,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [3000, 3300],
+  "typical_energy_ft_lbs": [2800, 3400],
+  "typical_bullet_weight_gr": [130, 150],
+  "effective_range_yd": 900,
+  "max_range_yd": 5000,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 18.0,
+    "reference_firearm": "Browning X-Bolt (23\" barrel, 7.25 lbs)",
+    "subjective": "moderate"
+  },
+
+  "year_introduced": 2002,
+  "country_of_origin": "USA",
+  "military_usage": [],
+  "le_usage": [],
+  "primary_use_cases": ["long-range hunting", "mule deer hunting", "elk hunting", "pronghorn hunting", "mountain hunting"],
+
+  "popularity_tier": "common",
+  "cost_per_round_usd": [1.50, 4.00],
+  "common_firearms": ["Browning X-Bolt", "Winchester Model 70", "Tikka T3x", "Savage 110", "Kimber Mountain Ascent", "Weatherby Vanguard"],
+
+  "loads": [
+    {
+      "name": "Winchester Ballistic Silvertip 150 gr",
+      "bullet_weight_gr": 150,
+      "bullet_type": "Polymer Tip",
+      "muzzle_velocity_fps": 3120,
+      "muzzle_energy_ft_lbs": 3242,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 3120, "energy_ft_lbs": 3242, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2929, "energy_ft_lbs": 2856, "drop_in": -1.1 },
+        { "distance_yd": 200, "velocity_fps": 2745, "energy_ft_lbs": 2509, "drop_in": -4.7 },
+        { "distance_yd": 300, "velocity_fps": 2569, "energy_ft_lbs": 2197, "drop_in": -11.2 },
+        { "distance_yd": 400, "velocity_fps": 2399, "energy_ft_lbs": 1917, "drop_in": -21.0 },
+        { "distance_yd": 500, "velocity_fps": 2236, "energy_ft_lbs": 1665, "drop_in": -34.8 },
+        { "distance_yd": 600, "velocity_fps": 2079, "energy_ft_lbs": 1439, "drop_in": -53.5 }
+      ]
+    },
+    {
+      "name": "Hornady Precision Hunter 145 gr ELD-X",
+      "bullet_weight_gr": 145,
+      "bullet_type": "ELD-X",
+      "muzzle_velocity_fps": 3100,
+      "muzzle_energy_ft_lbs": 3093,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 3100, "energy_ft_lbs": 3093, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2920, "energy_ft_lbs": 2746, "drop_in": -1.1 },
+        { "distance_yd": 200, "velocity_fps": 2747, "energy_ft_lbs": 2429, "drop_in": -4.8 },
+        { "distance_yd": 300, "velocity_fps": 2580, "energy_ft_lbs": 2143, "drop_in": -11.3 },
+        { "distance_yd": 400, "velocity_fps": 2419, "energy_ft_lbs": 1884, "drop_in": -21.0 },
+        { "distance_yd": 500, "velocity_fps": 2264, "energy_ft_lbs": 1650, "drop_in": -34.4 },
+        { "distance_yd": 600, "velocity_fps": 2114, "energy_ft_lbs": 1439, "drop_in": -52.4 }
+      ]
+    }
+  ]
+}

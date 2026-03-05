@@ -1,0 +1,73 @@
+{
+  "name": ".22 Winchester Magnum Rimfire",
+  "designation": ".22 Winchester Magnum Rimfire",
+  "aliases": [".22 Mag", ".22 Magnum", ".22 WMR"],
+  "category": "rifle",
+  "slug": "22-wmr",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.224,
+    "neck_diameter_in": 0.242,
+    "case_length_in": 1.055,
+    "overall_length_in": 1.350,
+    "rim_diameter_in": 0.294,
+    "case_type": "rimmed, straight"
+  },
+
+  "typical_velocity_fps": [1530, 2200],
+  "typical_energy_ft_lbs": [180, 350],
+  "typical_bullet_weight_gr": [28, 50],
+  "effective_range_yd": 150,
+  "max_range_yd": 1800,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 2.0,
+    "reference_firearm": "Ruger 77/22 (20\" barrel, 6.0 lbs)",
+    "subjective": "very_low"
+  },
+
+  "year_introduced": 1959,
+  "country_of_origin": "USA",
+  "military_usage": [],
+  "le_usage": [],
+  "primary_use_cases": ["small game hunting", "varmint hunting", "pest control", "plinking", "self-defense (handgun)"],
+
+  "popularity_tier": "common",
+  "cost_per_round_usd": [0.15, 0.40],
+  "common_firearms": ["Ruger 77/22", "Savage 93", "CZ 455/457", "Marlin 925M", "Henry Lever Action", "Kel-Tec PMR-30"],
+
+  "loads": [
+    {
+      "name": "CCI Maxi-Mag 40 gr JHP",
+      "bullet_weight_gr": 40,
+      "bullet_type": "JHP (Jacketed Hollow Point)",
+      "muzzle_velocity_fps": 1875,
+      "muzzle_energy_ft_lbs": 312,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1875, "energy_ft_lbs": 312, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 1483, "energy_ft_lbs": 195, "drop_in": -5.0 },
+        { "distance_yd": 200, "velocity_fps": 1171, "energy_ft_lbs": 122, "drop_in": -22.6 },
+        { "distance_yd": 300, "velocity_fps": 989, "energy_ft_lbs": 87, "drop_in": -60.5 },
+        { "distance_yd": 400, "velocity_fps": 874, "energy_ft_lbs": 68, "drop_in": -127.0 },
+        { "distance_yd": 500, "velocity_fps": 791, "energy_ft_lbs": 56, "drop_in": -230.0 }
+      ]
+    },
+    {
+      "name": "Winchester Super-X 40 gr FMJ",
+      "bullet_weight_gr": 40,
+      "bullet_type": "FMJ (Full Metal Jacket)",
+      "muzzle_velocity_fps": 1910,
+      "muzzle_energy_ft_lbs": 324,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1910, "energy_ft_lbs": 324, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 1526, "energy_ft_lbs": 207, "drop_in": -4.7 },
+        { "distance_yd": 200, "velocity_fps": 1214, "energy_ft_lbs": 131, "drop_in": -21.0 },
+        { "distance_yd": 300, "velocity_fps": 1020, "energy_ft_lbs": 92, "drop_in": -56.8 },
+        { "distance_yd": 400, "velocity_fps": 898, "energy_ft_lbs": 72, "drop_in": -120.0 },
+        { "distance_yd": 500, "velocity_fps": 810, "energy_ft_lbs": 58, "drop_in": -218.0 }
+      ]
+    }
+  ]
+}

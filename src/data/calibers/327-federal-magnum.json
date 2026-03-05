@@ -1,0 +1,71 @@
+{
+  "name": ".327 Federal Magnum",
+  "designation": ".327 Federal Magnum",
+  "aliases": [".327 Fed Mag"],
+  "category": "magnum_handgun",
+  "slug": "327-federal-magnum",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.312,
+    "neck_diameter_in": 0.337,
+    "case_length_in": 1.200,
+    "overall_length_in": 1.470,
+    "rim_diameter_in": 0.375,
+    "case_type": "rimmed, straight"
+  },
+
+  "typical_velocity_fps": [1300, 1600],
+  "typical_energy_ft_lbs": [300, 450],
+  "typical_bullet_weight_gr": [85, 115],
+  "effective_range_yd": 75,
+  "max_range_yd": 2000,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 5.5,
+    "reference_firearm": "Ruger SP101 (3.06\" barrel, 28 oz)",
+    "subjective": "moderate"
+  },
+
+  "year_introduced": 2008,
+  "country_of_origin": "USA",
+  "military_usage": ["No military adoption"],
+  "le_usage": ["No standard law enforcement adoption"],
+  "primary_use_cases": ["self-defense", "concealed carry", "small game hunting", "target shooting"],
+
+  "popularity_tier": "niche",
+  "cost_per_round_usd": [0.55, 1.50],
+  "common_firearms": ["Ruger SP101", "Ruger GP100", "Smith & Wesson 632", "Henry Big Boy", "Ruger Single Seven"],
+
+  "loads": [
+    {
+      "name": "Federal American Eagle 100 gr SP",
+      "bullet_weight_gr": 100,
+      "bullet_type": "SP",
+      "muzzle_velocity_fps": 1500,
+      "muzzle_energy_ft_lbs": 500,
+      "barrel_length_in": 3.06,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1500, "energy_ft_lbs": 500, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 1420, "energy_ft_lbs": 449, "drop_in": -0.1 },
+        { "distance_yd": 50, "velocity_fps": 1348, "energy_ft_lbs": 404, "drop_in": -0.6 },
+        { "distance_yd": 75, "velocity_fps": 1282, "energy_ft_lbs": 365, "drop_in": -1.8 },
+        { "distance_yd": 100, "velocity_fps": 1222, "energy_ft_lbs": 332, "drop_in": -3.8 }
+      ]
+    },
+    {
+      "name": "Speer Gold Dot 115 gr JHP",
+      "bullet_weight_gr": 115,
+      "bullet_type": "JHP",
+      "muzzle_velocity_fps": 1380,
+      "muzzle_energy_ft_lbs": 487,
+      "barrel_length_in": 3.06,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1380, "energy_ft_lbs": 487, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 1310, "energy_ft_lbs": 439, "drop_in": -0.2 },
+        { "distance_yd": 50, "velocity_fps": 1248, "energy_ft_lbs": 398, "drop_in": -0.7 },
+        { "distance_yd": 75, "velocity_fps": 1191, "energy_ft_lbs": 362, "drop_in": -2.0 },
+        { "distance_yd": 100, "velocity_fps": 1140, "energy_ft_lbs": 332, "drop_in": -4.2 }
+      ]
+    }
+  ]
+}

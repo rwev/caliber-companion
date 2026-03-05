@@ -1,0 +1,73 @@
+{
+  "name": "7.62×39mm",
+  "designation": "7.62×39mm",
+  "aliases": ["7.62 Soviet", "7.62×39", "M43"],
+  "category": "rifle",
+  "slug": "762x39mm",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.312,
+    "neck_diameter_in": 0.339,
+    "case_length_in": 1.524,
+    "overall_length_in": 2.205,
+    "rim_diameter_in": 0.447,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [2100, 2400],
+  "typical_energy_ft_lbs": [1450, 1550],
+  "typical_bullet_weight_gr": [120, 154],
+  "effective_range_yd": 400,
+  "max_range_yd": 2500,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 8.0,
+    "reference_firearm": "AKM (16.3\" barrel, 7.7 lbs)",
+    "subjective": "moderate"
+  },
+
+  "year_introduced": 1944,
+  "country_of_origin": "Soviet Union",
+  "military_usage": ["Soviet/Russian standard intermediate cartridge (1949–1974)", "Warsaw Pact standard rifle cartridge", "Widely used by militaries and insurgent forces globally", "Chinese PLA (Type 56 rifle)"],
+  "le_usage": ["Russian police forces", "Various developing-nation police agencies"],
+  "primary_use_cases": ["military service rifle", "hunting (medium game)", "home defense", "target shooting", "militia/irregular forces"],
+
+  "popularity_tier": "very_common",
+  "cost_per_round_usd": [0.25, 0.80],
+  "common_firearms": ["AK-47/AKM variants", "SKS", "Ruger Mini-30", "CZ Bren 2", "Zastava ZPAP M70"],
+
+  "loads": [
+    {
+      "name": "Wolf Military Classic 123 gr FMJ",
+      "bullet_weight_gr": 123,
+      "bullet_type": "FMJ",
+      "muzzle_velocity_fps": 2396,
+      "muzzle_energy_ft_lbs": 1568,
+      "barrel_length_in": 16.3,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2396, "energy_ft_lbs": 1568, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2138, "energy_ft_lbs": 1249, "drop_in": -3.8 },
+        { "distance_yd": 200, "velocity_fps": 1897, "energy_ft_lbs": 983, "drop_in": -15.0 },
+        { "distance_yd": 300, "velocity_fps": 1674, "energy_ft_lbs": 766, "drop_in": -35.8 },
+        { "distance_yd": 400, "velocity_fps": 1473, "energy_ft_lbs": 593, "drop_in": -69.2 },
+        { "distance_yd": 500, "velocity_fps": 1300, "energy_ft_lbs": 462, "drop_in": -119.5 }
+      ]
+    },
+    {
+      "name": "Barnaul 154 gr SP",
+      "bullet_weight_gr": 154,
+      "bullet_type": "SP",
+      "muzzle_velocity_fps": 2104,
+      "muzzle_energy_ft_lbs": 1513,
+      "barrel_length_in": 16.3,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2104, "energy_ft_lbs": 1513, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 1880, "energy_ft_lbs": 1209, "drop_in": -4.9 },
+        { "distance_yd": 200, "velocity_fps": 1674, "energy_ft_lbs": 958, "drop_in": -18.6 },
+        { "distance_yd": 300, "velocity_fps": 1487, "energy_ft_lbs": 756, "drop_in": -43.5 },
+        { "distance_yd": 400, "velocity_fps": 1322, "energy_ft_lbs": 598, "drop_in": -83.0 },
+        { "distance_yd": 500, "velocity_fps": 1184, "energy_ft_lbs": 479, "drop_in": -141.0 }
+      ]
+    }
+  ]
+}

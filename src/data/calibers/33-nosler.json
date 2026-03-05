@@ -1,0 +1,73 @@
+{
+  "name": ".33 Nosler",
+  "designation": ".33 Nosler",
+  "aliases": [".33 Nos"],
+  "category": "magnum_rifle",
+  "slug": "33-nosler",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.338,
+    "neck_diameter_in": 0.369,
+    "case_length_in": 2.560,
+    "overall_length_in": 3.340,
+    "rim_diameter_in": 0.534,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [2700, 3000],
+  "typical_energy_ft_lbs": [4000, 5000],
+  "typical_bullet_weight_gr": [200, 300],
+  "effective_range_yd": 700,
+  "max_range_yd": 4800,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 35.0,
+    "reference_firearm": "Nosler M48 Long-Range Carbon (26\" barrel, 7.5 lbs)",
+    "subjective": "very_heavy"
+  },
+
+  "year_introduced": 2016,
+  "country_of_origin": "USA",
+  "military_usage": [],
+  "le_usage": [],
+  "primary_use_cases": ["long-range hunting", "elk hunting", "moose hunting", "long-range big game", "African plains game"],
+
+  "popularity_tier": "niche",
+  "cost_per_round_usd": [3.50, 7.00],
+  "common_firearms": ["Nosler M48", "Nosler M48 Long-Range Carbon", "Christensen Arms Ridgeline", "Browning X-Bolt"],
+
+  "loads": [
+    {
+      "name": "Nosler Trophy Grade 225 gr AccuBond",
+      "bullet_weight_gr": 225,
+      "bullet_type": "AccuBond",
+      "muzzle_velocity_fps": 3025,
+      "muzzle_energy_ft_lbs": 4572,
+      "barrel_length_in": 26.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 3025, "energy_ft_lbs": 4572, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2838, "energy_ft_lbs": 4024, "drop_in": -1.3 },
+        { "distance_yd": 200, "velocity_fps": 2659, "energy_ft_lbs": 3529, "drop_in": -5.6 },
+        { "distance_yd": 300, "velocity_fps": 2486, "energy_ft_lbs": 3087, "drop_in": -13.4 },
+        { "distance_yd": 400, "velocity_fps": 2320, "energy_ft_lbs": 2688, "drop_in": -25.0 },
+        { "distance_yd": 500, "velocity_fps": 2161, "energy_ft_lbs": 2333, "drop_in": -41.0 }
+      ]
+    },
+    {
+      "name": "Nosler Trophy Grade 265 gr AccuBond Long Range",
+      "bullet_weight_gr": 265,
+      "bullet_type": "AccuBond Long Range",
+      "muzzle_velocity_fps": 2775,
+      "muzzle_energy_ft_lbs": 4534,
+      "barrel_length_in": 26.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2775, "energy_ft_lbs": 4534, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2622, "energy_ft_lbs": 4047, "drop_in": -1.5 },
+        { "distance_yd": 200, "velocity_fps": 2474, "energy_ft_lbs": 3604, "drop_in": -6.5 },
+        { "distance_yd": 300, "velocity_fps": 2330, "energy_ft_lbs": 3197, "drop_in": -15.2 },
+        { "distance_yd": 400, "velocity_fps": 2192, "energy_ft_lbs": 2828, "drop_in": -28.0 },
+        { "distance_yd": 500, "velocity_fps": 2058, "energy_ft_lbs": 2492, "drop_in": -45.4 }
+      ]
+    }
+  ]
+}

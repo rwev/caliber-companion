@@ -1,0 +1,109 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Barlow", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-display: "Barlow Condensed", system-ui, sans-serif;
+
+  --color-surface: #111111;
+  --color-surface-raised: #1a1a1a;
+  --color-surface-overlay: #222222;
+  --color-surface-border: #3a3a3a;
+  --color-surface-border-subtle: #2a2a2a;
+
+  --color-text-primary: #e5e5e5;
+  --color-text-secondary: #b5b5b5;
+  --color-text-muted: #8a8a8a;
+
+  --color-accent: #e05a2b;
+  --color-accent-bright: #f07040;
+  --color-accent-dim: #a33d1a;
+  --color-info: #5a9bcf;
+  --color-info-dim: #3a6a94;
+  --color-danger: #cf4444;
+  --color-success: #4a8a54;
+}
+
+/* Light theme overrides */
+[data-theme="light"] {
+  --color-surface: #fafafa;
+  --color-surface-raised: #ffffff;
+  --color-surface-overlay: #f0f0f0;
+  --color-surface-border: #c0c0c0;
+  --color-surface-border-subtle: #d8d8d8;
+
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #444444;
+  --color-text-muted: #666666;
+
+  --color-accent: #d04a1c;
+  --color-accent-bright: #e05a2b;
+  --color-accent-dim: #a33d1a;
+  --color-info: #3a7abf;
+  --color-info-dim: #2a5a8f;
+  --color-danger: #c03030;
+  --color-success: #3a7a44;
+}
+
+[data-theme="light"] body::before {
+  opacity: 0.04;
+}
+
+/* Grain overlay for texture */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+/* Selection color */
+::selection {
+  background: var(--color-accent-dim);
+  color: #ffffff;
+}
+
+/* Data table row stripes */
+.data-row:nth-child(even) {
+  background-color: var(--color-surface-raised);
+}
+.data-row:nth-child(odd) {
+  background-color: var(--color-surface);
+}
+
+/* Theme-aware prose styling */
+.prose {
+  --tw-prose-body: var(--color-text-primary);
+  --tw-prose-headings: var(--color-text-primary);
+  --tw-prose-bold: var(--color-text-primary);
+  --tw-prose-links: var(--color-accent);
+  --tw-prose-counters: var(--color-text-muted);
+  --tw-prose-bullets: var(--color-text-muted);
+  --tw-prose-quotes: var(--color-text-secondary);
+  --tw-prose-code: var(--color-text-primary);
+  --tw-prose-pre-bg: var(--color-surface-raised);
+  --tw-prose-th-borders: var(--color-surface-border);
+  --tw-prose-td-borders: var(--color-surface-border-subtle);
+  font-size: 1.125rem;
+  line-height: 1.8;
+}

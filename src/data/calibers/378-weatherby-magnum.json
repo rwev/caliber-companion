@@ -1,0 +1,73 @@
+{
+  "name": ".378 Weatherby Magnum",
+  "designation": ".378 Weatherby Magnum",
+  "aliases": [".378 Wby Mag"],
+  "category": "magnum_rifle",
+  "slug": "378-weatherby-magnum",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.375,
+    "neck_diameter_in": 0.4015,
+    "case_length_in": 2.913,
+    "overall_length_in": 3.655,
+    "rim_diameter_in": 0.579,
+    "case_type": "belted, bottleneck"
+  },
+
+  "typical_velocity_fps": [2700, 3100],
+  "typical_energy_ft_lbs": [5200, 7200],
+  "typical_bullet_weight_gr": [235, 350],
+  "effective_range_yd": 500,
+  "max_range_yd": 4000,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 65.0,
+    "reference_firearm": "Weatherby Mark V (26\" barrel, 9.5 lbs)",
+    "subjective": "very_heavy"
+  },
+
+  "year_introduced": 1953,
+  "country_of_origin": "USA",
+  "military_usage": [],
+  "le_usage": [],
+  "primary_use_cases": ["dangerous game hunting", "African safari", "long-range dangerous game", "Cape buffalo", "elephant"],
+
+  "popularity_tier": "rare",
+  "cost_per_round_usd": [6.00, 14.00],
+  "common_firearms": ["Weatherby Mark V", "Weatherby Mark V Dangerous Game Rifle"],
+
+  "loads": [
+    {
+      "name": "Weatherby Select Plus 300 gr Barnes TSX",
+      "bullet_weight_gr": 300,
+      "bullet_type": "TSX (Triple-Shock X)",
+      "muzzle_velocity_fps": 2925,
+      "muzzle_energy_ft_lbs": 5699,
+      "barrel_length_in": 26.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2925, "energy_ft_lbs": 5699, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2718, "energy_ft_lbs": 4921, "drop_in": -1.5 },
+        { "distance_yd": 200, "velocity_fps": 2520, "energy_ft_lbs": 4230, "drop_in": -6.4 },
+        { "distance_yd": 300, "velocity_fps": 2331, "energy_ft_lbs": 3620, "drop_in": -15.5 },
+        { "distance_yd": 400, "velocity_fps": 2150, "energy_ft_lbs": 3079, "drop_in": -29.4 },
+        { "distance_yd": 500, "velocity_fps": 1979, "energy_ft_lbs": 2610, "drop_in": -48.8 }
+      ]
+    },
+    {
+      "name": "Weatherby Select Plus 270 gr Hornady InterLock SP",
+      "bullet_weight_gr": 270,
+      "bullet_type": "SP (InterLock Soft Point)",
+      "muzzle_velocity_fps": 3100,
+      "muzzle_energy_ft_lbs": 5757,
+      "barrel_length_in": 26.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 3100, "energy_ft_lbs": 5757, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2856, "energy_ft_lbs": 4893, "drop_in": -1.3 },
+        { "distance_yd": 200, "velocity_fps": 2623, "energy_ft_lbs": 4127, "drop_in": -5.6 },
+        { "distance_yd": 300, "velocity_fps": 2403, "energy_ft_lbs": 3463, "drop_in": -13.6 },
+        { "distance_yd": 400, "velocity_fps": 2194, "energy_ft_lbs": 2886, "drop_in": -26.0 },
+        { "distance_yd": 500, "velocity_fps": 1998, "energy_ft_lbs": 2394, "drop_in": -43.6 }
+      ]
+    }
+  ]
+}

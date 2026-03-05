@@ -1,0 +1,79 @@
+{
+  "name": ".338 Norma Magnum",
+  "designation": ".338 Norma Magnum",
+  "aliases": [".338 NM", ".338 Norma Mag"],
+  "category": "magnum_rifle",
+  "slug": "338-norma-magnum",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.338,
+    "neck_diameter_in": 0.369,
+    "case_length_in": 2.492,
+    "overall_length_in": 3.681,
+    "rim_diameter_in": 0.532,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [2650, 2850],
+  "typical_energy_ft_lbs": [4200, 5400],
+  "typical_bullet_weight_gr": [225, 300],
+  "effective_range_yd": 1700,
+  "max_range_yd": 4500,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 35.0,
+    "reference_firearm": "Barrett MRAD (26\" barrel, 14.5 lbs)",
+    "subjective": "very_heavy"
+  },
+
+  "year_introduced": 2009,
+  "country_of_origin": "Sweden",
+  "military_usage": ["U.S. SOCOM (Mk 22 ASR / Barrett MRAD)", "USMC Advanced Sniper Rifle program", "Norwegian Armed Forces"],
+  "le_usage": [],
+  "primary_use_cases": ["long-range precision", "military sniping", "extreme long-range competition"],
+
+  "popularity_tier": "niche",
+  "cost_per_round_usd": [3.50, 7.00],
+  "common_firearms": ["Barrett MRAD", "Accuracy International AX", "Sako TRG M10", "Cadex Defence CDX-40 Shadow"],
+
+  "loads": [
+    {
+      "name": "Hornady 300 gr A-TIP Match",
+      "bullet_weight_gr": 300,
+      "bullet_type": "A-TIP Match",
+      "muzzle_velocity_fps": 2650,
+      "muzzle_energy_ft_lbs": 4679,
+      "barrel_length_in": 26.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2650, "energy_ft_lbs": 4679, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2582, "energy_ft_lbs": 4443, "drop_in": -1.6 },
+        { "distance_yd": 200, "velocity_fps": 2515, "energy_ft_lbs": 4213, "drop_in": -6.5 },
+        { "distance_yd": 300, "velocity_fps": 2449, "energy_ft_lbs": 3993, "drop_in": -15.0 },
+        { "distance_yd": 400, "velocity_fps": 2384, "energy_ft_lbs": 3781, "drop_in": -27.2 },
+        { "distance_yd": 500, "velocity_fps": 2320, "energy_ft_lbs": 3578, "drop_in": -43.5 },
+        { "distance_yd": 600, "velocity_fps": 2258, "energy_ft_lbs": 3382, "drop_in": -64.2 },
+        { "distance_yd": 800, "velocity_fps": 2136, "energy_ft_lbs": 3013, "drop_in": -119.5 },
+        { "distance_yd": 1000, "velocity_fps": 2018, "energy_ft_lbs": 2676, "drop_in": -196.8 }
+      ]
+    },
+    {
+      "name": "Norma 250 gr Sierra MatchKing HPBT",
+      "bullet_weight_gr": 250,
+      "bullet_type": "HPBT (Sierra MatchKing)",
+      "muzzle_velocity_fps": 2838,
+      "muzzle_energy_ft_lbs": 4472,
+      "barrel_length_in": 26.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2838, "energy_ft_lbs": 4472, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2732, "energy_ft_lbs": 4146, "drop_in": -1.4 },
+        { "distance_yd": 200, "velocity_fps": 2629, "energy_ft_lbs": 3838, "drop_in": -5.8 },
+        { "distance_yd": 300, "velocity_fps": 2528, "energy_ft_lbs": 3546, "drop_in": -13.6 },
+        { "distance_yd": 400, "velocity_fps": 2429, "energy_ft_lbs": 3271, "drop_in": -25.0 },
+        { "distance_yd": 500, "velocity_fps": 2332, "energy_ft_lbs": 3011, "drop_in": -40.6 },
+        { "distance_yd": 600, "velocity_fps": 2237, "energy_ft_lbs": 2766, "drop_in": -60.8 },
+        { "distance_yd": 800, "velocity_fps": 2055, "energy_ft_lbs": 2344, "drop_in": -115.0 },
+        { "distance_yd": 1000, "velocity_fps": 1884, "energy_ft_lbs": 1971, "drop_in": -192.5 }
+      ]
+    }
+  ]
+}

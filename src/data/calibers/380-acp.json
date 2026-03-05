@@ -1,0 +1,71 @@
+{
+  "name": ".380 ACP",
+  "designation": ".380 Auto",
+  "aliases": ["9mm Short", "9×17mm", "9mm Browning Short"],
+  "category": "handgun",
+  "slug": "380-acp",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.355,
+    "neck_diameter_in": 0.373,
+    "case_length_in": 0.680,
+    "overall_length_in": 0.984,
+    "rim_diameter_in": 0.374,
+    "case_type": "rimless, straight"
+  },
+
+  "typical_velocity_fps": [900, 1050],
+  "typical_energy_ft_lbs": [175, 250],
+  "typical_bullet_weight_gr": [85, 100],
+  "effective_range_yd": 25,
+  "max_range_yd": 1500,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 2.8,
+    "reference_firearm": "Glock 42 (3.25\" barrel, 13.8 oz)",
+    "subjective": "very_low"
+  },
+
+  "year_introduced": 1908,
+  "country_of_origin": "USA",
+  "military_usage": ["Various European military sidearms (WWII era)", "Italian military Beretta M1934"],
+  "le_usage": ["European police (historically)", "Backup gun for some U.S. agencies"],
+  "primary_use_cases": ["concealed carry", "self-defense", "backup gun"],
+
+  "popularity_tier": "very_common",
+  "cost_per_round_usd": [0.22, 0.80],
+  "common_firearms": ["Glock 42", "Ruger LCP II/MAX", "Smith & Wesson Bodyguard", "SIG Sauer P238", "Beretta 84", "Walther PPK"],
+
+  "loads": [
+    {
+      "name": "Remington UMC 95 gr FMJ",
+      "bullet_weight_gr": 95,
+      "bullet_type": "FMJ",
+      "muzzle_velocity_fps": 955,
+      "muzzle_energy_ft_lbs": 192,
+      "barrel_length_in": 3.75,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 955, "energy_ft_lbs": 192, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 912, "energy_ft_lbs": 176, "drop_in": -0.4 },
+        { "distance_yd": 50, "velocity_fps": 874, "energy_ft_lbs": 161, "drop_in": -2.0 },
+        { "distance_yd": 75, "velocity_fps": 840, "energy_ft_lbs": 149, "drop_in": -5.3 },
+        { "distance_yd": 100, "velocity_fps": 810, "energy_ft_lbs": 138, "drop_in": -10.8 }
+      ]
+    },
+    {
+      "name": "Hornady Critical Defense 90 gr FTX",
+      "bullet_weight_gr": 90,
+      "bullet_type": "FTX",
+      "muzzle_velocity_fps": 1000,
+      "muzzle_energy_ft_lbs": 200,
+      "barrel_length_in": 3.75,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1000, "energy_ft_lbs": 200, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 955, "energy_ft_lbs": 182, "drop_in": -0.3 },
+        { "distance_yd": 50, "velocity_fps": 915, "energy_ft_lbs": 167, "drop_in": -1.7 },
+        { "distance_yd": 75, "velocity_fps": 879, "energy_ft_lbs": 154, "drop_in": -4.6 },
+        { "distance_yd": 100, "velocity_fps": 847, "energy_ft_lbs": 143, "drop_in": -9.5 }
+      ]
+    }
+  ]
+}

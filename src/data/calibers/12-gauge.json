@@ -1,0 +1,71 @@
+{
+  "name": "12 Gauge",
+  "designation": "12 Gauge (18.53mm)",
+  "aliases": ["12 Bore", "12 GA"],
+  "category": "shotgun",
+  "slug": "12-gauge",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.729,
+    "neck_diameter_in": 0.813,
+    "case_length_in": 2.75,
+    "overall_length_in": 2.75,
+    "rim_diameter_in": 0.871,
+    "case_type": "rimmed, straight (plastic hull)"
+  },
+
+  "typical_velocity_fps": [1100, 1600],
+  "typical_energy_ft_lbs": [1500, 3000],
+  "typical_bullet_weight_gr": [328, 657],
+  "effective_range_yd": 50,
+  "max_range_yd": 200,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 23.0,
+    "reference_firearm": "Remington 870 (18.5\" barrel, 7.5 lbs)",
+    "subjective": "heavy"
+  },
+
+  "year_introduced": 1800,
+  "country_of_origin": "United Kingdom",
+  "military_usage": ["U.S. Military breaching operations", "Close quarters combat", "U.S. Marine Corps (M1014/Benelli M4)"],
+  "le_usage": ["Most U.S. police departments (patrol shotgun)", "Federal agencies (entry/breaching)", "Corrections departments"],
+  "primary_use_cases": ["hunting", "home defense", "sport shooting", "breaching", "clay target sports"],
+
+  "popularity_tier": "ubiquitous",
+  "cost_per_round_usd": [0.25, 3.00],
+  "common_firearms": ["Remington 870", "Mossberg 500/590", "Benelli M4", "Beretta 1301 Tactical"],
+
+  "loads": [
+    {
+      "name": "Federal Power-Shok 00 Buckshot (2¾\")",
+      "bullet_weight_gr": 484,
+      "bullet_type": "00 Buckshot (9 pellets, .330\" diameter)",
+      "muzzle_velocity_fps": 1290,
+      "muzzle_energy_ft_lbs": 1500,
+      "barrel_length_in": 18.5,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1290, "energy_ft_lbs": 1500, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 1150, "energy_ft_lbs": 1190, "drop_in": -0.5 },
+        { "distance_yd": 50, "velocity_fps": 1030, "energy_ft_lbs": 955, "drop_in": -2.8 },
+        { "distance_yd": 75, "velocity_fps": 945, "energy_ft_lbs": 804, "drop_in": -7.5 },
+        { "distance_yd": 100, "velocity_fps": 880, "energy_ft_lbs": 697, "drop_in": -15.2 }
+      ]
+    },
+    {
+      "name": "Federal TruBall 1 oz Rifled Slug",
+      "bullet_weight_gr": 437,
+      "bullet_type": "Rifled Slug",
+      "muzzle_velocity_fps": 1600,
+      "muzzle_energy_ft_lbs": 2485,
+      "barrel_length_in": 18.5,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1600, "energy_ft_lbs": 2485, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 1480, "energy_ft_lbs": 2126, "drop_in": -0.3 },
+        { "distance_yd": 50, "velocity_fps": 1370, "energy_ft_lbs": 1822, "drop_in": -1.5 },
+        { "distance_yd": 75, "velocity_fps": 1270, "energy_ft_lbs": 1566, "drop_in": -4.2 },
+        { "distance_yd": 100, "velocity_fps": 1180, "energy_ft_lbs": 1352, "drop_in": -8.7 }
+      ]
+    }
+  ]
+}

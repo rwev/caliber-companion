@@ -1,0 +1,71 @@
+{
+  "name": ".44 Magnum",
+  "designation": ".44 Remington Magnum",
+  "aliases": [".44 Mag", ".44 Rem Mag", "10.9×33mmR"],
+  "category": "magnum_handgun",
+  "slug": "44-magnum",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.429,
+    "neck_diameter_in": 0.457,
+    "case_length_in": 1.285,
+    "overall_length_in": 1.610,
+    "rim_diameter_in": 0.514,
+    "case_type": "rimmed, straight"
+  },
+
+  "typical_velocity_fps": [1100, 1500],
+  "typical_energy_ft_lbs": [750, 1200],
+  "typical_bullet_weight_gr": [180, 300],
+  "effective_range_yd": 100,
+  "max_range_yd": 2500,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 18.5,
+    "reference_firearm": "Smith & Wesson Model 29 (6.5\" barrel, 47 oz)",
+    "subjective": "very_heavy"
+  },
+
+  "year_introduced": 1955,
+  "country_of_origin": "USA",
+  "military_usage": ["Limited special operations use", "Israeli Defense Forces (historical)"],
+  "le_usage": ["Alaska State Troopers (bear defense)", "Some rural sheriff departments"],
+  "primary_use_cases": ["hunting", "bear defense", "handgun hunting", "silhouette shooting", "lever-action rifle cartridge"],
+
+  "popularity_tier": "very_common",
+  "cost_per_round_usd": [0.55, 2.00],
+  "common_firearms": ["Smith & Wesson Model 29", "Ruger Super Redhawk", "Ruger Super Blackhawk", "Desert Eagle", "Marlin Model 1894", "Henry Big Boy"],
+
+  "loads": [
+    {
+      "name": "Federal Power-Shok 240 gr JHP",
+      "bullet_weight_gr": 240,
+      "bullet_type": "JHP",
+      "muzzle_velocity_fps": 1180,
+      "muzzle_energy_ft_lbs": 741,
+      "barrel_length_in": 6.5,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1180, "energy_ft_lbs": 741, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 1135, "energy_ft_lbs": 687, "drop_in": -0.2 },
+        { "distance_yd": 50, "velocity_fps": 1095, "energy_ft_lbs": 639, "drop_in": -1.1 },
+        { "distance_yd": 75, "velocity_fps": 1060, "energy_ft_lbs": 599, "drop_in": -3.0 },
+        { "distance_yd": 100, "velocity_fps": 1030, "energy_ft_lbs": 565, "drop_in": -6.2 }
+      ]
+    },
+    {
+      "name": "Hornady LEVERevolution 225 gr FTX",
+      "bullet_weight_gr": 225,
+      "bullet_type": "FTX",
+      "muzzle_velocity_fps": 1410,
+      "muzzle_energy_ft_lbs": 993,
+      "barrel_length_in": 6.5,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1410, "energy_ft_lbs": 993, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 1355, "energy_ft_lbs": 918, "drop_in": -0.1 },
+        { "distance_yd": 50, "velocity_fps": 1305, "energy_ft_lbs": 851, "drop_in": -0.7 },
+        { "distance_yd": 75, "velocity_fps": 1258, "energy_ft_lbs": 790, "drop_in": -1.9 },
+        { "distance_yd": 100, "velocity_fps": 1215, "energy_ft_lbs": 738, "drop_in": -4.0 }
+      ]
+    }
+  ]
+}

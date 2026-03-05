@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FilterBar from '../components/islands/FilterBar';
+import { getCollection } from 'astro:content';
+
+const calibers = await getCollection('caliberData');
+
+const caliberSummaries = calibers.map(c => ({
+  name: c.data.name,
+  designation: c.data.designation,
+  slug: c.data.slug,
+  category: c.data.category,
+  aliases: c.data.aliases,
+  typical_velocity_fps: c.data.typical_velocity_fps,
+  typical_energy_ft_lbs: c.data.typical_energy_ft_lbs,
+  effective_range_yd: c.data.effective_range_yd,
+  popularity_tier: c.data.popularity_tier,
+  recoil_subjective: c.data.recoil.subjective,
+  year_introduced: c.data.year_introduced,
+}));
+---
+
+<BaseLayout title="Browse Calibers">
+  <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
+    <div class="mb-8">
+      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+        Browse Calibers
+      </h1>
+      <p class="mt-2 font-mono text-sm text-text-muted">
+        {calibers.length} calibers · search, filter, and sort
+      </p>
+    </div>
+
+    <FilterBar client:idle calibers={caliberSummaries} basePath="/caliber-companion" />
+  </div>
+</BaseLayout>

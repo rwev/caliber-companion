@@ -1,0 +1,73 @@
+{
+  "name": ".264 Winchester Magnum",
+  "designation": ".264 Winchester Magnum",
+  "aliases": [".264 Win Mag", ".264 WM"],
+  "category": "magnum_rifle",
+  "slug": "264-winchester-magnum",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.264,
+    "neck_diameter_in": 0.299,
+    "case_length_in": 2.5,
+    "overall_length_in": 3.34,
+    "rim_diameter_in": 0.532,
+    "case_type": "belted, bottleneck"
+  },
+
+  "typical_velocity_fps": [2800, 3400],
+  "typical_energy_ft_lbs": [2500, 3100],
+  "typical_bullet_weight_gr": [85, 160],
+  "effective_range_yd": 900,
+  "max_range_yd": 5000,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 18.0,
+    "reference_firearm": "Winchester Model 70 (26\" barrel, 8.5 lbs)",
+    "subjective": "heavy"
+  },
+
+  "year_introduced": 1959,
+  "country_of_origin": "USA",
+  "military_usage": [],
+  "le_usage": [],
+  "primary_use_cases": ["long-range hunting", "mule deer", "antelope", "mountain hunting"],
+
+  "popularity_tier": "niche",
+  "cost_per_round_usd": [2.00, 4.50],
+  "common_firearms": ["Winchester Model 70", "Remington 700", "Weatherby Vanguard"],
+
+  "loads": [
+    {
+      "name": "Nosler Trophy Grade 130 gr AccuBond",
+      "bullet_weight_gr": 130,
+      "bullet_type": "AccuBond",
+      "muzzle_velocity_fps": 3100,
+      "muzzle_energy_ft_lbs": 2773,
+      "barrel_length_in": 26.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 3100, "energy_ft_lbs": 2773, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2893, "energy_ft_lbs": 2415, "drop_in": -1.2 },
+        { "distance_yd": 200, "velocity_fps": 2695, "energy_ft_lbs": 2096, "drop_in": -5.1 },
+        { "distance_yd": 300, "velocity_fps": 2505, "energy_ft_lbs": 1812, "drop_in": -12.3 },
+        { "distance_yd": 400, "velocity_fps": 2322, "energy_ft_lbs": 1556, "drop_in": -23.2 },
+        { "distance_yd": 500, "velocity_fps": 2148, "energy_ft_lbs": 1332, "drop_in": -38.5 }
+      ]
+    },
+    {
+      "name": "Winchester Power-Point 140 gr SP",
+      "bullet_weight_gr": 140,
+      "bullet_type": "SP",
+      "muzzle_velocity_fps": 3030,
+      "muzzle_energy_ft_lbs": 2854,
+      "barrel_length_in": 26.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 3030, "energy_ft_lbs": 2854, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2782, "energy_ft_lbs": 2406, "drop_in": -1.3 },
+        { "distance_yd": 200, "velocity_fps": 2548, "energy_ft_lbs": 2018, "drop_in": -5.8 },
+        { "distance_yd": 300, "velocity_fps": 2326, "energy_ft_lbs": 1682, "drop_in": -14.0 },
+        { "distance_yd": 400, "velocity_fps": 2116, "energy_ft_lbs": 1392, "drop_in": -26.8 },
+        { "distance_yd": 500, "velocity_fps": 1918, "energy_ft_lbs": 1144, "drop_in": -45.0 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "name": ".416 Rigby",
+  "designation": ".416 Rigby",
+  "aliases": [".416"],
+  "category": "magnum_rifle",
+  "slug": "416-rigby",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.416,
+    "neck_diameter_in": 0.4505,
+    "case_length_in": 2.900,
+    "overall_length_in": 3.750,
+    "rim_diameter_in": 0.586,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [2200, 2400],
+  "typical_energy_ft_lbs": [4700, 5700],
+  "typical_bullet_weight_gr": [350, 450],
+  "effective_range_yd": 300,
+  "max_range_yd": 3000,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 55.0,
+    "reference_firearm": "CZ 550 Safari Magnum (25\" barrel, 10.5 lbs)",
+    "subjective": "very_heavy"
+  },
+
+  "year_introduced": 1911,
+  "country_of_origin": "United Kingdom",
+  "military_usage": ["Limited British military use in Africa (early 20th century)"],
+  "le_usage": [],
+  "primary_use_cases": ["dangerous game hunting", "African safari", "Cape buffalo", "elephant hunting"],
+
+  "popularity_tier": "niche",
+  "cost_per_round_usd": [5.00, 12.00],
+  "common_firearms": ["CZ 550 Safari Magnum", "Rigby Big Game Rifle", "Dakota 76 Safari", "Mauser M98 Magnum"],
+
+  "loads": [
+    {
+      "name": "Hornady Dangerous Game 400 gr DGS",
+      "bullet_weight_gr": 400,
+      "bullet_type": "DGS (Dangerous Game Solid)",
+      "muzzle_velocity_fps": 2400,
+      "muzzle_energy_ft_lbs": 5115,
+      "barrel_length_in": 25.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2400, "energy_ft_lbs": 5115, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2189, "energy_ft_lbs": 4254, "drop_in": -2.7 },
+        { "distance_yd": 200, "velocity_fps": 1989, "energy_ft_lbs": 3515, "drop_in": -11.2 },
+        { "distance_yd": 300, "velocity_fps": 1802, "energy_ft_lbs": 2884, "drop_in": -27.0 },
+        { "distance_yd": 400, "velocity_fps": 1630, "energy_ft_lbs": 2359, "drop_in": -51.4 },
+        { "distance_yd": 500, "velocity_fps": 1475, "energy_ft_lbs": 1932, "drop_in": -86.5 }
+      ]
+    },
+    {
+      "name": "Federal Premium Cape-Shok 400 gr Trophy Bonded Sledgehammer",
+      "bullet_weight_gr": 400,
+      "bullet_type": "Solid (Trophy Bonded Sledgehammer)",
+      "muzzle_velocity_fps": 2370,
+      "muzzle_energy_ft_lbs": 4988,
+      "barrel_length_in": 25.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2370, "energy_ft_lbs": 4988, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2150, "energy_ft_lbs": 4105, "drop_in": -2.8 },
+        { "distance_yd": 200, "velocity_fps": 1943, "energy_ft_lbs": 3352, "drop_in": -11.8 },
+        { "distance_yd": 300, "velocity_fps": 1751, "energy_ft_lbs": 2722, "drop_in": -28.5 },
+        { "distance_yd": 400, "velocity_fps": 1576, "energy_ft_lbs": 2206, "drop_in": -54.6 },
+        { "distance_yd": 500, "velocity_fps": 1422, "energy_ft_lbs": 1796, "drop_in": -92.0 }
+      ]
+    }
+  ]
+}

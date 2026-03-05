@@ -1,0 +1,73 @@
+{
+  "name": "6.5×55mm Swedish",
+  "designation": "6.5×55mm Swedish",
+  "aliases": ["6.5 Swede", "6.5×55 SE"],
+  "category": "rifle",
+  "slug": "65x55mm-swedish",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.264,
+    "neck_diameter_in": 0.297,
+    "case_length_in": 2.165,
+    "overall_length_in": 3.150,
+    "rim_diameter_in": 0.480,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [2500, 2850],
+  "typical_energy_ft_lbs": [2000, 2400],
+  "typical_bullet_weight_gr": [120, 156],
+  "effective_range_yd": 700,
+  "max_range_yd": 3800,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 11.0,
+    "reference_firearm": "Swedish Mauser m/96 (29.1\" barrel, 9.0 lbs)",
+    "subjective": "moderate"
+  },
+
+  "year_introduced": 1894,
+  "country_of_origin": "Sweden/Norway",
+  "military_usage": ["Swedish military standard cartridge (1894–1960s)", "Norwegian military standard cartridge", "Swedish Mauser m/96 and Kg m/37 BAR"],
+  "le_usage": [],
+  "primary_use_cases": ["military service rifle", "hunting (medium game)", "target shooting", "long-range competition"],
+
+  "popularity_tier": "common",
+  "cost_per_round_usd": [0.80, 2.50],
+  "common_firearms": ["Swedish Mauser m/96", "Swedish Mauser m/38", "Tikka T3x", "Sako 85", "CZ 557"],
+
+  "loads": [
+    {
+      "name": "Norma 140 gr Soft Point",
+      "bullet_weight_gr": 140,
+      "bullet_type": "SP",
+      "muzzle_velocity_fps": 2789,
+      "muzzle_energy_ft_lbs": 2419,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2789, "energy_ft_lbs": 2419, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2597, "energy_ft_lbs": 2098, "drop_in": -2.4 },
+        { "distance_yd": 200, "velocity_fps": 2413, "energy_ft_lbs": 1811, "drop_in": -9.5 },
+        { "distance_yd": 300, "velocity_fps": 2236, "energy_ft_lbs": 1555, "drop_in": -22.0 },
+        { "distance_yd": 400, "velocity_fps": 2067, "energy_ft_lbs": 1328, "drop_in": -40.8 },
+        { "distance_yd": 500, "velocity_fps": 1906, "energy_ft_lbs": 1130, "drop_in": -67.2 }
+      ]
+    },
+    {
+      "name": "Lapua Scenar 123 gr OTM",
+      "bullet_weight_gr": 123,
+      "bullet_type": "OTM",
+      "muzzle_velocity_fps": 2854,
+      "muzzle_energy_ft_lbs": 2225,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2854, "energy_ft_lbs": 2225, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2658, "energy_ft_lbs": 1930, "drop_in": -2.3 },
+        { "distance_yd": 200, "velocity_fps": 2470, "energy_ft_lbs": 1666, "drop_in": -9.1 },
+        { "distance_yd": 300, "velocity_fps": 2290, "energy_ft_lbs": 1432, "drop_in": -21.1 },
+        { "distance_yd": 400, "velocity_fps": 2118, "energy_ft_lbs": 1225, "drop_in": -39.2 },
+        { "distance_yd": 500, "velocity_fps": 1954, "energy_ft_lbs": 1043, "drop_in": -64.5 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "name": "4.6×30mm",
+  "designation": "4.6×30mm",
+  "aliases": ["4.6×30", "HK 4.6mm"],
+  "category": "pdw",
+  "slug": "46x30mm",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.183,
+    "neck_diameter_in": 0.200,
+    "case_length_in": 1.181,
+    "overall_length_in": 1.535,
+    "rim_diameter_in": 0.315,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [2000, 2400],
+  "typical_energy_ft_lbs": [250, 450],
+  "typical_bullet_weight_gr": [24, 40],
+  "effective_range_yd": 200,
+  "max_range_yd": 800,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 3.0,
+    "reference_firearm": "HK MP7A2 (7.1\" barrel, 4.2 lbs)",
+    "subjective": "very_low"
+  },
+
+  "year_introduced": 1999,
+  "country_of_origin": "Germany",
+  "military_usage": ["German Bundeswehr (HK MP7)", "NATO special operations units", "South Korean military", "Various European military units"],
+  "le_usage": ["German Federal Police (GSG 9)", "Various European police tactical units", "U.S. Secret Service (reported)"],
+  "primary_use_cases": ["personal defense weapon", "close quarters combat", "VIP protection", "armor penetration"],
+
+  "popularity_tier": "niche",
+  "cost_per_round_usd": [0.50, 1.50],
+  "common_firearms": ["HK MP7A1", "HK MP7A2"],
+
+  "loads": [
+    {
+      "name": "Fiocchi 40 gr FMJ",
+      "bullet_weight_gr": 40,
+      "bullet_type": "FMJ",
+      "muzzle_velocity_fps": 2000,
+      "muzzle_energy_ft_lbs": 355,
+      "barrel_length_in": 7.1,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2000, "energy_ft_lbs": 355, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 1895, "energy_ft_lbs": 319, "drop_in": -0.1 },
+        { "distance_yd": 50, "velocity_fps": 1795, "energy_ft_lbs": 286, "drop_in": -0.6 },
+        { "distance_yd": 75, "velocity_fps": 1698, "energy_ft_lbs": 256, "drop_in": -1.6 },
+        { "distance_yd": 100, "velocity_fps": 1606, "energy_ft_lbs": 229, "drop_in": -3.2 },
+        { "distance_yd": 150, "velocity_fps": 1435, "energy_ft_lbs": 183, "drop_in": -8.8 },
+        { "distance_yd": 200, "velocity_fps": 1282, "energy_ft_lbs": 146, "drop_in": -18.5 }
+      ]
+    },
+    {
+      "name": "HK DM11 31 gr Copper-Plated Steel Core AP",
+      "bullet_weight_gr": 31,
+      "bullet_type": "Copper-Plated Steel Core AP",
+      "muzzle_velocity_fps": 2380,
+      "muzzle_energy_ft_lbs": 390,
+      "barrel_length_in": 7.1,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2380, "energy_ft_lbs": 390, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 2240, "energy_ft_lbs": 345, "drop_in": -0.1 },
+        { "distance_yd": 50, "velocity_fps": 2106, "energy_ft_lbs": 305, "drop_in": -0.4 },
+        { "distance_yd": 75, "velocity_fps": 1978, "energy_ft_lbs": 269, "drop_in": -1.1 },
+        { "distance_yd": 100, "velocity_fps": 1856, "energy_ft_lbs": 237, "drop_in": -2.2 },
+        { "distance_yd": 150, "velocity_fps": 1630, "energy_ft_lbs": 183, "drop_in": -6.5 },
+        { "distance_yd": 200, "velocity_fps": 1430, "energy_ft_lbs": 141, "drop_in": -14.2 }
+      ]
+    }
+  ]
+}

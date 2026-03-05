@@ -1,0 +1,73 @@
+{
+  "name": ".300 Precision Rifle Cartridge",
+  "designation": ".300 Precision Rifle Cartridge",
+  "aliases": [".300 PRC"],
+  "category": "rifle",
+  "slug": "300-prc",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.308,
+    "neck_diameter_in": 0.3375,
+    "case_length_in": 2.580,
+    "overall_length_in": 3.700,
+    "rim_diameter_in": 0.532,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [2750, 2900],
+  "typical_energy_ft_lbs": [3700, 4400],
+  "typical_bullet_weight_gr": [200, 230],
+  "effective_range_yd": 1500,
+  "max_range_yd": 5500,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 25.0,
+    "reference_firearm": "Christensen Arms MPR (26\" barrel, 8.5 lbs)",
+    "subjective": "heavy"
+  },
+
+  "year_introduced": 2018,
+  "country_of_origin": "USA",
+  "military_usage": ["U.S. SOCOM Advanced Sniper Rifle program (selected cartridge)", "Evaluated by multiple NATO militaries for long-range precision"],
+  "le_usage": [],
+  "primary_use_cases": ["extreme long-range precision", "ELR competition", "hunting", "military sniping"],
+
+  "popularity_tier": "common",
+  "cost_per_round_usd": [2.00, 4.50],
+  "common_firearms": ["Christensen Arms MPR", "Bergara B-14 HMR Pro", "Browning X-Bolt", "Barrett MRAD", "Ruger Precision Rifle"],
+
+  "loads": [
+    {
+      "name": "Hornady Match 225 gr ELD Match",
+      "bullet_weight_gr": 225,
+      "bullet_type": "ELD Match (Polymer Tip)",
+      "muzzle_velocity_fps": 2810,
+      "muzzle_energy_ft_lbs": 3945,
+      "barrel_length_in": 26.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2810, "energy_ft_lbs": 3945, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2699, "energy_ft_lbs": 3638, "drop_in": -1.4 },
+        { "distance_yd": 200, "velocity_fps": 2591, "energy_ft_lbs": 3352, "drop_in": -5.9 },
+        { "distance_yd": 300, "velocity_fps": 2485, "energy_ft_lbs": 3085, "drop_in": -13.6 },
+        { "distance_yd": 400, "velocity_fps": 2382, "energy_ft_lbs": 2835, "drop_in": -24.7 },
+        { "distance_yd": 500, "velocity_fps": 2281, "energy_ft_lbs": 2601, "drop_in": -39.5 }
+      ]
+    },
+    {
+      "name": "Hornady Precision Hunter 212 gr ELD-X",
+      "bullet_weight_gr": 212,
+      "bullet_type": "ELD-X (Polymer Tip)",
+      "muzzle_velocity_fps": 2860,
+      "muzzle_energy_ft_lbs": 3850,
+      "barrel_length_in": 26.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2860, "energy_ft_lbs": 3850, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2740, "energy_ft_lbs": 3533, "drop_in": -1.3 },
+        { "distance_yd": 200, "velocity_fps": 2623, "energy_ft_lbs": 3237, "drop_in": -5.6 },
+        { "distance_yd": 300, "velocity_fps": 2509, "energy_ft_lbs": 2961, "drop_in": -13.0 },
+        { "distance_yd": 400, "velocity_fps": 2398, "energy_ft_lbs": 2704, "drop_in": -23.8 },
+        { "distance_yd": 500, "velocity_fps": 2290, "energy_ft_lbs": 2466, "drop_in": -38.2 }
+      ]
+    }
+  ]
+}

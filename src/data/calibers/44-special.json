@@ -1,0 +1,71 @@
+{
+  "name": ".44 Special",
+  "designation": ".44 Smith & Wesson Special",
+  "aliases": [".44 Spl", ".44 S&W Spl"],
+  "category": "magnum_handgun",
+  "slug": "44-special",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.429,
+    "neck_diameter_in": 0.457,
+    "case_length_in": 1.160,
+    "overall_length_in": 1.615,
+    "rim_diameter_in": 0.514,
+    "case_type": "rimmed, straight"
+  },
+
+  "typical_velocity_fps": [700, 900],
+  "typical_energy_ft_lbs": [250, 400],
+  "typical_bullet_weight_gr": [180, 246],
+  "effective_range_yd": 50,
+  "max_range_yd": 1500,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 7.5,
+    "reference_firearm": "Smith & Wesson Model 24 (6.5\" barrel, 40 oz)",
+    "subjective": "moderate"
+  },
+
+  "year_introduced": 1907,
+  "country_of_origin": "USA",
+  "military_usage": ["U.S. Military sidearm (historical, pre-1911)"],
+  "le_usage": ["Various U.S. police departments (historical)"],
+  "primary_use_cases": ["self-defense", "target shooting", "concealed carry", "recreational shooting"],
+
+  "popularity_tier": "common",
+  "cost_per_round_usd": [0.50, 1.50],
+  "common_firearms": ["Smith & Wesson Model 24", "Smith & Wesson Model 624", "Charter Arms Bulldog", "Ruger Vaquero", "Taurus Tracker"],
+
+  "loads": [
+    {
+      "name": "Federal Champion 200 gr LSWCHP",
+      "bullet_weight_gr": 200,
+      "bullet_type": "LSWCHP",
+      "muzzle_velocity_fps": 875,
+      "muzzle_energy_ft_lbs": 340,
+      "barrel_length_in": 4.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 875, "energy_ft_lbs": 340, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 845, "energy_ft_lbs": 317, "drop_in": -0.4 },
+        { "distance_yd": 50, "velocity_fps": 817, "energy_ft_lbs": 297, "drop_in": -2.0 },
+        { "distance_yd": 75, "velocity_fps": 792, "energy_ft_lbs": 279, "drop_in": -5.2 },
+        { "distance_yd": 100, "velocity_fps": 768, "energy_ft_lbs": 262, "drop_in": -10.3 }
+      ]
+    },
+    {
+      "name": "Hornady Critical Defense 180 gr FTX",
+      "bullet_weight_gr": 180,
+      "bullet_type": "FTX",
+      "muzzle_velocity_fps": 900,
+      "muzzle_energy_ft_lbs": 324,
+      "barrel_length_in": 4.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 900, "energy_ft_lbs": 324, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 870, "energy_ft_lbs": 303, "drop_in": -0.4 },
+        { "distance_yd": 50, "velocity_fps": 842, "energy_ft_lbs": 284, "drop_in": -1.8 },
+        { "distance_yd": 75, "velocity_fps": 816, "energy_ft_lbs": 266, "drop_in": -4.8 },
+        { "distance_yd": 100, "velocity_fps": 791, "energy_ft_lbs": 250, "drop_in": -9.6 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "name": ".32 ACP",
+  "designation": ".32 Automatic",
+  "aliases": ["7.65mm Browning", ".32 Auto", "7.65×17mmSR"],
+  "category": "handgun",
+  "slug": "32-acp",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.312,
+    "neck_diameter_in": 0.337,
+    "case_length_in": 0.680,
+    "overall_length_in": 0.984,
+    "rim_diameter_in": 0.358,
+    "case_type": "semi-rimmed, straight"
+  },
+
+  "typical_velocity_fps": [900, 1050],
+  "typical_energy_ft_lbs": [120, 175],
+  "typical_bullet_weight_gr": [60, 73],
+  "effective_range_yd": 25,
+  "max_range_yd": 1400,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 1.5,
+    "reference_firearm": "Walther PP (3.35\" barrel, 23.5 oz)",
+    "subjective": "very_low"
+  },
+
+  "year_introduced": 1899,
+  "country_of_origin": "Belgium",
+  "military_usage": ["Standard European military sidearm (WWI/WWII)", "French military (WWII)", "Italian military"],
+  "le_usage": ["Standard European police cartridge (early-mid 20th century)", "German Polizei (historically)"],
+  "primary_use_cases": ["self-defense (compact pistols)", "collecting", "target shooting"],
+
+  "popularity_tier": "niche",
+  "cost_per_round_usd": [0.30, 0.90],
+  "common_firearms": ["Walther PP/PPK", "Beretta Tomcat 3032", "CZ 83", "Kel-Tec P-32", "Seecamp LWS 32", "Browning Model 1910"],
+
+  "loads": [
+    {
+      "name": "Sellier & Bellot 73 gr FMJ",
+      "bullet_weight_gr": 73,
+      "bullet_type": "FMJ",
+      "muzzle_velocity_fps": 1000,
+      "muzzle_energy_ft_lbs": 162,
+      "barrel_length_in": 3.8,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1000, "energy_ft_lbs": 162, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 953, "energy_ft_lbs": 147, "drop_in": -0.3 },
+        { "distance_yd": 50, "velocity_fps": 912, "energy_ft_lbs": 135, "drop_in": -1.7 },
+        { "distance_yd": 75, "velocity_fps": 875, "energy_ft_lbs": 124, "drop_in": -4.6 },
+        { "distance_yd": 100, "velocity_fps": 842, "energy_ft_lbs": 115, "drop_in": -9.5 }
+      ]
+    },
+    {
+      "name": "Hornady XTP 60 gr JHP",
+      "bullet_weight_gr": 60,
+      "bullet_type": "JHP",
+      "muzzle_velocity_fps": 1000,
+      "muzzle_energy_ft_lbs": 133,
+      "barrel_length_in": 3.8,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1000, "energy_ft_lbs": 133, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 948, "energy_ft_lbs": 120, "drop_in": -0.3 },
+        { "distance_yd": 50, "velocity_fps": 902, "energy_ft_lbs": 108, "drop_in": -1.8 },
+        { "distance_yd": 75, "velocity_fps": 861, "energy_ft_lbs": 99, "drop_in": -4.8 },
+        { "distance_yd": 100, "velocity_fps": 824, "energy_ft_lbs": 91, "drop_in": -10.0 }
+      ]
+    }
+  ]
+}

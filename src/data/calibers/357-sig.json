@@ -1,0 +1,71 @@
+{
+  "name": ".357 SIG",
+  "designation": ".357 SIG",
+  "aliases": ["357 SIG"],
+  "category": "handgun",
+  "slug": "357-sig",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.355,
+    "neck_diameter_in": 0.381,
+    "case_length_in": 0.865,
+    "overall_length_in": 1.140,
+    "rim_diameter_in": 0.424,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [1300, 1475],
+  "typical_energy_ft_lbs": [450, 575],
+  "typical_bullet_weight_gr": [115, 147],
+  "effective_range_yd": 75,
+  "max_range_yd": 2100,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 7.0,
+    "reference_firearm": "SIG Sauer P229 (3.9\" barrel, 32 oz)",
+    "subjective": "moderate"
+  },
+
+  "year_introduced": 1994,
+  "country_of_origin": "Switzerland/USA",
+  "military_usage": ["Limited special operations use"],
+  "le_usage": ["U.S. Secret Service", "Federal Air Marshals", "Texas Department of Public Safety", "North Carolina State Highway Patrol", "Delaware State Police"],
+  "primary_use_cases": ["law enforcement", "self-defense", "target shooting"],
+
+  "popularity_tier": "common",
+  "cost_per_round_usd": [0.40, 1.10],
+  "common_firearms": ["SIG Sauer P229/P226", "Glock 31/32/33", "Smith & Wesson M&P .357 SIG", "Springfield XD .357 SIG"],
+
+  "loads": [
+    {
+      "name": "Speer Gold Dot 125 gr JHP",
+      "bullet_weight_gr": 125,
+      "bullet_type": "JHP",
+      "muzzle_velocity_fps": 1375,
+      "muzzle_energy_ft_lbs": 525,
+      "barrel_length_in": 4.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1375, "energy_ft_lbs": 525, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 1315, "energy_ft_lbs": 480, "drop_in": -0.1 },
+        { "distance_yd": 50, "velocity_fps": 1260, "energy_ft_lbs": 440, "drop_in": -0.7 },
+        { "distance_yd": 75, "velocity_fps": 1210, "energy_ft_lbs": 406, "drop_in": -2.0 },
+        { "distance_yd": 100, "velocity_fps": 1164, "energy_ft_lbs": 376, "drop_in": -4.3 }
+      ]
+    },
+    {
+      "name": "Federal American Eagle 125 gr FMJ",
+      "bullet_weight_gr": 125,
+      "bullet_type": "FMJ",
+      "muzzle_velocity_fps": 1350,
+      "muzzle_energy_ft_lbs": 506,
+      "barrel_length_in": 4.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1350, "energy_ft_lbs": 506, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 1295, "energy_ft_lbs": 466, "drop_in": -0.1 },
+        { "distance_yd": 50, "velocity_fps": 1243, "energy_ft_lbs": 429, "drop_in": -0.7 },
+        { "distance_yd": 75, "velocity_fps": 1195, "energy_ft_lbs": 396, "drop_in": -2.1 },
+        { "distance_yd": 100, "velocity_fps": 1152, "energy_ft_lbs": 369, "drop_in": -4.5 }
+      ]
+    }
+  ]
+}

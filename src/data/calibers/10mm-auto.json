@@ -1,0 +1,71 @@
+{
+  "name": "10mm Auto",
+  "designation": "10mm Automatic",
+  "aliases": ["10mm", "10×25mm"],
+  "category": "handgun",
+  "slug": "10mm-auto",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.400,
+    "neck_diameter_in": 0.423,
+    "case_length_in": 0.992,
+    "overall_length_in": 1.260,
+    "rim_diameter_in": 0.425,
+    "case_type": "rimless, straight"
+  },
+
+  "typical_velocity_fps": [1100, 1400],
+  "typical_energy_ft_lbs": [450, 750],
+  "typical_bullet_weight_gr": [165, 200],
+  "effective_range_yd": 100,
+  "max_range_yd": 2200,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 11.4,
+    "reference_firearm": "Glock 20 (4.61\" barrel, 30.7 oz)",
+    "subjective": "heavy"
+  },
+
+  "year_introduced": 1983,
+  "country_of_origin": "Sweden/USA",
+  "military_usage": ["FBI Hostage Rescue Team (1989–1997)", "U.S. Marine Corps Forces Special Operations Command (limited)"],
+  "le_usage": ["FBI (1989–1997)", "Some state agencies"],
+  "primary_use_cases": ["self-defense", "hunting", "woods defense", "target shooting"],
+
+  "popularity_tier": "common",
+  "cost_per_round_usd": [0.40, 1.20],
+  "common_firearms": ["Glock 20/29/40", "Colt Delta Elite", "Dan Wesson Bruin", "SIG Sauer P220 10mm", "Springfield XD-M 10mm"],
+
+  "loads": [
+    {
+      "name": "Federal American Eagle 180 gr FMJ",
+      "bullet_weight_gr": 180,
+      "bullet_type": "FMJ",
+      "muzzle_velocity_fps": 1030,
+      "muzzle_energy_ft_lbs": 424,
+      "barrel_length_in": 5.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1030, "energy_ft_lbs": 424, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 998, "energy_ft_lbs": 398, "drop_in": -0.3 },
+        { "distance_yd": 50, "velocity_fps": 968, "energy_ft_lbs": 374, "drop_in": -1.4 },
+        { "distance_yd": 75, "velocity_fps": 940, "energy_ft_lbs": 353, "drop_in": -3.8 },
+        { "distance_yd": 100, "velocity_fps": 914, "energy_ft_lbs": 334, "drop_in": -7.7 }
+      ]
+    },
+    {
+      "name": "Underwood 200 gr Hardcast",
+      "bullet_weight_gr": 200,
+      "bullet_type": "Hardcast",
+      "muzzle_velocity_fps": 1250,
+      "muzzle_energy_ft_lbs": 694,
+      "barrel_length_in": 5.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1250, "energy_ft_lbs": 694, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 1205, "energy_ft_lbs": 645, "drop_in": -0.2 },
+        { "distance_yd": 50, "velocity_fps": 1163, "energy_ft_lbs": 600, "drop_in": -0.9 },
+        { "distance_yd": 75, "velocity_fps": 1124, "energy_ft_lbs": 561, "drop_in": -2.5 },
+        { "distance_yd": 100, "velocity_fps": 1088, "energy_ft_lbs": 526, "drop_in": -5.2 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "name": ".338 Lapua Magnum",
+  "designation": ".338 Lapua Magnum",
+  "aliases": [".338 Lapua", "8.6×70mm"],
+  "category": "magnum_rifle",
+  "slug": "338-lapua-magnum",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.338,
+    "neck_diameter_in": 0.3715,
+    "case_length_in": 2.724,
+    "overall_length_in": 3.681,
+    "rim_diameter_in": 0.587,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [2600, 3000],
+  "typical_energy_ft_lbs": [4500, 5600],
+  "typical_bullet_weight_gr": [200, 300],
+  "effective_range_yd": 1800,
+  "max_range_yd": 6000,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 40.0,
+    "reference_firearm": "Accuracy International AXMC (27\" barrel, 15 lbs)",
+    "subjective": "very_heavy"
+  },
+
+  "year_introduced": 1989,
+  "country_of_origin": "Finland",
+  "military_usage": ["U.S. Army (M2010 variant evaluations)", "U.S. Navy SEALs", "British Armed Forces (L115A3)", "Finnish Defence Forces", "Multiple NATO special operations units"],
+  "le_usage": ["Specialized long-range law enforcement units", "Counter-terrorism sniper teams"],
+  "primary_use_cases": ["extreme long-range shooting", "military sniping", "anti-materiel", "long-range competition", "large dangerous game hunting"],
+
+  "popularity_tier": "common",
+  "cost_per_round_usd": [3.50, 8.00],
+  "common_firearms": ["Accuracy International AXMC", "Barrett MRAD", "Sako TRG 42", "Ruger Precision Rifle", "Desert Tech SRS", "Savage 110 BA Stealth"],
+
+  "loads": [
+    {
+      "name": "Lapua Scenar 250 gr",
+      "bullet_weight_gr": 250,
+      "bullet_type": "OTM (Open Tip Match)",
+      "muzzle_velocity_fps": 2950,
+      "muzzle_energy_ft_lbs": 4831,
+      "barrel_length_in": 27.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2950, "energy_ft_lbs": 4831, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2815, "energy_ft_lbs": 4399, "drop_in": -1.2 },
+        { "distance_yd": 200, "velocity_fps": 2684, "energy_ft_lbs": 4001, "drop_in": -4.9 },
+        { "distance_yd": 300, "velocity_fps": 2556, "energy_ft_lbs": 3630, "drop_in": -11.3 },
+        { "distance_yd": 400, "velocity_fps": 2432, "energy_ft_lbs": 3286, "drop_in": -20.6 },
+        { "distance_yd": 500, "velocity_fps": 2312, "energy_ft_lbs": 2968, "drop_in": -33.4 },
+        { "distance_yd": 600, "velocity_fps": 2195, "energy_ft_lbs": 2674, "drop_in": -50.0 }
+      ]
+    },
+    {
+      "name": "Hornady Match 285 gr ELD Match",
+      "bullet_weight_gr": 285,
+      "bullet_type": "ELD Match",
+      "muzzle_velocity_fps": 2745,
+      "muzzle_energy_ft_lbs": 4768,
+      "barrel_length_in": 27.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2745, "energy_ft_lbs": 4768, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2632, "energy_ft_lbs": 4384, "drop_in": -1.4 },
+        { "distance_yd": 200, "velocity_fps": 2522, "energy_ft_lbs": 4026, "drop_in": -5.8 },
+        { "distance_yd": 300, "velocity_fps": 2415, "energy_ft_lbs": 3692, "drop_in": -13.2 },
+        { "distance_yd": 400, "velocity_fps": 2310, "energy_ft_lbs": 3380, "drop_in": -23.8 },
+        { "distance_yd": 500, "velocity_fps": 2208, "energy_ft_lbs": 3088, "drop_in": -38.0 },
+        { "distance_yd": 600, "velocity_fps": 2109, "energy_ft_lbs": 2814, "drop_in": -56.2 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "name": "7.62×54mmR",
+  "designation": "7.62×54mmR",
+  "aliases": ["7.62 Russian", "7.62×54R"],
+  "category": "rifle",
+  "slug": "762x54mmr",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.312,
+    "neck_diameter_in": 0.339,
+    "case_length_in": 2.115,
+    "overall_length_in": 3.038,
+    "rim_diameter_in": 0.567,
+    "case_type": "rimmed, bottleneck"
+  },
+
+  "typical_velocity_fps": [2600, 2850],
+  "typical_energy_ft_lbs": [2400, 2700],
+  "typical_bullet_weight_gr": [147, 182],
+  "effective_range_yd": 800,
+  "max_range_yd": 3800,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 15.0,
+    "reference_firearm": "Mosin-Nagant M91/30 (28.7\" barrel, 8.8 lbs)",
+    "subjective": "heavy"
+  },
+
+  "year_introduced": 1891,
+  "country_of_origin": "Russian Empire",
+  "military_usage": ["Russian/Soviet standard machine gun and sniper cartridge", "Warsaw Pact general-purpose machine gun cartridge", "PKM and SVD Dragunov platforms", "Finnish military (7.62 Tkiv 85 sniper)"],
+  "le_usage": ["Russian law enforcement sniper units"],
+  "primary_use_cases": ["military machine gun", "military sniping", "hunting (medium to large game)", "target shooting", "surplus collecting"],
+
+  "popularity_tier": "common",
+  "cost_per_round_usd": [0.40, 1.50],
+  "common_firearms": ["Mosin-Nagant M91/30", "SVD Dragunov", "PKM", "PSL", "Finnish Tikka M55"],
+
+  "loads": [
+    {
+      "name": "147 gr Light Ball (surplus)",
+      "bullet_weight_gr": 147,
+      "bullet_type": "FMJ",
+      "muzzle_velocity_fps": 2838,
+      "muzzle_energy_ft_lbs": 2629,
+      "barrel_length_in": 28.7,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2838, "energy_ft_lbs": 2629, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2610, "energy_ft_lbs": 2222, "drop_in": -2.5 },
+        { "distance_yd": 200, "velocity_fps": 2394, "energy_ft_lbs": 1870, "drop_in": -9.9 },
+        { "distance_yd": 300, "velocity_fps": 2189, "energy_ft_lbs": 1564, "drop_in": -23.1 },
+        { "distance_yd": 400, "velocity_fps": 1995, "energy_ft_lbs": 1299, "drop_in": -43.0 },
+        { "distance_yd": 500, "velocity_fps": 1813, "energy_ft_lbs": 1073, "drop_in": -71.2 }
+      ]
+    },
+    {
+      "name": "PPU 182 gr FMJ",
+      "bullet_weight_gr": 182,
+      "bullet_type": "FMJ",
+      "muzzle_velocity_fps": 2625,
+      "muzzle_energy_ft_lbs": 2784,
+      "barrel_length_in": 28.7,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2625, "energy_ft_lbs": 2784, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2430, "energy_ft_lbs": 2386, "drop_in": -2.9 },
+        { "distance_yd": 200, "velocity_fps": 2244, "energy_ft_lbs": 2035, "drop_in": -11.4 },
+        { "distance_yd": 300, "velocity_fps": 2067, "energy_ft_lbs": 1727, "drop_in": -26.3 },
+        { "distance_yd": 400, "velocity_fps": 1899, "energy_ft_lbs": 1458, "drop_in": -48.8 },
+        { "distance_yd": 500, "velocity_fps": 1742, "energy_ft_lbs": 1227, "drop_in": -80.6 }
+      ]
+    }
+  ]
+}

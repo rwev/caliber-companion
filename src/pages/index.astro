@@ -1,0 +1,156 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const calibers = await getCollection('caliberData');
+const categories = [...new Set(calibers.map(c => c.data.category))];
+
+// Featured: most widely adopted military calibers
+const featuredSlugs = [
+  '9mm-luger',         // NATO standard sidearm
+  '556x45mm-nato',     // NATO standard rifle
+  '308-winchester',    // 7.62 NATO — GPMGs, battle rifles, sniper
+  '762x39mm',          // AK-47/AKM — most produced rifle cartridge
+  '12-gauge',          // Military breaching, close quarters
+  '50-bmg',            // Heavy machine guns, anti-materiel
+];
+const featured = featuredSlugs
+  .map(slug => calibers.find(c => c.data.slug === slug))
+  .filter(Boolean);
+---
+
+<BaseLayout title="Home">
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <!-- Background grid pattern -->
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(var(--color-accent) 1px, transparent 1px), linear-gradient(90deg, var(--color-accent) 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+    <!-- Diagonal accent line -->
+    <div class="absolute -right-20 top-0 h-full w-px origin-top-right rotate-12 bg-gradient-to-b from-transparent via-accent/20 to-transparent"></div>
+
+    <div class="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:py-40">
+      <div class="max-w-3xl">
+        <!-- Category count tag -->
+        <div class="mb-6 inline-flex items-center gap-2 border border-surface-border bg-surface-raised px-3 py-1">
+          <div class="h-1.5 w-1.5 rounded-full bg-accent animate-pulse"></div>
+          <span class="font-mono text-sm tracking-widest uppercase text-text-muted">
+            {calibers.length} Calibers · {categories.length} Categories
+          </span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="font-display text-5xl font-bold tracking-tight text-text-primary sm:text-6xl lg:text-7xl">
+          <span class="block">Caliber</span>
+          <span class="block text-accent">Companion</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="mt-6 max-w-xl text-base leading-relaxed text-text-secondary sm:text-lg">
+          Research, compare, and understand firearm calibers.
+          Detailed ballistic data, cartridge specifications, and
+          side-by-side comparison tools.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="mt-10 flex flex-wrap gap-3">
+          <a
+            href="/caliber-companion/browse"
+            class="group inline-flex items-center gap-2 border border-accent bg-accent/10 px-5 py-2.5 font-mono text-sm tracking-wider uppercase text-accent transition-all hover:bg-accent/20 hover:shadow-[0_0_20px_rgba(224,90,43,0.15)]"
+          >
+            <span>Browse Calibers</span>
+            <svg class="h-3 w-3 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a
+            href="/caliber-companion/compare"
+            class="inline-flex items-center gap-2 border border-surface-border px-5 py-2.5 font-mono text-sm tracking-wider uppercase text-text-secondary transition-all hover:border-text-muted hover:text-text-primary"
+          >
+            <span>Compare</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Stats -->
+  <section class="border-y border-surface-border bg-surface-raised/50">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <div class="grid grid-cols-2 divide-x divide-surface-border sm:grid-cols-4">
+        {[
+          { value: `${calibers.length}`, label: 'Calibers' },
+          { value: `${calibers.reduce((sum, c) => sum + c.data.loads.length, 0)}`, label: 'Load Profiles' },
+          { value: 'Full', label: 'Ballistic Tables' },
+          { value: 'Side×Side', label: 'Comparison Tool' },
+        ].map(stat => (
+          <div class="px-4 py-6 text-center sm:px-6 sm:py-8">
+            <div class="font-display text-2xl font-bold text-accent sm:text-3xl">{stat.value}</div>
+            <div class="mt-1 font-mono text-sm tracking-widest uppercase text-text-muted">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Calibers Preview -->
+  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
+    <div class="mb-8 flex items-center gap-4">
+      <div class="h-px flex-1 bg-surface-border"></div>
+      <h2 class="font-display text-sm tracking-[0.25em] uppercase text-text-muted">Military Standard Calibers</h2>
+      <div class="h-px flex-1 bg-surface-border"></div>
+    </div>
+
+    <div class="grid gap-px bg-surface-border sm:grid-cols-2 lg:grid-cols-3">
+      {featured.map(caliber => (
+        <a
+          href={`/caliber-companion/calibers/${caliber.data.slug}`}
+          class="group bg-surface p-5 transition-colors hover:bg-surface-raised"
+        >
+          <div class="flex items-start justify-between">
+            <div>
+              <div class="font-display text-lg font-semibold text-text-primary group-hover:text-accent transition-colors">
+                {caliber.data.name}
+              </div>
+              <div class="mt-0.5 font-mono text-sm text-text-muted">
+                {caliber.data.designation}
+              </div>
+            </div>
+            <span class="mt-1 border border-surface-border px-2 py-0.5 font-mono text-sm tracking-wider uppercase text-text-muted">
+              {caliber.data.category.replace('_', ' ')}
+            </span>
+          </div>
+
+          <div class="mt-4 grid grid-cols-3 gap-3">
+            <div>
+              <div class="font-mono text-sm tracking-wider uppercase text-text-muted">Velocity</div>
+              <div class="mt-0.5 font-mono text-sm text-text-secondary">
+                {caliber.data.typical_velocity_fps[0]}–{caliber.data.typical_velocity_fps[1]} <span class="text-text-muted">fps</span>
+              </div>
+            </div>
+            <div>
+              <div class="font-mono text-sm tracking-wider uppercase text-text-muted">Energy</div>
+              <div class="mt-0.5 font-mono text-sm text-text-secondary">
+                {caliber.data.typical_energy_ft_lbs[0]}–{caliber.data.typical_energy_ft_lbs[1]} <span class="text-text-muted">ft·lbs</span>
+              </div>
+            </div>
+            <div>
+              <div class="font-mono text-sm tracking-wider uppercase text-text-muted">Range</div>
+              <div class="mt-0.5 font-mono text-sm text-text-secondary">
+                {caliber.data.effective_range_yd} <span class="text-text-muted">yd</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-6 text-center">
+      <a
+        href="/caliber-companion/browse"
+        class="font-mono text-sm tracking-wider uppercase text-text-muted transition-colors hover:text-accent"
+      >
+        View all calibers →
+      </a>
+    </div>
+  </section>
+</BaseLayout>

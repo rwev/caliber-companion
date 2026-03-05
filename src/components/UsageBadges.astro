@@ -1,0 +1,50 @@
+---
+interface Props {
+  military: string[];
+  le: string[];
+  useCases: string[];
+}
+
+const { military, le, useCases } = Astro.props;
+---
+
+<div class="space-y-3">
+  {military.length > 0 && (
+    <div>
+      <div class="mb-1.5 font-mono text-sm tracking-[0.2em] uppercase text-text-muted">Military Adoption</div>
+      <div class="flex flex-wrap gap-1.5">
+        {military.map(item => (
+          <span class="border border-success/30 bg-success/10 px-2 py-0.5 font-mono text-sm text-success">
+            {item}
+          </span>
+        ))}
+      </div>
+    </div>
+  )}
+
+  {le.length > 0 && (
+    <div>
+      <div class="mb-1.5 font-mono text-sm tracking-[0.2em] uppercase text-text-muted">Law Enforcement</div>
+      <div class="flex flex-wrap gap-1.5">
+        {le.map(item => (
+          <span class="border border-info/30 bg-info/10 px-2 py-0.5 font-mono text-sm text-info">
+            {item}
+          </span>
+        ))}
+      </div>
+    </div>
+  )}
+
+  {useCases.length > 0 && (
+    <div>
+      <div class="mb-1.5 font-mono text-sm tracking-[0.2em] uppercase text-text-muted">Primary Use Cases</div>
+      <div class="flex flex-wrap gap-1.5">
+        {useCases.map(item => (
+          <span class="border border-surface-border bg-surface-overlay px-2 py-0.5 font-mono text-sm text-text-secondary">
+            {item}
+          </span>
+        ))}
+      </div>
+    </div>
+  )}
+</div>

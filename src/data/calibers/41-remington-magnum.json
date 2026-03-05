@@ -1,0 +1,71 @@
+{
+  "name": ".41 Remington Magnum",
+  "designation": ".41 Remington Magnum",
+  "aliases": [".41 Mag", ".41 Rem Mag"],
+  "category": "magnum_handgun",
+  "slug": "41-remington-magnum",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.410,
+    "neck_diameter_in": 0.432,
+    "case_length_in": 1.290,
+    "overall_length_in": 1.590,
+    "rim_diameter_in": 0.492,
+    "case_type": "rimmed, straight"
+  },
+
+  "typical_velocity_fps": [1000, 1500],
+  "typical_energy_ft_lbs": [500, 900],
+  "typical_bullet_weight_gr": [170, 265],
+  "effective_range_yd": 75,
+  "max_range_yd": 2200,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 14.0,
+    "reference_firearm": "Smith & Wesson Model 57 (6\" barrel, 44 oz)",
+    "subjective": "heavy"
+  },
+
+  "year_introduced": 1964,
+  "country_of_origin": "USA",
+  "military_usage": ["No significant military adoption"],
+  "le_usage": ["San Antonio Police Department (historical)", "Some state police agencies (1960s–1970s)"],
+  "primary_use_cases": ["handgun hunting", "target shooting", "self-defense", "silhouette shooting"],
+
+  "popularity_tier": "niche",
+  "cost_per_round_usd": [0.75, 2.50],
+  "common_firearms": ["Smith & Wesson Model 57", "Smith & Wesson Model 58", "Ruger Blackhawk", "Ruger Redhawk", "Magnum Research Desert Eagle"],
+
+  "loads": [
+    {
+      "name": "Federal American Eagle 210 gr JSP",
+      "bullet_weight_gr": 210,
+      "bullet_type": "JSP",
+      "muzzle_velocity_fps": 1300,
+      "muzzle_energy_ft_lbs": 788,
+      "barrel_length_in": 6.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1300, "energy_ft_lbs": 788, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 1250, "energy_ft_lbs": 729, "drop_in": -0.2 },
+        { "distance_yd": 50, "velocity_fps": 1205, "energy_ft_lbs": 677, "drop_in": -0.8 },
+        { "distance_yd": 75, "velocity_fps": 1162, "energy_ft_lbs": 630, "drop_in": -2.2 },
+        { "distance_yd": 100, "velocity_fps": 1124, "energy_ft_lbs": 589, "drop_in": -4.6 }
+      ]
+    },
+    {
+      "name": "Buffalo Bore Heavy 265 gr WFN Hard Cast",
+      "bullet_weight_gr": 265,
+      "bullet_type": "WFN",
+      "muzzle_velocity_fps": 1350,
+      "muzzle_energy_ft_lbs": 1073,
+      "barrel_length_in": 6.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1350, "energy_ft_lbs": 1073, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 1300, "energy_ft_lbs": 994, "drop_in": -0.1 },
+        { "distance_yd": 50, "velocity_fps": 1254, "energy_ft_lbs": 925, "drop_in": -0.7 },
+        { "distance_yd": 75, "velocity_fps": 1211, "energy_ft_lbs": 863, "drop_in": -2.0 },
+        { "distance_yd": 100, "velocity_fps": 1172, "energy_ft_lbs": 808, "drop_in": -4.2 }
+      ]
+    }
+  ]
+}

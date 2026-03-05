@@ -1,0 +1,73 @@
+{
+  "name": ".458 SOCOM",
+  "designation": ".458 SOCOM",
+  "aliases": [".458"],
+  "category": "rifle",
+  "slug": "458-socom",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.458,
+    "neck_diameter_in": 0.481,
+    "case_length_in": 1.575,
+    "overall_length_in": 2.260,
+    "rim_diameter_in": 0.473,
+    "case_type": "rimless (rebated), bottleneck"
+  },
+
+  "typical_velocity_fps": [1000, 1900],
+  "typical_energy_ft_lbs": [1300, 2700],
+  "typical_bullet_weight_gr": [250, 600],
+  "effective_range_yd": 200,
+  "max_range_yd": 1800,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 25.0,
+    "reference_firearm": "AR-15 platform (16\" barrel, 7.5 lbs)",
+    "subjective": "heavy"
+  },
+
+  "year_introduced": 2001,
+  "country_of_origin": "USA",
+  "military_usage": ["Developed in response to U.S. special operations feedback", "Limited special operations use"],
+  "le_usage": ["No significant law enforcement adoption"],
+  "primary_use_cases": ["big game hunting", "hog hunting", "suppressed shooting (subsonic)", "close-range stopping power"],
+
+  "popularity_tier": "niche",
+  "cost_per_round_usd": [1.50, 4.00],
+  "common_firearms": ["AR-15 upper receivers (Rock River Arms, Wilson Combat, Tromix)", "Wilson Combat AR-15", "Tromix custom builds"],
+
+  "loads": [
+    {
+      "name": "SBR 300 gr JHP",
+      "bullet_weight_gr": 300,
+      "bullet_type": "JHP",
+      "muzzle_velocity_fps": 1850,
+      "muzzle_energy_ft_lbs": 2280,
+      "barrel_length_in": 16.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1850, "energy_ft_lbs": 2280, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 1578, "energy_ft_lbs": 1660, "drop_in": -6.2 },
+        { "distance_yd": 200, "velocity_fps": 1342, "energy_ft_lbs": 1200, "drop_in": -25.0 },
+        { "distance_yd": 300, "velocity_fps": 1157, "energy_ft_lbs": 892, "drop_in": -61.5 },
+        { "distance_yd": 400, "velocity_fps": 1030, "energy_ft_lbs": 707, "drop_in": -121.0 },
+        { "distance_yd": 500, "velocity_fps": 942, "energy_ft_lbs": 592, "drop_in": -210.0 }
+      ]
+    },
+    {
+      "name": "SBR 500 gr Subsonic FMJ",
+      "bullet_weight_gr": 500,
+      "bullet_type": "FMJ",
+      "muzzle_velocity_fps": 1050,
+      "muzzle_energy_ft_lbs": 1224,
+      "barrel_length_in": 16.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1050, "energy_ft_lbs": 1224, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 953, "energy_ft_lbs": 1009, "drop_in": -17.0 },
+        { "distance_yd": 200, "velocity_fps": 873, "energy_ft_lbs": 846, "drop_in": -62.0 },
+        { "distance_yd": 300, "velocity_fps": 806, "energy_ft_lbs": 722, "drop_in": -142.0 },
+        { "distance_yd": 400, "velocity_fps": 749, "energy_ft_lbs": 624, "drop_in": -264.0 },
+        { "distance_yd": 500, "velocity_fps": 700, "energy_ft_lbs": 544, "drop_in": -438.0 }
+      ]
+    }
+  ]
+}

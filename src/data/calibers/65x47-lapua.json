@@ -1,0 +1,75 @@
+{
+  "name": "6.5×47mm Lapua",
+  "designation": "6.5×47mm Lapua",
+  "aliases": ["6.5×47 Lapua", "6.5 Lapua"],
+  "category": "rifle",
+  "slug": "65x47-lapua",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.264,
+    "neck_diameter_in": 0.295,
+    "case_length_in": 1.850,
+    "overall_length_in": 2.800,
+    "rim_diameter_in": 0.470,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [2700, 2900],
+  "typical_energy_ft_lbs": [1900, 2400],
+  "typical_bullet_weight_gr": [120, 142],
+  "effective_range_yd": 1000,
+  "max_range_yd": 3200,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 11.0,
+    "reference_firearm": "Tikka T3x TAC A1 (24\" barrel, 10.3 lbs)",
+    "subjective": "moderate"
+  },
+
+  "year_introduced": 2005,
+  "country_of_origin": "Finland",
+  "military_usage": [],
+  "le_usage": [],
+  "primary_use_cases": ["long-range precision", "competition", "target shooting"],
+
+  "popularity_tier": "niche",
+  "cost_per_round_usd": [1.25, 3.00],
+  "common_firearms": ["Tikka T3x", "Accuracy International AT", "Bergara B-14 HMR", "Custom bolt actions (Bighorn TL3, BAT)"],
+
+  "loads": [
+    {
+      "name": "Lapua 139 gr Scenar-L OTM",
+      "bullet_weight_gr": 139,
+      "bullet_type": "OTM (Scenar-L)",
+      "muzzle_velocity_fps": 2790,
+      "muzzle_energy_ft_lbs": 2401,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2790, "energy_ft_lbs": 2401, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2672, "energy_ft_lbs": 2203, "drop_in": -1.5 },
+        { "distance_yd": 200, "velocity_fps": 2557, "energy_ft_lbs": 2017, "drop_in": -6.3 },
+        { "distance_yd": 300, "velocity_fps": 2444, "energy_ft_lbs": 1842, "drop_in": -14.8 },
+        { "distance_yd": 400, "velocity_fps": 2334, "energy_ft_lbs": 1680, "drop_in": -27.5 },
+        { "distance_yd": 500, "velocity_fps": 2226, "energy_ft_lbs": 1528, "drop_in": -44.8 },
+        { "distance_yd": 600, "velocity_fps": 2121, "energy_ft_lbs": 1388, "drop_in": -67.5 }
+      ]
+    },
+    {
+      "name": "Berger 130 gr Hybrid OTM Tactical",
+      "bullet_weight_gr": 130,
+      "bullet_type": "Hybrid OTM Tactical",
+      "muzzle_velocity_fps": 2880,
+      "muzzle_energy_ft_lbs": 2393,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2880, "energy_ft_lbs": 2393, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2756, "energy_ft_lbs": 2192, "drop_in": -1.4 },
+        { "distance_yd": 200, "velocity_fps": 2635, "energy_ft_lbs": 2003, "drop_in": -5.8 },
+        { "distance_yd": 300, "velocity_fps": 2517, "energy_ft_lbs": 1827, "drop_in": -13.6 },
+        { "distance_yd": 400, "velocity_fps": 2402, "energy_ft_lbs": 1663, "drop_in": -25.3 },
+        { "distance_yd": 500, "velocity_fps": 2290, "energy_ft_lbs": 1511, "drop_in": -41.3 },
+        { "distance_yd": 600, "velocity_fps": 2181, "energy_ft_lbs": 1370, "drop_in": -62.2 }
+      ]
+    }
+  ]
+}

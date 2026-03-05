@@ -1,0 +1,73 @@
+{
+  "name": "6.5×52mm Carcano",
+  "designation": "6.5×52mm Carcano",
+  "aliases": ["6.5 Carcano", "6.5×52mm Mannlicher-Carcano"],
+  "category": "rifle",
+  "slug": "65x52mm-carcano",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.268,
+    "neck_diameter_in": 0.297,
+    "case_length_in": 2.047,
+    "overall_length_in": 3.071,
+    "rim_diameter_in": 0.449,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [2100, 2500],
+  "typical_energy_ft_lbs": [1600, 2100],
+  "typical_bullet_weight_gr": [123, 160],
+  "effective_range_yd": 500,
+  "max_range_yd": 3000,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 10.0,
+    "reference_firearm": "Carcano M91 (30.7\" barrel, 8.6 lbs)",
+    "subjective": "moderate"
+  },
+
+  "year_introduced": 1891,
+  "country_of_origin": "Italy",
+  "military_usage": ["Italian military standard cartridge (1891–1945)", "Carcano M91 and M91/38 platforms", "Italian campaigns in North Africa, Ethiopia, and both World Wars", "Finnish military (captured stocks during WWII)"],
+  "le_usage": [],
+  "primary_use_cases": ["military service rifle", "hunting (medium game)", "surplus collecting"],
+
+  "popularity_tier": "niche",
+  "cost_per_round_usd": [1.00, 3.00],
+  "common_firearms": ["Carcano M91", "Carcano M91/38", "Carcano M38"],
+
+  "loads": [
+    {
+      "name": "PPU 139 gr FMJ",
+      "bullet_weight_gr": 139,
+      "bullet_type": "FMJ",
+      "muzzle_velocity_fps": 2526,
+      "muzzle_energy_ft_lbs": 1968,
+      "barrel_length_in": 30.7,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2526, "energy_ft_lbs": 1968, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2310, "energy_ft_lbs": 1646, "drop_in": -3.2 },
+        { "distance_yd": 200, "velocity_fps": 2106, "energy_ft_lbs": 1369, "drop_in": -12.6 },
+        { "distance_yd": 300, "velocity_fps": 1913, "energy_ft_lbs": 1130, "drop_in": -29.8 },
+        { "distance_yd": 400, "velocity_fps": 1734, "energy_ft_lbs": 928, "drop_in": -56.5 },
+        { "distance_yd": 500, "velocity_fps": 1570, "energy_ft_lbs": 761, "drop_in": -95.0 }
+      ]
+    },
+    {
+      "name": "Hornady 160 gr RN",
+      "bullet_weight_gr": 160,
+      "bullet_type": "RN",
+      "muzzle_velocity_fps": 2100,
+      "muzzle_energy_ft_lbs": 1567,
+      "barrel_length_in": 20.9,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2100, "energy_ft_lbs": 1567, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 1873, "energy_ft_lbs": 1247, "drop_in": -5.0 },
+        { "distance_yd": 200, "velocity_fps": 1665, "energy_ft_lbs": 985, "drop_in": -19.2 },
+        { "distance_yd": 300, "velocity_fps": 1479, "energy_ft_lbs": 777, "drop_in": -45.5 },
+        { "distance_yd": 400, "velocity_fps": 1321, "energy_ft_lbs": 620, "drop_in": -88.0 },
+        { "distance_yd": 500, "velocity_fps": 1196, "energy_ft_lbs": 508, "drop_in": -152.0 }
+      ]
+    }
+  ]
+}

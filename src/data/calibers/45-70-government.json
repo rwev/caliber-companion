@@ -1,0 +1,73 @@
+{
+  "name": ".45-70 Government",
+  "designation": ".45-70 Government",
+  "aliases": [".45-70 Govt", ".45-70"],
+  "category": "rifle",
+  "slug": "45-70-government",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.458,
+    "neck_diameter_in": 0.480,
+    "case_length_in": 2.105,
+    "overall_length_in": 2.550,
+    "rim_diameter_in": 0.608,
+    "case_type": "rimmed, straight"
+  },
+
+  "typical_velocity_fps": [1300, 2100],
+  "typical_energy_ft_lbs": [1600, 3600],
+  "typical_bullet_weight_gr": [300, 500],
+  "effective_range_yd": 300,
+  "max_range_yd": 3500,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 25.0,
+    "reference_firearm": "Marlin 1895 (22\" barrel, 7.5 lbs)",
+    "subjective": "heavy"
+  },
+
+  "year_introduced": 1873,
+  "country_of_origin": "USA",
+  "military_usage": ["U.S. Army standard cartridge 1873–1892 (Springfield Model 1873)", "Used in Indian Wars and Spanish-American War"],
+  "le_usage": [],
+  "primary_use_cases": ["hunting", "brush gun", "dangerous game", "cowboy action shooting", "lever-action sport"],
+
+  "popularity_tier": "common",
+  "cost_per_round_usd": [1.00, 3.50],
+  "common_firearms": ["Marlin 1895", "Henry .45-70", "Ruger No. 1", "Springfield Trapdoor", "Shiloh Sharps 1874"],
+
+  "loads": [
+    {
+      "name": "Hornady LEVERevolution 325 gr FTX",
+      "bullet_weight_gr": 325,
+      "bullet_type": "FTX (Flex Tip)",
+      "muzzle_velocity_fps": 2050,
+      "muzzle_energy_ft_lbs": 3032,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2050, "energy_ft_lbs": 3032, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 1831, "energy_ft_lbs": 2420, "drop_in": -3.7 },
+        { "distance_yd": 200, "velocity_fps": 1630, "energy_ft_lbs": 1919, "drop_in": -14.8 },
+        { "distance_yd": 300, "velocity_fps": 1450, "energy_ft_lbs": 1518, "drop_in": -35.8 },
+        { "distance_yd": 400, "velocity_fps": 1296, "energy_ft_lbs": 1213, "drop_in": -69.6 },
+        { "distance_yd": 500, "velocity_fps": 1173, "energy_ft_lbs": 993, "drop_in": -119.8 }
+      ]
+    },
+    {
+      "name": "Federal Power-Shok 300 gr Jacketed Hollow Point",
+      "bullet_weight_gr": 300,
+      "bullet_type": "JHP",
+      "muzzle_velocity_fps": 1850,
+      "muzzle_energy_ft_lbs": 2281,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1850, "energy_ft_lbs": 2281, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 1593, "energy_ft_lbs": 1690, "drop_in": -5.1 },
+        { "distance_yd": 200, "velocity_fps": 1373, "energy_ft_lbs": 1256, "drop_in": -20.0 },
+        { "distance_yd": 300, "velocity_fps": 1198, "energy_ft_lbs": 956, "drop_in": -49.2 },
+        { "distance_yd": 400, "velocity_fps": 1074, "energy_ft_lbs": 769, "drop_in": -97.5 },
+        { "distance_yd": 500, "velocity_fps": 986, "energy_ft_lbs": 648, "drop_in": -170.3 }
+      ]
+    }
+  ]
+}

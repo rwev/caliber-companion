@@ -1,0 +1,75 @@
+{
+  "name": ".300 Winchester Magnum",
+  "designation": ".300 Winchester Magnum",
+  "aliases": [".300 Win Mag", ".300 WM"],
+  "category": "magnum_rifle",
+  "slug": "300-winchester-magnum",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.308,
+    "neck_diameter_in": 0.3397,
+    "case_length_in": 2.62,
+    "overall_length_in": 3.34,
+    "rim_diameter_in": 0.532,
+    "case_type": "belted, bottleneck"
+  },
+
+  "typical_velocity_fps": [2800, 3200],
+  "typical_energy_ft_lbs": [3500, 4000],
+  "typical_bullet_weight_gr": [150, 220],
+  "effective_range_yd": 1200,
+  "max_range_yd": 5600,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 25.0,
+    "reference_firearm": "Remington 700 (26\" barrel, 8.5 lbs)",
+    "subjective": "heavy"
+  },
+
+  "year_introduced": 1963,
+  "country_of_origin": "USA",
+  "military_usage": ["U.S. Military M24 SWS (optional)", "U.S. Army M2010 Enhanced Sniper Rifle", "Various NATO military sniper programs", "U.S. Marine Corps Mk 13 Mod 7"],
+  "le_usage": ["FBI HRT long-range", "Various SWAT precision rifle teams"],
+  "primary_use_cases": ["long-range hunting", "military sniping", "elk and large game hunting", "long-range competition", "target shooting"],
+
+  "popularity_tier": "very_common",
+  "cost_per_round_usd": [1.25, 4.00],
+  "common_firearms": ["Remington 700", "Winchester Model 70", "Browning X-Bolt", "Tikka T3x", "Savage 110", "Weatherby Vanguard"],
+
+  "loads": [
+    {
+      "name": "Federal Gold Medal 190 gr Sierra MatchKing",
+      "bullet_weight_gr": 190,
+      "bullet_type": "BTHP (Sierra MatchKing)",
+      "muzzle_velocity_fps": 2900,
+      "muzzle_energy_ft_lbs": 3547,
+      "barrel_length_in": 26.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2900, "energy_ft_lbs": 3547, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2735, "energy_ft_lbs": 3155, "drop_in": -1.4 },
+        { "distance_yd": 200, "velocity_fps": 2576, "energy_ft_lbs": 2800, "drop_in": -5.8 },
+        { "distance_yd": 300, "velocity_fps": 2422, "energy_ft_lbs": 2475, "drop_in": -13.7 },
+        { "distance_yd": 400, "velocity_fps": 2273, "energy_ft_lbs": 2180, "drop_in": -25.6 },
+        { "distance_yd": 500, "velocity_fps": 2129, "energy_ft_lbs": 1912, "drop_in": -42.2 },
+        { "distance_yd": 600, "velocity_fps": 1990, "energy_ft_lbs": 1670, "drop_in": -64.3 }
+      ]
+    },
+    {
+      "name": "Hornady Precision Hunter 200 gr ELD-X",
+      "bullet_weight_gr": 200,
+      "bullet_type": "ELD-X",
+      "muzzle_velocity_fps": 2850,
+      "muzzle_energy_ft_lbs": 3607,
+      "barrel_length_in": 26.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2850, "energy_ft_lbs": 3607, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2684, "energy_ft_lbs": 3197, "drop_in": -1.5 },
+        { "distance_yd": 200, "velocity_fps": 2524, "energy_ft_lbs": 2828, "drop_in": -6.3 },
+        { "distance_yd": 300, "velocity_fps": 2369, "energy_ft_lbs": 2494, "drop_in": -15.0 },
+        { "distance_yd": 400, "velocity_fps": 2219, "energy_ft_lbs": 2189, "drop_in": -28.0 },
+        { "distance_yd": 500, "velocity_fps": 2075, "energy_ft_lbs": 1912, "drop_in": -46.0 },
+        { "distance_yd": 600, "velocity_fps": 1936, "energy_ft_lbs": 1664, "drop_in": -70.2 }
+      ]
+    }
+  ]
+}

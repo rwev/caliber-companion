@@ -1,0 +1,73 @@
+{
+  "name": ".300 Norma Magnum",
+  "designation": ".300 Norma Magnum",
+  "aliases": [".300 NM", ".300 Norma Mag"],
+  "category": "magnum_rifle",
+  "slug": "300-norma-magnum",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.308,
+    "neck_diameter_in": 0.340,
+    "case_length_in": 2.492,
+    "overall_length_in": 3.681,
+    "rim_diameter_in": 0.588,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [2850, 3100],
+  "typical_energy_ft_lbs": [3800, 4800],
+  "typical_bullet_weight_gr": [180, 230],
+  "effective_range_yd": 1500,
+  "max_range_yd": 5500,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 28.0,
+    "reference_firearm": "Barrett MRAD (26\" barrel, 14.0 lbs)",
+    "subjective": "heavy"
+  },
+
+  "year_introduced": 2013,
+  "country_of_origin": "Sweden",
+  "military_usage": ["U.S. SOCOM Advanced Sniper Rifle (ASR) program", "U.S. Army MK22 ASR (Barrett MRAD)", "Norwegian military long-range sniping"],
+  "le_usage": [],
+  "primary_use_cases": ["extreme long-range precision", "military sniping", "long-range competition", "extended-range hunting"],
+
+  "popularity_tier": "niche",
+  "cost_per_round_usd": [3.00, 7.00],
+  "common_firearms": ["Barrett MRAD", "Accuracy International AX", "Cadex CDX-40 Shadow", "Sako TRG M10"],
+
+  "loads": [
+    {
+      "name": "Berger 215 gr Hybrid Target",
+      "bullet_weight_gr": 215,
+      "bullet_type": "Hybrid Target (OTM)",
+      "muzzle_velocity_fps": 2950,
+      "muzzle_energy_ft_lbs": 4156,
+      "barrel_length_in": 26.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2950, "energy_ft_lbs": 4156, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2832, "energy_ft_lbs": 3830, "drop_in": -1.3 },
+        { "distance_yd": 200, "velocity_fps": 2717, "energy_ft_lbs": 3525, "drop_in": -5.5 },
+        { "distance_yd": 300, "velocity_fps": 2604, "energy_ft_lbs": 3238, "drop_in": -12.5 },
+        { "distance_yd": 400, "velocity_fps": 2494, "energy_ft_lbs": 2969, "drop_in": -22.6 },
+        { "distance_yd": 500, "velocity_fps": 2387, "energy_ft_lbs": 2718, "drop_in": -36.0 }
+      ]
+    },
+    {
+      "name": "Norma Golden Target 230 gr HPBT",
+      "bullet_weight_gr": 230,
+      "bullet_type": "HPBT (Hollow Point Boat Tail)",
+      "muzzle_velocity_fps": 2887,
+      "muzzle_energy_ft_lbs": 4256,
+      "barrel_length_in": 26.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2887, "energy_ft_lbs": 4256, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2778, "energy_ft_lbs": 3942, "drop_in": -1.4 },
+        { "distance_yd": 200, "velocity_fps": 2671, "energy_ft_lbs": 3643, "drop_in": -5.8 },
+        { "distance_yd": 300, "velocity_fps": 2567, "energy_ft_lbs": 3363, "drop_in": -13.2 },
+        { "distance_yd": 400, "velocity_fps": 2465, "energy_ft_lbs": 3101, "drop_in": -23.8 },
+        { "distance_yd": 500, "velocity_fps": 2365, "energy_ft_lbs": 2855, "drop_in": -37.6 }
+      ]
+    }
+  ]
+}

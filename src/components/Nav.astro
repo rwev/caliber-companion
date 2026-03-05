@@ -1,0 +1,51 @@
+---
+import CaliberSearch from './islands/CaliberSearch';
+import ThemeToggle from './islands/ThemeToggle';
+import { getCollection } from 'astro:content';
+
+const calibers = await getCollection('caliberData');
+const caliberIndex = calibers.map(c => ({
+  name: c.data.name,
+  slug: c.data.slug,
+  designation: c.data.designation,
+}));
+
+const links = [
+  { href: '/caliber-companion/browse', label: 'Browse' },
+  { href: '/caliber-companion/compare', label: 'Compare' },
+];
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 border-b border-surface-border bg-surface/90 backdrop-blur-md">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6">
+    <div class="flex h-14 items-center justify-between">
+      <!-- Logo / Home -->
+      <a href="/caliber-companion/" class="group flex items-center gap-3">
+        <div class="flex h-8 w-8 items-center justify-center border border-accent/40 bg-accent/10 transition-colors group-hover:border-accent group-hover:bg-accent/20">
+          <span class="font-mono text-sm font-bold text-accent">CC</span>
+        </div>
+        <span class="hidden font-display text-base tracking-widest uppercase text-text-primary transition-colors group-hover:text-accent sm:inline">
+          Caliber Companion
+        </span>
+      </a>
+
+      <!-- Navigation Links + Search -->
+      <div class="flex items-center gap-1">
+        {links.map(link => (
+          <a
+            href={link.href}
+            class="px-3 py-1.5 font-mono text-sm tracking-wider uppercase text-text-secondary transition-colors hover:text-accent"
+          >
+            {link.label}
+          </a>
+        ))}
+        <div class="ml-2 border-l border-surface-border pl-3">
+          <CaliberSearch client:idle calibers={caliberIndex} basePath="/caliber-companion" />
+        </div>
+        <div class="ml-2 border-l border-surface-border pl-3">
+          <ThemeToggle client:idle />
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

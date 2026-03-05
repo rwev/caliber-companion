@@ -1,0 +1,75 @@
+{
+  "name": "7mm Remington Magnum",
+  "designation": "7mm Remington Magnum",
+  "aliases": ["7mm Rem Mag", "7mm Mag"],
+  "category": "magnum_rifle",
+  "slug": "7mm-remington-magnum",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.284,
+    "neck_diameter_in": 0.315,
+    "case_length_in": 2.50,
+    "overall_length_in": 3.29,
+    "rim_diameter_in": 0.532,
+    "case_type": "belted, bottleneck"
+  },
+
+  "typical_velocity_fps": [2800, 3200],
+  "typical_energy_ft_lbs": [2900, 3500],
+  "typical_bullet_weight_gr": [120, 175],
+  "effective_range_yd": 1000,
+  "max_range_yd": 5200,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 20.0,
+    "reference_firearm": "Remington 700 (24\" barrel, 8.5 lbs)",
+    "subjective": "heavy"
+  },
+
+  "year_introduced": 1962,
+  "country_of_origin": "USA",
+  "military_usage": ["Limited military sniper use"],
+  "le_usage": ["Occasional law enforcement precision rifle use"],
+  "primary_use_cases": ["long-range hunting", "elk hunting", "mule deer hunting", "target shooting", "long-range competition"],
+
+  "popularity_tier": "very_common",
+  "cost_per_round_usd": [1.25, 3.50],
+  "common_firearms": ["Remington 700", "Browning X-Bolt", "Winchester Model 70", "Weatherby Vanguard", "Tikka T3x", "Ruger Hawkeye"],
+
+  "loads": [
+    {
+      "name": "Federal Trophy Bonded Tip 160 gr",
+      "bullet_weight_gr": 160,
+      "bullet_type": "Polymer Tip (Bonded)",
+      "muzzle_velocity_fps": 2940,
+      "muzzle_energy_ft_lbs": 3071,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2940, "energy_ft_lbs": 3071, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2756, "energy_ft_lbs": 2697, "drop_in": -1.3 },
+        { "distance_yd": 200, "velocity_fps": 2579, "energy_ft_lbs": 2362, "drop_in": -5.6 },
+        { "distance_yd": 300, "velocity_fps": 2409, "energy_ft_lbs": 2062, "drop_in": -13.4 },
+        { "distance_yd": 400, "velocity_fps": 2245, "energy_ft_lbs": 1790, "drop_in": -25.2 },
+        { "distance_yd": 500, "velocity_fps": 2088, "energy_ft_lbs": 1549, "drop_in": -41.7 },
+        { "distance_yd": 600, "velocity_fps": 1937, "energy_ft_lbs": 1333, "drop_in": -63.8 }
+      ]
+    },
+    {
+      "name": "Hornady Precision Hunter 162 gr ELD-X",
+      "bullet_weight_gr": 162,
+      "bullet_type": "ELD-X",
+      "muzzle_velocity_fps": 2940,
+      "muzzle_energy_ft_lbs": 3110,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2940, "energy_ft_lbs": 3110, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2770, "energy_ft_lbs": 2760, "drop_in": -1.3 },
+        { "distance_yd": 200, "velocity_fps": 2606, "energy_ft_lbs": 2443, "drop_in": -5.4 },
+        { "distance_yd": 300, "velocity_fps": 2447, "energy_ft_lbs": 2153, "drop_in": -12.8 },
+        { "distance_yd": 400, "velocity_fps": 2294, "energy_ft_lbs": 1893, "drop_in": -23.9 },
+        { "distance_yd": 500, "velocity_fps": 2146, "energy_ft_lbs": 1657, "drop_in": -39.2 },
+        { "distance_yd": 600, "velocity_fps": 2003, "energy_ft_lbs": 1443, "drop_in": -59.5 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "name": ".22 LR",
+  "designation": ".22 Long Rifle",
+  "aliases": [".22", ".22 LR", "5.6×15mmR"],
+  "category": "handgun",
+  "slug": "22-lr",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.223,
+    "neck_diameter_in": 0.226,
+    "case_length_in": 0.613,
+    "overall_length_in": 1.000,
+    "rim_diameter_in": 0.278,
+    "case_type": "rimmed, straight (rimfire)"
+  },
+
+  "typical_velocity_fps": [1000, 1280],
+  "typical_energy_ft_lbs": [100, 175],
+  "typical_bullet_weight_gr": [29, 40],
+  "effective_range_yd": 75,
+  "max_range_yd": 1500,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 0.2,
+    "reference_firearm": "Ruger Mark IV (4.75\" barrel, 30 oz)",
+    "subjective": "very_low"
+  },
+
+  "year_introduced": 1887,
+  "country_of_origin": "USA",
+  "military_usage": ["U.S. military marksmanship training", "Israeli military training"],
+  "le_usage": ["Training and qualification", "Wildlife control"],
+  "primary_use_cases": ["target shooting", "plinking", "training", "small game hunting", "pest control", "competition"],
+
+  "popularity_tier": "ubiquitous",
+  "cost_per_round_usd": [0.05, 0.20],
+  "common_firearms": ["Ruger 10/22", "Ruger Mark IV", "Smith & Wesson M&P 15-22", "CZ 457", "Browning Buck Mark", "Walther P22"],
+
+  "loads": [
+    {
+      "name": "CCI Standard Velocity 40 gr LRN",
+      "bullet_weight_gr": 40,
+      "bullet_type": "LRN",
+      "muzzle_velocity_fps": 1070,
+      "muzzle_energy_ft_lbs": 102,
+      "barrel_length_in": 4.75,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1070, "energy_ft_lbs": 102, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 1010, "energy_ft_lbs": 91, "drop_in": -0.3 },
+        { "distance_yd": 50, "velocity_fps": 960, "energy_ft_lbs": 82, "drop_in": -1.6 },
+        { "distance_yd": 75, "velocity_fps": 916, "energy_ft_lbs": 75, "drop_in": -4.5 },
+        { "distance_yd": 100, "velocity_fps": 878, "energy_ft_lbs": 68, "drop_in": -9.5 }
+      ]
+    },
+    {
+      "name": "CCI Mini-Mag 36 gr CPHP",
+      "bullet_weight_gr": 36,
+      "bullet_type": "CPHP",
+      "muzzle_velocity_fps": 1260,
+      "muzzle_energy_ft_lbs": 127,
+      "barrel_length_in": 4.75,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1260, "energy_ft_lbs": 127, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 1175, "energy_ft_lbs": 110, "drop_in": -0.2 },
+        { "distance_yd": 50, "velocity_fps": 1100, "energy_ft_lbs": 97, "drop_in": -1.1 },
+        { "distance_yd": 75, "velocity_fps": 1040, "energy_ft_lbs": 86, "drop_in": -3.2 },
+        { "distance_yd": 100, "velocity_fps": 990, "energy_ft_lbs": 78, "drop_in": -7.0 }
+      ]
+    }
+  ]
+}

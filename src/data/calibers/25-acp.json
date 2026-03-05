@@ -1,0 +1,71 @@
+{
+  "name": ".25 ACP",
+  "designation": ".25 Automatic",
+  "aliases": ["6.35mm Browning", ".25 Auto", "6.35×15.5mmSR"],
+  "category": "handgun",
+  "slug": "25-acp",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.251,
+    "neck_diameter_in": 0.276,
+    "case_length_in": 0.615,
+    "overall_length_in": 0.910,
+    "rim_diameter_in": 0.296,
+    "case_type": "semi-rimmed, straight"
+  },
+
+  "typical_velocity_fps": [760, 900],
+  "typical_energy_ft_lbs": [63, 93],
+  "typical_bullet_weight_gr": [35, 50],
+  "effective_range_yd": 10,
+  "max_range_yd": 1100,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 0.8,
+    "reference_firearm": "Beretta 950 Jetfire (2.4\" barrel, 10 oz)",
+    "subjective": "very_low"
+  },
+
+  "year_introduced": 1905,
+  "country_of_origin": "Belgium",
+  "military_usage": ["Officers' personal sidearm (various nations, WWI/WWII era)"],
+  "le_usage": ["European police backup weapon (historically)"],
+  "primary_use_cases": ["deep concealment", "backup gun (historical)", "collecting"],
+
+  "popularity_tier": "niche",
+  "cost_per_round_usd": [0.35, 1.00],
+  "common_firearms": ["Beretta 950 Jetfire", "Beretta 21A Bobcat", "Baby Browning", "Raven Arms MP-25", "Seecamp LWS 25"],
+
+  "loads": [
+    {
+      "name": "Winchester Super-X 50 gr FMJ",
+      "bullet_weight_gr": 50,
+      "bullet_type": "FMJ",
+      "muzzle_velocity_fps": 760,
+      "muzzle_energy_ft_lbs": 64,
+      "barrel_length_in": 2.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 760, "energy_ft_lbs": 64, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 718, "energy_ft_lbs": 57, "drop_in": -0.7 },
+        { "distance_yd": 50, "velocity_fps": 680, "energy_ft_lbs": 51, "drop_in": -3.4 },
+        { "distance_yd": 75, "velocity_fps": 646, "energy_ft_lbs": 46, "drop_in": -8.8 },
+        { "distance_yd": 100, "velocity_fps": 615, "energy_ft_lbs": 42, "drop_in": -17.5 }
+      ]
+    },
+    {
+      "name": "Hornady XTP 35 gr JHP",
+      "bullet_weight_gr": 35,
+      "bullet_type": "JHP",
+      "muzzle_velocity_fps": 900,
+      "muzzle_energy_ft_lbs": 63,
+      "barrel_length_in": 2.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 900, "energy_ft_lbs": 63, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 842, "energy_ft_lbs": 55, "drop_in": -0.5 },
+        { "distance_yd": 50, "velocity_fps": 790, "energy_ft_lbs": 49, "drop_in": -2.5 },
+        { "distance_yd": 75, "velocity_fps": 744, "energy_ft_lbs": 43, "drop_in": -6.8 },
+        { "distance_yd": 100, "velocity_fps": 703, "energy_ft_lbs": 38, "drop_in": -13.8 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "name": ".30-30 Winchester",
+  "designation": ".30-30 Winchester",
+  "aliases": [".30-30 Win", ".30 WCF", "7.62×51mmR"],
+  "category": "rifle",
+  "slug": "30-30-winchester",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.308,
+    "neck_diameter_in": 0.330,
+    "case_length_in": 2.039,
+    "overall_length_in": 2.550,
+    "rim_diameter_in": 0.506,
+    "case_type": "rimmed, bottleneck"
+  },
+
+  "typical_velocity_fps": [2100, 2500],
+  "typical_energy_ft_lbs": [1600, 1900],
+  "typical_bullet_weight_gr": [110, 170],
+  "effective_range_yd": 200,
+  "max_range_yd": 3000,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 11.0,
+    "reference_firearm": "Winchester Model 94 (20\" barrel, 6.5 lbs)",
+    "subjective": "moderate"
+  },
+
+  "year_introduced": 1895,
+  "country_of_origin": "USA",
+  "military_usage": ["Limited military use", "Used by some U.S. state militias in early 20th century"],
+  "le_usage": ["Historical use by rural law enforcement and game wardens"],
+  "primary_use_cases": ["deer hunting", "brush hunting", "lever-action sport shooting", "close-range big game", "cowboy action shooting"],
+
+  "popularity_tier": "very_common",
+  "cost_per_round_usd": [0.80, 2.00],
+  "common_firearms": ["Winchester Model 94", "Marlin 336", "Henry Steel Lever Action", "Mossberg 464"],
+
+  "loads": [
+    {
+      "name": "Winchester Super-X 150 gr PP",
+      "bullet_weight_gr": 150,
+      "bullet_type": "PP",
+      "muzzle_velocity_fps": 2390,
+      "muzzle_energy_ft_lbs": 1902,
+      "barrel_length_in": 20.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2390, "energy_ft_lbs": 1902, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2108, "energy_ft_lbs": 1480, "drop_in": -3.5 },
+        { "distance_yd": 200, "velocity_fps": 1847, "energy_ft_lbs": 1136, "drop_in": -14.5 },
+        { "distance_yd": 300, "velocity_fps": 1610, "energy_ft_lbs": 863, "drop_in": -36.0 },
+        { "distance_yd": 400, "velocity_fps": 1404, "energy_ft_lbs": 656, "drop_in": -72.0 },
+        { "distance_yd": 500, "velocity_fps": 1236, "energy_ft_lbs": 509, "drop_in": -127.0 }
+      ]
+    },
+    {
+      "name": "Hornady LEVERevolution 160 gr FTX",
+      "bullet_weight_gr": 160,
+      "bullet_type": "FTX",
+      "muzzle_velocity_fps": 2400,
+      "muzzle_energy_ft_lbs": 2046,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2400, "energy_ft_lbs": 2046, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2150, "energy_ft_lbs": 1643, "drop_in": -3.0 },
+        { "distance_yd": 200, "velocity_fps": 1916, "energy_ft_lbs": 1304, "drop_in": -12.8 },
+        { "distance_yd": 300, "velocity_fps": 1699, "energy_ft_lbs": 1025, "drop_in": -31.5 },
+        { "distance_yd": 400, "velocity_fps": 1503, "energy_ft_lbs": 802, "drop_in": -62.5 },
+        { "distance_yd": 500, "velocity_fps": 1333, "energy_ft_lbs": 631, "drop_in": -109.0 }
+      ]
+    }
+  ]
+}

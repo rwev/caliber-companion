@@ -1,0 +1,190 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SpecTable from '../../components/SpecTable.astro';
+import UsageBadges from '../../components/UsageBadges.astro';
+import BallisticsChart from '../../components/islands/BallisticsChart';
+import { getCollection, render } from 'astro:content';
+import { fmtRange, fmtNumber, fmtCurrency, titleCase } from '../../lib/format';
+
+export async function getStaticPaths() {
+  const calibers = await getCollection('caliberData');
+  return calibers.map(caliber => ({
+    params: { slug: caliber.data.slug },
+    props: { caliber },
+  }));
+}
+
+const { caliber } = Astro.props;
+const d = caliber.data;
+
+// Find matching prose
+const proseEntries = await getCollection('caliberProse');
+const prose = proseEntries.find(p => p.data.slug === d.slug);
+const rendered = prose ? await render(prose) : null;
+const Content = rendered?.Content;
+
+const dimensionRows = [
+  { label: 'Bullet Diameter', value: `${d.dimensions.bullet_diameter_in}" (${(d.dimensions.bullet_diameter_in * 25.4).toFixed(2)}mm)` },
+  { label: 'Neck Diameter', value: `${d.dimensions.neck_diameter_in}"` },
+  { label: 'Case Length', value: `${d.dimensions.case_length_in}"` },
+  { label: 'Overall Length', value: `${d.dimensions.overall_length_in}"` },
+  ...(d.dimensions.rim_diameter_in ? [{ label: 'Rim Diameter', value: `${d.dimensions.rim_diameter_in}"` }] : []),
+  { label: 'Case Type', value: d.dimensions.case_type },
+];
+
+const performanceRows = [
+  { label: 'Typical Velocity', value: fmtRange(d.typical_velocity_fps, 'fps') },
+  { label: 'Typical Energy', value: fmtRange(d.typical_energy_ft_lbs, 'ft·lbs') },
+  { label: 'Bullet Weight', value: fmtRange(d.typical_bullet_weight_gr, 'gr') },
+  { label: 'Effective Range', value: `${fmtNumber(d.effective_range_yd)} yd` },
+  ...(d.max_range_yd ? [{ label: 'Max Range', value: `${fmtNumber(d.max_range_yd)} yd` }] : []),
+];
+
+const recoilRows = [
+  { label: 'Free Recoil Energy', value: `${d.recoil.free_recoil_ft_lbs} ft·lbs` },
+  { label: 'Reference Firearm', value: d.recoil.reference_firearm },
+  { label: 'Subjective Rating', value: titleCase(d.recoil.subjective) },
+];
+
+const marketRows = [
+  { label: 'Popularity', value: titleCase(d.popularity_tier) },
+  { label: 'Cost Per Round', value: fmtCurrency(d.cost_per_round_usd) },
+  { label: 'Year Introduced', value: `${d.year_introduced}` },
+  { label: 'Country of Origin', value: d.country_of_origin },
+];
+---
+
+<BaseLayout title={d.name}>
+  <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
+    <!-- Header -->
+    <div class="mb-8 border-b border-surface-border pb-6">
+      <div class="flex items-center gap-3 mb-2">
+        <a href="/caliber-companion/browse" class="font-mono text-sm tracking-wider uppercase text-text-muted hover:text-accent transition-colors">
+          ← All Calibers
+        </a>
+        <span class="text-text-muted">·</span>
+        <span class="border border-accent/30 bg-accent/10 px-2 py-0.5 font-mono text-sm tracking-wider uppercase text-accent">
+          {titleCase(d.category)}
+        </span>
+      </div>
+
+      <h1 class="font-display text-4xl font-bold tracking-tight text-text-primary sm:text-5xl">
+        {d.name}
+      </h1>
+      <div class="mt-1 font-mono text-sm text-text-muted">
+        {d.designation}
+        {d.aliases.length > 0 && (
+          <span class="text-text-muted"> · aka {d.aliases.join(', ')}</span>
+        )}
+      </div>
+    </div>
+
+    <!-- Main Grid -->
+    <div class="grid gap-6 lg:grid-cols-3">
+      <!-- Left Column: Specs -->
+      <div class="space-y-6 lg:col-span-2">
+        <div class="grid gap-6 sm:grid-cols-2">
+          <SpecTable title="Dimensions" rows={dimensionRows} />
+          <SpecTable title="Performance" rows={performanceRows} />
+        </div>
+
+        <div class="grid gap-6 sm:grid-cols-2">
+          <SpecTable title="Recoil" rows={recoilRows} />
+          <SpecTable title="Market" rows={marketRows} />
+        </div>
+
+        <!-- Loads Table -->
+        <div class="border border-surface-border">
+          <div class="border-b border-surface-border bg-surface-overlay px-4 py-2">
+            <h3 class="font-display text-sm tracking-[0.2em] uppercase text-text-muted">Load Profiles</h3>
+          </div>
+
+          {d.loads.map((load, loadIdx) => (
+            <div class={loadIdx > 0 ? 'border-t border-surface-border' : ''}>
+              <div class="flex items-baseline justify-between bg-surface-raised px-4 py-2">
+                <span class="font-mono text-sm font-medium text-text-primary">{load.name}</span>
+                <span class="font-mono text-sm text-text-muted">
+                  {load.bullet_weight_gr}gr {load.bullet_type} · {load.barrel_length_in}" barrel
+                </span>
+              </div>
+
+              <div class="overflow-x-auto">
+                <table class="w-full text-left font-mono text-sm">
+                  <thead>
+                    <tr class="border-b border-surface-border-subtle bg-surface-overlay text-text-muted">
+                      <th class="px-4 py-1.5 font-medium tracking-wider uppercase text-sm">Distance</th>
+                      <th class="px-4 py-1.5 font-medium tracking-wider uppercase text-sm text-right">Velocity</th>
+                      <th class="px-4 py-1.5 font-medium tracking-wider uppercase text-sm text-right">Energy</th>
+                      <th class="px-4 py-1.5 font-medium tracking-wider uppercase text-sm text-right">Drop</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {load.ballistics.map((point, i) => (
+                      <tr class={`border-b border-surface-border-subtle ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
+                        <td class="px-4 py-1.5 text-text-secondary">{point.distance_yd} yd</td>
+                        <td class="px-4 py-1.5 text-right text-text-primary">{fmtNumber(point.velocity_fps)} <span class="text-text-muted">fps</span></td>
+                        <td class="px-4 py-1.5 text-right text-text-primary">{fmtNumber(point.energy_ft_lbs)} <span class="text-text-muted">ft·lbs</span></td>
+                        <td class={`px-4 py-1.5 text-right ${point.drop_in < 0 ? 'text-danger' : 'text-text-primary'}`}>
+                          {point.drop_in > 0 ? '+' : ''}{point.drop_in.toFixed(1)}"
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Ballistics Chart -->
+        <BallisticsChart client:visible loads={d.loads} />
+      </div>
+
+      <!-- Right Column: Sidebar -->
+      <div class="space-y-6">
+        <!-- Usage Badges -->
+        <div class="border border-surface-border p-4">
+          <UsageBadges
+            military={d.military_usage}
+            le={d.le_usage}
+            useCases={d.primary_use_cases}
+          />
+        </div>
+
+        <!-- Common Firearms -->
+        <div class="border border-surface-border">
+          <div class="border-b border-surface-border bg-surface-overlay px-4 py-2">
+            <h3 class="font-display text-sm tracking-[0.2em] uppercase text-text-muted">Common Firearms</h3>
+          </div>
+          <ul class="divide-y divide-surface-border-subtle">
+            {d.common_firearms.map((firearm, i) => (
+              <li class={`px-4 py-2 font-mono text-sm text-text-secondary ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
+                {firearm}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Compare Link -->
+        <a
+          href={`/caliber-companion/compare?c=${d.slug}`}
+          class="flex items-center justify-center gap-2 border border-surface-border bg-surface-raised px-4 py-3 font-mono text-sm tracking-wider uppercase text-text-secondary transition-colors hover:border-accent hover:text-accent"
+        >
+          <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z" />
+          </svg>
+          Compare this caliber
+        </a>
+      </div>
+    </div>
+
+    <!-- Prose Content -->
+    {Content && (
+      <div class="mt-12 border-t border-surface-border pt-8">
+        <div class="prose mx-auto max-w-3xl prose-headings:font-display prose-headings:tracking-[0.2em] prose-headings:uppercase prose-h2:text-2xl prose-h2:font-semibold prose-h2:text-accent prose-h2:border-b prose-h2:border-surface-border prose-h2:pb-3 prose-h2:mt-12 prose-h2:mb-5 prose-strong:text-text-primary">
+          <Content />
+        </div>
+      </div>
+    )}
+  </div>
+</BaseLayout>

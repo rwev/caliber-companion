@@ -1,0 +1,71 @@
+{
+  "name": "16 Gauge",
+  "designation": "16 Gauge (16.83mm)",
+  "aliases": ["16 GA", "16 Bore"],
+  "category": "shotgun",
+  "slug": "16-gauge",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.662,
+    "neck_diameter_in": 0.740,
+    "case_length_in": 2.75,
+    "overall_length_in": 2.75,
+    "rim_diameter_in": 0.795,
+    "case_type": "rimmed, straight (plastic hull)"
+  },
+
+  "typical_velocity_fps": [1100, 1350],
+  "typical_energy_ft_lbs": [900, 1700],
+  "typical_bullet_weight_gr": [328, 437],
+  "effective_range_yd": 40,
+  "max_range_yd": 150,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 18.0,
+    "reference_firearm": "Browning A5 Sweet Sixteen (28\" barrel, 6.5 lbs)",
+    "subjective": "moderate"
+  },
+
+  "year_introduced": 1800,
+  "country_of_origin": "United Kingdom",
+  "military_usage": [],
+  "le_usage": [],
+  "primary_use_cases": ["hunting", "upland bird hunting", "sport shooting"],
+
+  "popularity_tier": "niche",
+  "cost_per_round_usd": [0.50, 2.50],
+  "common_firearms": ["Browning A5 Sweet Sixteen", "Browning Citori 16 GA", "Franchi Instinct 16 GA", "CZ Bobwhite 16 GA"],
+
+  "loads": [
+    {
+      "name": "Federal Game Load 16 GA #6 Shot (2¾\")",
+      "bullet_weight_gr": 437,
+      "bullet_type": "#6 Lead Shot (1 oz)",
+      "muzzle_velocity_fps": 1165,
+      "muzzle_energy_ft_lbs": 1315,
+      "barrel_length_in": 28.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1165, "energy_ft_lbs": 1315, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 1040, "energy_ft_lbs": 1050, "drop_in": -0.7 },
+        { "distance_yd": 50, "velocity_fps": 940, "energy_ft_lbs": 858, "drop_in": -3.5 },
+        { "distance_yd": 75, "velocity_fps": 860, "energy_ft_lbs": 718, "drop_in": -9.0 },
+        { "distance_yd": 100, "velocity_fps": 795, "energy_ft_lbs": 614, "drop_in": -17.8 }
+      ]
+    },
+    {
+      "name": "Brenneke 16 GA Classic 1 oz Slug",
+      "bullet_weight_gr": 437,
+      "bullet_type": "Brenneke Slug",
+      "muzzle_velocity_fps": 1350,
+      "muzzle_energy_ft_lbs": 1768,
+      "barrel_length_in": 28.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1350, "energy_ft_lbs": 1768, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 1255, "energy_ft_lbs": 1529, "drop_in": -0.4 },
+        { "distance_yd": 50, "velocity_fps": 1172, "energy_ft_lbs": 1332, "drop_in": -2.0 },
+        { "distance_yd": 75, "velocity_fps": 1100, "energy_ft_lbs": 1174, "drop_in": -5.4 },
+        { "distance_yd": 100, "velocity_fps": 1040, "energy_ft_lbs": 1050, "drop_in": -11.0 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "name": "5.7×28mm",
+  "designation": "5.7×28mm",
+  "aliases": ["5.7", "FN 5.7"],
+  "category": "pdw",
+  "slug": "57x28mm",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.224,
+    "neck_diameter_in": 0.253,
+    "case_length_in": 1.138,
+    "overall_length_in": 1.594,
+    "rim_diameter_in": 0.312,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [1750, 2800],
+  "typical_energy_ft_lbs": [250, 400],
+  "typical_bullet_weight_gr": [23, 55],
+  "effective_range_yd": 200,
+  "max_range_yd": 1800,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 2.0,
+    "reference_firearm": "FN Five-seveN pistol (4.8\" barrel, 1.5 lbs)",
+    "subjective": "very_low"
+  },
+
+  "year_introduced": 1990,
+  "country_of_origin": "Belgium",
+  "military_usage": ["NATO PDW cartridge (STANAG 4509)", "FN P90 submachine gun / PDW", "Belgian Special Forces", "U.S. Secret Service (FN P90)", "Numerous NATO and allied nations"],
+  "le_usage": ["U.S. Secret Service", "Various federal agencies", "Some metropolitan police special units"],
+  "primary_use_cases": ["personal defense", "PDW applications", "target shooting", "home defense"],
+
+  "popularity_tier": "common",
+  "cost_per_round_usd": [0.45, 1.50],
+  "common_firearms": ["FN Five-seveN", "FN P90/PS90", "Ruger-57", "CMMG Banshee", "Diamondback DBX57"],
+
+  "loads": [
+    {
+      "name": "FN SS197SR 40 gr V-MAX",
+      "bullet_weight_gr": 40,
+      "bullet_type": "V-MAX (Hornady)",
+      "muzzle_velocity_fps": 1700,
+      "muzzle_energy_ft_lbs": 256,
+      "barrel_length_in": 4.8,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1700, "energy_ft_lbs": 256, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 1413, "energy_ft_lbs": 177, "drop_in": -5.4 },
+        { "distance_yd": 200, "velocity_fps": 1177, "energy_ft_lbs": 123, "drop_in": -20.8 },
+        { "distance_yd": 300, "velocity_fps": 1015, "energy_ft_lbs": 91, "drop_in": -51.5 },
+        { "distance_yd": 400, "velocity_fps": 912, "energy_ft_lbs": 74, "drop_in": -103.0 },
+        { "distance_yd": 500, "velocity_fps": 836, "energy_ft_lbs": 62, "drop_in": -181.0 }
+      ]
+    },
+    {
+      "name": "Federal American Eagle 40 gr FMJ",
+      "bullet_weight_gr": 40,
+      "bullet_type": "FMJ",
+      "muzzle_velocity_fps": 1655,
+      "muzzle_energy_ft_lbs": 243,
+      "barrel_length_in": 4.8,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1655, "energy_ft_lbs": 243, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 1380, "energy_ft_lbs": 169, "drop_in": -5.8 },
+        { "distance_yd": 200, "velocity_fps": 1155, "energy_ft_lbs": 118, "drop_in": -22.0 },
+        { "distance_yd": 300, "velocity_fps": 1003, "energy_ft_lbs": 89, "drop_in": -54.0 },
+        { "distance_yd": 400, "velocity_fps": 905, "energy_ft_lbs": 73, "drop_in": -108.0 },
+        { "distance_yd": 500, "velocity_fps": 831, "energy_ft_lbs": 61, "drop_in": -189.0 }
+      ]
+    }
+  ]
+}

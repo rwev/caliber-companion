@@ -1,0 +1,73 @@
+{
+  "name": "6.5 PRC",
+  "designation": "6.5 Precision Rifle Cartridge",
+  "aliases": ["6.5 PRC"],
+  "category": "rifle",
+  "slug": "65-prc",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.264,
+    "neck_diameter_in": 0.297,
+    "case_length_in": 2.030,
+    "overall_length_in": 2.955,
+    "rim_diameter_in": 0.532,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [2800, 3000],
+  "typical_energy_ft_lbs": [2500, 2900],
+  "typical_bullet_weight_gr": [130, 156],
+  "effective_range_yd": 1200,
+  "max_range_yd": 6000,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 15.0,
+    "reference_firearm": "Browning X-Bolt (24\" barrel, 8.0 lbs)",
+    "subjective": "moderate"
+  },
+
+  "year_introduced": 2018,
+  "country_of_origin": "USA",
+  "military_usage": ["No major military adoption to date"],
+  "le_usage": ["Limited adoption in precision rifle roles"],
+  "primary_use_cases": ["long-range hunting", "precision rifle competition", "extended-range target shooting", "western big game hunting"],
+
+  "popularity_tier": "common",
+  "cost_per_round_usd": [1.50, 3.50],
+  "common_firearms": ["Browning X-Bolt", "Christensen Arms Mesa", "Bergara B-14 HMR Pro", "Tikka T3x Lite", "Savage 110 High Country"],
+
+  "loads": [
+    {
+      "name": "Hornady ELD Match 147 gr",
+      "bullet_weight_gr": 147,
+      "bullet_type": "ELD Match",
+      "muzzle_velocity_fps": 2910,
+      "muzzle_energy_ft_lbs": 2764,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2910, "energy_ft_lbs": 2764, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2756, "energy_ft_lbs": 2479, "drop_in": -1.7 },
+        { "distance_yd": 200, "velocity_fps": 2607, "energy_ft_lbs": 2217, "drop_in": -7.2 },
+        { "distance_yd": 300, "velocity_fps": 2462, "energy_ft_lbs": 1977, "drop_in": -16.9 },
+        { "distance_yd": 400, "velocity_fps": 2322, "energy_ft_lbs": 1758, "drop_in": -31.2 },
+        { "distance_yd": 500, "velocity_fps": 2186, "energy_ft_lbs": 1559, "drop_in": -50.8 }
+      ]
+    },
+    {
+      "name": "Hornady Precision Hunter 143 gr ELD-X",
+      "bullet_weight_gr": 143,
+      "bullet_type": "ELD-X",
+      "muzzle_velocity_fps": 2960,
+      "muzzle_energy_ft_lbs": 2782,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2960, "energy_ft_lbs": 2782, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2798, "energy_ft_lbs": 2486, "drop_in": -1.6 },
+        { "distance_yd": 200, "velocity_fps": 2641, "energy_ft_lbs": 2214, "drop_in": -6.9 },
+        { "distance_yd": 300, "velocity_fps": 2490, "energy_ft_lbs": 1968, "drop_in": -16.2 },
+        { "distance_yd": 400, "velocity_fps": 2344, "energy_ft_lbs": 1743, "drop_in": -29.9 },
+        { "distance_yd": 500, "velocity_fps": 2203, "energy_ft_lbs": 1540, "drop_in": -48.7 }
+      ]
+    }
+  ]
+}

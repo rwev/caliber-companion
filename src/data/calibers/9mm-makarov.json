@@ -1,0 +1,71 @@
+{
+  "name": "9mm Makarov",
+  "designation": "9×18mm Makarov",
+  "aliases": ["9×18mm", "9mm Mak"],
+  "category": "handgun",
+  "slug": "9mm-makarov",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.365,
+    "neck_diameter_in": 0.394,
+    "case_length_in": 0.713,
+    "overall_length_in": 0.984,
+    "rim_diameter_in": 0.394,
+    "case_type": "rimless, tapered"
+  },
+
+  "typical_velocity_fps": [1000, 1100],
+  "typical_energy_ft_lbs": [195, 260],
+  "typical_bullet_weight_gr": [93, 100],
+  "effective_range_yd": 50,
+  "max_range_yd": 1500,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 3.0,
+    "reference_firearm": "Makarov PM (3.68\" barrel, 26 oz)",
+    "subjective": "low"
+  },
+
+  "year_introduced": 1951,
+  "country_of_origin": "Soviet Union",
+  "military_usage": ["Soviet/Russian military standard sidearm (1951–2003)", "Warsaw Pact nations", "Chinese military (Type 59)"],
+  "le_usage": ["Soviet/Russian police", "East German Volkspolizei", "Many former Soviet-bloc police forces"],
+  "primary_use_cases": ["military sidearm (legacy)", "self-defense", "collecting", "target shooting"],
+
+  "popularity_tier": "common",
+  "cost_per_round_usd": [0.25, 0.75],
+  "common_firearms": ["Makarov PM", "CZ 82/83", "Bulgarian Makarov", "East German Makarov", "FEG PA-63", "P-64"],
+
+  "loads": [
+    {
+      "name": "Silver Bear 94 gr FMJ",
+      "bullet_weight_gr": 94,
+      "bullet_type": "FMJ",
+      "muzzle_velocity_fps": 1017,
+      "muzzle_energy_ft_lbs": 216,
+      "barrel_length_in": 3.68,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1017, "energy_ft_lbs": 216, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 975, "energy_ft_lbs": 198, "drop_in": -0.3 },
+        { "distance_yd": 50, "velocity_fps": 937, "energy_ft_lbs": 183, "drop_in": -1.6 },
+        { "distance_yd": 75, "velocity_fps": 902, "energy_ft_lbs": 170, "drop_in": -4.4 },
+        { "distance_yd": 100, "velocity_fps": 871, "energy_ft_lbs": 158, "drop_in": -9.0 }
+      ]
+    },
+    {
+      "name": "Hornady XTP 95 gr JHP",
+      "bullet_weight_gr": 95,
+      "bullet_type": "JHP",
+      "muzzle_velocity_fps": 1000,
+      "muzzle_energy_ft_lbs": 211,
+      "barrel_length_in": 3.68,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1000, "energy_ft_lbs": 211, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 960, "energy_ft_lbs": 194, "drop_in": -0.3 },
+        { "distance_yd": 50, "velocity_fps": 923, "energy_ft_lbs": 180, "drop_in": -1.7 },
+        { "distance_yd": 75, "velocity_fps": 890, "energy_ft_lbs": 167, "drop_in": -4.5 },
+        { "distance_yd": 100, "velocity_fps": 860, "energy_ft_lbs": 156, "drop_in": -9.3 }
+      ]
+    }
+  ]
+}

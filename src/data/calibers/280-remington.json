@@ -1,0 +1,73 @@
+{
+  "name": ".280 Remington",
+  "designation": ".280 Remington",
+  "aliases": [".280 Rem", "7mm Express Remington"],
+  "category": "rifle",
+  "slug": "280-remington",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.284,
+    "neck_diameter_in": 0.315,
+    "case_length_in": 2.540,
+    "overall_length_in": 3.330,
+    "rim_diameter_in": 0.473,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [2700, 3100],
+  "typical_energy_ft_lbs": [2500, 2900],
+  "typical_bullet_weight_gr": [120, 175],
+  "effective_range_yd": 700,
+  "max_range_yd": 4800,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 15.0,
+    "reference_firearm": "Remington 700 (24\" barrel, 8.0 lbs)",
+    "subjective": "moderate"
+  },
+
+  "year_introduced": 1957,
+  "country_of_origin": "USA",
+  "military_usage": ["No significant military adoption"],
+  "le_usage": ["No significant law enforcement adoption"],
+  "primary_use_cases": ["deer hunting", "elk hunting", "long-range hunting", "target shooting", "mountain hunting"],
+
+  "popularity_tier": "common",
+  "cost_per_round_usd": [1.20, 3.00],
+  "common_firearms": ["Remington 700", "Winchester Model 70", "Browning X-Bolt", "Kimber Mountain Ascent", "Nosler M48"],
+
+  "loads": [
+    {
+      "name": "Remington Core-Lokt 140 gr PSP",
+      "bullet_weight_gr": 140,
+      "bullet_type": "PSP",
+      "muzzle_velocity_fps": 3000,
+      "muzzle_energy_ft_lbs": 2797,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 3000, "energy_ft_lbs": 2797, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2758, "energy_ft_lbs": 2363, "drop_in": -1.7 },
+        { "distance_yd": 200, "velocity_fps": 2528, "energy_ft_lbs": 1986, "drop_in": -7.5 },
+        { "distance_yd": 300, "velocity_fps": 2309, "energy_ft_lbs": 1657, "drop_in": -18.2 },
+        { "distance_yd": 400, "velocity_fps": 2102, "energy_ft_lbs": 1374, "drop_in": -34.8 },
+        { "distance_yd": 500, "velocity_fps": 1908, "energy_ft_lbs": 1132, "drop_in": -58.5 }
+      ]
+    },
+    {
+      "name": "Nosler Trophy Grade 160 gr AccuBond",
+      "bullet_weight_gr": 160,
+      "bullet_type": "AccuBond",
+      "muzzle_velocity_fps": 2800,
+      "muzzle_energy_ft_lbs": 2785,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2800, "energy_ft_lbs": 2785, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2625, "energy_ft_lbs": 2448, "drop_in": -2.0 },
+        { "distance_yd": 200, "velocity_fps": 2457, "energy_ft_lbs": 2145, "drop_in": -8.5 },
+        { "distance_yd": 300, "velocity_fps": 2295, "energy_ft_lbs": 1871, "drop_in": -19.8 },
+        { "distance_yd": 400, "velocity_fps": 2139, "energy_ft_lbs": 1625, "drop_in": -36.8 },
+        { "distance_yd": 500, "velocity_fps": 1989, "energy_ft_lbs": 1405, "drop_in": -60.5 }
+      ]
+    }
+  ]
+}

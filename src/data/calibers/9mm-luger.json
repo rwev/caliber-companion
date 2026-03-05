@@ -1,0 +1,71 @@
+{
+  "name": "9mm Luger",
+  "designation": "9×19mm Parabellum",
+  "aliases": ["9mm Parabellum", "9mm NATO", "9×19mm"],
+  "category": "handgun",
+  "slug": "9mm-luger",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.355,
+    "neck_diameter_in": 0.380,
+    "case_length_in": 0.754,
+    "overall_length_in": 1.169,
+    "rim_diameter_in": 0.392,
+    "case_type": "rimless, tapered"
+  },
+
+  "typical_velocity_fps": [1050, 1400],
+  "typical_energy_ft_lbs": [300, 500],
+  "typical_bullet_weight_gr": [115, 147],
+  "effective_range_yd": 55,
+  "max_range_yd": 2300,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 5.0,
+    "reference_firearm": "Glock 17 (4.49\" barrel, 25 oz)",
+    "subjective": "low"
+  },
+
+  "year_introduced": 1902,
+  "country_of_origin": "Germany",
+  "military_usage": ["NATO standard sidearm cartridge", "U.S. Military (M17/M18)", "Most European militaries"],
+  "le_usage": ["FBI", "Most U.S. police departments", "Europol agencies"],
+  "primary_use_cases": ["self-defense", "law enforcement", "military sidearm", "target shooting", "competition"],
+
+  "popularity_tier": "ubiquitous",
+  "cost_per_round_usd": [0.18, 0.75],
+  "common_firearms": ["Glock 17/19", "SIG Sauer P320/M17", "Smith & Wesson M&P 9", "Beretta 92FS", "CZ 75", "Springfield Hellcat"],
+
+  "loads": [
+    {
+      "name": "Federal American Eagle 115 gr FMJ",
+      "bullet_weight_gr": 115,
+      "bullet_type": "FMJ",
+      "muzzle_velocity_fps": 1180,
+      "muzzle_energy_ft_lbs": 356,
+      "barrel_length_in": 4.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1180, "energy_ft_lbs": 356, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 1130, "energy_ft_lbs": 326, "drop_in": -0.2 },
+        { "distance_yd": 50, "velocity_fps": 1090, "energy_ft_lbs": 303, "drop_in": -1.1 },
+        { "distance_yd": 75, "velocity_fps": 1050, "energy_ft_lbs": 282, "drop_in": -3.1 },
+        { "distance_yd": 100, "velocity_fps": 1020, "energy_ft_lbs": 265, "drop_in": -6.5 }
+      ]
+    },
+    {
+      "name": "Federal HST 147 gr JHP",
+      "bullet_weight_gr": 147,
+      "bullet_type": "JHP",
+      "muzzle_velocity_fps": 1000,
+      "muzzle_energy_ft_lbs": 326,
+      "barrel_length_in": 4.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 1000, "energy_ft_lbs": 326, "drop_in": 0.0 },
+        { "distance_yd": 25, "velocity_fps": 970, "energy_ft_lbs": 307, "drop_in": -0.3 },
+        { "distance_yd": 50, "velocity_fps": 940, "energy_ft_lbs": 289, "drop_in": -1.6 },
+        { "distance_yd": 75, "velocity_fps": 915, "energy_ft_lbs": 273, "drop_in": -4.2 },
+        { "distance_yd": 100, "velocity_fps": 890, "energy_ft_lbs": 259, "drop_in": -8.5 }
+      ]
+    }
+  ]
+}

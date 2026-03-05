@@ -1,0 +1,73 @@
+{
+  "name": ".22-250 Remington",
+  "designation": ".22-250 Remington",
+  "aliases": [".22-250 Rem", ".22-250"],
+  "category": "rifle",
+  "slug": "22-250-remington",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.224,
+    "neck_diameter_in": 0.254,
+    "case_length_in": 1.912,
+    "overall_length_in": 2.350,
+    "rim_diameter_in": 0.473,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [3500, 4200],
+  "typical_energy_ft_lbs": [1200, 1650],
+  "typical_bullet_weight_gr": [40, 64],
+  "effective_range_yd": 500,
+  "max_range_yd": 4000,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 5.0,
+    "reference_firearm": "Remington 700 Varmint SF (26\" barrel, 8.5 lbs)",
+    "subjective": "low"
+  },
+
+  "year_introduced": 1965,
+  "country_of_origin": "USA",
+  "military_usage": ["No significant military adoption"],
+  "le_usage": ["No significant law enforcement adoption"],
+  "primary_use_cases": ["varmint hunting", "predator hunting", "prairie dog shooting", "target shooting", "benchrest competition"],
+
+  "popularity_tier": "common",
+  "cost_per_round_usd": [0.80, 2.50],
+  "common_firearms": ["Remington 700 Varmint", "Savage 12 FV", "Browning X-Bolt Varmint", "Tikka T3x Varmint", "Ruger M77 Hawkeye Varmint"],
+
+  "loads": [
+    {
+      "name": "Hornady Superformance Varmint 50 gr V-MAX",
+      "bullet_weight_gr": 50,
+      "bullet_type": "V-MAX",
+      "muzzle_velocity_fps": 4000,
+      "muzzle_energy_ft_lbs": 1776,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 4000, "energy_ft_lbs": 1776, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 3597, "energy_ft_lbs": 1437, "drop_in": -0.7 },
+        { "distance_yd": 200, "velocity_fps": 3225, "energy_ft_lbs": 1155, "drop_in": -3.7 },
+        { "distance_yd": 300, "velocity_fps": 2880, "energy_ft_lbs": 921, "drop_in": -9.8 },
+        { "distance_yd": 400, "velocity_fps": 2560, "energy_ft_lbs": 728, "drop_in": -19.5 },
+        { "distance_yd": 500, "velocity_fps": 2263, "energy_ft_lbs": 569, "drop_in": -34.0 }
+      ]
+    },
+    {
+      "name": "Federal Premium 55 gr Nosler Ballistic Tip",
+      "bullet_weight_gr": 55,
+      "bullet_type": "Ballistic Tip",
+      "muzzle_velocity_fps": 3680,
+      "muzzle_energy_ft_lbs": 1654,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 3680, "energy_ft_lbs": 1654, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 3354, "energy_ft_lbs": 1374, "drop_in": -0.9 },
+        { "distance_yd": 200, "velocity_fps": 3050, "energy_ft_lbs": 1136, "drop_in": -4.5 },
+        { "distance_yd": 300, "velocity_fps": 2768, "energy_ft_lbs": 936, "drop_in": -11.5 },
+        { "distance_yd": 400, "velocity_fps": 2503, "energy_ft_lbs": 765, "drop_in": -22.5 },
+        { "distance_yd": 500, "velocity_fps": 2254, "energy_ft_lbs": 621, "drop_in": -38.5 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "name": ".338 Winchester Magnum",
+  "designation": ".338 Winchester Magnum",
+  "aliases": [".338 Win Mag", ".338 WM"],
+  "category": "magnum_rifle",
+  "slug": "338-winchester-magnum",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.338,
+    "neck_diameter_in": 0.369,
+    "case_length_in": 2.50,
+    "overall_length_in": 3.34,
+    "rim_diameter_in": 0.532,
+    "case_type": "belted, bottleneck"
+  },
+
+  "typical_velocity_fps": [2600, 2950],
+  "typical_energy_ft_lbs": [3500, 4500],
+  "typical_bullet_weight_gr": [185, 300],
+  "effective_range_yd": 900,
+  "max_range_yd": 5000,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 28.0,
+    "reference_firearm": "Winchester Model 70 (26\" barrel, 8.5 lbs)",
+    "subjective": "heavy"
+  },
+
+  "year_introduced": 1958,
+  "country_of_origin": "USA",
+  "military_usage": ["Limited military sniper use", "Finnish Defence Forces"],
+  "le_usage": ["Specialized barrier-defeating law enforcement roles"],
+  "primary_use_cases": ["large game hunting", "elk hunting", "brown bear hunting", "African plains game", "moose hunting"],
+
+  "popularity_tier": "common",
+  "cost_per_round_usd": [1.75, 5.00],
+  "common_firearms": ["Winchester Model 70", "Remington 700", "Browning X-Bolt", "Weatherby Vanguard", "Tikka T3x", "Ruger Hawkeye"],
+
+  "loads": [
+    {
+      "name": "Federal Trophy Bonded Bear Claw 225 gr",
+      "bullet_weight_gr": 225,
+      "bullet_type": "TBBC (Trophy Bonded Bear Claw)",
+      "muzzle_velocity_fps": 2800,
+      "muzzle_energy_ft_lbs": 3918,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2800, "energy_ft_lbs": 3918, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2601, "energy_ft_lbs": 3379, "drop_in": -1.6 },
+        { "distance_yd": 200, "velocity_fps": 2410, "energy_ft_lbs": 2903, "drop_in": -6.9 },
+        { "distance_yd": 300, "velocity_fps": 2228, "energy_ft_lbs": 2480, "drop_in": -16.4 },
+        { "distance_yd": 400, "velocity_fps": 2053, "energy_ft_lbs": 2107, "drop_in": -31.0 },
+        { "distance_yd": 500, "velocity_fps": 1887, "energy_ft_lbs": 1779, "drop_in": -51.8 },
+        { "distance_yd": 600, "velocity_fps": 1731, "energy_ft_lbs": 1496, "drop_in": -80.2 }
+      ]
+    },
+    {
+      "name": "Nosler AccuBond 225 gr",
+      "bullet_weight_gr": 225,
+      "bullet_type": "AccuBond",
+      "muzzle_velocity_fps": 2800,
+      "muzzle_energy_ft_lbs": 3918,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2800, "energy_ft_lbs": 3918, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2620, "energy_ft_lbs": 3429, "drop_in": -1.5 },
+        { "distance_yd": 200, "velocity_fps": 2447, "energy_ft_lbs": 2992, "drop_in": -6.6 },
+        { "distance_yd": 300, "velocity_fps": 2280, "energy_ft_lbs": 2598, "drop_in": -15.7 },
+        { "distance_yd": 400, "velocity_fps": 2120, "energy_ft_lbs": 2245, "drop_in": -29.4 },
+        { "distance_yd": 500, "velocity_fps": 1966, "energy_ft_lbs": 1931, "drop_in": -48.6 },
+        { "distance_yd": 600, "velocity_fps": 1819, "energy_ft_lbs": 1653, "drop_in": -74.5 }
+      ]
+    }
+  ]
+}

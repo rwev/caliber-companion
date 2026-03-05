@@ -1,0 +1,73 @@
+{
+  "name": ".303 British",
+  "designation": ".303 British",
+  "aliases": [".303 Brit", "7.7×56mmR"],
+  "category": "rifle",
+  "slug": "303-british",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.312,
+    "neck_diameter_in": 0.338,
+    "case_length_in": 2.222,
+    "overall_length_in": 3.075,
+    "rim_diameter_in": 0.540,
+    "case_type": "rimmed, tapered"
+  },
+
+  "typical_velocity_fps": [2400, 2700],
+  "typical_energy_ft_lbs": [2200, 2600],
+  "typical_bullet_weight_gr": [150, 180],
+  "effective_range_yd": 600,
+  "max_range_yd": 3500,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 13.0,
+    "reference_firearm": "Lee-Enfield No. 4 Mk I (25.2\" barrel, 9.1 lbs)",
+    "subjective": "moderate"
+  },
+
+  "year_introduced": 1889,
+  "country_of_origin": "United Kingdom",
+  "military_usage": ["British Empire standard rifle cartridge (1889–1957)", "Commonwealth forces through both World Wars", "Lee-Enfield, Vickers, and Bren gun platforms", "Indian military (into the 1960s)"],
+  "le_usage": ["Historical British colonial police forces"],
+  "primary_use_cases": ["military service rifle", "hunting (medium to large game)", "target shooting", "surplus collecting"],
+
+  "popularity_tier": "common",
+  "cost_per_round_usd": [0.80, 2.50],
+  "common_firearms": ["Lee-Enfield No. 4 Mk I", "Lee-Enfield SMLE Mk III", "Bren Gun", "Vickers Machine Gun", "P14 Enfield"],
+
+  "loads": [
+    {
+      "name": "PPU 174 gr FMJ-BT",
+      "bullet_weight_gr": 174,
+      "bullet_type": "FMJ-BT",
+      "muzzle_velocity_fps": 2400,
+      "muzzle_energy_ft_lbs": 2225,
+      "barrel_length_in": 25.2,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2400, "energy_ft_lbs": 2225, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2223, "energy_ft_lbs": 1910, "drop_in": -3.4 },
+        { "distance_yd": 200, "velocity_fps": 2054, "energy_ft_lbs": 1631, "drop_in": -13.2 },
+        { "distance_yd": 300, "velocity_fps": 1893, "energy_ft_lbs": 1385, "drop_in": -30.5 },
+        { "distance_yd": 400, "velocity_fps": 1742, "energy_ft_lbs": 1173, "drop_in": -57.0 },
+        { "distance_yd": 500, "velocity_fps": 1602, "energy_ft_lbs": 992, "drop_in": -94.5 }
+      ]
+    },
+    {
+      "name": "Hornady InterLock 150 gr SP",
+      "bullet_weight_gr": 150,
+      "bullet_type": "SP",
+      "muzzle_velocity_fps": 2685,
+      "muzzle_energy_ft_lbs": 2401,
+      "barrel_length_in": 25.2,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2685, "energy_ft_lbs": 2401, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2441, "energy_ft_lbs": 1984, "drop_in": -2.8 },
+        { "distance_yd": 200, "velocity_fps": 2210, "energy_ft_lbs": 1627, "drop_in": -11.0 },
+        { "distance_yd": 300, "velocity_fps": 1993, "energy_ft_lbs": 1324, "drop_in": -26.0 },
+        { "distance_yd": 400, "velocity_fps": 1791, "energy_ft_lbs": 1068, "drop_in": -49.5 },
+        { "distance_yd": 500, "velocity_fps": 1607, "energy_ft_lbs": 860, "drop_in": -83.5 }
+      ]
+    }
+  ]
+}

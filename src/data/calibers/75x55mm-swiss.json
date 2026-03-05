@@ -1,0 +1,73 @@
+{
+  "name": "7.5×55mm Swiss",
+  "designation": "7.5×55mm Swiss",
+  "aliases": ["7.5 Swiss", "GP 11"],
+  "category": "rifle",
+  "slug": "75x55mm-swiss",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.3085,
+    "neck_diameter_in": 0.334,
+    "case_length_in": 2.183,
+    "overall_length_in": 3.049,
+    "rim_diameter_in": 0.496,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [2600, 2800],
+  "typical_energy_ft_lbs": [2400, 2700],
+  "typical_bullet_weight_gr": [150, 180],
+  "effective_range_yd": 800,
+  "max_range_yd": 3900,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 14.0,
+    "reference_firearm": "Schmidt-Rubin K31 (25.7\" barrel, 9.0 lbs)",
+    "subjective": "moderate"
+  },
+
+  "year_introduced": 1889,
+  "country_of_origin": "Switzerland",
+  "military_usage": ["Swiss military standard cartridge (1889–present in reserve)", "Schmidt-Rubin K31 and Stgw 57 platforms", "SIG SG 510 (Stgw 57) battle rifle"],
+  "le_usage": ["Swiss cantonal police (historical)"],
+  "primary_use_cases": ["military service rifle", "target shooting", "hunting (medium to large game)", "surplus collecting"],
+
+  "popularity_tier": "niche",
+  "cost_per_round_usd": [0.80, 2.50],
+  "common_firearms": ["Schmidt-Rubin K31", "Schmidt-Rubin K11", "SIG SG 510 (Stgw 57)", "SIG SG 550 (in 5.56, but K31 in 7.5)"],
+
+  "loads": [
+    {
+      "name": "GP 11 174 gr FMJ-BT (surplus)",
+      "bullet_weight_gr": 174,
+      "bullet_type": "FMJ-BT",
+      "muzzle_velocity_fps": 2640,
+      "muzzle_energy_ft_lbs": 2693,
+      "barrel_length_in": 25.7,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2640, "energy_ft_lbs": 2693, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2460, "energy_ft_lbs": 2338, "drop_in": -2.7 },
+        { "distance_yd": 200, "velocity_fps": 2286, "energy_ft_lbs": 2019, "drop_in": -10.6 },
+        { "distance_yd": 300, "velocity_fps": 2119, "energy_ft_lbs": 1735, "drop_in": -24.6 },
+        { "distance_yd": 400, "velocity_fps": 1960, "energy_ft_lbs": 1484, "drop_in": -45.5 },
+        { "distance_yd": 500, "velocity_fps": 1808, "energy_ft_lbs": 1263, "drop_in": -75.0 }
+      ]
+    },
+    {
+      "name": "PPU 150 gr SP",
+      "bullet_weight_gr": 150,
+      "bullet_type": "SP",
+      "muzzle_velocity_fps": 2789,
+      "muzzle_energy_ft_lbs": 2590,
+      "barrel_length_in": 25.7,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2789, "energy_ft_lbs": 2590, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2572, "energy_ft_lbs": 2202, "drop_in": -2.5 },
+        { "distance_yd": 200, "velocity_fps": 2366, "energy_ft_lbs": 1864, "drop_in": -9.8 },
+        { "distance_yd": 300, "velocity_fps": 2169, "energy_ft_lbs": 1567, "drop_in": -23.0 },
+        { "distance_yd": 400, "velocity_fps": 1983, "energy_ft_lbs": 1309, "drop_in": -43.2 },
+        { "distance_yd": 500, "velocity_fps": 1807, "energy_ft_lbs": 1088, "drop_in": -72.0 }
+      ]
+    }
+  ]
+}

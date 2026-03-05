@@ -1,0 +1,73 @@
+{
+  "name": ".30-06 Springfield",
+  "designation": ".30-06 Springfield (7.62×63mm)",
+  "aliases": [".30-06", ".30 Gov't '06", "7.62×63mm"],
+  "category": "rifle",
+  "slug": "30-06-springfield",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.308,
+    "neck_diameter_in": 0.340,
+    "case_length_in": 2.494,
+    "overall_length_in": 3.340,
+    "rim_diameter_in": 0.473,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [2500, 3100],
+  "typical_energy_ft_lbs": [2400, 2900],
+  "typical_bullet_weight_gr": [110, 220],
+  "effective_range_yd": 800,
+  "max_range_yd": 5500,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 17.0,
+    "reference_firearm": "Remington 700 (24\" barrel, 8.0 lbs)",
+    "subjective": "heavy"
+  },
+
+  "year_introduced": 1906,
+  "country_of_origin": "USA",
+  "military_usage": ["U.S. Military standard rifle cartridge (1906–1954)", "M1 Garand", "M1903 Springfield", "M1919 Browning machine gun", "Used by numerous allied nations in both World Wars"],
+  "le_usage": ["Limited historical use by law enforcement marksmen"],
+  "primary_use_cases": ["big game hunting", "long-range target shooting", "military surplus", "handloading", "elk and moose hunting"],
+
+  "popularity_tier": "very_common",
+  "cost_per_round_usd": [0.80, 2.50],
+  "common_firearms": ["Remington 700", "Winchester Model 70", "Browning X-Bolt", "Ruger M77 Hawkeye", "Springfield M1A"],
+
+  "loads": [
+    {
+      "name": "Federal Power-Shok 150 gr SP",
+      "bullet_weight_gr": 150,
+      "bullet_type": "SP",
+      "muzzle_velocity_fps": 2910,
+      "muzzle_energy_ft_lbs": 2820,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2910, "energy_ft_lbs": 2820, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2687, "energy_ft_lbs": 2403, "drop_in": -1.9 },
+        { "distance_yd": 200, "velocity_fps": 2474, "energy_ft_lbs": 2038, "drop_in": -8.0 },
+        { "distance_yd": 300, "velocity_fps": 2272, "energy_ft_lbs": 1718, "drop_in": -19.3 },
+        { "distance_yd": 400, "velocity_fps": 2079, "energy_ft_lbs": 1440, "drop_in": -36.7 },
+        { "distance_yd": 500, "velocity_fps": 1897, "energy_ft_lbs": 1198, "drop_in": -61.8 }
+      ]
+    },
+    {
+      "name": "Hornady Precision Hunter 178 gr ELD-X",
+      "bullet_weight_gr": 178,
+      "bullet_type": "ELD-X",
+      "muzzle_velocity_fps": 2750,
+      "muzzle_energy_ft_lbs": 2989,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2750, "energy_ft_lbs": 2989, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2568, "energy_ft_lbs": 2606, "drop_in": -2.2 },
+        { "distance_yd": 200, "velocity_fps": 2394, "energy_ft_lbs": 2265, "drop_in": -9.0 },
+        { "distance_yd": 300, "velocity_fps": 2226, "energy_ft_lbs": 1958, "drop_in": -21.0 },
+        { "distance_yd": 400, "velocity_fps": 2065, "energy_ft_lbs": 1685, "drop_in": -39.0 },
+        { "distance_yd": 500, "velocity_fps": 1910, "energy_ft_lbs": 1442, "drop_in": -64.2 }
+      ]
+    }
+  ]
+}

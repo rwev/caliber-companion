@@ -1,0 +1,73 @@
+{
+  "name": ".270 Winchester",
+  "designation": ".270 Winchester",
+  "aliases": [".270 Win"],
+  "category": "rifle",
+  "slug": "270-winchester",
+
+  "dimensions": {
+    "bullet_diameter_in": 0.277,
+    "neck_diameter_in": 0.308,
+    "case_length_in": 2.540,
+    "overall_length_in": 3.340,
+    "rim_diameter_in": 0.473,
+    "case_type": "rimless, bottleneck"
+  },
+
+  "typical_velocity_fps": [2700, 3200],
+  "typical_energy_ft_lbs": [2400, 2750],
+  "typical_bullet_weight_gr": [90, 160],
+  "effective_range_yd": 700,
+  "max_range_yd": 4700,
+
+  "recoil": {
+    "free_recoil_ft_lbs": 15.0,
+    "reference_firearm": "Winchester Model 70 (24\" barrel, 8.0 lbs)",
+    "subjective": "moderate"
+  },
+
+  "year_introduced": 1925,
+  "country_of_origin": "USA",
+  "military_usage": ["No significant military adoption"],
+  "le_usage": ["Occasional use by rural law enforcement and game wardens"],
+  "primary_use_cases": ["deer hunting", "antelope hunting", "elk hunting", "long-range hunting", "target shooting"],
+
+  "popularity_tier": "very_common",
+  "cost_per_round_usd": [0.90, 2.50],
+  "common_firearms": ["Winchester Model 70", "Remington 700", "Browning X-Bolt", "Tikka T3x", "Weatherby Vanguard"],
+
+  "loads": [
+    {
+      "name": "Winchester Ballistic Silvertip 130 gr BST",
+      "bullet_weight_gr": 130,
+      "bullet_type": "BST",
+      "muzzle_velocity_fps": 3060,
+      "muzzle_energy_ft_lbs": 2702,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 3060, "energy_ft_lbs": 2702, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2845, "energy_ft_lbs": 2336, "drop_in": -1.6 },
+        { "distance_yd": 200, "velocity_fps": 2639, "energy_ft_lbs": 2010, "drop_in": -7.0 },
+        { "distance_yd": 300, "velocity_fps": 2444, "energy_ft_lbs": 1723, "drop_in": -16.8 },
+        { "distance_yd": 400, "velocity_fps": 2257, "energy_ft_lbs": 1470, "drop_in": -31.8 },
+        { "distance_yd": 500, "velocity_fps": 2079, "energy_ft_lbs": 1248, "drop_in": -53.0 }
+      ]
+    },
+    {
+      "name": "Nosler AccuBond 150 gr AB",
+      "bullet_weight_gr": 150,
+      "bullet_type": "AccuBond",
+      "muzzle_velocity_fps": 2850,
+      "muzzle_energy_ft_lbs": 2705,
+      "barrel_length_in": 24.0,
+      "ballistics": [
+        { "distance_yd": 0, "velocity_fps": 2850, "energy_ft_lbs": 2705, "drop_in": 0.0 },
+        { "distance_yd": 100, "velocity_fps": 2659, "energy_ft_lbs": 2354, "drop_in": -2.0 },
+        { "distance_yd": 200, "velocity_fps": 2476, "energy_ft_lbs": 2041, "drop_in": -8.3 },
+        { "distance_yd": 300, "velocity_fps": 2300, "energy_ft_lbs": 1763, "drop_in": -19.5 },
+        { "distance_yd": 400, "velocity_fps": 2131, "energy_ft_lbs": 1513, "drop_in": -36.5 },
+        { "distance_yd": 500, "velocity_fps": 1970, "energy_ft_lbs": 1292, "drop_in": -60.5 }
+      ]
+    }
+  ]
+}
