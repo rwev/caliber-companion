@@ -171,6 +171,7 @@ export default function FilterBar({ calibers, basePath }: Props) {
                     key={c.slug}
                     href={`${basePath}/calibers/${c.slug}`}
                     class="group block border border-surface-border bg-surface transition-all hover:border-accent/40 hover:bg-surface-raised hover:shadow-[0_0_24px_rgba(224,90,43,0.06)]"
+                    style={{ contentVisibility: 'auto', containIntrinsicSize: 'auto 240px' }}
                   >
                     <div class="p-5">
                       <div class="flex items-start justify-between gap-3">

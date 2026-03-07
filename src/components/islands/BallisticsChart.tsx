@@ -1,17 +1,4 @@
 import { useState, useRef, useEffect } from 'preact/hooks';
-import {
-  Chart,
-  LineController,
-  LineElement,
-  PointElement,
-  LinearScale,
-  CategoryScale,
-  Tooltip,
-  Legend,
-  Filler,
-} from 'chart.js';
-
-Chart.register(LineController, LineElement, PointElement, LinearScale, CategoryScale, Tooltip, Legend, Filler);
 
 function getCSSVar(name: string): string {
   return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
@@ -49,7 +36,7 @@ export default function BallisticsChart({ loads }: Props) {
   const [activeMetric, setActiveMetric] = useState<MetricKey>('velocity');
   const [themeKey, setThemeKey] = useState(0);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const chartRef = useRef<Chart | null>(null);
+  const chartRef = useRef<any>(null);
 
   useEffect(() => {
     const observer = new MutationObserver(() => {
@@ -64,117 +51,139 @@ export default function BallisticsChart({ loads }: Props) {
   useEffect(() => {
     if (!canvasRef.current) return;
 
-    const textSecondary = getCSSVar('--color-text-secondary');
-    const textMuted = getCSSVar('--color-text-muted');
-    const textPrimary = getCSSVar('--color-text-primary');
-    const surfaceOverlay = getCSSVar('--color-surface-overlay');
-    const surfaceBorder = getCSSVar('--color-surface-border');
-    const gridColor = surfaceBorder + '99';
-    const chartColors = COLOR_VARS.map(v => {
-      const hex = getCSSVar(v);
-      return { line: hex, bg: hex + '1a' };
-    });
+    let destroyed = false;
 
-    if (chartRef.current) {
-      chartRef.current.destroy();
-    }
+    (async () => {
+      const {
+        Chart,
+        LineController,
+        LineElement,
+        PointElement,
+        LinearScale,
+        CategoryScale,
+        Tooltip,
+        Legend,
+        Filler,
+      } = await import('chart.js');
 
-    const distances = loads[0].ballistics.map(p => `${p.distance_yd}`);
+      if (destroyed || !canvasRef.current) return;
 
-    const datasets = loads.map((load, i) => {
-      const color = chartColors[i % chartColors.length];
-      return {
-        label: `${load.bullet_weight_gr}gr ${load.bullet_type}`,
-        data: load.ballistics.map(p => p[metric.field] as number),
-        borderColor: color.line,
-        backgroundColor: color.bg,
-        borderWidth: 2,
-        pointRadius: 4,
-        pointHoverRadius: 6,
-        pointBackgroundColor: color.line,
-        pointBorderColor: 'transparent',
-        tension: 0.3,
-        fill: true,
-      };
-    });
+      Chart.register(LineController, LineElement, PointElement, LinearScale, CategoryScale, Tooltip, Legend, Filler);
 
-    chartRef.current = new Chart(canvasRef.current, {
-      type: 'line',
-      data: { labels: distances, datasets },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        interaction: {
-          mode: 'index',
-          intersect: false,
+      const textSecondary = getCSSVar('--color-text-secondary');
+      const textMuted = getCSSVar('--color-text-muted');
+      const textPrimary = getCSSVar('--color-text-primary');
+      const surfaceOverlay = getCSSVar('--color-surface-overlay');
+      const surfaceBorder = getCSSVar('--color-surface-border');
+      const gridColor = surfaceBorder + '99';
+      const chartColors = COLOR_VARS.map(v => {
+        const hex = getCSSVar(v);
+        return { line: hex, bg: hex + '1a' };
+      });
+
+      if (chartRef.current) {
+        chartRef.current.destroy();
+      }
+
+      const distances = loads[0].ballistics.map(p => `${p.distance_yd}`);
+
+      const datasets = loads.map((load, i) => {
+        const color = chartColors[i % chartColors.length];
+        return {
+          label: `${load.bullet_weight_gr}gr ${load.bullet_type}`,
+          data: load.ballistics.map(p => p[metric.field] as number),
+          borderColor: color.line,
+          backgroundColor: color.bg,
+          borderWidth: 2,
+          pointRadius: 4,
+          pointHoverRadius: 6,
+          pointBackgroundColor: color.line,
+          pointBorderColor: 'transparent',
+          tension: 0.3,
+          fill: true,
+        };
+      });
+
+      chartRef.current = new Chart(canvasRef.current, {
+        type: 'line',
+        data: { labels: distances, datasets },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          interaction: {
+            mode: 'index',
+            intersect: false,
+          },
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: {
+                color: textSecondary,
+                font: { family: '"JetBrains Mono", monospace', size: 13 },
+                padding: 16,
+                usePointStyle: true,
+                pointStyleWidth: 8,
+              },
+            },
+            tooltip: {
+              backgroundColor: surfaceOverlay,
+              borderColor: surfaceBorder,
+              borderWidth: 1,
+              titleColor: textPrimary,
+              bodyColor: textSecondary,
+              titleFont: { family: '"JetBrains Mono", monospace', size: 13 },
+              bodyFont: { family: '"JetBrains Mono", monospace', size: 13 },
+              padding: 12,
+              callbacks: {
+                title: (items) => `${items[0].label} yd`,
+                label: (item) => ` ${item.dataset.label}: ${item.formattedValue} ${metric.unit}`,
+              },
+            },
+          },
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: 'Distance (yd)',
+                color: textMuted,
+                font: { family: '"JetBrains Mono", monospace', size: 13 },
+              },
+              ticks: {
+                color: textMuted,
+                font: { family: '"JetBrains Mono", monospace', size: 12 },
+              },
+              grid: { color: gridColor },
+              border: { color: surfaceBorder },
+            },
+            y: {
+              title: {
+                display: true,
+                text: `${metric.label} (${metric.unit})`,
+                color: textMuted,
+                font: { family: '"JetBrains Mono", monospace', size: 13 },
+              },
+              ticks: {
+                color: textMuted,
+                font: { family: '"JetBrains Mono", monospace', size: 12 },
+              },
+              grid: { color: gridColor },
+              border: { color: surfaceBorder },
+            },
+          },
         },
-        plugins: {
-          legend: {
-            position: 'bottom',
-            labels: {
-              color: textSecondary,
-              font: { family: '"JetBrains Mono", monospace', size: 13 },
-              padding: 16,
-              usePointStyle: true,
-              pointStyleWidth: 8,
-            },
-          },
-          tooltip: {
-            backgroundColor: surfaceOverlay,
-            borderColor: surfaceBorder,
-            borderWidth: 1,
-            titleColor: textPrimary,
-            bodyColor: textSecondary,
-            titleFont: { family: '"JetBrains Mono", monospace', size: 13 },
-            bodyFont: { family: '"JetBrains Mono", monospace', size: 13 },
-            padding: 12,
-            callbacks: {
-              title: (items) => `${items[0].label} yd`,
-              label: (item) => ` ${item.dataset.label}: ${item.formattedValue} ${metric.unit}`,
-            },
-          },
-        },
-        scales: {
-          x: {
-            title: {
-              display: true,
-              text: 'Distance (yd)',
-              color: textMuted,
-              font: { family: '"JetBrains Mono", monospace', size: 12 },
-            },
-            ticks: {
-              color: textMuted,
-              font: { family: '"JetBrains Mono", monospace', size: 12 },
-            },
-            grid: { color: gridColor },
-            border: { color: surfaceBorder },
-          },
-          y: {
-            title: {
-              display: true,
-              text: `${metric.label} (${metric.unit})`,
-              color: textMuted,
-              font: { family: '"JetBrains Mono", monospace', size: 12 },
-            },
-            ticks: {
-              color: textMuted,
-              font: { family: '"JetBrains Mono", monospace', size: 12 },
-            },
-            grid: { color: gridColor },
-            border: { color: surfaceBorder },
-          },
-        },
-      },
-    });
+      });
+    })();
 
     return () => {
+      destroyed = true;
       chartRef.current?.destroy();
+      chartRef.current = null;
     };
   }, [activeMetric, loads, themeKey]);
 
   return (
     <div class="border border-surface-border">
-      <div class="flex items-center justify-between border-b border-surface-border bg-surface-overlay px-4 py-2">
+      <div class="flex items-center justify-between border-b border-surface-border bg-surface-overlay px-4 py-2.5">
         <h3 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">
           Ballistics Chart
         </h3>

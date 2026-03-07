@@ -1,17 +1,4 @@
 import { useState, useEffect, useRef, useMemo } from 'preact/hooks';
-import {
-  Chart,
-  LineController,
-  LineElement,
-  PointElement,
-  LinearScale,
-  CategoryScale,
-  Tooltip,
-  Legend,
-  Filler,
-} from 'chart.js';
-
-Chart.register(LineController, LineElement, PointElement, LinearScale, CategoryScale, Tooltip, Legend, Filler);
 
 function getCSSVar(name: string): string {
   return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
@@ -86,7 +73,7 @@ export default function ComparisonTool({ calibers, basePath }: Props) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [dropdownSearch, setDropdownSearch] = useState('');
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const chartRef = useRef<Chart | null>(null);
+  const chartRef = useRef<any>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Read initial selection from URL
@@ -149,117 +136,142 @@ export default function ComparisonTool({ calibers, basePath }: Props) {
   }, [calibers, selected, dropdownSearch]);
 
   function addCaliber(slug: string) {
-    if (selected.length < 4 && !selected.includes(slug)) {
-      setSelected([...selected, slug]);
-    }
+    setSelected(prev => {
+      if (prev.length >= 4 || prev.includes(slug)) return prev;
+      return [...prev, slug];
+    });
     setDropdownOpen(false);
     setDropdownSearch('');
   }
 
   function removeCaliber(slug: string) {
-    setSelected(selected.filter(s => s !== slug));
+    setSelected(prev => prev.filter(s => s !== slug));
   }
 
-  // Chart
+  // Chart — dynamically import Chart.js to reduce initial bundle
   useEffect(() => {
     if (!canvasRef.current || selectedCalibers.length === 0) {
       if (chartRef.current) { chartRef.current.destroy(); chartRef.current = null; }
       return;
     }
 
-    if (chartRef.current) chartRef.current.destroy();
+    let destroyed = false;
 
-    const textSecondary = getCSSVar('--color-text-secondary');
-    const textMuted = getCSSVar('--color-text-muted');
-    const textPrimary = getCSSVar('--color-text-primary');
-    const surfaceOverlay = getCSSVar('--color-surface-overlay');
-    const surfaceBorder = getCSSVar('--color-surface-border');
-    const gridColor = surfaceBorder + '99';
-    const chartColors = COLOR_VARS.map(v => {
-      const hex = getCSSVar(v);
-      return { line: hex, bg: hex + '1a' };
-    });
+    (async () => {
+      const {
+        Chart,
+        LineController,
+        LineElement,
+        PointElement,
+        LinearScale,
+        CategoryScale,
+        Tooltip,
+        Legend,
+        Filler,
+      } = await import('chart.js');
 
-    const metric = METRICS.find(m => m.key === chartMetric)!;
+      if (destroyed || !canvasRef.current) return;
 
-    // Use first load of each caliber for comparison
-    const allDistances = new Set<number>();
-    selectedCalibers.forEach(c => {
-      if (c.loads[0]) c.loads[0].ballistics.forEach(p => allDistances.add(p.distance_yd));
-    });
-    const distances = [...allDistances].sort((a, b) => a - b);
+      Chart.register(LineController, LineElement, PointElement, LinearScale, CategoryScale, Tooltip, Legend, Filler);
 
-    const datasets = selectedCalibers.map((cal, i) => {
-      const load = cal.loads[0];
-      const color = chartColors[i % chartColors.length];
-      const dataMap = new Map(load?.ballistics.map(p => [p.distance_yd, p[metric.field] as number]) || []);
-      return {
-        label: `${cal.name} (${load?.bullet_weight_gr}gr ${load?.bullet_type})`,
-        data: distances.map(d => dataMap.get(d) ?? null),
-        borderColor: color.line,
-        backgroundColor: color.bg,
-        borderWidth: 2,
-        pointRadius: 4,
-        pointHoverRadius: 6,
-        pointBackgroundColor: color.line,
-        pointBorderColor: 'transparent',
-        tension: 0.3,
-        fill: true,
-        spanGaps: true,
-      };
-    });
+      if (chartRef.current) chartRef.current.destroy();
 
-    chartRef.current = new Chart(canvasRef.current, {
-      type: 'line',
-      data: { labels: distances.map(d => `${d}`), datasets },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        interaction: { mode: 'index', intersect: false },
-        plugins: {
-          legend: {
-            position: 'bottom',
-            labels: {
-              color: textSecondary,
-              font: { family: '"JetBrains Mono", monospace', size: 13 },
-              padding: 16,
-              usePointStyle: true,
-              pointStyleWidth: 8,
+      const textSecondary = getCSSVar('--color-text-secondary');
+      const textMuted = getCSSVar('--color-text-muted');
+      const textPrimary = getCSSVar('--color-text-primary');
+      const surfaceOverlay = getCSSVar('--color-surface-overlay');
+      const surfaceBorder = getCSSVar('--color-surface-border');
+      const gridColor = surfaceBorder + '99';
+      const chartColors = COLOR_VARS.map(v => {
+        const hex = getCSSVar(v);
+        return { line: hex, bg: hex + '1a' };
+      });
+
+      const metric = METRICS.find(m => m.key === chartMetric)!;
+
+      // Use first load of each caliber for comparison
+      const allDistances = new Set<number>();
+      selectedCalibers.forEach(c => {
+        if (c.loads[0]) c.loads[0].ballistics.forEach(p => allDistances.add(p.distance_yd));
+      });
+      const distances = [...allDistances].sort((a, b) => a - b);
+
+      const datasets = selectedCalibers.map((cal, i) => {
+        const load = cal.loads[0];
+        const color = chartColors[i % chartColors.length];
+        const dataMap = new Map(load?.ballistics.map(p => [p.distance_yd, p[metric.field] as number]) || []);
+        return {
+          label: `${cal.name} (${load?.bullet_weight_gr}gr ${load?.bullet_type})`,
+          data: distances.map(d => dataMap.get(d) ?? null),
+          borderColor: color.line,
+          backgroundColor: color.bg,
+          borderWidth: 2,
+          pointRadius: 4,
+          pointHoverRadius: 6,
+          pointBackgroundColor: color.line,
+          pointBorderColor: 'transparent',
+          tension: 0.3,
+          fill: true,
+          spanGaps: true,
+        };
+      });
+
+      chartRef.current = new Chart(canvasRef.current, {
+        type: 'line',
+        data: { labels: distances.map(d => `${d}`), datasets },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          interaction: { mode: 'index', intersect: false },
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: {
+                color: textSecondary,
+                font: { family: '"JetBrains Mono", monospace', size: 13 },
+                padding: 16,
+                usePointStyle: true,
+                pointStyleWidth: 8,
+              },
+            },
+            tooltip: {
+              backgroundColor: surfaceOverlay,
+              borderColor: surfaceBorder,
+              borderWidth: 1,
+              titleColor: textPrimary,
+              bodyColor: textSecondary,
+              titleFont: { family: '"JetBrains Mono", monospace', size: 13 },
+              bodyFont: { family: '"JetBrains Mono", monospace', size: 13 },
+              padding: 12,
+              callbacks: {
+                title: (items) => `${items[0].label} yd`,
+                label: (item) => ` ${item.dataset.label}: ${item.formattedValue} ${metric.unit}`,
+              },
             },
           },
-          tooltip: {
-            backgroundColor: surfaceOverlay,
-            borderColor: surfaceBorder,
-            borderWidth: 1,
-            titleColor: textPrimary,
-            bodyColor: textSecondary,
-            titleFont: { family: '"JetBrains Mono", monospace', size: 13 },
-            bodyFont: { family: '"JetBrains Mono", monospace', size: 13 },
-            padding: 12,
-            callbacks: {
-              title: (items) => `${items[0].label} yd`,
-              label: (item) => ` ${item.dataset.label}: ${item.formattedValue} ${metric.unit}`,
+          scales: {
+            x: {
+              title: { display: true, text: 'Distance (yd)', color: textMuted, font: { family: '"JetBrains Mono", monospace', size: 13 } },
+              ticks: { color: textMuted, font: { family: '"JetBrains Mono", monospace', size: 12 } },
+              grid: { color: gridColor },
+              border: { color: surfaceBorder },
+            },
+            y: {
+              title: { display: true, text: `${metric.label} (${metric.unit})`, color: textMuted, font: { family: '"JetBrains Mono", monospace', size: 13 } },
+              ticks: { color: textMuted, font: { family: '"JetBrains Mono", monospace', size: 12 } },
+              grid: { color: gridColor },
+              border: { color: surfaceBorder },
             },
           },
         },
-        scales: {
-          x: {
-            title: { display: true, text: 'Distance (yd)', color: textMuted, font: { family: '"JetBrains Mono", monospace', size: 13 } },
-            ticks: { color: textMuted, font: { family: '"JetBrains Mono", monospace', size: 12 } },
-            grid: { color: gridColor },
-            border: { color: surfaceBorder },
-          },
-          y: {
-            title: { display: true, text: `${metric.label} (${metric.unit})`, color: textMuted, font: { family: '"JetBrains Mono", monospace', size: 13 } },
-            ticks: { color: textMuted, font: { family: '"JetBrains Mono", monospace', size: 12 } },
-            grid: { color: gridColor },
-            border: { color: surfaceBorder },
-          },
-        },
-      },
-    });
+      });
+    })();
 
-    return () => { chartRef.current?.destroy(); };
+    return () => {
+      destroyed = true;
+      chartRef.current?.destroy();
+      chartRef.current = null;
+    };
   }, [selectedCalibers, chartMetric, themeKey]);
 
   const metricLabel = METRICS.find(m => m.key === chartMetric)!.label.toLowerCase();
