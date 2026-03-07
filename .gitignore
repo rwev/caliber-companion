@@ -25,3 +25,8 @@ pnpm-debug.log*
 
 # VSCode
 .vscode/
+
+# Claude Code
+.claude/
+.agents/
+skills-lock.json
