@@ -25,6 +25,9 @@ export default function CaliberSearch({ calibers, basePath }: Props) {
       ).slice(0, 6)
     : [];
 
+  const showResults = open && results.length > 0;
+  const showNoResults = open && query.length > 0 && results.length === 0;
+
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
@@ -64,7 +67,7 @@ export default function CaliberSearch({ calibers, basePath }: Props) {
   return (
     <div class="relative" ref={containerRef}>
       <div class="relative">
-        <svg class="absolute left-2 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <svg class="absolute left-2 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
         <input
@@ -75,15 +78,24 @@ export default function CaliberSearch({ calibers, basePath }: Props) {
           onInput={(e) => { setQuery((e.target as HTMLInputElement).value); setOpen(true); }}
           onFocus={() => { if (query.length > 0) setOpen(true); }}
           onKeyDown={onKeyDown}
-          class="w-28 border border-surface-border bg-surface-raised py-1.5 pl-7 pr-2 font-mono text-sm text-text-primary placeholder:text-text-muted transition-all focus:w-44 focus:border-accent/40 focus:outline-none sm:w-32 sm:focus:w-52"
+          role="combobox"
+          aria-expanded={showResults}
+          aria-controls="caliber-search-listbox"
+          aria-activedescendant={activeIdx >= 0 ? `caliber-search-option-${activeIdx}` : undefined}
+          aria-autocomplete="list"
+          aria-label="Search calibers"
+          class="w-28 border border-surface-border bg-surface-raised py-1.5 pl-7 pr-2 font-mono text-sm text-text-primary placeholder:text-text-muted transition-all focus:w-44 focus:border-accent/40 sm:w-32 sm:focus:w-52"
         />
       </div>
 
-      {open && results.length > 0 && (
-        <div class="absolute right-0 top-full z-30 mt-1 w-64 border border-surface-border bg-surface-raised shadow-xl">
+      {showResults && (
+        <div id="caliber-search-listbox" role="listbox" aria-label="Search results" class="absolute right-0 top-full z-30 mt-1 w-64 border border-surface-border bg-surface-raised shadow-xl">
           {results.map((cal, i) => (
             <button
               key={cal.slug}
+              id={`caliber-search-option-${i}`}
+              role="option"
+              aria-selected={i === activeIdx}
               onClick={() => navigate(cal.slug)}
               class={`flex w-full items-center justify-between px-3 py-2 text-left transition-colors ${
                 i === activeIdx ? 'bg-accent/15 text-accent' : 'hover:bg-surface-overlay'
@@ -96,8 +108,8 @@ export default function CaliberSearch({ calibers, basePath }: Props) {
         </div>
       )}
 
-      {open && query.length > 0 && results.length === 0 && (
-        <div class="absolute right-0 top-full z-30 mt-1 w-64 border border-surface-border bg-surface-raised px-3 py-2 shadow-xl">
+      {showNoResults && (
+        <div role="status" class="absolute right-0 top-full z-30 mt-1 w-64 border border-surface-border bg-surface-raised px-3 py-2 shadow-xl">
           <span class="font-mono text-sm text-text-muted">No results</span>
         </div>
       )}

@@ -8,12 +8,12 @@ const { title, rows } = Astro.props;
 ---
 
 <div class="border border-surface-border">
-  <div class="border-b border-surface-border bg-surface-overlay px-4 py-2">
-    <h3 class="font-display text-sm tracking-[0.2em] uppercase text-text-muted">{title}</h3>
+  <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
+    <h3 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">{title}</h3>
   </div>
   <div class="divide-y divide-surface-border-subtle">
     {rows.map((row, i) => (
-      <div class={`flex items-baseline justify-between px-4 py-2 ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
+      <div class={`flex items-baseline justify-between px-4 py-2.5 ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
         <span class="text-base text-text-secondary">{row.label}</span>
         <span class="font-mono text-base text-text-primary">{row.value}</span>
       </div>

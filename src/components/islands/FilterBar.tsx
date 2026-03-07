@@ -87,7 +87,7 @@ export default function FilterBar({ calibers, basePath }: Props) {
       <div class="mb-8 space-y-4">
         {/* Search */}
         <div class="relative">
-          <svg class="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <svg class="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
           <input
@@ -95,15 +95,17 @@ export default function FilterBar({ calibers, basePath }: Props) {
             placeholder="Search calibers..."
             value={search}
             onInput={(e) => setSearch((e.target as HTMLInputElement).value)}
-            class="w-full border border-surface-border bg-surface-raised py-2.5 pl-10 pr-4 font-mono text-sm text-text-primary placeholder:text-text-muted focus:border-accent/50 focus:outline-none"
+            aria-label="Search calibers"
+            class="w-full border border-surface-border bg-surface-raised py-3 pl-10 pr-4 font-mono text-base text-text-primary placeholder:text-text-muted focus:border-accent/50"
           />
         </div>
 
         <div class="flex flex-wrap items-center justify-between gap-3">
           {/* Category filters */}
-          <div class="flex flex-wrap gap-1.5">
+          <div class="flex flex-wrap gap-1.5" role="group" aria-label="Filter by category">
             <button
               onClick={() => setActiveCategory(null)}
+              aria-pressed={!activeCategory}
               class={`px-3 py-1.5 font-mono text-sm tracking-wider uppercase transition-colors ${
                 !activeCategory
                   ? 'border border-accent/30 bg-accent/15 text-accent'
@@ -116,6 +118,7 @@ export default function FilterBar({ calibers, basePath }: Props) {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(activeCategory === cat ? null : cat)}
+                aria-pressed={activeCategory === cat}
                 class={`px-3 py-1.5 font-mono text-sm tracking-wider uppercase transition-colors ${
                   activeCategory === cat
                     ? 'border border-accent/30 bg-accent/15 text-accent'
@@ -129,11 +132,12 @@ export default function FilterBar({ calibers, basePath }: Props) {
 
           {/* Sort */}
           <div class="flex items-center gap-2">
-            <span class="font-mono text-sm tracking-wider uppercase text-text-muted">Sort</span>
+            <label for="sort-select" class="font-mono text-sm tracking-wider uppercase text-text-muted">Sort</label>
             <select
+              id="sort-select"
               value={sortKey}
               onChange={(e) => setSortKey((e.target as HTMLSelectElement).value as SortKey)}
-              class="border border-surface-border bg-surface-raised px-2 py-1 font-mono text-sm text-text-secondary focus:border-accent/50 focus:outline-none"
+              class="border border-surface-border bg-surface-raised px-2 py-1 font-mono text-sm text-text-secondary focus:border-accent/50"
             >
               <option value="name">Name</option>
               <option value="year">Year Introduced</option>
@@ -146,18 +150,18 @@ export default function FilterBar({ calibers, basePath }: Props) {
 
       {/* Results */}
       {filtered.length === 0 ? (
-        <div class="py-12 text-center">
-          <div class="font-mono text-sm text-text-muted">No calibers match your search.</div>
+        <div class="py-12 text-center" role="status">
+          <div class="font-mono text-base text-text-muted">No calibers match your search.</div>
         </div>
       ) : (
         <div class="space-y-10">
           {grouped.map(([category, items]) => (
-            <section key={category}>
+            <section key={category} aria-label={`${titleCase(category)} calibers`}>
               <div class="mb-4 flex items-center gap-4">
-                <h2 class="font-display text-sm tracking-[0.25em] uppercase text-accent" style={{ fontFamily: '"Barlow Condensed", system-ui, sans-serif' }}>
+                <h2 class="font-display text-base tracking-[0.25em] uppercase text-accent">
                   {titleCase(category)}
                 </h2>
-                <div class="h-px flex-1 bg-surface-border"></div>
+                <div class="h-px flex-1 bg-surface-border" aria-hidden="true"></div>
                 <span class="font-mono text-sm text-text-muted">{items.length}</span>
               </div>
 
@@ -168,12 +172,11 @@ export default function FilterBar({ calibers, basePath }: Props) {
                     href={`${basePath}/calibers/${c.slug}`}
                     class="group block border border-surface-border bg-surface transition-all hover:border-accent/40 hover:bg-surface-raised hover:shadow-[0_0_24px_rgba(224,90,43,0.06)]"
                   >
-                    <div class="p-4">
+                    <div class="p-5">
                       <div class="flex items-start justify-between gap-3">
                         <div class="min-w-0">
                           <h3
-                            class="text-lg font-semibold text-text-primary transition-colors group-hover:text-accent truncate"
-                            style={{ fontFamily: '"Barlow Condensed", system-ui, sans-serif' }}
+                            class="font-display text-xl font-semibold text-text-primary transition-colors group-hover:text-accent truncate"
                           >
                             {c.name}
                           </h3>
@@ -186,28 +189,28 @@ export default function FilterBar({ calibers, basePath }: Props) {
                         </span>
                       </div>
 
-                      <div class="mt-4 grid grid-cols-2 gap-x-4 gap-y-2">
+                      <div class="mt-4 grid grid-cols-2 gap-x-4 gap-y-3">
                         <div>
                           <div class="font-mono text-sm tracking-[0.15em] uppercase text-text-muted">Velocity</div>
-                          <div class="font-mono text-sm text-text-secondary">
-                            {c.typical_velocity_fps[0]}–{c.typical_velocity_fps[1]} <span class="text-text-muted">fps</span>
+                          <div class="font-mono text-base text-text-secondary">
+                            {c.typical_velocity_fps[0]}–{c.typical_velocity_fps[1]} <span class="text-text-muted text-sm">fps</span>
                           </div>
                         </div>
                         <div>
                           <div class="font-mono text-sm tracking-[0.15em] uppercase text-text-muted">Energy</div>
-                          <div class="font-mono text-sm text-text-secondary">
-                            {c.typical_energy_ft_lbs[0]}–{c.typical_energy_ft_lbs[1]} <span class="text-text-muted">ft·lbs</span>
+                          <div class="font-mono text-base text-text-secondary">
+                            {c.typical_energy_ft_lbs[0]}–{c.typical_energy_ft_lbs[1]} <span class="text-text-muted text-sm">ft·lbs</span>
                           </div>
                         </div>
                         <div>
                           <div class="font-mono text-sm tracking-[0.15em] uppercase text-text-muted">Eff. Range</div>
-                          <div class="font-mono text-sm text-text-secondary">
-                            {c.effective_range_yd} <span class="text-text-muted">yd</span>
+                          <div class="font-mono text-base text-text-secondary">
+                            {c.effective_range_yd} <span class="text-text-muted text-sm">yd</span>
                           </div>
                         </div>
                         <div>
                           <div class="font-mono text-sm tracking-[0.15em] uppercase text-text-muted">Recoil</div>
-                          <div class="font-mono text-sm text-text-secondary">
+                          <div class="font-mono text-base text-text-secondary">
                             {titleCase(c.recoil_subjective)}
                           </div>
                         </div>
@@ -217,7 +220,7 @@ export default function FilterBar({ calibers, basePath }: Props) {
                         <span class="font-mono text-sm tracking-wider uppercase text-text-muted">
                           {titleCase(c.popularity_tier)}
                         </span>
-                        <span class="font-mono text-sm text-text-muted transition-colors group-hover:text-accent">
+                        <span class="font-mono text-sm text-text-muted transition-colors group-hover:text-accent" aria-hidden="true">
                           View →
                         </span>
                       </div>

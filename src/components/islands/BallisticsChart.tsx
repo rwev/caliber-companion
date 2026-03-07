@@ -113,7 +113,7 @@ export default function BallisticsChart({ loads }: Props) {
             position: 'bottom',
             labels: {
               color: textSecondary,
-              font: { family: '"JetBrains Mono", monospace', size: 12 },
+              font: { family: '"JetBrains Mono", monospace', size: 13 },
               padding: 16,
               usePointStyle: true,
               pointStyleWidth: 8,
@@ -125,9 +125,9 @@ export default function BallisticsChart({ loads }: Props) {
             borderWidth: 1,
             titleColor: textPrimary,
             bodyColor: textSecondary,
-            titleFont: { family: '"JetBrains Mono", monospace', size: 12 },
-            bodyFont: { family: '"JetBrains Mono", monospace', size: 12 },
-            padding: 10,
+            titleFont: { family: '"JetBrains Mono", monospace', size: 13 },
+            bodyFont: { family: '"JetBrains Mono", monospace', size: 13 },
+            padding: 12,
             callbacks: {
               title: (items) => `${items[0].label} yd`,
               label: (item) => ` ${item.dataset.label}: ${item.formattedValue} ${metric.unit}`,
@@ -175,14 +175,15 @@ export default function BallisticsChart({ loads }: Props) {
   return (
     <div class="border border-surface-border">
       <div class="flex items-center justify-between border-b border-surface-border bg-surface-overlay px-4 py-2">
-        <h3 class="font-display text-sm tracking-[0.2em] uppercase text-text-muted">
+        <h3 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">
           Ballistics Chart
         </h3>
-        <div class="flex gap-1">
+        <div class="flex gap-1" role="group" aria-label="Chart metric">
           {METRICS.map(m => (
             <button
               key={m.key}
               onClick={() => setActiveMetric(m.key)}
+              aria-pressed={activeMetric === m.key}
               class={`px-2.5 py-1 font-mono text-sm tracking-wider uppercase transition-colors ${
                 activeMetric === m.key
                   ? 'bg-accent/15 text-accent border border-accent/30'
@@ -196,7 +197,7 @@ export default function BallisticsChart({ loads }: Props) {
       </div>
 
       <div class="p-4" style={{ height: '320px' }}>
-        <canvas ref={canvasRef} />
+        <canvas ref={canvasRef} aria-label={`Ballistics chart showing ${metric.label.toLowerCase()} by distance`} role="img" />
       </div>
     </div>
   );

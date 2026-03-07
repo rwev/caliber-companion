@@ -40,8 +40,9 @@ const fullTitle = title === 'Home' ? 'Caliber Companion' : `${title} — Caliber
   </head>
 
   <body class="min-h-screen bg-surface text-text-primary antialiased">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <Nav />
-    <main class="pt-14">
+    <main id="main-content" class="pt-14">
       <slot />
     </main>
     <Footer />
