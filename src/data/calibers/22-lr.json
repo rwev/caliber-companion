@@ -1,56 +1,116 @@
 {
   "name": ".22 LR",
   "designation": ".22 Long Rifle",
-  "aliases": [".22", ".22 LR", "5.6×15mmR"],
+  "aliases": [
+    ".22",
+    ".22 LR",
+    "5.6×15mmR"
+  ],
   "category": "handgun",
   "slug": "22-lr",
-
   "dimensions": {
     "bullet_diameter_in": 0.223,
     "neck_diameter_in": 0.226,
     "case_length_in": 0.613,
-    "overall_length_in": 1.000,
+    "overall_length_in": 1.0,
     "rim_diameter_in": 0.278,
     "case_type": "rimmed, straight (rimfire)"
   },
-
-  "typical_velocity_fps": [1000, 1280],
-  "typical_energy_ft_lbs": [100, 175],
-  "typical_bullet_weight_gr": [29, 40],
+  "typical_velocity_fps": [
+    1000,
+    1280
+  ],
+  "typical_energy_ft_lbs": [
+    100,
+    175
+  ],
+  "typical_bullet_weight_gr": [
+    29,
+    40
+  ],
   "effective_range_yd": 75,
   "max_range_yd": 1500,
-
   "recoil": {
     "free_recoil_ft_lbs": 0.2,
     "reference_firearm": "Ruger Mark IV (4.75\" barrel, 30 oz)",
     "subjective": "very_low"
   },
-
   "year_introduced": 1887,
   "country_of_origin": "USA",
-  "military_usage": ["U.S. military marksmanship training", "Israeli military training"],
-  "le_usage": ["Training and qualification", "Wildlife control"],
-  "primary_use_cases": ["target shooting", "plinking", "training", "small game hunting", "pest control", "competition"],
-
-  "popularity_tier": "ubiquitous",
-  "cost_per_round_usd": [0.05, 0.20],
-  "common_firearms": ["Ruger 10/22", "Ruger Mark IV", "Smith & Wesson M&P 15-22", "CZ 457", "Browning Buck Mark", "Walther P22"],
-
-  "adoption_timeline": [
-    { "year": 1887, "event": "Introduced by J. Stevens Arms as the .22 Long Rifle cartridge" },
-    { "year": 1914, "event": "Widely adopted for military marksmanship training in World War I" },
-    { "year": 1919, "event": "First used in Olympic shooting events at the Antwerp Games" },
-    { "year": 1930, "event": "Boy Scouts of America adopt .22 LR for marksmanship merit badge programs" },
-    { "year": 1949, "event": "Remington introduces the Nylon 66, a landmark .22 LR autoloader" },
-    { "year": 1964, "event": "Ruger introduces the 10/22, which becomes the best-selling .22 LR rifle in history" },
-    { "year": 1977, "event": "SAAMI standardizes .22 LR specifications including CCI Stinger high-velocity variant" },
-    { "year": 1982, "event": "Ruger Mark series pistols become the standard for competitive .22 LR target shooting" },
-    { "year": 2004, "event": "Smith & Wesson introduces the M&P 15-22, bringing AR-style training to .22 LR" },
-    { "year": 2013, "event": "Massive civilian demand causes a nationwide .22 LR ammunition shortage" }
+  "military_usage": [
+    "U.S. military marksmanship training",
+    "Israeli military training"
   ],
-
-  "derived_cartridges": ["22-wmr"],
-
+  "le_usage": [
+    "Training and qualification",
+    "Wildlife control"
+  ],
+  "primary_use_cases": [
+    "target shooting",
+    "plinking",
+    "training",
+    "small game hunting",
+    "pest control",
+    "competition"
+  ],
+  "popularity_tier": "ubiquitous",
+  "cost_per_round_usd": [
+    0.05,
+    0.2
+  ],
+  "common_firearms": [
+    "Ruger 10/22",
+    "Ruger Mark IV",
+    "Smith & Wesson M&P 15-22",
+    "CZ 457",
+    "Browning Buck Mark",
+    "Walther P22"
+  ],
+  "adoption_timeline": [
+    {
+      "year": 1887,
+      "event": "Introduced by J. Stevens Arms as the .22 Long Rifle cartridge"
+    },
+    {
+      "year": 1914,
+      "event": "Widely adopted for military marksmanship training in World War I"
+    },
+    {
+      "year": 1919,
+      "event": "First used in Olympic shooting events at the Antwerp Games"
+    },
+    {
+      "year": 1930,
+      "event": "Boy Scouts of America adopt .22 LR for marksmanship merit badge programs"
+    },
+    {
+      "year": 1949,
+      "event": "Remington introduces the Nylon 66, a landmark .22 LR autoloader"
+    },
+    {
+      "year": 1964,
+      "event": "Ruger introduces the 10/22, which becomes the best-selling .22 LR rifle in history"
+    },
+    {
+      "year": 1977,
+      "event": "SAAMI standardizes .22 LR specifications including CCI Stinger high-velocity variant"
+    },
+    {
+      "year": 1982,
+      "event": "Ruger Mark series pistols become the standard for competitive .22 LR target shooting"
+    },
+    {
+      "year": 2004,
+      "event": "Smith & Wesson introduces the M&P 15-22, bringing AR-style training to .22 LR"
+    },
+    {
+      "year": 2013,
+      "event": "Massive civilian demand causes a nationwide .22 LR ammunition shortage"
+    }
+  ],
+  "derived_cartridges": [
+    "22-wmr"
+  ],
   "loads": [
     {
       "name": "CCI Standard Velocity 40 gr LRN",
@@ -60,11 +120,36 @@
       "muzzle_energy_ft_lbs": 102,
       "barrel_length_in": 4.75,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 1070, "energy_ft_lbs": 102, "drop_in": 0.0 },
-        { "distance_yd": 25, "velocity_fps": 1010, "energy_ft_lbs": 91, "drop_in": -0.3 },
-        { "distance_yd": 50, "velocity_fps": 960, "energy_ft_lbs": 82, "drop_in": -1.6 },
-        { "distance_yd": 75, "velocity_fps": 916, "energy_ft_lbs": 75, "drop_in": -4.5 },
-        { "distance_yd": 100, "velocity_fps": 878, "energy_ft_lbs": 68, "drop_in": -9.5 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1070,
+          "energy_ft_lbs": 102,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1010,
+          "energy_ft_lbs": 91,
+          "drop_in": -0.3
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 960,
+          "energy_ft_lbs": 82,
+          "drop_in": -1.6
+        },
+        {
+          "distance_yd": 75,
+          "velocity_fps": 916,
+          "energy_ft_lbs": 75,
+          "drop_in": -4.5
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 878,
+          "energy_ft_lbs": 68,
+          "drop_in": -9.5
+        }
       ]
     },
     {
@@ -75,12 +160,54 @@
       "muzzle_energy_ft_lbs": 127,
       "barrel_length_in": 4.75,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 1260, "energy_ft_lbs": 127, "drop_in": 0.0 },
-        { "distance_yd": 25, "velocity_fps": 1175, "energy_ft_lbs": 110, "drop_in": -0.2 },
-        { "distance_yd": 50, "velocity_fps": 1100, "energy_ft_lbs": 97, "drop_in": -1.1 },
-        { "distance_yd": 75, "velocity_fps": 1040, "energy_ft_lbs": 86, "drop_in": -3.2 },
-        { "distance_yd": 100, "velocity_fps": 990, "energy_ft_lbs": 78, "drop_in": -7.0 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1260,
+          "energy_ft_lbs": 127,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1175,
+          "energy_ft_lbs": 110,
+          "drop_in": -0.2
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1100,
+          "energy_ft_lbs": 97,
+          "drop_in": -1.1
+        },
+        {
+          "distance_yd": 75,
+          "velocity_fps": 1040,
+          "energy_ft_lbs": 86,
+          "drop_in": -3.2
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 990,
+          "energy_ft_lbs": 78,
+          "drop_in": -7.0
+        }
       ]
+    }
+  ],
+  "max_pressure_psi": 24000,
+  "primer_type": "Rimfire",
+  "powder_charge_range_gr": [
+    1.0,
+    1.5
+  ],
+  "availability_rating": 5,
+  "annual_production_estimate": "massive",
+  "price_trend": "stable",
+  "suppressor_friendly": true,
+  "subsonic_loads_available": true,
+  "dangerous_substitutions": [
+    {
+      "caliber": ".22 WMR",
+      "danger": ".22 WMR is a larger diameter case — should not be fired in .22 LR chambers. Some convertible firearms have separate cylinders for each."
     }
   ]
 }

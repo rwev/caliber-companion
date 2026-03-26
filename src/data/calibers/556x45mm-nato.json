@@ -1,7 +1,10 @@
 {
-  "name": "5.56\u00d745mm NATO",
-  "designation": "5.56\u00d745mm",
-  "aliases": ["5.56 NATO", ".223 Remington (commercial equivalent)"],
+  "name": "5.56×45mm NATO",
+  "designation": "5.56×45mm",
+  "aliases": [
+    "5.56 NATO",
+    ".223 Remington (commercial equivalent)"
+  ],
   "category": "rifle",
   "slug": "556x45mm-nato",
   "dimensions": {
@@ -12,9 +15,18 @@
     "rim_diameter_in": 0.378,
     "case_type": "rimless, bottleneck"
   },
-  "typical_velocity_fps": [2750, 3260],
-  "typical_energy_ft_lbs": [1100, 1380],
-  "typical_bullet_weight_gr": [55, 77],
+  "typical_velocity_fps": [
+    2750,
+    3260
+  ],
+  "typical_energy_ft_lbs": [
+    1100,
+    1380
+  ],
+  "typical_bullet_weight_gr": [
+    55,
+    77
+  ],
   "effective_range_yd": 500,
   "max_range_yd": 3600,
   "recoil": {
@@ -24,23 +36,77 @@
   },
   "year_introduced": 1964,
   "country_of_origin": "USA",
-  "military_usage": ["NATO standard rifle cartridge", "U.S. Military (M4 Carbine, M16, M249 SAW)", "Most NATO and allied armed forces"],
-  "le_usage": ["FBI", "U.S. Border Patrol", "Most U.S. police patrol rifles"],
-  "primary_use_cases": ["military service rifle", "law enforcement patrol rifle", "home defense", "target shooting", "varmint hunting", "competition"],
+  "military_usage": [
+    "NATO standard rifle cartridge",
+    "U.S. Military (M4 Carbine, M16, M249 SAW)",
+    "Most NATO and allied armed forces"
+  ],
+  "le_usage": [
+    "FBI",
+    "U.S. Border Patrol",
+    "Most U.S. police patrol rifles"
+  ],
+  "primary_use_cases": [
+    "military service rifle",
+    "law enforcement patrol rifle",
+    "home defense",
+    "target shooting",
+    "varmint hunting",
+    "competition"
+  ],
   "popularity_tier": "ubiquitous",
-  "cost_per_round_usd": [0.3, 1.2],
-  "common_firearms": ["AR-15 variants", "M4 Carbine", "FN SCAR 16S", "Ruger Mini-14", "IWI Tavor"],
+  "cost_per_round_usd": [
+    0.3,
+    1.2
+  ],
+  "common_firearms": [
+    "AR-15 variants",
+    "M4 Carbine",
+    "FN SCAR 16S",
+    "Ruger Mini-14",
+    "IWI Tavor"
+  ],
   "adoption_timeline": [
-    { "year": 1957, "event": "ArmaLite and Remington develop the .223 Remington as the basis for the cartridge" },
-    { "year": 1964, "event": "U.S. Air Force adopts the M16 rifle chambered in 5.56\u00d745mm for base security" },
-    { "year": 1965, "event": "Deployed with U.S. Army forces in the Vietnam War" },
-    { "year": 1969, "event": "M16A1 becomes the standard U.S. infantry rifle, solidifying 5.56mm adoption" },
-    { "year": 1980, "event": "NATO standardizes 5.56\u00d745mm with STANAG 4172 and the SS109/M855 ball round" },
-    { "year": 1982, "event": "M16A2 adopted with 1:7 twist barrel optimized for the heavier 62 gr NATO round" },
-    { "year": 1994, "event": "M4 Carbine adopted by U.S. military as the standard-issue carbine" },
-    { "year": 2003, "event": "Mk 262 Mod 1 77 gr OTM adopted by USSOCOM for improved range and accuracy" },
-    { "year": 2010, "event": "M855A1 Enhanced Performance Round adopted by the U.S. Army" },
-    { "year": 2015, "event": "M855A1 fielded across all U.S. Army combat units as the standard ball round" }
+    {
+      "year": 1957,
+      "event": "ArmaLite and Remington develop the .223 Remington as the basis for the cartridge"
+    },
+    {
+      "year": 1964,
+      "event": "U.S. Air Force adopts the M16 rifle chambered in 5.56×45mm for base security"
+    },
+    {
+      "year": 1965,
+      "event": "Deployed with U.S. Army forces in the Vietnam War"
+    },
+    {
+      "year": 1969,
+      "event": "M16A1 becomes the standard U.S. infantry rifle, solidifying 5.56mm adoption"
+    },
+    {
+      "year": 1980,
+      "event": "NATO standardizes 5.56×45mm with STANAG 4172 and the SS109/M855 ball round"
+    },
+    {
+      "year": 1982,
+      "event": "M16A2 adopted with 1:7 twist barrel optimized for the heavier 62 gr NATO round"
+    },
+    {
+      "year": 1994,
+      "event": "M4 Carbine adopted by U.S. military as the standard-issue carbine"
+    },
+    {
+      "year": 2003,
+      "event": "Mk 262 Mod 1 77 gr OTM adopted by USSOCOM for improved range and accuracy"
+    },
+    {
+      "year": 2010,
+      "event": "M855A1 Enhanced Performance Round adopted by the U.S. Army"
+    },
+    {
+      "year": 2015,
+      "event": "M855A1 fielded across all U.S. Army combat units as the standard ball round"
+    }
   ],
   "parent_cartridge": "223-remington",
   "loads": [
@@ -54,12 +120,42 @@
       "bc_g1": 0.243,
       "sectional_density": 0.157,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 3165, "energy_ft_lbs": 1225, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2854, "energy_ft_lbs": 996, "drop_in": -2.0 },
-        { "distance_yd": 200, "velocity_fps": 2563, "energy_ft_lbs": 803, "drop_in": -8.5 },
-        { "distance_yd": 300, "velocity_fps": 2290, "energy_ft_lbs": 641, "drop_in": -20.7 },
-        { "distance_yd": 400, "velocity_fps": 2034, "energy_ft_lbs": 506, "drop_in": -40.2 },
-        { "distance_yd": 500, "velocity_fps": 1796, "energy_ft_lbs": 394, "drop_in": -69.0 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 3165,
+          "energy_ft_lbs": 1225,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2854,
+          "energy_ft_lbs": 996,
+          "drop_in": -2.0
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2563,
+          "energy_ft_lbs": 803,
+          "drop_in": -8.5
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2290,
+          "energy_ft_lbs": 641,
+          "drop_in": -20.7
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2034,
+          "energy_ft_lbs": 506,
+          "drop_in": -40.2
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1796,
+          "energy_ft_lbs": 394,
+          "drop_in": -69.0
+        }
       ]
     },
     {
@@ -70,21 +166,135 @@
       "muzzle_energy_ft_lbs": 1265,
       "barrel_length_in": 20.0,
       "bc_g1": 0.372,
-      "bc_g7": 0.190,
+      "bc_g7": 0.19,
       "sectional_density": 0.219,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 2720, "energy_ft_lbs": 1265, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2511, "energy_ft_lbs": 1079, "drop_in": -2.6 },
-        { "distance_yd": 200, "velocity_fps": 2312, "energy_ft_lbs": 914, "drop_in": -10.4 },
-        { "distance_yd": 300, "velocity_fps": 2121, "energy_ft_lbs": 770, "drop_in": -24.3 },
-        { "distance_yd": 400, "velocity_fps": 1939, "energy_ft_lbs": 643, "drop_in": -45.5 },
-        { "distance_yd": 500, "velocity_fps": 1767, "energy_ft_lbs": 534, "drop_in": -75.6 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2720,
+          "energy_ft_lbs": 1265,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2511,
+          "energy_ft_lbs": 1079,
+          "drop_in": -2.6
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2312,
+          "energy_ft_lbs": 914,
+          "drop_in": -10.4
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2121,
+          "energy_ft_lbs": 770,
+          "drop_in": -24.3
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 1939,
+          "energy_ft_lbs": 643,
+          "drop_in": -45.5
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1767,
+          "energy_ft_lbs": 534,
+          "drop_in": -75.6
+        }
       ]
     }
   ],
   "recommended_game": [
-    { "game": "Coyote", "range": "Under 300 yd", "notes": "50-55gr polymer tip or hollow point bullets; identical to .223 Rem for hunting" },
-    { "game": "Prairie Dogs", "range": "Under 350 yd", "notes": "40-55gr varmint bullets for explosive fragmentation" },
-    { "game": "Varmints", "range": "Under 300 yd", "notes": "40-55gr hollow point or polymer tip bullets" }
+    {
+      "game": "Coyote",
+      "range": "Under 300 yd",
+      "notes": "50-55gr polymer tip or hollow point bullets; identical to .223 Rem for hunting"
+    },
+    {
+      "game": "Prairie Dogs",
+      "range": "Under 350 yd",
+      "notes": "40-55gr varmint bullets for explosive fragmentation"
+    },
+    {
+      "game": "Varmints",
+      "range": "Under 300 yd",
+      "notes": "40-55gr hollow point or polymer tip bullets"
+    }
+  ],
+  "max_pressure_psi": 62366,
+  "primer_type": "Small Rifle",
+  "powder_charge_range_gr": [
+    22.0,
+    28.5
+  ],
+  "availability_rating": 5,
+  "annual_production_estimate": "massive",
+  "price_trend": "stable",
+  "suppressor_friendly": true,
+  "subsonic_loads_available": false,
+  "military_adoption_detail": [
+    {
+      "organization": "U.S. Military",
+      "designation": "M193",
+      "year_adopted": 1964,
+      "role": "Standard rifle cartridge",
+      "status": "retired"
+    },
+    {
+      "organization": "U.S. Military",
+      "designation": "M855",
+      "year_adopted": 1982,
+      "role": "Standard rifle cartridge",
+      "status": "active"
+    },
+    {
+      "organization": "U.S. Military",
+      "designation": "M855A1",
+      "year_adopted": 2010,
+      "role": "Enhanced performance rifle cartridge",
+      "status": "active"
+    },
+    {
+      "organization": "NATO",
+      "designation": "STANAG 4172",
+      "year_adopted": 1980,
+      "role": "Standard rifle cartridge",
+      "status": "active"
+    },
+    {
+      "organization": "U.S. SOCOM",
+      "designation": "Mk 262 Mod 1",
+      "year_adopted": 2002,
+      "role": "Precision rifle cartridge",
+      "status": "active"
+    }
+  ],
+  "le_adoption_detail": [
+    {
+      "organization": "FBI HRT",
+      "role": "Standard rifle cartridge",
+      "status": "active"
+    },
+    {
+      "organization": "U.S. Border Patrol",
+      "role": "Patrol rifle cartridge",
+      "status": "active"
+    }
+  ],
+  "compatible_chambers": [
+    {
+      "caliber": ".223 Remington",
+      "notes": ".223 Rem fires safely in 5.56 NATO chambers — lower pressure than the chamber is rated for"
+    }
+  ],
+  "dangerous_substitutions": [
+    {
+      "caliber": ".300 Blackout",
+      "danger": ".300 BLK rounds can physically chamber in a 5.56 rifle — will cause catastrophic barrel/receiver failure. ALWAYS verify ammunition before loading."
+    }
   ]
 }

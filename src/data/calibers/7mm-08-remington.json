@@ -1,7 +1,10 @@
 {
   "name": "7mm-08 Remington",
   "designation": "7mm-08 Remington",
-  "aliases": ["7mm-08 Rem", "7mm-08"],
+  "aliases": [
+    "7mm-08 Rem",
+    "7mm-08"
+  ],
   "category": "rifle",
   "slug": "7mm-08-remington",
   "dimensions": {
@@ -12,9 +15,18 @@
     "rim_diameter_in": 0.473,
     "case_type": "rimless, bottleneck"
   },
-  "typical_velocity_fps": [2600, 3000],
-  "typical_energy_ft_lbs": [2200, 2600],
-  "typical_bullet_weight_gr": [120, 175],
+  "typical_velocity_fps": [
+    2600,
+    3000
+  ],
+  "typical_energy_ft_lbs": [
+    2200,
+    2600
+  ],
+  "typical_bullet_weight_gr": [
+    120,
+    175
+  ],
   "effective_range_yd": 600,
   "max_range_yd": 4200,
   "recoil": {
@@ -24,12 +36,31 @@
   },
   "year_introduced": 1980,
   "country_of_origin": "USA",
-  "military_usage": ["No significant military adoption"],
-  "le_usage": ["Used by some law enforcement agencies as a precision rifle cartridge"],
-  "primary_use_cases": ["deer hunting", "elk hunting", "target shooting", "youth and recoil-sensitive hunting", "metallic silhouette competition"],
+  "military_usage": [
+    "No significant military adoption"
+  ],
+  "le_usage": [
+    "Used by some law enforcement agencies as a precision rifle cartridge"
+  ],
+  "primary_use_cases": [
+    "deer hunting",
+    "elk hunting",
+    "target shooting",
+    "youth and recoil-sensitive hunting",
+    "metallic silhouette competition"
+  ],
   "popularity_tier": "common",
-  "cost_per_round_usd": [1.0, 2.8],
-  "common_firearms": ["Remington Model Seven", "Browning X-Bolt", "Tikka T3x", "Kimber Hunter", "Ruger Hawkeye"],
+  "cost_per_round_usd": [
+    1.0,
+    2.8
+  ],
+  "common_firearms": [
+    "Remington Model Seven",
+    "Browning X-Bolt",
+    "Tikka T3x",
+    "Kimber Hunter",
+    "Ruger Hawkeye"
+  ],
   "parent_cartridge": "308-winchester",
   "loads": [
     {
@@ -43,12 +74,42 @@
       "bc_g7": 0.243,
       "sectional_density": 0.246,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 2950, "energy_ft_lbs": 2686, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2756, "energy_ft_lbs": 2345, "drop_in": -1.7 },
-        { "distance_yd": 200, "velocity_fps": 2570, "energy_ft_lbs": 2038, "drop_in": -7.3 },
-        { "distance_yd": 300, "velocity_fps": 2392, "energy_ft_lbs": 1765, "drop_in": -17.5 },
-        { "distance_yd": 400, "velocity_fps": 2221, "energy_ft_lbs": 1523, "drop_in": -33.0 },
-        { "distance_yd": 500, "velocity_fps": 2057, "energy_ft_lbs": 1306, "drop_in": -54.5 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2950,
+          "energy_ft_lbs": 2686,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2756,
+          "energy_ft_lbs": 2345,
+          "drop_in": -1.7
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2570,
+          "energy_ft_lbs": 2038,
+          "drop_in": -7.3
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2392,
+          "energy_ft_lbs": 1765,
+          "drop_in": -17.5
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2221,
+          "energy_ft_lbs": 1523,
+          "drop_in": -33.0
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2057,
+          "energy_ft_lbs": 1306,
+          "drop_in": -54.5
+        }
       ]
     },
     {
@@ -62,19 +123,76 @@
       "bc_g7": 0.242,
       "sectional_density": 0.248,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 2800, "energy_ft_lbs": 2437, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2617, "energy_ft_lbs": 2128, "drop_in": -2.1 },
-        { "distance_yd": 200, "velocity_fps": 2441, "energy_ft_lbs": 1852, "drop_in": -8.6 },
-        { "distance_yd": 300, "velocity_fps": 2272, "energy_ft_lbs": 1604, "drop_in": -20.2 },
-        { "distance_yd": 400, "velocity_fps": 2110, "energy_ft_lbs": 1384, "drop_in": -37.8 },
-        { "distance_yd": 500, "velocity_fps": 1955, "energy_ft_lbs": 1188, "drop_in": -62.5 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2800,
+          "energy_ft_lbs": 2437,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2617,
+          "energy_ft_lbs": 2128,
+          "drop_in": -2.1
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2441,
+          "energy_ft_lbs": 1852,
+          "drop_in": -8.6
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2272,
+          "energy_ft_lbs": 1604,
+          "drop_in": -20.2
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2110,
+          "energy_ft_lbs": 1384,
+          "drop_in": -37.8
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1955,
+          "energy_ft_lbs": 1188,
+          "drop_in": -62.5
+        }
       ]
     }
   ],
   "recommended_game": [
-    { "game": "Whitetail Deer", "range": "Under 350 yd", "notes": "139-150gr controlled expansion bullets; excellent low-recoil deer cartridge" },
-    { "game": "Mule Deer", "range": "Under 300 yd", "notes": "140-150gr bonded or partition bullets recommended" },
-    { "game": "Pronghorn", "range": "Under 350 yd", "notes": "120-140gr polymer tip bullets; flat trajectory and low recoil" },
-    { "game": "Black Bear", "range": "Under 200 yd", "notes": "150-160gr bonded bullets for adequate penetration" }
-  ]
+    {
+      "game": "Whitetail Deer",
+      "range": "Under 350 yd",
+      "notes": "139-150gr controlled expansion bullets; excellent low-recoil deer cartridge"
+    },
+    {
+      "game": "Mule Deer",
+      "range": "Under 300 yd",
+      "notes": "140-150gr bonded or partition bullets recommended"
+    },
+    {
+      "game": "Pronghorn",
+      "range": "Under 350 yd",
+      "notes": "120-140gr polymer tip bullets; flat trajectory and low recoil"
+    },
+    {
+      "game": "Black Bear",
+      "range": "Under 200 yd",
+      "notes": "150-160gr bonded bullets for adequate penetration"
+    }
+  ],
+  "max_pressure_psi": 61000,
+  "primer_type": "Large Rifle",
+  "powder_charge_range_gr": [
+    38.0,
+    48.0
+  ],
+  "availability_rating": 3,
+  "annual_production_estimate": "moderate",
+  "price_trend": "stable",
+  "suppressor_friendly": true,
+  "subsonic_loads_available": false
 }

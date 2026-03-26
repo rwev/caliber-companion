@@ -1,7 +1,9 @@
 {
   "name": ".280 Ackley Improved",
   "designation": ".280 Ackley Improved",
-  "aliases": [".280 AI"],
+  "aliases": [
+    ".280 AI"
+  ],
   "category": "rifle",
   "slug": "280-ackley-improved",
   "dimensions": {
@@ -12,9 +14,18 @@
     "rim_diameter_in": 0.473,
     "case_type": "rimless, bottleneck (40-degree shoulder)"
   },
-  "typical_velocity_fps": [2800, 3200],
-  "typical_energy_ft_lbs": [2600, 3100],
-  "typical_bullet_weight_gr": [120, 175],
+  "typical_velocity_fps": [
+    2800,
+    3200
+  ],
+  "typical_energy_ft_lbs": [
+    2600,
+    3100
+  ],
+  "typical_bullet_weight_gr": [
+    120,
+    175
+  ],
   "effective_range_yd": 800,
   "max_range_yd": 4900,
   "recoil": {
@@ -24,12 +35,31 @@
   },
   "year_introduced": 1957,
   "country_of_origin": "USA",
-  "military_usage": ["No significant military adoption"],
-  "le_usage": ["No significant law enforcement adoption"],
-  "primary_use_cases": ["elk hunting", "long-range hunting", "mountain hunting", "deer hunting", "handloading"],
+  "military_usage": [
+    "No significant military adoption"
+  ],
+  "le_usage": [
+    "No significant law enforcement adoption"
+  ],
+  "primary_use_cases": [
+    "elk hunting",
+    "long-range hunting",
+    "mountain hunting",
+    "deer hunting",
+    "handloading"
+  ],
   "popularity_tier": "common",
-  "cost_per_round_usd": [1.5, 3.5],
-  "common_firearms": ["Nosler M48", "Kimber Mountain Ascent", "Browning X-Bolt", "Cooper Model 52", "Christensen Arms Ridgeline"],
+  "cost_per_round_usd": [
+    1.5,
+    3.5
+  ],
+  "common_firearms": [
+    "Nosler M48",
+    "Kimber Mountain Ascent",
+    "Browning X-Bolt",
+    "Cooper Model 52",
+    "Christensen Arms Ridgeline"
+  ],
   "parent_cartridge": "280-remington",
   "loads": [
     {
@@ -43,12 +73,42 @@
       "bc_g7": 0.246,
       "sectional_density": 0.266,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 3000, "energy_ft_lbs": 2997, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2808, "energy_ft_lbs": 2626, "drop_in": -1.6 },
-        { "distance_yd": 200, "velocity_fps": 2624, "energy_ft_lbs": 2293, "drop_in": -7.0 },
-        { "distance_yd": 300, "velocity_fps": 2447, "energy_ft_lbs": 1993, "drop_in": -16.7 },
-        { "distance_yd": 400, "velocity_fps": 2277, "energy_ft_lbs": 1727, "drop_in": -31.5 },
-        { "distance_yd": 500, "velocity_fps": 2114, "energy_ft_lbs": 1488, "drop_in": -52.0 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 3000,
+          "energy_ft_lbs": 2997,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2808,
+          "energy_ft_lbs": 2626,
+          "drop_in": -1.6
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2624,
+          "energy_ft_lbs": 2293,
+          "drop_in": -7.0
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2447,
+          "energy_ft_lbs": 1993,
+          "drop_in": -16.7
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2277,
+          "energy_ft_lbs": 1727,
+          "drop_in": -31.5
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2114,
+          "energy_ft_lbs": 1488,
+          "drop_in": -52.0
+        }
       ]
     },
     {
@@ -62,20 +122,81 @@
       "bc_g7": 0.315,
       "sectional_density": 0.287,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 2850, "energy_ft_lbs": 2922, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2680, "energy_ft_lbs": 2583, "drop_in": -1.8 },
-        { "distance_yd": 200, "velocity_fps": 2516, "energy_ft_lbs": 2276, "drop_in": -7.8 },
-        { "distance_yd": 300, "velocity_fps": 2357, "energy_ft_lbs": 1999, "drop_in": -18.2 },
-        { "distance_yd": 400, "velocity_fps": 2204, "energy_ft_lbs": 1748, "drop_in": -33.5 },
-        { "distance_yd": 500, "velocity_fps": 2057, "energy_ft_lbs": 1522, "drop_in": -54.8 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2850,
+          "energy_ft_lbs": 2922,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2680,
+          "energy_ft_lbs": 2583,
+          "drop_in": -1.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2516,
+          "energy_ft_lbs": 2276,
+          "drop_in": -7.8
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2357,
+          "energy_ft_lbs": 1999,
+          "drop_in": -18.2
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2204,
+          "energy_ft_lbs": 1748,
+          "drop_in": -33.5
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2057,
+          "energy_ft_lbs": 1522,
+          "drop_in": -54.8
+        }
       ]
     }
   ],
   "recommended_game": [
-    { "game": "Whitetail Deer", "range": "Under 400 yd", "notes": "140-160gr controlled expansion bullets" },
-    { "game": "Mule Deer", "range": "Under 450 yd", "notes": "150-160gr bonded or partition bullets recommended" },
-    { "game": "Elk", "range": "Under 400 yd", "notes": "160-175gr premium bonded or partition bullets; ballistically superior to .280 Rem" },
-    { "game": "Black Bear", "range": "Under 300 yd", "notes": "160gr bonded bullets for deep penetration" },
-    { "game": "Pronghorn", "range": "Under 500 yd", "notes": "140gr polymer tip bullets; excellent long-range trajectory" }
-  ]
+    {
+      "game": "Whitetail Deer",
+      "range": "Under 400 yd",
+      "notes": "140-160gr controlled expansion bullets"
+    },
+    {
+      "game": "Mule Deer",
+      "range": "Under 450 yd",
+      "notes": "150-160gr bonded or partition bullets recommended"
+    },
+    {
+      "game": "Elk",
+      "range": "Under 400 yd",
+      "notes": "160-175gr premium bonded or partition bullets; ballistically superior to .280 Rem"
+    },
+    {
+      "game": "Black Bear",
+      "range": "Under 300 yd",
+      "notes": "160gr bonded bullets for deep penetration"
+    },
+    {
+      "game": "Pronghorn",
+      "range": "Under 500 yd",
+      "notes": "140gr polymer tip bullets; excellent long-range trajectory"
+    }
+  ],
+  "max_pressure_psi": 65000,
+  "primer_type": "Large Rifle",
+  "powder_charge_range_gr": [
+    50.0,
+    62.0
+  ],
+  "availability_rating": 2,
+  "annual_production_estimate": "limited",
+  "price_trend": "stable",
+  "suppressor_friendly": true,
+  "subsonic_loads_available": false
 }

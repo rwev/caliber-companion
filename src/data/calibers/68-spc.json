@@ -1,7 +1,10 @@
 {
   "name": "6.8 SPC",
   "designation": "6.8mm Remington SPC",
-  "aliases": ["6.8 SPC II", "6.8x43mm"],
+  "aliases": [
+    "6.8 SPC II",
+    "6.8x43mm"
+  ],
   "category": "rifle",
   "slug": "68-spc",
   "dimensions": {
@@ -12,9 +15,18 @@
     "rim_diameter_in": 0.422,
     "case_type": "rimless, bottleneck"
   },
-  "typical_velocity_fps": [2400, 2750],
-  "typical_energy_ft_lbs": [1500, 1800],
-  "typical_bullet_weight_gr": [85, 120],
+  "typical_velocity_fps": [
+    2400,
+    2750
+  ],
+  "typical_energy_ft_lbs": [
+    1500,
+    1800
+  ],
+  "typical_bullet_weight_gr": [
+    85,
+    120
+  ],
   "effective_range_yd": 500,
   "max_range_yd": 3200,
   "recoil": {
@@ -24,14 +36,36 @@
   },
   "year_introduced": 2004,
   "country_of_origin": "USA",
-  "military_usage": ["Developed with U.S. Army Marksmanship Unit and SOCOM", "Limited special operations evaluation", "Jordanian Armed Forces (select units)"],
-  "le_usage": ["Select law enforcement agencies (patrol rifle alternative)"],
-  "primary_use_cases": ["deer hunting", "hog hunting", "medium game hunting", "tactical/defensive rifle"],
+  "military_usage": [
+    "Developed with U.S. Army Marksmanship Unit and SOCOM",
+    "Limited special operations evaluation",
+    "Jordanian Armed Forces (select units)"
+  ],
+  "le_usage": [
+    "Select law enforcement agencies (patrol rifle alternative)"
+  ],
+  "primary_use_cases": [
+    "deer hunting",
+    "hog hunting",
+    "medium game hunting",
+    "tactical/defensive rifle"
+  ],
   "popularity_tier": "niche",
-  "cost_per_round_usd": [0.9, 2.5],
-  "common_firearms": ["AR-15 variants (dedicated bolt)", "LWRC SIX8", "Barrett REC7", "Ruger Mini-14 6.8", "POF Revolution"],
+  "cost_per_round_usd": [
+    0.9,
+    2.5
+  ],
+  "common_firearms": [
+    "AR-15 variants (dedicated bolt)",
+    "LWRC SIX8",
+    "Barrett REC7",
+    "Ruger Mini-14 6.8",
+    "POF Revolution"
+  ],
   "parent_cartridge": "30-carbine",
-  "derived_cartridges": ["224-valkyrie"],
+  "derived_cartridges": [
+    "224-valkyrie"
+  ],
   "loads": [
     {
       "name": "Hornady SST 120 gr",
@@ -40,16 +74,46 @@
       "muzzle_velocity_fps": 2460,
       "muzzle_energy_ft_lbs": 1612,
       "barrel_length_in": 16.0,
-      "bc_g1": 0.400,
-      "bc_g7": 0.200,
+      "bc_g1": 0.4,
+      "bc_g7": 0.2,
       "sectional_density": 0.223,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 2460, "energy_ft_lbs": 1612, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2266, "energy_ft_lbs": 1367, "drop_in": -3.2 },
-        { "distance_yd": 200, "velocity_fps": 2081, "energy_ft_lbs": 1154, "drop_in": -12.8 },
-        { "distance_yd": 300, "velocity_fps": 1907, "energy_ft_lbs": 969, "drop_in": -30.0 },
-        { "distance_yd": 400, "velocity_fps": 1743, "energy_ft_lbs": 809, "drop_in": -56.5 },
-        { "distance_yd": 500, "velocity_fps": 1591, "energy_ft_lbs": 674, "drop_in": -94.0 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2460,
+          "energy_ft_lbs": 1612,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2266,
+          "energy_ft_lbs": 1367,
+          "drop_in": -3.2
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2081,
+          "energy_ft_lbs": 1154,
+          "drop_in": -12.8
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 1907,
+          "energy_ft_lbs": 969,
+          "drop_in": -30.0
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 1743,
+          "energy_ft_lbs": 809,
+          "drop_in": -56.5
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1591,
+          "energy_ft_lbs": 674,
+          "drop_in": -94.0
+        }
       ]
     },
     {
@@ -59,22 +123,75 @@
       "muzzle_velocity_fps": 2620,
       "muzzle_energy_ft_lbs": 1676,
       "barrel_length_in": 16.0,
-      "bc_g1": 0.370,
+      "bc_g1": 0.37,
       "bc_g7": 0.185,
       "sectional_density": 0.205,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 2620, "energy_ft_lbs": 1676, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2400, "energy_ft_lbs": 1406, "drop_in": -2.6 },
-        { "distance_yd": 200, "velocity_fps": 2192, "energy_ft_lbs": 1174, "drop_in": -10.8 },
-        { "distance_yd": 300, "velocity_fps": 1997, "energy_ft_lbs": 974, "drop_in": -25.8 },
-        { "distance_yd": 400, "velocity_fps": 1813, "energy_ft_lbs": 803, "drop_in": -49.5 },
-        { "distance_yd": 500, "velocity_fps": 1643, "energy_ft_lbs": 659, "drop_in": -83.5 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2620,
+          "energy_ft_lbs": 1676,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2400,
+          "energy_ft_lbs": 1406,
+          "drop_in": -2.6
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2192,
+          "energy_ft_lbs": 1174,
+          "drop_in": -10.8
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 1997,
+          "energy_ft_lbs": 974,
+          "drop_in": -25.8
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 1813,
+          "energy_ft_lbs": 803,
+          "drop_in": -49.5
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1643,
+          "energy_ft_lbs": 659,
+          "drop_in": -83.5
+        }
       ]
     }
   ],
   "recommended_game": [
-    { "game": "Whitetail Deer", "range": "Under 200 yd", "notes": "110-120gr controlled expansion bullets; effective AR-15 deer cartridge" },
-    { "game": "Feral Hogs", "range": "Under 200 yd", "notes": "110-120gr bonded or soft point bullets" },
-    { "game": "Coyote", "range": "Under 300 yd", "notes": "85-90gr varmint bullets; good accuracy from AR platform" }
-  ]
+    {
+      "game": "Whitetail Deer",
+      "range": "Under 200 yd",
+      "notes": "110-120gr controlled expansion bullets; effective AR-15 deer cartridge"
+    },
+    {
+      "game": "Feral Hogs",
+      "range": "Under 200 yd",
+      "notes": "110-120gr bonded or soft point bullets"
+    },
+    {
+      "game": "Coyote",
+      "range": "Under 300 yd",
+      "notes": "85-90gr varmint bullets; good accuracy from AR platform"
+    }
+  ],
+  "max_pressure_psi": 55000,
+  "primer_type": "Small Rifle",
+  "powder_charge_range_gr": [
+    24.0,
+    30.0
+  ],
+  "availability_rating": 3,
+  "annual_production_estimate": "moderate",
+  "price_trend": "stable",
+  "suppressor_friendly": true,
+  "subsonic_loads_available": false
 }

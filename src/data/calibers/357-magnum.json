@@ -1,7 +1,10 @@
 {
   "name": ".357 Magnum",
   "designation": ".357 S&W Magnum",
-  "aliases": [".357 Mag", ".357 S&W Mag"],
+  "aliases": [
+    ".357 Mag",
+    ".357 S&W Mag"
+  ],
   "category": "magnum_handgun",
   "slug": "357-magnum",
   "dimensions": {
@@ -12,9 +15,18 @@
     "rim_diameter_in": 0.44,
     "case_type": "rimmed, straight"
   },
-  "typical_velocity_fps": [1200, 1500],
-  "typical_energy_ft_lbs": [500, 750],
-  "typical_bullet_weight_gr": [110, 180],
+  "typical_velocity_fps": [
+    1200,
+    1500
+  ],
+  "typical_energy_ft_lbs": [
+    500,
+    750
+  ],
+  "typical_bullet_weight_gr": [
+    110,
+    180
+  ],
   "effective_range_yd": 75,
   "max_range_yd": 2200,
   "recoil": {
@@ -24,26 +36,81 @@
   },
   "year_introduced": 1934,
   "country_of_origin": "USA",
-  "military_usage": ["Limited military sidearm use", "U.S. Air Force survival revolver (historical)"],
-  "le_usage": ["U.S. police departments (historical standard)", "Border Patrol (historical)", "Highway patrol agencies"],
-  "primary_use_cases": ["self-defense", "law enforcement", "hunting", "target shooting", "lever-action rifle cartridge"],
+  "military_usage": [
+    "Limited military sidearm use",
+    "U.S. Air Force survival revolver (historical)"
+  ],
+  "le_usage": [
+    "U.S. police departments (historical standard)",
+    "Border Patrol (historical)",
+    "Highway patrol agencies"
+  ],
+  "primary_use_cases": [
+    "self-defense",
+    "law enforcement",
+    "hunting",
+    "target shooting",
+    "lever-action rifle cartridge"
+  ],
   "popularity_tier": "very_common",
-  "cost_per_round_usd": [0.35, 1.25],
-  "common_firearms": ["Smith & Wesson Model 686", "Ruger GP100", "Colt Python", "Smith & Wesson Model 66", "Ruger SP101", "Henry Big Boy"],
+  "cost_per_round_usd": [
+    0.35,
+    1.25
+  ],
+  "common_firearms": [
+    "Smith & Wesson Model 686",
+    "Ruger GP100",
+    "Colt Python",
+    "Smith & Wesson Model 66",
+    "Ruger SP101",
+    "Henry Big Boy"
+  ],
   "adoption_timeline": [
-    { "year": 1934, "event": "Smith & Wesson and Winchester introduce the .357 S&W Magnum, the first magnum handgun cartridge" },
-    { "year": 1935, "event": "Smith & Wesson Registered Magnum revolver becomes the first firearm chambered in .357 Magnum" },
-    { "year": 1953, "event": "Colt introduces the .357 Magnum Python revolver" },
-    { "year": 1955, "event": "FBI and numerous federal agencies adopt .357 Magnum revolvers as duty weapons" },
-    { "year": 1957, "event": "Smith & Wesson Model 19 Combat Magnum introduced, designed specifically for law enforcement" },
-    { "year": 1961, "event": "Highway patrol agencies across the U.S. standardize on .357 Magnum duty revolvers" },
-    { "year": 1972, "event": "SAAMI standardizes .357 Magnum specifications" },
-    { "year": 1980, "event": "Ruger GP100 introduced as a robust .357 Magnum service revolver" },
-    { "year": 1990, "event": "Law enforcement agencies begin transitioning from .357 Magnum revolvers to semi-automatic pistols" },
-    { "year": 2020, "event": "Colt reintroduces the Python revolver to strong market demand" }
+    {
+      "year": 1934,
+      "event": "Smith & Wesson and Winchester introduce the .357 S&W Magnum, the first magnum handgun cartridge"
+    },
+    {
+      "year": 1935,
+      "event": "Smith & Wesson Registered Magnum revolver becomes the first firearm chambered in .357 Magnum"
+    },
+    {
+      "year": 1953,
+      "event": "Colt introduces the .357 Magnum Python revolver"
+    },
+    {
+      "year": 1955,
+      "event": "FBI and numerous federal agencies adopt .357 Magnum revolvers as duty weapons"
+    },
+    {
+      "year": 1957,
+      "event": "Smith & Wesson Model 19 Combat Magnum introduced, designed specifically for law enforcement"
+    },
+    {
+      "year": 1961,
+      "event": "Highway patrol agencies across the U.S. standardize on .357 Magnum duty revolvers"
+    },
+    {
+      "year": 1972,
+      "event": "SAAMI standardizes .357 Magnum specifications"
+    },
+    {
+      "year": 1980,
+      "event": "Ruger GP100 introduced as a robust .357 Magnum service revolver"
+    },
+    {
+      "year": 1990,
+      "event": "Law enforcement agencies begin transitioning from .357 Magnum revolvers to semi-automatic pistols"
+    },
+    {
+      "year": 2020,
+      "event": "Colt reintroduces the Python revolver to strong market demand"
+    }
   ],
   "parent_cartridge": "38-special",
-  "derived_cartridges": ["357-sig"],
+  "derived_cartridges": [
+    "357-sig"
+  ],
   "loads": [
     {
       "name": "Federal American Eagle 158 gr JSP",
@@ -55,11 +122,36 @@
       "bc_g1": 0.164,
       "sectional_density": 0.177,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 1240, "energy_ft_lbs": 539, "drop_in": 0.0 },
-        { "distance_yd": 25, "velocity_fps": 1190, "energy_ft_lbs": 497, "drop_in": -0.2 },
-        { "distance_yd": 50, "velocity_fps": 1145, "energy_ft_lbs": 460, "drop_in": -0.9 },
-        { "distance_yd": 75, "velocity_fps": 1105, "energy_ft_lbs": 428, "drop_in": -2.5 },
-        { "distance_yd": 100, "velocity_fps": 1070, "energy_ft_lbs": 402, "drop_in": -5.3 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1240,
+          "energy_ft_lbs": 539,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1190,
+          "energy_ft_lbs": 497,
+          "drop_in": -0.2
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1145,
+          "energy_ft_lbs": 460,
+          "drop_in": -0.9
+        },
+        {
+          "distance_yd": 75,
+          "velocity_fps": 1105,
+          "energy_ft_lbs": 428,
+          "drop_in": -2.5
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1070,
+          "energy_ft_lbs": 402,
+          "drop_in": -5.3
+        }
       ]
     },
     {
@@ -70,22 +162,97 @@
       "muzzle_energy_ft_lbs": 624,
       "barrel_length_in": 4.0,
       "bc_g1": 0.155,
-      "sectional_density": 0.140,
+      "sectional_density": 0.14,
       "gel_penetration_in": 12.5,
       "expansion_diameter_in": 0.56,
       "barrier_blind": true,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 1500, "energy_ft_lbs": 624, "drop_in": 0.0 },
-        { "distance_yd": 25, "velocity_fps": 1430, "energy_ft_lbs": 568, "drop_in": -0.1 },
-        { "distance_yd": 50, "velocity_fps": 1365, "energy_ft_lbs": 517, "drop_in": -0.6 },
-        { "distance_yd": 75, "velocity_fps": 1305, "energy_ft_lbs": 473, "drop_in": -1.7 },
-        { "distance_yd": 100, "velocity_fps": 1250, "energy_ft_lbs": 434, "drop_in": -3.6 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1500,
+          "energy_ft_lbs": 624,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1430,
+          "energy_ft_lbs": 568,
+          "drop_in": -0.1
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1365,
+          "energy_ft_lbs": 517,
+          "drop_in": -0.6
+        },
+        {
+          "distance_yd": 75,
+          "velocity_fps": 1305,
+          "energy_ft_lbs": 473,
+          "drop_in": -1.7
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1250,
+          "energy_ft_lbs": 434,
+          "drop_in": -3.6
+        }
       ]
     }
   ],
   "recommended_game": [
-    { "game": "Whitetail Deer", "range": "Under 50 yd", "notes": "158-180gr JHP or JSP bullets from 6\"+ barrel; marginal but ethical at close range" },
-    { "game": "Feral Hogs", "range": "Under 50 yd", "notes": "158-180gr hard-cast or bonded bullets; small to medium hogs only" },
-    { "game": "Coyote", "range": "Under 75 yd", "notes": "125-158gr JHP bullets; effective from revolvers and lever-action carbines" }
+    {
+      "game": "Whitetail Deer",
+      "range": "Under 50 yd",
+      "notes": "158-180gr JHP or JSP bullets from 6\"+ barrel; marginal but ethical at close range"
+    },
+    {
+      "game": "Feral Hogs",
+      "range": "Under 50 yd",
+      "notes": "158-180gr hard-cast or bonded bullets; small to medium hogs only"
+    },
+    {
+      "game": "Coyote",
+      "range": "Under 75 yd",
+      "notes": "125-158gr JHP bullets; effective from revolvers and lever-action carbines"
+    }
+  ],
+  "max_pressure_psi": 35000,
+  "primer_type": "Small Pistol",
+  "powder_charge_range_gr": [
+    13.0,
+    18.0
+  ],
+  "availability_rating": 4,
+  "annual_production_estimate": "high",
+  "price_trend": "stable",
+  "suppressor_friendly": true,
+  "subsonic_loads_available": false,
+  "military_adoption_detail": [],
+  "le_adoption_detail": [
+    {
+      "organization": "FBI",
+      "year_adopted": 1972,
+      "role": "Standard duty cartridge",
+      "status": "retired"
+    },
+    {
+      "organization": "U.S. Highway Patrol agencies",
+      "year_adopted": 1960,
+      "role": "Standard duty cartridge",
+      "status": "retired"
+    },
+    {
+      "organization": "Texas Rangers",
+      "year_adopted": 1935,
+      "role": "Duty revolver cartridge",
+      "status": "retired"
+    }
+  ],
+  "compatible_chambers": [
+    {
+      "caliber": ".38 Special",
+      "notes": ".38 Special fits and fires safely — shorter case, lower pressure. Widely practiced for affordable training."
+    }
   ]
 }

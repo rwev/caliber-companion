@@ -1,7 +1,10 @@
 {
   "name": ".223 Remington",
   "designation": ".223 Remington",
-  "aliases": [".223 Rem", ".223"],
+  "aliases": [
+    ".223 Rem",
+    ".223"
+  ],
   "category": "rifle",
   "slug": "223-remington",
   "dimensions": {
@@ -12,9 +15,18 @@
     "rim_diameter_in": 0.378,
     "case_type": "rimless, bottleneck"
   },
-  "typical_velocity_fps": [2700, 3300],
-  "typical_energy_ft_lbs": [1100, 1300],
-  "typical_bullet_weight_gr": [40, 77],
+  "typical_velocity_fps": [
+    2700,
+    3300
+  ],
+  "typical_energy_ft_lbs": [
+    1100,
+    1300
+  ],
+  "typical_bullet_weight_gr": [
+    40,
+    77
+  ],
   "effective_range_yd": 500,
   "max_range_yd": 3875,
   "recoil": {
@@ -24,24 +36,79 @@
   },
   "year_introduced": 1964,
   "country_of_origin": "USA",
-  "military_usage": ["Commercial equivalent of 5.56\u00d745mm NATO", "Used in training and civilian marksmanship programs"],
-  "le_usage": ["Patrol rifle cartridge for most U.S. law enforcement agencies", "SWAT entry teams", "FBI"],
-  "primary_use_cases": ["varmint hunting", "target shooting", "home defense", "competition", "plinking"],
-  "popularity_tier": "ubiquitous",
-  "cost_per_round_usd": [0.25, 1.5],
-  "common_firearms": ["AR-15 (various manufacturers)", "Ruger Mini-14", "Ruger American Ranch", "Savage Axis", "Remington 700", "CZ 527"],
-  "adoption_timeline": [
-    { "year": 1957, "event": "Remington develops the .223 Remington in partnership with ArmaLite for the AR-15 project" },
-    { "year": 1962, "event": "SAAMI standardizes the .223 Remington cartridge" },
-    { "year": 1964, "event": "Commercial .223 Remington ammunition becomes widely available" },
-    { "year": 1974, "event": "Ruger introduces the Mini-14 as a civilian .223 Remington rifle" },
-    { "year": 1977, "event": "CIP publishes European standard for .223 Remington" },
-    { "year": 1989, "event": "Colt AR-15 Sporter becomes popular, driving .223 Rem civilian demand" },
-    { "year": 2004, "event": "Federal Assault Weapons Ban expires, spurring massive growth in civilian AR-15 ownership" },
-    { "year": 2009, "event": "Hornady introduces .223 Rem Superformance line with increased velocity" },
-    { "year": 2012, "event": ".223 Remington becomes the top-selling centerfire rifle cartridge in the United States" }
+  "military_usage": [
+    "Commercial equivalent of 5.56×45mm NATO",
+    "Used in training and civilian marksmanship programs"
   ],
-  "derived_cartridges": ["556x45mm-nato", "300-blackout", "224-valkyrie", "22-250-remington"],
+  "le_usage": [
+    "Patrol rifle cartridge for most U.S. law enforcement agencies",
+    "SWAT entry teams",
+    "FBI"
+  ],
+  "primary_use_cases": [
+    "varmint hunting",
+    "target shooting",
+    "home defense",
+    "competition",
+    "plinking"
+  ],
+  "popularity_tier": "ubiquitous",
+  "cost_per_round_usd": [
+    0.25,
+    1.5
+  ],
+  "common_firearms": [
+    "AR-15 (various manufacturers)",
+    "Ruger Mini-14",
+    "Ruger American Ranch",
+    "Savage Axis",
+    "Remington 700",
+    "CZ 527"
+  ],
+  "adoption_timeline": [
+    {
+      "year": 1957,
+      "event": "Remington develops the .223 Remington in partnership with ArmaLite for the AR-15 project"
+    },
+    {
+      "year": 1962,
+      "event": "SAAMI standardizes the .223 Remington cartridge"
+    },
+    {
+      "year": 1964,
+      "event": "Commercial .223 Remington ammunition becomes widely available"
+    },
+    {
+      "year": 1974,
+      "event": "Ruger introduces the Mini-14 as a civilian .223 Remington rifle"
+    },
+    {
+      "year": 1977,
+      "event": "CIP publishes European standard for .223 Remington"
+    },
+    {
+      "year": 1989,
+      "event": "Colt AR-15 Sporter becomes popular, driving .223 Rem civilian demand"
+    },
+    {
+      "year": 2004,
+      "event": "Federal Assault Weapons Ban expires, spurring massive growth in civilian AR-15 ownership"
+    },
+    {
+      "year": 2009,
+      "event": "Hornady introduces .223 Rem Superformance line with increased velocity"
+    },
+    {
+      "year": 2012,
+      "event": ".223 Remington becomes the top-selling centerfire rifle cartridge in the United States"
+    }
+  ],
+  "derived_cartridges": [
+    "556x45mm-nato",
+    "300-blackout",
+    "224-valkyrie",
+    "22-250-remington"
+  ],
   "loads": [
     {
       "name": "Federal American Eagle 55 gr FMJ",
@@ -53,12 +120,42 @@
       "bc_g1": 0.271,
       "sectional_density": 0.157,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 3240, "energy_ft_lbs": 1282, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2854, "energy_ft_lbs": 995, "drop_in": -1.1 },
-        { "distance_yd": 200, "velocity_fps": 2500, "energy_ft_lbs": 764, "drop_in": -5.3 },
-        { "distance_yd": 300, "velocity_fps": 2171, "energy_ft_lbs": 576, "drop_in": -14.0 },
-        { "distance_yd": 400, "velocity_fps": 1868, "energy_ft_lbs": 426, "drop_in": -28.6 },
-        { "distance_yd": 500, "velocity_fps": 1595, "energy_ft_lbs": 311, "drop_in": -50.9 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 3240,
+          "energy_ft_lbs": 1282,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2854,
+          "energy_ft_lbs": 995,
+          "drop_in": -1.1
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2500,
+          "energy_ft_lbs": 764,
+          "drop_in": -5.3
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2171,
+          "energy_ft_lbs": 576,
+          "drop_in": -14.0
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 1868,
+          "energy_ft_lbs": 426,
+          "drop_in": -28.6
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1595,
+          "energy_ft_lbs": 311,
+          "drop_in": -50.9
+        }
       ]
     },
     {
@@ -72,19 +169,94 @@
       "bc_g7": 0.198,
       "sectional_density": 0.214,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 2790, "energy_ft_lbs": 1296, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2590, "energy_ft_lbs": 1117, "drop_in": -1.6 },
-        { "distance_yd": 200, "velocity_fps": 2399, "energy_ft_lbs": 958, "drop_in": -7.0 },
-        { "distance_yd": 300, "velocity_fps": 2215, "energy_ft_lbs": 817, "drop_in": -16.9 },
-        { "distance_yd": 400, "velocity_fps": 2039, "energy_ft_lbs": 692, "drop_in": -32.1 },
-        { "distance_yd": 500, "velocity_fps": 1872, "energy_ft_lbs": 583, "drop_in": -53.4 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2790,
+          "energy_ft_lbs": 1296,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2590,
+          "energy_ft_lbs": 1117,
+          "drop_in": -1.6
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2399,
+          "energy_ft_lbs": 958,
+          "drop_in": -7.0
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2215,
+          "energy_ft_lbs": 817,
+          "drop_in": -16.9
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2039,
+          "energy_ft_lbs": 692,
+          "drop_in": -32.1
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1872,
+          "energy_ft_lbs": 583,
+          "drop_in": -53.4
+        }
       ]
     }
   ],
   "recommended_game": [
-    { "game": "Coyote", "range": "Under 300 yd", "notes": "50-55gr V-Max or Nosler Ballistic Tip for fur-friendly kills" },
-    { "game": "Prairie Dogs", "range": "Under 400 yd", "notes": "40-55gr polymer tip bullets for explosive fragmentation" },
-    { "game": "Varmints", "range": "Under 300 yd", "notes": "40-55gr hollow point or ballistic tip bullets" },
-    { "game": "Feral Hogs", "range": "Under 150 yd", "notes": "62-77gr bonded or controlled expansion bullets; marginal for larger hogs" }
+    {
+      "game": "Coyote",
+      "range": "Under 300 yd",
+      "notes": "50-55gr V-Max or Nosler Ballistic Tip for fur-friendly kills"
+    },
+    {
+      "game": "Prairie Dogs",
+      "range": "Under 400 yd",
+      "notes": "40-55gr polymer tip bullets for explosive fragmentation"
+    },
+    {
+      "game": "Varmints",
+      "range": "Under 300 yd",
+      "notes": "40-55gr hollow point or ballistic tip bullets"
+    },
+    {
+      "game": "Feral Hogs",
+      "range": "Under 150 yd",
+      "notes": "62-77gr bonded or controlled expansion bullets; marginal for larger hogs"
+    }
+  ],
+  "max_pressure_psi": 55000,
+  "primer_type": "Small Rifle",
+  "powder_charge_range_gr": [
+    20.0,
+    28.0
+  ],
+  "availability_rating": 5,
+  "annual_production_estimate": "massive",
+  "price_trend": "stable",
+  "suppressor_friendly": true,
+  "subsonic_loads_available": false,
+  "military_adoption_detail": [],
+  "le_adoption_detail": [
+    {
+      "organization": "Most U.S. police departments",
+      "role": "Patrol rifle cartridge",
+      "status": "active"
+    }
+  ],
+  "dangerous_substitutions": [
+    {
+      "caliber": "5.56x45mm NATO",
+      "danger": "5.56 NATO generates higher pressure than .223 Rem chambers are rated for — may cause excessive pressure in .223-only rifles. Use 5.56 NATO only in rifles rated for it."
+    },
+    {
+      "caliber": ".300 Blackout",
+      "danger": ".300 BLK rounds can physically chamber in a .223 rifle — will cause catastrophic failure. ALWAYS verify ammunition."
+    }
   ]
 }

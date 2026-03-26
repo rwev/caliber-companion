@@ -1,7 +1,11 @@
 {
   "name": ".30-30 Winchester",
   "designation": ".30-30 Winchester",
-  "aliases": [".30-30 Win", ".30 WCF", "7.62\u00d751mmR"],
+  "aliases": [
+    ".30-30 Win",
+    ".30 WCF",
+    "7.62\u00d751mmR"
+  ],
   "category": "rifle",
   "slug": "30-30-winchester",
   "dimensions": {
@@ -12,9 +16,18 @@
     "rim_diameter_in": 0.506,
     "case_type": "rimmed, bottleneck"
   },
-  "typical_velocity_fps": [2100, 2500],
-  "typical_energy_ft_lbs": [1600, 1900],
-  "typical_bullet_weight_gr": [110, 170],
+  "typical_velocity_fps": [
+    2100,
+    2500
+  ],
+  "typical_energy_ft_lbs": [
+    1600,
+    1900
+  ],
+  "typical_bullet_weight_gr": [
+    110,
+    170
+  ],
   "effective_range_yd": 200,
   "max_range_yd": 3000,
   "recoil": {
@@ -24,23 +37,72 @@
   },
   "year_introduced": 1895,
   "country_of_origin": "USA",
-  "military_usage": ["Limited military use", "Used by some U.S. state militias in early 20th century"],
-  "le_usage": ["Historical use by rural law enforcement and game wardens"],
-  "primary_use_cases": ["deer hunting", "brush hunting", "lever-action sport shooting", "close-range big game", "cowboy action shooting"],
+  "military_usage": [
+    "Limited military use",
+    "Used by some U.S. state militias in early 20th century"
+  ],
+  "le_usage": [
+    "Historical use by rural law enforcement and game wardens"
+  ],
+  "primary_use_cases": [
+    "deer hunting",
+    "brush hunting",
+    "lever-action sport shooting",
+    "close-range big game",
+    "cowboy action shooting"
+  ],
   "popularity_tier": "very_common",
-  "cost_per_round_usd": [0.8, 2.0],
-  "common_firearms": ["Winchester Model 94", "Marlin 336", "Henry Steel Lever Action", "Mossberg 464"],
+  "cost_per_round_usd": [
+    0.8,
+    2.0
+  ],
+  "common_firearms": [
+    "Winchester Model 94",
+    "Marlin 336",
+    "Henry Steel Lever Action",
+    "Mossberg 464"
+  ],
   "adoption_timeline": [
-    { "year": 1895, "event": "Winchester introduces the .30-30 (originally .30 WCF) as the first American sporting smokeless powder cartridge" },
-    { "year": 1895, "event": "Winchester Model 1894 lever-action rifle becomes the first sporting rifle chambered for smokeless powder" },
-    { "year": 1902, "event": "Marlin introduces the Model 1893 (later Model 336) in .30-30, creating a lasting rivalry" },
-    { "year": 1936, "event": "Marlin 336 launched as an improved .30-30 lever-action, eventually selling millions" },
-    { "year": 1943, "event": "SAAMI standardizes .30-30 Winchester specifications" },
-    { "year": 1964, "event": "Winchester Model 94 reaches 2.5 million units produced, most in .30-30" },
-    { "year": 1985, "event": "Hornady introduces LEVERevolution ammunition with pointed flex-tip bullets for .30-30 lever guns" },
-    { "year": 2006, "event": "Winchester Model 94 production ceases after over 7 million rifles produced" },
-    { "year": 2010, "event": "Henry Repeating Arms revives the lever-action .30-30 market with new models" },
-    { "year": 2020, "event": "Ruger reintroduces the Marlin 336 in .30-30, continuing the cartridge's legacy" }
+    {
+      "year": 1895,
+      "event": "Winchester introduces the .30-30 (originally .30 WCF) as the first American sporting smokeless powder cartridge"
+    },
+    {
+      "year": 1895,
+      "event": "Winchester Model 1894 lever-action rifle becomes the first sporting rifle chambered for smokeless powder"
+    },
+    {
+      "year": 1902,
+      "event": "Marlin introduces the Model 1893 (later Model 336) in .30-30, creating a lasting rivalry"
+    },
+    {
+      "year": 1936,
+      "event": "Marlin 336 launched as an improved .30-30 lever-action, eventually selling millions"
+    },
+    {
+      "year": 1943,
+      "event": "SAAMI standardizes .30-30 Winchester specifications"
+    },
+    {
+      "year": 1964,
+      "event": "Winchester Model 94 reaches 2.5 million units produced, most in .30-30"
+    },
+    {
+      "year": 1985,
+      "event": "Hornady introduces LEVERevolution ammunition with pointed flex-tip bullets for .30-30 lever guns"
+    },
+    {
+      "year": 2006,
+      "event": "Winchester Model 94 production ceases after over 7 million rifles produced"
+    },
+    {
+      "year": 2010,
+      "event": "Henry Repeating Arms revives the lever-action .30-30 market with new models"
+    },
+    {
+      "year": 2020,
+      "event": "Ruger reintroduces the Marlin 336 in .30-30, continuing the cartridge's legacy"
+    }
   ],
   "loads": [
     {
@@ -53,12 +115,42 @@
       "bc_g1": 0.238,
       "sectional_density": 0.226,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 2390, "energy_ft_lbs": 1902, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2108, "energy_ft_lbs": 1480, "drop_in": -3.5 },
-        { "distance_yd": 200, "velocity_fps": 1847, "energy_ft_lbs": 1136, "drop_in": -14.5 },
-        { "distance_yd": 300, "velocity_fps": 1610, "energy_ft_lbs": 863, "drop_in": -36.0 },
-        { "distance_yd": 400, "velocity_fps": 1404, "energy_ft_lbs": 656, "drop_in": -72.0 },
-        { "distance_yd": 500, "velocity_fps": 1236, "energy_ft_lbs": 509, "drop_in": -127.0 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2390,
+          "energy_ft_lbs": 1902,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2108,
+          "energy_ft_lbs": 1480,
+          "drop_in": -3.5
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1847,
+          "energy_ft_lbs": 1136,
+          "drop_in": -14.5
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 1610,
+          "energy_ft_lbs": 863,
+          "drop_in": -36.0
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 1404,
+          "energy_ft_lbs": 656,
+          "drop_in": -72.0
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1236,
+          "energy_ft_lbs": 509,
+          "drop_in": -127.0
+        }
       ]
     },
     {
@@ -68,24 +160,77 @@
       "muzzle_velocity_fps": 2400,
       "muzzle_energy_ft_lbs": 2046,
       "barrel_length_in": 24.0,
-      "bc_g1": 0.330,
+      "bc_g1": 0.33,
       "sectional_density": 0.241,
       "gel_penetration_in": 15.0,
       "expansion_diameter_in": 0.52,
       "barrier_blind": true,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 2400, "energy_ft_lbs": 2046, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2150, "energy_ft_lbs": 1643, "drop_in": -3.0 },
-        { "distance_yd": 200, "velocity_fps": 1916, "energy_ft_lbs": 1304, "drop_in": -12.8 },
-        { "distance_yd": 300, "velocity_fps": 1699, "energy_ft_lbs": 1025, "drop_in": -31.5 },
-        { "distance_yd": 400, "velocity_fps": 1503, "energy_ft_lbs": 802, "drop_in": -62.5 },
-        { "distance_yd": 500, "velocity_fps": 1333, "energy_ft_lbs": 631, "drop_in": -109.0 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2400,
+          "energy_ft_lbs": 2046,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2150,
+          "energy_ft_lbs": 1643,
+          "drop_in": -3.0
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1916,
+          "energy_ft_lbs": 1304,
+          "drop_in": -12.8
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 1699,
+          "energy_ft_lbs": 1025,
+          "drop_in": -31.5
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 1503,
+          "energy_ft_lbs": 802,
+          "drop_in": -62.5
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1333,
+          "energy_ft_lbs": 631,
+          "drop_in": -109.0
+        }
       ]
     }
   ],
   "recommended_game": [
-    { "game": "Whitetail Deer", "range": "Under 200 yd", "notes": "150-170gr flat nose or Hornady FTX LEVERevolution bullets; iconic brush gun cartridge" },
-    { "game": "Black Bear", "range": "Under 150 yd", "notes": "170gr flat nose or bonded bullets for adequate penetration" },
-    { "game": "Feral Hogs", "range": "Under 150 yd", "notes": "150-170gr soft point or flat nose bullets" }
-  ]
+    {
+      "game": "Whitetail Deer",
+      "range": "Under 200 yd",
+      "notes": "150-170gr flat nose or Hornady FTX LEVERevolution bullets; iconic brush gun cartridge"
+    },
+    {
+      "game": "Black Bear",
+      "range": "Under 150 yd",
+      "notes": "170gr flat nose or bonded bullets for adequate penetration"
+    },
+    {
+      "game": "Feral Hogs",
+      "range": "Under 150 yd",
+      "notes": "150-170gr soft point or flat nose bullets"
+    }
+  ],
+  "max_pressure_psi": 42000,
+  "primer_type": "Large Rifle",
+  "powder_charge_range_gr": [
+    27.0,
+    38.0
+  ],
+  "availability_rating": 4,
+  "annual_production_estimate": "high",
+  "price_trend": "stable",
+  "suppressor_friendly": true,
+  "subsonic_loads_available": false
 }

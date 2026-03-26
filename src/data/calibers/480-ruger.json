@@ -1,41 +1,62 @@
 {
   "name": ".480 Ruger",
   "designation": ".480 Ruger",
-  "aliases": [".480"],
+  "aliases": [
+    ".480"
+  ],
   "category": "magnum_handgun",
   "slug": "480-ruger",
-
   "dimensions": {
     "bullet_diameter_in": 0.475,
     "neck_diameter_in": 0.504,
     "case_length_in": 1.285,
-    "overall_length_in": 1.650,
+    "overall_length_in": 1.65,
     "rim_diameter_in": 0.545,
     "case_type": "rimmed, straight"
   },
-
-  "typical_velocity_fps": [1100, 1350],
-  "typical_energy_ft_lbs": [900, 1300],
-  "typical_bullet_weight_gr": [275, 400],
+  "typical_velocity_fps": [
+    1100,
+    1350
+  ],
+  "typical_energy_ft_lbs": [
+    900,
+    1300
+  ],
+  "typical_bullet_weight_gr": [
+    275,
+    400
+  ],
   "effective_range_yd": 75,
   "max_range_yd": 2000,
-
   "recoil": {
     "free_recoil_ft_lbs": 20.0,
     "reference_firearm": "Ruger Super Redhawk (7.5\" barrel, 53 oz)",
     "subjective": "heavy"
   },
-
   "year_introduced": 2003,
   "country_of_origin": "USA",
-  "military_usage": ["No military adoption"],
-  "le_usage": ["No standard law enforcement adoption"],
-  "primary_use_cases": ["handgun hunting", "dangerous game defense", "bear defense", "big-bore sport shooting"],
-
+  "military_usage": [
+    "No military adoption"
+  ],
+  "le_usage": [
+    "No standard law enforcement adoption"
+  ],
+  "primary_use_cases": [
+    "handgun hunting",
+    "dangerous game defense",
+    "bear defense",
+    "big-bore sport shooting"
+  ],
   "popularity_tier": "rare",
-  "cost_per_round_usd": [1.50, 3.50],
-  "common_firearms": ["Ruger Super Redhawk", "Magnum Research BFR", "Freedom Arms Model 83"],
-
+  "cost_per_round_usd": [
+    1.5,
+    3.5
+  ],
+  "common_firearms": [
+    "Ruger Super Redhawk",
+    "Magnum Research BFR",
+    "Freedom Arms Model 83"
+  ],
   "loads": [
     {
       "name": "Hornady XTP/MAG 325 gr JHP",
@@ -48,11 +69,36 @@
       "expansion_diameter_in": 0.62,
       "barrier_blind": true,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 1350, "energy_ft_lbs": 1315, "drop_in": 0.0 },
-        { "distance_yd": 25, "velocity_fps": 1298, "energy_ft_lbs": 1216, "drop_in": -0.1 },
-        { "distance_yd": 50, "velocity_fps": 1250, "energy_ft_lbs": 1128, "drop_in": -0.7 },
-        { "distance_yd": 75, "velocity_fps": 1205, "energy_ft_lbs": 1048, "drop_in": -2.0 },
-        { "distance_yd": 100, "velocity_fps": 1164, "energy_ft_lbs": 978, "drop_in": -4.2 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1350,
+          "energy_ft_lbs": 1315,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1298,
+          "energy_ft_lbs": 1216,
+          "drop_in": -0.1
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1250,
+          "energy_ft_lbs": 1128,
+          "drop_in": -0.7
+        },
+        {
+          "distance_yd": 75,
+          "velocity_fps": 1205,
+          "energy_ft_lbs": 1048,
+          "drop_in": -2.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1164,
+          "energy_ft_lbs": 978,
+          "drop_in": -4.2
+        }
       ]
     },
     {
@@ -63,18 +109,70 @@
       "muzzle_energy_ft_lbs": 1389,
       "barrel_length_in": 7.5,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 1300, "energy_ft_lbs": 1389, "drop_in": 0.0 },
-        { "distance_yd": 25, "velocity_fps": 1255, "energy_ft_lbs": 1294, "drop_in": -0.2 },
-        { "distance_yd": 50, "velocity_fps": 1214, "energy_ft_lbs": 1210, "drop_in": -0.8 },
-        { "distance_yd": 75, "velocity_fps": 1175, "energy_ft_lbs": 1134, "drop_in": -2.2 },
-        { "distance_yd": 100, "velocity_fps": 1140, "energy_ft_lbs": 1068, "drop_in": -4.6 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1300,
+          "energy_ft_lbs": 1389,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1255,
+          "energy_ft_lbs": 1294,
+          "drop_in": -0.2
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1214,
+          "energy_ft_lbs": 1210,
+          "drop_in": -0.8
+        },
+        {
+          "distance_yd": 75,
+          "velocity_fps": 1175,
+          "energy_ft_lbs": 1134,
+          "drop_in": -2.2
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1140,
+          "energy_ft_lbs": 1068,
+          "drop_in": -4.6
+        }
       ]
     }
   ],
   "recommended_game": [
-    { "game": "Whitetail Deer", "range": "Under 75 yd", "notes": "275-325gr JHP or hard-cast bullets; powerful with manageable recoil vs .500 S&W" },
-    { "game": "Black Bear", "range": "Under 75 yd", "notes": "325gr hard-cast or bonded bullets for deep penetration" },
-    { "game": "Feral Hogs", "range": "Under 75 yd", "notes": "275-325gr JHP or hard-cast bullets" },
-    { "game": "Elk", "range": "Under 50 yd", "notes": "325gr hard-cast bullets; marginal but capable at very close range" }
-  ]
+    {
+      "game": "Whitetail Deer",
+      "range": "Under 75 yd",
+      "notes": "275-325gr JHP or hard-cast bullets; powerful with manageable recoil vs .500 S&W"
+    },
+    {
+      "game": "Black Bear",
+      "range": "Under 75 yd",
+      "notes": "325gr hard-cast or bonded bullets for deep penetration"
+    },
+    {
+      "game": "Feral Hogs",
+      "range": "Under 75 yd",
+      "notes": "275-325gr JHP or hard-cast bullets"
+    },
+    {
+      "game": "Elk",
+      "range": "Under 50 yd",
+      "notes": "325gr hard-cast bullets; marginal but capable at very close range"
+    }
+  ],
+  "max_pressure_psi": 48000,
+  "primer_type": "Large Pistol",
+  "powder_charge_range_gr": [
+    22.0,
+    30.0
+  ],
+  "availability_rating": 1,
+  "annual_production_estimate": "minimal",
+  "price_trend": "rising",
+  "suppressor_friendly": false,
+  "subsonic_loads_available": false
 }

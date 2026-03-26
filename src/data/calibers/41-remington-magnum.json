@@ -1,41 +1,66 @@
 {
   "name": ".41 Remington Magnum",
   "designation": ".41 Remington Magnum",
-  "aliases": [".41 Mag", ".41 Rem Mag"],
+  "aliases": [
+    ".41 Mag",
+    ".41 Rem Mag"
+  ],
   "category": "magnum_handgun",
   "slug": "41-remington-magnum",
-
   "dimensions": {
-    "bullet_diameter_in": 0.410,
+    "bullet_diameter_in": 0.41,
     "neck_diameter_in": 0.432,
-    "case_length_in": 1.290,
-    "overall_length_in": 1.590,
+    "case_length_in": 1.29,
+    "overall_length_in": 1.59,
     "rim_diameter_in": 0.492,
     "case_type": "rimmed, straight"
   },
-
-  "typical_velocity_fps": [1000, 1500],
-  "typical_energy_ft_lbs": [500, 900],
-  "typical_bullet_weight_gr": [170, 265],
+  "typical_velocity_fps": [
+    1000,
+    1500
+  ],
+  "typical_energy_ft_lbs": [
+    500,
+    900
+  ],
+  "typical_bullet_weight_gr": [
+    170,
+    265
+  ],
   "effective_range_yd": 75,
   "max_range_yd": 2200,
-
   "recoil": {
     "free_recoil_ft_lbs": 14.0,
     "reference_firearm": "Smith & Wesson Model 57 (6\" barrel, 44 oz)",
     "subjective": "heavy"
   },
-
   "year_introduced": 1964,
   "country_of_origin": "USA",
-  "military_usage": ["No significant military adoption"],
-  "le_usage": ["San Antonio Police Department (historical)", "Some state police agencies (1960s–1970s)"],
-  "primary_use_cases": ["handgun hunting", "target shooting", "self-defense", "silhouette shooting"],
-
+  "military_usage": [
+    "No significant military adoption"
+  ],
+  "le_usage": [
+    "San Antonio Police Department (historical)",
+    "Some state police agencies (1960s\u20131970s)"
+  ],
+  "primary_use_cases": [
+    "handgun hunting",
+    "target shooting",
+    "self-defense",
+    "silhouette shooting"
+  ],
   "popularity_tier": "niche",
-  "cost_per_round_usd": [0.75, 2.50],
-  "common_firearms": ["Smith & Wesson Model 57", "Smith & Wesson Model 58", "Ruger Blackhawk", "Ruger Redhawk", "Magnum Research Desert Eagle"],
-
+  "cost_per_round_usd": [
+    0.75,
+    2.5
+  ],
+  "common_firearms": [
+    "Smith & Wesson Model 57",
+    "Smith & Wesson Model 58",
+    "Ruger Blackhawk",
+    "Ruger Redhawk",
+    "Magnum Research Desert Eagle"
+  ],
   "loads": [
     {
       "name": "Federal American Eagle 210 gr JSP",
@@ -45,11 +70,36 @@
       "muzzle_energy_ft_lbs": 788,
       "barrel_length_in": 6.0,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 1300, "energy_ft_lbs": 788, "drop_in": 0.0 },
-        { "distance_yd": 25, "velocity_fps": 1250, "energy_ft_lbs": 729, "drop_in": -0.2 },
-        { "distance_yd": 50, "velocity_fps": 1205, "energy_ft_lbs": 677, "drop_in": -0.8 },
-        { "distance_yd": 75, "velocity_fps": 1162, "energy_ft_lbs": 630, "drop_in": -2.2 },
-        { "distance_yd": 100, "velocity_fps": 1124, "energy_ft_lbs": 589, "drop_in": -4.6 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1300,
+          "energy_ft_lbs": 788,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1250,
+          "energy_ft_lbs": 729,
+          "drop_in": -0.2
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1205,
+          "energy_ft_lbs": 677,
+          "drop_in": -0.8
+        },
+        {
+          "distance_yd": 75,
+          "velocity_fps": 1162,
+          "energy_ft_lbs": 630,
+          "drop_in": -2.2
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1124,
+          "energy_ft_lbs": 589,
+          "drop_in": -4.6
+        }
       ]
     },
     {
@@ -60,17 +110,65 @@
       "muzzle_energy_ft_lbs": 1073,
       "barrel_length_in": 6.0,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 1350, "energy_ft_lbs": 1073, "drop_in": 0.0 },
-        { "distance_yd": 25, "velocity_fps": 1300, "energy_ft_lbs": 994, "drop_in": -0.1 },
-        { "distance_yd": 50, "velocity_fps": 1254, "energy_ft_lbs": 925, "drop_in": -0.7 },
-        { "distance_yd": 75, "velocity_fps": 1211, "energy_ft_lbs": 863, "drop_in": -2.0 },
-        { "distance_yd": 100, "velocity_fps": 1172, "energy_ft_lbs": 808, "drop_in": -4.2 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1350,
+          "energy_ft_lbs": 1073,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1300,
+          "energy_ft_lbs": 994,
+          "drop_in": -0.1
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1254,
+          "energy_ft_lbs": 925,
+          "drop_in": -0.7
+        },
+        {
+          "distance_yd": 75,
+          "velocity_fps": 1211,
+          "energy_ft_lbs": 863,
+          "drop_in": -2.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1172,
+          "energy_ft_lbs": 808,
+          "drop_in": -4.2
+        }
       ]
     }
   ],
   "recommended_game": [
-    { "game": "Whitetail Deer", "range": "Under 75 yd", "notes": "210-265gr JHP or JSP bullets; excellent handgun hunting cartridge" },
-    { "game": "Feral Hogs", "range": "Under 75 yd", "notes": "210-265gr JHP or hard-cast bullets" },
-    { "game": "Black Bear", "range": "Under 50 yd", "notes": "265gr hard-cast or bonded bullets; adequate with proper shot placement" }
-  ]
+    {
+      "game": "Whitetail Deer",
+      "range": "Under 75 yd",
+      "notes": "210-265gr JHP or JSP bullets; excellent handgun hunting cartridge"
+    },
+    {
+      "game": "Feral Hogs",
+      "range": "Under 75 yd",
+      "notes": "210-265gr JHP or hard-cast bullets"
+    },
+    {
+      "game": "Black Bear",
+      "range": "Under 50 yd",
+      "notes": "265gr hard-cast or bonded bullets; adequate with proper shot placement"
+    }
+  ],
+  "max_pressure_psi": 36000,
+  "primer_type": "Large Pistol",
+  "powder_charge_range_gr": [
+    17.0,
+    24.0
+  ],
+  "availability_rating": 2,
+  "annual_production_estimate": "limited",
+  "price_trend": "rising",
+  "suppressor_friendly": false,
+  "subsonic_loads_available": false
 }

@@ -1,43 +1,60 @@
 {
   "name": ".416 Remington Magnum",
   "designation": ".416 Remington Magnum",
-  "aliases": [".416 Rem Mag"],
+  "aliases": [
+    ".416 Rem Mag"
+  ],
   "category": "magnum_rifle",
   "slug": "416-remington-magnum",
-
   "dimensions": {
     "bullet_diameter_in": 0.416,
     "neck_diameter_in": 0.4495,
-    "case_length_in": 2.850,
-    "overall_length_in": 3.600,
+    "case_length_in": 2.85,
+    "overall_length_in": 3.6,
     "rim_diameter_in": 0.532,
     "case_type": "belted, bottleneck"
   },
-
-  "typical_velocity_fps": [2250, 2400],
-  "typical_energy_ft_lbs": [4700, 5500],
-  "typical_bullet_weight_gr": [350, 450],
+  "typical_velocity_fps": [
+    2250,
+    2400
+  ],
+  "typical_energy_ft_lbs": [
+    4700,
+    5500
+  ],
+  "typical_bullet_weight_gr": [
+    350,
+    450
+  ],
   "effective_range_yd": 300,
   "max_range_yd": 3000,
-
   "recoil": {
     "free_recoil_ft_lbs": 52.0,
     "reference_firearm": "Remington 700 Safari (24\" barrel, 9.5 lbs)",
     "subjective": "very_heavy"
   },
-
   "year_introduced": 1988,
   "country_of_origin": "USA",
   "military_usage": [],
   "le_usage": [],
-  "primary_use_cases": ["dangerous game hunting", "African safari", "Cape buffalo", "large game hunting"],
-
+  "primary_use_cases": [
+    "dangerous game hunting",
+    "African safari",
+    "Cape buffalo",
+    "large game hunting"
+  ],
   "popularity_tier": "niche",
-  "cost_per_round_usd": [5.00, 11.00],
-  "common_firearms": ["Remington 700 Safari", "CZ 550 Safari Magnum", "Montana Rifle Company 1999", "Winchester Model 70 Safari Express"],
-
+  "cost_per_round_usd": [
+    5.0,
+    11.0
+  ],
+  "common_firearms": [
+    "Remington 700 Safari",
+    "CZ 550 Safari Magnum",
+    "Montana Rifle Company 1999",
+    "Winchester Model 70 Safari Express"
+  ],
   "parent_cartridge": "416-rigby",
-
   "loads": [
     {
       "name": "Federal Premium Cape-Shok 400 gr Trophy Bonded Bear Claw",
@@ -47,12 +64,42 @@
       "muzzle_energy_ft_lbs": 5115,
       "barrel_length_in": 24.0,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 2400, "energy_ft_lbs": 5115, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2175, "energy_ft_lbs": 4203, "drop_in": -2.7 },
-        { "distance_yd": 200, "velocity_fps": 1962, "energy_ft_lbs": 3418, "drop_in": -11.5 },
-        { "distance_yd": 300, "velocity_fps": 1764, "energy_ft_lbs": 2764, "drop_in": -27.8 },
-        { "distance_yd": 400, "velocity_fps": 1583, "energy_ft_lbs": 2226, "drop_in": -53.5 },
-        { "distance_yd": 500, "velocity_fps": 1424, "energy_ft_lbs": 1801, "drop_in": -90.8 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2400,
+          "energy_ft_lbs": 5115,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2175,
+          "energy_ft_lbs": 4203,
+          "drop_in": -2.7
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1962,
+          "energy_ft_lbs": 3418,
+          "drop_in": -11.5
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 1764,
+          "energy_ft_lbs": 2764,
+          "drop_in": -27.8
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 1583,
+          "energy_ft_lbs": 2226,
+          "drop_in": -53.5
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1424,
+          "energy_ft_lbs": 1801,
+          "drop_in": -90.8
+        }
       ]
     },
     {
@@ -63,19 +110,76 @@
       "muzzle_energy_ft_lbs": 5115,
       "barrel_length_in": 24.0,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 2400, "energy_ft_lbs": 5115, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2186, "energy_ft_lbs": 4243, "drop_in": -2.7 },
-        { "distance_yd": 200, "velocity_fps": 1983, "energy_ft_lbs": 3493, "drop_in": -11.3 },
-        { "distance_yd": 300, "velocity_fps": 1793, "energy_ft_lbs": 2854, "drop_in": -27.2 },
-        { "distance_yd": 400, "velocity_fps": 1618, "energy_ft_lbs": 2326, "drop_in": -52.0 },
-        { "distance_yd": 500, "velocity_fps": 1460, "energy_ft_lbs": 1893, "drop_in": -87.6 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2400,
+          "energy_ft_lbs": 5115,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2186,
+          "energy_ft_lbs": 4243,
+          "drop_in": -2.7
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1983,
+          "energy_ft_lbs": 3493,
+          "drop_in": -11.3
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 1793,
+          "energy_ft_lbs": 2854,
+          "drop_in": -27.2
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 1618,
+          "energy_ft_lbs": 2326,
+          "drop_in": -52.0
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1460,
+          "energy_ft_lbs": 1893,
+          "drop_in": -87.6
+        }
       ]
     }
   ],
   "recommended_game": [
-    { "game": "African Dangerous Game", "range": "Under 100 yd", "notes": "400gr premium solids and soft points; .416 Rigby ballistics in a standard action" },
-    { "game": "Cape Buffalo", "range": "Under 75 yd", "notes": "400gr FMJ solids for deep straight-line penetration" },
-    { "game": "Elephant", "range": "Under 50 yd", "notes": "400gr premium solids; brain shots require precise placement" },
-    { "game": "Grizzly/Brown Bear", "range": "Under 100 yd", "notes": "400gr premium soft point or bonded bullets" }
-  ]
+    {
+      "game": "African Dangerous Game",
+      "range": "Under 100 yd",
+      "notes": "400gr premium solids and soft points; .416 Rigby ballistics in a standard action"
+    },
+    {
+      "game": "Cape Buffalo",
+      "range": "Under 75 yd",
+      "notes": "400gr FMJ solids for deep straight-line penetration"
+    },
+    {
+      "game": "Elephant",
+      "range": "Under 50 yd",
+      "notes": "400gr premium solids; brain shots require precise placement"
+    },
+    {
+      "game": "Grizzly/Brown Bear",
+      "range": "Under 100 yd",
+      "notes": "400gr premium soft point or bonded bullets"
+    }
+  ],
+  "max_pressure_psi": 62000,
+  "primer_type": "Large Rifle Magnum",
+  "powder_charge_range_gr": [
+    85.0,
+    105.0
+  ],
+  "availability_rating": 2,
+  "annual_production_estimate": "limited",
+  "price_trend": "rising",
+  "suppressor_friendly": false,
+  "subsonic_loads_available": false
 }

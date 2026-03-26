@@ -1,43 +1,59 @@
 {
   "name": ".460 Weatherby Magnum",
   "designation": ".460 Weatherby Magnum",
-  "aliases": [".460 Wby Mag"],
+  "aliases": [
+    ".460 Wby Mag"
+  ],
   "category": "magnum_rifle",
   "slug": "460-weatherby-magnum",
-
   "dimensions": {
     "bullet_diameter_in": 0.458,
     "neck_diameter_in": 0.491,
     "case_length_in": 2.913,
-    "overall_length_in": 3.750,
+    "overall_length_in": 3.75,
     "rim_diameter_in": 0.579,
     "case_type": "belted, bottleneck"
   },
-
-  "typical_velocity_fps": [2200, 2600],
-  "typical_energy_ft_lbs": [6500, 8100],
-  "typical_bullet_weight_gr": [450, 600],
+  "typical_velocity_fps": [
+    2200,
+    2600
+  ],
+  "typical_energy_ft_lbs": [
+    6500,
+    8100
+  ],
+  "typical_bullet_weight_gr": [
+    450,
+    600
+  ],
   "effective_range_yd": 300,
   "max_range_yd": 3000,
-
   "recoil": {
     "free_recoil_ft_lbs": 100.0,
     "reference_firearm": "Weatherby Mark V Dangerous Game Rifle (26\" barrel, 10.5 lbs)",
     "subjective": "very_heavy"
   },
-
   "year_introduced": 1958,
   "country_of_origin": "USA",
   "military_usage": [],
   "le_usage": [],
-  "primary_use_cases": ["dangerous game hunting", "elephant hunting", "Cape buffalo", "hippopotamus", "African safari"],
-
+  "primary_use_cases": [
+    "dangerous game hunting",
+    "elephant hunting",
+    "Cape buffalo",
+    "hippopotamus",
+    "African safari"
+  ],
   "popularity_tier": "rare",
-  "cost_per_round_usd": [8.00, 18.00],
-  "common_firearms": ["Weatherby Mark V Dangerous Game Rifle", "Weatherby Mark V Safari Custom"],
-
+  "cost_per_round_usd": [
+    8.0,
+    18.0
+  ],
+  "common_firearms": [
+    "Weatherby Mark V Dangerous Game Rifle",
+    "Weatherby Mark V Safari Custom"
+  ],
   "parent_cartridge": "378-weatherby-magnum",
-
   "loads": [
     {
       "name": "Weatherby Select Plus 500 gr Barnes TSX",
@@ -47,12 +63,42 @@
       "muzzle_energy_ft_lbs": 7504,
       "barrel_length_in": 26.0,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 2600, "energy_ft_lbs": 7504, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2388, "energy_ft_lbs": 6332, "drop_in": -2.1 },
-        { "distance_yd": 200, "velocity_fps": 2186, "energy_ft_lbs": 5303, "drop_in": -8.8 },
-        { "distance_yd": 300, "velocity_fps": 1994, "energy_ft_lbs": 4414, "drop_in": -21.2 },
-        { "distance_yd": 400, "velocity_fps": 1813, "energy_ft_lbs": 3649, "drop_in": -40.5 },
-        { "distance_yd": 500, "velocity_fps": 1646, "energy_ft_lbs": 3005, "drop_in": -68.2 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2600,
+          "energy_ft_lbs": 7504,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2388,
+          "energy_ft_lbs": 6332,
+          "drop_in": -2.1
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2186,
+          "energy_ft_lbs": 5303,
+          "drop_in": -8.8
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 1994,
+          "energy_ft_lbs": 4414,
+          "drop_in": -21.2
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 1813,
+          "energy_ft_lbs": 3649,
+          "drop_in": -40.5
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1646,
+          "energy_ft_lbs": 3005,
+          "drop_in": -68.2
+        }
       ]
     },
     {
@@ -63,18 +109,71 @@
       "muzzle_energy_ft_lbs": 7069,
       "barrel_length_in": 26.0,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 2660, "energy_ft_lbs": 7069, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2420, "energy_ft_lbs": 5853, "drop_in": -2.0 },
-        { "distance_yd": 200, "velocity_fps": 2195, "energy_ft_lbs": 4815, "drop_in": -8.5 },
-        { "distance_yd": 300, "velocity_fps": 1983, "energy_ft_lbs": 3929, "drop_in": -20.8 },
-        { "distance_yd": 400, "velocity_fps": 1787, "energy_ft_lbs": 3190, "drop_in": -40.2 },
-        { "distance_yd": 500, "velocity_fps": 1609, "energy_ft_lbs": 2587, "drop_in": -68.0 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2660,
+          "energy_ft_lbs": 7069,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2420,
+          "energy_ft_lbs": 5853,
+          "drop_in": -2.0
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2195,
+          "energy_ft_lbs": 4815,
+          "drop_in": -8.5
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 1983,
+          "energy_ft_lbs": 3929,
+          "drop_in": -20.8
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 1787,
+          "energy_ft_lbs": 3190,
+          "drop_in": -40.2
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1609,
+          "energy_ft_lbs": 2587,
+          "drop_in": -68.0
+        }
       ]
     }
   ],
   "recommended_game": [
-    { "game": "African Dangerous Game", "range": "Under 100 yd", "notes": "500gr premium solids and soft points; most powerful commercial sporting cartridge" },
-    { "game": "Cape Buffalo", "range": "Under 100 yd", "notes": "500gr FMJ solids; extreme velocity and energy for dangerous game" },
-    { "game": "Elephant", "range": "Under 50 yd", "notes": "500gr premium monolithic solids; devastating energy delivery" }
-  ]
+    {
+      "game": "African Dangerous Game",
+      "range": "Under 100 yd",
+      "notes": "500gr premium solids and soft points; most powerful commercial sporting cartridge"
+    },
+    {
+      "game": "Cape Buffalo",
+      "range": "Under 100 yd",
+      "notes": "500gr FMJ solids; extreme velocity and energy for dangerous game"
+    },
+    {
+      "game": "Elephant",
+      "range": "Under 50 yd",
+      "notes": "500gr premium monolithic solids; devastating energy delivery"
+    }
+  ],
+  "max_pressure_psi": 65000,
+  "primer_type": "Large Rifle Magnum",
+  "powder_charge_range_gr": [
+    100.0,
+    130.0
+  ],
+  "availability_rating": 1,
+  "annual_production_estimate": "minimal",
+  "price_trend": "rising",
+  "suppressor_friendly": false,
+  "subsonic_loads_available": false
 }

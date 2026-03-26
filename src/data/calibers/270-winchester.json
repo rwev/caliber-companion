@@ -1,7 +1,9 @@
 {
   "name": ".270 Winchester",
   "designation": ".270 Winchester",
-  "aliases": [".270 Win"],
+  "aliases": [
+    ".270 Win"
+  ],
   "category": "rifle",
   "slug": "270-winchester",
   "dimensions": {
@@ -12,9 +14,18 @@
     "rim_diameter_in": 0.473,
     "case_type": "rimless, bottleneck"
   },
-  "typical_velocity_fps": [2700, 3200],
-  "typical_energy_ft_lbs": [2400, 2750],
-  "typical_bullet_weight_gr": [90, 160],
+  "typical_velocity_fps": [
+    2700,
+    3200
+  ],
+  "typical_energy_ft_lbs": [
+    2400,
+    2750
+  ],
+  "typical_bullet_weight_gr": [
+    90,
+    160
+  ],
   "effective_range_yd": 700,
   "max_range_yd": 4700,
   "recoil": {
@@ -24,25 +35,73 @@
   },
   "year_introduced": 1925,
   "country_of_origin": "USA",
-  "military_usage": ["No significant military adoption"],
-  "le_usage": ["Occasional use by rural law enforcement and game wardens"],
-  "primary_use_cases": ["deer hunting", "antelope hunting", "elk hunting", "long-range hunting", "target shooting"],
+  "military_usage": [
+    "No significant military adoption"
+  ],
+  "le_usage": [
+    "Occasional use by rural law enforcement and game wardens"
+  ],
+  "primary_use_cases": [
+    "deer hunting",
+    "antelope hunting",
+    "elk hunting",
+    "long-range hunting",
+    "target shooting"
+  ],
   "popularity_tier": "very_common",
-  "cost_per_round_usd": [0.9, 2.5],
-  "common_firearms": ["Winchester Model 70", "Remington 700", "Browning X-Bolt", "Tikka T3x", "Weatherby Vanguard"],
+  "cost_per_round_usd": [
+    0.9,
+    2.5
+  ],
+  "common_firearms": [
+    "Winchester Model 70",
+    "Remington 700",
+    "Browning X-Bolt",
+    "Tikka T3x",
+    "Weatherby Vanguard"
+  ],
   "adoption_timeline": [
-    { "year": 1925, "event": "Winchester introduces the .270 Winchester in the Model 54 bolt-action rifle" },
-    { "year": 1936, "event": "Winchester Model 70 launched in .270 Win, elevating the cartridge's prestige" },
-    { "year": 1942, "event": "Jack O'Connor begins championing the .270 Winchester in Outdoor Life magazine" },
-    { "year": 1950, "event": "Becomes one of the top three best-selling hunting cartridges in America" },
-    { "year": 1962, "event": "SAAMI standardizes .270 Winchester specifications" },
-    { "year": 1970, "event": "Jack O'Connor's decades of advocacy makes .270 Win synonymous with Western big-game hunting" },
-    { "year": 1990, "event": "Federal Premium introduces Trophy Bonded Bear Claw in .270 Win for premium hunting market" },
-    { "year": 2005, "event": "Winchester introduces the .270 WSM (Winchester Short Magnum) as a modern derivative" },
-    { "year": 2020, "event": "Remains among the top five most popular deer and elk hunting cartridges in North America" }
+    {
+      "year": 1925,
+      "event": "Winchester introduces the .270 Winchester in the Model 54 bolt-action rifle"
+    },
+    {
+      "year": 1936,
+      "event": "Winchester Model 70 launched in .270 Win, elevating the cartridge's prestige"
+    },
+    {
+      "year": 1942,
+      "event": "Jack O'Connor begins championing the .270 Winchester in Outdoor Life magazine"
+    },
+    {
+      "year": 1950,
+      "event": "Becomes one of the top three best-selling hunting cartridges in America"
+    },
+    {
+      "year": 1962,
+      "event": "SAAMI standardizes .270 Winchester specifications"
+    },
+    {
+      "year": 1970,
+      "event": "Jack O'Connor's decades of advocacy makes .270 Win synonymous with Western big-game hunting"
+    },
+    {
+      "year": 1990,
+      "event": "Federal Premium introduces Trophy Bonded Bear Claw in .270 Win for premium hunting market"
+    },
+    {
+      "year": 2005,
+      "event": "Winchester introduces the .270 WSM (Winchester Short Magnum) as a modern derivative"
+    },
+    {
+      "year": 2020,
+      "event": "Remains among the top five most popular deer and elk hunting cartridges in North America"
+    }
   ],
   "parent_cartridge": "30-06-springfield",
-  "derived_cartridges": ["270-wsm"],
+  "derived_cartridges": [
+    "270-wsm"
+  ],
   "loads": [
     {
       "name": "Winchester Ballistic Silvertip 130 gr BST",
@@ -55,12 +114,42 @@
       "bc_g7": 0.216,
       "sectional_density": 0.242,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 3060, "energy_ft_lbs": 2702, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2845, "energy_ft_lbs": 2336, "drop_in": -1.6 },
-        { "distance_yd": 200, "velocity_fps": 2639, "energy_ft_lbs": 2010, "drop_in": -7.0 },
-        { "distance_yd": 300, "velocity_fps": 2444, "energy_ft_lbs": 1723, "drop_in": -16.8 },
-        { "distance_yd": 400, "velocity_fps": 2257, "energy_ft_lbs": 1470, "drop_in": -31.8 },
-        { "distance_yd": 500, "velocity_fps": 2079, "energy_ft_lbs": 1248, "drop_in": -53.0 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 3060,
+          "energy_ft_lbs": 2702,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2845,
+          "energy_ft_lbs": 2336,
+          "drop_in": -1.6
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2639,
+          "energy_ft_lbs": 2010,
+          "drop_in": -7.0
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2444,
+          "energy_ft_lbs": 1723,
+          "drop_in": -16.8
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2257,
+          "energy_ft_lbs": 1470,
+          "drop_in": -31.8
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2079,
+          "energy_ft_lbs": 1248,
+          "drop_in": -53.0
+        }
       ]
     },
     {
@@ -74,20 +163,81 @@
       "bc_g7": 0.246,
       "sectional_density": 0.279,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 2850, "energy_ft_lbs": 2705, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2659, "energy_ft_lbs": 2354, "drop_in": -2.0 },
-        { "distance_yd": 200, "velocity_fps": 2476, "energy_ft_lbs": 2041, "drop_in": -8.3 },
-        { "distance_yd": 300, "velocity_fps": 2300, "energy_ft_lbs": 1763, "drop_in": -19.5 },
-        { "distance_yd": 400, "velocity_fps": 2131, "energy_ft_lbs": 1513, "drop_in": -36.5 },
-        { "distance_yd": 500, "velocity_fps": 1970, "energy_ft_lbs": 1292, "drop_in": -60.5 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2850,
+          "energy_ft_lbs": 2705,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2659,
+          "energy_ft_lbs": 2354,
+          "drop_in": -2.0
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2476,
+          "energy_ft_lbs": 2041,
+          "drop_in": -8.3
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2300,
+          "energy_ft_lbs": 1763,
+          "drop_in": -19.5
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2131,
+          "energy_ft_lbs": 1513,
+          "drop_in": -36.5
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1970,
+          "energy_ft_lbs": 1292,
+          "drop_in": -60.5
+        }
       ]
     }
   ],
   "recommended_game": [
-    { "game": "Whitetail Deer", "range": "Under 400 yd", "notes": "130-150gr controlled expansion bullets such as Nosler Partition" },
-    { "game": "Mule Deer", "range": "Under 400 yd", "notes": "130-150gr bonded or partition bullets recommended" },
-    { "game": "Elk", "range": "Under 300 yd", "notes": "150gr premium bonded or partition bullets; Jack O'Connor's classic elk cartridge" },
-    { "game": "Pronghorn", "range": "Under 400 yd", "notes": "130gr polymer tip bullets; flat trajectory ideal for open plains" },
-    { "game": "Black Bear", "range": "Under 250 yd", "notes": "150gr bonded or partition bullets for adequate penetration" }
-  ]
+    {
+      "game": "Whitetail Deer",
+      "range": "Under 400 yd",
+      "notes": "130-150gr controlled expansion bullets such as Nosler Partition"
+    },
+    {
+      "game": "Mule Deer",
+      "range": "Under 400 yd",
+      "notes": "130-150gr bonded or partition bullets recommended"
+    },
+    {
+      "game": "Elk",
+      "range": "Under 300 yd",
+      "notes": "150gr premium bonded or partition bullets; Jack O'Connor's classic elk cartridge"
+    },
+    {
+      "game": "Pronghorn",
+      "range": "Under 400 yd",
+      "notes": "130gr polymer tip bullets; flat trajectory ideal for open plains"
+    },
+    {
+      "game": "Black Bear",
+      "range": "Under 250 yd",
+      "notes": "150gr bonded or partition bullets for adequate penetration"
+    }
+  ],
+  "max_pressure_psi": 65000,
+  "primer_type": "Large Rifle",
+  "powder_charge_range_gr": [
+    46.0,
+    60.0
+  ],
+  "availability_rating": 4,
+  "annual_production_estimate": "high",
+  "price_trend": "stable",
+  "suppressor_friendly": true,
+  "subsonic_loads_available": false
 }

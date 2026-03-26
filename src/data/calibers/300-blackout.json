@@ -1,7 +1,10 @@
 {
   "name": ".300 Blackout",
   "designation": ".300 AAC Blackout",
-  "aliases": [".300 BLK", "7.62x35mm"],
+  "aliases": [
+    ".300 BLK",
+    "7.62x35mm"
+  ],
   "category": "rifle",
   "slug": "300-blackout",
   "dimensions": {
@@ -12,9 +15,18 @@
     "rim_diameter_in": 0.378,
     "case_type": "rimless, bottleneck"
   },
-  "typical_velocity_fps": [1000, 2350],
-  "typical_energy_ft_lbs": [450, 1350],
-  "typical_bullet_weight_gr": [110, 220],
+  "typical_velocity_fps": [
+    1000,
+    2350
+  ],
+  "typical_energy_ft_lbs": [
+    450,
+    1350
+  ],
+  "typical_bullet_weight_gr": [
+    110,
+    220
+  ],
   "effective_range_yd": 300,
   "max_range_yd": 2400,
   "recoil": {
@@ -24,22 +36,70 @@
   },
   "year_introduced": 2011,
   "country_of_origin": "USA",
-  "military_usage": ["U.S. Special Operations (suppressed CQB roles)", "Select NATO special operations units"],
-  "le_usage": ["Select federal and state tactical teams", "Close-quarters entry teams (suppressed)"],
-  "primary_use_cases": ["suppressed shooting", "home defense", "short-barreled rifle use", "hog hunting", "close-quarters combat"],
+  "military_usage": [
+    "U.S. Special Operations (suppressed CQB roles)",
+    "Select NATO special operations units"
+  ],
+  "le_usage": [
+    "Select federal and state tactical teams",
+    "Close-quarters entry teams (suppressed)"
+  ],
+  "primary_use_cases": [
+    "suppressed shooting",
+    "home defense",
+    "short-barreled rifle use",
+    "hog hunting",
+    "close-quarters combat"
+  ],
   "popularity_tier": "very_common",
-  "cost_per_round_usd": [0.55, 2.0],
-  "common_firearms": ["AR-15 variants (upper swap)", "SIG MCX", "Daniel Defense DDM4", "Q Honey Badger", "CMMG Banshee"],
+  "cost_per_round_usd": [
+    0.55,
+    2.0
+  ],
+  "common_firearms": [
+    "AR-15 variants (upper swap)",
+    "SIG MCX",
+    "Daniel Defense DDM4",
+    "Q Honey Badger",
+    "CMMG Banshee"
+  ],
   "adoption_timeline": [
-    { "year": 2010, "event": "Advanced Armament Corporation (AAC) and Remington Defense finalize .300 BLK design" },
-    { "year": 2011, "event": "SAAMI officially approves and standardizes the .300 AAC Blackout cartridge" },
-    { "year": 2012, "event": "Remington releases the first commercial .300 BLK ammunition and firearms" },
-    { "year": 2013, "event": "U.S. Special Operations units begin evaluating .300 BLK for suppressed CQB roles" },
-    { "year": 2014, "event": "SIG Sauer introduces the MCX, a flagship .300 BLK platform" },
-    { "year": 2015, "event": "CIP publishes European specifications for .300 Blackout" },
-    { "year": 2016, "event": "Civilian suppressor market boom drives rapid .300 BLK adoption for SBR builds" },
-    { "year": 2018, "event": "Q Honey Badger popularizes the integrally suppressed .300 BLK concept" },
-    { "year": 2020, "event": ".300 BLK ranks among the top five most popular AR-15 cartridges in the U.S." }
+    {
+      "year": 2010,
+      "event": "Advanced Armament Corporation (AAC) and Remington Defense finalize .300 BLK design"
+    },
+    {
+      "year": 2011,
+      "event": "SAAMI officially approves and standardizes the .300 AAC Blackout cartridge"
+    },
+    {
+      "year": 2012,
+      "event": "Remington releases the first commercial .300 BLK ammunition and firearms"
+    },
+    {
+      "year": 2013,
+      "event": "U.S. Special Operations units begin evaluating .300 BLK for suppressed CQB roles"
+    },
+    {
+      "year": 2014,
+      "event": "SIG Sauer introduces the MCX, a flagship .300 BLK platform"
+    },
+    {
+      "year": 2015,
+      "event": "CIP publishes European specifications for .300 Blackout"
+    },
+    {
+      "year": 2016,
+      "event": "Civilian suppressor market boom drives rapid .300 BLK adoption for SBR builds"
+    },
+    {
+      "year": 2018,
+      "event": "Q Honey Badger popularizes the integrally suppressed .300 BLK concept"
+    },
+    {
+      "year": 2020,
+      "event": ".300 BLK ranks among the top five most popular AR-15 cartridges in the U.S."
+    }
   ],
   "parent_cartridge": "223-remington",
   "loads": [
@@ -50,15 +110,45 @@
       "muzzle_velocity_fps": 2375,
       "muzzle_energy_ft_lbs": 1377,
       "barrel_length_in": 16.0,
-      "bc_g1": 0.290,
+      "bc_g1": 0.29,
       "sectional_density": 0.166,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 2375, "energy_ft_lbs": 1377, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2092, "energy_ft_lbs": 1069, "drop_in": -3.8 },
-        { "distance_yd": 200, "velocity_fps": 1830, "energy_ft_lbs": 818, "drop_in": -15.2 },
-        { "distance_yd": 300, "velocity_fps": 1592, "energy_ft_lbs": 619, "drop_in": -37.0 },
-        { "distance_yd": 400, "velocity_fps": 1383, "energy_ft_lbs": 467, "drop_in": -72.5 },
-        { "distance_yd": 500, "velocity_fps": 1210, "energy_ft_lbs": 358, "drop_in": -126.0 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2375,
+          "energy_ft_lbs": 1377,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2092,
+          "energy_ft_lbs": 1069,
+          "drop_in": -3.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1830,
+          "energy_ft_lbs": 818,
+          "drop_in": -15.2
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 1592,
+          "energy_ft_lbs": 619,
+          "drop_in": -37.0
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 1383,
+          "energy_ft_lbs": 467,
+          "drop_in": -72.5
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1210,
+          "energy_ft_lbs": 358,
+          "drop_in": -126.0
+        }
       ]
     },
     {
@@ -68,22 +158,96 @@
       "muzzle_velocity_fps": 1050,
       "muzzle_energy_ft_lbs": 465,
       "barrel_length_in": 16.0,
-      "bc_g1": 0.340,
+      "bc_g1": 0.34,
       "bc_g7": 0.168,
       "sectional_density": 0.286,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 1050, "energy_ft_lbs": 465, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 968, "energy_ft_lbs": 395, "drop_in": -17.5 },
-        { "distance_yd": 200, "velocity_fps": 898, "energy_ft_lbs": 340, "drop_in": -64.0 },
-        { "distance_yd": 300, "velocity_fps": 838, "energy_ft_lbs": 296, "drop_in": -146.0 },
-        { "distance_yd": 400, "velocity_fps": 786, "energy_ft_lbs": 261, "drop_in": -272.0 },
-        { "distance_yd": 500, "velocity_fps": 740, "energy_ft_lbs": 231, "drop_in": -452.0 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1050,
+          "energy_ft_lbs": 465,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 968,
+          "energy_ft_lbs": 395,
+          "drop_in": -17.5
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 898,
+          "energy_ft_lbs": 340,
+          "drop_in": -64.0
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 838,
+          "energy_ft_lbs": 296,
+          "drop_in": -146.0
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 786,
+          "energy_ft_lbs": 261,
+          "drop_in": -272.0
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 740,
+          "energy_ft_lbs": 231,
+          "drop_in": -452.0
+        }
       ]
     }
   ],
   "recommended_game": [
-    { "game": "Whitetail Deer", "range": "Under 150 yd", "notes": "110-125gr supersonic controlled expansion bullets; limited range" },
-    { "game": "Feral Hogs", "range": "Under 150 yd", "notes": "110-125gr bonded or expanding bullets; suppressor-friendly" },
-    { "game": "Coyote", "range": "Under 200 yd", "notes": "110-125gr polymer tip or hollow point bullets" }
+    {
+      "game": "Whitetail Deer",
+      "range": "Under 150 yd",
+      "notes": "110-125gr supersonic controlled expansion bullets; limited range"
+    },
+    {
+      "game": "Feral Hogs",
+      "range": "Under 150 yd",
+      "notes": "110-125gr bonded or expanding bullets; suppressor-friendly"
+    },
+    {
+      "game": "Coyote",
+      "range": "Under 200 yd",
+      "notes": "110-125gr polymer tip or hollow point bullets"
+    }
+  ],
+  "max_pressure_psi": 55000,
+  "primer_type": "Small Rifle",
+  "powder_charge_range_gr": [
+    8.0,
+    22.0
+  ],
+  "availability_rating": 4,
+  "annual_production_estimate": "high",
+  "price_trend": "stable",
+  "suppressor_friendly": true,
+  "subsonic_loads_available": true,
+  "military_adoption_detail": [
+    {
+      "organization": "U.S. SOCOM",
+      "year_adopted": 2010,
+      "role": "Special operations CQB cartridge",
+      "status": "active"
+    },
+    {
+      "organization": "Netherlands DSI",
+      "year_adopted": 2015,
+      "role": "Counter-terrorism cartridge",
+      "status": "active"
+    }
+  ],
+  "le_adoption_detail": [],
+  "dangerous_substitutions": [
+    {
+      "caliber": "5.56x45mm NATO / .223 Remington",
+      "danger": "5.56/.223 rounds do NOT fit .300 BLK chambers, but .300 BLK rounds CAN chamber in 5.56/.223 rifles — catastrophic barrel failure. Keep ammunition strictly separated."
+    }
   ]
 }

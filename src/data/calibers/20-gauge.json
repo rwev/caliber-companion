@@ -1,54 +1,106 @@
 {
   "name": "20 Gauge",
   "designation": "20 Gauge (15.63mm)",
-  "aliases": ["20 GA", "20 Bore"],
+  "aliases": [
+    "20 GA",
+    "20 Bore"
+  ],
   "category": "shotgun",
   "slug": "20-gauge",
-
   "dimensions": {
     "bullet_diameter_in": 0.615,
     "neck_diameter_in": 0.686,
     "case_length_in": 2.75,
     "overall_length_in": 2.75,
-    "rim_diameter_in": 0.740,
+    "rim_diameter_in": 0.74,
     "case_type": "rimmed, straight (plastic hull)"
   },
-
-  "typical_velocity_fps": [1100, 1400],
-  "typical_energy_ft_lbs": [800, 1800],
-  "typical_bullet_weight_gr": [246, 437],
+  "typical_velocity_fps": [
+    1100,
+    1400
+  ],
+  "typical_energy_ft_lbs": [
+    800,
+    1800
+  ],
+  "typical_bullet_weight_gr": [
+    246,
+    437
+  ],
   "effective_range_yd": 40,
   "max_range_yd": 150,
-
   "recoil": {
     "free_recoil_ft_lbs": 15.0,
     "reference_firearm": "Remington 870 Express 20 GA (26\" barrel, 6.5 lbs)",
     "subjective": "moderate"
   },
-
   "year_introduced": 1800,
   "country_of_origin": "United Kingdom",
   "military_usage": [],
-  "le_usage": ["Some police departments (reduced-recoil patrol shotgun)"],
-  "primary_use_cases": ["hunting", "sport shooting", "home defense", "clay target sports", "youth shooting"],
-
-  "popularity_tier": "very_common",
-  "cost_per_round_usd": [0.30, 2.50],
-  "common_firearms": ["Remington 870 Express 20 GA", "Mossberg 500 20 GA", "Benelli Montefeltro 20 GA", "Browning Citori 20 GA", "Beretta A400 20 GA"],
-
-  "adoption_timeline": [
-    { "year": 1874, "event": "20 gauge shotshells become commercially available for sporting use" },
-    { "year": 1912, "event": "Browning introduces the Auto-5 in 20 gauge, one of the first semi-auto 20 GA options" },
-    { "year": 1930, "event": "20 gauge gains popularity as a lighter-weight upland bird hunting option" },
-    { "year": 1950, "event": "Remington 870 Wingmaster introduced in 20 gauge for youth and field use" },
-    { "year": 1961, "event": "Mossberg 500 offered in 20 gauge, making affordable 20 GA pumps widely available" },
-    { "year": 1975, "event": "SAAMI standardizes 20 gauge 2¾\" and 3\" magnum shell specifications" },
-    { "year": 1985, "event": "Youth shooting programs and women's hunting initiatives drive increased 20 GA demand" },
-    { "year": 1995, "event": "Sporting clays explodes in popularity, with 20 gauge becoming a preferred sub-gauge event" },
-    { "year": 2005, "event": "Benelli Montefeltro 20 GA popularizes lightweight semi-automatic 20 gauge field guns" },
-    { "year": 2015, "event": "Federal TSS turkey loads make the 20 gauge a viable alternative to 12 GA for turkey hunting" }
+  "le_usage": [
+    "Some police departments (reduced-recoil patrol shotgun)"
   ],
-
+  "primary_use_cases": [
+    "hunting",
+    "sport shooting",
+    "home defense",
+    "clay target sports",
+    "youth shooting"
+  ],
+  "popularity_tier": "very_common",
+  "cost_per_round_usd": [
+    0.3,
+    2.5
+  ],
+  "common_firearms": [
+    "Remington 870 Express 20 GA",
+    "Mossberg 500 20 GA",
+    "Benelli Montefeltro 20 GA",
+    "Browning Citori 20 GA",
+    "Beretta A400 20 GA"
+  ],
+  "adoption_timeline": [
+    {
+      "year": 1874,
+      "event": "20 gauge shotshells become commercially available for sporting use"
+    },
+    {
+      "year": 1912,
+      "event": "Browning introduces the Auto-5 in 20 gauge, one of the first semi-auto 20 GA options"
+    },
+    {
+      "year": 1930,
+      "event": "20 gauge gains popularity as a lighter-weight upland bird hunting option"
+    },
+    {
+      "year": 1950,
+      "event": "Remington 870 Wingmaster introduced in 20 gauge for youth and field use"
+    },
+    {
+      "year": 1961,
+      "event": "Mossberg 500 offered in 20 gauge, making affordable 20 GA pumps widely available"
+    },
+    {
+      "year": 1975,
+      "event": "SAAMI standardizes 20 gauge 2¾\" and 3\" magnum shell specifications"
+    },
+    {
+      "year": 1985,
+      "event": "Youth shooting programs and women's hunting initiatives drive increased 20 GA demand"
+    },
+    {
+      "year": 1995,
+      "event": "Sporting clays explodes in popularity, with 20 gauge becoming a preferred sub-gauge event"
+    },
+    {
+      "year": 2005,
+      "event": "Benelli Montefeltro 20 GA popularizes lightweight semi-automatic 20 gauge field guns"
+    },
+    {
+      "year": 2015,
+      "event": "Federal TSS turkey loads make the 20 gauge a viable alternative to 12 GA for turkey hunting"
+    }
+  ],
   "loads": [
     {
       "name": "Federal Power-Shok 20 GA #3 Buckshot (2¾\")",
@@ -58,11 +110,36 @@
       "muzzle_energy_ft_lbs": 1085,
       "barrel_length_in": 26.0,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 1200, "energy_ft_lbs": 1085, "drop_in": 0.0 },
-        { "distance_yd": 25, "velocity_fps": 1065, "energy_ft_lbs": 856, "drop_in": -0.6 },
-        { "distance_yd": 50, "velocity_fps": 955, "energy_ft_lbs": 688, "drop_in": -3.2 },
-        { "distance_yd": 75, "velocity_fps": 875, "energy_ft_lbs": 578, "drop_in": -8.5 },
-        { "distance_yd": 100, "velocity_fps": 810, "energy_ft_lbs": 495, "drop_in": -17.0 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1200,
+          "energy_ft_lbs": 1085,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1065,
+          "energy_ft_lbs": 856,
+          "drop_in": -0.6
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 955,
+          "energy_ft_lbs": 688,
+          "drop_in": -3.2
+        },
+        {
+          "distance_yd": 75,
+          "velocity_fps": 875,
+          "energy_ft_lbs": 578,
+          "drop_in": -8.5
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 810,
+          "energy_ft_lbs": 495,
+          "drop_in": -17.0
+        }
       ]
     },
     {
@@ -73,19 +150,75 @@
       "muzzle_energy_ft_lbs": 1513,
       "barrel_length_in": 26.0,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 1580, "energy_ft_lbs": 1513, "drop_in": 0.0 },
-        { "distance_yd": 25, "velocity_fps": 1460, "energy_ft_lbs": 1293, "drop_in": -0.3 },
-        { "distance_yd": 50, "velocity_fps": 1350, "energy_ft_lbs": 1106, "drop_in": -1.6 },
-        { "distance_yd": 75, "velocity_fps": 1250, "energy_ft_lbs": 948, "drop_in": -4.5 },
-        { "distance_yd": 100, "velocity_fps": 1165, "energy_ft_lbs": 823, "drop_in": -9.2 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1580,
+          "energy_ft_lbs": 1513,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1460,
+          "energy_ft_lbs": 1293,
+          "drop_in": -0.3
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1350,
+          "energy_ft_lbs": 1106,
+          "drop_in": -1.6
+        },
+        {
+          "distance_yd": 75,
+          "velocity_fps": 1250,
+          "energy_ft_lbs": 948,
+          "drop_in": -4.5
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1165,
+          "energy_ft_lbs": 823,
+          "drop_in": -9.2
+        }
       ]
     }
   ],
   "recommended_game": [
-    { "game": "Upland Birds", "range": "Under 35 yd", "notes": "#6-7.5 shot in 2\u00be\" or 3\" shells; ideal lightweight upland gauge" },
-    { "game": "Waterfowl", "range": "Under 40 yd", "notes": "Steel or bismuth #2-4 shot in 3\" shells; effective for ducks over decoys" },
-    { "game": "Whitetail Deer", "range": "Under 75 yd", "notes": "Saboted slugs or rifled slugs; excellent in slug-only zones with less recoil than 12 gauge" },
-    { "game": "Wild Turkey", "range": "Under 35 yd", "notes": "#4-6 shot in 3\" shells; TSS loads competitive with 12-gauge performance" },
-    { "game": "Rabbits", "range": "Under 30 yd", "notes": "#6-7.5 shot; light loads ideal for small game" }
+    {
+      "game": "Upland Birds",
+      "range": "Under 35 yd",
+      "notes": "#6-7.5 shot in 2¾\" or 3\" shells; ideal lightweight upland gauge"
+    },
+    {
+      "game": "Waterfowl",
+      "range": "Under 40 yd",
+      "notes": "Steel or bismuth #2-4 shot in 3\" shells; effective for ducks over decoys"
+    },
+    {
+      "game": "Whitetail Deer",
+      "range": "Under 75 yd",
+      "notes": "Saboted slugs or rifled slugs; excellent in slug-only zones with less recoil than 12 gauge"
+    },
+    {
+      "game": "Wild Turkey",
+      "range": "Under 35 yd",
+      "notes": "#4-6 shot in 3\" shells; TSS loads competitive with 12-gauge performance"
+    },
+    {
+      "game": "Rabbits",
+      "range": "Under 30 yd",
+      "notes": "#6-7.5 shot; light loads ideal for small game"
+    }
+  ],
+  "availability_rating": 5,
+  "annual_production_estimate": "high",
+  "price_trend": "stable",
+  "suppressor_friendly": false,
+  "subsonic_loads_available": true,
+  "dangerous_substitutions": [
+    {
+      "caliber": "12 Gauge",
+      "danger": "12-gauge shells will not chamber in a 20-gauge gun, but a 20-gauge shell dropped into a 12-gauge barrel will slide forward and obstruct it — deadly if a 12-gauge round is fired behind it."
+    }
   ]
 }

@@ -67,11 +67,24 @@ const recoilRows = [
   { label: 'Subjective Rating', value: titleCase(d.recoil.subjective) },
 ];
 
+const availabilityLabels: Record<number, string> = { 1: '1/5 — Very Scarce', 2: '2/5 — Limited', 3: '3/5 — Moderate', 4: '4/5 — Widely Available', 5: '5/5 — Everywhere' };
+
 const marketRows = [
   { label: 'Popularity', value: titleCase(d.popularity_tier) },
   { label: 'Cost Per Round', value: fmtCurrency(d.cost_per_round_usd) },
+  ...(d.availability_rating ? [{ label: 'Availability', value: availabilityLabels[d.availability_rating] || `${d.availability_rating}/5` }] : []),
+  ...(d.price_trend ? [{ label: 'Price Trend', value: titleCase(d.price_trend) }] : []),
+  ...(d.annual_production_estimate ? [{ label: 'Production Volume', value: titleCase(d.annual_production_estimate) }] : []),
+  ...(d.suppressor_friendly !== undefined ? [{ label: 'Suppressor Friendly', value: d.suppressor_friendly ? 'Yes' : 'No' }] : []),
+  ...(d.subsonic_loads_available !== undefined ? [{ label: 'Subsonic Loads', value: d.subsonic_loads_available ? 'Available' : 'Not Common' }] : []),
   { label: 'Year Introduced', value: `${d.year_introduced}` },
   { label: 'Country of Origin', value: d.country_of_origin },
+];
+
+const reloadingRows = [
+  ...(d.max_pressure_psi ? [{ label: 'Max Pressure (SAAMI)', value: `${fmtNumber(d.max_pressure_psi)} psi` }] : []),
+  ...(d.primer_type ? [{ label: 'Primer Type', value: d.primer_type }] : []),
+  ...(d.powder_charge_range_gr ? [{ label: 'Typical Charge', value: fmtRange(d.powder_charge_range_gr, 'gr') }] : []),
 ];
 ---
 
@@ -113,6 +126,10 @@ const marketRows = [
           <SpecTable title="Recoil" rows={recoilRows} />
           <SpecTable title="Market" rows={marketRows} />
         </div>
+
+        {reloadingRows.length > 0 && (
+          <SpecTable title="Reloading" rows={reloadingRows} />
+        )}
 
         <!-- Loads Table -->
         <div class="border border-surface-border">
@@ -256,6 +273,47 @@ const marketRows = [
             </div>
           </div>
         )}
+
+        <!-- Interchangeability & Safety -->
+        {(d.compatible_chambers?.length || d.dangerous_substitutions?.length) && (
+          <div class="border border-surface-border">
+            <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
+              <h3 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">Interchangeability & Safety</h3>
+            </div>
+
+            {d.dangerous_substitutions && d.dangerous_substitutions.length > 0 && (
+              <div class="border-b border-surface-border">
+                <div class="px-4 py-2 bg-danger/10 border-b border-danger/20">
+                  <span class="font-mono text-xs font-medium uppercase tracking-wider text-danger">Dangerous — Never Substitute</span>
+                </div>
+                <div class="divide-y divide-surface-border-subtle">
+                  {d.dangerous_substitutions.map((sub, i) => (
+                    <div class={`px-4 py-2.5 ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
+                      <span class="font-mono text-base font-medium text-danger">{sub.caliber}</span>
+                      <p class="font-mono text-sm text-text-muted mt-0.5">{sub.danger}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {d.compatible_chambers && d.compatible_chambers.length > 0 && (
+              <div>
+                <div class="px-4 py-2 bg-success/10 border-b border-success/20">
+                  <span class="font-mono text-xs font-medium uppercase tracking-wider text-success">Safe to Fire In This Chamber</span>
+                </div>
+                <div class="divide-y divide-surface-border-subtle">
+                  {d.compatible_chambers.map((compat, i) => (
+                    <div class={`px-4 py-2.5 ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
+                      <span class="font-mono text-base font-medium text-text-primary">{compat.caliber}</span>
+                      <p class="font-mono text-sm text-text-muted mt-0.5">{compat.notes}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
       </div>
 
       <!-- Right Column: Sidebar -->
@@ -269,6 +327,8 @@ const marketRows = [
             military={d.military_usage}
             le={d.le_usage}
             useCases={d.primary_use_cases}
+            militaryDetail={d.military_adoption_detail}
+            leDetail={d.le_adoption_detail}
           />
         </div>
 

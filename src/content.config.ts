@@ -31,6 +31,21 @@ const gameRecommendationSchema = z.object({
   notes: z.string(),
 });
 
+const militaryAdoptionSchema = z.object({
+  organization: z.string(),
+  designation: z.string().optional(),
+  year_adopted: z.number().optional(),
+  role: z.string(),
+  status: z.enum(['active', 'retired']),
+});
+
+const leAdoptionSchema = z.object({
+  organization: z.string(),
+  year_adopted: z.number().optional(),
+  role: z.string(),
+  status: z.enum(['active', 'retired']),
+});
+
 const adoptionEventSchema = z.object({
   year: z.number(),
   event: z.string(),
@@ -84,6 +99,29 @@ const caliberData = defineCollection({
     derived_cartridges: z.array(z.string()).optional(),
 
     recommended_game: z.array(gameRecommendationSchema).optional(),
+
+    max_pressure_psi: z.number().optional(),
+    primer_type: z.string().optional(),
+    powder_charge_range_gr: z.tuple([z.number(), z.number()]).optional(),
+
+    availability_rating: z.number().min(1).max(5).optional(),
+    annual_production_estimate: z.enum(['massive', 'high', 'moderate', 'limited', 'minimal']).optional(),
+    price_trend: z.enum(['stable', 'rising', 'falling', 'volatile']).optional(),
+
+    suppressor_friendly: z.boolean().optional(),
+    subsonic_loads_available: z.boolean().optional(),
+
+    military_adoption_detail: z.array(militaryAdoptionSchema).optional(),
+    le_adoption_detail: z.array(leAdoptionSchema).optional(),
+
+    compatible_chambers: z.array(z.object({
+      caliber: z.string(),
+      notes: z.string(),
+    })).optional(),
+    dangerous_substitutions: z.array(z.object({
+      caliber: z.string(),
+      danger: z.string(),
+    })).optional(),
   }),
 });
 

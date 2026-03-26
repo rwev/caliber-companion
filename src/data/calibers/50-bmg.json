@@ -1,7 +1,10 @@
 {
   "name": ".50 BMG",
   "designation": ".50 Browning Machine Gun",
-  "aliases": [".50 Cal", "12.7\u00d799mm NATO"],
+  "aliases": [
+    ".50 Cal",
+    "12.7\u00d799mm NATO"
+  ],
   "category": "magnum_rifle",
   "slug": "50-bmg",
   "dimensions": {
@@ -12,9 +15,18 @@
     "rim_diameter_in": 0.804,
     "case_type": "rimless, bottleneck"
   },
-  "typical_velocity_fps": [2750, 3050],
-  "typical_energy_ft_lbs": [11000, 14900],
-  "typical_bullet_weight_gr": [647, 800],
+  "typical_velocity_fps": [
+    2750,
+    3050
+  ],
+  "typical_energy_ft_lbs": [
+    11000,
+    14900
+  ],
+  "typical_bullet_weight_gr": [
+    647,
+    800
+  ],
   "effective_range_yd": 2000,
   "max_range_yd": 7400,
   "recoil": {
@@ -24,12 +36,35 @@
   },
   "year_introduced": 1921,
   "country_of_origin": "USA",
-  "military_usage": ["U.S. Military (M2 heavy machine gun)", "Anti-materiel sniping (Barrett M82/M107)", "NATO standard heavy machine gun cartridge", "Vehicle-mounted weapon systems"],
-  "le_usage": ["FBI HRT (anti-materiel)", "Select SWAT teams (anti-vehicle/barricade)", "U.S. Border Patrol"],
-  "primary_use_cases": ["anti-materiel", "extreme long-range shooting", "military sniping", "heavy machine gun"],
+  "military_usage": [
+    "U.S. Military (M2 heavy machine gun)",
+    "Anti-materiel sniping (Barrett M82/M107)",
+    "NATO standard heavy machine gun cartridge",
+    "Vehicle-mounted weapon systems"
+  ],
+  "le_usage": [
+    "FBI HRT (anti-materiel)",
+    "Select SWAT teams (anti-vehicle/barricade)",
+    "U.S. Border Patrol"
+  ],
+  "primary_use_cases": [
+    "anti-materiel",
+    "extreme long-range shooting",
+    "military sniping",
+    "heavy machine gun"
+  ],
   "popularity_tier": "niche",
-  "cost_per_round_usd": [3.0, 8.0],
-  "common_firearms": ["Barrett M82A1/M107", "Barrett M95", "McMillan TAC-50", "Serbu RN-50", "Armalite AR-50"],
+  "cost_per_round_usd": [
+    3.0,
+    8.0
+  ],
+  "common_firearms": [
+    "Barrett M82A1/M107",
+    "Barrett M95",
+    "McMillan TAC-50",
+    "Serbu RN-50",
+    "Armalite AR-50"
+  ],
   "loads": [
     {
       "name": "Hornady A-MAX 750 gr Match",
@@ -38,19 +73,64 @@
       "muzzle_velocity_fps": 2820,
       "muzzle_energy_ft_lbs": 13241,
       "barrel_length_in": 29.0,
-      "bc_g1": 1.050,
+      "bc_g1": 1.05,
       "bc_g7": 0.535,
       "sectional_density": 0.412,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 2820, "energy_ft_lbs": 13241, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2728, "energy_ft_lbs": 12397, "drop_in": -1.5 },
-        { "distance_yd": 200, "velocity_fps": 2638, "energy_ft_lbs": 11589, "drop_in": -6.2 },
-        { "distance_yd": 300, "velocity_fps": 2549, "energy_ft_lbs": 10816, "drop_in": -14.5 },
-        { "distance_yd": 400, "velocity_fps": 2462, "energy_ft_lbs": 10079, "drop_in": -26.6 },
-        { "distance_yd": 500, "velocity_fps": 2377, "energy_ft_lbs": 9377, "drop_in": -43.0 },
-        { "distance_yd": 600, "velocity_fps": 2293, "energy_ft_lbs": 8709, "drop_in": -63.8 },
-        { "distance_yd": 800, "velocity_fps": 2130, "energy_ft_lbs": 7560, "drop_in": -120.5 },
-        { "distance_yd": 1000, "velocity_fps": 1974, "energy_ft_lbs": 6491, "drop_in": -202.3 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2820,
+          "energy_ft_lbs": 13241,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2728,
+          "energy_ft_lbs": 12397,
+          "drop_in": -1.5
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2638,
+          "energy_ft_lbs": 11589,
+          "drop_in": -6.2
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2549,
+          "energy_ft_lbs": 10816,
+          "drop_in": -14.5
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2462,
+          "energy_ft_lbs": 10079,
+          "drop_in": -26.6
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2377,
+          "energy_ft_lbs": 9377,
+          "drop_in": -43.0
+        },
+        {
+          "distance_yd": 600,
+          "velocity_fps": 2293,
+          "energy_ft_lbs": 8709,
+          "drop_in": -63.8
+        },
+        {
+          "distance_yd": 800,
+          "velocity_fps": 2130,
+          "energy_ft_lbs": 7560,
+          "drop_in": -120.5
+        },
+        {
+          "distance_yd": 1000,
+          "velocity_fps": 1974,
+          "energy_ft_lbs": 6491,
+          "drop_in": -202.3
+        }
       ]
     },
     {
@@ -60,20 +140,82 @@
       "muzzle_velocity_fps": 3050,
       "muzzle_energy_ft_lbs": 13631,
       "barrel_length_in": 45.0,
-      "bc_g1": 0.700,
+      "bc_g1": 0.7,
       "bc_g7": 0.356,
       "sectional_density": 0.362,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 3050, "energy_ft_lbs": 13631, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2905, "energy_ft_lbs": 12362, "drop_in": -1.2 },
-        { "distance_yd": 200, "velocity_fps": 2764, "energy_ft_lbs": 11186, "drop_in": -5.2 },
-        { "distance_yd": 300, "velocity_fps": 2627, "energy_ft_lbs": 10101, "drop_in": -12.5 },
-        { "distance_yd": 400, "velocity_fps": 2494, "energy_ft_lbs": 9109, "drop_in": -23.4 },
-        { "distance_yd": 500, "velocity_fps": 2365, "energy_ft_lbs": 8201, "drop_in": -38.2 },
-        { "distance_yd": 600, "velocity_fps": 2240, "energy_ft_lbs": 7369, "drop_in": -57.5 },
-        { "distance_yd": 800, "velocity_fps": 2001, "energy_ft_lbs": 5871, "drop_in": -112.0 },
-        { "distance_yd": 1000, "velocity_fps": 1781, "energy_ft_lbs": 4649, "drop_in": -195.6 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 3050,
+          "energy_ft_lbs": 13631,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2905,
+          "energy_ft_lbs": 12362,
+          "drop_in": -1.2
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2764,
+          "energy_ft_lbs": 11186,
+          "drop_in": -5.2
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2627,
+          "energy_ft_lbs": 10101,
+          "drop_in": -12.5
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2494,
+          "energy_ft_lbs": 9109,
+          "drop_in": -23.4
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2365,
+          "energy_ft_lbs": 8201,
+          "drop_in": -38.2
+        },
+        {
+          "distance_yd": 600,
+          "velocity_fps": 2240,
+          "energy_ft_lbs": 7369,
+          "drop_in": -57.5
+        },
+        {
+          "distance_yd": 800,
+          "velocity_fps": 2001,
+          "energy_ft_lbs": 5871,
+          "drop_in": -112.0
+        },
+        {
+          "distance_yd": 1000,
+          "velocity_fps": 1781,
+          "energy_ft_lbs": 4649,
+          "drop_in": -195.6
+        }
       ]
     }
-  ]
+  ],
+  "max_pressure_psi": 54923,
+  "primer_type": ".50 BMG",
+  "powder_charge_range_gr": [
+    200.0,
+    250.0
+  ],
+  "availability_rating": 3,
+  "annual_production_estimate": "moderate",
+  "price_trend": "stable",
+  "suppressor_friendly": true,
+  "subsonic_loads_available": false,
+  "military_adoption_detail": [
+    { "organization": "U.S. Military", "designation": "M33 Ball", "year_adopted": 1921, "role": "Heavy machine gun/anti-materiel cartridge", "status": "active" },
+    { "organization": "NATO", "role": "Standard heavy machine gun cartridge", "status": "active" },
+    { "organization": "U.S. Military", "designation": "Mk 211 Mod 0 HEIAP", "role": "Anti-materiel cartridge", "status": "active" }
+  ],
+  "le_adoption_detail": []
 }

@@ -1,7 +1,10 @@
 {
   "name": ".375 H&H Magnum",
   "designation": ".375 Holland & Holland Magnum",
-  "aliases": [".375 H&H", ".375 H&H Mag"],
+  "aliases": [
+    ".375 H&H",
+    ".375 H&H Mag"
+  ],
   "category": "magnum_rifle",
   "slug": "375-hh-magnum",
   "dimensions": {
@@ -12,9 +15,18 @@
     "rim_diameter_in": 0.532,
     "case_type": "belted, bottleneck"
   },
-  "typical_velocity_fps": [2300, 2800],
-  "typical_energy_ft_lbs": [4000, 5000],
-  "typical_bullet_weight_gr": [235, 350],
+  "typical_velocity_fps": [
+    2300,
+    2800
+  ],
+  "typical_energy_ft_lbs": [
+    4000,
+    5000
+  ],
+  "typical_bullet_weight_gr": [
+    235,
+    350
+  ],
   "effective_range_yd": 500,
   "max_range_yd": 4800,
   "recoil": {
@@ -24,13 +36,38 @@
   },
   "year_introduced": 1912,
   "country_of_origin": "United Kingdom",
-  "military_usage": ["British colonial anti-personnel and anti-materiel (historical)"],
+  "military_usage": [
+    "British colonial anti-personnel and anti-materiel (historical)"
+  ],
   "le_usage": [],
-  "primary_use_cases": ["dangerous game hunting", "African safari", "brown bear hunting", "elephant hunting", "cape buffalo hunting"],
+  "primary_use_cases": [
+    "dangerous game hunting",
+    "African safari",
+    "brown bear hunting",
+    "elephant hunting",
+    "cape buffalo hunting"
+  ],
   "popularity_tier": "common",
-  "cost_per_round_usd": [2.5, 7.0],
-  "common_firearms": ["CZ 550 Safari Magnum", "Winchester Model 70 Safari Express", "Ruger Hawkeye African", "Browning X-Bolt", "Sako 85 Safari", "Dakota Model 76 Safari"],
-  "derived_cartridges": ["300-winchester-magnum", "338-winchester-magnum", "458-winchester-magnum", "257-weatherby-magnum", "300-weatherby-magnum", "378-weatherby-magnum"],
+  "cost_per_round_usd": [
+    2.5,
+    7.0
+  ],
+  "common_firearms": [
+    "CZ 550 Safari Magnum",
+    "Winchester Model 70 Safari Express",
+    "Ruger Hawkeye African",
+    "Browning X-Bolt",
+    "Sako 85 Safari",
+    "Dakota Model 76 Safari"
+  ],
+  "derived_cartridges": [
+    "300-winchester-magnum",
+    "338-winchester-magnum",
+    "458-winchester-magnum",
+    "257-weatherby-magnum",
+    "300-weatherby-magnum",
+    "378-weatherby-magnum"
+  ],
   "loads": [
     {
       "name": "Federal Premium 300 gr Trophy Bonded Bear Claw",
@@ -42,13 +79,48 @@
       "bc_g1": 0.398,
       "sectional_density": 0.305,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 2530, "energy_ft_lbs": 4263, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2342, "energy_ft_lbs": 3654, "drop_in": -2.1 },
-        { "distance_yd": 200, "velocity_fps": 2162, "energy_ft_lbs": 3114, "drop_in": -8.8 },
-        { "distance_yd": 300, "velocity_fps": 1991, "energy_ft_lbs": 2640, "drop_in": -20.9 },
-        { "distance_yd": 400, "velocity_fps": 1828, "energy_ft_lbs": 2227, "drop_in": -39.5 },
-        { "distance_yd": 500, "velocity_fps": 1676, "energy_ft_lbs": 1872, "drop_in": -66.0 },
-        { "distance_yd": 600, "velocity_fps": 1535, "energy_ft_lbs": 1570, "drop_in": -102.0 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2530,
+          "energy_ft_lbs": 4263,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2342,
+          "energy_ft_lbs": 3654,
+          "drop_in": -2.1
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2162,
+          "energy_ft_lbs": 3114,
+          "drop_in": -8.8
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 1991,
+          "energy_ft_lbs": 2640,
+          "drop_in": -20.9
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 1828,
+          "energy_ft_lbs": 2227,
+          "drop_in": -39.5
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1676,
+          "energy_ft_lbs": 1872,
+          "drop_in": -66.0
+        },
+        {
+          "distance_yd": 600,
+          "velocity_fps": 1535,
+          "energy_ft_lbs": 1570,
+          "drop_in": -102.0
+        }
       ]
     },
     {
@@ -61,21 +133,87 @@
       "bc_g1": 0.356,
       "sectional_density": 0.305,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 2530, "energy_ft_lbs": 4263, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2320, "energy_ft_lbs": 3585, "drop_in": -2.1 },
-        { "distance_yd": 200, "velocity_fps": 2120, "energy_ft_lbs": 2994, "drop_in": -9.1 },
-        { "distance_yd": 300, "velocity_fps": 1931, "energy_ft_lbs": 2486, "drop_in": -21.6 },
-        { "distance_yd": 400, "velocity_fps": 1754, "energy_ft_lbs": 2050, "drop_in": -41.2 },
-        { "distance_yd": 500, "velocity_fps": 1592, "energy_ft_lbs": 1690, "drop_in": -69.5 },
-        { "distance_yd": 600, "velocity_fps": 1447, "energy_ft_lbs": 1395, "drop_in": -108.5 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2530,
+          "energy_ft_lbs": 4263,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2320,
+          "energy_ft_lbs": 3585,
+          "drop_in": -2.1
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2120,
+          "energy_ft_lbs": 2994,
+          "drop_in": -9.1
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 1931,
+          "energy_ft_lbs": 2486,
+          "drop_in": -21.6
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 1754,
+          "energy_ft_lbs": 2050,
+          "drop_in": -41.2
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1592,
+          "energy_ft_lbs": 1690,
+          "drop_in": -69.5
+        },
+        {
+          "distance_yd": 600,
+          "velocity_fps": 1447,
+          "energy_ft_lbs": 1395,
+          "drop_in": -108.5
+        }
       ]
     }
   ],
   "recommended_game": [
-    { "game": "African Dangerous Game", "range": "Under 100 yd", "notes": "300gr premium solids and soft points; the minimum legal caliber for African dangerous game" },
-    { "game": "Grizzly/Brown Bear", "range": "Under 200 yd", "notes": "270-300gr premium bonded or partition bullets; excellent stopping power" },
-    { "game": "Moose", "range": "Under 250 yd", "notes": "270-300gr controlled expansion bullets for reliable one-shot kills" },
-    { "game": "Elk", "range": "Under 300 yd", "notes": "270gr controlled expansion bullets; more power than necessary but extremely effective" },
-    { "game": "African Plains Game", "range": "Under 300 yd", "notes": "270-300gr controlled expansion bullets for all plains game species" }
-  ]
+    {
+      "game": "African Dangerous Game",
+      "range": "Under 100 yd",
+      "notes": "300gr premium solids and soft points; the minimum legal caliber for African dangerous game"
+    },
+    {
+      "game": "Grizzly/Brown Bear",
+      "range": "Under 200 yd",
+      "notes": "270-300gr premium bonded or partition bullets; excellent stopping power"
+    },
+    {
+      "game": "Moose",
+      "range": "Under 250 yd",
+      "notes": "270-300gr controlled expansion bullets for reliable one-shot kills"
+    },
+    {
+      "game": "Elk",
+      "range": "Under 300 yd",
+      "notes": "270gr controlled expansion bullets; more power than necessary but extremely effective"
+    },
+    {
+      "game": "African Plains Game",
+      "range": "Under 300 yd",
+      "notes": "270-300gr controlled expansion bullets for all plains game species"
+    }
+  ],
+  "max_pressure_psi": 62000,
+  "primer_type": "Large Rifle Magnum",
+  "powder_charge_range_gr": [
+    65.0,
+    85.0
+  ],
+  "availability_rating": 3,
+  "annual_production_estimate": "moderate",
+  "price_trend": "stable",
+  "suppressor_friendly": true,
+  "subsonic_loads_available": false
 }

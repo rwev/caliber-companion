@@ -1,7 +1,10 @@
 {
   "name": ".25-06 Remington",
   "designation": ".25-06 Remington",
-  "aliases": [".25-06 Rem", ".25-06"],
+  "aliases": [
+    ".25-06 Rem",
+    ".25-06"
+  ],
   "category": "rifle",
   "slug": "25-06-remington",
   "dimensions": {
@@ -12,9 +15,18 @@
     "rim_diameter_in": 0.473,
     "case_type": "rimless, bottleneck"
   },
-  "typical_velocity_fps": [2900, 3400],
-  "typical_energy_ft_lbs": [1800, 2400],
-  "typical_bullet_weight_gr": [85, 120],
+  "typical_velocity_fps": [
+    2900,
+    3400
+  ],
+  "typical_energy_ft_lbs": [
+    1800,
+    2400
+  ],
+  "typical_bullet_weight_gr": [
+    85,
+    120
+  ],
   "effective_range_yd": 600,
   "max_range_yd": 4500,
   "recoil": {
@@ -24,12 +36,31 @@
   },
   "year_introduced": 1969,
   "country_of_origin": "USA",
-  "military_usage": ["No significant military adoption"],
-  "le_usage": ["No significant law enforcement adoption"],
-  "primary_use_cases": ["deer hunting", "antelope hunting", "varmint hunting", "long-range target shooting", "predator hunting"],
+  "military_usage": [
+    "No significant military adoption"
+  ],
+  "le_usage": [
+    "No significant law enforcement adoption"
+  ],
+  "primary_use_cases": [
+    "deer hunting",
+    "antelope hunting",
+    "varmint hunting",
+    "long-range target shooting",
+    "predator hunting"
+  ],
   "popularity_tier": "common",
-  "cost_per_round_usd": [1.0, 2.8],
-  "common_firearms": ["Remington 700", "Winchester Model 70", "Browning X-Bolt", "Weatherby Vanguard", "Tikka T3x"],
+  "cost_per_round_usd": [
+    1.0,
+    2.8
+  ],
+  "common_firearms": [
+    "Remington 700",
+    "Winchester Model 70",
+    "Browning X-Bolt",
+    "Weatherby Vanguard",
+    "Tikka T3x"
+  ],
   "parent_cartridge": "30-06-springfield",
   "loads": [
     {
@@ -43,12 +74,42 @@
       "bc_g7": 0.196,
       "sectional_density": 0.216,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 3210, "energy_ft_lbs": 2290, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2978, "energy_ft_lbs": 1971, "drop_in": -1.4 },
-        { "distance_yd": 200, "velocity_fps": 2759, "energy_ft_lbs": 1691, "drop_in": -6.3 },
-        { "distance_yd": 300, "velocity_fps": 2550, "energy_ft_lbs": 1443, "drop_in": -15.5 },
-        { "distance_yd": 400, "velocity_fps": 2351, "energy_ft_lbs": 1228, "drop_in": -29.5 },
-        { "distance_yd": 500, "velocity_fps": 2162, "energy_ft_lbs": 1039, "drop_in": -49.5 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 3210,
+          "energy_ft_lbs": 2290,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2978,
+          "energy_ft_lbs": 1971,
+          "drop_in": -1.4
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2759,
+          "energy_ft_lbs": 1691,
+          "drop_in": -6.3
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2550,
+          "energy_ft_lbs": 1443,
+          "drop_in": -15.5
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2351,
+          "energy_ft_lbs": 1228,
+          "drop_in": -29.5
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2162,
+          "energy_ft_lbs": 1039,
+          "drop_in": -49.5
+        }
       ]
     },
     {
@@ -62,19 +123,76 @@
       "bc_g7": 0.233,
       "sectional_density": 0.238,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 3140, "energy_ft_lbs": 2408, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2932, "energy_ft_lbs": 2098, "drop_in": -1.5 },
-        { "distance_yd": 200, "velocity_fps": 2733, "energy_ft_lbs": 1824, "drop_in": -6.7 },
-        { "distance_yd": 300, "velocity_fps": 2543, "energy_ft_lbs": 1580, "drop_in": -16.0 },
-        { "distance_yd": 400, "velocity_fps": 2360, "energy_ft_lbs": 1361, "drop_in": -30.0 },
-        { "distance_yd": 500, "velocity_fps": 2185, "energy_ft_lbs": 1166, "drop_in": -49.8 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 3140,
+          "energy_ft_lbs": 2408,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2932,
+          "energy_ft_lbs": 2098,
+          "drop_in": -1.5
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2733,
+          "energy_ft_lbs": 1824,
+          "drop_in": -6.7
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2543,
+          "energy_ft_lbs": 1580,
+          "drop_in": -16.0
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2360,
+          "energy_ft_lbs": 1361,
+          "drop_in": -30.0
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2185,
+          "energy_ft_lbs": 1166,
+          "drop_in": -49.8
+        }
       ]
     }
   ],
   "recommended_game": [
-    { "game": "Whitetail Deer", "range": "Under 350 yd", "notes": "115-120gr Nosler Partition or Hornady SST for reliable performance" },
-    { "game": "Pronghorn", "range": "Under 400 yd", "notes": "100-115gr ballistic tip bullets; flat-shooting and accurate" },
-    { "game": "Mule Deer", "range": "Under 300 yd", "notes": "115-120gr premium bonded bullets recommended" },
-    { "game": "Coyote", "range": "Under 400 yd", "notes": "75-90gr varmint bullets for rapid expansion" }
-  ]
+    {
+      "game": "Whitetail Deer",
+      "range": "Under 350 yd",
+      "notes": "115-120gr Nosler Partition or Hornady SST for reliable performance"
+    },
+    {
+      "game": "Pronghorn",
+      "range": "Under 400 yd",
+      "notes": "100-115gr ballistic tip bullets; flat-shooting and accurate"
+    },
+    {
+      "game": "Mule Deer",
+      "range": "Under 300 yd",
+      "notes": "115-120gr premium bonded bullets recommended"
+    },
+    {
+      "game": "Coyote",
+      "range": "Under 400 yd",
+      "notes": "75-90gr varmint bullets for rapid expansion"
+    }
+  ],
+  "max_pressure_psi": 63000,
+  "primer_type": "Large Rifle",
+  "powder_charge_range_gr": [
+    44.0,
+    56.0
+  ],
+  "availability_rating": 3,
+  "annual_production_estimate": "moderate",
+  "price_trend": "stable",
+  "suppressor_friendly": true,
+  "subsonic_loads_available": false
 }

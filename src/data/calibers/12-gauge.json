@@ -1,10 +1,12 @@
 {
   "name": "12 Gauge",
   "designation": "12 Gauge (18.53mm)",
-  "aliases": ["12 Bore", "12 GA"],
+  "aliases": [
+    "12 Bore",
+    "12 GA"
+  ],
   "category": "shotgun",
   "slug": "12-gauge",
-
   "dimensions": {
     "bullet_diameter_in": 0.729,
     "neck_diameter_in": 0.813,
@@ -13,42 +15,97 @@
     "rim_diameter_in": 0.871,
     "case_type": "rimmed, straight (plastic hull)"
   },
-
-  "typical_velocity_fps": [1100, 1600],
-  "typical_energy_ft_lbs": [1500, 3000],
-  "typical_bullet_weight_gr": [328, 657],
+  "typical_velocity_fps": [
+    1100,
+    1600
+  ],
+  "typical_energy_ft_lbs": [
+    1500,
+    3000
+  ],
+  "typical_bullet_weight_gr": [
+    328,
+    657
+  ],
   "effective_range_yd": 50,
   "max_range_yd": 200,
-
   "recoil": {
     "free_recoil_ft_lbs": 23.0,
     "reference_firearm": "Remington 870 (18.5\" barrel, 7.5 lbs)",
     "subjective": "heavy"
   },
-
   "year_introduced": 1800,
   "country_of_origin": "United Kingdom",
-  "military_usage": ["U.S. Military breaching operations", "Close quarters combat", "U.S. Marine Corps (M1014/Benelli M4)"],
-  "le_usage": ["Most U.S. police departments (patrol shotgun)", "Federal agencies (entry/breaching)", "Corrections departments"],
-  "primary_use_cases": ["hunting", "home defense", "sport shooting", "breaching", "clay target sports"],
-
-  "popularity_tier": "ubiquitous",
-  "cost_per_round_usd": [0.25, 3.00],
-  "common_firearms": ["Remington 870", "Mossberg 500/590", "Benelli M4", "Beretta 1301 Tactical"],
-
-  "adoption_timeline": [
-    { "year": 1870, "event": "12 gauge standardized as the dominant bore size for sporting shotguns" },
-    { "year": 1897, "event": "Winchester Model 1897 pump-action shotgun introduced, later used in combat" },
-    { "year": 1918, "event": "U.S. Army deploys trench shotguns in World War I with devastating effect" },
-    { "year": 1935, "event": "FBI formally adopts 12-gauge shotguns for law enforcement operations" },
-    { "year": 1950, "event": "Remington introduces the Model 870, which becomes the best-selling shotgun in history" },
-    { "year": 1961, "event": "Mossberg 500 introduced, becoming a staple of military and LE shotgun programs" },
-    { "year": 1975, "event": "SAAMI standardizes 12 gauge 2¾\" and 3\" magnum shell specifications" },
-    { "year": 1986, "event": "Benelli introduces the Super Black Eagle, pioneering inertia-driven semi-auto shotguns" },
-    { "year": 1999, "event": "U.S. Marine Corps adopts the Benelli M4 (M1014) as its Joint Service Combat Shotgun" },
-    { "year": 2005, "event": "Federal introduces FliteControl wad technology, revolutionizing buckshot patterning" }
+  "military_usage": [
+    "U.S. Military breaching operations",
+    "Close quarters combat",
+    "U.S. Marine Corps (M1014/Benelli M4)"
   ],
-
+  "le_usage": [
+    "Most U.S. police departments (patrol shotgun)",
+    "Federal agencies (entry/breaching)",
+    "Corrections departments"
+  ],
+  "primary_use_cases": [
+    "hunting",
+    "home defense",
+    "sport shooting",
+    "breaching",
+    "clay target sports"
+  ],
+  "popularity_tier": "ubiquitous",
+  "cost_per_round_usd": [
+    0.25,
+    3.0
+  ],
+  "common_firearms": [
+    "Remington 870",
+    "Mossberg 500/590",
+    "Benelli M4",
+    "Beretta 1301 Tactical"
+  ],
+  "adoption_timeline": [
+    {
+      "year": 1870,
+      "event": "12 gauge standardized as the dominant bore size for sporting shotguns"
+    },
+    {
+      "year": 1897,
+      "event": "Winchester Model 1897 pump-action shotgun introduced, later used in combat"
+    },
+    {
+      "year": 1918,
+      "event": "U.S. Army deploys trench shotguns in World War I with devastating effect"
+    },
+    {
+      "year": 1935,
+      "event": "FBI formally adopts 12-gauge shotguns for law enforcement operations"
+    },
+    {
+      "year": 1950,
+      "event": "Remington introduces the Model 870, which becomes the best-selling shotgun in history"
+    },
+    {
+      "year": 1961,
+      "event": "Mossberg 500 introduced, becoming a staple of military and LE shotgun programs"
+    },
+    {
+      "year": 1975,
+      "event": "SAAMI standardizes 12 gauge 2¾\" and 3\" magnum shell specifications"
+    },
+    {
+      "year": 1986,
+      "event": "Benelli introduces the Super Black Eagle, pioneering inertia-driven semi-auto shotguns"
+    },
+    {
+      "year": 1999,
+      "event": "U.S. Marine Corps adopts the Benelli M4 (M1014) as its Joint Service Combat Shotgun"
+    },
+    {
+      "year": 2005,
+      "event": "Federal introduces FliteControl wad technology, revolutionizing buckshot patterning"
+    }
+  ],
   "loads": [
     {
       "name": "Federal Power-Shok 00 Buckshot (2¾\")",
@@ -58,11 +115,36 @@
       "muzzle_energy_ft_lbs": 1500,
       "barrel_length_in": 18.5,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 1290, "energy_ft_lbs": 1500, "drop_in": 0.0 },
-        { "distance_yd": 25, "velocity_fps": 1150, "energy_ft_lbs": 1190, "drop_in": -0.5 },
-        { "distance_yd": 50, "velocity_fps": 1030, "energy_ft_lbs": 955, "drop_in": -2.8 },
-        { "distance_yd": 75, "velocity_fps": 945, "energy_ft_lbs": 804, "drop_in": -7.5 },
-        { "distance_yd": 100, "velocity_fps": 880, "energy_ft_lbs": 697, "drop_in": -15.2 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1290,
+          "energy_ft_lbs": 1500,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1150,
+          "energy_ft_lbs": 1190,
+          "drop_in": -0.5
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1030,
+          "energy_ft_lbs": 955,
+          "drop_in": -2.8
+        },
+        {
+          "distance_yd": 75,
+          "velocity_fps": 945,
+          "energy_ft_lbs": 804,
+          "drop_in": -7.5
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 880,
+          "energy_ft_lbs": 697,
+          "drop_in": -15.2
+        }
       ]
     },
     {
@@ -73,20 +155,107 @@
       "muzzle_energy_ft_lbs": 2485,
       "barrel_length_in": 18.5,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 1600, "energy_ft_lbs": 2485, "drop_in": 0.0 },
-        { "distance_yd": 25, "velocity_fps": 1480, "energy_ft_lbs": 2126, "drop_in": -0.3 },
-        { "distance_yd": 50, "velocity_fps": 1370, "energy_ft_lbs": 1822, "drop_in": -1.5 },
-        { "distance_yd": 75, "velocity_fps": 1270, "energy_ft_lbs": 1566, "drop_in": -4.2 },
-        { "distance_yd": 100, "velocity_fps": 1180, "energy_ft_lbs": 1352, "drop_in": -8.7 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1600,
+          "energy_ft_lbs": 2485,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1480,
+          "energy_ft_lbs": 2126,
+          "drop_in": -0.3
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1370,
+          "energy_ft_lbs": 1822,
+          "drop_in": -1.5
+        },
+        {
+          "distance_yd": 75,
+          "velocity_fps": 1270,
+          "energy_ft_lbs": 1566,
+          "drop_in": -4.2
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1180,
+          "energy_ft_lbs": 1352,
+          "drop_in": -8.7
+        }
       ]
     }
   ],
   "recommended_game": [
-    { "game": "Whitetail Deer", "range": "Under 100 yd", "notes": "1 oz rifled slugs or saboted slugs; extremely effective in dense cover and slug-only zones" },
-    { "game": "Waterfowl", "range": "Under 50 yd", "notes": "Steel or bismuth shot #2-BB in 3\" shells; non-toxic shot required for waterfowl" },
-    { "game": "Upland Birds", "range": "Under 40 yd", "notes": "#6-7.5 shot in 2\u00be\" shells; the standard upland gauge" },
-    { "game": "Wild Turkey", "range": "Under 40 yd", "notes": "#4-6 shot in 3\" or 3.5\" shells; TSS loads extend range to 50+ yd" },
-    { "game": "Feral Hogs", "range": "Under 50 yd", "notes": "Brenneke or hard-cast slugs; buckshot effective under 25 yd" },
-    { "game": "Rabbits", "range": "Under 30 yd", "notes": "#6-7.5 shot; light loads in 2\u00be\" shells" }
+    {
+      "game": "Whitetail Deer",
+      "range": "Under 100 yd",
+      "notes": "1 oz rifled slugs or saboted slugs; extremely effective in dense cover and slug-only zones"
+    },
+    {
+      "game": "Waterfowl",
+      "range": "Under 50 yd",
+      "notes": "Steel or bismuth shot #2-BB in 3\" shells; non-toxic shot required for waterfowl"
+    },
+    {
+      "game": "Upland Birds",
+      "range": "Under 40 yd",
+      "notes": "#6-7.5 shot in 2¾\" shells; the standard upland gauge"
+    },
+    {
+      "game": "Wild Turkey",
+      "range": "Under 40 yd",
+      "notes": "#4-6 shot in 3\" or 3.5\" shells; TSS loads extend range to 50+ yd"
+    },
+    {
+      "game": "Feral Hogs",
+      "range": "Under 50 yd",
+      "notes": "Brenneke or hard-cast slugs; buckshot effective under 25 yd"
+    },
+    {
+      "game": "Rabbits",
+      "range": "Under 30 yd",
+      "notes": "#6-7.5 shot; light loads in 2¾\" shells"
+    }
+  ],
+  "availability_rating": 5,
+  "annual_production_estimate": "massive",
+  "price_trend": "stable",
+  "suppressor_friendly": false,
+  "subsonic_loads_available": true,
+  "military_adoption_detail": [
+    {
+      "organization": "U.S. Military",
+      "designation": "M500/M590",
+      "role": "Breaching/CQB shotgun",
+      "status": "active"
+    },
+    {
+      "organization": "U.S. Marine Corps",
+      "designation": "M1014",
+      "year_adopted": 1999,
+      "role": "Combat shotgun",
+      "status": "active"
+    }
+  ],
+  "le_adoption_detail": [
+    {
+      "organization": "Most U.S. police departments",
+      "role": "Patrol shotgun",
+      "status": "active"
+    },
+    {
+      "organization": "U.S. Marshals",
+      "role": "Breaching shotgun",
+      "status": "active"
+    }
+  ],
+  "dangerous_substitutions": [
+    {
+      "caliber": "20 Gauge",
+      "danger": "A 20-gauge shell can slide past the chamber of a 12-gauge gun and lodge in the barrel. If a 12-gauge shell is then loaded and fired behind it, catastrophic barrel failure will occur."
+    }
   ]
 }

@@ -1,10 +1,11 @@
 {
   "name": ".28 Nosler",
   "designation": ".28 Nosler",
-  "aliases": [".28 Nos"],
+  "aliases": [
+    ".28 Nos"
+  ],
   "category": "magnum_rifle",
   "slug": "28-nosler",
-
   "dimensions": {
     "bullet_diameter_in": 0.284,
     "neck_diameter_in": 0.3215,
@@ -13,31 +14,52 @@
     "rim_diameter_in": 0.534,
     "case_type": "rebated rim, bottleneck"
   },
-
-  "typical_velocity_fps": [2900, 3300],
-  "typical_energy_ft_lbs": [3200, 4000],
-  "typical_bullet_weight_gr": [140, 185],
+  "typical_velocity_fps": [
+    2900,
+    3300
+  ],
+  "typical_energy_ft_lbs": [
+    3200,
+    4000
+  ],
+  "typical_bullet_weight_gr": [
+    140,
+    185
+  ],
   "effective_range_yd": 1200,
   "max_range_yd": 5500,
-
   "recoil": {
     "free_recoil_ft_lbs": 27.0,
     "reference_firearm": "Nosler Model 48 (26\" barrel, 8.25 lbs)",
     "subjective": "heavy"
   },
-
   "year_introduced": 2015,
   "country_of_origin": "USA",
   "military_usage": [],
   "le_usage": [],
-  "primary_use_cases": ["long-range hunting", "elk hunting", "long-range competition", "mule deer hunting", "mountain hunting"],
-
+  "primary_use_cases": [
+    "long-range hunting",
+    "elk hunting",
+    "long-range competition",
+    "mule deer hunting",
+    "mountain hunting"
+  ],
   "popularity_tier": "niche",
-  "cost_per_round_usd": [2.00, 5.00],
-  "common_firearms": ["Nosler Model 48", "Christensen Arms Ridgeline", "Browning X-Bolt", "Fierce Firearms CT Edge", "Gunwerks Nexus"],
-
-  "derived_cartridges": ["30-nosler", "33-nosler"],
-
+  "cost_per_round_usd": [
+    2.0,
+    5.0
+  ],
+  "common_firearms": [
+    "Nosler Model 48",
+    "Christensen Arms Ridgeline",
+    "Browning X-Bolt",
+    "Fierce Firearms CT Edge",
+    "Gunwerks Nexus"
+  ],
+  "derived_cartridges": [
+    "30-nosler",
+    "33-nosler"
+  ],
   "loads": [
     {
       "name": "Nosler Trophy Grade 160 gr AccuBond",
@@ -47,13 +69,48 @@
       "muzzle_energy_ft_lbs": 3637,
       "barrel_length_in": 26.0,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 3200, "energy_ft_lbs": 3637, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 3013, "energy_ft_lbs": 3225, "drop_in": -1.0 },
-        { "distance_yd": 200, "velocity_fps": 2833, "energy_ft_lbs": 2850, "drop_in": -4.3 },
-        { "distance_yd": 300, "velocity_fps": 2661, "energy_ft_lbs": 2514, "drop_in": -10.3 },
-        { "distance_yd": 400, "velocity_fps": 2495, "energy_ft_lbs": 2212, "drop_in": -19.4 },
-        { "distance_yd": 500, "velocity_fps": 2335, "energy_ft_lbs": 1938, "drop_in": -32.0 },
-        { "distance_yd": 600, "velocity_fps": 2182, "energy_ft_lbs": 1690, "drop_in": -48.8 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 3200,
+          "energy_ft_lbs": 3637,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 3013,
+          "energy_ft_lbs": 3225,
+          "drop_in": -1.0
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2833,
+          "energy_ft_lbs": 2850,
+          "drop_in": -4.3
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2661,
+          "energy_ft_lbs": 2514,
+          "drop_in": -10.3
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2495,
+          "energy_ft_lbs": 2212,
+          "drop_in": -19.4
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2335,
+          "energy_ft_lbs": 1938,
+          "drop_in": -32.0
+        },
+        {
+          "distance_yd": 600,
+          "velocity_fps": 2182,
+          "energy_ft_lbs": 1690,
+          "drop_in": -48.8
+        }
       ]
     },
     {
@@ -64,21 +121,87 @@
       "muzzle_energy_ft_lbs": 3569,
       "barrel_length_in": 26.0,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 3150, "energy_ft_lbs": 3569, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2985, "energy_ft_lbs": 3205, "drop_in": -1.0 },
-        { "distance_yd": 200, "velocity_fps": 2825, "energy_ft_lbs": 2871, "drop_in": -4.4 },
-        { "distance_yd": 300, "velocity_fps": 2670, "energy_ft_lbs": 2565, "drop_in": -10.5 },
-        { "distance_yd": 400, "velocity_fps": 2521, "energy_ft_lbs": 2285, "drop_in": -19.4 },
-        { "distance_yd": 500, "velocity_fps": 2377, "energy_ft_lbs": 2032, "drop_in": -31.5 },
-        { "distance_yd": 600, "velocity_fps": 2237, "energy_ft_lbs": 1800, "drop_in": -47.4 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 3150,
+          "energy_ft_lbs": 3569,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2985,
+          "energy_ft_lbs": 3205,
+          "drop_in": -1.0
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2825,
+          "energy_ft_lbs": 2871,
+          "drop_in": -4.4
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2670,
+          "energy_ft_lbs": 2565,
+          "drop_in": -10.5
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2521,
+          "energy_ft_lbs": 2285,
+          "drop_in": -19.4
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2377,
+          "energy_ft_lbs": 2032,
+          "drop_in": -31.5
+        },
+        {
+          "distance_yd": 600,
+          "velocity_fps": 2237,
+          "energy_ft_lbs": 1800,
+          "drop_in": -47.4
+        }
       ]
     }
   ],
   "recommended_game": [
-    { "game": "Elk", "range": "Under 600 yd", "notes": "160-175gr premium bonded or AccuBond Long Range bullets" },
-    { "game": "Mule Deer", "range": "Under 600 yd", "notes": "150-162gr controlled expansion bullets" },
-    { "game": "Whitetail Deer", "range": "Under 500 yd", "notes": "150-160gr polymer tip or bonded bullets" },
-    { "game": "Mountain Goat", "range": "Under 500 yd", "notes": "160-175gr premium bonded bullets; flat trajectory for alpine hunting" },
-    { "game": "Caribou", "range": "Under 500 yd", "notes": "160-175gr bonded or partition bullets" }
-  ]
+    {
+      "game": "Elk",
+      "range": "Under 600 yd",
+      "notes": "160-175gr premium bonded or AccuBond Long Range bullets"
+    },
+    {
+      "game": "Mule Deer",
+      "range": "Under 600 yd",
+      "notes": "150-162gr controlled expansion bullets"
+    },
+    {
+      "game": "Whitetail Deer",
+      "range": "Under 500 yd",
+      "notes": "150-160gr polymer tip or bonded bullets"
+    },
+    {
+      "game": "Mountain Goat",
+      "range": "Under 500 yd",
+      "notes": "160-175gr premium bonded bullets; flat trajectory for alpine hunting"
+    },
+    {
+      "game": "Caribou",
+      "range": "Under 500 yd",
+      "notes": "160-175gr bonded or partition bullets"
+    }
+  ],
+  "max_pressure_psi": 65000,
+  "primer_type": "Large Rifle Magnum",
+  "powder_charge_range_gr": [
+    68.0,
+    82.0
+  ],
+  "availability_rating": 2,
+  "annual_production_estimate": "limited",
+  "price_trend": "rising",
+  "suppressor_friendly": false,
+  "subsonic_loads_available": false
 }

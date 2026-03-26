@@ -1,7 +1,10 @@
 {
   "name": ".45 ACP",
   "designation": ".45 Auto",
-  "aliases": [".45 Auto", "11.43\u00d723mm"],
+  "aliases": [
+    ".45 Auto",
+    "11.43\u00d723mm"
+  ],
   "category": "handgun",
   "slug": "45-acp",
   "dimensions": {
@@ -12,9 +15,18 @@
     "rim_diameter_in": 0.48,
     "case_type": "rimless, straight"
   },
-  "typical_velocity_fps": [830, 1050],
-  "typical_energy_ft_lbs": [350, 500],
-  "typical_bullet_weight_gr": [185, 230],
+  "typical_velocity_fps": [
+    830,
+    1050
+  ],
+  "typical_energy_ft_lbs": [
+    350,
+    500
+  ],
+  "typical_bullet_weight_gr": [
+    185,
+    230
+  ],
   "effective_range_yd": 50,
   "max_range_yd": 1600,
   "recoil": {
@@ -24,22 +36,72 @@
   },
   "year_introduced": 1905,
   "country_of_origin": "USA",
-  "military_usage": ["U.S. Military (M1911, M1A1 Thompson)", "NATO secondary sidearm cartridge", "Various allied forces (WWII era)"],
-  "le_usage": ["FBI (historical)", "U.S. Marshals (historical)", "Various U.S. police departments"],
-  "primary_use_cases": ["self-defense", "military sidearm", "law enforcement", "target shooting", "competition"],
+  "military_usage": [
+    "U.S. Military (M1911, M1A1 Thompson)",
+    "NATO secondary sidearm cartridge",
+    "Various allied forces (WWII era)"
+  ],
+  "le_usage": [
+    "FBI (historical)",
+    "U.S. Marshals (historical)",
+    "Various U.S. police departments"
+  ],
+  "primary_use_cases": [
+    "self-defense",
+    "military sidearm",
+    "law enforcement",
+    "target shooting",
+    "competition"
+  ],
   "popularity_tier": "very_common",
-  "cost_per_round_usd": [0.3, 1.0],
-  "common_firearms": ["1911 (various manufacturers)", "Glock 21", "SIG Sauer P220", "Springfield XD", "HK USP .45"],
+  "cost_per_round_usd": [
+    0.3,
+    1.0
+  ],
+  "common_firearms": [
+    "1911 (various manufacturers)",
+    "Glock 21",
+    "SIG Sauer P220",
+    "Springfield XD",
+    "HK USP .45"
+  ],
   "adoption_timeline": [
-    { "year": 1905, "event": "John Browning develops the .45 ACP cartridge for Colt's semi-automatic pistol" },
-    { "year": 1906, "event": "U.S. Army begins pistol trials requiring a .45-caliber minimum" },
-    { "year": 1911, "event": "U.S. Army adopts the Colt M1911 pistol in .45 ACP as its standard sidearm" },
-    { "year": 1919, "event": "Thompson submachine gun introduced in .45 ACP, later used by military and law enforcement" },
-    { "year": 1926, "event": "M1911A1 upgrade adopted with improved grip and sights" },
-    { "year": 1945, "event": "Over 2.7 million M1911/M1911A1 pistols produced for World War II service" },
-    { "year": 1985, "event": "U.S. military replaces .45 ACP M1911A1 with the 9mm Beretta M9" },
-    { "year": 2005, "event": "USMC orders new M45A1 CQBP 1911 pistols for MARSOC in .45 ACP" },
-    { "year": 2012, "event": "Civilian 1911 market surges with numerous manufacturers offering modern variants" }
+    {
+      "year": 1905,
+      "event": "John Browning develops the .45 ACP cartridge for Colt's semi-automatic pistol"
+    },
+    {
+      "year": 1906,
+      "event": "U.S. Army begins pistol trials requiring a .45-caliber minimum"
+    },
+    {
+      "year": 1911,
+      "event": "U.S. Army adopts the Colt M1911 pistol in .45 ACP as its standard sidearm"
+    },
+    {
+      "year": 1919,
+      "event": "Thompson submachine gun introduced in .45 ACP, later used by military and law enforcement"
+    },
+    {
+      "year": 1926,
+      "event": "M1911A1 upgrade adopted with improved grip and sights"
+    },
+    {
+      "year": 1945,
+      "event": "Over 2.7 million M1911/M1911A1 pistols produced for World War II service"
+    },
+    {
+      "year": 1985,
+      "event": "U.S. military replaces .45 ACP M1911A1 with the 9mm Beretta M9"
+    },
+    {
+      "year": 2005,
+      "event": "USMC orders new M45A1 CQBP 1911 pistols for MARSOC in .45 ACP"
+    },
+    {
+      "year": 2012,
+      "event": "Civilian 1911 market surges with numerous manufacturers offering modern variants"
+    }
   ],
   "loads": [
     {
@@ -52,11 +114,36 @@
       "bc_g1": 0.195,
       "sectional_density": 0.161,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 890, "energy_ft_lbs": 405, "drop_in": 0.0 },
-        { "distance_yd": 25, "velocity_fps": 860, "energy_ft_lbs": 378, "drop_in": -0.4 },
-        { "distance_yd": 50, "velocity_fps": 833, "energy_ft_lbs": 354, "drop_in": -1.8 },
-        { "distance_yd": 75, "velocity_fps": 808, "energy_ft_lbs": 333, "drop_in": -4.6 },
-        { "distance_yd": 100, "velocity_fps": 785, "energy_ft_lbs": 315, "drop_in": -9.3 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 890,
+          "energy_ft_lbs": 405,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 860,
+          "energy_ft_lbs": 378,
+          "drop_in": -0.4
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 833,
+          "energy_ft_lbs": 354,
+          "drop_in": -1.8
+        },
+        {
+          "distance_yd": 75,
+          "velocity_fps": 808,
+          "energy_ft_lbs": 333,
+          "drop_in": -4.6
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 785,
+          "energy_ft_lbs": 315,
+          "drop_in": -9.3
+        }
       ]
     },
     {
@@ -72,12 +159,56 @@
       "expansion_diameter_in": 0.85,
       "barrier_blind": true,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 890, "energy_ft_lbs": 405, "drop_in": 0.0 },
-        { "distance_yd": 25, "velocity_fps": 857, "energy_ft_lbs": 375, "drop_in": -0.4 },
-        { "distance_yd": 50, "velocity_fps": 828, "energy_ft_lbs": 350, "drop_in": -1.9 },
-        { "distance_yd": 75, "velocity_fps": 800, "energy_ft_lbs": 327, "drop_in": -4.8 },
-        { "distance_yd": 100, "velocity_fps": 775, "energy_ft_lbs": 307, "drop_in": -9.7 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 890,
+          "energy_ft_lbs": 405,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 857,
+          "energy_ft_lbs": 375,
+          "drop_in": -0.4
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 828,
+          "energy_ft_lbs": 350,
+          "drop_in": -1.9
+        },
+        {
+          "distance_yd": 75,
+          "velocity_fps": 800,
+          "energy_ft_lbs": 327,
+          "drop_in": -4.8
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 775,
+          "energy_ft_lbs": 307,
+          "drop_in": -9.7
+        }
       ]
     }
+  ],
+  "max_pressure_psi": 21000,
+  "primer_type": "Large Pistol",
+  "powder_charge_range_gr": [
+    4.5,
+    8.0
+  ],
+  "availability_rating": 4,
+  "annual_production_estimate": "high",
+  "price_trend": "stable",
+  "suppressor_friendly": true,
+  "subsonic_loads_available": true,
+  "military_adoption_detail": [
+    { "organization": "U.S. Army", "designation": "M1911", "year_adopted": 1911, "role": "Standard sidearm cartridge", "status": "retired" },
+    { "organization": "U.S. Marine Corps MARSOC", "designation": "M45A1", "year_adopted": 2012, "role": "Special operations sidearm cartridge", "status": "active" },
+    { "organization": "U.S. Special Forces", "role": "Special operations sidearm cartridge (select units)", "status": "active" }
+  ],
+  "le_adoption_detail": [
+    { "organization": "Various U.S. agencies", "year_adopted": 1911, "role": "Standard duty cartridge", "status": "retired" }
   ]
 }

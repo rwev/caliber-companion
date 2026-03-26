@@ -1,55 +1,102 @@
 {
   "name": ".410 Bore",
   "designation": ".410 Bore",
-  "aliases": [".410", ".410 Shotgun", "36 Gauge"],
+  "aliases": [
+    ".410",
+    ".410 Shotgun",
+    "36 Gauge"
+  ],
   "category": "shotgun",
   "slug": "410-bore",
-
   "dimensions": {
-    "bullet_diameter_in": 0.410,
-    "neck_diameter_in": 0.470,
-    "case_length_in": 2.50,
-    "overall_length_in": 2.50,
+    "bullet_diameter_in": 0.41,
+    "neck_diameter_in": 0.47,
+    "case_length_in": 2.5,
+    "overall_length_in": 2.5,
     "rim_diameter_in": 0.535,
     "case_type": "rimmed, straight (plastic hull)"
   },
-
-  "typical_velocity_fps": [1100, 1400],
-  "typical_energy_ft_lbs": [350, 900],
-  "typical_bullet_weight_gr": [109, 328],
+  "typical_velocity_fps": [
+    1100,
+    1400
+  ],
+  "typical_energy_ft_lbs": [
+    350,
+    900
+  ],
+  "typical_bullet_weight_gr": [
+    109,
+    328
+  ],
   "effective_range_yd": 25,
   "max_range_yd": 100,
-
   "recoil": {
     "free_recoil_ft_lbs": 6.0,
     "reference_firearm": "Mossberg 500 .410 (24\" barrel, 5.5 lbs)",
     "subjective": "very_low"
   },
-
   "year_introduced": 1874,
   "country_of_origin": "United Kingdom",
   "military_usage": [],
   "le_usage": [],
-  "primary_use_cases": ["small game hunting", "pest control", "youth shooting", "sport shooting", "self-defense"],
-
+  "primary_use_cases": [
+    "small game hunting",
+    "pest control",
+    "youth shooting",
+    "sport shooting",
+    "self-defense"
+  ],
   "popularity_tier": "common",
-  "cost_per_round_usd": [0.35, 2.00],
-  "common_firearms": ["Mossberg 500 .410", "Henry Single Shot .410", "Taurus Judge", "Smith & Wesson Governor", "Winchester SXP .410"],
-
+  "cost_per_round_usd": [
+    0.35,
+    2.0
+  ],
+  "common_firearms": [
+    "Mossberg 500 .410",
+    "Henry Single Shot .410",
+    "Taurus Judge",
+    "Smith & Wesson Governor",
+    "Winchester SXP .410"
+  ],
   "loads": [
     {
-      "name": "Winchester Super-X .410 000 Buckshot (2½\")",
+      "name": "Winchester Super-X .410 000 Buckshot (2\u00bd\")",
       "bullet_weight_gr": 146,
       "bullet_type": "000 Buckshot (3 pellets, .360\" diameter)",
       "muzzle_velocity_fps": 1300,
       "muzzle_energy_ft_lbs": 548,
       "barrel_length_in": 24.0,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 1300, "energy_ft_lbs": 548, "drop_in": 0.0 },
-        { "distance_yd": 25, "velocity_fps": 1140, "energy_ft_lbs": 421, "drop_in": -0.5 },
-        { "distance_yd": 50, "velocity_fps": 1015, "energy_ft_lbs": 334, "drop_in": -2.9 },
-        { "distance_yd": 75, "velocity_fps": 930, "energy_ft_lbs": 280, "drop_in": -7.8 },
-        { "distance_yd": 100, "velocity_fps": 865, "energy_ft_lbs": 242, "drop_in": -15.8 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1300,
+          "energy_ft_lbs": 548,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1140,
+          "energy_ft_lbs": 421,
+          "drop_in": -0.5
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1015,
+          "energy_ft_lbs": 334,
+          "drop_in": -2.9
+        },
+        {
+          "distance_yd": 75,
+          "velocity_fps": 930,
+          "energy_ft_lbs": 280,
+          "drop_in": -7.8
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 865,
+          "energy_ft_lbs": 242,
+          "drop_in": -15.8
+        }
       ]
     },
     {
@@ -60,18 +107,64 @@
       "muzzle_energy_ft_lbs": 647,
       "barrel_length_in": 24.0,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 1830, "energy_ft_lbs": 647, "drop_in": 0.0 },
-        { "distance_yd": 25, "velocity_fps": 1620, "energy_ft_lbs": 507, "drop_in": -0.2 },
-        { "distance_yd": 50, "velocity_fps": 1435, "energy_ft_lbs": 398, "drop_in": -1.2 },
-        { "distance_yd": 75, "velocity_fps": 1280, "energy_ft_lbs": 317, "drop_in": -3.5 },
-        { "distance_yd": 100, "velocity_fps": 1155, "energy_ft_lbs": 258, "drop_in": -7.8 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1830,
+          "energy_ft_lbs": 647,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1620,
+          "energy_ft_lbs": 507,
+          "drop_in": -0.2
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1435,
+          "energy_ft_lbs": 398,
+          "drop_in": -1.2
+        },
+        {
+          "distance_yd": 75,
+          "velocity_fps": 1280,
+          "energy_ft_lbs": 317,
+          "drop_in": -3.5
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1155,
+          "energy_ft_lbs": 258,
+          "drop_in": -7.8
+        }
       ]
     }
   ],
   "recommended_game": [
-    { "game": "Upland Birds", "range": "Under 25 yd", "notes": "#7.5-8 shot in 2.5\" or 3\" shells; requires close flushes and precise shooting" },
-    { "game": "Squirrels", "range": "Under 25 yd", "notes": "#6 shot; ideal for tree squirrels with minimal meat damage" },
-    { "game": "Rabbits", "range": "Under 20 yd", "notes": "#6-7.5 shot; close-range only due to light shot payload" },
-    { "game": "Wild Turkey", "range": "Under 25 yd", "notes": "TSS #9 shot in 3\" shells; modern TSS loads make .410 viable for turkey" }
-  ]
+    {
+      "game": "Upland Birds",
+      "range": "Under 25 yd",
+      "notes": "#7.5-8 shot in 2.5\" or 3\" shells; requires close flushes and precise shooting"
+    },
+    {
+      "game": "Squirrels",
+      "range": "Under 25 yd",
+      "notes": "#6 shot; ideal for tree squirrels with minimal meat damage"
+    },
+    {
+      "game": "Rabbits",
+      "range": "Under 20 yd",
+      "notes": "#6-7.5 shot; close-range only due to light shot payload"
+    },
+    {
+      "game": "Wild Turkey",
+      "range": "Under 25 yd",
+      "notes": "TSS #9 shot in 3\" shells; modern TSS loads make .410 viable for turkey"
+    }
+  ],
+  "availability_rating": 4,
+  "annual_production_estimate": "high",
+  "price_trend": "stable",
+  "suppressor_friendly": false,
+  "subsonic_loads_available": false
 }

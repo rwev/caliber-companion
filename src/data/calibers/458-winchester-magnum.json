@@ -1,43 +1,64 @@
 {
   "name": ".458 Winchester Magnum",
   "designation": ".458 Winchester Magnum",
-  "aliases": [".458 Win Mag", ".458 WM"],
+  "aliases": [
+    ".458 Win Mag",
+    ".458 WM"
+  ],
   "category": "magnum_rifle",
   "slug": "458-winchester-magnum",
-
   "dimensions": {
     "bullet_diameter_in": 0.458,
     "neck_diameter_in": 0.481,
-    "case_length_in": 2.500,
-    "overall_length_in": 3.340,
+    "case_length_in": 2.5,
+    "overall_length_in": 3.34,
     "rim_diameter_in": 0.513,
     "case_type": "belted, straight-tapered"
   },
-
-  "typical_velocity_fps": [1800, 2300],
-  "typical_energy_ft_lbs": [4500, 5800],
-  "typical_bullet_weight_gr": [350, 600],
+  "typical_velocity_fps": [
+    1800,
+    2300
+  ],
+  "typical_energy_ft_lbs": [
+    4500,
+    5800
+  ],
+  "typical_bullet_weight_gr": [
+    350,
+    600
+  ],
   "effective_range_yd": 250,
   "max_range_yd": 2500,
-
   "recoil": {
     "free_recoil_ft_lbs": 60.0,
     "reference_firearm": "Winchester Model 70 Safari Express (22\" barrel, 9.0 lbs)",
     "subjective": "very_heavy"
   },
-
   "year_introduced": 1956,
   "country_of_origin": "USA",
-  "military_usage": ["Limited use by various African military and game control units"],
+  "military_usage": [
+    "Limited use by various African military and game control units"
+  ],
   "le_usage": [],
-  "primary_use_cases": ["dangerous game hunting", "African safari", "elephant hunting", "Cape buffalo", "hippopotamus"],
-
+  "primary_use_cases": [
+    "dangerous game hunting",
+    "African safari",
+    "elephant hunting",
+    "Cape buffalo",
+    "hippopotamus"
+  ],
   "popularity_tier": "niche",
-  "cost_per_round_usd": [4.00, 10.00],
-  "common_firearms": ["Winchester Model 70 Safari Express", "Ruger RSM", "CZ 550 Safari Magnum", "Remington 700 Safari"],
-
+  "cost_per_round_usd": [
+    4.0,
+    10.0
+  ],
+  "common_firearms": [
+    "Winchester Model 70 Safari Express",
+    "Ruger RSM",
+    "CZ 550 Safari Magnum",
+    "Remington 700 Safari"
+  ],
   "parent_cartridge": "375-hh-magnum",
-
   "loads": [
     {
       "name": "Hornady Dangerous Game 500 gr DGS",
@@ -47,12 +68,42 @@
       "muzzle_energy_ft_lbs": 5084,
       "barrel_length_in": 22.0,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 2140, "energy_ft_lbs": 5084, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 1935, "energy_ft_lbs": 4159, "drop_in": -3.5 },
-        { "distance_yd": 200, "velocity_fps": 1744, "energy_ft_lbs": 3378, "drop_in": -14.5 },
-        { "distance_yd": 300, "velocity_fps": 1569, "energy_ft_lbs": 2733, "drop_in": -34.8 },
-        { "distance_yd": 400, "velocity_fps": 1414, "energy_ft_lbs": 2220, "drop_in": -66.8 },
-        { "distance_yd": 500, "velocity_fps": 1282, "energy_ft_lbs": 1825, "drop_in": -113.5 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2140,
+          "energy_ft_lbs": 5084,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1935,
+          "energy_ft_lbs": 4159,
+          "drop_in": -3.5
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1744,
+          "energy_ft_lbs": 3378,
+          "drop_in": -14.5
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 1569,
+          "energy_ft_lbs": 2733,
+          "drop_in": -34.8
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 1414,
+          "energy_ft_lbs": 2220,
+          "drop_in": -66.8
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1282,
+          "energy_ft_lbs": 1825,
+          "drop_in": -113.5
+        }
       ]
     },
     {
@@ -63,19 +114,76 @@
       "muzzle_energy_ft_lbs": 4849,
       "barrel_length_in": 22.0,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 2090, "energy_ft_lbs": 4849, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 1870, "energy_ft_lbs": 3882, "drop_in": -3.8 },
-        { "distance_yd": 200, "velocity_fps": 1667, "energy_ft_lbs": 3084, "drop_in": -15.8 },
-        { "distance_yd": 300, "velocity_fps": 1484, "energy_ft_lbs": 2445, "drop_in": -38.2 },
-        { "distance_yd": 400, "velocity_fps": 1327, "energy_ft_lbs": 1954, "drop_in": -73.8 },
-        { "distance_yd": 500, "velocity_fps": 1203, "energy_ft_lbs": 1607, "drop_in": -126.0 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2090,
+          "energy_ft_lbs": 4849,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1870,
+          "energy_ft_lbs": 3882,
+          "drop_in": -3.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1667,
+          "energy_ft_lbs": 3084,
+          "drop_in": -15.8
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 1484,
+          "energy_ft_lbs": 2445,
+          "drop_in": -38.2
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 1327,
+          "energy_ft_lbs": 1954,
+          "drop_in": -73.8
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1203,
+          "energy_ft_lbs": 1607,
+          "drop_in": -126.0
+        }
       ]
     }
   ],
   "recommended_game": [
-    { "game": "African Dangerous Game", "range": "Under 75 yd", "notes": "500gr premium solids and soft points; classic African stopping rifle cartridge" },
-    { "game": "Cape Buffalo", "range": "Under 75 yd", "notes": "500gr FMJ solids for deep straight-line penetration" },
-    { "game": "Elephant", "range": "Under 50 yd", "notes": "500gr premium monolithic solids; the standard for elephant" },
-    { "game": "Grizzly/Brown Bear", "range": "Under 75 yd", "notes": "500gr premium soft point bullets; extreme stopping power" }
-  ]
+    {
+      "game": "African Dangerous Game",
+      "range": "Under 75 yd",
+      "notes": "500gr premium solids and soft points; classic African stopping rifle cartridge"
+    },
+    {
+      "game": "Cape Buffalo",
+      "range": "Under 75 yd",
+      "notes": "500gr FMJ solids for deep straight-line penetration"
+    },
+    {
+      "game": "Elephant",
+      "range": "Under 50 yd",
+      "notes": "500gr premium monolithic solids; the standard for elephant"
+    },
+    {
+      "game": "Grizzly/Brown Bear",
+      "range": "Under 75 yd",
+      "notes": "500gr premium soft point bullets; extreme stopping power"
+    }
+  ],
+  "max_pressure_psi": 62000,
+  "primer_type": "Large Rifle Magnum",
+  "powder_charge_range_gr": [
+    70.0,
+    90.0
+  ],
+  "availability_rating": 2,
+  "annual_production_estimate": "limited",
+  "price_trend": "stable",
+  "suppressor_friendly": false,
+  "subsonic_loads_available": false
 }

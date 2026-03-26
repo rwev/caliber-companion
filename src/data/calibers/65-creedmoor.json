@@ -1,7 +1,10 @@
 {
   "name": "6.5 Creedmoor",
   "designation": "6.5mm Creedmoor",
-  "aliases": ["6.5 CM", "6.5 Creed"],
+  "aliases": [
+    "6.5 CM",
+    "6.5 Creed"
+  ],
   "category": "rifle",
   "slug": "65-creedmoor",
   "dimensions": {
@@ -12,9 +15,18 @@
     "rim_diameter_in": 0.473,
     "case_type": "rimless, bottleneck"
   },
-  "typical_velocity_fps": [2600, 2900],
-  "typical_energy_ft_lbs": [2100, 2400],
-  "typical_bullet_weight_gr": [120, 147],
+  "typical_velocity_fps": [
+    2600,
+    2900
+  ],
+  "typical_energy_ft_lbs": [
+    2100,
+    2400
+  ],
+  "typical_bullet_weight_gr": [
+    120,
+    147
+  ],
   "effective_range_yd": 1000,
   "max_range_yd": 5500,
   "recoil": {
@@ -24,26 +36,78 @@
   },
   "year_introduced": 2007,
   "country_of_origin": "USA",
-  "military_usage": ["U.S. Special Operations Command (selected sniper roles)", "USMC M110A1 SDMR (6.5 CM variant evaluation)"],
-  "le_usage": ["FBI HRT (precision rifle)", "Select state and federal law enforcement precision rifle units"],
-  "primary_use_cases": ["precision rifle competition", "long-range target shooting", "hunting (deer, elk, antelope)", "designated marksman rifle"],
+  "military_usage": [
+    "U.S. Special Operations Command (selected sniper roles)",
+    "USMC M110A1 SDMR (6.5 CM variant evaluation)"
+  ],
+  "le_usage": [
+    "FBI HRT (precision rifle)",
+    "Select state and federal law enforcement precision rifle units"
+  ],
+  "primary_use_cases": [
+    "precision rifle competition",
+    "long-range target shooting",
+    "hunting (deer, elk, antelope)",
+    "designated marksman rifle"
+  ],
   "popularity_tier": "very_common",
-  "cost_per_round_usd": [0.8, 2.5],
-  "common_firearms": ["Ruger Precision Rifle", "Savage 110 Elite Precision", "Bergara B-14 HMR", "Tikka T3x CTR", "Christensen Arms Ridgeline"],
+  "cost_per_round_usd": [
+    0.8,
+    2.5
+  ],
+  "common_firearms": [
+    "Ruger Precision Rifle",
+    "Savage 110 Elite Precision",
+    "Bergara B-14 HMR",
+    "Tikka T3x CTR",
+    "Christensen Arms Ridgeline"
+  ],
   "adoption_timeline": [
-    { "year": 2007, "event": "Hornady and Creedmoor Sports introduce the 6.5 Creedmoor for precision rifle competition" },
-    { "year": 2008, "event": "SAAMI approves and standardizes the 6.5 Creedmoor cartridge" },
-    { "year": 2012, "event": "Gains strong following in PRS (Precision Rifle Series) competition circuits" },
-    { "year": 2015, "event": "Ruger Precision Rifle in 6.5 CM launched, making precision shooting affordable" },
-    { "year": 2017, "event": "U.S. Special Operations Command evaluates 6.5 Creedmoor for sniper applications" },
-    { "year": 2018, "event": "USSOCOM adopts the Barrett MRAD in 6.5 Creedmoor for intermediate sniper use" },
-    { "year": 2018, "event": "Becomes the fastest-growing rifle cartridge in U.S. civilian sales" },
-    { "year": 2019, "event": "Department of Homeland Security selects 6.5 Creedmoor for precision rifle programs" },
-    { "year": 2020, "event": "Widely adopted by deer and elk hunters as a low-recoil alternative to .308 Winchester" },
-    { "year": 2022, "event": "Dominates PRS competition with majority of top finishers using 6.5 Creedmoor" }
+    {
+      "year": 2007,
+      "event": "Hornady and Creedmoor Sports introduce the 6.5 Creedmoor for precision rifle competition"
+    },
+    {
+      "year": 2008,
+      "event": "SAAMI approves and standardizes the 6.5 Creedmoor cartridge"
+    },
+    {
+      "year": 2012,
+      "event": "Gains strong following in PRS (Precision Rifle Series) competition circuits"
+    },
+    {
+      "year": 2015,
+      "event": "Ruger Precision Rifle in 6.5 CM launched, making precision shooting affordable"
+    },
+    {
+      "year": 2017,
+      "event": "U.S. Special Operations Command evaluates 6.5 Creedmoor for sniper applications"
+    },
+    {
+      "year": 2018,
+      "event": "USSOCOM adopts the Barrett MRAD in 6.5 Creedmoor for intermediate sniper use"
+    },
+    {
+      "year": 2018,
+      "event": "Becomes the fastest-growing rifle cartridge in U.S. civilian sales"
+    },
+    {
+      "year": 2019,
+      "event": "Department of Homeland Security selects 6.5 Creedmoor for precision rifle programs"
+    },
+    {
+      "year": 2020,
+      "event": "Widely adopted by deer and elk hunters as a low-recoil alternative to .308 Winchester"
+    },
+    {
+      "year": 2022,
+      "event": "Dominates PRS competition with majority of top finishers using 6.5 Creedmoor"
+    }
   ],
   "parent_cartridge": "308-winchester",
-  "derived_cartridges": ["6mm-creedmoor"],
+  "derived_cartridges": [
+    "6mm-creedmoor"
+  ],
   "loads": [
     {
       "name": "Hornady ELD Match 140 gr",
@@ -52,16 +116,46 @@
       "muzzle_velocity_fps": 2710,
       "muzzle_energy_ft_lbs": 2283,
       "barrel_length_in": 24.0,
-      "bc_g1": 0.610,
+      "bc_g1": 0.61,
       "bc_g7": 0.305,
       "sectional_density": 0.287,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 2710, "energy_ft_lbs": 2283, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2557, "energy_ft_lbs": 2033, "drop_in": -2.2 },
-        { "distance_yd": 200, "velocity_fps": 2409, "energy_ft_lbs": 1804, "drop_in": -8.8 },
-        { "distance_yd": 300, "velocity_fps": 2265, "energy_ft_lbs": 1595, "drop_in": -20.4 },
-        { "distance_yd": 400, "velocity_fps": 2126, "energy_ft_lbs": 1405, "drop_in": -37.6 },
-        { "distance_yd": 500, "velocity_fps": 1992, "energy_ft_lbs": 1233, "drop_in": -61.3 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2710,
+          "energy_ft_lbs": 2283,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2557,
+          "energy_ft_lbs": 2033,
+          "drop_in": -2.2
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2409,
+          "energy_ft_lbs": 1804,
+          "drop_in": -8.8
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2265,
+          "energy_ft_lbs": 1595,
+          "drop_in": -20.4
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2126,
+          "energy_ft_lbs": 1405,
+          "drop_in": -37.6
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1992,
+          "energy_ft_lbs": 1233,
+          "drop_in": -61.3
+        }
       ]
     },
     {
@@ -72,22 +166,84 @@
       "muzzle_energy_ft_lbs": 2386,
       "barrel_length_in": 24.0,
       "bc_g1": 0.564,
-      "bc_g7": 0.290,
+      "bc_g7": 0.29,
       "sectional_density": 0.266,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 2875, "energy_ft_lbs": 2386, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2714, "energy_ft_lbs": 2127, "drop_in": -1.8 },
-        { "distance_yd": 200, "velocity_fps": 2558, "energy_ft_lbs": 1889, "drop_in": -7.8 },
-        { "distance_yd": 300, "velocity_fps": 2407, "energy_ft_lbs": 1672, "drop_in": -18.2 },
-        { "distance_yd": 400, "velocity_fps": 2261, "energy_ft_lbs": 1475, "drop_in": -33.6 },
-        { "distance_yd": 500, "velocity_fps": 2120, "energy_ft_lbs": 1297, "drop_in": -54.8 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2875,
+          "energy_ft_lbs": 2386,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2714,
+          "energy_ft_lbs": 2127,
+          "drop_in": -1.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2558,
+          "energy_ft_lbs": 1889,
+          "drop_in": -7.8
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2407,
+          "energy_ft_lbs": 1672,
+          "drop_in": -18.2
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2261,
+          "energy_ft_lbs": 1475,
+          "drop_in": -33.6
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2120,
+          "energy_ft_lbs": 1297,
+          "drop_in": -54.8
+        }
       ]
     }
   ],
   "recommended_game": [
-    { "game": "Whitetail Deer", "range": "Under 500 yd", "notes": "129-143gr controlled expansion bullets such as Hornady ELD-X" },
-    { "game": "Mule Deer", "range": "Under 400 yd", "notes": "140-143gr bonded or partition bullets recommended" },
-    { "game": "Pronghorn", "range": "Under 500 yd", "notes": "129-140gr polymer tip bullets; excellent long-range trajectory" },
-    { "game": "Elk", "range": "Under 300 yd", "notes": "140-143gr premium bonded or partition bullets; ideal shot placement critical" }
-  ]
+    {
+      "game": "Whitetail Deer",
+      "range": "Under 500 yd",
+      "notes": "129-143gr controlled expansion bullets such as Hornady ELD-X"
+    },
+    {
+      "game": "Mule Deer",
+      "range": "Under 400 yd",
+      "notes": "140-143gr bonded or partition bullets recommended"
+    },
+    {
+      "game": "Pronghorn",
+      "range": "Under 500 yd",
+      "notes": "129-140gr polymer tip bullets; excellent long-range trajectory"
+    },
+    {
+      "game": "Elk",
+      "range": "Under 300 yd",
+      "notes": "140-143gr premium bonded or partition bullets; ideal shot placement critical"
+    }
+  ],
+  "max_pressure_psi": 62000,
+  "primer_type": "Large Rifle",
+  "powder_charge_range_gr": [
+    34.0,
+    44.0
+  ],
+  "availability_rating": 4,
+  "annual_production_estimate": "high",
+  "price_trend": "stable",
+  "suppressor_friendly": true,
+  "subsonic_loads_available": false,
+  "military_adoption_detail": [
+    { "organization": "U.S. SOCOM", "year_adopted": 2018, "role": "Precision rifle cartridge (evaluation/limited adoption)", "status": "active" },
+    { "organization": "U.S. Army", "year_adopted": 2018, "role": "Squad Designated Marksman Rifle cartridge (evaluated)", "status": "active" }
+  ],
+  "le_adoption_detail": []
 }

@@ -1,10 +1,13 @@
 {
   "name": "8mm Mauser",
-  "designation": "7.92×57mm Mauser",
-  "aliases": ["8×57mm JS", "8mm Mauser", "7.92×57mm IS"],
+  "designation": "7.92\u00d757mm Mauser",
+  "aliases": [
+    "8\u00d757mm JS",
+    "8mm Mauser",
+    "7.92\u00d757mm IS"
+  ],
   "category": "rifle",
   "slug": "8mm-mauser",
-
   "dimensions": {
     "bullet_diameter_in": 0.323,
     "neck_diameter_in": 0.352,
@@ -13,31 +16,53 @@
     "rim_diameter_in": 0.473,
     "case_type": "rimless, bottleneck"
   },
-
-  "typical_velocity_fps": [2400, 2800],
-  "typical_energy_ft_lbs": [2500, 3000],
-  "typical_bullet_weight_gr": [150, 198],
+  "typical_velocity_fps": [
+    2400,
+    2800
+  ],
+  "typical_energy_ft_lbs": [
+    2500,
+    3000
+  ],
+  "typical_bullet_weight_gr": [
+    150,
+    198
+  ],
   "effective_range_yd": 800,
   "max_range_yd": 4000,
-
   "recoil": {
     "free_recoil_ft_lbs": 17.0,
     "reference_firearm": "Mauser K98k (23.6\" barrel, 8.2 lbs)",
     "subjective": "heavy"
   },
-
   "year_introduced": 1905,
   "country_of_origin": "Germany",
-  "military_usage": ["German standard rifle cartridge (WWI and WWII)", "Wehrmacht and SS primary infantry round", "MG 34 and MG 42 machine guns", "Turkish, Yugoslav, and Chinese militaries"],
+  "military_usage": [
+    "German standard rifle cartridge (WWI and WWII)",
+    "Wehrmacht and SS primary infantry round",
+    "MG 34 and MG 42 machine guns",
+    "Turkish, Yugoslav, and Chinese militaries"
+  ],
   "le_usage": [],
-  "primary_use_cases": ["military service rifle", "hunting (medium to large game)", "target shooting", "surplus collecting"],
-
+  "primary_use_cases": [
+    "military service rifle",
+    "hunting (medium to large game)",
+    "target shooting",
+    "surplus collecting"
+  ],
   "popularity_tier": "common",
-  "cost_per_round_usd": [0.50, 2.00],
-  "common_firearms": ["Mauser K98k", "Gewehr 98", "FN Model 1924", "Yugoslav M48", "MG 42"],
-
+  "cost_per_round_usd": [
+    0.5,
+    2.0
+  ],
+  "common_firearms": [
+    "Mauser K98k",
+    "Gewehr 98",
+    "FN Model 1924",
+    "Yugoslav M48",
+    "MG 42"
+  ],
   "parent_cartridge": "7x57mm-mauser",
-
   "loads": [
     {
       "name": "PPU 198 gr FMJ-BT",
@@ -47,12 +72,42 @@
       "muzzle_energy_ft_lbs": 2585,
       "barrel_length_in": 23.6,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 2425, "energy_ft_lbs": 2585, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2252, "energy_ft_lbs": 2230, "drop_in": -3.4 },
-        { "distance_yd": 200, "velocity_fps": 2086, "energy_ft_lbs": 1913, "drop_in": -13.0 },
-        { "distance_yd": 300, "velocity_fps": 1928, "energy_ft_lbs": 1635, "drop_in": -30.0 },
-        { "distance_yd": 400, "velocity_fps": 1779, "energy_ft_lbs": 1391, "drop_in": -55.8 },
-        { "distance_yd": 500, "velocity_fps": 1639, "energy_ft_lbs": 1181, "drop_in": -92.0 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2425,
+          "energy_ft_lbs": 2585,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2252,
+          "energy_ft_lbs": 2230,
+          "drop_in": -3.4
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2086,
+          "energy_ft_lbs": 1913,
+          "drop_in": -13.0
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 1928,
+          "energy_ft_lbs": 1635,
+          "drop_in": -30.0
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 1779,
+          "energy_ft_lbs": 1391,
+          "drop_in": -55.8
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1639,
+          "energy_ft_lbs": 1181,
+          "drop_in": -92.0
+        }
       ]
     },
     {
@@ -63,20 +118,81 @@
       "muzzle_energy_ft_lbs": 2922,
       "barrel_length_in": 23.6,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 2591, "energy_ft_lbs": 2922, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2388, "energy_ft_lbs": 2482, "drop_in": -2.9 },
-        { "distance_yd": 200, "velocity_fps": 2195, "energy_ft_lbs": 2098, "drop_in": -11.5 },
-        { "distance_yd": 300, "velocity_fps": 2011, "energy_ft_lbs": 1760, "drop_in": -26.8 },
-        { "distance_yd": 400, "velocity_fps": 1838, "energy_ft_lbs": 1470, "drop_in": -50.0 },
-        { "distance_yd": 500, "velocity_fps": 1676, "energy_ft_lbs": 1223, "drop_in": -83.0 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2591,
+          "energy_ft_lbs": 2922,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2388,
+          "energy_ft_lbs": 2482,
+          "drop_in": -2.9
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2195,
+          "energy_ft_lbs": 2098,
+          "drop_in": -11.5
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2011,
+          "energy_ft_lbs": 1760,
+          "drop_in": -26.8
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 1838,
+          "energy_ft_lbs": 1470,
+          "drop_in": -50.0
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1676,
+          "energy_ft_lbs": 1223,
+          "drop_in": -83.0
+        }
       ]
     }
   ],
   "recommended_game": [
-    { "game": "Whitetail Deer", "range": "Under 300 yd", "notes": "170-200gr soft point or controlled expansion bullets" },
-    { "game": "Mule Deer", "range": "Under 300 yd", "notes": "195-200gr bonded or partition bullets recommended" },
-    { "game": "Elk", "range": "Under 250 yd", "notes": "200-220gr premium bonded or partition bullets; powerful medium bore" },
-    { "game": "Black Bear", "range": "Under 250 yd", "notes": "195-220gr bonded bullets for deep penetration" },
-    { "game": "Feral Hogs", "range": "Under 250 yd", "notes": "170-200gr soft point bullets" }
-  ]
+    {
+      "game": "Whitetail Deer",
+      "range": "Under 300 yd",
+      "notes": "170-200gr soft point or controlled expansion bullets"
+    },
+    {
+      "game": "Mule Deer",
+      "range": "Under 300 yd",
+      "notes": "195-200gr bonded or partition bullets recommended"
+    },
+    {
+      "game": "Elk",
+      "range": "Under 250 yd",
+      "notes": "200-220gr premium bonded or partition bullets; powerful medium bore"
+    },
+    {
+      "game": "Black Bear",
+      "range": "Under 250 yd",
+      "notes": "195-220gr bonded bullets for deep penetration"
+    },
+    {
+      "game": "Feral Hogs",
+      "range": "Under 250 yd",
+      "notes": "170-200gr soft point bullets"
+    }
+  ],
+  "max_pressure_psi": 50000,
+  "primer_type": "Large Rifle",
+  "powder_charge_range_gr": [
+    44.0,
+    56.0
+  ],
+  "availability_rating": 3,
+  "annual_production_estimate": "moderate",
+  "price_trend": "rising",
+  "suppressor_friendly": false,
+  "subsonic_loads_available": false
 }

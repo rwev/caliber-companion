@@ -1,7 +1,10 @@
 {
   "name": ".338 Winchester Magnum",
   "designation": ".338 Winchester Magnum",
-  "aliases": [".338 Win Mag", ".338 WM"],
+  "aliases": [
+    ".338 Win Mag",
+    ".338 WM"
+  ],
   "category": "magnum_rifle",
   "slug": "338-winchester-magnum",
   "dimensions": {
@@ -12,9 +15,18 @@
     "rim_diameter_in": 0.532,
     "case_type": "belted, bottleneck"
   },
-  "typical_velocity_fps": [2600, 2950],
-  "typical_energy_ft_lbs": [3500, 4500],
-  "typical_bullet_weight_gr": [185, 300],
+  "typical_velocity_fps": [
+    2600,
+    2950
+  ],
+  "typical_energy_ft_lbs": [
+    3500,
+    4500
+  ],
+  "typical_bullet_weight_gr": [
+    185,
+    300
+  ],
   "effective_range_yd": 900,
   "max_range_yd": 5000,
   "recoil": {
@@ -24,14 +36,37 @@
   },
   "year_introduced": 1958,
   "country_of_origin": "USA",
-  "military_usage": ["Limited military sniper use", "Finnish Defence Forces"],
-  "le_usage": ["Specialized barrier-defeating law enforcement roles"],
-  "primary_use_cases": ["large game hunting", "elk hunting", "brown bear hunting", "African plains game", "moose hunting"],
+  "military_usage": [
+    "Limited military sniper use",
+    "Finnish Defence Forces"
+  ],
+  "le_usage": [
+    "Specialized barrier-defeating law enforcement roles"
+  ],
+  "primary_use_cases": [
+    "large game hunting",
+    "elk hunting",
+    "brown bear hunting",
+    "African plains game",
+    "moose hunting"
+  ],
   "popularity_tier": "common",
-  "cost_per_round_usd": [1.75, 5.0],
-  "common_firearms": ["Winchester Model 70", "Remington 700", "Browning X-Bolt", "Weatherby Vanguard", "Tikka T3x", "Ruger Hawkeye"],
+  "cost_per_round_usd": [
+    1.75,
+    5.0
+  ],
+  "common_firearms": [
+    "Winchester Model 70",
+    "Remington 700",
+    "Browning X-Bolt",
+    "Weatherby Vanguard",
+    "Tikka T3x",
+    "Ruger Hawkeye"
+  ],
   "parent_cartridge": "375-hh-magnum",
-  "derived_cartridges": ["340-weatherby-magnum"],
+  "derived_cartridges": [
+    "340-weatherby-magnum"
+  ],
   "loads": [
     {
       "name": "Federal Trophy Bonded Bear Claw 225 gr",
@@ -43,13 +78,48 @@
       "bc_g1": 0.393,
       "sectional_density": 0.281,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 2800, "energy_ft_lbs": 3918, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2601, "energy_ft_lbs": 3379, "drop_in": -1.6 },
-        { "distance_yd": 200, "velocity_fps": 2410, "energy_ft_lbs": 2903, "drop_in": -6.9 },
-        { "distance_yd": 300, "velocity_fps": 2228, "energy_ft_lbs": 2480, "drop_in": -16.4 },
-        { "distance_yd": 400, "velocity_fps": 2053, "energy_ft_lbs": 2107, "drop_in": -31.0 },
-        { "distance_yd": 500, "velocity_fps": 1887, "energy_ft_lbs": 1779, "drop_in": -51.8 },
-        { "distance_yd": 600, "velocity_fps": 1731, "energy_ft_lbs": 1496, "drop_in": -80.2 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2800,
+          "energy_ft_lbs": 3918,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2601,
+          "energy_ft_lbs": 3379,
+          "drop_in": -1.6
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2410,
+          "energy_ft_lbs": 2903,
+          "drop_in": -6.9
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2228,
+          "energy_ft_lbs": 2480,
+          "drop_in": -16.4
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2053,
+          "energy_ft_lbs": 2107,
+          "drop_in": -31.0
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1887,
+          "energy_ft_lbs": 1779,
+          "drop_in": -51.8
+        },
+        {
+          "distance_yd": 600,
+          "velocity_fps": 1731,
+          "energy_ft_lbs": 1496,
+          "drop_in": -80.2
+        }
       ]
     },
     {
@@ -59,25 +129,91 @@
       "muzzle_velocity_fps": 2800,
       "muzzle_energy_ft_lbs": 3918,
       "barrel_length_in": 24.0,
-      "bc_g1": 0.550,
+      "bc_g1": 0.55,
       "bc_g7": 0.274,
       "sectional_density": 0.281,
       "ballistics": [
-        { "distance_yd": 0, "velocity_fps": 2800, "energy_ft_lbs": 3918, "drop_in": 0.0 },
-        { "distance_yd": 100, "velocity_fps": 2620, "energy_ft_lbs": 3429, "drop_in": -1.5 },
-        { "distance_yd": 200, "velocity_fps": 2447, "energy_ft_lbs": 2992, "drop_in": -6.6 },
-        { "distance_yd": 300, "velocity_fps": 2280, "energy_ft_lbs": 2598, "drop_in": -15.7 },
-        { "distance_yd": 400, "velocity_fps": 2120, "energy_ft_lbs": 2245, "drop_in": -29.4 },
-        { "distance_yd": 500, "velocity_fps": 1966, "energy_ft_lbs": 1931, "drop_in": -48.6 },
-        { "distance_yd": 600, "velocity_fps": 1819, "energy_ft_lbs": 1653, "drop_in": -74.5 }
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2800,
+          "energy_ft_lbs": 3918,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2620,
+          "energy_ft_lbs": 3429,
+          "drop_in": -1.5
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2447,
+          "energy_ft_lbs": 2992,
+          "drop_in": -6.6
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2280,
+          "energy_ft_lbs": 2598,
+          "drop_in": -15.7
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2120,
+          "energy_ft_lbs": 2245,
+          "drop_in": -29.4
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1966,
+          "energy_ft_lbs": 1931,
+          "drop_in": -48.6
+        },
+        {
+          "distance_yd": 600,
+          "velocity_fps": 1819,
+          "energy_ft_lbs": 1653,
+          "drop_in": -74.5
+        }
       ]
     }
   ],
   "recommended_game": [
-    { "game": "Elk", "range": "Under 400 yd", "notes": "225-250gr premium bonded or partition bullets; premier elk cartridge" },
-    { "game": "Moose", "range": "Under 350 yd", "notes": "225-250gr Nosler Partition or Swift A-Frame for deep penetration" },
-    { "game": "Grizzly/Brown Bear", "range": "Under 200 yd", "notes": "250gr premium bonded or partition bullets; proven bear cartridge" },
-    { "game": "African Plains Game", "range": "Under 300 yd", "notes": "225-250gr premium bonded bullets for large-bodied game" },
-    { "game": "Caribou", "range": "Under 400 yd", "notes": "225-250gr bonded or partition bullets" }
-  ]
+    {
+      "game": "Elk",
+      "range": "Under 400 yd",
+      "notes": "225-250gr premium bonded or partition bullets; premier elk cartridge"
+    },
+    {
+      "game": "Moose",
+      "range": "Under 350 yd",
+      "notes": "225-250gr Nosler Partition or Swift A-Frame for deep penetration"
+    },
+    {
+      "game": "Grizzly/Brown Bear",
+      "range": "Under 200 yd",
+      "notes": "250gr premium bonded or partition bullets; proven bear cartridge"
+    },
+    {
+      "game": "African Plains Game",
+      "range": "Under 300 yd",
+      "notes": "225-250gr premium bonded bullets for large-bodied game"
+    },
+    {
+      "game": "Caribou",
+      "range": "Under 400 yd",
+      "notes": "225-250gr bonded or partition bullets"
+    }
+  ],
+  "max_pressure_psi": 64000,
+  "primer_type": "Large Rifle Magnum",
+  "powder_charge_range_gr": [
+    62.0,
+    78.0
+  ],
+  "availability_rating": 3,
+  "annual_production_estimate": "moderate",
+  "price_trend": "stable",
+  "suppressor_friendly": true,
+  "subsonic_loads_available": false
 }
