@@ -14,9 +14,27 @@ const bestOf = [
   { href: '/guides/best-long-range-calibers', title: 'Best for Long-Range', desc: 'Precision tiers from 500 yards to ELR 1500+' },
   { href: '/guides/best-calibers-for-beginners', title: 'Best for Beginners', desc: 'First handgun, rifle, shotgun, and budget picks' },
 ];
+
+const allItems = [...bestOf, ...sorted.map(g => ({ href: `/guides/${g.data.slug}`, title: g.data.title, desc: g.data.summary }))];
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Caliber Guides',
+  description: 'Curated caliber recommendation guides for home defense, hunting, competition, concealed carry, and more.',
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: allItems.length,
+    itemListElement: allItems.map((item, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: item.title,
+      url: `https://rwev.github.io${item.href}`,
+    })),
+  },
+};
 ---
 
-<BaseLayout breadcrumbs={[{ label: 'Guides' }]} title="Guides" description="Curated caliber recommendation guides for home defense, hunting, competition, concealed carry, and more.">
+<BaseLayout breadcrumbs={[{ label: 'Guides' }]} title="Guides" description="Curated caliber recommendation guides for home defense, hunting, competition, concealed carry, and more." jsonLd={jsonLd}>
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
     <div class="mb-10">
       <h1 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">

@@ -166,14 +166,51 @@ const bOnlyUses = b.primary_use_cases.filter(u => !a.primary_use_cases.includes(
 const pageTitle = `${a.name} vs ${b.name}`;
 const pageDescription = `Side-by-side comparison of ${a.name} and ${b.name}: ballistics, recoil, cost, dimensions, and use cases.`;
 
+const recoilWinner = a.recoil.free_recoil_ft_lbs < b.recoil.free_recoil_ft_lbs ? a.name : b.name;
+const energyWinner = avg(a.typical_energy_ft_lbs) > avg(b.typical_energy_ft_lbs) ? a.name : b.name;
+const rangeWinner = a.effective_range_yd > b.effective_range_yd ? a.name : b.name;
+
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Article',
-  'name': pageTitle,
-  'headline': `${a.name} vs ${b.name} — Complete Caliber Comparison`,
-  'description': pageDescription,
-  'publisher': { '@type': 'Organization', 'name': 'Caliber Companion' },
-  'mainEntityOfPage': `https://rwev.github.io/compare/${slugA}-vs-${slugB}`,
+  '@graph': [
+    {
+      '@type': 'Article',
+      'name': pageTitle,
+      'headline': `${a.name} vs ${b.name} — Complete Caliber Comparison`,
+      'description': pageDescription,
+      'publisher': { '@type': 'Organization', 'name': 'Caliber Companion' },
+      'mainEntityOfPage': `https://rwev.github.io/compare/${slugA}-vs-${slugB}`,
+    },
+    {
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': `What is the difference between ${a.name} and ${b.name}?`,
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': `${a.name} (${a.designation}) is a ${a.category.replace('_', ' ')} cartridge with ${fmtRange(a.typical_energy_ft_lbs, 'ft-lbs')} of energy and ${a.effective_range_yd} yd effective range. ${b.name} (${b.designation}) is a ${b.category.replace('_', ' ')} cartridge with ${fmtRange(b.typical_energy_ft_lbs, 'ft-lbs')} of energy and ${b.effective_range_yd} yd effective range.`,
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': `Which has less recoil, ${a.name} or ${b.name}?`,
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': `${recoilWinner} has less recoil. ${a.name} produces ${a.recoil.free_recoil_ft_lbs} ft-lbs of free recoil (${titleCase(a.recoil.subjective)}), while ${b.name} produces ${b.recoil.free_recoil_ft_lbs} ft-lbs (${titleCase(b.recoil.subjective)}).`,
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': `Which is more powerful, ${a.name} or ${b.name}?`,
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': `${energyWinner} delivers more muzzle energy. ${a.name} produces ${fmtRange(a.typical_energy_ft_lbs, 'ft-lbs')}, while ${b.name} produces ${fmtRange(b.typical_energy_ft_lbs, 'ft-lbs')}.`,
+          },
+        },
+      ],
+    },
+  ],
 };
 
 function renderTable(title: string, rows: CompRow[]) {

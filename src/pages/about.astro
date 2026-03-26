@@ -29,7 +29,14 @@ const stats = [
 ];
 ---
 
-<BaseLayout title="About Caliber Companion" description="About Caliber Companion — the most comprehensive free firearm caliber reference online. Site statistics, features, and what makes this resource unique." breadcrumbs={[{ label: 'About' }]}>
+<BaseLayout title="About Caliber Companion" description="About Caliber Companion — the most comprehensive free firearm caliber reference online. Site statistics, features, and what makes this resource unique." breadcrumbs={[{ label: 'About' }]} jsonLd={{
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Caliber Companion',
+  url: 'https://rwev.github.io/',
+  description: 'The most comprehensive free firearm caliber reference online. Ballistic data, cartridge specifications, and comparison tools.',
+  logo: 'https://rwev.github.io/favicon.svg',
+}}>
   <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
     <div class="mb-8">
       <h1 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">

@@ -20,6 +20,23 @@ const caliberSummaries = calibers.map(c => ({
   year_introduced: c.data.year_introduced,
 }));
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Browse Calibers',
+  description: 'Browse, search, filter, and visualize firearm calibers by category, performance, recoil, and cost.',
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: calibers.length,
+    itemListElement: calibers.map((c, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: c.data.name,
+      url: `https://rwev.github.io/calibers/${c.data.slug}`,
+    })),
+  },
+};
+
 const scatterPoints = calibers.map(c => ({
   name: c.data.name,
   slug: c.data.slug,
@@ -33,7 +50,7 @@ const scatterPoints = calibers.map(c => ({
 }));
 ---
 
-<BaseLayout breadcrumbs={[{ label: 'Calibers' }]} title="Browse Calibers" description="Browse, search, filter, and visualize 100 firearm calibers by category, performance, recoil, and cost.">
+<BaseLayout breadcrumbs={[{ label: 'Calibers' }]} title="Browse Calibers" description="Browse, search, filter, and visualize 100 firearm calibers by category, performance, recoil, and cost." jsonLd={jsonLd}>
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
     <div class="mb-8">
       <h1 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">

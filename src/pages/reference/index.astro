@@ -90,9 +90,27 @@ const sections = [
     ],
   },
 ];
+
+const allItems = sections.flatMap(s => s.items);
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Reference',
+  description: 'Technical reference data for firearms calibers — glossary, timeline, rankings, databases, and regulations.',
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: allItems.length,
+    itemListElement: allItems.map((item, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: item.title,
+      url: `https://rwev.github.io${item.href}`,
+    })),
+  },
+};
 ---
 
-<BaseLayout breadcrumbs={[{ label: 'Reference' }]} title="Reference" description="Technical reference data for firearms calibers — glossary, timeline, rankings, databases, and regulations.">
+<BaseLayout breadcrumbs={[{ label: 'Reference' }]} title="Reference" description="Technical reference data for firearms calibers — glossary, timeline, rankings, databases, and regulations." jsonLd={jsonLd}>
   <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
     <div class="mb-10">
       <h1 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">

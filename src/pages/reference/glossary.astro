@@ -105,9 +105,23 @@ const sections: { title: string; entries: GlossaryEntry[] }[] = [
     ],
   },
 ];
+
+const allEntries = sections.flatMap(s => s.entries);
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: allEntries.map(entry => ({
+    '@type': 'Question',
+    name: `What is ${entry.term}${entry.abbr ? ` (${entry.abbr})` : ''}?`,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: entry.definition,
+    },
+  })),
+};
 ---
 
-<BaseLayout breadcrumbs={[{ label: 'Reference', href: '/reference' }, { label: 'Glossary' }]} title="Glossary" description="Definitions for ballistic, cartridge, reloading, and firearms terminology used throughout Caliber Companion.">
+<BaseLayout breadcrumbs={[{ label: 'Reference', href: '/reference' }, { label: 'Glossary' }]} title="Glossary" description="Definitions for ballistic, cartridge, reloading, and firearms terminology used throughout Caliber Companion." jsonLd={faqJsonLd}>
   <div class="mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-12">
     <div class="mb-8">
       <h1 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">

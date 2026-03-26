@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import FavoritesList from '../components/islands/FavoritesList';
 import RecentlyViewed from '../components/islands/RecentlyViewed';
-import NewsletterSignup from '../components/islands/NewsletterSignup';
+
 import { getCollection } from 'astro:content';
 import { fmtRange, fmtNumber, titleCase } from '../lib/format';
 
@@ -145,7 +145,22 @@ const featured = featuredSlugs
   .filter(Boolean);
 ---
 
-<BaseLayout title="Home">
+<BaseLayout
+  title="Home"
+  description="Ballistic data, cartridge specifications, and comparison tools for 102 firearm calibers. Detailed load profiles, trajectory tables, recoil data, and side-by-side analysis."
+  jsonLd={{
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Caliber Companion',
+    url: 'https://rwev.github.io/',
+    description: 'Ballistic data, cartridge specifications, and comparison tools for 102 firearm calibers.',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://rwev.github.io/calibers?q={search_term_string}',
+      'query-input': 'required name=search_term_string',
+    },
+  }}
+>
   <!-- Hero: Title + Cartridge Silhouettes -->
   <section class="relative overflow-hidden">
     <div class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
@@ -585,19 +600,4 @@ const featured = featuredSlugs
     </div>
   </section>
 
-  <!-- Newsletter Signup -->
-  <section class="border-t border-surface-border bg-surface-raised/50">
-    <div class="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16 text-center">
-      <div class="mb-2 flex items-center justify-center gap-2">
-        <svg class="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-        </svg>
-        <h2 class="text-sm font-semibold uppercase tracking-wide text-text-muted">Stay Updated</h2>
-      </div>
-      <p class="mb-6 text-sm text-text-muted">
-        New caliber data, tool updates, and guides — no spam, unsubscribe anytime.
-      </p>
-      <NewsletterSignup client:idle />
-    </div>
-  </section>
 </BaseLayout>

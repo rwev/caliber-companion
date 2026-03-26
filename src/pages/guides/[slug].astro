@@ -19,9 +19,37 @@ const referenced = g.calibers
   .map(slug => calibers.find(c => c.data.slug === slug))
   .filter(Boolean)
   .map(c => c!.data);
+
+const caliberList = referenced.map(c => c.name).join(', ');
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: g.title,
+      description: g.summary,
+      dateModified: g.last_updated?.toISOString(),
+      publisher: { '@type': 'Organization', name: 'Caliber Companion' },
+      mainEntityOfPage: `https://rwev.github.io/guides/${g.slug}`,
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: g.title.startsWith('Best') ? `${g.title}?` : `What are the ${g.title.toLowerCase()}?`,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: `${g.summary} Top picks include: ${caliberList}.`,
+          },
+        },
+      ],
+    },
+  ],
+};
 ---
 
-<BaseLayout title={g.title} description={g.summary} ogType="article" breadcrumbs={[{ label: 'Guides', href: '/guides' }, { label: g.title }]}>
+<BaseLayout title={g.title} description={g.summary} ogType="article" breadcrumbs={[{ label: 'Guides', href: '/guides' }, { label: g.title }]} jsonLd={jsonLd}>
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
     <!-- Header -->
     <div class="mb-8 border-b border-surface-border pb-6">
