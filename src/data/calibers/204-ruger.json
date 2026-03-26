@@ -29,7 +29,7 @@
   "effective_range_yd": 400,
   "max_range_yd": 3000,
   "recoil": {
-    "free_recoil_ft_lbs": 3,
+    "free_recoil_ft_lbs": 3.0,
     "reference_firearm": "Ruger Model 77 (26\" barrel, 7.5 lbs)",
     "subjective": "very_low"
   },
@@ -62,7 +62,7 @@
       "bullet_type": "V-Max (Polymer Tip)",
       "muzzle_velocity_fps": 4225,
       "muzzle_energy_ft_lbs": 1268,
-      "barrel_length_in": 26,
+      "barrel_length_in": 26.0,
       "bc_g1": 0.21,
       "sectional_density": 0.11,
       "ballistics": [
@@ -70,7 +70,7 @@
           "distance_yd": 0,
           "velocity_fps": 4225,
           "energy_ft_lbs": 1268,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -110,7 +110,7 @@
       "bullet_type": "V-Max (Polymer Tip)",
       "muzzle_velocity_fps": 3900,
       "muzzle_energy_ft_lbs": 1351,
-      "barrel_length_in": 26,
+      "barrel_length_in": 26.0,
       "bc_g1": 0.275,
       "sectional_density": 0.137,
       "ballistics": [
@@ -118,7 +118,7 @@
           "distance_yd": 0,
           "velocity_fps": 3900,
           "energy_ft_lbs": 1351,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -142,55 +142,13 @@
           "distance_yd": 400,
           "velocity_fps": 2343,
           "energy_ft_lbs": 487,
-          "drop_in": -22
+          "drop_in": -22.0
         },
         {
           "distance_yd": 500,
           "velocity_fps": 2036,
           "energy_ft_lbs": 368,
           "drop_in": -39.5
-        }
-      ]
-    },
-    {
-      "name": "Hornady V-MAX 40 gr",
-      "bullet_weight_gr": 40,
-      "bullet_type": "V-MAX",
-      "muzzle_velocity_fps": 3900,
-      "muzzle_energy_ft_lbs": 1351,
-      "barrel_length_in": 24,
-      "bc_g1": 0.275,
-      "sectional_density": 0.137,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 3900,
-          "energy_ft_lbs": 1351,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 3477,
-          "energy_ft_lbs": 1074,
-          "drop_in": -0.6
-        },
-        {
-          "distance_yd": 200,
-          "velocity_fps": 3094,
-          "energy_ft_lbs": 850,
-          "drop_in": -3.6
-        },
-        {
-          "distance_yd": 300,
-          "velocity_fps": 2744,
-          "energy_ft_lbs": 668,
-          "drop_in": -9.8
-        },
-        {
-          "distance_yd": 400,
-          "velocity_fps": 2422,
-          "energy_ft_lbs": 521,
-          "drop_in": -20.2
         }
       ]
     }
@@ -215,8 +173,8 @@
   "max_pressure_psi": 57500,
   "primer_type": "Small Rifle",
   "powder_charge_range_gr": [
-    22,
-    29
+    22.0,
+    29.0
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",

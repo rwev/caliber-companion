@@ -3,7 +3,7 @@
   "designation": ".30 Super Carry",
   "aliases": [
     ".30 SC",
-    "7.65×21.5mm"
+    "7.65\u00d721.5mm"
   ],
   "category": "handgun",
   "slug": "30-super-carry",
@@ -66,7 +66,7 @@
           "distance_yd": 0,
           "velocity_fps": 1250,
           "energy_ft_lbs": 347,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 25,
@@ -101,7 +101,7 @@
       "muzzle_velocity_fps": 1200,
       "muzzle_energy_ft_lbs": 320,
       "barrel_length_in": 3.1,
-      "gel_penetration_in": 14,
+      "gel_penetration_in": 14.0,
       "expansion_diameter_in": 0.5,
       "barrier_blind": true,
       "ballistics": [
@@ -109,7 +109,7 @@
           "distance_yd": 0,
           "velocity_fps": 1200,
           "energy_ft_lbs": 320,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 25,
@@ -121,7 +121,7 @@
           "distance_yd": 50,
           "velocity_fps": 1105,
           "energy_ft_lbs": 271,
-          "drop_in": -1
+          "drop_in": -1.0
         },
         {
           "distance_yd": 75,
@@ -136,52 +136,13 @@
           "drop_in": -5.9
         }
       ]
-    },
-    {
-      "name": "Federal Premium HST 100 gr JHP",
-      "bullet_weight_gr": 100,
-      "bullet_type": "HST JHP",
-      "muzzle_velocity_fps": 1250,
-      "muzzle_energy_ft_lbs": 347,
-      "barrel_length_in": 3.5,
-      "bc_g1": 0.142,
-      "sectional_density": 0.132,
-      "gel_penetration_in": 13.2,
-      "expansion_diameter_in": 0.52,
-      "barrier_blind": true,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 1250,
-          "energy_ft_lbs": 347,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 25,
-          "velocity_fps": 1190,
-          "energy_ft_lbs": 315,
-          "drop_in": -0.2
-        },
-        {
-          "distance_yd": 50,
-          "velocity_fps": 1138,
-          "energy_ft_lbs": 287,
-          "drop_in": -0.9
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 1050,
-          "energy_ft_lbs": 245,
-          "drop_in": -4.8
-        }
-      ]
     }
   ],
   "max_pressure_psi": 45000,
   "primer_type": "Small Pistol",
   "powder_charge_range_gr": [
-    5,
-    8
+    5.0,
+    8.0
   ],
   "availability_rating": 2,
   "annual_production_estimate": "limited",

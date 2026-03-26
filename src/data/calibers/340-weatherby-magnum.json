@@ -29,7 +29,7 @@
   "effective_range_yd": 600,
   "max_range_yd": 4500,
   "recoil": {
-    "free_recoil_ft_lbs": 35,
+    "free_recoil_ft_lbs": 35.0,
     "reference_firearm": "Weatherby Mark V Accumark (26\" barrel, 8.5 lbs)",
     "subjective": "very_heavy"
   },
@@ -46,7 +46,7 @@
   "popularity_tier": "niche",
   "cost_per_round_usd": [
     3.5,
-    7
+    7.0
   ],
   "common_firearms": [
     "Weatherby Mark V",
@@ -61,13 +61,13 @@
       "bullet_type": "TTSX (Tipped Triple-Shock X)",
       "muzzle_velocity_fps": 2970,
       "muzzle_energy_ft_lbs": 4402,
-      "barrel_length_in": 26,
+      "barrel_length_in": 26.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2970,
           "energy_ft_lbs": 4402,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -107,13 +107,13 @@
       "bullet_type": "Nosler Partition",
       "muzzle_velocity_fps": 2863,
       "muzzle_energy_ft_lbs": 4551,
-      "barrel_length_in": 26,
+      "barrel_length_in": 26.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2863,
           "energy_ft_lbs": 4551,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -146,48 +146,6 @@
           "drop_in": -51.5
         }
       ]
-    },
-    {
-      "name": "Weatherby 225 gr Barnes TTSX",
-      "bullet_weight_gr": 225,
-      "bullet_type": "Barnes TTSX",
-      "muzzle_velocity_fps": 2980,
-      "muzzle_energy_ft_lbs": 4434,
-      "barrel_length_in": 26,
-      "bc_g1": 0.475,
-      "sectional_density": 0.281,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 2980,
-          "energy_ft_lbs": 4434,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 2778,
-          "energy_ft_lbs": 3855,
-          "drop_in": -1.6
-        },
-        {
-          "distance_yd": 200,
-          "velocity_fps": 2585,
-          "energy_ft_lbs": 3338,
-          "drop_in": -6.8
-        },
-        {
-          "distance_yd": 300,
-          "velocity_fps": 2400,
-          "energy_ft_lbs": 2877,
-          "drop_in": -16.2
-        },
-        {
-          "distance_yd": 400,
-          "velocity_fps": 2224,
-          "energy_ft_lbs": 2470,
-          "drop_in": -30.4
-        }
-      ]
     }
   ],
   "recommended_game": [
@@ -215,8 +173,8 @@
   "max_pressure_psi": 65000,
   "primer_type": "Large Rifle Magnum",
   "powder_charge_range_gr": [
-    75,
-    95
+    75.0,
+    95.0
   ],
   "availability_rating": 1,
   "annual_production_estimate": "minimal",

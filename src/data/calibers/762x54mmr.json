@@ -1,9 +1,9 @@
 {
-  "name": "7.62×54mmR",
-  "designation": "7.62×54mmR",
+  "name": "7.62\u00d754mmR",
+  "designation": "7.62\u00d754mmR",
   "aliases": [
     "7.62 Russian",
-    "7.62×54R"
+    "7.62\u00d754R"
   ],
   "category": "rifle",
   "slug": "762x54mmr",
@@ -30,7 +30,7 @@
   "effective_range_yd": 800,
   "max_range_yd": 3800,
   "recoil": {
-    "free_recoil_ft_lbs": 15,
+    "free_recoil_ft_lbs": 15.0,
     "reference_firearm": "Mosin-Nagant M91/30 (28.7\" barrel, 8.8 lbs)",
     "subjective": "heavy"
   },
@@ -77,7 +77,7 @@
           "distance_yd": 0,
           "velocity_fps": 2838,
           "energy_ft_lbs": 2629,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -101,7 +101,7 @@
           "distance_yd": 400,
           "velocity_fps": 1995,
           "energy_ft_lbs": 1299,
-          "drop_in": -43
+          "drop_in": -43.0
         },
         {
           "distance_yd": 500,
@@ -123,7 +123,7 @@
           "distance_yd": 0,
           "velocity_fps": 2625,
           "energy_ft_lbs": 2784,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -156,48 +156,6 @@
           "drop_in": -80.6
         }
       ]
-    },
-    {
-      "name": "PPU 182 gr FMJ BT",
-      "bullet_weight_gr": 182,
-      "bullet_type": "FMJ BT",
-      "muzzle_velocity_fps": 2580,
-      "muzzle_energy_ft_lbs": 2692,
-      "barrel_length_in": 28.7,
-      "bc_g1": 0.42,
-      "sectional_density": 0.274,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 2580,
-          "energy_ft_lbs": 2692,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 2380,
-          "energy_ft_lbs": 2290,
-          "drop_in": -2.4
-        },
-        {
-          "distance_yd": 200,
-          "velocity_fps": 2190,
-          "energy_ft_lbs": 1940,
-          "drop_in": -10
-        },
-        {
-          "distance_yd": 300,
-          "velocity_fps": 2010,
-          "energy_ft_lbs": 1635,
-          "drop_in": -24.2
-        },
-        {
-          "distance_yd": 400,
-          "velocity_fps": 1842,
-          "energy_ft_lbs": 1372,
-          "drop_in": -46.4
-        }
-      ]
     }
   ],
   "recommended_game": [
@@ -225,8 +183,8 @@
   "max_pressure_psi": 54000,
   "primer_type": "Large Rifle",
   "powder_charge_range_gr": [
-    42,
-    52
+    42.0,
+    52.0
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",
@@ -234,17 +192,8 @@
   "suppressor_friendly": false,
   "subsonic_loads_available": false,
   "military_adoption_detail": [
-    {
-      "organization": "Russian Armed Forces",
-      "year_adopted": 1891,
-      "role": "Standard machine gun/sniper cartridge",
-      "status": "active"
-    },
-    {
-      "organization": "Soviet Army",
-      "role": "Standard cartridge (Mosin-Nagant/PK/SVD platforms)",
-      "status": "active"
-    }
+    { "organization": "Russian Armed Forces", "year_adopted": 1891, "role": "Standard machine gun/sniper cartridge", "status": "active" },
+    { "organization": "Soviet Army", "role": "Standard cartridge (Mosin-Nagant/PK/SVD platforms)", "status": "active" }
   ],
   "le_adoption_detail": []
 }

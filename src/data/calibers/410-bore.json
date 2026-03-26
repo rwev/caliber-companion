@@ -31,7 +31,7 @@
   "effective_range_yd": 25,
   "max_range_yd": 100,
   "recoil": {
-    "free_recoil_ft_lbs": 6,
+    "free_recoil_ft_lbs": 6.0,
     "reference_firearm": "Mossberg 500 .410 (24\" barrel, 5.5 lbs)",
     "subjective": "very_low"
   },
@@ -49,7 +49,7 @@
   "popularity_tier": "common",
   "cost_per_round_usd": [
     0.35,
-    2
+    2.0
   ],
   "common_firearms": [
     "Mossberg 500 .410",
@@ -60,18 +60,18 @@
   ],
   "loads": [
     {
-      "name": "Winchester Super-X .410 000 Buckshot (2½\")",
+      "name": "Winchester Super-X .410 000 Buckshot (2\u00bd\")",
       "bullet_weight_gr": 146,
       "bullet_type": "000 Buckshot (3 pellets, .360\" diameter)",
       "muzzle_velocity_fps": 1300,
       "muzzle_energy_ft_lbs": 548,
-      "barrel_length_in": 24,
+      "barrel_length_in": 24.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 1300,
           "energy_ft_lbs": 548,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 25,
@@ -105,13 +105,13 @@
       "bullet_type": "Rifled Slug",
       "muzzle_velocity_fps": 1830,
       "muzzle_energy_ft_lbs": 647,
-      "barrel_length_in": 24,
+      "barrel_length_in": 24.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 1830,
           "energy_ft_lbs": 647,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 25,
@@ -136,34 +136,6 @@
           "velocity_fps": 1155,
           "energy_ft_lbs": 258,
           "drop_in": -7.8
-        }
-      ]
-    },
-    {
-      "name": "Federal Premium Personal Defense 3\" 000 Buck",
-      "bullet_weight_gr": 219,
-      "bullet_type": "000 Buckshot (4 pellet, 3\")",
-      "muzzle_velocity_fps": 775,
-      "muzzle_energy_ft_lbs": 292,
-      "barrel_length_in": 18.5,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 775,
-          "energy_ft_lbs": 292,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 15,
-          "velocity_fps": 720,
-          "energy_ft_lbs": 252,
-          "drop_in": -0.2
-        },
-        {
-          "distance_yd": 25,
-          "velocity_fps": 685,
-          "energy_ft_lbs": 228,
-          "drop_in": -0.5
         }
       ]
     }

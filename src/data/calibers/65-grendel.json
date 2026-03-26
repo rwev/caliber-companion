@@ -30,7 +30,7 @@
   "effective_range_yd": 700,
   "max_range_yd": 4000,
   "recoil": {
-    "free_recoil_ft_lbs": 6,
+    "free_recoil_ft_lbs": 6.0,
     "reference_firearm": "AR-15 platform (20\" barrel, 7.5 lbs)",
     "subjective": "low"
   },
@@ -69,7 +69,7 @@
       "bullet_type": "ELD Match",
       "muzzle_velocity_fps": 2580,
       "muzzle_energy_ft_lbs": 1818,
-      "barrel_length_in": 24,
+      "barrel_length_in": 24.0,
       "bc_g1": 0.506,
       "bc_g7": 0.255,
       "sectional_density": 0.252,
@@ -78,7 +78,7 @@
           "distance_yd": 0,
           "velocity_fps": 2580,
           "energy_ft_lbs": 1818,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -102,7 +102,7 @@
           "distance_yd": 400,
           "velocity_fps": 1976,
           "energy_ft_lbs": 1066,
-          "drop_in": -45
+          "drop_in": -45.0
         },
         {
           "distance_yd": 500,
@@ -118,7 +118,7 @@
       "bullet_type": "FMJ",
       "muzzle_velocity_fps": 2800,
       "muzzle_energy_ft_lbs": 1741,
-      "barrel_length_in": 24,
+      "barrel_length_in": 24.0,
       "bc_g1": 0.36,
       "sectional_density": 0.205,
       "ballistics": [
@@ -126,13 +126,13 @@
           "distance_yd": 0,
           "velocity_fps": 2800,
           "energy_ft_lbs": 1741,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
           "velocity_fps": 2565,
           "energy_ft_lbs": 1461,
-          "drop_in": -2
+          "drop_in": -2.0
         },
         {
           "distance_yd": 200,
@@ -144,61 +144,19 @@
           "distance_yd": 300,
           "velocity_fps": 2131,
           "energy_ft_lbs": 1008,
-          "drop_in": -21
+          "drop_in": -21.0
         },
         {
           "distance_yd": 400,
           "velocity_fps": 1932,
           "energy_ft_lbs": 829,
-          "drop_in": -40
+          "drop_in": -40.0
         },
         {
           "distance_yd": 500,
           "velocity_fps": 1746,
           "energy_ft_lbs": 677,
-          "drop_in": -67
-        }
-      ]
-    },
-    {
-      "name": "Federal American Eagle 90 gr TNT JHP",
-      "bullet_weight_gr": 90,
-      "bullet_type": "TNT JHP",
-      "muzzle_velocity_fps": 2900,
-      "muzzle_energy_ft_lbs": 1682,
-      "barrel_length_in": 24,
-      "bc_g1": 0.282,
-      "sectional_density": 0.184,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 2900,
-          "energy_ft_lbs": 1682,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 2590,
-          "energy_ft_lbs": 1341,
-          "drop_in": -1.8
-        },
-        {
-          "distance_yd": 200,
-          "velocity_fps": 2302,
-          "energy_ft_lbs": 1059,
-          "drop_in": -8.4
-        },
-        {
-          "distance_yd": 300,
-          "velocity_fps": 2035,
-          "energy_ft_lbs": 827,
-          "drop_in": -21
-        },
-        {
-          "distance_yd": 400,
-          "velocity_fps": 1790,
-          "energy_ft_lbs": 640,
-          "drop_in": -41.4
+          "drop_in": -67.0
         }
       ]
     }
@@ -228,15 +186,13 @@
   "max_pressure_psi": 52000,
   "primer_type": "Small Rifle",
   "powder_charge_range_gr": [
-    24,
-    30
+    24.0,
+    30.0
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",
   "price_trend": "stable",
   "suppressor_friendly": true,
   "subsonic_loads_available": false,
-  "derived_cartridges": [
-    "6mm-arc"
-  ]
+  "derived_cartridges": ["6mm-arc"]
 }

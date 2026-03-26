@@ -1,6 +1,6 @@
 {
-  "name": "5.7×28mm",
-  "designation": "5.7×28mm",
+  "name": "5.7\u00d728mm",
+  "designation": "5.7\u00d728mm",
   "aliases": [
     "5.7",
     "FN 5.7"
@@ -30,7 +30,7 @@
   "effective_range_yd": 200,
   "max_range_yd": 1800,
   "recoil": {
-    "free_recoil_ft_lbs": 2,
+    "free_recoil_ft_lbs": 2.0,
     "reference_firearm": "FN Five-seveN pistol (4.8\" barrel, 1.5 lbs)",
     "subjective": "very_low"
   },
@@ -79,7 +79,7 @@
           "distance_yd": 0,
           "velocity_fps": 1700,
           "energy_ft_lbs": 256,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -103,13 +103,13 @@
           "distance_yd": 400,
           "velocity_fps": 912,
           "energy_ft_lbs": 74,
-          "drop_in": -103
+          "drop_in": -103.0
         },
         {
           "distance_yd": 500,
           "velocity_fps": 836,
           "energy_ft_lbs": 62,
-          "drop_in": -181
+          "drop_in": -181.0
         }
       ]
     },
@@ -125,7 +125,7 @@
           "distance_yd": 0,
           "velocity_fps": 1655,
           "energy_ft_lbs": 243,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -137,61 +137,25 @@
           "distance_yd": 200,
           "velocity_fps": 1155,
           "energy_ft_lbs": 118,
-          "drop_in": -22
+          "drop_in": -22.0
         },
         {
           "distance_yd": 300,
           "velocity_fps": 1003,
           "energy_ft_lbs": 89,
-          "drop_in": -54
+          "drop_in": -54.0
         },
         {
           "distance_yd": 400,
           "velocity_fps": 905,
           "energy_ft_lbs": 73,
-          "drop_in": -108
+          "drop_in": -108.0
         },
         {
           "distance_yd": 500,
           "velocity_fps": 831,
           "energy_ft_lbs": 61,
-          "drop_in": -189
-        }
-      ]
-    },
-    {
-      "name": "Speer Gold Dot 40 gr JHP",
-      "bullet_weight_gr": 40,
-      "bullet_type": "Gold Dot JHP",
-      "muzzle_velocity_fps": 1700,
-      "muzzle_energy_ft_lbs": 257,
-      "barrel_length_in": 4.8,
-      "bc_g1": 0.155,
-      "sectional_density": 0.114,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 1700,
-          "energy_ft_lbs": 257,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 25,
-          "velocity_fps": 1595,
-          "energy_ft_lbs": 226,
-          "drop_in": -0.1
-        },
-        {
-          "distance_yd": 50,
-          "velocity_fps": 1496,
-          "energy_ft_lbs": 199,
-          "drop_in": -0.4
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 1318,
-          "energy_ft_lbs": 154,
-          "drop_in": -2.4
+          "drop_in": -189.0
         }
       ]
     }
@@ -199,8 +163,8 @@
   "max_pressure_psi": 50038,
   "primer_type": "Small Rifle",
   "powder_charge_range_gr": [
-    6,
-    9
+    6.0,
+    9.0
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",

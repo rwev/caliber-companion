@@ -29,7 +29,7 @@
   "effective_range_yd": 700,
   "max_range_yd": 4800,
   "recoil": {
-    "free_recoil_ft_lbs": 35,
+    "free_recoil_ft_lbs": 35.0,
     "reference_firearm": "Nosler M48 Long-Range Carbon (26\" barrel, 7.5 lbs)",
     "subjective": "very_heavy"
   },
@@ -47,7 +47,7 @@
   "popularity_tier": "niche",
   "cost_per_round_usd": [
     3.5,
-    7
+    7.0
   ],
   "common_firearms": [
     "Nosler M48",
@@ -63,13 +63,13 @@
       "bullet_type": "AccuBond",
       "muzzle_velocity_fps": 3025,
       "muzzle_energy_ft_lbs": 4572,
-      "barrel_length_in": 26,
+      "barrel_length_in": 26.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 3025,
           "energy_ft_lbs": 4572,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -93,13 +93,13 @@
           "distance_yd": 400,
           "velocity_fps": 2320,
           "energy_ft_lbs": 2688,
-          "drop_in": -25
+          "drop_in": -25.0
         },
         {
           "distance_yd": 500,
           "velocity_fps": 2161,
           "energy_ft_lbs": 2333,
-          "drop_in": -41
+          "drop_in": -41.0
         }
       ]
     },
@@ -109,13 +109,13 @@
       "bullet_type": "AccuBond Long Range",
       "muzzle_velocity_fps": 2775,
       "muzzle_energy_ft_lbs": 4534,
-      "barrel_length_in": 26,
+      "barrel_length_in": 26.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2775,
           "energy_ft_lbs": 4534,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -139,61 +139,13 @@
           "distance_yd": 400,
           "velocity_fps": 2192,
           "energy_ft_lbs": 2828,
-          "drop_in": -28
+          "drop_in": -28.0
         },
         {
           "distance_yd": 500,
           "velocity_fps": 2058,
           "energy_ft_lbs": 2492,
           "drop_in": -45.4
-        }
-      ]
-    },
-    {
-      "name": "Nosler Trophy Grade 265 gr AccuBond",
-      "bullet_weight_gr": 265,
-      "bullet_type": "AccuBond",
-      "muzzle_velocity_fps": 2775,
-      "muzzle_energy_ft_lbs": 4533,
-      "barrel_length_in": 26,
-      "bc_g1": 0.58,
-      "sectional_density": 0.331,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 2775,
-          "energy_ft_lbs": 4533,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 2608,
-          "energy_ft_lbs": 4005,
-          "drop_in": -1.8
-        },
-        {
-          "distance_yd": 200,
-          "velocity_fps": 2447,
-          "energy_ft_lbs": 3525,
-          "drop_in": -7.6
-        },
-        {
-          "distance_yd": 300,
-          "velocity_fps": 2291,
-          "energy_ft_lbs": 3090,
-          "drop_in": -17.8
-        },
-        {
-          "distance_yd": 400,
-          "velocity_fps": 2142,
-          "energy_ft_lbs": 2700,
-          "drop_in": -33
-        },
-        {
-          "distance_yd": 500,
-          "velocity_fps": 1998,
-          "energy_ft_lbs": 2350,
-          "drop_in": -53.6
         }
       ]
     }
@@ -223,8 +175,8 @@
   "max_pressure_psi": 65000,
   "primer_type": "Large Rifle Magnum",
   "powder_charge_range_gr": [
-    78,
-    92
+    78.0,
+    92.0
   ],
   "availability_rating": 2,
   "annual_production_estimate": "limited",

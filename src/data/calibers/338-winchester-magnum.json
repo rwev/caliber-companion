@@ -30,7 +30,7 @@
   "effective_range_yd": 900,
   "max_range_yd": 5000,
   "recoil": {
-    "free_recoil_ft_lbs": 28,
+    "free_recoil_ft_lbs": 28.0,
     "reference_firearm": "Winchester Model 70 (26\" barrel, 8.5 lbs)",
     "subjective": "heavy"
   },
@@ -53,7 +53,7 @@
   "popularity_tier": "common",
   "cost_per_round_usd": [
     1.75,
-    5
+    5.0
   ],
   "common_firearms": [
     "Winchester Model 70",
@@ -74,7 +74,7 @@
       "bullet_type": "TBBC (Trophy Bonded Bear Claw)",
       "muzzle_velocity_fps": 2800,
       "muzzle_energy_ft_lbs": 3918,
-      "barrel_length_in": 24,
+      "barrel_length_in": 24.0,
       "bc_g1": 0.393,
       "sectional_density": 0.281,
       "ballistics": [
@@ -82,7 +82,7 @@
           "distance_yd": 0,
           "velocity_fps": 2800,
           "energy_ft_lbs": 3918,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -106,7 +106,7 @@
           "distance_yd": 400,
           "velocity_fps": 2053,
           "energy_ft_lbs": 2107,
-          "drop_in": -31
+          "drop_in": -31.0
         },
         {
           "distance_yd": 500,
@@ -128,7 +128,7 @@
       "bullet_type": "AccuBond",
       "muzzle_velocity_fps": 2800,
       "muzzle_energy_ft_lbs": 3918,
-      "barrel_length_in": 24,
+      "barrel_length_in": 24.0,
       "bc_g1": 0.55,
       "bc_g7": 0.274,
       "sectional_density": 0.281,
@@ -137,7 +137,7 @@
           "distance_yd": 0,
           "velocity_fps": 2800,
           "energy_ft_lbs": 3918,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -176,103 +176,6 @@
           "drop_in": -74.5
         }
       ]
-    },
-    {
-      "name": "Federal Premium 225 gr Trophy Bonded Bear Claw",
-      "bullet_weight_gr": 225,
-      "bullet_type": "Trophy Bonded Bear Claw",
-      "muzzle_velocity_fps": 2800,
-      "muzzle_energy_ft_lbs": 3918,
-      "barrel_length_in": 24,
-      "bc_g1": 0.432,
-      "sectional_density": 0.281,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 2800,
-          "energy_ft_lbs": 3918,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 2590,
-          "energy_ft_lbs": 3351,
-          "drop_in": -1.9
-        },
-        {
-          "distance_yd": 200,
-          "velocity_fps": 2390,
-          "energy_ft_lbs": 2854,
-          "drop_in": -8.2
-        },
-        {
-          "distance_yd": 300,
-          "velocity_fps": 2200,
-          "energy_ft_lbs": 2419,
-          "drop_in": -19.6
-        },
-        {
-          "distance_yd": 400,
-          "velocity_fps": 2020,
-          "energy_ft_lbs": 2038,
-          "drop_in": -37
-        },
-        {
-          "distance_yd": 500,
-          "velocity_fps": 1851,
-          "energy_ft_lbs": 1713,
-          "drop_in": -61.6
-        }
-      ]
-    },
-    {
-      "name": "Hornady Precision Hunter 230 gr ELD-X",
-      "bullet_weight_gr": 230,
-      "bullet_type": "ELD-X",
-      "muzzle_velocity_fps": 2810,
-      "muzzle_energy_ft_lbs": 4033,
-      "barrel_length_in": 24,
-      "bc_g1": 0.62,
-      "bc_g7": 0.313,
-      "sectional_density": 0.288,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 2810,
-          "energy_ft_lbs": 4033,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 2649,
-          "energy_ft_lbs": 3584,
-          "drop_in": -1.8
-        },
-        {
-          "distance_yd": 200,
-          "velocity_fps": 2494,
-          "energy_ft_lbs": 3176,
-          "drop_in": -7.4
-        },
-        {
-          "distance_yd": 300,
-          "velocity_fps": 2344,
-          "energy_ft_lbs": 2806,
-          "drop_in": -17.2
-        },
-        {
-          "distance_yd": 400,
-          "velocity_fps": 2200,
-          "energy_ft_lbs": 2472,
-          "drop_in": -31.8
-        },
-        {
-          "distance_yd": 500,
-          "velocity_fps": 2062,
-          "energy_ft_lbs": 2171,
-          "drop_in": -51.6
-        }
-      ]
     }
   ],
   "recommended_game": [
@@ -305,8 +208,8 @@
   "max_pressure_psi": 64000,
   "primer_type": "Large Rifle Magnum",
   "powder_charge_range_gr": [
-    62,
-    78
+    62.0,
+    78.0
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",

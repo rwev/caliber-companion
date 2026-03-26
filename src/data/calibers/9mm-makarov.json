@@ -1,8 +1,8 @@
 {
   "name": "9mm Makarov",
-  "designation": "9×18mm Makarov",
+  "designation": "9\u00d718mm Makarov",
   "aliases": [
-    "9×18mm",
+    "9\u00d718mm",
     "9mm Mak"
   ],
   "category": "handgun",
@@ -30,14 +30,14 @@
   "effective_range_yd": 50,
   "max_range_yd": 1500,
   "recoil": {
-    "free_recoil_ft_lbs": 3,
+    "free_recoil_ft_lbs": 3.0,
     "reference_firearm": "Makarov PM (3.68\" barrel, 26 oz)",
     "subjective": "low"
   },
   "year_introduced": 1951,
   "country_of_origin": "Soviet Union",
   "military_usage": [
-    "Soviet/Russian military standard sidearm (1951–2003)",
+    "Soviet/Russian military standard sidearm (1951\u20132003)",
     "Warsaw Pact nations",
     "Chinese military (Type 59)"
   ],
@@ -78,7 +78,7 @@
           "distance_yd": 0,
           "velocity_fps": 1017,
           "energy_ft_lbs": 216,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 25,
@@ -102,7 +102,7 @@
           "distance_yd": 100,
           "velocity_fps": 871,
           "energy_ft_lbs": 158,
-          "drop_in": -9
+          "drop_in": -9.0
         }
       ]
     },
@@ -121,7 +121,7 @@
           "distance_yd": 0,
           "velocity_fps": 1000,
           "energy_ft_lbs": 211,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 25,
@@ -146,42 +146,6 @@
           "velocity_fps": 860,
           "energy_ft_lbs": 156,
           "drop_in": -9.3
-        }
-      ]
-    },
-    {
-      "name": "PPU 93 gr FMJ",
-      "bullet_weight_gr": 93,
-      "bullet_type": "FMJ",
-      "muzzle_velocity_fps": 1050,
-      "muzzle_energy_ft_lbs": 228,
-      "barrel_length_in": 3.8,
-      "bc_g1": 0.12,
-      "sectional_density": 0.106,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 1050,
-          "energy_ft_lbs": 228,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 25,
-          "velocity_fps": 1008,
-          "energy_ft_lbs": 210,
-          "drop_in": -0.3
-        },
-        {
-          "distance_yd": 50,
-          "velocity_fps": 970,
-          "energy_ft_lbs": 194,
-          "drop_in": -1.4
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 905,
-          "energy_ft_lbs": 169,
-          "drop_in": -6.2
         }
       ]
     }

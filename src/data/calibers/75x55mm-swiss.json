@@ -1,6 +1,6 @@
 {
-  "name": "7.5×55mm Swiss",
-  "designation": "7.5×55mm Swiss",
+  "name": "7.5\u00d755mm Swiss",
+  "designation": "7.5\u00d755mm Swiss",
   "aliases": [
     "7.5 Swiss",
     "GP 11"
@@ -30,14 +30,14 @@
   "effective_range_yd": 800,
   "max_range_yd": 3900,
   "recoil": {
-    "free_recoil_ft_lbs": 14,
+    "free_recoil_ft_lbs": 14.0,
     "reference_firearm": "Schmidt-Rubin K31 (25.7\" barrel, 9.0 lbs)",
     "subjective": "moderate"
   },
   "year_introduced": 1889,
   "country_of_origin": "Switzerland",
   "military_usage": [
-    "Swiss military standard cartridge (1889–present in reserve)",
+    "Swiss military standard cartridge (1889\u2013present in reserve)",
     "Schmidt-Rubin K31 and Stgw 57 platforms",
     "SIG SG 510 (Stgw 57) battle rifle"
   ],
@@ -74,7 +74,7 @@
           "distance_yd": 0,
           "velocity_fps": 2640,
           "energy_ft_lbs": 2693,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -104,7 +104,7 @@
           "distance_yd": 500,
           "velocity_fps": 1808,
           "energy_ft_lbs": 1263,
-          "drop_in": -75
+          "drop_in": -75.0
         }
       ]
     },
@@ -120,7 +120,7 @@
           "distance_yd": 0,
           "velocity_fps": 2789,
           "energy_ft_lbs": 2590,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -138,7 +138,7 @@
           "distance_yd": 300,
           "velocity_fps": 2169,
           "energy_ft_lbs": 1567,
-          "drop_in": -23
+          "drop_in": -23.0
         },
         {
           "distance_yd": 400,
@@ -150,43 +150,7 @@
           "distance_yd": 500,
           "velocity_fps": 1807,
           "energy_ft_lbs": 1088,
-          "drop_in": -72
-        }
-      ]
-    },
-    {
-      "name": "PPU 174 gr FMJ BT",
-      "bullet_weight_gr": 174,
-      "bullet_type": "FMJ BT",
-      "muzzle_velocity_fps": 2526,
-      "muzzle_energy_ft_lbs": 2465,
-      "barrel_length_in": 25.7,
-      "bc_g1": 0.43,
-      "sectional_density": 0.258,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 2526,
-          "energy_ft_lbs": 2465,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 2326,
-          "energy_ft_lbs": 2090,
-          "drop_in": -2.6
-        },
-        {
-          "distance_yd": 200,
-          "velocity_fps": 2137,
-          "energy_ft_lbs": 1763,
-          "drop_in": -10.8
-        },
-        {
-          "distance_yd": 300,
-          "velocity_fps": 1958,
-          "energy_ft_lbs": 1481,
-          "drop_in": -26
+          "drop_in": -72.0
         }
       ]
     }
@@ -211,8 +175,8 @@
   "max_pressure_psi": 45000,
   "primer_type": "Large Rifle",
   "powder_charge_range_gr": [
-    38,
-    48
+    38.0,
+    48.0
   ],
   "availability_rating": 1,
   "annual_production_estimate": "minimal",

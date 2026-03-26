@@ -30,7 +30,7 @@
   "effective_range_yd": 1500,
   "max_range_yd": 5500,
   "recoil": {
-    "free_recoil_ft_lbs": 28,
+    "free_recoil_ft_lbs": 28.0,
     "reference_firearm": "Barrett MRAD (26\" barrel, 14.0 lbs)",
     "subjective": "heavy"
   },
@@ -50,8 +50,8 @@
   ],
   "popularity_tier": "niche",
   "cost_per_round_usd": [
-    3,
-    7
+    3.0,
+    7.0
   ],
   "common_firearms": [
     "Barrett MRAD",
@@ -67,13 +67,13 @@
       "bullet_type": "Hybrid Target (OTM)",
       "muzzle_velocity_fps": 2950,
       "muzzle_energy_ft_lbs": 4156,
-      "barrel_length_in": 26,
+      "barrel_length_in": 26.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2950,
           "energy_ft_lbs": 4156,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -103,7 +103,7 @@
           "distance_yd": 500,
           "velocity_fps": 2387,
           "energy_ft_lbs": 2718,
-          "drop_in": -36
+          "drop_in": -36.0
         }
       ]
     },
@@ -113,13 +113,13 @@
       "bullet_type": "HPBT (Hollow Point Boat Tail)",
       "muzzle_velocity_fps": 2887,
       "muzzle_energy_ft_lbs": 4256,
-      "barrel_length_in": 26,
+      "barrel_length_in": 26.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2887,
           "energy_ft_lbs": 4256,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -152,55 +152,6 @@
           "drop_in": -37.6
         }
       ]
-    },
-    {
-      "name": "Hornady A-Tip Match 230 gr",
-      "bullet_weight_gr": 230,
-      "bullet_type": "A-Tip Match",
-      "muzzle_velocity_fps": 2900,
-      "muzzle_energy_ft_lbs": 4298,
-      "barrel_length_in": 26,
-      "bc_g1": 0.823,
-      "bc_g7": 0.414,
-      "sectional_density": 0.346,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 2900,
-          "energy_ft_lbs": 4298,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 2778,
-          "energy_ft_lbs": 3942,
-          "drop_in": -1.5
-        },
-        {
-          "distance_yd": 200,
-          "velocity_fps": 2659,
-          "energy_ft_lbs": 3611,
-          "drop_in": -6.4
-        },
-        {
-          "distance_yd": 300,
-          "velocity_fps": 2543,
-          "energy_ft_lbs": 3303,
-          "drop_in": -14.8
-        },
-        {
-          "distance_yd": 400,
-          "velocity_fps": 2430,
-          "energy_ft_lbs": 3017,
-          "drop_in": -26.8
-        },
-        {
-          "distance_yd": 500,
-          "velocity_fps": 2320,
-          "energy_ft_lbs": 2749,
-          "drop_in": -43
-        }
-      ]
     }
   ],
   "recommended_game": [
@@ -228,8 +179,8 @@
   "max_pressure_psi": 63817,
   "primer_type": "Large Rifle Magnum",
   "powder_charge_range_gr": [
-    75,
-    92
+    75.0,
+    92.0
   ],
   "availability_rating": 2,
   "annual_production_estimate": "limited",

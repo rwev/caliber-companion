@@ -1,9 +1,9 @@
 {
-  "name": "5.45×39mm",
-  "designation": "5.45×39mm",
+  "name": "5.45\u00d739mm",
+  "designation": "5.45\u00d739mm",
   "aliases": [
     "5.45 Soviet",
-    "5.45×39"
+    "5.45\u00d739"
   ],
   "category": "rifle",
   "slug": "545x39mm",
@@ -30,14 +30,14 @@
   "effective_range_yd": 500,
   "max_range_yd": 3150,
   "recoil": {
-    "free_recoil_ft_lbs": 3,
+    "free_recoil_ft_lbs": 3.0,
     "reference_firearm": "AK-74 (16.3\" barrel, 7.3 lbs)",
     "subjective": "very_low"
   },
   "year_introduced": 1974,
   "country_of_origin": "Soviet Union",
   "military_usage": [
-    "Soviet/Russian standard rifle cartridge (1974–present)",
+    "Soviet/Russian standard rifle cartridge (1974\u2013present)",
     "AK-74 and AK-74M platforms",
     "RPK-74 light machine gun",
     "Various former Soviet and allied nation militaries"
@@ -75,7 +75,7 @@
           "distance_yd": 0,
           "velocity_fps": 2953,
           "energy_ft_lbs": 1026,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -121,7 +121,7 @@
           "distance_yd": 0,
           "velocity_fps": 2810,
           "energy_ft_lbs": 1052,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -139,7 +139,7 @@
           "distance_yd": 300,
           "velocity_fps": 2132,
           "energy_ft_lbs": 606,
-          "drop_in": -24
+          "drop_in": -24.0
         },
         {
           "distance_yd": 400,
@@ -151,49 +151,7 @@
           "distance_yd": 500,
           "velocity_fps": 1743,
           "energy_ft_lbs": 405,
-          "drop_in": -76
-        }
-      ]
-    },
-    {
-      "name": "Hornady V-MAX 60 gr",
-      "bullet_weight_gr": 60,
-      "bullet_type": "V-MAX",
-      "muzzle_velocity_fps": 2810,
-      "muzzle_energy_ft_lbs": 1052,
-      "barrel_length_in": 16.3,
-      "bc_g1": 0.252,
-      "sectional_density": 0.143,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 2810,
-          "energy_ft_lbs": 1052,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 2505,
-          "energy_ft_lbs": 836,
-          "drop_in": -2
-        },
-        {
-          "distance_yd": 200,
-          "velocity_fps": 2222,
-          "energy_ft_lbs": 658,
-          "drop_in": -8.8
-        },
-        {
-          "distance_yd": 300,
-          "velocity_fps": 1960,
-          "energy_ft_lbs": 512,
-          "drop_in": -22
-        },
-        {
-          "distance_yd": 400,
-          "velocity_fps": 1720,
-          "energy_ft_lbs": 395,
-          "drop_in": -43.4
+          "drop_in": -76.0
         }
       ]
     }
@@ -213,8 +171,8 @@
   "max_pressure_psi": 45000,
   "primer_type": "Small Rifle",
   "powder_charge_range_gr": [
-    23,
-    28
+    23.0,
+    28.0
   ],
   "availability_rating": 2,
   "annual_production_estimate": "moderate",
@@ -222,18 +180,8 @@
   "suppressor_friendly": false,
   "subsonic_loads_available": false,
   "military_adoption_detail": [
-    {
-      "organization": "Soviet Army",
-      "designation": "5.45mm M74",
-      "year_adopted": 1974,
-      "role": "Standard rifle cartridge",
-      "status": "active"
-    },
-    {
-      "organization": "Russian Armed Forces",
-      "role": "Standard infantry cartridge (AK-74/AK-12 platforms)",
-      "status": "active"
-    }
+    { "organization": "Soviet Army", "designation": "5.45mm M74", "year_adopted": 1974, "role": "Standard rifle cartridge", "status": "active" },
+    { "organization": "Russian Armed Forces", "role": "Standard infantry cartridge (AK-74/AK-12 platforms)", "status": "active" }
   ],
   "le_adoption_detail": []
 }

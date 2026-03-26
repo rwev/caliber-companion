@@ -30,7 +30,7 @@
   "effective_range_yd": 250,
   "max_range_yd": 2500,
   "recoil": {
-    "free_recoil_ft_lbs": 60,
+    "free_recoil_ft_lbs": 60.0,
     "reference_firearm": "Winchester Model 70 Safari Express (22\" barrel, 9.0 lbs)",
     "subjective": "very_heavy"
   },
@@ -49,8 +49,8 @@
   ],
   "popularity_tier": "niche",
   "cost_per_round_usd": [
-    4,
-    10
+    4.0,
+    10.0
   ],
   "common_firearms": [
     "Winchester Model 70 Safari Express",
@@ -66,13 +66,13 @@
       "bullet_type": "DGS (Dangerous Game Solid)",
       "muzzle_velocity_fps": 2140,
       "muzzle_energy_ft_lbs": 5084,
-      "barrel_length_in": 22,
+      "barrel_length_in": 22.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2140,
           "energy_ft_lbs": 5084,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -112,13 +112,13 @@
       "bullet_type": "TBBC (Trophy Bonded Bear Claw)",
       "muzzle_velocity_fps": 2090,
       "muzzle_energy_ft_lbs": 4849,
-      "barrel_length_in": 22,
+      "barrel_length_in": 22.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2090,
           "energy_ft_lbs": 4849,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -148,37 +148,7 @@
           "distance_yd": 500,
           "velocity_fps": 1203,
           "energy_ft_lbs": 1607,
-          "drop_in": -126
-        }
-      ]
-    },
-    {
-      "name": "Hornady DGS 500 gr Solid",
-      "bullet_weight_gr": 500,
-      "bullet_type": "DGS (Dangerous Game Solid)",
-      "muzzle_velocity_fps": 2140,
-      "muzzle_energy_ft_lbs": 5082,
-      "barrel_length_in": 24,
-      "bc_g1": 0.295,
-      "sectional_density": 0.341,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 2140,
-          "energy_ft_lbs": 5082,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 1870,
-          "energy_ft_lbs": 3882,
-          "drop_in": -4.2
-        },
-        {
-          "distance_yd": 200,
-          "velocity_fps": 1627,
-          "energy_ft_lbs": 2939,
-          "drop_in": -18.2
+          "drop_in": -126.0
         }
       ]
     }
@@ -208,8 +178,8 @@
   "max_pressure_psi": 62000,
   "primer_type": "Large Rifle Magnum",
   "powder_charge_range_gr": [
-    70,
-    90
+    70.0,
+    90.0
   ],
   "availability_rating": 2,
   "annual_production_estimate": "limited",

@@ -1,6 +1,6 @@
 {
-  "name": "7×57mm Mauser",
-  "designation": "7×57mm Mauser",
+  "name": "7\u00d757mm Mauser",
+  "designation": "7\u00d757mm Mauser",
   "aliases": [
     "7mm Mauser",
     ".275 Rigby"
@@ -30,7 +30,7 @@
   "effective_range_yd": 600,
   "max_range_yd": 3800,
   "recoil": {
-    "free_recoil_ft_lbs": 12,
+    "free_recoil_ft_lbs": 12.0,
     "reference_firearm": "Mauser M1893 (29\" barrel, 8.8 lbs)",
     "subjective": "moderate"
   },
@@ -73,13 +73,13 @@
       "bullet_type": "SP",
       "muzzle_velocity_fps": 2680,
       "muzzle_energy_ft_lbs": 2216,
-      "barrel_length_in": 24,
+      "barrel_length_in": 24.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2680,
           "energy_ft_lbs": 2216,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -103,7 +103,7 @@
           "distance_yd": 400,
           "velocity_fps": 1946,
           "energy_ft_lbs": 1169,
-          "drop_in": -46
+          "drop_in": -46.0
         },
         {
           "distance_yd": 500,
@@ -119,13 +119,13 @@
       "bullet_type": "SP",
       "muzzle_velocity_fps": 2510,
       "muzzle_energy_ft_lbs": 2448,
-      "barrel_length_in": 24,
+      "barrel_length_in": 24.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2510,
           "energy_ft_lbs": 2448,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -155,55 +155,7 @@
           "distance_yd": 500,
           "velocity_fps": 1693,
           "energy_ft_lbs": 1113,
-          "drop_in": -89
-        }
-      ]
-    },
-    {
-      "name": "Hornady Superformance 139 gr SST",
-      "bullet_weight_gr": 139,
-      "bullet_type": "SST",
-      "muzzle_velocity_fps": 2740,
-      "muzzle_energy_ft_lbs": 2316,
-      "barrel_length_in": 24,
-      "bc_g1": 0.486,
-      "sectional_density": 0.246,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 2740,
-          "energy_ft_lbs": 2316,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 2562,
-          "energy_ft_lbs": 2026,
-          "drop_in": -2
-        },
-        {
-          "distance_yd": 200,
-          "velocity_fps": 2392,
-          "energy_ft_lbs": 1766,
-          "drop_in": -8.4
-        },
-        {
-          "distance_yd": 300,
-          "velocity_fps": 2228,
-          "energy_ft_lbs": 1532,
-          "drop_in": -19.8
-        },
-        {
-          "distance_yd": 400,
-          "velocity_fps": 2072,
-          "energy_ft_lbs": 1324,
-          "drop_in": -37
-        },
-        {
-          "distance_yd": 500,
-          "velocity_fps": 1923,
-          "energy_ft_lbs": 1141,
-          "drop_in": -61
+          "drop_in": -89.0
         }
       ]
     }
@@ -238,8 +190,8 @@
   "max_pressure_psi": 51000,
   "primer_type": "Large Rifle",
   "powder_charge_range_gr": [
-    40,
-    52
+    40.0,
+    52.0
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",

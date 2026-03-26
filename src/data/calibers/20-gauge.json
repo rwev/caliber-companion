@@ -30,7 +30,7 @@
   "effective_range_yd": 40,
   "max_range_yd": 150,
   "recoil": {
-    "free_recoil_ft_lbs": 15,
+    "free_recoil_ft_lbs": 15.0,
     "reference_firearm": "Remington 870 Express 20 GA (26\" barrel, 6.5 lbs)",
     "subjective": "moderate"
   },
@@ -108,13 +108,13 @@
       "bullet_type": "#3 Buckshot (20 pellets, .250\" diameter)",
       "muzzle_velocity_fps": 1200,
       "muzzle_energy_ft_lbs": 1085,
-      "barrel_length_in": 26,
+      "barrel_length_in": 26.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 1200,
           "energy_ft_lbs": 1085,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 25,
@@ -138,7 +138,7 @@
           "distance_yd": 100,
           "velocity_fps": 810,
           "energy_ft_lbs": 495,
-          "drop_in": -17
+          "drop_in": -17.0
         }
       ]
     },
@@ -148,13 +148,13 @@
       "bullet_type": "Rifled Slug",
       "muzzle_velocity_fps": 1580,
       "muzzle_energy_ft_lbs": 1513,
-      "barrel_length_in": 26,
+      "barrel_length_in": 26.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 1580,
           "energy_ft_lbs": 1513,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 25,
@@ -179,80 +179,6 @@
           "velocity_fps": 1165,
           "energy_ft_lbs": 823,
           "drop_in": -9.2
-        }
-      ]
-    },
-    {
-      "name": "Federal Premium TSS #9 Turkey",
-      "bullet_weight_gr": 437,
-      "bullet_type": "TSS #9 Shot (3\" shell)",
-      "muzzle_velocity_fps": 1100,
-      "muzzle_energy_ft_lbs": 1175,
-      "barrel_length_in": 26,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 1100,
-          "energy_ft_lbs": 1175,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 20,
-          "velocity_fps": 1050,
-          "energy_ft_lbs": 1071,
-          "drop_in": -0.2
-        },
-        {
-          "distance_yd": 30,
-          "velocity_fps": 1020,
-          "energy_ft_lbs": 1010,
-          "drop_in": -0.4
-        },
-        {
-          "distance_yd": 40,
-          "velocity_fps": 990,
-          "energy_ft_lbs": 952,
-          "drop_in": -0.8
-        },
-        {
-          "distance_yd": 50,
-          "velocity_fps": 960,
-          "energy_ft_lbs": 895,
-          "drop_in": -1.4
-        }
-      ]
-    },
-    {
-      "name": "Remington Express 3\" Magnum #4 Buck",
-      "bullet_weight_gr": 380,
-      "bullet_type": "#4 Buckshot (27 pellet, 3\")",
-      "muzzle_velocity_fps": 1150,
-      "muzzle_energy_ft_lbs": 1116,
-      "barrel_length_in": 26,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 1150,
-          "energy_ft_lbs": 1116,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 15,
-          "velocity_fps": 1095,
-          "energy_ft_lbs": 1012,
-          "drop_in": -0.1
-        },
-        {
-          "distance_yd": 25,
-          "velocity_fps": 1058,
-          "energy_ft_lbs": 945,
-          "drop_in": -0.3
-        },
-        {
-          "distance_yd": 40,
-          "velocity_fps": 1000,
-          "energy_ft_lbs": 844,
-          "drop_in": -0.8
         }
       ]
     }

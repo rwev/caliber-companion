@@ -29,7 +29,7 @@
   "effective_range_yd": 250,
   "max_range_yd": 2200,
   "recoil": {
-    "free_recoil_ft_lbs": 10,
+    "free_recoil_ft_lbs": 10.0,
     "reference_firearm": "Winchester XPR (22\" barrel, 6.75 lbs)",
     "subjective": "moderate"
   },
@@ -50,7 +50,7 @@
   "popularity_tier": "common",
   "cost_per_round_usd": [
     0.7,
-    2
+    2.0
   ],
   "common_firearms": [
     "Winchester XPR",
@@ -66,13 +66,13 @@
       "bullet_type": "Extreme Point",
       "muzzle_velocity_fps": 2325,
       "muzzle_energy_ft_lbs": 1800,
-      "barrel_length_in": 20,
+      "barrel_length_in": 20.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2325,
           "energy_ft_lbs": 1800,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -96,7 +96,7 @@
           "distance_yd": 400,
           "velocity_fps": 1396,
           "energy_ft_lbs": 650,
-          "drop_in": -71
+          "drop_in": -71.0
         },
         {
           "distance_yd": 500,
@@ -112,13 +112,13 @@
       "bullet_type": "SP",
       "muzzle_velocity_fps": 2100,
       "muzzle_energy_ft_lbs": 1762,
-      "barrel_length_in": 20,
+      "barrel_length_in": 20.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2100,
           "energy_ft_lbs": 1762,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -130,7 +130,7 @@
           "distance_yd": 200,
           "velocity_fps": 1625,
           "energy_ft_lbs": 1055,
-          "drop_in": -18
+          "drop_in": -18.0
         },
         {
           "distance_yd": 300,
@@ -142,49 +142,13 @@
           "distance_yd": 400,
           "velocity_fps": 1257,
           "energy_ft_lbs": 631,
-          "drop_in": -85
+          "drop_in": -85.0
         },
         {
           "distance_yd": 500,
           "velocity_fps": 1127,
           "energy_ft_lbs": 508,
-          "drop_in": -148
-        }
-      ]
-    },
-    {
-      "name": "Winchester Deer Season XP 150 gr Extreme Point",
-      "bullet_weight_gr": 150,
-      "bullet_type": "Extreme Point",
-      "muzzle_velocity_fps": 2325,
-      "muzzle_energy_ft_lbs": 1800,
-      "barrel_length_in": 20,
-      "bc_g1": 0.223,
-      "sectional_density": 0.171,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 2325,
-          "energy_ft_lbs": 1800,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 1931,
-          "energy_ft_lbs": 1243,
-          "drop_in": -3.8
-        },
-        {
-          "distance_yd": 200,
-          "velocity_fps": 1585,
-          "energy_ft_lbs": 837,
-          "drop_in": -17
-        },
-        {
-          "distance_yd": 250,
-          "velocity_fps": 1435,
-          "energy_ft_lbs": 686,
-          "drop_in": -28
+          "drop_in": -148.0
         }
       ]
     }
@@ -209,8 +173,8 @@
   "max_pressure_psi": 55000,
   "primer_type": "Small Rifle",
   "powder_charge_range_gr": [
-    28,
-    38
+    28.0,
+    38.0
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",

@@ -115,13 +115,13 @@
       "bullet_type": "FMJ",
       "muzzle_velocity_fps": 890,
       "muzzle_energy_ft_lbs": 229,
-      "barrel_length_in": 4,
+      "barrel_length_in": 4.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 890,
           "energy_ft_lbs": 229,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 25,
@@ -155,8 +155,8 @@
       "bullet_type": "JHP",
       "muzzle_velocity_fps": 950,
       "muzzle_energy_ft_lbs": 270,
-      "barrel_length_in": 4,
-      "gel_penetration_in": 12,
+      "barrel_length_in": 4.0,
+      "gel_penetration_in": 12.0,
       "expansion_diameter_in": 0.51,
       "barrier_blind": false,
       "ballistics": [
@@ -164,7 +164,7 @@
           "distance_yd": 0,
           "velocity_fps": 950,
           "energy_ft_lbs": 270,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 25,
@@ -191,57 +191,12 @@
           "drop_in": -9.8
         }
       ]
-    },
-    {
-      "name": "Federal Hydra-Shok Deep 130 gr JHP",
-      "bullet_weight_gr": 130,
-      "bullet_type": "Hydra-Shok Deep JHP",
-      "muzzle_velocity_fps": 890,
-      "muzzle_energy_ft_lbs": 229,
-      "barrel_length_in": 4,
-      "bc_g1": 0.145,
-      "sectional_density": 0.146,
-      "gel_penetration_in": 15,
-      "expansion_diameter_in": 0.49,
-      "barrier_blind": false,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 890,
-          "energy_ft_lbs": 229,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 25,
-          "velocity_fps": 862,
-          "energy_ft_lbs": 215,
-          "drop_in": -0.4
-        },
-        {
-          "distance_yd": 50,
-          "velocity_fps": 836,
-          "energy_ft_lbs": 202,
-          "drop_in": -2
-        },
-        {
-          "distance_yd": 75,
-          "velocity_fps": 812,
-          "energy_ft_lbs": 190,
-          "drop_in": -5
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 789,
-          "energy_ft_lbs": 180,
-          "drop_in": -9.6
-        }
-      ]
     }
   ],
   "max_pressure_psi": 17000,
   "primer_type": "Small Pistol",
   "powder_charge_range_gr": [
-    3,
+    3.0,
     5.5
   ],
   "availability_rating": 4,

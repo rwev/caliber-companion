@@ -30,7 +30,7 @@
   "effective_range_yd": 1700,
   "max_range_yd": 4500,
   "recoil": {
-    "free_recoil_ft_lbs": 35,
+    "free_recoil_ft_lbs": 35.0,
     "reference_firearm": "Barrett MRAD (26\" barrel, 14.5 lbs)",
     "subjective": "very_heavy"
   },
@@ -50,7 +50,7 @@
   "popularity_tier": "niche",
   "cost_per_round_usd": [
     3.5,
-    7
+    7.0
   ],
   "common_firearms": [
     "Barrett MRAD",
@@ -66,13 +66,13 @@
       "bullet_type": "A-TIP Match",
       "muzzle_velocity_fps": 2650,
       "muzzle_energy_ft_lbs": 4679,
-      "barrel_length_in": 26,
+      "barrel_length_in": 26.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2650,
           "energy_ft_lbs": 4679,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -90,7 +90,7 @@
           "distance_yd": 300,
           "velocity_fps": 2449,
           "energy_ft_lbs": 3993,
-          "drop_in": -15
+          "drop_in": -15.0
         },
         {
           "distance_yd": 400,
@@ -130,13 +130,13 @@
       "bullet_type": "HPBT (Sierra MatchKing)",
       "muzzle_velocity_fps": 2838,
       "muzzle_energy_ft_lbs": 4472,
-      "barrel_length_in": 26,
+      "barrel_length_in": 26.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2838,
           "energy_ft_lbs": 4472,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -160,7 +160,7 @@
           "distance_yd": 400,
           "velocity_fps": 2429,
           "energy_ft_lbs": 3271,
-          "drop_in": -25
+          "drop_in": -25.0
         },
         {
           "distance_yd": 500,
@@ -178,62 +178,13 @@
           "distance_yd": 800,
           "velocity_fps": 2055,
           "energy_ft_lbs": 2344,
-          "drop_in": -115
+          "drop_in": -115.0
         },
         {
           "distance_yd": 1000,
           "velocity_fps": 1884,
           "energy_ft_lbs": 1971,
           "drop_in": -192.5
-        }
-      ]
-    },
-    {
-      "name": "Hornady 300 gr HPBT Match",
-      "bullet_weight_gr": 300,
-      "bullet_type": "HPBT Match",
-      "muzzle_velocity_fps": 2650,
-      "muzzle_energy_ft_lbs": 4679,
-      "barrel_length_in": 27,
-      "bc_g1": 0.768,
-      "bc_g7": 0.385,
-      "sectional_density": 0.375,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 2650,
-          "energy_ft_lbs": 4679,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 2528,
-          "energy_ft_lbs": 4259,
-          "drop_in": -2
-        },
-        {
-          "distance_yd": 200,
-          "velocity_fps": 2410,
-          "energy_ft_lbs": 3870,
-          "drop_in": -8.2
-        },
-        {
-          "distance_yd": 300,
-          "velocity_fps": 2296,
-          "energy_ft_lbs": 3513,
-          "drop_in": -18.8
-        },
-        {
-          "distance_yd": 400,
-          "velocity_fps": 2185,
-          "energy_ft_lbs": 3183,
-          "drop_in": -34.2
-        },
-        {
-          "distance_yd": 500,
-          "velocity_fps": 2078,
-          "energy_ft_lbs": 2878,
-          "drop_in": -54.8
         }
       ]
     }
@@ -258,8 +209,8 @@
   "max_pressure_psi": 63817,
   "primer_type": "Large Rifle Magnum",
   "powder_charge_range_gr": [
-    80,
-    95
+    80.0,
+    95.0
   ],
   "availability_rating": 2,
   "annual_production_estimate": "limited",

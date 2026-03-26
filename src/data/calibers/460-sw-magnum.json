@@ -30,7 +30,7 @@
   "effective_range_yd": 150,
   "max_range_yd": 2800,
   "recoil": {
-    "free_recoil_ft_lbs": 40,
+    "free_recoil_ft_lbs": 40.0,
     "reference_firearm": "Smith & Wesson Model 460XVR (8.38\" barrel, 72.5 oz)",
     "subjective": "very_heavy"
   },
@@ -50,8 +50,8 @@
   ],
   "popularity_tier": "rare",
   "cost_per_round_usd": [
-    2,
-    5
+    2.0,
+    5.0
   ],
   "common_firearms": [
     "Smith & Wesson Model 460XVR",
@@ -74,13 +74,13 @@
           "distance_yd": 0,
           "velocity_fps": 2300,
           "energy_ft_lbs": 2350,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 25,
           "velocity_fps": 2200,
           "energy_ft_lbs": 2149,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 50,
@@ -109,7 +109,7 @@
       "muzzle_velocity_fps": 1800,
       "muzzle_energy_ft_lbs": 1979,
       "barrel_length_in": 8.38,
-      "gel_penetration_in": 19,
+      "gel_penetration_in": 19.0,
       "expansion_diameter_in": 0.72,
       "barrier_blind": true,
       "ballistics": [
@@ -117,7 +117,7 @@
           "distance_yd": 0,
           "velocity_fps": 1800,
           "energy_ft_lbs": 1979,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 25,
@@ -142,48 +142,6 @@
           "velocity_fps": 1522,
           "energy_ft_lbs": 1414,
           "drop_in": -2.3
-        }
-      ]
-    },
-    {
-      "name": "Hornady 200 gr FTX LEVERevolution",
-      "bullet_weight_gr": 200,
-      "bullet_type": "FTX",
-      "muzzle_velocity_fps": 2200,
-      "muzzle_energy_ft_lbs": 2149,
-      "barrel_length_in": 8.375,
-      "bc_g1": 0.165,
-      "sectional_density": 0.14,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 2200,
-          "energy_ft_lbs": 2149,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 50,
-          "velocity_fps": 1989,
-          "energy_ft_lbs": 1758,
-          "drop_in": -0.1
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 1795,
-          "energy_ft_lbs": 1431,
-          "drop_in": -1.2
-        },
-        {
-          "distance_yd": 150,
-          "velocity_fps": 1620,
-          "energy_ft_lbs": 1166,
-          "drop_in": -3.8
-        },
-        {
-          "distance_yd": 200,
-          "velocity_fps": 1464,
-          "energy_ft_lbs": 953,
-          "drop_in": -8.6
         }
       ]
     }
@@ -213,8 +171,8 @@
   "max_pressure_psi": 65000,
   "primer_type": "Large Pistol",
   "powder_charge_range_gr": [
-    35,
-    48
+    35.0,
+    48.0
   ],
   "availability_rating": 2,
   "annual_production_estimate": "limited",

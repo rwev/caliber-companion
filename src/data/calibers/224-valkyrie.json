@@ -29,7 +29,7 @@
   "effective_range_yd": 800,
   "max_range_yd": 4500,
   "recoil": {
-    "free_recoil_ft_lbs": 4,
+    "free_recoil_ft_lbs": 4.0,
     "reference_firearm": "AR-15 platform (20\" barrel, 7.5 lbs)",
     "subjective": "very_low"
   },
@@ -66,7 +66,7 @@
       "bullet_type": "SMK",
       "muzzle_velocity_fps": 2700,
       "muzzle_energy_ft_lbs": 1457,
-      "barrel_length_in": 24,
+      "barrel_length_in": 24.0,
       "bc_g1": 0.504,
       "bc_g7": 0.254,
       "sectional_density": 0.256,
@@ -75,13 +75,13 @@
           "distance_yd": 0,
           "velocity_fps": 2700,
           "energy_ft_lbs": 1457,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
           "velocity_fps": 2557,
           "energy_ft_lbs": 1307,
-          "drop_in": -2
+          "drop_in": -2.0
         },
         {
           "distance_yd": 200,
@@ -115,7 +115,7 @@
       "bullet_type": "TMJ",
       "muzzle_velocity_fps": 3000,
       "muzzle_energy_ft_lbs": 1499,
-      "barrel_length_in": 24,
+      "barrel_length_in": 24.0,
       "bc_g1": 0.395,
       "bc_g7": 0.198,
       "sectional_density": 0.214,
@@ -124,7 +124,7 @@
           "distance_yd": 0,
           "velocity_fps": 3000,
           "energy_ft_lbs": 1499,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -142,7 +142,7 @@
           "distance_yd": 300,
           "velocity_fps": 2354,
           "energy_ft_lbs": 924,
-          "drop_in": -17
+          "drop_in": -17.0
         },
         {
           "distance_yd": 400,
@@ -155,55 +155,6 @@
           "velocity_fps": 1974,
           "energy_ft_lbs": 649,
           "drop_in": -53.8
-        }
-      ]
-    },
-    {
-      "name": "Federal Premium 90 gr Sierra MatchKing",
-      "bullet_weight_gr": 90,
-      "bullet_type": "Sierra MatchKing BTHP",
-      "muzzle_velocity_fps": 2700,
-      "muzzle_energy_ft_lbs": 1457,
-      "barrel_length_in": 24,
-      "bc_g1": 0.563,
-      "bc_g7": 0.274,
-      "sectional_density": 0.256,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 2700,
-          "energy_ft_lbs": 1457,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 2557,
-          "energy_ft_lbs": 1306,
-          "drop_in": -2
-        },
-        {
-          "distance_yd": 200,
-          "velocity_fps": 2418,
-          "energy_ft_lbs": 1169,
-          "drop_in": -8.2
-        },
-        {
-          "distance_yd": 300,
-          "velocity_fps": 2285,
-          "energy_ft_lbs": 1043,
-          "drop_in": -19.2
-        },
-        {
-          "distance_yd": 400,
-          "velocity_fps": 2156,
-          "energy_ft_lbs": 929,
-          "drop_in": -35.2
-        },
-        {
-          "distance_yd": 500,
-          "velocity_fps": 2033,
-          "energy_ft_lbs": 826,
-          "drop_in": -56.8
         }
       ]
     }
@@ -228,8 +179,8 @@
   "max_pressure_psi": 55000,
   "primer_type": "Small Rifle",
   "powder_charge_range_gr": [
-    22,
-    28
+    22.0,
+    28.0
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",

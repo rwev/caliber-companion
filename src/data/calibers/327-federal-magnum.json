@@ -72,7 +72,7 @@
           "distance_yd": 0,
           "velocity_fps": 1500,
           "energy_ft_lbs": 500,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 25,
@@ -115,7 +115,7 @@
           "distance_yd": 0,
           "velocity_fps": 1380,
           "energy_ft_lbs": 487,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 25,
@@ -133,49 +133,13 @@
           "distance_yd": 75,
           "velocity_fps": 1191,
           "energy_ft_lbs": 362,
-          "drop_in": -2
+          "drop_in": -2.0
         },
         {
           "distance_yd": 100,
           "velocity_fps": 1140,
           "energy_ft_lbs": 332,
           "drop_in": -4.2
-        }
-      ]
-    },
-    {
-      "name": "Federal American Eagle 85 gr JSP",
-      "bullet_weight_gr": 85,
-      "bullet_type": "JSP",
-      "muzzle_velocity_fps": 1400,
-      "muzzle_energy_ft_lbs": 370,
-      "barrel_length_in": 4,
-      "bc_g1": 0.13,
-      "sectional_density": 0.121,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 1400,
-          "energy_ft_lbs": 370,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 25,
-          "velocity_fps": 1330,
-          "energy_ft_lbs": 334,
-          "drop_in": -0.1
-        },
-        {
-          "distance_yd": 50,
-          "velocity_fps": 1265,
-          "energy_ft_lbs": 302,
-          "drop_in": -0.5
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 1152,
-          "energy_ft_lbs": 250,
-          "drop_in": -3.2
         }
       ]
     }
@@ -200,8 +164,8 @@
   "max_pressure_psi": 45000,
   "primer_type": "Small Pistol",
   "powder_charge_range_gr": [
-    10,
-    15
+    10.0,
+    15.0
   ],
   "availability_rating": 2,
   "annual_production_estimate": "limited",

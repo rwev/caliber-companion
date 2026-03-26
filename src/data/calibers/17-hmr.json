@@ -29,7 +29,7 @@
   "effective_range_yd": 200,
   "max_range_yd": 1800,
   "recoil": {
-    "free_recoil_ft_lbs": 1,
+    "free_recoil_ft_lbs": 1.0,
     "reference_firearm": "Savage 93R17 (21\" barrel, 5.0 lbs)",
     "subjective": "very_low"
   },
@@ -64,13 +64,13 @@
       "bullet_type": "V-Max (Polymer Tip)",
       "muzzle_velocity_fps": 2550,
       "muzzle_energy_ft_lbs": 245,
-      "barrel_length_in": 24,
+      "barrel_length_in": 24.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2550,
           "energy_ft_lbs": 245,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -100,7 +100,7 @@
           "distance_yd": 500,
           "velocity_fps": 893,
           "energy_ft_lbs": 30,
-          "drop_in": -160
+          "drop_in": -160.0
         }
       ]
     },
@@ -110,13 +110,13 @@
       "bullet_type": "JHP (TNT)",
       "muzzle_velocity_fps": 2550,
       "muzzle_energy_ft_lbs": 245,
-      "barrel_length_in": 24,
+      "barrel_length_in": 24.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2550,
           "energy_ft_lbs": 245,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -134,55 +134,19 @@
           "distance_yd": 300,
           "velocity_fps": 1214,
           "energy_ft_lbs": 56,
-          "drop_in": -38
+          "drop_in": -38.0
         },
         {
           "distance_yd": 400,
           "velocity_fps": 1003,
           "energy_ft_lbs": 38,
-          "drop_in": -85
+          "drop_in": -85.0
         },
         {
           "distance_yd": 500,
           "velocity_fps": 886,
           "energy_ft_lbs": 30,
           "drop_in": -164.5
-        }
-      ]
-    },
-    {
-      "name": "Hornady V-MAX 17 gr",
-      "bullet_weight_gr": 17,
-      "bullet_type": "V-MAX",
-      "muzzle_velocity_fps": 2550,
-      "muzzle_energy_ft_lbs": 245,
-      "barrel_length_in": 20,
-      "bc_g1": 0.125,
-      "sectional_density": 0.066,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 2550,
-          "energy_ft_lbs": 245,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 50,
-          "velocity_fps": 2229,
-          "energy_ft_lbs": 188,
-          "drop_in": -0.1
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 1937,
-          "energy_ft_lbs": 142,
-          "drop_in": -1
-        },
-        {
-          "distance_yd": 150,
-          "velocity_fps": 1676,
-          "energy_ft_lbs": 106,
-          "drop_in": -3.4
         }
       ]
     }
@@ -207,7 +171,7 @@
   "max_pressure_psi": 26000,
   "primer_type": "Rimfire",
   "powder_charge_range_gr": [
-    4,
+    4.0,
     5.5
   ],
   "availability_rating": 4,

@@ -29,7 +29,7 @@
   "effective_range_yd": 1500,
   "max_range_yd": 5500,
   "recoil": {
-    "free_recoil_ft_lbs": 25,
+    "free_recoil_ft_lbs": 25.0,
     "reference_firearm": "Christensen Arms MPR (26\" barrel, 8.5 lbs)",
     "subjective": "heavy"
   },
@@ -48,7 +48,7 @@
   ],
   "popularity_tier": "common",
   "cost_per_round_usd": [
-    2,
+    2.0,
     4.5
   ],
   "common_firearms": [
@@ -66,7 +66,7 @@
       "bullet_type": "ELD Match (Polymer Tip)",
       "muzzle_velocity_fps": 2810,
       "muzzle_energy_ft_lbs": 3945,
-      "barrel_length_in": 26,
+      "barrel_length_in": 26.0,
       "bc_g1": 0.777,
       "bc_g7": 0.391,
       "sectional_density": 0.339,
@@ -75,7 +75,7 @@
           "distance_yd": 0,
           "velocity_fps": 2810,
           "energy_ft_lbs": 3945,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -115,7 +115,7 @@
       "bullet_type": "ELD-X (Polymer Tip)",
       "muzzle_velocity_fps": 2860,
       "muzzle_energy_ft_lbs": 3850,
-      "barrel_length_in": 26,
+      "barrel_length_in": 26.0,
       "bc_g1": 0.673,
       "bc_g7": 0.336,
       "sectional_density": 0.319,
@@ -124,7 +124,7 @@
           "distance_yd": 0,
           "velocity_fps": 2860,
           "energy_ft_lbs": 3850,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -142,7 +142,7 @@
           "distance_yd": 300,
           "velocity_fps": 2509,
           "energy_ft_lbs": 2961,
-          "drop_in": -13
+          "drop_in": -13.0
         },
         {
           "distance_yd": 400,
@@ -155,55 +155,6 @@
           "velocity_fps": 2290,
           "energy_ft_lbs": 2466,
           "drop_in": -38.2
-        }
-      ]
-    },
-    {
-      "name": "Hornady ELD Match 225 gr",
-      "bullet_weight_gr": 225,
-      "bullet_type": "ELD Match",
-      "muzzle_velocity_fps": 2810,
-      "muzzle_energy_ft_lbs": 3945,
-      "barrel_length_in": 26,
-      "bc_g1": 0.777,
-      "bc_g7": 0.391,
-      "sectional_density": 0.281,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 2810,
-          "energy_ft_lbs": 3945,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 2679,
-          "energy_ft_lbs": 3585,
-          "drop_in": -1.7
-        },
-        {
-          "distance_yd": 200,
-          "velocity_fps": 2552,
-          "energy_ft_lbs": 3253,
-          "drop_in": -7
-        },
-        {
-          "distance_yd": 300,
-          "velocity_fps": 2429,
-          "energy_ft_lbs": 2948,
-          "drop_in": -16
-        },
-        {
-          "distance_yd": 400,
-          "velocity_fps": 2310,
-          "energy_ft_lbs": 2668,
-          "drop_in": -29.2
-        },
-        {
-          "distance_yd": 500,
-          "velocity_fps": 2195,
-          "energy_ft_lbs": 2410,
-          "drop_in": -46.8
         }
       ]
     }
@@ -238,8 +189,8 @@
   "max_pressure_psi": 65000,
   "primer_type": "Large Rifle Magnum",
   "powder_charge_range_gr": [
-    68,
-    82
+    68.0,
+    82.0
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",

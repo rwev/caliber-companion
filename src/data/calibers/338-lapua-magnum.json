@@ -3,7 +3,7 @@
   "designation": ".338 Lapua Magnum",
   "aliases": [
     ".338 Lapua",
-    "8.6×70mm"
+    "8.6\u00d770mm"
   ],
   "category": "magnum_rifle",
   "slug": "338-lapua-magnum",
@@ -30,7 +30,7 @@
   "effective_range_yd": 1800,
   "max_range_yd": 6000,
   "recoil": {
-    "free_recoil_ft_lbs": 40,
+    "free_recoil_ft_lbs": 40.0,
     "reference_firearm": "Accuracy International AXMC (27\" barrel, 15 lbs)",
     "subjective": "very_heavy"
   },
@@ -57,7 +57,7 @@
   "popularity_tier": "common",
   "cost_per_round_usd": [
     3.5,
-    8
+    8.0
   ],
   "common_firearms": [
     "Accuracy International AXMC",
@@ -78,7 +78,7 @@
       "bullet_type": "OTM (Open Tip Match)",
       "muzzle_velocity_fps": 2950,
       "muzzle_energy_ft_lbs": 4831,
-      "barrel_length_in": 27,
+      "barrel_length_in": 27.0,
       "bc_g1": 0.675,
       "bc_g7": 0.337,
       "sectional_density": 0.313,
@@ -87,7 +87,7 @@
           "distance_yd": 0,
           "velocity_fps": 2950,
           "energy_ft_lbs": 4831,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -123,7 +123,7 @@
           "distance_yd": 600,
           "velocity_fps": 2195,
           "energy_ft_lbs": 2674,
-          "drop_in": -50
+          "drop_in": -50.0
         }
       ]
     },
@@ -133,7 +133,7 @@
       "bullet_type": "ELD Match",
       "muzzle_velocity_fps": 2745,
       "muzzle_energy_ft_lbs": 4768,
-      "barrel_length_in": 27,
+      "barrel_length_in": 27.0,
       "bc_g1": 0.789,
       "bc_g7": 0.391,
       "sectional_density": 0.356,
@@ -142,7 +142,7 @@
           "distance_yd": 0,
           "velocity_fps": 2745,
           "energy_ft_lbs": 4768,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -172,62 +172,13 @@
           "distance_yd": 500,
           "velocity_fps": 2208,
           "energy_ft_lbs": 3088,
-          "drop_in": -38
+          "drop_in": -38.0
         },
         {
           "distance_yd": 600,
           "velocity_fps": 2109,
           "energy_ft_lbs": 2814,
           "drop_in": -56.2
-        }
-      ]
-    },
-    {
-      "name": "Hornady ELD Match 285 gr",
-      "bullet_weight_gr": 285,
-      "bullet_type": "ELD Match",
-      "muzzle_velocity_fps": 2745,
-      "muzzle_energy_ft_lbs": 4768,
-      "barrel_length_in": 27,
-      "bc_g1": 0.789,
-      "bc_g7": 0.391,
-      "sectional_density": 0.356,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 2745,
-          "energy_ft_lbs": 4768,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 2622,
-          "energy_ft_lbs": 4350,
-          "drop_in": -1.8
-        },
-        {
-          "distance_yd": 200,
-          "velocity_fps": 2503,
-          "energy_ft_lbs": 3963,
-          "drop_in": -7.4
-        },
-        {
-          "distance_yd": 300,
-          "velocity_fps": 2387,
-          "energy_ft_lbs": 3606,
-          "drop_in": -17
-        },
-        {
-          "distance_yd": 400,
-          "velocity_fps": 2274,
-          "energy_ft_lbs": 3278,
-          "drop_in": -30.8
-        },
-        {
-          "distance_yd": 500,
-          "velocity_fps": 2165,
-          "energy_ft_lbs": 2968,
-          "drop_in": -49.4
         }
       ]
     }
@@ -252,8 +203,8 @@
   "max_pressure_psi": 61000,
   "primer_type": "Large Rifle Magnum",
   "powder_charge_range_gr": [
-    80,
-    95
+    80.0,
+    95.0
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",
@@ -261,25 +212,9 @@
   "suppressor_friendly": true,
   "subsonic_loads_available": false,
   "military_adoption_detail": [
-    {
-      "organization": "U.S. SOCOM",
-      "designation": "Mk 248 Mod 0",
-      "year_adopted": 2006,
-      "role": "Long-range anti-personnel sniper cartridge",
-      "status": "active"
-    },
-    {
-      "organization": "British Armed Forces",
-      "designation": "L115A3",
-      "year_adopted": 2008,
-      "role": "Long-range sniper cartridge",
-      "status": "active"
-    },
-    {
-      "organization": "Various NATO SOF",
-      "role": "Long-range sniper cartridge",
-      "status": "active"
-    }
+    { "organization": "U.S. SOCOM", "designation": "Mk 248 Mod 0", "year_adopted": 2006, "role": "Long-range anti-personnel sniper cartridge", "status": "active" },
+    { "organization": "British Armed Forces", "designation": "L115A3", "year_adopted": 2008, "role": "Long-range sniper cartridge", "status": "active" },
+    { "organization": "Various NATO SOF", "role": "Long-range sniper cartridge", "status": "active" }
   ],
   "le_adoption_detail": []
 }

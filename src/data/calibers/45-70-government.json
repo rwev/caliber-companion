@@ -30,14 +30,14 @@
   "effective_range_yd": 300,
   "max_range_yd": 3500,
   "recoil": {
-    "free_recoil_ft_lbs": 25,
+    "free_recoil_ft_lbs": 25.0,
     "reference_firearm": "Marlin 1895 (22\" barrel, 7.5 lbs)",
     "subjective": "heavy"
   },
   "year_introduced": 1873,
   "country_of_origin": "USA",
   "military_usage": [
-    "U.S. Army standard cartridge 1873–1892 (Springfield Model 1873)",
+    "U.S. Army standard cartridge 1873\u20131892 (Springfield Model 1873)",
     "Used in Indian Wars and Spanish-American War"
   ],
   "le_usage": [],
@@ -50,7 +50,7 @@
   ],
   "popularity_tier": "common",
   "cost_per_round_usd": [
-    1,
+    1.0,
     3.5
   ],
   "common_firearms": [
@@ -71,8 +71,8 @@
       "bullet_type": "FTX (Flex Tip)",
       "muzzle_velocity_fps": 2050,
       "muzzle_energy_ft_lbs": 3032,
-      "barrel_length_in": 24,
-      "gel_penetration_in": 18,
+      "barrel_length_in": 24.0,
+      "gel_penetration_in": 18.0,
       "expansion_diameter_in": 0.7,
       "barrier_blind": true,
       "ballistics": [
@@ -80,7 +80,7 @@
           "distance_yd": 0,
           "velocity_fps": 2050,
           "energy_ft_lbs": 3032,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -120,8 +120,8 @@
       "bullet_type": "JHP",
       "muzzle_velocity_fps": 1850,
       "muzzle_energy_ft_lbs": 2281,
-      "barrel_length_in": 24,
-      "gel_penetration_in": 17,
+      "barrel_length_in": 24.0,
+      "gel_penetration_in": 17.0,
       "expansion_diameter_in": 0.68,
       "barrier_blind": true,
       "ballistics": [
@@ -129,7 +129,7 @@
           "distance_yd": 0,
           "velocity_fps": 1850,
           "energy_ft_lbs": 2281,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -141,7 +141,7 @@
           "distance_yd": 200,
           "velocity_fps": 1373,
           "energy_ft_lbs": 1256,
-          "drop_in": -20
+          "drop_in": -20.0
         },
         {
           "distance_yd": 300,
@@ -160,42 +160,6 @@
           "velocity_fps": 986,
           "energy_ft_lbs": 648,
           "drop_in": -170.3
-        }
-      ]
-    },
-    {
-      "name": "Hornady LEVERevolution 325 gr FTX",
-      "bullet_weight_gr": 325,
-      "bullet_type": "FTX (Flex Tip)",
-      "muzzle_velocity_fps": 2050,
-      "muzzle_energy_ft_lbs": 3032,
-      "barrel_length_in": 24,
-      "bc_g1": 0.23,
-      "sectional_density": 0.225,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 2050,
-          "energy_ft_lbs": 3032,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 1729,
-          "energy_ft_lbs": 2158,
-          "drop_in": -4
-        },
-        {
-          "distance_yd": 200,
-          "velocity_fps": 1450,
-          "energy_ft_lbs": 1519,
-          "drop_in": -17.8
-        },
-        {
-          "distance_yd": 300,
-          "velocity_fps": 1225,
-          "energy_ft_lbs": 1083,
-          "drop_in": -44.8
         }
       ]
     }
@@ -235,8 +199,8 @@
   "max_pressure_psi": 28000,
   "primer_type": "Large Rifle",
   "powder_charge_range_gr": [
-    40,
-    58
+    40.0,
+    58.0
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",

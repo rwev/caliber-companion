@@ -29,7 +29,7 @@
   "effective_range_yd": 1200,
   "max_range_yd": 5500,
   "recoil": {
-    "free_recoil_ft_lbs": 27,
+    "free_recoil_ft_lbs": 27.0,
     "reference_firearm": "Nosler Model 48 (26\" barrel, 8.25 lbs)",
     "subjective": "heavy"
   },
@@ -46,8 +46,8 @@
   ],
   "popularity_tier": "niche",
   "cost_per_round_usd": [
-    2,
-    5
+    2.0,
+    5.0
   ],
   "common_firearms": [
     "Nosler Model 48",
@@ -67,19 +67,19 @@
       "bullet_type": "AccuBond",
       "muzzle_velocity_fps": 3200,
       "muzzle_energy_ft_lbs": 3637,
-      "barrel_length_in": 26,
+      "barrel_length_in": 26.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 3200,
           "energy_ft_lbs": 3637,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
           "velocity_fps": 3013,
           "energy_ft_lbs": 3225,
-          "drop_in": -1
+          "drop_in": -1.0
         },
         {
           "distance_yd": 200,
@@ -103,7 +103,7 @@
           "distance_yd": 500,
           "velocity_fps": 2335,
           "energy_ft_lbs": 1938,
-          "drop_in": -32
+          "drop_in": -32.0
         },
         {
           "distance_yd": 600,
@@ -119,19 +119,19 @@
       "bullet_type": "ELD Match",
       "muzzle_velocity_fps": 3150,
       "muzzle_energy_ft_lbs": 3569,
-      "barrel_length_in": 26,
+      "barrel_length_in": 26.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 3150,
           "energy_ft_lbs": 3569,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
           "velocity_fps": 2985,
           "energy_ft_lbs": 3205,
-          "drop_in": -1
+          "drop_in": -1.0
         },
         {
           "distance_yd": 200,
@@ -162,55 +162,6 @@
           "velocity_fps": 2237,
           "energy_ft_lbs": 1800,
           "drop_in": -47.4
-        }
-      ]
-    },
-    {
-      "name": "Nosler Trophy Grade 160 gr AccuBond",
-      "bullet_weight_gr": 160,
-      "bullet_type": "AccuBond",
-      "muzzle_velocity_fps": 3200,
-      "muzzle_energy_ft_lbs": 3637,
-      "barrel_length_in": 26,
-      "bc_g1": 0.531,
-      "bc_g7": 0.267,
-      "sectional_density": 0.283,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 3200,
-          "energy_ft_lbs": 3637,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 3012,
-          "energy_ft_lbs": 3221,
-          "drop_in": -1.2
-        },
-        {
-          "distance_yd": 200,
-          "velocity_fps": 2832,
-          "energy_ft_lbs": 2847,
-          "drop_in": -5.4
-        },
-        {
-          "distance_yd": 300,
-          "velocity_fps": 2660,
-          "energy_ft_lbs": 2513,
-          "drop_in": -13
-        },
-        {
-          "distance_yd": 400,
-          "velocity_fps": 2495,
-          "energy_ft_lbs": 2212,
-          "drop_in": -24.4
-        },
-        {
-          "distance_yd": 500,
-          "velocity_fps": 2337,
-          "energy_ft_lbs": 1940,
-          "drop_in": -40.2
         }
       ]
     }
@@ -245,8 +196,8 @@
   "max_pressure_psi": 65000,
   "primer_type": "Large Rifle Magnum",
   "powder_charge_range_gr": [
-    68,
-    82
+    68.0,
+    82.0
   ],
   "availability_rating": 2,
   "annual_production_estimate": "limited",

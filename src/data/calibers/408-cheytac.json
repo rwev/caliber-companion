@@ -3,7 +3,7 @@
   "designation": ".408 CheyTac",
   "aliases": [
     ".408 CT",
-    "10.36×77mm"
+    "10.36\u00d777mm"
   ],
   "category": "magnum_rifle",
   "slug": "408-cheytac",
@@ -30,7 +30,7 @@
   "effective_range_yd": 2200,
   "max_range_yd": 4200,
   "recoil": {
-    "free_recoil_ft_lbs": 55,
+    "free_recoil_ft_lbs": 55.0,
     "reference_firearm": "CheyTac M200 Intervention (29\" barrel, 27 lbs)",
     "subjective": "very_heavy"
   },
@@ -49,8 +49,8 @@
   ],
   "popularity_tier": "rare",
   "cost_per_round_usd": [
-    6,
-    12
+    6.0,
+    12.0
   ],
   "common_firearms": [
     "CheyTac M200 Intervention",
@@ -64,13 +64,13 @@
       "bullet_type": "Solid Copper (Lathe-Turned)",
       "muzzle_velocity_fps": 2850,
       "muzzle_energy_ft_lbs": 9528,
-      "barrel_length_in": 29,
+      "barrel_length_in": 29.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2850,
           "energy_ft_lbs": 9528,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -128,13 +128,13 @@
       "bullet_type": "A-TIP Match",
       "muzzle_velocity_fps": 3000,
       "muzzle_energy_ft_lbs": 6099,
-      "barrel_length_in": 29,
+      "barrel_length_in": 29.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 3000,
           "energy_ft_lbs": 6099,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 100,
@@ -146,7 +146,7 @@
           "distance_yd": 200,
           "velocity_fps": 2837,
           "energy_ft_lbs": 5452,
-          "drop_in": -5
+          "drop_in": -5.0
         },
         {
           "distance_yd": 300,
@@ -182,56 +182,7 @@
           "distance_yd": 1000,
           "velocity_fps": 2242,
           "energy_ft_lbs": 3340,
-          "drop_in": -161
-        }
-      ]
-    },
-    {
-      "name": "Peterson 419 gr Solid",
-      "bullet_weight_gr": 419,
-      "bullet_type": "Lathe-turned Solid",
-      "muzzle_velocity_fps": 2950,
-      "muzzle_energy_ft_lbs": 8092,
-      "barrel_length_in": 30,
-      "bc_g1": 0.94,
-      "bc_g7": 0.48,
-      "sectional_density": 0.37,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 2950,
-          "energy_ft_lbs": 8092,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 100,
-          "velocity_fps": 2845,
-          "energy_ft_lbs": 7525,
-          "drop_in": -1.5
-        },
-        {
-          "distance_yd": 200,
-          "velocity_fps": 2742,
-          "energy_ft_lbs": 6990,
-          "drop_in": -6.2
-        },
-        {
-          "distance_yd": 300,
-          "velocity_fps": 2642,
-          "energy_ft_lbs": 6497,
-          "drop_in": -14.2
-        },
-        {
-          "distance_yd": 400,
-          "velocity_fps": 2544,
-          "energy_ft_lbs": 6022,
-          "drop_in": -25.6
-        },
-        {
-          "distance_yd": 500,
-          "velocity_fps": 2449,
-          "energy_ft_lbs": 5577,
-          "drop_in": -40.8
+          "drop_in": -161.0
         }
       ]
     }
@@ -251,8 +202,8 @@
   "max_pressure_psi": 55000,
   "primer_type": "Large Rifle Magnum",
   "powder_charge_range_gr": [
-    120,
-    150
+    120.0,
+    150.0
   ],
   "availability_rating": 2,
   "annual_production_estimate": "limited",

@@ -30,7 +30,7 @@
   "effective_range_yd": 55,
   "max_range_yd": 200,
   "recoil": {
-    "free_recoil_ft_lbs": 40,
+    "free_recoil_ft_lbs": 40.0,
     "reference_firearm": "Browning BPS 10 GA (28\" barrel, 10.5 lbs)",
     "subjective": "very_heavy"
   },
@@ -45,7 +45,7 @@
   ],
   "popularity_tier": "niche",
   "cost_per_round_usd": [
-    1,
+    1.0,
     3.5
   ],
   "common_firearms": [
@@ -55,18 +55,18 @@
   ],
   "loads": [
     {
-      "name": "Federal Premium 10 GA BB Steel Shot (3½\")",
+      "name": "Federal Premium 10 GA BB Steel Shot (3\u00bd\")",
       "bullet_weight_gr": 875,
       "bullet_type": "BB Steel Shot (2 oz)",
       "muzzle_velocity_fps": 1200,
       "muzzle_energy_ft_lbs": 2800,
-      "barrel_length_in": 28,
+      "barrel_length_in": 28.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 1200,
           "energy_ft_lbs": 2800,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 25,
@@ -78,7 +78,7 @@
           "distance_yd": 50,
           "velocity_fps": 1005,
           "energy_ft_lbs": 1963,
-          "drop_in": -3
+          "drop_in": -3.0
         },
         {
           "distance_yd": 75,
@@ -95,18 +95,18 @@
       ]
     },
     {
-      "name": "Remington Nitro Magnum 10 GA #4 Lead (3½\")",
+      "name": "Remington Nitro Magnum 10 GA #4 Lead (3\u00bd\")",
       "bullet_weight_gr": 765,
       "bullet_type": "#4 Lead Shot (1.75 oz)",
       "muzzle_velocity_fps": 1260,
       "muzzle_energy_ft_lbs": 2700,
-      "barrel_length_in": 28,
+      "barrel_length_in": 28.0,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 1260,
           "energy_ft_lbs": 2700,
-          "drop_in": 0
+          "drop_in": 0.0
         },
         {
           "distance_yd": 25,
@@ -131,34 +131,6 @@
           "velocity_fps": 885,
           "energy_ft_lbs": 1332,
           "drop_in": -14.5
-        }
-      ]
-    },
-    {
-      "name": "Federal Premium 3-1/2\" BB Steel",
-      "bullet_weight_gr": 656,
-      "bullet_type": "BB Steel Shot (3-1/2\")",
-      "muzzle_velocity_fps": 1450,
-      "muzzle_energy_ft_lbs": 3064,
-      "barrel_length_in": 28,
-      "ballistics": [
-        {
-          "distance_yd": 0,
-          "velocity_fps": 1450,
-          "energy_ft_lbs": 3064,
-          "drop_in": 0
-        },
-        {
-          "distance_yd": 20,
-          "velocity_fps": 1350,
-          "energy_ft_lbs": 2658,
-          "drop_in": -0.1
-        },
-        {
-          "distance_yd": 40,
-          "velocity_fps": 1260,
-          "energy_ft_lbs": 2315,
-          "drop_in": -0.5
         }
       ]
     }
