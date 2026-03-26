@@ -1,0 +1,17 @@
+{
+  "name": "Barrett M82A1",
+  "slug": "barrett-m82a1",
+  "manufacturer": "Barrett Firearms",
+  "country_of_origin": "United States",
+  "caliber": "50-bmg",
+  "type": "rifle",
+  "action": "Short-recoil semi-automatic",
+  "capacity": 10,
+  "barrel_length_in": 29.0,
+  "overall_length_in": 57.0,
+  "weight_oz": 480.0,
+  "year_introduced": 1982,
+  "msrp_usd": 8899,
+  "notable_features": ["Semi-automatic .50 BMG capability", "Dual-chamber muzzle brake reduces felt recoil", "Effective range over 1,800 meters"],
+  "summary": "The Barrett M82A1 is the iconic semi-automatic .50 BMG anti-materiel rifle adopted by militaries worldwide, capable of engaging targets at extreme distances and defeating light armor."
+}

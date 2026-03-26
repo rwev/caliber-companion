@@ -1,0 +1,17 @@
+{
+  "name": "Colt 1911 Government",
+  "slug": "colt-1911-government",
+  "manufacturer": "Colt",
+  "country_of_origin": "United States",
+  "caliber": "45-acp",
+  "type": "pistol",
+  "action": "Single-action semi-automatic",
+  "capacity": 7,
+  "barrel_length_in": 5.0,
+  "overall_length_in": 8.25,
+  "weight_oz": 39.0,
+  "year_introduced": 1911,
+  "msrp_usd": 999,
+  "notable_features": ["John Browning's iconic short-recoil design", "Single-action trigger with thumb safety", "Over a century of continuous military and civilian service"],
+  "summary": "The Colt 1911 is one of the most iconic firearms ever made, serving as the standard U.S. military sidearm for 74 years and spawning countless variations across dozens of manufacturers."
+}

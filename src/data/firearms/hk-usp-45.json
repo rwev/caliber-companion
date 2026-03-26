@@ -1,0 +1,17 @@
+{
+  "name": "HK USP 45",
+  "slug": "hk-usp-45",
+  "manufacturer": "Heckler & Koch",
+  "country_of_origin": "Germany",
+  "caliber": "45-acp",
+  "type": "pistol",
+  "action": "DA/SA semi-automatic",
+  "capacity": 12,
+  "barrel_length_in": 4.41,
+  "overall_length_in": 7.87,
+  "weight_oz": 30.9,
+  "year_introduced": 1995,
+  "msrp_usd": 1149,
+  "notable_features": ["Recoil-reducing O-ring barrel system", "Modular control lever with multiple configurations", "Polymer frame with steel slide"],
+  "summary": "The HK USP 45 was designed from the ground up for the .45 ACP cartridge, featuring a proprietary recoil buffer system and the legendary HK reliability standard."
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Ruger GP100",
+  "slug": "ruger-gp100",
+  "manufacturer": "Ruger",
+  "country_of_origin": "United States",
+  "caliber": "357-magnum",
+  "type": "revolver",
+  "action": "DA/SA revolver",
+  "capacity": 6,
+  "barrel_length_in": 4.2,
+  "overall_length_in": 9.5,
+  "weight_oz": 40.0,
+  "year_introduced": 1985,
+  "msrp_usd": 899,
+  "notable_features": ["Triple-locking cylinder for strength", "Cushioned rubber grip with hardwood insert", "Built to handle unlimited .357 Magnum loads"],
+  "summary": "The Ruger GP100 is built like a tank, designed to handle a steady diet of full-power .357 Magnum loads indefinitely while remaining comfortable to shoot."
+}

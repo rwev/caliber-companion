@@ -1,0 +1,17 @@
+{
+  "name": "Henry Big Boy",
+  "slug": "henry-big-boy",
+  "manufacturer": "Henry Repeating Arms",
+  "country_of_origin": "United States",
+  "caliber": "45-70-government",
+  "type": "rifle",
+  "action": "Lever-action",
+  "capacity": 4,
+  "barrel_length_in": 20.0,
+  "overall_length_in": 38.5,
+  "weight_oz": 127.0,
+  "year_introduced": 2012,
+  "msrp_usd": 1049,
+  "notable_features": ["Polished brass receiver", "American walnut stock", "Made in America or not made at all"],
+  "summary": "The Henry Big Boy in .45-70 Government combines classic lever-action styling with a polished brass receiver, delivering hard-hitting performance for brush hunting and cowboy action shooting."
+}

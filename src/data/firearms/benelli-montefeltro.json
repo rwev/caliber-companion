@@ -1,0 +1,17 @@
+{
+  "name": "Benelli Montefeltro",
+  "slug": "benelli-montefeltro",
+  "manufacturer": "Benelli",
+  "country_of_origin": "Italy",
+  "caliber": "20-gauge",
+  "type": "shotgun",
+  "action": "Inertia-driven semi-automatic",
+  "capacity": 4,
+  "barrel_length_in": 26.0,
+  "overall_length_in": 47.5,
+  "weight_oz": 88.0,
+  "year_introduced": 1987,
+  "msrp_usd": 1299,
+  "notable_features": ["Inertia Driven operating system", "Lightweight satin walnut stock", "Slim and trim profile for upland carry"],
+  "summary": "The Benelli Montefeltro is a lightweight, elegant semi-automatic shotgun favored by upland bird hunters for its slim profile, fast handling, and the simplicity of Benelli's inertia-driven action."
+}

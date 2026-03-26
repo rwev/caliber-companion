@@ -1,0 +1,17 @@
+{
+  "name": "FN Five-seveN",
+  "slug": "fn-five-seven",
+  "manufacturer": "FN Herstal",
+  "country_of_origin": "Belgium",
+  "caliber": "57x28mm",
+  "type": "pistol",
+  "action": "Delayed blowback semi-automatic",
+  "capacity": 20,
+  "barrel_length_in": 4.8,
+  "overall_length_in": 8.2,
+  "weight_oz": 22.9,
+  "year_introduced": 1998,
+  "msrp_usd": 1499,
+  "notable_features": ["High-velocity 5.7x28mm cartridge", "20-round flush-fit magazine", "Low felt recoil despite high muzzle velocity"],
+  "summary": "The FN Five-seveN fires the proprietary 5.7x28mm cartridge originally developed for the P90 PDW, offering high velocity, flat trajectory, and 20-round capacity in a full-size pistol."
+}

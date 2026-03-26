@@ -1,0 +1,17 @@
+{
+  "name": "Smith & Wesson Model 29",
+  "slug": "smith-and-wesson-model-29",
+  "manufacturer": "Smith & Wesson",
+  "country_of_origin": "United States",
+  "caliber": "44-magnum",
+  "type": "revolver",
+  "action": "DA/SA revolver",
+  "capacity": 6,
+  "barrel_length_in": 6.5,
+  "overall_length_in": 11.88,
+  "weight_oz": 47.0,
+  "year_introduced": 1955,
+  "msrp_usd": 1169,
+  "notable_features": ["Made famous by Dirty Harry", "N-frame blued carbon steel", "Also chambers .44 Special"],
+  "summary": "The Smith & Wesson Model 29 became the world's most famous revolver after its starring role in the Dirty Harry films, and remains the definitive .44 Magnum revolver."
+}

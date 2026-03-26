@@ -1,0 +1,17 @@
+{
+  "name": "SIG Sauer P365",
+  "slug": "sig-sauer-p365",
+  "manufacturer": "SIG Sauer",
+  "country_of_origin": "United States",
+  "caliber": "9mm-luger",
+  "type": "pistol",
+  "action": "Striker-fired semi-automatic",
+  "capacity": 10,
+  "barrel_length_in": 3.1,
+  "overall_length_in": 5.8,
+  "weight_oz": 17.8,
+  "year_introduced": 2018,
+  "msrp_usd": 599,
+  "notable_features": ["High capacity in micro-compact form factor", "10+1 flush-fit magazine", "XRAY3 day/night sights"],
+  "summary": "The SIG Sauer P365 redefined the micro-compact pistol market by fitting a double-stack 10-round magazine into a subcompact frame, making it one of the best-selling concealed carry pistols."
+}

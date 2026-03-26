@@ -1,0 +1,17 @@
+{
+  "name": "Winchester Model 70",
+  "slug": "winchester-model-70",
+  "manufacturer": "Winchester",
+  "country_of_origin": "United States",
+  "caliber": "30-06-springfield",
+  "type": "rifle",
+  "action": "Bolt-action",
+  "capacity": 5,
+  "barrel_length_in": 24.0,
+  "overall_length_in": 44.5,
+  "weight_oz": 112.0,
+  "year_introduced": 1936,
+  "msrp_usd": 1099,
+  "notable_features": ["Controlled-round-feed Mauser-type action", "Three-position safety", "Called 'The Rifleman's Rifle'"],
+  "summary": "The Winchester Model 70 is one of the most respected bolt-action rifles ever made, earning the title 'The Rifleman's Rifle' for its controlled-round-feed action and superb trigger."
+}

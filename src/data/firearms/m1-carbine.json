@@ -1,0 +1,16 @@
+{
+  "name": "M1 Carbine",
+  "slug": "m1-carbine",
+  "manufacturer": "Various (originally Inland, Winchester, etc.)",
+  "country_of_origin": "United States",
+  "caliber": "30-carbine",
+  "type": "carbine",
+  "action": "Gas-operated semi-automatic",
+  "capacity": 15,
+  "barrel_length_in": 18.0,
+  "overall_length_in": 35.6,
+  "weight_oz": 80.0,
+  "year_introduced": 1942,
+  "notable_features": ["Lightweight WWII-era design at just 5 lbs", "Short-stroke tappet gas system", "Over 6 million produced during WWII"],
+  "summary": "The M1 Carbine was the most produced American small arm of World War II, designed as a lightweight alternative to the M1 Garand for rear-echelon and support troops."
+}

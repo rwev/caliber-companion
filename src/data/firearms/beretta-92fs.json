@@ -1,0 +1,17 @@
+{
+  "name": "Beretta 92FS / M9",
+  "slug": "beretta-92fs",
+  "manufacturer": "Beretta",
+  "country_of_origin": "Italy",
+  "caliber": "9mm-luger",
+  "type": "pistol",
+  "action": "DA/SA semi-automatic",
+  "capacity": 15,
+  "barrel_length_in": 4.9,
+  "overall_length_in": 8.5,
+  "weight_oz": 33.3,
+  "year_introduced": 1976,
+  "msrp_usd": 699,
+  "notable_features": ["Open-slide design for reliable feeding", "Ambidextrous safety/decocker", "Served as U.S. military M9 from 1985-2017"],
+  "summary": "The Beretta 92FS served as the standard U.S. military sidearm for over 30 years as the M9, known for its open-slide design, reliability, and 15-round capacity."
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Ruger Precision Rifle",
+  "slug": "ruger-precision-rifle",
+  "manufacturer": "Ruger",
+  "country_of_origin": "United States",
+  "caliber": "65-creedmoor",
+  "type": "rifle",
+  "action": "Bolt-action",
+  "capacity": 10,
+  "barrel_length_in": 24.0,
+  "overall_length_in": 43.25,
+  "weight_oz": 155.0,
+  "year_introduced": 2015,
+  "msrp_usd": 1799,
+  "notable_features": ["AR-style folding MSR stock", "20 MOA Picatinny rail", "Accepts standard AR-15 grips and Magpul AICS magazines"],
+  "summary": "The Ruger Precision Rifle brought affordable precision rifle shooting to the masses, offering a factory chassis rifle with sub-MOA accuracy at a fraction of custom rifle prices."
+}

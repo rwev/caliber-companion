@@ -1,0 +1,16 @@
+{
+  "name": "Browning Citori",
+  "slug": "browning-citori",
+  "manufacturer": "Browning",
+  "country_of_origin": "Japan",
+  "caliber": "12-gauge",
+  "type": "shotgun",
+  "action": "Break-action over/under",
+  "barrel_length_in": 28.0,
+  "overall_length_in": 45.0,
+  "weight_oz": 128.0,
+  "year_introduced": 1973,
+  "msrp_usd": 1999,
+  "notable_features": ["Invector-Plus choke system", "Steel receiver with silver nitride finish", "Gold-plated single selective trigger"],
+  "summary": "The Browning Citori is the most popular over/under shotgun in America, prized by clay sport shooters and upland hunters for its balance, reliability, and classic Browning craftsmanship."
+}

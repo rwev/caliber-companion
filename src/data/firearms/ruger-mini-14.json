@@ -1,0 +1,17 @@
+{
+  "name": "Ruger Mini-14",
+  "slug": "ruger-mini-14",
+  "manufacturer": "Ruger",
+  "country_of_origin": "United States",
+  "caliber": "223-remington",
+  "type": "rifle",
+  "action": "Gas-operated semi-automatic",
+  "capacity": 5,
+  "barrel_length_in": 18.5,
+  "overall_length_in": 37.0,
+  "weight_oz": 111.0,
+  "year_introduced": 1973,
+  "msrp_usd": 1069,
+  "notable_features": ["Traditional ranch rifle appearance", "M14-inspired action scaled down for .223", "Garand-style rotating bolt"],
+  "summary": "The Ruger Mini-14 is a .223-caliber semi-automatic rifle with a traditional wood-and-steel appearance, offering the same capability as an AR-15 in a classic ranch rifle form factor."
+}

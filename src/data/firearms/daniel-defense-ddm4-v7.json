@@ -1,0 +1,17 @@
+{
+  "name": "Daniel Defense DDM4 V7",
+  "slug": "daniel-defense-ddm4-v7",
+  "manufacturer": "Daniel Defense",
+  "country_of_origin": "United States",
+  "caliber": "556x45mm-nato",
+  "type": "rifle",
+  "action": "Gas-operated semi-automatic",
+  "capacity": 30,
+  "barrel_length_in": 16.0,
+  "overall_length_in": 34.75,
+  "weight_oz": 102.4,
+  "year_introduced": 2015,
+  "msrp_usd": 1899,
+  "notable_features": ["Cold hammer-forged chrome-lined barrel", "M-LOK rail system", "Mid-length gas system for smoother cycling"],
+  "summary": "The Daniel Defense DDM4 V7 is a premium AR-15 rifle built to exacting standards, featuring a cold hammer-forged barrel and the MFR M-LOK rail that set the standard for high-end modern sporting rifles."
+}

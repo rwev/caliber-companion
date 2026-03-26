@@ -1,0 +1,16 @@
+{
+  "name": "AK-47 / AKM",
+  "slug": "akm",
+  "manufacturer": "Various (Kalashnikov design)",
+  "country_of_origin": "Soviet Union",
+  "caliber": "762x39mm",
+  "type": "rifle",
+  "action": "Gas-operated semi-automatic",
+  "capacity": 30,
+  "barrel_length_in": 16.3,
+  "overall_length_in": 34.3,
+  "weight_oz": 119.0,
+  "year_introduced": 1949,
+  "notable_features": ["Legendary reliability in adverse conditions", "Long-stroke gas piston with rotating bolt", "Most produced firearm in history"],
+  "summary": "The AK-47 and its modernized AKM variant are the most widely produced firearms in history, renowned for extreme reliability and simplicity of operation in the harshest environments."
+}

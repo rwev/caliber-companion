@@ -1,0 +1,17 @@
+{
+  "name": "Remington 870",
+  "slug": "remington-870",
+  "manufacturer": "Remington",
+  "country_of_origin": "United States",
+  "caliber": "12-gauge",
+  "type": "shotgun",
+  "action": "Pump-action",
+  "capacity": 4,
+  "barrel_length_in": 28.0,
+  "overall_length_in": 48.5,
+  "weight_oz": 112.0,
+  "year_introduced": 1950,
+  "msrp_usd": 449,
+  "notable_features": ["Over 11 million produced", "Steel receiver for durability", "Twin action bars for smooth cycling"],
+  "summary": "The Remington 870 is the best-selling pump-action shotgun in history, trusted by hunters, sport shooters, military, and law enforcement for over seven decades."
+}

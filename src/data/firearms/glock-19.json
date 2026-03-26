@@ -1,0 +1,17 @@
+{
+  "name": "Glock 19",
+  "slug": "glock-19",
+  "manufacturer": "Glock",
+  "country_of_origin": "Austria",
+  "caliber": "9mm-luger",
+  "type": "pistol",
+  "action": "Striker-fired semi-automatic",
+  "capacity": 15,
+  "barrel_length_in": 4.02,
+  "overall_length_in": 7.36,
+  "weight_oz": 23.63,
+  "year_introduced": 1988,
+  "msrp_usd": 599,
+  "notable_features": ["Compact size balances concealability and capacity", "Safe Action trigger system", "Most popular Glock model sold"],
+  "summary": "The Glock 19 is the compact variant of the Glock 17, widely regarded as the best all-around handgun for duty, concealed carry, and home defense."
+}

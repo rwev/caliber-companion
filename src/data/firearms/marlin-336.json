@@ -1,0 +1,17 @@
+{
+  "name": "Marlin 336",
+  "slug": "marlin-336",
+  "manufacturer": "Marlin (Ruger)",
+  "country_of_origin": "United States",
+  "caliber": "30-30-winchester",
+  "type": "rifle",
+  "action": "Lever-action",
+  "capacity": 6,
+  "barrel_length_in": 20.0,
+  "overall_length_in": 38.5,
+  "weight_oz": 112.0,
+  "year_introduced": 1948,
+  "msrp_usd": 1099,
+  "notable_features": ["Side ejection allows easy scope mounting", "Solid-top receiver", "American walnut pistol grip stock"],
+  "summary": "The Marlin 336 is the classic American lever-action deer rifle, chambered in .30-30 Winchester and featuring side ejection that makes it easy to mount a scope."
+}

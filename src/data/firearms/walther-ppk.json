@@ -1,0 +1,17 @@
+{
+  "name": "Walther PPK",
+  "slug": "walther-ppk",
+  "manufacturer": "Walther",
+  "country_of_origin": "Germany",
+  "caliber": "380-acp",
+  "type": "pistol",
+  "action": "DA/SA semi-automatic",
+  "capacity": 6,
+  "barrel_length_in": 3.3,
+  "overall_length_in": 6.1,
+  "weight_oz": 20.8,
+  "year_introduced": 1931,
+  "msrp_usd": 849,
+  "notable_features": ["Iconic compact design since 1931", "Fixed barrel blowback operation", "Famous as James Bond's sidearm"],
+  "summary": "The Walther PPK is a classic compact pistol that pioneered the DA/SA trigger in a pocket-sized design, achieving cultural icon status as the fictional sidearm of James Bond."
+}

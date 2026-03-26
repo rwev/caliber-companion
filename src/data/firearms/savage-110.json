@@ -1,0 +1,17 @@
+{
+  "name": "Savage 110",
+  "slug": "savage-110",
+  "manufacturer": "Savage Arms",
+  "country_of_origin": "United States",
+  "caliber": "65-creedmoor",
+  "type": "rifle",
+  "action": "Bolt-action",
+  "capacity": 4,
+  "barrel_length_in": 22.0,
+  "overall_length_in": 42.5,
+  "weight_oz": 110.4,
+  "year_introduced": 1958,
+  "msrp_usd": 749,
+  "notable_features": ["User-adjustable AccuTrigger", "AccuFit system with adjustable length of pull and comb height", "Floating bolt head for consistent lockup"],
+  "summary": "The Savage 110 is one of the longest-running bolt-action rifle designs in production, famous for its AccuTrigger and the floating bolt head that delivers outstanding accuracy at its price."
+}

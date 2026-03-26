@@ -1,0 +1,17 @@
+{
+  "name": "Weatherby Vanguard",
+  "slug": "weatherby-vanguard",
+  "manufacturer": "Weatherby",
+  "country_of_origin": "United States",
+  "caliber": "270-winchester",
+  "type": "rifle",
+  "action": "Bolt-action",
+  "capacity": 5,
+  "barrel_length_in": 24.0,
+  "overall_length_in": 44.5,
+  "weight_oz": 112.0,
+  "year_introduced": 1970,
+  "msrp_usd": 649,
+  "notable_features": ["Sub-MOA accuracy guarantee", "Two-stage match-quality trigger", "Cold hammer-forged barrel"],
+  "summary": "The Weatherby Vanguard offers Weatherby's famous accuracy guarantee and cold hammer-forged barrel at a price point well below their Mark V line, making it an exceptional value hunting rifle."
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Smith & Wesson M&P 9 M2.0",
+  "slug": "smith-and-wesson-mp9-m2",
+  "manufacturer": "Smith & Wesson",
+  "country_of_origin": "United States",
+  "caliber": "9mm-luger",
+  "type": "pistol",
+  "action": "Striker-fired semi-automatic",
+  "capacity": 17,
+  "barrel_length_in": 4.25,
+  "overall_length_in": 7.4,
+  "weight_oz": 24.7,
+  "year_introduced": 2017,
+  "msrp_usd": 569,
+  "notable_features": ["Aggressive M2.0 grip texture", "Armornite durable finish", "Four interchangeable palmswell inserts"],
+  "summary": "The Smith & Wesson M&P 9 M2.0 is a widely adopted duty and carry pistol known for its ergonomic grip, reliable operation, and competitive price point."
+}

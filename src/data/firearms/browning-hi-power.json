@@ -1,0 +1,17 @@
+{
+  "name": "Browning Hi-Power",
+  "slug": "browning-hi-power",
+  "manufacturer": "Browning / FN Herstal",
+  "country_of_origin": "Belgium",
+  "caliber": "9mm-luger",
+  "type": "pistol",
+  "action": "Single-action semi-automatic",
+  "capacity": 13,
+  "barrel_length_in": 4.6,
+  "overall_length_in": 7.75,
+  "weight_oz": 32.0,
+  "year_introduced": 1935,
+  "msrp_usd": 1449,
+  "notable_features": ["First successful high-capacity 9mm pistol", "John Browning's final pistol design", "Served with over 50 national militaries"],
+  "summary": "The Browning Hi-Power was the first widely adopted high-capacity 9mm pistol, serving militaries on every continent and influencing nearly all modern double-stack handgun designs."
+}

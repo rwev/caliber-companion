@@ -1,0 +1,17 @@
+{
+  "name": "Benelli M4",
+  "slug": "benelli-m4",
+  "manufacturer": "Benelli",
+  "country_of_origin": "Italy",
+  "caliber": "12-gauge",
+  "type": "shotgun",
+  "action": "Gas-operated semi-automatic",
+  "capacity": 5,
+  "barrel_length_in": 18.5,
+  "overall_length_in": 40.0,
+  "weight_oz": 127.0,
+  "year_introduced": 1998,
+  "msrp_usd": 1999,
+  "notable_features": ["ARGO dual gas piston system", "U.S. Marine Corps M1014 Joint Service Combat Shotgun", "Collapsible stock option"],
+  "summary": "The Benelli M4 is the gold standard combat shotgun, adopted by the U.S. Marine Corps as the M1014, featuring the ultra-reliable ARGO gas system that requires no adjustment for different loads."
+}

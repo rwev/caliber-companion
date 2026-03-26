@@ -1,0 +1,17 @@
+{
+  "name": "Beretta A400 Xcel",
+  "slug": "beretta-a400-xcel",
+  "manufacturer": "Beretta",
+  "country_of_origin": "Italy",
+  "caliber": "12-gauge",
+  "type": "shotgun",
+  "action": "Gas-operated semi-automatic",
+  "capacity": 3,
+  "barrel_length_in": 30.0,
+  "overall_length_in": 51.1,
+  "weight_oz": 119.0,
+  "year_introduced": 2012,
+  "msrp_usd": 1899,
+  "notable_features": ["Blink gas system cycles in under 36 milliseconds", "Kick-Off recoil reduction system", "Steelium barrel technology"],
+  "summary": "The Beretta A400 Xcel is a premium competition semi-automatic shotgun designed for clay sports, featuring the ultra-fast Blink gas operating system and Kick-Off recoil reduction."
+}

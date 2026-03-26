@@ -1,0 +1,17 @@
+{
+  "name": "Ruger American Rifle",
+  "slug": "ruger-american-rifle",
+  "manufacturer": "Ruger",
+  "country_of_origin": "United States",
+  "caliber": "65-creedmoor",
+  "type": "rifle",
+  "action": "Bolt-action",
+  "capacity": 4,
+  "barrel_length_in": 22.0,
+  "overall_length_in": 42.0,
+  "weight_oz": 108.0,
+  "year_introduced": 2012,
+  "msrp_usd": 549,
+  "notable_features": ["Ruger Marksman Adjustable trigger", "Power Bedding integral bedding block", "Accepts AI-style detachable magazines"],
+  "summary": "The Ruger American Rifle delivers remarkable accuracy at a budget price point, featuring a free-floated barrel and adjustable trigger that compete with rifles costing twice as much."
+}

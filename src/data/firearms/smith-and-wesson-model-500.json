@@ -1,0 +1,17 @@
+{
+  "name": "Smith & Wesson Model 500",
+  "slug": "smith-and-wesson-model-500",
+  "manufacturer": "Smith & Wesson",
+  "country_of_origin": "United States",
+  "caliber": "500-sw-magnum",
+  "type": "revolver",
+  "action": "DA/SA revolver",
+  "capacity": 5,
+  "barrel_length_in": 8.38,
+  "overall_length_in": 15.0,
+  "weight_oz": 72.5,
+  "year_introduced": 2003,
+  "msrp_usd": 1599,
+  "notable_features": ["Most powerful production revolver", "Compensated barrel to manage recoil", "X-frame — largest S&W revolver frame"],
+  "summary": "The Smith & Wesson Model 500 is the most powerful production revolver in the world, chambered in .500 S&W Magnum and built on the massive X-frame designed specifically for this cartridge."
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Mossberg Patriot",
+  "slug": "mossberg-patriot",
+  "manufacturer": "Mossberg",
+  "country_of_origin": "United States",
+  "caliber": "308-winchester",
+  "type": "rifle",
+  "action": "Bolt-action",
+  "capacity": 4,
+  "barrel_length_in": 22.0,
+  "overall_length_in": 42.0,
+  "weight_oz": 104.0,
+  "year_introduced": 2015,
+  "msrp_usd": 449,
+  "notable_features": ["Lightning Bolt Action adjustable trigger", "Fluted bolt and spiral-fluted barrel", "Free-floated button-rifled barrel"],
+  "summary": "The Mossberg Patriot is a budget-friendly bolt-action hunting rifle that offers a user-adjustable trigger, fluted barrel, and reliable accuracy at one of the lowest price points in its class."
+}

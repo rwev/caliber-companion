@@ -1,0 +1,17 @@
+{
+  "name": "Mossberg 500",
+  "slug": "mossberg-500",
+  "manufacturer": "Mossberg",
+  "country_of_origin": "United States",
+  "caliber": "12-gauge",
+  "type": "shotgun",
+  "action": "Pump-action",
+  "capacity": 5,
+  "barrel_length_in": 28.0,
+  "overall_length_in": 48.0,
+  "weight_oz": 109.0,
+  "year_introduced": 1961,
+  "msrp_usd": 449,
+  "notable_features": ["Ambidextrous top-mounted safety", "Dual extractors for reliable ejection", "Anti-jam elevator"],
+  "summary": "The Mossberg 500 is one of the most versatile and affordable pump-action shotguns ever made, with a top-mounted safety that makes it a favorite among left-handed shooters."
+}

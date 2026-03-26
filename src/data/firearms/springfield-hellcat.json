@@ -1,0 +1,17 @@
+{
+  "name": "Springfield Hellcat",
+  "slug": "springfield-hellcat",
+  "manufacturer": "Springfield Armory",
+  "country_of_origin": "United States",
+  "caliber": "9mm-luger",
+  "type": "pistol",
+  "action": "Striker-fired semi-automatic",
+  "capacity": 11,
+  "barrel_length_in": 3.0,
+  "overall_length_in": 6.0,
+  "weight_oz": 17.9,
+  "year_introduced": 2019,
+  "msrp_usd": 569,
+  "notable_features": ["11+1 capacity in micro-compact size", "Adaptive grip texture", "U-Dot tritium/luminescent sight system"],
+  "summary": "The Springfield Hellcat pushed micro-compact capacity further with an 11+1 flush-fit magazine and an optional optics-ready slide, competing directly with the SIG P365."
+}

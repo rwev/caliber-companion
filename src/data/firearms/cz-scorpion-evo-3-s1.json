@@ -1,0 +1,17 @@
+{
+  "name": "CZ Scorpion EVO 3 S1",
+  "slug": "cz-scorpion-evo-3-s1",
+  "manufacturer": "CZ (Ceska Zbrojovka)",
+  "country_of_origin": "Czech Republic",
+  "caliber": "9mm-luger",
+  "type": "carbine",
+  "action": "Blowback semi-automatic",
+  "capacity": 20,
+  "barrel_length_in": 16.2,
+  "overall_length_in": 35.3,
+  "weight_oz": 96.0,
+  "year_introduced": 2015,
+  "msrp_usd": 999,
+  "notable_features": ["Ambidextrous controls throughout", "M-LOK compatible handguard", "Low bore axis for reduced muzzle rise"],
+  "summary": "The CZ Scorpion EVO 3 S1 is a popular 9mm pistol-caliber carbine with fully ambidextrous controls, known for its soft-shooting nature and strong aftermarket support."
+}

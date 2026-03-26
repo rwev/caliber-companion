@@ -1,0 +1,17 @@
+{
+  "name": "Browning X-Bolt",
+  "slug": "browning-x-bolt",
+  "manufacturer": "Browning",
+  "country_of_origin": "United States",
+  "caliber": "300-winchester-magnum",
+  "type": "rifle",
+  "action": "Bolt-action",
+  "capacity": 3,
+  "barrel_length_in": 26.0,
+  "overall_length_in": 46.75,
+  "weight_oz": 112.0,
+  "year_introduced": 2008,
+  "msrp_usd": 1099,
+  "notable_features": ["Feather Trigger adjustable to 3 lbs", "60-degree bolt lift for fast cycling", "Detachable rotary magazine"],
+  "summary": "The Browning X-Bolt is a premium production bolt-action rifle known for its crisp Feather Trigger, short 60-degree bolt lift, and the fit and finish Browning is known for."
+}

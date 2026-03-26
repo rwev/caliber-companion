@@ -1,0 +1,17 @@
+{
+  "name": "Ruger PC Carbine",
+  "slug": "ruger-pc-carbine",
+  "manufacturer": "Ruger",
+  "country_of_origin": "United States",
+  "caliber": "9mm-luger",
+  "type": "carbine",
+  "action": "Blowback semi-automatic",
+  "capacity": 17,
+  "barrel_length_in": 16.12,
+  "overall_length_in": 34.37,
+  "weight_oz": 107.0,
+  "year_introduced": 2018,
+  "msrp_usd": 649,
+  "notable_features": ["Accepts Glock or Ruger SR-Series magazines", "Takedown design for easy transport", "Dead blow action to reduce felt recoil"],
+  "summary": "The Ruger PC Carbine is a 9mm pistol-caliber carbine with a quick-takedown design that accepts common Glock magazines, ideal for home defense and recreational shooting."
+}

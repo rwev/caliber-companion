@@ -25,6 +25,12 @@ const prose = proseEntries.find(p => p.data.slug === d.slug);
 const rendered = prose ? await render(prose) : null;
 const Content = rendered?.Content;
 
+// Find firearms for this caliber
+const allFirearms = await getCollection('firearmsData');
+const linkedFirearms = allFirearms
+  .filter(f => f.data.caliber === d.slug)
+  .sort((a, b) => a.data.name.localeCompare(b.data.name));
+
 // Resolve cartridge lineage
 const allCalibers = await getCollection('caliberData');
 const caliberBySlug = new Map(allCalibers.map(c => [c.data.slug, c.data]));
@@ -265,15 +271,30 @@ const marketRows = [
         <!-- Common Firearms -->
         <div class="border border-surface-border">
           <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
-            <h3 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">Common Firearms</h3>
+            <h3 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">
+              {linkedFirearms.length > 0 ? 'Firearms in This Caliber' : 'Common Firearms'}
+            </h3>
           </div>
-          <ul class="divide-y divide-surface-border-subtle">
-            {d.common_firearms.map((firearm, i) => (
-              <li class={`px-4 py-2.5 font-mono text-base text-text-secondary ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
-                {firearm}
-              </li>
-            ))}
-          </ul>
+          {linkedFirearms.length > 0 ? (
+            <div class="divide-y divide-surface-border-subtle">
+              {linkedFirearms.map((f, i) => (
+                <div class={`px-4 py-2.5 ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
+                  <div class="font-mono text-base font-medium text-text-primary">{f.data.name}</div>
+                  <div class="font-mono text-xs text-text-muted mt-0.5">
+                    {f.data.manufacturer} · {f.data.action} · {f.data.barrel_length_in}" barrel · {(f.data.weight_oz / 16).toFixed(1)} lb
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <ul class="divide-y divide-surface-border-subtle">
+              {d.common_firearms.map((firearm, i) => (
+                <li class={`px-4 py-2.5 font-mono text-base text-text-secondary ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
+                  {firearm}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
 
         <!-- Adoption Timeline -->

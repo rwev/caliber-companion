@@ -1,0 +1,17 @@
+{
+  "name": "Smith & Wesson M&P 15",
+  "slug": "smith-and-wesson-mp15",
+  "manufacturer": "Smith & Wesson",
+  "country_of_origin": "United States",
+  "caliber": "556x45mm-nato",
+  "type": "rifle",
+  "action": "Gas-operated semi-automatic",
+  "capacity": 30,
+  "barrel_length_in": 16.0,
+  "overall_length_in": 35.0,
+  "weight_oz": 107.2,
+  "year_introduced": 2006,
+  "msrp_usd": 799,
+  "notable_features": ["Mil-spec AR-15 platform", "6-position collapsible stock", "Compatible with standard AR-15 accessories"],
+  "summary": "The Smith & Wesson M&P 15 is one of the most popular entry-level AR-15 rifles, offering mil-spec reliability and full accessory compatibility at an accessible price point."
+}

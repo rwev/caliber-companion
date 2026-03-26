@@ -1,0 +1,17 @@
+{
+  "name": "Springfield M1A",
+  "slug": "springfield-m1a",
+  "manufacturer": "Springfield Armory",
+  "country_of_origin": "United States",
+  "caliber": "308-winchester",
+  "type": "rifle",
+  "action": "Gas-operated semi-automatic",
+  "capacity": 10,
+  "barrel_length_in": 22.0,
+  "overall_length_in": 44.33,
+  "weight_oz": 153.6,
+  "year_introduced": 1974,
+  "msrp_usd": 1699,
+  "notable_features": ["Semi-auto civilian M14 variant", "Walnut stock with fiberglass bedding", "Two-stage military trigger"],
+  "summary": "The Springfield M1A is the civilian semi-automatic version of the legendary M14 battle rifle, chambered in .308 Winchester and valued for its accuracy, power, and classic military rifle aesthetics."
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Glock 20",
+  "slug": "glock-20",
+  "manufacturer": "Glock",
+  "country_of_origin": "Austria",
+  "caliber": "10mm-auto",
+  "type": "pistol",
+  "action": "Striker-fired semi-automatic",
+  "capacity": 15,
+  "barrel_length_in": 4.61,
+  "overall_length_in": 8.07,
+  "weight_oz": 30.71,
+  "year_introduced": 1991,
+  "msrp_usd": 635,
+  "notable_features": ["Full-power 10mm Auto capability", "Popular backcountry bear defense option", "Safe Action trigger system"],
+  "summary": "The Glock 20 is the premier polymer-framed 10mm Auto pistol, widely chosen for backcountry carry and hunting where magnum-level performance in a semi-automatic is desired."
+}

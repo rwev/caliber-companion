@@ -1,0 +1,17 @@
+{
+  "name": "Howa 1500",
+  "slug": "howa-1500",
+  "manufacturer": "Howa",
+  "country_of_origin": "Japan",
+  "caliber": "65-creedmoor",
+  "type": "rifle",
+  "action": "Bolt-action",
+  "capacity": 4,
+  "barrel_length_in": 22.0,
+  "overall_length_in": 42.25,
+  "weight_oz": 112.0,
+  "year_introduced": 1979,
+  "msrp_usd": 649,
+  "notable_features": ["HACT two-stage trigger", "Forged one-piece bolt with two locking lugs", "Cold hammer-forged barrel"],
+  "summary": "The Howa 1500 is a Japanese-made bolt-action rifle that punches well above its price class, offering cold hammer-forged barrel accuracy and a superb two-stage trigger at a budget-friendly price."
+}

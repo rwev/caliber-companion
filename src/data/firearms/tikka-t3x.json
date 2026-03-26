@@ -1,0 +1,17 @@
+{
+  "name": "Tikka T3x",
+  "slug": "tikka-t3x",
+  "manufacturer": "Tikka (Sako)",
+  "country_of_origin": "Finland",
+  "caliber": "308-winchester",
+  "type": "rifle",
+  "action": "Bolt-action",
+  "capacity": 3,
+  "barrel_length_in": 22.4,
+  "overall_length_in": 42.5,
+  "weight_oz": 108.8,
+  "year_introduced": 2016,
+  "msrp_usd": 899,
+  "notable_features": ["Sub-MOA accuracy guarantee", "Modular synthetic stock with interchangeable pistol grips", "Exceptionally smooth bolt operation"],
+  "summary": "The Tikka T3x is widely regarded as the best factory bolt-action rifle under $1,000, known for its butter-smooth bolt, sub-MOA accuracy guarantee, and Finnish craftsmanship."
+}

@@ -1,0 +1,17 @@
+{
+  "name": "CZ 75 B",
+  "slug": "cz-75-b",
+  "manufacturer": "CZ (Ceska Zbrojovka)",
+  "country_of_origin": "Czech Republic",
+  "caliber": "9mm-luger",
+  "type": "pistol",
+  "action": "DA/SA semi-automatic",
+  "capacity": 16,
+  "barrel_length_in": 4.6,
+  "overall_length_in": 8.1,
+  "weight_oz": 35.2,
+  "year_introduced": 1975,
+  "msrp_usd": 599,
+  "notable_features": ["Steel frame with slide-inside-frame design", "DA/SA with manual safety", "One of the most copied pistol designs in history"],
+  "summary": "The CZ 75 B is a legendary all-steel DA/SA pistol renowned for its ergonomics, accuracy, and influence on dozens of subsequent handgun designs worldwide."
+}

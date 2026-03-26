@@ -1,0 +1,17 @@
+{
+  "name": "SIG Sauer P226",
+  "slug": "sig-sauer-p226",
+  "manufacturer": "SIG Sauer",
+  "country_of_origin": "Germany",
+  "caliber": "9mm-luger",
+  "type": "pistol",
+  "action": "DA/SA semi-automatic",
+  "capacity": 15,
+  "barrel_length_in": 4.4,
+  "overall_length_in": 7.7,
+  "weight_oz": 34.0,
+  "year_introduced": 1984,
+  "msrp_usd": 1299,
+  "notable_features": ["Adopted by U.S. Navy SEALs as the Mk 25", "Alloy frame with stainless steel slide", "Decocker-only operation"],
+  "summary": "The SIG Sauer P226 is a premium DA/SA duty pistol famous for its adoption by U.S. Navy SEALs and numerous elite law enforcement units worldwide."
+}

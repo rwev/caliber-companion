@@ -1,0 +1,17 @@
+{
+  "name": "Ruger Super Redhawk",
+  "slug": "ruger-super-redhawk",
+  "manufacturer": "Ruger",
+  "country_of_origin": "United States",
+  "caliber": "44-magnum",
+  "type": "revolver",
+  "action": "DA/SA revolver",
+  "capacity": 6,
+  "barrel_length_in": 7.5,
+  "overall_length_in": 13.0,
+  "weight_oz": 53.0,
+  "year_introduced": 1987,
+  "msrp_usd": 1149,
+  "notable_features": ["Extended frame for scope mounting", "Triple-locking cylinder", "Built for heavy hunting loads"],
+  "summary": "The Ruger Super Redhawk is a massively built revolver designed for handgun hunting, featuring an extended frame with integral scope mounts and the strength to handle the hottest loads."
+}

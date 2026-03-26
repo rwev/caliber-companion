@@ -1,0 +1,17 @@
+{
+  "name": "CZ 457",
+  "slug": "cz-457",
+  "manufacturer": "CZ (Ceska Zbrojovka)",
+  "country_of_origin": "Czech Republic",
+  "caliber": "22-lr",
+  "type": "rifle",
+  "action": "Bolt-action",
+  "capacity": 5,
+  "barrel_length_in": 20.5,
+  "overall_length_in": 38.6,
+  "weight_oz": 93.6,
+  "year_introduced": 2018,
+  "msrp_usd": 549,
+  "notable_features": ["Interchangeable barrel system", "Adjustable trigger mechanism", "Push-to-fire safety"],
+  "summary": "The CZ 457 is a highly refined .22 LR bolt-action rifle with an interchangeable barrel system and adjustable trigger, prized for small game hunting and precision rimfire competition."
+}

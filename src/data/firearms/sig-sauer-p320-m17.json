@@ -1,0 +1,17 @@
+{
+  "name": "SIG Sauer P320 / M17",
+  "slug": "sig-sauer-p320-m17",
+  "manufacturer": "SIG Sauer",
+  "country_of_origin": "United States",
+  "caliber": "9mm-luger",
+  "type": "pistol",
+  "action": "Striker-fired semi-automatic",
+  "capacity": 17,
+  "barrel_length_in": 4.7,
+  "overall_length_in": 8.0,
+  "weight_oz": 29.6,
+  "year_introduced": 2014,
+  "msrp_usd": 679,
+  "notable_features": ["Modular serialized fire control unit", "U.S. Military M17/M18 MHS winner", "Easily swappable grip modules"],
+  "summary": "The SIG Sauer P320 won the U.S. Army's Modular Handgun System competition as the M17, featuring a unique serialized chassis that allows caliber, size, and grip changes."
+}

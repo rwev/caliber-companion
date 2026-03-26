@@ -1,0 +1,17 @@
+{
+  "name": "Mossberg 590A1",
+  "slug": "mossberg-590a1",
+  "manufacturer": "Mossberg",
+  "country_of_origin": "United States",
+  "caliber": "12-gauge",
+  "type": "shotgun",
+  "action": "Pump-action",
+  "capacity": 8,
+  "barrel_length_in": 20.0,
+  "overall_length_in": 41.0,
+  "weight_oz": 116.0,
+  "year_introduced": 1987,
+  "msrp_usd": 599,
+  "notable_features": ["Heavy-walled barrel for durability", "Metal trigger guard and safety", "Mil-Spec 3443 qualified"],
+  "summary": "The Mossberg 590A1 is the mil-spec tactical variant of the Mossberg 500, featuring a heavy-walled barrel and metal components that meet U.S. military durability specifications."
+}

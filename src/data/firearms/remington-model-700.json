@@ -1,0 +1,17 @@
+{
+  "name": "Remington Model 700",
+  "slug": "remington-model-700",
+  "manufacturer": "Remington",
+  "country_of_origin": "United States",
+  "caliber": "308-winchester",
+  "type": "rifle",
+  "action": "Bolt-action",
+  "capacity": 4,
+  "barrel_length_in": 24.0,
+  "overall_length_in": 44.5,
+  "weight_oz": 116.0,
+  "year_introduced": 1962,
+  "msrp_usd": 899,
+  "notable_features": ["Basis for M24 and M40 military sniper systems", "Cylindrical receiver for inherent accuracy", "Largest aftermarket of any bolt-action rifle"],
+  "summary": "The Remington Model 700 is the best-selling bolt-action rifle in history, forming the foundation for the U.S. military's M24 and Marine M40 sniper weapon systems."
+}

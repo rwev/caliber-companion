@@ -1,0 +1,17 @@
+{
+  "name": "Smith & Wesson Model 686",
+  "slug": "smith-and-wesson-model-686",
+  "manufacturer": "Smith & Wesson",
+  "country_of_origin": "United States",
+  "caliber": "357-magnum",
+  "type": "revolver",
+  "action": "DA/SA revolver",
+  "capacity": 6,
+  "barrel_length_in": 4.0,
+  "overall_length_in": 9.56,
+  "weight_oz": 35.0,
+  "year_introduced": 1981,
+  "msrp_usd": 899,
+  "notable_features": ["Stainless steel L-frame construction", "Also chambers .38 Special", "Full-lug barrel for balanced weight"],
+  "summary": "The Smith & Wesson Model 686 is the quintessential stainless steel .357 Magnum revolver, equally suited for duty carry, target shooting, and home defense."
+}

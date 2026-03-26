@@ -108,4 +108,25 @@ const guides = defineCollection({
   }),
 });
 
-export const collections = { caliberData, caliberProse, guides };
+const firearmsData = defineCollection({
+  loader: glob({ pattern: '**/*.json', base: './src/data/firearms' }),
+  schema: z.object({
+    name: z.string(),
+    slug: z.string(),
+    manufacturer: z.string(),
+    country_of_origin: z.string(),
+    caliber: z.string(),
+    type: z.enum(['pistol', 'revolver', 'rifle', 'shotgun', 'submachine_gun', 'carbine']),
+    action: z.string(),
+    capacity: z.number().optional(),
+    barrel_length_in: z.number(),
+    overall_length_in: z.number().optional(),
+    weight_oz: z.number(),
+    year_introduced: z.number(),
+    msrp_usd: z.number().optional(),
+    notable_features: z.array(z.string()).default([]),
+    summary: z.string(),
+  }),
+});
+
+export const collections = { caliberData, caliberProse, guides, firearmsData };

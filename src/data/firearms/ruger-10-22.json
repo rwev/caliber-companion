@@ -1,0 +1,17 @@
+{
+  "name": "Ruger 10/22",
+  "slug": "ruger-10-22",
+  "manufacturer": "Ruger",
+  "country_of_origin": "United States",
+  "caliber": "22-lr",
+  "type": "rifle",
+  "action": "Blowback semi-automatic",
+  "capacity": 10,
+  "barrel_length_in": 18.5,
+  "overall_length_in": 37.0,
+  "weight_oz": 80.0,
+  "year_introduced": 1964,
+  "msrp_usd": 309,
+  "notable_features": ["Massive aftermarket ecosystem", "Detachable rotary magazine", "Over 7 million produced"],
+  "summary": "The Ruger 10/22 is America's favorite .22 LR rifle, beloved for its reliability, accuracy, and the enormous aftermarket that allows near-infinite customization."
+}
