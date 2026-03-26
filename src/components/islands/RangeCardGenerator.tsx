@@ -68,7 +68,7 @@ export default function RangeCardGenerator({ calibers }: Props) {
       {/* Configuration */}
       <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <label class="block font-mono text-xs tracking-wider uppercase text-text-muted mb-1">
+          <label class="block text-xs font-medium uppercase tracking-wide text-text-muted mb-1">
             Caliber
           </label>
           <select
@@ -77,7 +77,7 @@ export default function RangeCardGenerator({ calibers }: Props) {
               setSelectedSlug((e.target as HTMLSelectElement).value);
               setSelectedLoadIdx(0);
             }}
-            class="w-full border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary"
+            class="w-full rounded-md border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary"
           >
             <option value="">Select caliber...</option>
             {calibers.map(c => (
@@ -87,14 +87,14 @@ export default function RangeCardGenerator({ calibers }: Props) {
         </div>
 
         <div>
-          <label class="block font-mono text-xs tracking-wider uppercase text-text-muted mb-1">
+          <label class="block text-xs font-medium uppercase tracking-wide text-text-muted mb-1">
             Load
           </label>
           <select
             value={selectedLoadIdx}
             onChange={e => setSelectedLoadIdx(+(e.target as HTMLSelectElement).value)}
             disabled={!caliber}
-            class="w-full border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary disabled:opacity-40"
+            class="w-full rounded-md border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary disabled:opacity-40"
           >
             {caliber?.loads.map((l, i) => (
               <option key={i} value={i}>{l.name}</option>
@@ -103,13 +103,13 @@ export default function RangeCardGenerator({ calibers }: Props) {
         </div>
 
         <div>
-          <label class="block font-mono text-xs tracking-wider uppercase text-text-muted mb-1">
+          <label class="block text-xs font-medium uppercase tracking-wide text-text-muted mb-1">
             Zero Range (yd)
           </label>
           <select
             value={zeroRange}
             onChange={e => setZeroRange(+(e.target as HTMLSelectElement).value)}
-            class="w-full border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary"
+            class="w-full rounded-md border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary"
           >
             {[25, 50, 100, 200, 300].map(r => (
               <option key={r} value={r}>{r} yd</option>
@@ -121,7 +121,7 @@ export default function RangeCardGenerator({ calibers }: Props) {
           <button
             onClick={handlePrint}
             disabled={!load}
-            class="w-full border border-accent bg-accent/10 px-4 py-2 font-mono text-sm tracking-wider uppercase text-accent transition-colors hover:bg-accent/20 disabled:opacity-40 disabled:cursor-not-allowed"
+            class="w-full rounded-md border border-accent bg-accent/10 px-4 py-2 text-sm font-medium text-accent transition-colors hover:bg-accent/20 disabled:opacity-40 disabled:cursor-not-allowed"
           >
             Print Range Card
           </button>
@@ -131,7 +131,7 @@ export default function RangeCardGenerator({ calibers }: Props) {
       {/* Notes field */}
       {load && (
         <div>
-          <label class="block font-mono text-xs tracking-wider uppercase text-text-muted mb-1">
+          <label class="block text-xs font-medium uppercase tracking-wide text-text-muted mb-1">
             Notes (optional — printed on card)
           </label>
           <input
@@ -139,19 +139,19 @@ export default function RangeCardGenerator({ calibers }: Props) {
             value={notes}
             onInput={e => setNotes((e.target as HTMLInputElement).value)}
             placeholder="e.g., Rifle: Tikka T3x, Scope: Vortex PST Gen II"
-            class="w-full border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary placeholder:text-text-muted/50"
+            class="w-full rounded-md border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary placeholder:text-text-muted/50"
           />
         </div>
       )}
 
       {/* Range Card Preview (also the printable area) */}
       {load && caliber && (
-        <div ref={cardRef} class="range-card border border-surface-border">
+        <div ref={cardRef} class="range-card rounded-lg border border-surface-border">
           {/* Card Header */}
           <div class="border-b border-surface-border bg-surface-overlay px-4 py-3">
             <div class="flex items-start justify-between gap-4">
               <div>
-                <div class="font-display text-xl font-bold text-text-primary">{caliber.name}</div>
+                <div class="text-xl font-bold text-text-primary">{caliber.name}</div>
                 <div class="font-mono text-sm text-text-muted">{load.name}</div>
               </div>
               <div class="text-right font-mono text-xs text-text-muted">
@@ -170,7 +170,7 @@ export default function RangeCardGenerator({ calibers }: Props) {
               { label: 'Zero', value: `${zeroRange} yd` },
             ].map(spec => (
               <div key={spec.label} class="bg-surface px-3 py-2">
-                <div class="font-mono text-xs tracking-wider uppercase text-text-muted">{spec.label}</div>
+                <div class="text-xs font-medium uppercase tracking-wide text-text-muted">{spec.label}</div>
                 <div class="font-mono text-sm text-text-primary mt-0.5">{spec.value}</div>
               </div>
             ))}
@@ -181,12 +181,12 @@ export default function RangeCardGenerator({ calibers }: Props) {
             <table class="w-full text-left font-mono">
               <thead>
                 <tr class="border-b border-surface-border bg-surface-overlay text-text-muted">
-                  <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs">Dist</th>
-                  <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Vel</th>
-                  <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Energy</th>
-                  <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Drop</th>
-                  <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">MOA</th>
-                  <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">% Energy</th>
+                  <th scope="col" class="px-3 py-2 text-xs font-medium uppercase tracking-wide">Dist</th>
+                  <th scope="col" class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-right">Vel</th>
+                  <th scope="col" class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-right">Energy</th>
+                  <th scope="col" class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-right">Drop</th>
+                  <th scope="col" class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-right">MOA</th>
+                  <th scope="col" class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-right">% Energy</th>
                 </tr>
               </thead>
               <tbody>
@@ -223,7 +223,7 @@ export default function RangeCardGenerator({ calibers }: Props) {
           {notes && (
             <div class="border-t border-surface-border px-4 py-2 bg-surface-overlay">
               <div class="font-mono text-xs text-text-muted">
-                <span class="tracking-wider uppercase">Notes:</span> {notes}
+                <span class="font-medium uppercase tracking-wide">Notes:</span> {notes}
               </div>
             </div>
           )}
@@ -240,8 +240,8 @@ export default function RangeCardGenerator({ calibers }: Props) {
 
       {/* Empty state */}
       {!load && (
-        <div class="border border-dashed border-surface-border p-8 text-center">
-          <p class="font-mono text-sm text-text-muted">
+        <div class="rounded-lg border border-dashed border-surface-border p-8 text-center">
+          <p class="text-sm text-text-muted">
             Select a caliber and load to generate a printable range card.
           </p>
         </div>

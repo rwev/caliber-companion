@@ -19,7 +19,7 @@ interface Props {
 
 const { title, description = 'Research, compare, and understand firearm calibers.', ogType = 'website', jsonLd, breadcrumbs } = Astro.props;
 const fullTitle = title === 'Home' ? 'Caliber Companion' : `${title} — Caliber Companion`;
-const siteUrl = 'https://rwev.github.io/caliber-companion';
+const siteUrl = 'https://rwev.github.io/';
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
 ---
 
@@ -55,8 +55,8 @@ const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
     <script is:inline>
       (function() {
         var theme = localStorage.getItem('theme');
-        if (theme === 'light' || (!theme && window.matchMedia('(prefers-color-scheme: light)').matches)) {
-          document.documentElement.setAttribute('data-theme', 'light');
+        if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
         }
       })();
     </script>
@@ -68,15 +68,15 @@ const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
       rel="stylesheet"
     />
 
-    <link rel="icon" type="image/svg+xml" href="/caliber-companion/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <!-- PWA -->
-    <link rel="manifest" href="/caliber-companion/manifest.json" />
-    <meta name="theme-color" content="#eb6b34" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#0d7c66" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="CalComp" />
-    <link rel="apple-touch-icon" href="/caliber-companion/icon-192.svg" />
+    <link rel="apple-touch-icon" href="/icon-192.svg" />
   </head>
 
   <body class="min-h-screen bg-surface text-text-primary antialiased">
@@ -90,7 +90,7 @@ const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
     <script is:inline>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
-          navigator.serviceWorker.register('/caliber-companion/sw.js').catch(function() {});
+          navigator.serviceWorker.register('/sw.js').catch(function() {});
         });
       }
     </script>

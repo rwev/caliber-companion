@@ -32,32 +32,32 @@ const stats = [
 <BaseLayout title="About Caliber Companion" description="About Caliber Companion — the most comprehensive free firearm caliber reference online. Site statistics, features, and what makes this resource unique." breadcrumbs={[{ label: 'About' }]}>
   <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
     <div class="mb-8">
-      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+      <h1 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
         About Caliber Companion
       </h1>
-      <p class="mt-3 font-mono text-base text-text-muted max-w-3xl">
+      <p class="mt-3 text-base text-text-muted max-w-3xl">
         The most comprehensive free firearm caliber reference online. Every data point, tool, and recommendation
         is built from real ballistic data — no opinions without numbers, no recommendations without evidence.
       </p>
     </div>
 
     <!-- Stats Grid -->
-    <div class="mb-12 grid gap-px bg-surface-border grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
+    <div class="mb-12 grid gap-px bg-surface-border grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 rounded-lg overflow-hidden">
       {stats.map(stat => (
         <div class="bg-surface p-5 text-center">
-          <div class="font-display text-3xl font-bold text-accent">{stat.value}</div>
-          <div class="mt-1 font-mono text-sm tracking-wider uppercase text-text-primary">{stat.label}</div>
-          <div class="mt-0.5 font-mono text-xs text-text-muted">{stat.desc}</div>
+          <div class="font-mono text-3xl font-bold text-accent">{stat.value}</div>
+          <div class="mt-1 text-xs font-medium uppercase tracking-wide text-text-primary">{stat.label}</div>
+          <div class="mt-0.5 text-xs text-text-muted">{stat.desc}</div>
         </div>
       ))}
     </div>
 
     <!-- What Makes This Different -->
     <section class="mb-10">
-      <h2 class="mb-4 font-display text-xl font-semibold tracking-[0.15em] uppercase text-accent border-b border-surface-border pb-3">
+      <h2 class="mb-4 text-xl font-semibold text-accent border-b border-surface-border pb-3">
         What Makes This Different
       </h2>
-      <div class="space-y-4 font-mono text-sm text-text-secondary leading-relaxed">
+      <div class="space-y-4 text-sm text-text-secondary leading-relaxed">
         <p>
           <strong class="text-text-primary">Data-driven, not opinion-driven.</strong> Every caliber page shows real
           ballistic trajectories, measured recoil energy, actual ammunition costs, and FBI-protocol gel test results
@@ -84,7 +84,7 @@ const stats = [
 
     <!-- Features List -->
     <section class="mb-10">
-      <h2 class="mb-4 font-display text-xl font-semibold tracking-[0.15em] uppercase text-accent border-b border-surface-border pb-3">
+      <h2 class="mb-4 text-xl font-semibold text-accent border-b border-surface-border pb-3">
         Features
       </h2>
       <div class="grid gap-3 sm:grid-cols-2">
@@ -108,7 +108,7 @@ const stats = [
           'NATO vs civilian caliber equivalents',
           'Caliber myths debunked with data',
         ].map(feature => (
-          <div class="flex items-start gap-2 font-mono text-sm text-text-secondary">
+          <div class="flex items-start gap-2 text-sm text-text-secondary">
             <svg class="h-4 w-4 mt-0.5 shrink-0 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
             {feature}
           </div>
@@ -119,8 +119,8 @@ const stats = [
     <!-- Explore CTA -->
     <div class="text-center border-t border-surface-border pt-8">
       <a
-        href="/caliber-companion/browse"
-        class="inline-flex items-center gap-2 border border-accent bg-accent/10 px-6 py-3 font-mono text-base tracking-wider uppercase text-accent transition-all hover:bg-accent/20"
+        href="/calibers"
+        class="inline-flex items-center gap-2 rounded-md border border-accent bg-accent/10 px-6 py-3 text-base font-medium text-accent transition-all hover:bg-accent/20"
       >
         Start Exploring
         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7" /></svg>

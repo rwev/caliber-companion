@@ -44,7 +44,7 @@ export default function ShareButton({ title, url }: Props) {
       onClick={handleShare}
       aria-label={copied ? 'Link copied' : 'Share this caliber'}
       title={copied ? 'Link copied!' : hasNativeShare ? 'Share' : 'Copy link'}
-      class={`inline-flex items-center gap-1.5 border px-3 py-1.5 font-mono text-sm tracking-wider uppercase transition-colors ${
+      class={`inline-flex items-center gap-1.5 rounded-md border px-3 py-1.5 text-sm font-medium transition-colors ${
         copied
           ? 'border-success/40 bg-success/15 text-success'
           : 'border-surface-border text-text-muted hover:border-accent/30 hover:text-accent'

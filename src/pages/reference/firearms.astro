@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { titleCase, fmtNumber } from '../lib/format';
+import { titleCase, fmtNumber } from '../../lib/format';
 
 const firearms = await getCollection('firearmsData');
 const sorted = [...firearms].sort((a, b) => a.data.name.localeCompare(b.data.name));
@@ -20,34 +20,34 @@ const sortedGroups = typeOrder
   .map(t => ({ type: t, items: groups.get(t)! }));
 ---
 
-<BaseLayout title="Firearms" description="Database of 50 iconic firearms with specs, caliber cross-references, and manufacturer details." breadcrumbs={[{ label: 'Firearms' }]}>
+<BaseLayout title="Firearms" description="Database of 50 iconic firearms with specs, caliber cross-references, and manufacturer details." breadcrumbs={[{ label: 'Reference', href: '/reference' }, { label: 'Firearms' }]}>
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
     <div class="mb-8">
-      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+      <h1 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
         Firearms Database
       </h1>
-      <p class="mt-2 font-mono text-base text-text-muted">
+      <p class="mt-2 text-base text-text-muted">
         {firearms.length} iconic firearms · specs and caliber cross-references
       </p>
     </div>
 
     {sortedGroups.map(({ type, items }) => (
       <div class="mb-10">
-        <h2 class="mb-4 font-display text-xl font-semibold tracking-[0.2em] uppercase text-accent border-b border-surface-border pb-3">
+        <h2 class="mb-4 text-xl font-semibold text-accent border-b border-surface-border pb-3">
           {titleCase(type)}s
         </h2>
-        <div class="overflow-x-auto" tabindex="0" role="region" aria-label={`${titleCase(type)} firearms`}>
-          <table class="w-full text-left font-mono">
+        <div class="rounded-lg overflow-x-auto" tabindex="0" role="region" aria-label={`${titleCase(type)} firearms`}>
+          <table class="w-full text-left">
             <thead>
               <tr class="border-b border-surface-border bg-surface-overlay text-text-muted">
-                <th scope="col" class="px-4 py-2 font-medium tracking-wider uppercase text-sm">Name</th>
-                <th scope="col" class="px-4 py-2 font-medium tracking-wider uppercase text-sm">Manufacturer</th>
-                <th scope="col" class="px-4 py-2 font-medium tracking-wider uppercase text-sm">Caliber</th>
-                <th scope="col" class="px-4 py-2 font-medium tracking-wider uppercase text-sm text-right">Action</th>
-                <th scope="col" class="px-4 py-2 font-medium tracking-wider uppercase text-sm text-right">Barrel</th>
-                <th scope="col" class="px-4 py-2 font-medium tracking-wider uppercase text-sm text-right">Weight</th>
-                <th scope="col" class="px-4 py-2 font-medium tracking-wider uppercase text-sm text-right">Year</th>
-                <th scope="col" class="px-4 py-2 font-medium tracking-wider uppercase text-sm text-center">Find</th>
+                <th scope="col" class="px-4 py-2 text-xs font-medium uppercase tracking-wide">Name</th>
+                <th scope="col" class="px-4 py-2 text-xs font-medium uppercase tracking-wide">Manufacturer</th>
+                <th scope="col" class="px-4 py-2 text-xs font-medium uppercase tracking-wide">Caliber</th>
+                <th scope="col" class="px-4 py-2 text-xs font-medium uppercase tracking-wide text-right">Action</th>
+                <th scope="col" class="px-4 py-2 text-xs font-medium uppercase tracking-wide text-right">Barrel</th>
+                <th scope="col" class="px-4 py-2 text-xs font-medium uppercase tracking-wide text-right">Weight</th>
+                <th scope="col" class="px-4 py-2 text-xs font-medium uppercase tracking-wide text-right">Year</th>
+                <th scope="col" class="px-4 py-2 text-xs font-medium uppercase tracking-wide text-center">Find</th>
               </tr>
             </thead>
             <tbody>
@@ -56,16 +56,16 @@ const sortedGroups = typeOrder
                   <td class="px-4 py-2.5">
                     <span class="text-base font-medium text-text-primary">{f.data.name}</span>
                   </td>
-                  <td class="px-4 py-2.5 text-base text-text-secondary">{f.data.manufacturer}</td>
+                  <td class="px-4 py-2.5 text-sm text-text-secondary">{f.data.manufacturer}</td>
                   <td class="px-4 py-2.5">
-                    <a href={`/caliber-companion/calibers/${f.data.caliber}`} class="text-base text-accent hover:underline">
+                    <a href={`/calibers/${f.data.caliber}`} class="font-mono text-sm text-accent hover:underline">
                       {f.data.caliber}
                     </a>
                   </td>
                   <td class="px-4 py-2.5 text-right text-sm text-text-secondary">{f.data.action}</td>
-                  <td class="px-4 py-2.5 text-right text-base text-text-primary">{f.data.barrel_length_in}"</td>
-                  <td class="px-4 py-2.5 text-right text-base text-text-primary">{(f.data.weight_oz / 16).toFixed(1)} lb</td>
-                  <td class="px-4 py-2.5 text-right text-base text-text-muted">{f.data.year_introduced}</td>
+                  <td class="px-4 py-2.5 text-right font-mono text-sm text-text-primary">{f.data.barrel_length_in}"</td>
+                  <td class="px-4 py-2.5 text-right font-mono text-sm text-text-primary">{(f.data.weight_oz / 16).toFixed(1)} lb</td>
+                  <td class="px-4 py-2.5 text-right font-mono text-sm text-text-muted">{f.data.year_introduced}</td>
                   <td class="px-4 py-2.5 text-center">
                     <div class="flex items-center justify-center gap-1.5">
                       <a
@@ -89,7 +89,7 @@ const sortedGroups = typeOrder
       </div>
     ))}
 
-    <p class="mt-4 font-mono text-xs text-text-muted">
+    <p class="mt-4 text-xs text-text-muted">
       External links open retailer search results. Prices and availability vary by retailer and location.
     </p>
   </div>

@@ -84,12 +84,12 @@ export default function CaliberSearch({ calibers, basePath }: Props) {
           aria-activedescendant={activeIdx >= 0 ? `caliber-search-option-${activeIdx}` : undefined}
           aria-autocomplete="list"
           aria-label="Search calibers"
-          class="w-28 border border-surface-border bg-surface-raised py-1.5 pl-7 pr-2 font-mono text-sm text-text-primary placeholder:text-text-muted transition-all focus:w-44 focus:border-accent/40 sm:w-32 sm:focus:w-52"
+          class="w-28 rounded-md border border-surface-border bg-surface-raised py-1.5 pl-7 pr-2 text-sm text-text-primary placeholder:text-text-muted transition-all focus:w-44 focus:border-accent/40 sm:w-32 sm:focus:w-52"
         />
       </div>
 
       {showResults && (
-        <div id="caliber-search-listbox" role="listbox" aria-label="Search results" class="absolute right-0 top-full z-30 mt-1 w-64 border border-surface-border bg-surface-raised shadow-xl">
+        <div id="caliber-search-listbox" role="listbox" aria-label="Search results" class="absolute right-0 top-full z-30 mt-1 w-64 rounded-lg border border-surface-border bg-surface-raised shadow-xl">
           {results.map((cal, i) => (
             <button
               key={cal.slug}
@@ -97,11 +97,11 @@ export default function CaliberSearch({ calibers, basePath }: Props) {
               role="option"
               aria-selected={i === activeIdx}
               onClick={() => navigate(cal.slug)}
-              class={`flex w-full items-center justify-between px-3 py-2 text-left transition-colors ${
+              class={`flex w-full items-center justify-between px-3 py-2 text-left transition-colors first:rounded-t-lg last:rounded-b-lg ${
                 i === activeIdx ? 'bg-accent/15 text-accent' : 'hover:bg-surface-overlay'
               }`}
             >
-              <span class="font-mono text-sm text-text-primary">{cal.name}</span>
+              <span class="text-sm text-text-primary">{cal.name}</span>
               <span class="font-mono text-sm text-text-muted">{cal.designation}</span>
             </button>
           ))}
@@ -109,8 +109,8 @@ export default function CaliberSearch({ calibers, basePath }: Props) {
       )}
 
       {showNoResults && (
-        <div role="status" class="absolute right-0 top-full z-30 mt-1 w-64 border border-surface-border bg-surface-raised px-3 py-2 shadow-xl">
-          <span class="font-mono text-sm text-text-muted">No results</span>
+        <div role="status" class="absolute right-0 top-full z-30 mt-1 w-64 rounded-lg border border-surface-border bg-surface-raised px-3 py-2 shadow-xl">
+          <span class="text-sm text-text-muted">No results</span>
         </div>
       )}
     </div>

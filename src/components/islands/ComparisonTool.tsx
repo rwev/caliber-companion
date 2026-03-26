@@ -119,7 +119,7 @@ export default function ComparisonTool({ calibers, basePath }: Props) {
   const uiColors = useMemo(() => {
     // themeKey dependency ensures colors update on theme change
     void themeKey;
-    if (typeof document === 'undefined') return COLOR_VARS.map(() => '#eb6b34');
+    if (typeof document === 'undefined') return COLOR_VARS.map(() => '#0d7c66');
     return COLOR_VARS.map(v => getCSSVar(v));
   }, [themeKey]);
 
@@ -228,7 +228,7 @@ export default function ComparisonTool({ calibers, basePath }: Props) {
               position: 'bottom',
               labels: {
                 color: textSecondary,
-                font: { family: '"JetBrains Mono", monospace', size: 13 },
+                font: { family: '"IBM Plex Mono", monospace', size: 13 },
                 padding: 16,
                 usePointStyle: true,
                 pointStyleWidth: 8,
@@ -240,9 +240,10 @@ export default function ComparisonTool({ calibers, basePath }: Props) {
               borderWidth: 1,
               titleColor: textPrimary,
               bodyColor: textSecondary,
-              titleFont: { family: '"JetBrains Mono", monospace', size: 13 },
-              bodyFont: { family: '"JetBrains Mono", monospace', size: 13 },
+              titleFont: { family: '"IBM Plex Mono", monospace', size: 13 },
+              bodyFont: { family: '"IBM Plex Mono", monospace', size: 13 },
               padding: 12,
+              cornerRadius: 8,
               callbacks: {
                 title: (items) => `${items[0].label} yd`,
                 label: (item) => ` ${item.dataset.label}: ${item.formattedValue} ${metric.unit}`,
@@ -251,14 +252,14 @@ export default function ComparisonTool({ calibers, basePath }: Props) {
           },
           scales: {
             x: {
-              title: { display: true, text: 'Distance (yd)', color: textMuted, font: { family: '"JetBrains Mono", monospace', size: 13 } },
-              ticks: { color: textMuted, font: { family: '"JetBrains Mono", monospace', size: 12 } },
+              title: { display: true, text: 'Distance (yd)', color: textMuted, font: { family: '"IBM Plex Mono", monospace', size: 13 } },
+              ticks: { color: textMuted, font: { family: '"IBM Plex Mono", monospace', size: 12 } },
               grid: { color: gridColor },
               border: { color: surfaceBorder },
             },
             y: {
-              title: { display: true, text: `${metric.label} (${metric.unit})`, color: textMuted, font: { family: '"JetBrains Mono", monospace', size: 13 } },
-              ticks: { color: textMuted, font: { family: '"JetBrains Mono", monospace', size: 12 } },
+              title: { display: true, text: `${metric.label} (${metric.unit})`, color: textMuted, font: { family: '"IBM Plex Mono", monospace', size: 13 } },
+              ticks: { color: textMuted, font: { family: '"IBM Plex Mono", monospace', size: 12 } },
               grid: { color: gridColor },
               border: { color: surfaceBorder },
             },
@@ -301,11 +302,11 @@ export default function ComparisonTool({ calibers, basePath }: Props) {
           {selectedCalibers.map((cal, i) => (
             <div
               key={cal.slug}
-              class="flex items-center gap-2 border px-3 py-1.5"
+              class="flex items-center gap-2 rounded-full border px-3 py-1.5"
               style={{ borderColor: uiColors[i % uiColors.length] + '60', backgroundColor: uiColors[i % uiColors.length] + '15' }}
             >
               <div class="h-2 w-2 rounded-full" style={{ backgroundColor: uiColors[i % uiColors.length] }} aria-hidden="true" />
-              <a href={`${basePath}/calibers/${cal.slug}`} class="font-mono text-base text-text-primary hover:underline">
+              <a href={`${basePath}/calibers/${cal.slug}`} class="text-sm font-medium text-text-primary hover:underline">
                 {cal.name}
               </a>
               <button
@@ -327,7 +328,7 @@ export default function ComparisonTool({ calibers, basePath }: Props) {
                 onClick={() => setDropdownOpen(!dropdownOpen)}
                 aria-expanded={dropdownOpen}
                 aria-controls="comparison-add-dropdown"
-                class="flex items-center gap-1.5 border border-dashed border-surface-border px-3 py-1.5 font-mono text-sm text-text-muted transition-colors hover:border-accent hover:text-accent"
+                class="flex items-center gap-1.5 rounded-full border border-dashed border-surface-border px-3 py-1.5 text-sm font-medium text-text-muted transition-colors hover:border-accent hover:text-accent"
               >
                 <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <path d="M12 4v16m8-8H4" />
@@ -336,7 +337,7 @@ export default function ComparisonTool({ calibers, basePath }: Props) {
               </button>
 
               {dropdownOpen && (
-                <div id="comparison-add-dropdown" class="absolute left-0 top-full z-20 mt-1 w-72 border border-surface-border bg-surface-raised shadow-xl">
+                <div id="comparison-add-dropdown" class="absolute left-0 top-full z-20 mt-1 w-72 rounded-lg border border-surface-border bg-surface-raised shadow-xl">
                   <div class="border-b border-surface-border p-2">
                     <input
                       type="text"
@@ -344,7 +345,7 @@ export default function ComparisonTool({ calibers, basePath }: Props) {
                       value={dropdownSearch}
                       onInput={(e) => setDropdownSearch((e.target as HTMLInputElement).value)}
                       aria-label="Search calibers to add"
-                      class="w-full bg-surface px-2 py-1.5 font-mono text-base text-text-primary placeholder:text-text-muted focus:border-accent/50"
+                      class="w-full rounded-md bg-surface px-2 py-1.5 text-sm text-text-primary placeholder:text-text-muted focus:border-accent/50"
                       autoFocus
                     />
                   </div>
@@ -357,12 +358,12 @@ export default function ComparisonTool({ calibers, basePath }: Props) {
                         onClick={() => addCaliber(c.slug)}
                         class="flex w-full items-center justify-between px-3 py-2.5 text-left transition-colors hover:bg-surface-overlay"
                       >
-                        <span class="font-mono text-base text-text-primary">{c.name}</span>
-                        <span class="font-mono text-sm text-text-muted">{c.category}</span>
+                        <span class="text-sm text-text-primary">{c.name}</span>
+                        <span class="text-sm text-text-muted">{c.category}</span>
                       </button>
                     ))}
                     {availableCalibers.length === 0 && (
-                      <div role="status" class="px-3 py-2 font-mono text-base text-text-muted">No results</div>
+                      <div role="status" class="px-3 py-2 text-sm text-text-muted">No results</div>
                     )}
                   </div>
                 </div>
@@ -372,7 +373,7 @@ export default function ComparisonTool({ calibers, basePath }: Props) {
         </div>
 
         {selected.length === 0 && (
-          <p class="mt-4 font-mono text-base text-text-muted" role="status">
+          <p class="mt-4 text-base text-text-muted" role="status">
             Select up to 4 calibers to compare side-by-side.
           </p>
         )}
@@ -382,13 +383,13 @@ export default function ComparisonTool({ calibers, basePath }: Props) {
       {selectedCalibers.length > 0 && (
         <div class="space-y-8">
           {/* Comparison Table */}
-          <div class="border border-surface-border overflow-x-auto" tabindex={0} role="region" aria-label="Comparison table">
-            <table class="w-full text-left font-mono">
+          <div class="rounded-lg border border-surface-border overflow-x-auto" tabindex={0} role="region" aria-label="Comparison table">
+            <table class="w-full text-left">
               <thead>
                 <tr class="border-b border-surface-border bg-surface-overlay">
-                  <th scope="col" class="px-4 py-2.5 text-sm font-medium tracking-wider uppercase text-text-muted w-40">Spec</th>
+                  <th scope="col" class="px-4 py-2.5 text-xs font-medium uppercase tracking-wide text-text-muted w-40">Spec</th>
                   {selectedCalibers.map((cal, i) => (
-                    <th scope="col" key={cal.slug} class="px-4 py-2.5 font-medium text-base" style={{ color: uiColors[i % uiColors.length] }}>
+                    <th scope="col" key={cal.slug} class="px-4 py-2.5 font-semibold text-base" style={{ color: uiColors[i % uiColors.length] }}>
                       {cal.name}
                     </th>
                   ))}
@@ -399,7 +400,7 @@ export default function ComparisonTool({ calibers, basePath }: Props) {
                   <tr key={row.label} class={`border-b border-surface-border-subtle ${ri % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
                     <th scope="row" class="px-4 py-2.5 text-sm font-medium text-text-secondary whitespace-nowrap">{row.label}</th>
                     {row.values.map((val, vi) => (
-                      <td key={vi} class="px-4 py-2.5 text-base text-text-primary">{val}</td>
+                      <td key={vi} class="px-4 py-2.5 font-mono text-base text-text-primary">{val}</td>
                     ))}
                   </tr>
                 ))}
@@ -408,9 +409,9 @@ export default function ComparisonTool({ calibers, basePath }: Props) {
           </div>
 
           {/* Ballistics Chart */}
-          <div class="border border-surface-border">
-            <div class="flex items-center justify-between border-b border-surface-border bg-surface-overlay px-4 py-2.5">
-              <h3 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">
+          <div class="rounded-lg border border-surface-border">
+            <div class="flex items-center justify-between rounded-t-lg border-b border-surface-border bg-surface-overlay px-4 py-2.5">
+              <h3 class="text-sm font-semibold text-text-muted">
                 Ballistics Comparison
               </h3>
               <div class="flex gap-1" role="group" aria-label="Chart metric">
@@ -419,7 +420,7 @@ export default function ComparisonTool({ calibers, basePath }: Props) {
                     key={m.key}
                     onClick={() => setChartMetric(m.key)}
                     aria-pressed={chartMetric === m.key}
-                    class={`px-2.5 py-1 font-mono text-sm tracking-wider uppercase transition-colors ${
+                    class={`rounded-md px-2.5 py-1 text-sm font-medium transition-colors ${
                       chartMetric === m.key
                         ? 'bg-accent/15 text-accent border border-accent/30'
                         : 'text-text-muted border border-transparent hover:text-text-secondary'

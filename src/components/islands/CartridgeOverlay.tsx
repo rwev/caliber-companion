@@ -20,7 +20,7 @@ interface Props {
 }
 
 const COLORS = [
-  '#eb6b34', // accent orange
+  '#0d7c66', // accent teal
   '#3b82f6', // blue
   '#10b981', // emerald
   '#a855f7', // purple
@@ -148,7 +148,7 @@ export default function CartridgeOverlay({ calibers }: Props) {
         <select
           value={addSlug}
           onChange={e => setAddSlug((e.target as HTMLSelectElement).value)}
-          class="flex-1 border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary"
+          class="flex-1 border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary rounded-md"
         >
           <option value="">Select a caliber to overlay...</option>
           {available.map(c => (
@@ -158,7 +158,7 @@ export default function CartridgeOverlay({ calibers }: Props) {
         <button
           onClick={addCaliber}
           disabled={!addSlug || selected.length >= 6}
-          class="border border-accent bg-accent/10 px-4 py-2 font-mono text-sm tracking-wider uppercase text-accent transition-colors hover:bg-accent/20 disabled:opacity-40 disabled:cursor-not-allowed"
+          class="border border-accent bg-accent/10 px-4 py-2 text-sm font-medium rounded-md text-accent transition-colors hover:bg-accent/20 disabled:opacity-40 disabled:cursor-not-allowed"
         >
           Add
         </button>
@@ -170,7 +170,7 @@ export default function CartridgeOverlay({ calibers }: Props) {
           {selectedCalibers.map((c, i) => (
             <div
               key={c.slug}
-              class="flex items-center gap-2 border border-surface-border bg-surface-raised px-3 py-1.5"
+              class="flex items-center gap-2 rounded-full bg-surface-overlay px-2.5 py-0.5"
             >
               <span class="inline-block h-3 w-3 rounded-full" style={{ backgroundColor: COLORS[i % COLORS.length] }} />
               <span class="font-mono text-sm text-text-primary">{c.name}</span>
@@ -191,9 +191,9 @@ export default function CartridgeOverlay({ calibers }: Props) {
 
       {/* SVG Overlay */}
       {selectedCalibers.length > 0 ? (
-        <div class="border border-surface-border">
+        <div class="border border-surface-border rounded-lg">
           <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
-            <h3 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">
+            <h3 class="text-base font-medium text-text-muted">
               Cartridge Overlay — {selectedCalibers.length} caliber{selectedCalibers.length !== 1 ? 's' : ''}
             </h3>
           </div>
@@ -212,7 +212,7 @@ export default function CartridgeOverlay({ calibers }: Props) {
                 return (
                   <g key={i}>
                     <line x1={padding / 2} y1={y} x2={svgWidth - padding / 2} y2={y} stroke="currentColor" stroke-width="0.5" opacity="0.1" />
-                    <text x={8} y={y + 3} font-family="JetBrains Mono, monospace" font-size="8" fill="currentColor" opacity="0.3">{i}"</text>
+                    <text x={8} y={y + 3} font-family="IBM Plex Mono, monospace" font-size="8" fill="currentColor" opacity="0.3">{i}"</text>
                   </g>
                 );
               })}
@@ -239,12 +239,12 @@ export default function CartridgeOverlay({ calibers }: Props) {
             <table class="w-full text-left font-mono">
               <thead>
                 <tr class="border-b border-surface-border bg-surface-overlay text-text-muted">
-                  <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs">Caliber</th>
-                  <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Bullet Ø</th>
-                  <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Case</th>
-                  <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">OAL</th>
-                  <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Rim Ø</th>
-                  <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Type</th>
+                  <th scope="col" class="px-3 py-2 text-xs font-medium uppercase tracking-wide">Caliber</th>
+                  <th scope="col" class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-right">Bullet Ø</th>
+                  <th scope="col" class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-right">Case</th>
+                  <th scope="col" class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-right">OAL</th>
+                  <th scope="col" class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-right">Rim Ø</th>
+                  <th scope="col" class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-right">Type</th>
                 </tr>
               </thead>
               <tbody>
@@ -266,8 +266,8 @@ export default function CartridgeOverlay({ calibers }: Props) {
           </div>
         </div>
       ) : (
-        <div class="border border-dashed border-surface-border p-8 text-center">
-          <p class="font-mono text-sm text-text-muted">
+        <div class="border border-dashed border-surface-border rounded-lg p-8 text-center">
+          <p class="text-sm text-text-muted">
             Select 2 or more calibers to see their cartridge profiles overlaid at true scale.
           </p>
         </div>

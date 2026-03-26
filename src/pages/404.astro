@@ -15,45 +15,45 @@ const caliberIndex = calibers.map(c => ({
   <div class="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24 text-center">
     <!-- Big 404 -->
     <div class="mb-8">
-      <div class="font-display text-8xl font-bold text-accent/20 sm:text-9xl">404</div>
-      <h1 class="mt-2 font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+      <div class="text-8xl font-bold text-accent/20 sm:text-9xl">404</div>
+      <h1 class="mt-2 text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
         Page Not Found
       </h1>
-      <p class="mt-3 font-mono text-base text-text-muted">
+      <p class="mt-3 text-base text-text-muted">
         This page doesn't exist — but we have {calibers.length} calibers that do.
       </p>
     </div>
 
     <!-- Search -->
     <div class="mb-10 max-w-md mx-auto">
-      <p class="mb-2 font-mono text-sm text-text-muted">Search for a caliber:</p>
-      <CaliberSearch client:idle calibers={caliberIndex} basePath="/caliber-companion" />
+      <p class="mb-2 text-sm text-text-muted">Search for a caliber:</p>
+      <CaliberSearch client:idle calibers={caliberIndex} basePath="" />
     </div>
 
     <!-- Quick links -->
-    <div class="border border-surface-border p-6 text-left">
-      <h2 class="font-display text-base tracking-[0.2em] uppercase text-text-muted mb-4 text-center">Popular Destinations</h2>
+    <div class="rounded-lg border border-surface-border p-6 text-left">
+      <h2 class="text-sm font-semibold uppercase tracking-wide text-text-muted mb-4 text-center">Popular Destinations</h2>
       <div class="grid gap-2 sm:grid-cols-2">
         {[
-          { href: '/caliber-companion/browse', label: 'Browse All Calibers', desc: '102 calibers with full data' },
-          { href: '/caliber-companion/compare', label: 'Compare Calibers', desc: 'Side-by-side comparison' },
-          { href: '/caliber-companion/tools', label: 'Interactive Tools', desc: '10 calculators and generators' },
-          { href: '/caliber-companion/guides', label: 'Buying Guides', desc: '13 use-case guides' },
-          { href: '/caliber-companion/firearms', label: 'Firearms Database', desc: '100 iconic firearms' },
-          { href: '/caliber-companion/quiz', label: 'Caliber Quiz', desc: 'Find your ideal caliber' },
-          { href: '/caliber-companion/best-deer-calibers', label: 'Best for Deer', desc: 'Hunting recommendations' },
-          { href: '/caliber-companion/best-self-defense-calibers', label: 'Best for Self-Defense', desc: 'Defensive caliber guide' },
+          { href: '/calibers', label: 'Browse All Calibers', desc: '102 calibers with full data' },
+          { href: '/compare', label: 'Compare Calibers', desc: 'Side-by-side comparison' },
+          { href: '/tools', label: 'Interactive Tools', desc: '10 calculators and generators' },
+          { href: '/guides', label: 'Buying Guides', desc: '13 use-case guides' },
+          { href: '/reference/firearms', label: 'Firearms Database', desc: '100 iconic firearms' },
+          { href: '/guides/quiz', label: 'Caliber Quiz', desc: 'Find your ideal caliber' },
+          { href: '/guides/best-deer-calibers', label: 'Best for Deer', desc: 'Hunting recommendations' },
+          { href: '/guides/best-self-defense-calibers', label: 'Best for Self-Defense', desc: 'Defensive caliber guide' },
         ].map(link => (
           <a
             href={link.href}
-            class="group flex items-start gap-3 border border-surface-border-subtle bg-surface p-3 transition-colors hover:border-accent/40 hover:bg-surface-raised"
+            class="group flex items-start gap-3 rounded-md border border-surface-border-subtle bg-surface p-3 transition-colors hover:border-accent/40 hover:bg-surface-raised"
           >
             <svg class="h-4 w-4 mt-0.5 shrink-0 text-text-muted group-hover:text-accent transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
             </svg>
             <div>
-              <div class="font-mono text-sm font-medium text-text-primary group-hover:text-accent transition-colors">{link.label}</div>
-              <div class="font-mono text-xs text-text-muted">{link.desc}</div>
+              <div class="text-sm font-medium text-text-primary group-hover:text-accent transition-colors">{link.label}</div>
+              <div class="text-xs text-text-muted">{link.desc}</div>
             </div>
           </a>
         ))}
@@ -63,8 +63,8 @@ const caliberIndex = calibers.map(c => ({
     <!-- Home link -->
     <div class="mt-8">
       <a
-        href="/caliber-companion/"
-        class="inline-flex items-center gap-2 font-mono text-base tracking-wider uppercase text-text-muted transition-colors hover:text-accent"
+        href="/"
+        class="inline-flex items-center gap-2 text-base font-medium text-text-muted transition-colors hover:text-accent"
       >
         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />

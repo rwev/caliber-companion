@@ -101,7 +101,7 @@ export default function CaliberTimeline({ calibers, basePath }: Props) {
       <div class="flex flex-wrap items-center gap-2">
         <button
           onClick={selectAll}
-          class={`border px-3 py-1.5 font-mono text-xs tracking-wider uppercase transition-colors ${
+          class={`border px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
             activeCategories.size === Object.keys(CATEGORY_LABELS).length
               ? 'border-accent/40 bg-accent/15 text-accent'
               : 'border-surface-border text-text-muted hover:text-text-secondary'
@@ -114,7 +114,7 @@ export default function CaliberTimeline({ calibers, basePath }: Props) {
             key={cat}
             onClick={() => toggleCategory(cat)}
             onDblClick={() => selectOnly(cat)}
-            class={`flex items-center gap-1.5 border px-3 py-1.5 font-mono text-xs tracking-wider uppercase transition-colors ${
+            class={`flex items-center gap-1.5 border px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
               activeCategories.has(cat)
                 ? 'border-accent/40 bg-accent/10 text-text-primary'
                 : 'border-surface-border text-text-muted opacity-50 hover:opacity-75'
@@ -127,7 +127,7 @@ export default function CaliberTimeline({ calibers, basePath }: Props) {
         ))}
       </div>
 
-      <p class="font-mono text-xs text-text-muted">
+      <p class="text-xs text-text-muted">
         Showing {filtered.length} of {calibers.length} calibers · Click category to toggle · Double-click to isolate
       </p>
 
@@ -144,7 +144,7 @@ export default function CaliberTimeline({ calibers, basePath }: Props) {
             <div class="absolute -left-[9px] top-0 h-4 w-4 rounded-full border-2 border-surface-border bg-surface group-hover:border-accent transition-colors" />
 
             <div class="mb-3 flex items-baseline gap-3">
-              <span class="font-display text-xl font-bold text-text-primary">{decade}s</span>
+              <span class="text-xl font-bold text-text-primary">{decade}s</span>
               <span class="font-mono text-sm text-text-muted">
                 {entries.length} caliber{entries.length !== 1 ? 's' : ''}
               </span>
@@ -159,7 +159,7 @@ export default function CaliberTimeline({ calibers, basePath }: Props) {
                 <a
                   key={cal.slug}
                   href={`${basePath}/calibers/${cal.slug}`}
-                  class="group/item flex items-center gap-2 border border-surface-border-subtle bg-surface px-3 py-2 transition-colors hover:border-accent/40 hover:bg-surface-raised"
+                  class="group/item flex items-center gap-2 border border-surface-border-subtle rounded-md bg-surface px-3 py-2 transition-colors hover:border-accent/40 hover:bg-surface-raised"
                 >
                   <span class={`inline-block h-2 w-2 shrink-0 rounded-full ${CATEGORY_DOT_COLORS[cal.category] || 'bg-gray-400'}`} />
                   <div class="min-w-0 flex-1">
@@ -176,8 +176,8 @@ export default function CaliberTimeline({ calibers, basePath }: Props) {
       </div>
 
       {filtered.length === 0 && (
-        <div class="border border-dashed border-surface-border p-8 text-center">
-          <p class="font-mono text-sm text-text-muted">No calibers match the selected filters.</p>
+        <div class="border border-dashed border-surface-border rounded-lg p-8 text-center">
+          <p class="text-sm text-text-muted">No calibers match the selected filters.</p>
         </div>
       )}
     </div>

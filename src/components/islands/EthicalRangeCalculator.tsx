@@ -93,11 +93,11 @@ export default function EthicalRangeCalculator({ calibers }: Props) {
       {/* Inputs */}
       <div class="grid gap-4 sm:grid-cols-2">
         <div>
-          <label class="block font-mono text-xs tracking-wider uppercase text-text-muted mb-1">Caliber</label>
+          <label class="block text-xs font-medium uppercase tracking-wide text-text-muted mb-1">Caliber</label>
           <select
             value={selectedSlug}
             onChange={e => { setSelectedSlug((e.target as HTMLSelectElement).value); setSelectedLoadIdx(0); }}
-            class="w-full border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary"
+            class="w-full rounded-md border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary"
           >
             <option value="">Select caliber...</option>
             {calibers.map(c => (
@@ -107,12 +107,12 @@ export default function EthicalRangeCalculator({ calibers }: Props) {
         </div>
 
         <div>
-          <label class="block font-mono text-xs tracking-wider uppercase text-text-muted mb-1">Load</label>
+          <label class="block text-xs font-medium uppercase tracking-wide text-text-muted mb-1">Load</label>
           <select
             value={selectedLoadIdx}
             onChange={e => setSelectedLoadIdx(+(e.target as HTMLSelectElement).value)}
             disabled={!caliber}
-            class="w-full border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary disabled:opacity-40"
+            class="w-full rounded-md border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary disabled:opacity-40"
           >
             {caliber?.loads.map((l, i) => (
               <option key={i} value={i}>{l.bullet_weight_gr}gr {l.bullet_type} ({l.muzzle_velocity_fps} fps / {l.muzzle_energy_ft_lbs} ft-lbs)</option>
@@ -123,9 +123,9 @@ export default function EthicalRangeCalculator({ calibers }: Props) {
 
       {/* Results */}
       {load ? (
-        <div class="border border-surface-border">
+        <div class="rounded-lg border border-surface-border">
           <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
-            <h3 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">
+            <h3 class="text-base font-medium text-text-muted">
               Maximum Ethical Range — {caliber!.name} {load.bullet_weight_gr}gr
             </h3>
           </div>
@@ -143,8 +143,8 @@ export default function EthicalRangeCalculator({ calibers }: Props) {
                     <div class="flex items-center gap-2 min-w-0">
                       <span class="text-lg" aria-hidden="true">{r.icon}</span>
                       <div class="min-w-0">
-                        <span class="font-mono text-sm font-medium text-text-primary block">{r.name}</span>
-                        <span class="font-mono text-xs text-text-muted">Min: {r.minEnergy.toLocaleString()} ft-lbs</span>
+                        <span class="text-sm font-medium text-text-primary block">{r.name}</span>
+                        <span class="text-xs text-text-muted">Min: <span class="font-mono">{r.minEnergy.toLocaleString()}</span> ft-lbs</span>
                       </div>
                     </div>
                     <span class={`font-mono text-lg font-bold shrink-0 ${
@@ -168,7 +168,7 @@ export default function EthicalRangeCalculator({ calibers }: Props) {
                     )}
                   </div>
 
-                  <p class="mt-1 font-mono text-xs text-text-muted">{r.notes}</p>
+                  <p class="mt-1 text-xs text-text-muted">{r.notes}</p>
                 </div>
               );
             })}
@@ -184,17 +184,17 @@ export default function EthicalRangeCalculator({ calibers }: Props) {
           </div>
         </div>
       ) : (
-        <div class="border border-dashed border-surface-border p-8 text-center">
-          <p class="font-mono text-sm text-text-muted">
+        <div class="rounded-lg border border-dashed border-surface-border p-8 text-center">
+          <p class="text-sm text-text-muted">
             Select a caliber and load to see maximum ethical killing distances for different game.
           </p>
         </div>
       )}
 
       {/* Disclaimer */}
-      <div class="border border-danger/30 bg-danger/5 p-3">
-        <p class="font-mono text-xs text-text-secondary leading-relaxed">
-          <span class="font-medium text-danger uppercase tracking-wider">Important:</span> These are energy-based estimates only.
+      <div class="rounded-lg border border-danger/30 bg-danger/5 p-3">
+        <p class="text-xs text-text-secondary leading-relaxed">
+          <span class="font-medium text-danger uppercase tracking-wide">Important:</span> These are energy-based estimates only.
           Ethical hunting depends on many factors: bullet construction, shot placement, angle, wind, and shooter skill.
           Energy alone does not determine killing effectiveness — a well-placed shot with adequate bullet construction
           is more important than raw energy numbers. Always know your personal effective range and practice at the distances you intend to hunt.

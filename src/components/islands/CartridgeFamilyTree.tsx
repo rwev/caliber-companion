@@ -52,7 +52,7 @@ function TreeNodeComponent({ node, basePath, depth = 0 }: { node: TreeNode; base
         {hasChildren && (
           <button
             onClick={() => setExpanded(!expanded)}
-            class="flex h-5 w-5 shrink-0 items-center justify-center border border-surface-border text-text-muted hover:border-accent hover:text-accent transition-colors text-xs font-mono"
+            class="flex h-5 w-5 shrink-0 items-center justify-center border border-surface-border rounded-md text-text-muted hover:border-accent hover:text-accent transition-colors text-xs font-mono"
             aria-expanded={expanded}
             aria-label={expanded ? `Collapse ${node.name}` : `Expand ${node.name}`}
           >
@@ -63,7 +63,7 @@ function TreeNodeComponent({ node, basePath, depth = 0 }: { node: TreeNode; base
 
         <a
           href={`${basePath}/calibers/${node.slug}`}
-          class={`group flex items-center gap-2 border px-2.5 py-1 transition-colors hover:border-accent/50 ${colorClass}`}
+          class={`group flex items-center gap-2 border rounded-md px-2.5 py-1 transition-colors hover:border-accent/50 ${colorClass}`}
         >
           <span class="font-mono text-sm font-medium text-text-primary group-hover:text-accent transition-colors">
             {node.name}
@@ -172,7 +172,7 @@ export default function CartridgeFamilyTree({ trees, basePath }: Props) {
             value={search}
             onInput={(e) => setSearch((e.target as HTMLInputElement).value)}
             aria-label="Search calibers"
-            class="w-full border border-surface-border bg-surface-raised py-3 pl-10 pr-4 font-mono text-base text-text-primary placeholder:text-text-muted focus:border-accent/50"
+            class="w-full border border-surface-border bg-surface-raised py-3 pl-10 pr-4 rounded-md text-base text-text-primary placeholder:text-text-muted focus:border-accent/50"
           />
         </div>
 
@@ -181,7 +181,7 @@ export default function CartridgeFamilyTree({ trees, basePath }: Props) {
             <button
               onClick={() => setFilter(null)}
               aria-pressed={!filter}
-              class={`px-3 py-1.5 font-mono text-sm tracking-wider uppercase transition-colors ${
+              class={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
                 !filter
                   ? 'border border-accent/30 bg-accent/15 text-accent'
                   : 'border border-surface-border text-text-muted hover:text-text-secondary'
@@ -194,7 +194,7 @@ export default function CartridgeFamilyTree({ trees, basePath }: Props) {
                 key={cat}
                 onClick={() => setFilter(filter === cat ? null : cat)}
                 aria-pressed={filter === cat}
-                class={`px-3 py-1.5 font-mono text-sm tracking-wider uppercase transition-colors ${
+                class={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
                   filter === cat
                     ? 'border border-accent/30 bg-accent/15 text-accent'
                     : 'border border-surface-border text-text-muted hover:text-text-secondary'
@@ -205,7 +205,7 @@ export default function CartridgeFamilyTree({ trees, basePath }: Props) {
             ))}
           </div>
 
-          <span class="font-mono text-sm text-text-muted ml-auto">
+          <span class="font-mono text-sm text-text-muted ml-auto" aria-live="polite">
             {totalNodes} calibers · {rootCount} famil{rootCount === 1 ? 'y' : 'ies'}
           </span>
         </div>
@@ -216,7 +216,7 @@ export default function CartridgeFamilyTree({ trees, basePath }: Props) {
         {categories.map(cat => (
           <div key={cat} class="flex items-center gap-1.5">
             <div class={`w-3 h-3 border ${CATEGORY_COLORS[cat] || 'border-surface-border bg-surface-raised'}`} />
-            <span class="font-mono text-xs text-text-muted">{titleCase(cat)}</span>
+            <span class="text-xs text-text-muted">{titleCase(cat)}</span>
           </div>
         ))}
       </div>
@@ -224,14 +224,14 @@ export default function CartridgeFamilyTree({ trees, basePath }: Props) {
       {/* Tree */}
       {filteredTrees.length === 0 ? (
         <div class="py-12 text-center" role="status">
-          <div class="font-mono text-base text-text-muted">No caliber families match your search.</div>
+          <div class="text-base text-text-muted">No caliber families match your search.</div>
         </div>
       ) : (
         <div class="space-y-4">
           {filteredTrees
             .sort((a, b) => countDescendants(b) - countDescendants(a))
             .map(tree => (
-              <div key={tree.slug} class="border border-surface-border bg-surface p-4">
+              <div key={tree.slug} class="border border-surface-border rounded-lg bg-surface p-4">
                 <TreeNodeComponent node={tree} basePath={basePath} depth={0} />
               </div>
             ))

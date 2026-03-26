@@ -217,7 +217,7 @@ export default function BallisticsCalculator() {
       };
 
       const cfg = metricConfigs[chartMetric];
-      const accent = getCSSVar('--color-accent') || '#eb6b34';
+      const accent = getCSSVar('--color-accent') || '#0d7c66';
       const textMuted = getCSSVar('--color-text-muted') || '#666';
       const border = getCSSVar('--color-surface-border') || '#333';
 
@@ -242,20 +242,20 @@ export default function BallisticsCalculator() {
           maintainAspectRatio: false,
           scales: {
             x: {
-              title: { display: true, text: 'Range (yd)', color: textMuted, font: { family: 'JetBrains Mono, monospace', size: 11 } },
-              ticks: { color: textMuted, font: { family: 'JetBrains Mono, monospace', size: 10 } },
+              title: { display: true, text: 'Range (yd)', color: textMuted, font: { family: 'IBM Plex Mono, monospace', size: 11 } },
+              ticks: { color: textMuted, font: { family: 'IBM Plex Mono, monospace', size: 10 } },
               grid: { color: border + '40' },
             },
             y: {
-              title: { display: true, text: `${cfg.label} (${cfg.unit})`, color: textMuted, font: { family: 'JetBrains Mono, monospace', size: 11 } },
-              ticks: { color: textMuted, font: { family: 'JetBrains Mono, monospace', size: 10 } },
+              title: { display: true, text: `${cfg.label} (${cfg.unit})`, color: textMuted, font: { family: 'IBM Plex Mono, monospace', size: 11 } },
+              ticks: { color: textMuted, font: { family: 'IBM Plex Mono, monospace', size: 10 } },
               grid: { color: border + '40' },
             },
           },
           plugins: {
             tooltip: {
-              titleFont: { family: 'JetBrains Mono, monospace' },
-              bodyFont: { family: 'JetBrains Mono, monospace' },
+              titleFont: { family: 'IBM Plex Mono, monospace' },
+              bodyFont: { family: 'IBM Plex Mono, monospace' },
               callbacks: {
                 title: (items: any[]) => `${items[0].label} yd`,
                 label: (item: any) => `${cfg.label}: ${item.raw.toLocaleString()} ${cfg.unit}`,
@@ -272,69 +272,69 @@ export default function BallisticsCalculator() {
   return (
     <div class="space-y-6">
       {/* Input form */}
-      <div class="border border-surface-border">
+      <div class="rounded-lg border border-surface-border">
         <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
-          <h3 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">Parameters</h3>
+          <h3 class="text-base font-medium text-text-muted">Parameters</h3>
         </div>
         <div class="p-4 grid gap-4 sm:grid-cols-3">
           <label class="block">
-            <span class="font-mono text-xs text-text-muted uppercase tracking-wider">Muzzle Velocity (fps)</span>
+            <span class="text-xs font-medium uppercase tracking-wide text-text-muted">Muzzle Velocity (fps)</span>
             <input type="number" value={muzzleVelocity} onInput={e => setMuzzleVelocity(+(e.target as HTMLInputElement).value)}
-              class="mt-1 w-full border border-surface-border bg-surface-raised px-3 py-2 font-mono text-base text-text-primary focus:border-accent focus:outline-none" />
+              class="mt-1 w-full rounded-md border border-surface-border bg-surface-raised px-3 py-2 font-mono text-base text-text-primary focus:border-accent focus:outline-none" />
           </label>
           <label class="block">
-            <span class="font-mono text-xs text-text-muted uppercase tracking-wider">BC (G1)</span>
+            <span class="text-xs font-medium uppercase tracking-wide text-text-muted">BC (G1)</span>
             <input type="number" step="0.001" value={bcG1} onInput={e => setBcG1(+(e.target as HTMLInputElement).value)}
-              class="mt-1 w-full border border-surface-border bg-surface-raised px-3 py-2 font-mono text-base text-text-primary focus:border-accent focus:outline-none" />
+              class="mt-1 w-full rounded-md border border-surface-border bg-surface-raised px-3 py-2 font-mono text-base text-text-primary focus:border-accent focus:outline-none" />
           </label>
           <label class="block">
-            <span class="font-mono text-xs text-text-muted uppercase tracking-wider">Bullet Weight (gr)</span>
+            <span class="text-xs font-medium uppercase tracking-wide text-text-muted">Bullet Weight (gr)</span>
             <input type="number" value={bulletWeight} onInput={e => setBulletWeight(+(e.target as HTMLInputElement).value)}
-              class="mt-1 w-full border border-surface-border bg-surface-raised px-3 py-2 font-mono text-base text-text-primary focus:border-accent focus:outline-none" />
+              class="mt-1 w-full rounded-md border border-surface-border bg-surface-raised px-3 py-2 font-mono text-base text-text-primary focus:border-accent focus:outline-none" />
           </label>
           <label class="block">
-            <span class="font-mono text-xs text-text-muted uppercase tracking-wider">Zero Range (yd)</span>
+            <span class="text-xs font-medium uppercase tracking-wide text-text-muted">Zero Range (yd)</span>
             <input type="number" value={zeroRange} onInput={e => setZeroRange(+(e.target as HTMLInputElement).value)}
-              class="mt-1 w-full border border-surface-border bg-surface-raised px-3 py-2 font-mono text-base text-text-primary focus:border-accent focus:outline-none" />
+              class="mt-1 w-full rounded-md border border-surface-border bg-surface-raised px-3 py-2 font-mono text-base text-text-primary focus:border-accent focus:outline-none" />
           </label>
           <label class="block">
-            <span class="font-mono text-xs text-text-muted uppercase tracking-wider">Max Range (yd)</span>
+            <span class="text-xs font-medium uppercase tracking-wide text-text-muted">Max Range (yd)</span>
             <input type="number" value={maxRange} onInput={e => setMaxRange(+(e.target as HTMLInputElement).value)}
-              class="mt-1 w-full border border-surface-border bg-surface-raised px-3 py-2 font-mono text-base text-text-primary focus:border-accent focus:outline-none" />
+              class="mt-1 w-full rounded-md border border-surface-border bg-surface-raised px-3 py-2 font-mono text-base text-text-primary focus:border-accent focus:outline-none" />
           </label>
           <label class="block">
-            <span class="font-mono text-xs text-text-muted uppercase tracking-wider">Crosswind (mph)</span>
+            <span class="text-xs font-medium uppercase tracking-wide text-text-muted">Crosswind (mph)</span>
             <input type="number" value={windMph} onInput={e => setWindMph(+(e.target as HTMLInputElement).value)}
-              class="mt-1 w-full border border-surface-border bg-surface-raised px-3 py-2 font-mono text-base text-text-primary focus:border-accent focus:outline-none" />
+              class="mt-1 w-full rounded-md border border-surface-border bg-surface-raised px-3 py-2 font-mono text-base text-text-primary focus:border-accent focus:outline-none" />
           </label>
           <label class="block">
-            <span class="font-mono text-xs text-text-muted uppercase tracking-wider">Temperature (°F)</span>
+            <span class="text-xs font-medium uppercase tracking-wide text-text-muted">Temperature (°F)</span>
             <input type="number" value={tempF} onInput={e => setTempF(+(e.target as HTMLInputElement).value)}
-              class="mt-1 w-full border border-surface-border bg-surface-raised px-3 py-2 font-mono text-base text-text-primary focus:border-accent focus:outline-none" />
+              class="mt-1 w-full rounded-md border border-surface-border bg-surface-raised px-3 py-2 font-mono text-base text-text-primary focus:border-accent focus:outline-none" />
           </label>
           <label class="block">
-            <span class="font-mono text-xs text-text-muted uppercase tracking-wider">Altitude (ft)</span>
+            <span class="text-xs font-medium uppercase tracking-wide text-text-muted">Altitude (ft)</span>
             <input type="number" value={altitudeFt} onInput={e => setAltitudeFt(+(e.target as HTMLInputElement).value)}
-              class="mt-1 w-full border border-surface-border bg-surface-raised px-3 py-2 font-mono text-base text-text-primary focus:border-accent focus:outline-none" />
+              class="mt-1 w-full rounded-md border border-surface-border bg-surface-raised px-3 py-2 font-mono text-base text-text-primary focus:border-accent focus:outline-none" />
           </label>
           <label class="block">
-            <span class="font-mono text-xs text-text-muted uppercase tracking-wider">Sight Height (in)</span>
+            <span class="text-xs font-medium uppercase tracking-wide text-text-muted">Sight Height (in)</span>
             <input type="number" step="0.1" value={sightHeight} onInput={e => setSightHeight(+(e.target as HTMLInputElement).value)}
-              class="mt-1 w-full border border-surface-border bg-surface-raised px-3 py-2 font-mono text-base text-text-primary focus:border-accent focus:outline-none" />
+              class="mt-1 w-full rounded-md border border-surface-border bg-surface-raised px-3 py-2 font-mono text-base text-text-primary focus:border-accent focus:outline-none" />
           </label>
         </div>
       </div>
 
       {/* Chart */}
-      <div class="border border-surface-border">
+      <div class="rounded-lg border border-surface-border">
         <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5 flex items-center justify-between">
-          <h3 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">Trajectory Chart</h3>
+          <h3 class="text-base font-medium text-text-muted">Trajectory Chart</h3>
           <div class="flex gap-1">
             {(['drop', 'velocity', 'energy', 'wind'] as ChartMetric[]).map(m => (
               <button
                 key={m}
                 onClick={() => setChartMetric(m)}
-                class={`px-2 py-1 font-mono text-xs uppercase tracking-wider transition-colors ${
+                class={`px-2 py-1 rounded-md text-xs font-medium transition-colors ${
                   chartMetric === m ? 'text-accent bg-accent/10' : 'text-text-muted hover:text-accent'
                 }`}
               >
@@ -349,22 +349,22 @@ export default function BallisticsCalculator() {
       </div>
 
       {/* Results table */}
-      <div class="border border-surface-border">
+      <div class="rounded-lg border border-surface-border">
         <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
-          <h3 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">Trajectory Table</h3>
+          <h3 class="text-base font-medium text-text-muted">Trajectory Table</h3>
         </div>
         <div class="overflow-x-auto" tabindex={0} role="region" aria-label="Trajectory data">
           <table class="w-full text-left font-mono">
             <thead>
               <tr class="border-b border-surface-border-subtle bg-surface-overlay text-text-muted">
-                <th class="px-3 py-2 font-medium tracking-wider uppercase text-xs">Range</th>
-                <th class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Vel</th>
-                <th class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Energy</th>
-                <th class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Drop</th>
-                <th class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Drop</th>
-                <th class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Wind</th>
-                <th class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Wind</th>
-                <th class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">ToF</th>
+                <th class="px-3 py-2 text-xs font-medium uppercase tracking-wide">Range</th>
+                <th class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-right">Vel</th>
+                <th class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-right">Energy</th>
+                <th class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-right">Drop</th>
+                <th class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-right">Drop</th>
+                <th class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-right">Wind</th>
+                <th class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-right">Wind</th>
+                <th class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-right">ToF</th>
               </tr>
               <tr class="border-b border-surface-border bg-surface-overlay text-text-muted">
                 <th class="px-3 py-1 text-xs">(yd)</th>

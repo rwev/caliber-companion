@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { fmtRange, fmtNumber, fmtCurrency, titleCase } from '../lib/format';
+import { fmtRange, fmtNumber, fmtCurrency, titleCase } from '../../lib/format';
 
 const allCalibers = await getCollection('caliberData');
 const bySlug = new Map(allCalibers.map(c => [c.data.slug, c.data]));
@@ -127,15 +127,15 @@ const faqJsonLd = {
 };
 ---
 
-<BaseLayout title="Caliber Myths & Misconceptions" description={pageDescription} breadcrumbs={[{ label: 'Myths & Misconceptions' }]}>
+<BaseLayout title="Caliber Myths & Misconceptions" description={pageDescription} breadcrumbs={[{ label: 'Reference', href: '/reference' }, { label: 'Myths & Misconceptions' }]}>
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
 
   <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
     <div class="mb-8">
-      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+      <h1 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
         Caliber Myths & Misconceptions
       </h1>
-      <p class="mt-2 font-mono text-base text-text-muted max-w-3xl">
+      <p class="mt-2 text-base text-text-muted max-w-3xl">
         {myths.length} common beliefs about calibers and ammunition, examined against real ballistic data.
         Some are flat wrong, others are more nuanced than the gun-counter wisdom suggests.
       </p>
@@ -143,22 +143,22 @@ const faqJsonLd = {
 
     <div class="space-y-6">
       {myths.map((m, idx) => (
-        <div class="border border-surface-border">
+        <div class="border border-surface-border rounded-lg">
           {/* Header */}
           <div class="border-b border-surface-border bg-surface-overlay px-4 py-3 sm:px-5">
             <div class="flex items-start justify-between gap-3">
               <div>
-                <div class="font-mono text-xs tracking-wider uppercase text-text-muted mb-1">
+                <div class="text-xs font-medium uppercase tracking-wide text-text-muted mb-1">
                   Myth #{idx + 1}
                 </div>
-                <h2 class="font-display text-lg font-semibold text-text-primary sm:text-xl">
+                <h2 class="text-lg font-semibold text-text-primary sm:text-xl">
                   "{m.myth}"
                 </h2>
               </div>
-              <span class={`shrink-0 border px-3 py-1 font-mono text-sm font-medium tracking-wider uppercase ${
+              <span class={`shrink-0 rounded-full bg-surface-overlay px-2.5 py-0.5 text-xs font-medium ${
                 m.verdictColor === 'text-danger'
-                  ? 'border-danger/30 bg-danger/10 text-danger'
-                  : 'border-warning/30 bg-warning/10 text-warning'
+                  ? 'text-danger'
+                  : 'text-warning'
               }`}>
                 {m.verdict}
               </span>
@@ -167,15 +167,15 @@ const faqJsonLd = {
 
           <div class="p-4 sm:p-5 space-y-4">
             {/* Explanation */}
-            <p class="font-mono text-sm text-text-secondary leading-relaxed">
+            <p class="text-sm text-text-secondary leading-relaxed">
               {m.explanation}
             </p>
 
             {/* Data points */}
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
               {m.data.map(d => (
-                <div class="border border-surface-border-subtle bg-surface-raised px-3 py-2">
-                  <div class="font-mono text-xs tracking-wider uppercase text-text-muted">{d.label}</div>
+                <div class="border border-surface-border-subtle bg-surface-raised rounded-lg px-3 py-2">
+                  <div class="text-xs font-medium uppercase tracking-wide text-text-muted">{d.label}</div>
                   <div class="mt-0.5 font-mono text-sm text-text-primary">{d.value}</div>
                 </div>
               ))}
@@ -183,13 +183,13 @@ const faqJsonLd = {
 
             {/* Caliber links */}
             <div class="flex flex-wrap gap-2 pt-2 border-t border-surface-border-subtle">
-              <span class="font-mono text-xs tracking-wider uppercase text-text-muted self-center">Related:</span>
+              <span class="text-xs font-medium uppercase tracking-wide text-text-muted self-center">Related:</span>
               {m.calibers.map(slug => {
                 const cal = bySlug.get(slug);
                 return cal ? (
                   <a
-                    href={`/caliber-companion/calibers/${slug}`}
-                    class="font-mono text-sm text-text-secondary hover:text-accent transition-colors"
+                    href={`/calibers/${slug}`}
+                    class="text-sm text-text-secondary hover:text-accent transition-colors"
                   >
                     {cal.name}
                   </a>

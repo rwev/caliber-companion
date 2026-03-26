@@ -138,7 +138,7 @@ export default function UseCaseHeatmap({ calibers, basePath }: Props) {
       <div class="flex flex-wrap items-center gap-2">
         <button
           onClick={() => setFilterCat('all')}
-          class={`border px-2.5 py-1 font-mono text-xs tracking-wider uppercase transition-colors ${
+          class={`border px-2.5 py-1 text-xs font-medium rounded-md transition-colors ${
             filterCat === 'all' ? 'border-accent/40 bg-accent/15 text-accent' : 'border-surface-border text-text-muted hover:text-text-secondary'
           }`}
         >
@@ -148,7 +148,7 @@ export default function UseCaseHeatmap({ calibers, basePath }: Props) {
           <button
             key={cat}
             onClick={() => setFilterCat(cat)}
-            class={`border px-2.5 py-1 font-mono text-xs tracking-wider uppercase transition-colors ${
+            class={`border px-2.5 py-1 text-xs font-medium rounded-md transition-colors ${
               filterCat === cat ? 'border-accent/40 bg-accent/15 text-accent' : 'border-surface-border text-text-muted hover:text-text-secondary'
             }`}
           >
@@ -158,7 +158,7 @@ export default function UseCaseHeatmap({ calibers, basePath }: Props) {
       </div>
 
       {/* Legend */}
-      <div class="flex items-center gap-3 font-mono text-xs text-text-muted">
+      <div class="flex items-center gap-3 text-xs text-text-muted">
         <span>Suitability:</span>
         <span class="flex items-center gap-1"><span class="inline-block h-3 w-3 bg-surface border border-surface-border" /> None</span>
         <span class="flex items-center gap-1"><span class="inline-block h-3 w-3 bg-accent/20" /> Some</span>
@@ -167,13 +167,13 @@ export default function UseCaseHeatmap({ calibers, basePath }: Props) {
       </div>
 
       {/* Heatmap table */}
-      <div class="overflow-x-auto border border-surface-border" tabindex={0} role="region" aria-label="Caliber use case heatmap">
+      <div class="overflow-x-auto border border-surface-border rounded-lg" tabindex={0} role="region" aria-label="Caliber use case heatmap">
         <table class="w-full text-left font-mono">
           <thead>
             <tr class="border-b border-surface-border bg-surface-overlay">
               <th
                 scope="col"
-                class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-text-muted sticky left-0 bg-surface-overlay z-10 cursor-pointer hover:text-accent"
+                class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-text-muted sticky left-0 bg-surface-overlay z-10 cursor-pointer hover:text-accent"
                 onClick={() => setSortField('name')}
               >
                 Caliber {sortField === 'name' ? '▼' : ''}
@@ -182,7 +182,7 @@ export default function UseCaseHeatmap({ calibers, basePath }: Props) {
                 <th
                   key={g.key}
                   scope="col"
-                  class="px-2 py-2 font-medium tracking-wider uppercase text-xs text-text-muted text-center cursor-pointer hover:text-accent whitespace-nowrap"
+                  class="px-2 py-2 text-xs font-medium uppercase tracking-wide text-text-muted text-center cursor-pointer hover:text-accent whitespace-nowrap"
                   onClick={() => setSortField(g.key)}
                   title={`Sort by ${g.label} suitability`}
                 >
@@ -219,7 +219,7 @@ export default function UseCaseHeatmap({ calibers, basePath }: Props) {
         </table>
       </div>
 
-      <p class="font-mono text-xs text-text-muted">
+      <p class="text-xs text-text-muted">
         {filtered.length} calibers shown · Click column headers to sort · Suitability derived from manufacturer use case data
       </p>
     </div>

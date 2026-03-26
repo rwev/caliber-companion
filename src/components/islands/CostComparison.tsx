@@ -54,12 +54,12 @@ export default function CostComparison({ calibers, basePath }: Props) {
       {/* Controls */}
       <div class="flex flex-wrap items-center gap-3">
         <div class="flex items-center gap-2">
-          <span class="font-mono text-xs tracking-wider uppercase text-text-muted">Sort:</span>
+          <span class="text-xs font-medium uppercase tracking-wide text-text-muted">Sort:</span>
           {(['low', 'mid', 'high'] as const).map(s => (
             <button
               key={s}
               onClick={() => setSortBy(s)}
-              class={`border px-2.5 py-1 font-mono text-xs tracking-wider uppercase transition-colors ${
+              class={`border px-2.5 py-1 text-xs font-medium rounded-md transition-colors ${
                 sortBy === s
                   ? 'border-accent/40 bg-accent/15 text-accent'
                   : 'border-surface-border text-text-muted hover:text-text-secondary'
@@ -75,7 +75,7 @@ export default function CostComparison({ calibers, basePath }: Props) {
         <div class="flex flex-wrap items-center gap-2">
           <button
             onClick={() => setFilterCat('all')}
-            class={`border px-2.5 py-1 font-mono text-xs tracking-wider uppercase transition-colors ${
+            class={`border px-2.5 py-1 text-xs font-medium rounded-md transition-colors ${
               filterCat === 'all'
                 ? 'border-accent/40 bg-accent/15 text-accent'
                 : 'border-surface-border text-text-muted hover:text-text-secondary'
@@ -87,7 +87,7 @@ export default function CostComparison({ calibers, basePath }: Props) {
             <button
               key={cat}
               onClick={() => setFilterCat(cat)}
-              class={`flex items-center gap-1 border px-2.5 py-1 font-mono text-xs tracking-wider uppercase transition-colors ${
+              class={`flex items-center gap-1 border px-2.5 py-1 text-xs font-medium rounded-md transition-colors ${
                 filterCat === cat
                   ? 'border-accent/40 bg-accent/15 text-accent'
                   : 'border-surface-border text-text-muted hover:text-text-secondary'
@@ -100,12 +100,12 @@ export default function CostComparison({ calibers, basePath }: Props) {
         </div>
       </div>
 
-      <p class="font-mono text-xs text-text-muted">
+      <p class="text-xs text-text-muted">
         Showing {filtered.length} calibers · Bar shows low–high range · Dot is midpoint
       </p>
 
       {/* Chart */}
-      <div class="border border-surface-border">
+      <div class="border border-surface-border rounded-lg">
         <div class="divide-y divide-surface-border-subtle">
           {filtered.map((c, i) => {
             const leftPct = (c.costLow / maxCost) * 100;

@@ -29,7 +29,7 @@ interface Props {
 }
 
 const COLORS = [
-  { border: '#eb6b34', bg: 'rgba(235, 107, 52, 0.1)' },
+  { border: '#0d7c66', bg: 'rgba(13, 124, 102, 0.1)' },
   { border: '#3b82f6', bg: 'rgba(59, 130, 246, 0.1)' },
   { border: '#10b981', bg: 'rgba(16, 185, 129, 0.1)' },
   { border: '#a855f7', bg: 'rgba(168, 85, 247, 0.1)' },
@@ -122,13 +122,13 @@ export default function BulletDropChart({ calibers }: Props) {
         scales: {
           x: {
             type: 'linear',
-            title: { display: true, text: 'Distance (yards)', color: '#999', font: { family: 'JetBrains Mono, monospace', size: 11 } },
-            ticks: { color: '#999', font: { family: 'JetBrains Mono, monospace', size: 10 } },
+            title: { display: true, text: 'Distance (yards)', color: '#999', font: { family: 'IBM Plex Mono, monospace', size: 11 } },
+            ticks: { color: '#999', font: { family: 'IBM Plex Mono, monospace', size: 10 } },
             grid: { color: 'rgba(255,255,255,0.06)' },
           },
           y: {
-            title: { display: true, text: yLabel, color: '#999', font: { family: 'JetBrains Mono, monospace', size: 11 } },
-            ticks: { color: '#999', font: { family: 'JetBrains Mono, monospace', size: 10 } },
+            title: { display: true, text: yLabel, color: '#999', font: { family: 'IBM Plex Mono, monospace', size: 11 } },
+            ticks: { color: '#999', font: { family: 'IBM Plex Mono, monospace', size: 10 } },
             grid: { color: 'rgba(255,255,255,0.06)' },
             reverse: metric === 'drop',
           },
@@ -137,15 +137,15 @@ export default function BulletDropChart({ calibers }: Props) {
           legend: {
             labels: {
               color: '#999',
-              font: { family: 'JetBrains Mono, monospace', size: 11 },
+              font: { family: 'IBM Plex Mono, monospace', size: 11 },
               usePointStyle: true,
               pointStyle: 'circle',
             },
           },
           tooltip: {
             backgroundColor: 'rgba(26,26,26,0.95)',
-            titleFont: { family: 'JetBrains Mono, monospace', size: 11 },
-            bodyFont: { family: 'JetBrains Mono, monospace', size: 11 },
+            titleFont: { family: 'IBM Plex Mono, monospace', size: 11 },
+            bodyFont: { family: 'IBM Plex Mono, monospace', size: 11 },
             borderColor: 'rgba(255,255,255,0.1)',
             borderWidth: 1,
             callbacks: {
@@ -176,11 +176,11 @@ export default function BulletDropChart({ calibers }: Props) {
       {/* Controls */}
       <div class="flex flex-wrap gap-2 items-end">
         <div class="flex-1 min-w-[200px]">
-          <label class="block font-mono text-xs tracking-wider uppercase text-text-muted mb-1">Caliber</label>
+          <label class="block text-xs font-medium uppercase tracking-wide text-text-muted mb-1">Caliber</label>
           <select
             value={addSlug}
             onChange={e => { setAddSlug((e.target as HTMLSelectElement).value); setAddLoadIdx(0); }}
-            class="w-full border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary"
+            class="w-full border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary rounded-md"
           >
             <option value="">Select caliber...</option>
             {available.map(c => (
@@ -191,11 +191,11 @@ export default function BulletDropChart({ calibers }: Props) {
 
         {addCaliber && (
           <div class="flex-1 min-w-[200px]">
-            <label class="block font-mono text-xs tracking-wider uppercase text-text-muted mb-1">Load</label>
+            <label class="block text-xs font-medium uppercase tracking-wide text-text-muted mb-1">Load</label>
             <select
               value={addLoadIdx}
               onChange={e => setAddLoadIdx(+(e.target as HTMLSelectElement).value)}
-              class="w-full border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary"
+              class="w-full border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary rounded-md"
             >
               {addCaliber.loads.map((l, i) => (
                 <option key={i} value={i}>{l.bullet_weight_gr}gr {l.bullet_type} ({l.muzzle_velocity_fps} fps)</option>
@@ -207,7 +207,7 @@ export default function BulletDropChart({ calibers }: Props) {
         <button
           onClick={handleAdd}
           disabled={!addSlug || selected.length >= 6}
-          class="border border-accent bg-accent/10 px-4 py-2 font-mono text-sm tracking-wider uppercase text-accent transition-colors hover:bg-accent/20 disabled:opacity-40 disabled:cursor-not-allowed"
+          class="border border-accent bg-accent/10 px-4 py-2 text-sm font-medium rounded-md text-accent transition-colors hover:bg-accent/20 disabled:opacity-40 disabled:cursor-not-allowed"
         >
           Add
         </button>
@@ -215,12 +215,12 @@ export default function BulletDropChart({ calibers }: Props) {
 
       {/* Metric toggle */}
       <div class="flex items-center gap-2">
-        <span class="font-mono text-xs tracking-wider uppercase text-text-muted">Show:</span>
+        <span class="text-xs font-medium uppercase tracking-wide text-text-muted">Show:</span>
         {(['drop', 'energy', 'velocity'] as const).map(m => (
           <button
             key={m}
             onClick={() => setMetric(m)}
-            class={`border px-2.5 py-1 font-mono text-xs tracking-wider uppercase transition-colors ${
+            class={`border px-2.5 py-1 text-xs font-medium rounded-md transition-colors ${
               metric === m
                 ? 'border-accent/40 bg-accent/15 text-accent'
                 : 'border-surface-border text-text-muted hover:text-text-secondary'
@@ -239,7 +239,7 @@ export default function BulletDropChart({ calibers }: Props) {
             const load = cal?.loads[s.loadIdx];
             if (!cal || !load) return null;
             return (
-              <div key={i} class="flex items-center gap-2 border border-surface-border bg-surface-raised px-3 py-1.5">
+              <div key={i} class="flex items-center gap-2 rounded-full bg-surface-overlay px-2.5 py-0.5">
                 <span class="inline-block h-3 w-3 rounded-full" style={{ backgroundColor: COLORS[i % COLORS.length].border }} />
                 <span class="font-mono text-sm text-text-primary">{cal.name}</span>
                 <span class="font-mono text-xs text-text-muted">{load.bullet_weight_gr}gr</span>
@@ -253,14 +253,14 @@ export default function BulletDropChart({ calibers }: Props) {
       )}
 
       {/* Chart */}
-      <div class="border border-surface-border bg-surface p-4">
+      <div class="border border-surface-border rounded-lg bg-surface p-4">
         {selected.length > 0 ? (
           <div style={{ height: '400px' }}>
             <canvas ref={canvasRef} />
           </div>
         ) : (
           <div class="flex items-center justify-center h-64 text-center">
-            <p class="font-mono text-sm text-text-muted">
+            <p class="text-sm text-text-muted">
               Select 2 or more calibers to compare their ballistic trajectories.
             </p>
           </div>

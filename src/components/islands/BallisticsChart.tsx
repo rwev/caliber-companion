@@ -119,7 +119,7 @@ export default function BallisticsChart({ loads }: Props) {
               position: 'bottom',
               labels: {
                 color: textSecondary,
-                font: { family: '"JetBrains Mono", monospace', size: 13 },
+                font: { family: '"IBM Plex Mono", monospace', size: 13 },
                 padding: 16,
                 usePointStyle: true,
                 pointStyleWidth: 8,
@@ -131,8 +131,8 @@ export default function BallisticsChart({ loads }: Props) {
               borderWidth: 1,
               titleColor: textPrimary,
               bodyColor: textSecondary,
-              titleFont: { family: '"JetBrains Mono", monospace', size: 13 },
-              bodyFont: { family: '"JetBrains Mono", monospace', size: 13 },
+              titleFont: { family: '"IBM Plex Mono", monospace', size: 13 },
+              bodyFont: { family: '"IBM Plex Mono", monospace', size: 13 },
               padding: 12,
               callbacks: {
                 title: (items) => `${items[0].label} yd`,
@@ -146,11 +146,11 @@ export default function BallisticsChart({ loads }: Props) {
                 display: true,
                 text: 'Distance (yd)',
                 color: textMuted,
-                font: { family: '"JetBrains Mono", monospace', size: 13 },
+                font: { family: '"IBM Plex Mono", monospace', size: 13 },
               },
               ticks: {
                 color: textMuted,
-                font: { family: '"JetBrains Mono", monospace', size: 12 },
+                font: { family: '"IBM Plex Mono", monospace', size: 12 },
               },
               grid: { color: gridColor },
               border: { color: surfaceBorder },
@@ -160,11 +160,11 @@ export default function BallisticsChart({ loads }: Props) {
                 display: true,
                 text: `${metric.label} (${metric.unit})`,
                 color: textMuted,
-                font: { family: '"JetBrains Mono", monospace', size: 13 },
+                font: { family: '"IBM Plex Mono", monospace', size: 13 },
               },
               ticks: {
                 color: textMuted,
-                font: { family: '"JetBrains Mono", monospace', size: 12 },
+                font: { family: '"IBM Plex Mono", monospace', size: 12 },
               },
               grid: { color: gridColor },
               border: { color: surfaceBorder },
@@ -182,9 +182,9 @@ export default function BallisticsChart({ loads }: Props) {
   }, [activeMetric, loads, themeKey]);
 
   return (
-    <div class="border border-surface-border">
+    <div class="border border-surface-border rounded-lg">
       <div class="flex items-center justify-between border-b border-surface-border bg-surface-overlay px-4 py-2.5">
-        <h3 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">
+        <h3 class="text-base font-medium text-text-muted">
           Ballistics Chart
         </h3>
         <div class="flex gap-1" role="group" aria-label="Chart metric">
@@ -193,7 +193,7 @@ export default function BallisticsChart({ loads }: Props) {
               key={m.key}
               onClick={() => setActiveMetric(m.key)}
               aria-pressed={activeMetric === m.key}
-              class={`px-2.5 py-1 font-mono text-sm tracking-wider uppercase transition-colors ${
+              class={`px-2.5 py-1 text-sm font-medium rounded-md transition-colors ${
                 activeMetric === m.key
                   ? 'bg-accent/15 text-accent border border-accent/30'
                   : 'text-text-muted border border-transparent hover:text-text-secondary'

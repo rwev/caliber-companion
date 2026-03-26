@@ -7,9 +7,9 @@ const { events } = Astro.props;
 const sorted = [...events].sort((a, b) => a.year - b.year);
 ---
 
-<div class="border border-surface-border">
-  <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
-    <h3 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">Adoption Timeline</h3>
+<div class="rounded-lg border border-surface-border">
+  <div class="rounded-t-lg border-b border-surface-border bg-surface-overlay px-4 py-2.5">
+    <h3 class="text-sm font-semibold text-text-muted">Adoption Timeline</h3>
   </div>
   <div class="relative py-4 px-4">
     {/* Vertical line */}
@@ -20,12 +20,12 @@ const sorted = [...events].sort((a, b) => a.year - b.year);
         <li class="flex items-start gap-3 py-2.5">
           {/* Dot */}
           <div class="relative z-10 mt-1.5 flex-shrink-0">
-            <div class="h-2.5 w-2.5 border border-accent bg-accent/20"></div>
+            <div class="h-2.5 w-2.5 rounded-full border border-accent bg-accent/20"></div>
           </div>
           {/* Content */}
           <div class="flex-1 min-w-0">
             <span class="font-mono text-sm font-medium text-accent">{entry.year}</span>
-            <p class="font-mono text-base text-text-secondary leading-snug mt-0.5">{entry.event}</p>
+            <p class="text-base text-text-secondary leading-snug mt-0.5">{entry.event}</p>
           </div>
         </li>
       ))}

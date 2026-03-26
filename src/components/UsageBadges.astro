@@ -29,10 +29,10 @@ const { military, le, useCases, militaryDetail, leDetail } = Astro.props;
   {/* Military - structured detail if available, otherwise badges */}
   {militaryDetail && militaryDetail.length > 0 ? (
     <div>
-      <div class="mb-2 font-mono text-sm tracking-[0.2em] uppercase text-text-muted">Military Adoption</div>
+      <div class="mb-2 text-xs font-medium uppercase tracking-wide text-text-muted">Military Adoption</div>
       <div class="space-y-2">
         {militaryDetail.map(entry => (
-          <div class={`border px-2.5 py-2 font-mono text-sm ${entry.status === 'active' ? 'border-success/30 bg-success/10' : 'border-surface-border bg-surface-overlay'}`}>
+          <div class={`rounded-md border px-2.5 py-2 text-sm ${entry.status === 'active' ? 'border-success/30 bg-success/10' : 'border-surface-border bg-surface-overlay'}`}>
             <div class={`font-medium ${entry.status === 'active' ? 'text-success' : 'text-text-muted'}`}>
               {entry.organization}
               {entry.designation && <span class="text-text-muted font-normal"> — {entry.designation}</span>}
@@ -50,10 +50,10 @@ const { military, le, useCases, militaryDetail, leDetail } = Astro.props;
     </div>
   ) : military.length > 0 && (
     <div>
-      <div class="mb-2 font-mono text-sm tracking-[0.2em] uppercase text-text-muted">Military Adoption</div>
+      <div class="mb-2 text-xs font-medium uppercase tracking-wide text-text-muted">Military Adoption</div>
       <div class="flex flex-wrap gap-2">
         {military.map(item => (
-          <span class="border border-success/30 bg-success/10 px-2.5 py-1 font-mono text-sm text-success">
+          <span class="rounded-full border border-success/30 bg-success/10 px-2.5 py-0.5 text-sm font-medium text-success">
             {item}
           </span>
         ))}
@@ -64,10 +64,10 @@ const { military, le, useCases, militaryDetail, leDetail } = Astro.props;
   {/* LE - structured detail if available, otherwise badges */}
   {leDetail && leDetail.length > 0 ? (
     <div>
-      <div class="mb-2 font-mono text-sm tracking-[0.2em] uppercase text-text-muted">Law Enforcement</div>
+      <div class="mb-2 text-xs font-medium uppercase tracking-wide text-text-muted">Law Enforcement</div>
       <div class="space-y-2">
         {leDetail.map(entry => (
-          <div class={`border px-2.5 py-2 font-mono text-sm ${entry.status === 'active' ? 'border-info/30 bg-info/10' : 'border-surface-border bg-surface-overlay'}`}>
+          <div class={`rounded-md border px-2.5 py-2 text-sm ${entry.status === 'active' ? 'border-info/30 bg-info/10' : 'border-surface-border bg-surface-overlay'}`}>
             <div class={`font-medium ${entry.status === 'active' ? 'text-info' : 'text-text-muted'}`}>
               {entry.organization}
             </div>
@@ -84,10 +84,10 @@ const { military, le, useCases, militaryDetail, leDetail } = Astro.props;
     </div>
   ) : le.length > 0 && (
     <div>
-      <div class="mb-2 font-mono text-sm tracking-[0.2em] uppercase text-text-muted">Law Enforcement</div>
+      <div class="mb-2 text-xs font-medium uppercase tracking-wide text-text-muted">Law Enforcement</div>
       <div class="flex flex-wrap gap-2">
         {le.map(item => (
-          <span class="border border-info/30 bg-info/10 px-2.5 py-1 font-mono text-sm text-info">
+          <span class="rounded-full border border-info/30 bg-info/10 px-2.5 py-0.5 text-sm font-medium text-info">
             {item}
           </span>
         ))}
@@ -97,10 +97,10 @@ const { military, le, useCases, militaryDetail, leDetail } = Astro.props;
 
   {useCases.length > 0 && (
     <div>
-      <div class="mb-2 font-mono text-sm tracking-[0.2em] uppercase text-text-muted">Primary Use Cases</div>
+      <div class="mb-2 text-xs font-medium uppercase tracking-wide text-text-muted">Primary Use Cases</div>
       <div class="flex flex-wrap gap-2">
         {useCases.map(item => (
-          <span class="border border-surface-border bg-surface-overlay px-2.5 py-1 font-mono text-sm text-text-secondary">
+          <span class="rounded-full border border-surface-border bg-surface-overlay px-2.5 py-0.5 text-sm font-medium text-text-secondary">
             {item}
           </span>
         ))}

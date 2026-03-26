@@ -1,6 +1,6 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import UseCaseHeatmap from '../components/islands/UseCaseHeatmap';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import UseCaseHeatmap from '../../components/islands/UseCaseHeatmap';
 import { getCollection } from 'astro:content';
 
 const allCalibers = await getCollection('caliberData');
@@ -16,18 +16,18 @@ const caliberEntries = allCalibers
 const pageDescription = `Interactive heatmap showing which calibers are best suited for each use case — self-defense, hunting, competition, long-range, military, and more. Compare ${caliberEntries.length} calibers across 10 categories.`;
 ---
 
-<BaseLayout title="Caliber Use Case Heatmap" description={pageDescription} breadcrumbs={[{ label: 'Use Cases' }]}>
+<BaseLayout title="Caliber Use Case Heatmap" description={pageDescription} breadcrumbs={[{ label: 'Reference', href: '/reference' }, { label: 'Use Cases' }]}>
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
     <div class="mb-8">
-      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+      <h1 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
         Caliber Use Case Heatmap
       </h1>
-      <p class="mt-2 font-mono text-base text-text-muted max-w-3xl">
+      <p class="mt-2 text-base text-text-muted max-w-3xl">
         See at a glance which calibers are suited for which purposes. Filter by category, sort by any
         use case column to find the best caliber for your needs.
       </p>
     </div>
 
-    <UseCaseHeatmap client:idle calibers={caliberEntries} basePath="/caliber-companion" />
+    <UseCaseHeatmap client:idle calibers={caliberEntries} basePath="" />
   </div>
 </BaseLayout>

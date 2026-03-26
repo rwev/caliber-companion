@@ -274,7 +274,7 @@ export default function CaliberQuiz({ calibers, basePath }: Props) {
   }, [currentStep, answers, calibers]);
 
   return (
-    <div class="border border-surface-border">
+    <div class="border border-surface-border rounded-lg">
       {/* Progress bar */}
       <div class="h-1 bg-surface-overlay">
         <div
@@ -287,20 +287,20 @@ export default function CaliberQuiz({ calibers, basePath }: Props) {
         {currentStep !== 'results' && currentQuestion ? (
           <div>
             <div class="flex items-center justify-between mb-6">
-              <span class="font-mono text-xs text-text-muted uppercase tracking-wider">
+              <span class="text-xs font-medium uppercase tracking-wide text-text-muted">
                 Question {currentIdx + 1} of {stepOrder.length - 1}
               </span>
               {currentIdx > 0 && (
                 <button
                   onClick={goBack}
-                  class="font-mono text-sm text-text-muted hover:text-accent transition-colors"
+                  class="text-sm font-medium text-text-muted hover:text-accent transition-colors rounded-md"
                 >
                   ← Back
                 </button>
               )}
             </div>
 
-            <h3 class="font-display text-xl font-semibold text-text-primary mb-6">
+            <h3 class="text-xl font-semibold text-text-primary mb-6">
               {currentQuestion.question}
             </h3>
 
@@ -309,14 +309,14 @@ export default function CaliberQuiz({ calibers, basePath }: Props) {
                 <button
                   key={opt.value}
                   onClick={() => selectOption(currentQuestion.step, opt.value)}
-                  class={`w-full text-left border px-4 py-3 transition-colors ${
+                  class={`w-full text-left border px-4 py-3 rounded-md transition-colors ${
                     answers[currentQuestion.step] === opt.value
                       ? 'border-accent bg-accent/10 text-accent'
                       : 'border-surface-border bg-surface-raised text-text-secondary hover:border-accent/50 hover:text-text-primary'
                   }`}
                 >
-                  <div class="font-mono text-base font-medium">{opt.label}</div>
-                  <div class="font-mono text-sm text-text-muted mt-0.5">{opt.desc}</div>
+                  <div class="text-base font-medium">{opt.label}</div>
+                  <div class="text-sm text-text-muted mt-0.5">{opt.desc}</div>
                 </button>
               ))}
             </div>
@@ -324,12 +324,12 @@ export default function CaliberQuiz({ calibers, basePath }: Props) {
         ) : (
           <div>
             <div class="flex items-center justify-between mb-6">
-              <h3 class="font-display text-xl font-semibold text-accent">
+              <h3 class="text-xl font-semibold text-accent">
                 Your Top Recommendations
               </h3>
               <button
                 onClick={restart}
-                class="font-mono text-sm text-text-muted hover:text-accent transition-colors border border-surface-border px-3 py-1"
+                class="text-sm font-medium text-text-muted hover:text-accent transition-colors border border-surface-border rounded-md px-3 py-1"
               >
                 Start Over
               </button>
@@ -340,7 +340,7 @@ export default function CaliberQuiz({ calibers, basePath }: Props) {
                 <a
                   key={cal.slug}
                   href={`${basePath}/calibers/${cal.slug}`}
-                  class="block border border-surface-border bg-surface-raised p-4 transition-colors hover:border-accent group"
+                  class="block border border-surface-border bg-surface-raised p-4 rounded-lg transition-colors hover:border-accent group"
                 >
                   <div class="flex items-start justify-between gap-4">
                     <div>
@@ -350,14 +350,14 @@ export default function CaliberQuiz({ calibers, basePath }: Props) {
                           <div class="font-mono text-lg font-medium text-text-primary group-hover:text-accent transition-colors">
                             {cal.name}
                           </div>
-                          <div class="font-mono text-xs text-text-muted mt-0.5">
+                          <div class="text-xs text-text-muted mt-0.5">
                             {getRecommendationReason(cal, answers)}
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="text-right flex-shrink-0">
-                      <span class="border border-accent/30 bg-accent/10 px-2 py-0.5 font-mono text-xs uppercase text-accent">
+                      <span class="rounded-full bg-surface-overlay px-2.5 py-0.5 text-xs font-medium">
                         {titleCase(cal.category)}
                       </span>
                     </div>
@@ -374,13 +374,13 @@ export default function CaliberQuiz({ calibers, basePath }: Props) {
             <div class="mt-6 flex gap-3">
               <button
                 onClick={goBack}
-                class="font-mono text-sm text-text-muted hover:text-accent transition-colors border border-surface-border px-4 py-2"
+                class="text-sm font-medium text-text-muted hover:text-accent transition-colors border border-surface-border rounded-md px-4 py-2"
               >
                 ← Adjust Answers
               </button>
               <a
                 href={`${basePath}/compare?c=${results.map(r => r.cal.slug).join(',')}`}
-                class="font-mono text-sm text-accent hover:underline border border-accent/30 bg-accent/10 px-4 py-2"
+                class="text-sm font-medium text-accent hover:underline border border-accent/30 bg-accent/10 rounded-md px-4 py-2"
               >
                 Compare Top Picks →
               </a>

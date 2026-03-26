@@ -62,7 +62,7 @@ export default function RecentlyViewed({ allCalibers, basePath }: Props) {
     <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16">
       <div class="mb-6 flex items-center gap-4">
         <div class="h-px flex-1 bg-surface-border" aria-hidden="true"></div>
-        <h2 class="font-display text-base tracking-[0.25em] uppercase text-text-muted flex items-center gap-2">
+        <h2 class="text-sm font-semibold uppercase tracking-wide text-text-muted flex items-center gap-2">
           <svg class="h-4 w-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
@@ -76,11 +76,11 @@ export default function RecentlyViewed({ allCalibers, basePath }: Props) {
           <a
             key={cal.slug}
             href={`${basePath}/calibers/${cal.slug}`}
-            class="group border border-surface-border bg-surface p-4 transition-colors hover:border-accent/40 hover:bg-surface-raised"
+            class="group rounded-lg border border-surface-border bg-surface p-4 transition-all hover:border-accent/40 hover:bg-surface-raised hover:shadow-md"
           >
             <div class="flex items-start justify-between gap-3">
               <div class="min-w-0">
-                <div class="font-display text-lg font-semibold text-text-primary group-hover:text-accent transition-colors truncate">
+                <div class="text-lg font-semibold text-text-primary group-hover:text-accent transition-colors truncate">
                   {cal.name}
                 </div>
                 <div class="mt-0.5 font-mono text-sm text-text-muted truncate">
@@ -88,10 +88,10 @@ export default function RecentlyViewed({ allCalibers, basePath }: Props) {
                 </div>
               </div>
               <div class="shrink-0 text-right">
-                <span class="border border-surface-border px-2 py-0.5 font-mono text-xs tracking-wider uppercase text-text-muted">
+                <span class="rounded-full bg-surface-overlay px-2.5 py-0.5 text-xs font-medium text-text-muted">
                   {titleCase(cal.category)}
                 </span>
-                <div class="mt-1 font-mono text-xs text-text-muted">
+                <div class="mt-1 text-xs text-text-muted">
                   {timeAgo(cal.ts)}
                 </div>
               </div>

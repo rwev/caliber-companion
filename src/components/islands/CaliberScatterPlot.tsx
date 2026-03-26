@@ -114,20 +114,20 @@ export default function CaliberScatterPlot({ calibers, basePath }: Props) {
           },
           scales: {
             x: {
-              title: { display: true, text: `${xCfg.label} (${xCfg.unit})`, color: textMuted, font: { family: 'JetBrains Mono, monospace', size: 11 } },
-              ticks: { color: textMuted, font: { family: 'JetBrains Mono, monospace', size: 10 } },
+              title: { display: true, text: `${xCfg.label} (${xCfg.unit})`, color: textMuted, font: { family: 'IBM Plex Mono, monospace', size: 11 } },
+              ticks: { color: textMuted, font: { family: 'IBM Plex Mono, monospace', size: 10 } },
               grid: { color: border + '40' },
             },
             y: {
-              title: { display: true, text: `${yCfg.label} (${yCfg.unit})`, color: textMuted, font: { family: 'JetBrains Mono, monospace', size: 11 } },
-              ticks: { color: textMuted, font: { family: 'JetBrains Mono, monospace', size: 10 } },
+              title: { display: true, text: `${yCfg.label} (${yCfg.unit})`, color: textMuted, font: { family: 'IBM Plex Mono, monospace', size: 11 } },
+              ticks: { color: textMuted, font: { family: 'IBM Plex Mono, monospace', size: 10 } },
               grid: { color: border + '40' },
             },
           },
           plugins: {
             tooltip: {
-              titleFont: { family: 'JetBrains Mono, monospace' },
-              bodyFont: { family: 'JetBrains Mono, monospace' },
+              titleFont: { family: 'IBM Plex Mono, monospace' },
+              bodyFont: { family: 'IBM Plex Mono, monospace' },
               callbacks: {
                 label: (ctx: any) => {
                   const point = ctx.raw as any;
@@ -138,7 +138,7 @@ export default function CaliberScatterPlot({ calibers, basePath }: Props) {
             legend: {
               labels: {
                 color: textMuted,
-                font: { family: 'JetBrains Mono, monospace', size: 11 },
+                font: { family: 'IBM Plex Mono, monospace', size: 11 },
                 usePointStyle: true,
                 pointStyle: 'circle',
               },
@@ -152,26 +152,26 @@ export default function CaliberScatterPlot({ calibers, basePath }: Props) {
   }, [xAxis, yAxis, calibers, themeKey]);
 
   return (
-    <div class="border border-surface-border mb-6">
+    <div class="border border-surface-border rounded-lg mb-6">
       <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5 flex flex-wrap items-center justify-between gap-3">
-        <h3 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">Performance Map</h3>
+        <h3 class="text-base font-medium text-text-muted">Performance Map</h3>
         <div class="flex flex-wrap items-center gap-3">
           <label class="flex items-center gap-2">
-            <span class="font-mono text-xs text-text-muted uppercase tracking-wider">X:</span>
+            <span class="text-xs font-medium uppercase tracking-wide text-text-muted">X:</span>
             <select
               value={xAxis}
               onChange={e => setXAxis((e.target as HTMLSelectElement).value as AxisKey)}
-              class="border border-surface-border bg-surface-raised px-2 py-1 font-mono text-sm text-text-primary focus:border-accent focus:outline-none"
+              class="border border-surface-border bg-surface-raised px-2 py-1 font-mono text-sm text-text-primary rounded-md focus:border-accent focus:outline-none"
             >
               {AXES.map(a => <option key={a.key} value={a.key}>{a.label}</option>)}
             </select>
           </label>
           <label class="flex items-center gap-2">
-            <span class="font-mono text-xs text-text-muted uppercase tracking-wider">Y:</span>
+            <span class="text-xs font-medium uppercase tracking-wide text-text-muted">Y:</span>
             <select
               value={yAxis}
               onChange={e => setYAxis((e.target as HTMLSelectElement).value as AxisKey)}
-              class="border border-surface-border bg-surface-raised px-2 py-1 font-mono text-sm text-text-primary focus:border-accent focus:outline-none"
+              class="border border-surface-border bg-surface-raised px-2 py-1 font-mono text-sm text-text-primary rounded-md focus:border-accent focus:outline-none"
             >
               {AXES.map(a => <option key={a.key} value={a.key}>{a.label}</option>)}
             </select>
@@ -182,7 +182,7 @@ export default function CaliberScatterPlot({ calibers, basePath }: Props) {
         <canvas ref={canvasRef} />
       </div>
       <div class="px-4 py-2 bg-surface-overlay border-t border-surface-border-subtle">
-        <p class="font-mono text-xs text-text-muted">
+        <p class="text-xs text-text-muted">
           Click any point to view caliber details. Color-coded by category.
         </p>
       </div>

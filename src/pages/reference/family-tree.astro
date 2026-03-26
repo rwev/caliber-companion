@@ -1,6 +1,6 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import CartridgeFamilyTree from '../components/islands/CartridgeFamilyTree';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CartridgeFamilyTree from '../../components/islands/CartridgeFamilyTree';
 import { getCollection } from 'astro:content';
 
 const calibers = await getCollection('caliberData');
@@ -104,34 +104,34 @@ const standaloneCalibers = calibers
   }));
 ---
 
-<BaseLayout breadcrumbs={[{ label: 'Cartridge Lineage' }]} title="Cartridge Family Tree" description="Interactive visualization of cartridge lineage showing parent-child relationships across 100+ calibers. Explore how modern cartridges evolved from their ancestors.">
+<BaseLayout breadcrumbs={[{ label: 'Reference', href: '/reference' }, { label: 'Cartridge Lineage' }]} title="Cartridge Family Tree" description="Interactive visualization of cartridge lineage showing parent-child relationships across 100+ calibers. Explore how modern cartridges evolved from their ancestors.">
   <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
     <div class="mb-8">
-      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+      <h1 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
         Cartridge Family Tree
       </h1>
-      <p class="mt-2 font-mono text-base text-text-muted">
-        {trees.reduce((sum, t) => {
+      <p class="mt-2 text-base text-text-muted">
+        <span class="font-mono">{trees.reduce((sum, t) => {
           let count = 0;
           function walk(n: TreeNode) { count++; n.children.forEach(walk); }
           walk(t);
           return sum + count;
-        }, 0)} linked calibers across {trees.length} families · {standaloneCalibers.length} independent cartridges
+        }, 0)}</span> linked calibers across <span class="font-mono">{trees.length}</span> families · <span class="font-mono">{standaloneCalibers.length}</span> independent cartridges
       </p>
-      <p class="mt-1 font-mono text-xs text-text-muted">
+      <p class="mt-1 text-xs text-text-muted">
         Click +/− to expand or collapse branches · click any caliber to view its detail page
       </p>
     </div>
 
-    <CartridgeFamilyTree client:idle trees={trees} basePath="/caliber-companion" />
+    <CartridgeFamilyTree client:idle trees={trees} basePath="" />
 
     {standaloneCalibers.length > 0 && (
       <div class="mt-10 border-t border-surface-border pt-8">
-        <h2 class="font-display text-base tracking-[0.2em] uppercase text-text-muted mb-4">
+        <h2 class="text-base font-semibold text-text-muted mb-4">
           Independent Cartridges
           <span class="font-mono text-sm ml-2">({standaloneCalibers.length})</span>
         </h2>
-        <p class="font-mono text-xs text-text-muted mb-4">
+        <p class="text-xs text-text-muted mb-4">
           Cartridges without recorded parent or derived cartridge relationships in our database.
         </p>
         <div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
@@ -139,8 +139,8 @@ const standaloneCalibers = calibers
             .sort((a, b) => a.name.localeCompare(b.name))
             .map(c => (
               <a
-                href={`/caliber-companion/calibers/${c.slug}`}
-                class="flex items-center justify-between border border-surface-border px-3 py-2 font-mono text-sm text-text-secondary hover:border-accent/30 hover:text-accent transition-colors"
+                href={`/calibers/${c.slug}`}
+                class="flex items-center justify-between rounded-lg border border-surface-border px-3 py-2 font-mono text-sm text-text-secondary hover:border-accent/30 hover:text-accent transition-colors"
               >
                 <span>{c.name}</span>
                 <span class="text-text-muted text-xs">{c.year}</span>

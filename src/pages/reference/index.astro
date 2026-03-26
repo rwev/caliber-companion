@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const sections = [
+  {
+    title: 'Data & Rankings',
+    items: [
+      {
+        title: 'Recoil Ranking',
+        description: 'All calibers ranked by free recoil energy, color-coded from mild to punishing.',
+        href: '/reference/recoil-ranking',
+        icon: 'M13 10V3L4 14h7v7l9-11h-7z',
+      },
+      {
+        title: 'Terminal Performance',
+        description: 'Gel penetration depth comparisons with FBI 12"–18" standard reference.',
+        href: '/reference/terminal-performance',
+        icon: 'M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11.732a9 9 0 01-6.085-.711l-.108-.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5',
+      },
+      {
+        title: 'Cost Comparison',
+        description: 'Price-per-round dot plot from cheapest to most expensive, with typical price ranges.',
+        href: '/reference/cost-comparison',
+        icon: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+      },
+      {
+        title: 'Use Case Heatmap',
+        description: 'Interactive matrix scoring every caliber across 10 use-case categories.',
+        href: '/reference/use-cases',
+        icon: 'M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z',
+      },
+    ],
+  },
+  {
+    title: 'Databases',
+    items: [
+      {
+        title: 'Firearms Database',
+        description: '100+ iconic firearms with specs, manufacturers, and chambered calibers.',
+        href: '/reference/firearms',
+        icon: 'M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5',
+      },
+      {
+        title: 'Cartridge Family Tree',
+        description: 'Interactive visualization of parent-child cartridge lineage across 31 families.',
+        href: '/reference/family-tree',
+        icon: 'M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21',
+      },
+      {
+        title: 'Reloading Reference',
+        description: 'Primer types, SAAMI pressures, powder charge ranges, and bullet weight data.',
+        href: '/reference/reloading',
+        icon: 'M11.42 15.17l-5.648-3.064a.75.75 0 01-.229-1.015l4.217-6.278a.75.75 0 011.259 0l4.217 6.278a.75.75 0 01-.229 1.015L9.42 15.17a.75.75 0 01-1 0z',
+      },
+    ],
+  },
+  {
+    title: 'Knowledge',
+    items: [
+      {
+        title: 'Glossary',
+        description: '70+ technical terms across ballistics, bullet types, cartridge anatomy, and more.',
+        href: '/reference/glossary',
+        icon: 'M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25',
+      },
+      {
+        title: 'Timeline',
+        description: '200+ years of cartridge development from black powder to modern precision.',
+        href: '/reference/timeline',
+        icon: 'M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z',
+      },
+      {
+        title: 'Myths Debunked',
+        description: '7 common caliber myths tested against real-world data and ballistic evidence.',
+        href: '/reference/myths',
+        icon: 'M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z',
+      },
+      {
+        title: 'NATO Equivalents',
+        description: 'Military STANAG designations mapped to civilian cartridge equivalents.',
+        href: '/reference/nato-equivalents',
+        icon: 'M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418',
+      },
+      {
+        title: 'Hunting Regulations',
+        description: 'State-by-state minimum caliber requirements, straight-wall rules, and shotgun zones.',
+        href: '/reference/hunting-regulations',
+        icon: 'M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z',
+      },
+    ],
+  },
+];
+---
+
+<BaseLayout breadcrumbs={[{ label: 'Reference' }]} title="Reference" description="Technical reference data for firearms calibers — glossary, timeline, rankings, databases, and regulations.">
+  <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
+    <div class="mb-10">
+      <h1 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+        Reference
+      </h1>
+      <p class="mt-2 text-base text-text-muted">
+        Technical data, rankings, databases, and encyclopedic reference
+      </p>
+    </div>
+
+    {sections.map(section => (
+      <div class="mb-10">
+        <h2 class="mb-4 text-xs font-semibold uppercase tracking-wide text-text-muted">
+          {section.title}
+        </h2>
+        <div class="grid gap-4 sm:grid-cols-2">
+          {section.items.map(item => (
+            <a
+              href={item.href}
+              class="group rounded-lg border border-surface-border bg-surface p-6 transition-all hover:border-accent/40 hover:bg-surface-raised hover:shadow-md"
+            >
+              <div class="flex items-start gap-4">
+                <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-accent/30 bg-accent/10 text-accent">
+                  <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d={item.icon} />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-text-primary group-hover:text-accent transition-colors">
+                    {item.title}
+                  </h3>
+                  <p class="mt-1 text-sm text-text-muted">{item.description}</p>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</BaseLayout>

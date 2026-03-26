@@ -15,18 +15,18 @@ const hasLineage = parent || children.length > 0;
 ---
 
 {hasLineage && (
-  <div class="border border-surface-border">
-    <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
-      <h3 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">Cartridge Lineage</h3>
+  <div class="rounded-lg border border-surface-border">
+    <div class="rounded-t-lg border-b border-surface-border bg-surface-overlay px-4 py-2.5">
+      <h3 class="text-sm font-semibold text-text-muted">Cartridge Lineage</h3>
     </div>
     <div class="px-4 py-4 space-y-3">
       {/* Parent */}
       {parent && (
         <div class="flex items-center gap-2">
-          <span class="font-mono text-sm uppercase tracking-wider text-text-muted flex-shrink-0">Parent</span>
+          <span class="text-xs font-medium uppercase tracking-wide text-text-muted flex-shrink-0">Parent</span>
           <span class="text-text-muted" aria-hidden="true">→</span>
           <a
-            href={`/caliber-companion/calibers/${parent.slug}`}
+            href={`/calibers/${parent.slug}`}
             class="font-mono text-base text-accent hover:underline"
           >
             {parent.name}
@@ -45,12 +45,12 @@ const hasLineage = parent || children.length > 0;
       {/* Children */}
       {children.length > 0 && (
         <div class="space-y-1.5 ml-3 border-l border-surface-border pl-3">
-          <span class="font-mono text-sm uppercase tracking-wider text-text-muted">Derived</span>
+          <span class="text-xs font-medium uppercase tracking-wide text-text-muted">Derived</span>
           {children.map((child) => (
             <div class="flex items-center gap-2">
               <span class="text-text-muted" aria-hidden="true">↳</span>
               <a
-                href={`/caliber-companion/calibers/${child.slug}`}
+                href={`/calibers/${child.slug}`}
                 class="font-mono text-base text-accent hover:underline"
               >
                 {child.name}

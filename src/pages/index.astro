@@ -32,24 +32,17 @@ const caliberIndex = calibers.map(c => ({
 <BaseLayout title="Home">
   <!-- Hero -->
   <section class="relative overflow-hidden">
-    <!-- Background grid pattern -->
-    <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(var(--color-accent) 1px, transparent 1px), linear-gradient(90deg, var(--color-accent) 1px, transparent 1px); background-size: 40px 40px;"></div>
-
-    <!-- Diagonal accent line -->
-    <div class="absolute -right-20 top-0 h-full w-px origin-top-right rotate-12 bg-gradient-to-b from-transparent via-accent/20 to-transparent"></div>
-
     <div class="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:py-40">
       <div class="max-w-3xl">
         <!-- Category count tag -->
-        <div class="mb-6 inline-flex items-center gap-2 border border-surface-border bg-surface-raised px-3 py-1">
-          <div class="h-1.5 w-1.5 rounded-full bg-accent animate-pulse"></div>
-          <span class="font-mono text-sm tracking-widest uppercase text-text-muted">
+        <div class="mb-6 inline-flex items-center gap-2 rounded-full bg-accent/10 px-3 py-1">
+          <span class="text-sm font-medium text-accent">
             {calibers.length} Calibers · {categories.length} Categories
           </span>
         </div>
 
         <!-- Title -->
-        <h1 class="font-display text-5xl font-bold tracking-tight text-text-primary sm:text-6xl lg:text-7xl">
+        <h1 class="text-5xl font-bold tracking-tight text-text-primary sm:text-6xl lg:text-7xl">
           <span class="block">Caliber</span>
           <span class="block text-accent">Companion</span>
         </h1>
@@ -64,8 +57,8 @@ const caliberIndex = calibers.map(c => ({
         <!-- CTA Buttons -->
         <div class="mt-10 flex flex-wrap gap-3">
           <a
-            href="/caliber-companion/browse"
-            class="group inline-flex items-center gap-2 border border-accent bg-accent/10 px-6 py-3 font-mono text-base tracking-wider uppercase text-accent transition-all hover:bg-accent/20 hover:shadow-[0_0_20px_rgba(224,90,43,0.15)]"
+            href="/calibers"
+            class="group inline-flex items-center gap-2 rounded-md bg-accent px-5 py-2.5 text-base font-semibold text-white shadow-sm transition-all hover:bg-accent-bright"
           >
             <span>Browse Calibers</span>
             <svg class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -73,8 +66,8 @@ const caliberIndex = calibers.map(c => ({
             </svg>
           </a>
           <a
-            href="/caliber-companion/compare"
-            class="inline-flex items-center gap-2 border border-surface-border px-6 py-3 font-mono text-base tracking-wider uppercase text-text-secondary transition-all hover:border-text-muted hover:text-text-primary"
+            href="/compare"
+            class="inline-flex items-center gap-2 rounded-md border border-surface-border px-5 py-2.5 text-base font-semibold text-text-secondary transition-all hover:border-accent/40 hover:text-text-primary"
           >
             <span>Compare</span>
           </a>
@@ -94,8 +87,8 @@ const caliberIndex = calibers.map(c => ({
           { value: 'Side×Side', label: 'Comparison Tool' },
         ].map(stat => (
           <div class="px-4 py-6 text-center sm:px-6 sm:py-8">
-            <div class="font-display text-2xl font-bold text-accent sm:text-3xl">{stat.value}</div>
-            <div class="mt-1 font-mono text-base tracking-widest uppercase text-text-muted">{stat.label}</div>
+            <div class="text-2xl font-bold text-accent sm:text-3xl">{stat.value}</div>
+            <div class="mt-1 text-sm font-medium text-text-muted">{stat.label}</div>
           </div>
         ))}
       </div>
@@ -103,54 +96,54 @@ const caliberIndex = calibers.map(c => ({
   </section>
 
   <!-- Recently Viewed (client-side, renders only if user has history) -->
-  <RecentlyViewed client:idle allCalibers={caliberIndex} basePath="/caliber-companion" />
+  <RecentlyViewed client:idle allCalibers={caliberIndex} basePath="" />
 
   <!-- Saved Calibers (client-side, renders only if user has favorites) -->
-  <FavoritesList client:idle allCalibers={caliberIndex} basePath="/caliber-companion" />
+  <FavoritesList client:idle allCalibers={caliberIndex} basePath="" />
 
   <!-- Featured Calibers Preview -->
   <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
     <div class="mb-8 flex items-center gap-4">
       <div class="h-px flex-1 bg-surface-border" aria-hidden="true"></div>
-      <h2 class="font-display text-base tracking-[0.25em] uppercase text-text-muted">Military Standard Calibers</h2>
+      <h2 class="text-sm font-semibold uppercase tracking-wide text-text-muted">Military Standard Calibers</h2>
       <div class="h-px flex-1 bg-surface-border" aria-hidden="true"></div>
     </div>
 
-    <div class="grid gap-px bg-surface-border sm:grid-cols-2 lg:grid-cols-3">
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {featured.map(caliber => (
         <a
-          href={`/caliber-companion/calibers/${caliber.data.slug}`}
-          class="group bg-surface p-6 transition-colors hover:bg-surface-raised"
+          href={`/calibers/${caliber.data.slug}`}
+          class="group rounded-lg border border-surface-border bg-surface p-6 transition-all hover:border-accent/40 hover:bg-surface-raised hover:shadow-md"
         >
           <div class="flex items-start justify-between">
             <div>
-              <div class="font-display text-xl font-semibold text-text-primary group-hover:text-accent transition-colors">
+              <div class="text-xl font-semibold text-text-primary group-hover:text-accent transition-colors">
                 {caliber.data.name}
               </div>
               <div class="mt-0.5 font-mono text-sm text-text-muted">
                 {caliber.data.designation}
               </div>
             </div>
-            <span class="mt-1 border border-surface-border px-2 py-0.5 font-mono text-sm tracking-wider uppercase text-text-muted">
+            <span class="mt-1 rounded-full bg-surface-overlay px-2.5 py-0.5 text-xs font-medium text-text-muted">
               {caliber.data.category.replace('_', ' ')}
             </span>
           </div>
 
           <div class="mt-4 grid grid-cols-3 gap-3">
             <div>
-              <div class="font-mono text-sm tracking-wider uppercase text-text-muted">Velocity</div>
+              <div class="text-xs font-medium uppercase tracking-wide text-text-muted">Velocity</div>
               <div class="mt-0.5 font-mono text-base text-text-secondary">
                 {caliber.data.typical_velocity_fps[0]}–{caliber.data.typical_velocity_fps[1]} <span class="text-text-muted text-sm">fps</span>
               </div>
             </div>
             <div>
-              <div class="font-mono text-sm tracking-wider uppercase text-text-muted">Energy</div>
+              <div class="text-xs font-medium uppercase tracking-wide text-text-muted">Energy</div>
               <div class="mt-0.5 font-mono text-base text-text-secondary">
                 {caliber.data.typical_energy_ft_lbs[0]}–{caliber.data.typical_energy_ft_lbs[1]} <span class="text-text-muted text-sm">ft·lbs</span>
               </div>
             </div>
             <div>
-              <div class="font-mono text-sm tracking-wider uppercase text-text-muted">Range</div>
+              <div class="text-xs font-medium uppercase tracking-wide text-text-muted">Range</div>
               <div class="mt-0.5 font-mono text-base text-text-secondary">
                 {caliber.data.effective_range_yd} <span class="text-text-muted text-sm">yd</span>
               </div>
@@ -162,54 +155,101 @@ const caliberIndex = calibers.map(c => ({
 
     <div class="mt-8 text-center">
       <a
-        href="/caliber-companion/browse"
-        class="font-mono text-base tracking-wider uppercase text-text-muted transition-colors hover:text-accent"
+        href="/calibers"
+        class="text-sm font-medium text-text-muted transition-colors hover:text-accent"
       >
         View all calibers →
       </a>
     </div>
   </section>
 
-  <!-- Explore the Site -->
+  <!-- Explore by Section -->
   <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16">
     <div class="mb-8 flex items-center gap-4">
       <div class="h-px flex-1 bg-surface-border" aria-hidden="true"></div>
-      <h2 class="font-display text-base tracking-[0.25em] uppercase text-text-muted">Explore</h2>
+      <h2 class="text-sm font-semibold uppercase tracking-wide text-text-muted">Explore</h2>
       <div class="h-px flex-1 bg-surface-border" aria-hidden="true"></div>
     </div>
 
-    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {[
-        { href: '/caliber-companion/tools', label: 'Interactive Tools', desc: '10 calculators & generators' },
-        { href: '/caliber-companion/ammo', label: 'Ammo Finder', desc: 'Search all load profiles' },
-        { href: '/caliber-companion/firearms', label: 'Firearms Database', desc: '100 iconic firearms' },
-        { href: '/caliber-companion/guides', label: 'Buying Guides', desc: '13 use-case guides' },
-        { href: '/caliber-companion/family-tree', label: 'Cartridge Lineage', desc: 'Parent-child relationships' },
-        { href: '/caliber-companion/timeline', label: 'Timeline', desc: '200+ years of calibers' },
-        { href: '/caliber-companion/compare', label: 'Side-by-Side', desc: 'Compare any calibers' },
-        { href: '/caliber-companion/cost-comparison', label: 'Cost Comparison', desc: 'Price per round ranking' },
-        { href: '/caliber-companion/recoil-ranking', label: 'Recoil Ranking', desc: 'Softest to hardest' },
-        { href: '/caliber-companion/use-cases', label: 'Use Case Heatmap', desc: 'Caliber × purpose matrix' },
-        { href: '/caliber-companion/terminal-performance', label: 'Terminal Performance', desc: 'Gel penetration data' },
-        { href: '/caliber-companion/myths', label: 'Myths Debunked', desc: '7 common myths vs data' },
-        { href: '/caliber-companion/nato-equivalents', label: 'NATO Equivalents', desc: 'Military ↔ civilian' },
-        { href: '/caliber-companion/reloading', label: 'Reloading Reference', desc: 'Primers, pressure, powder' },
-        { href: '/caliber-companion/best-deer-calibers', label: 'Best for Deer', desc: 'Hunting recommendations' },
-        { href: '/caliber-companion/best-elk-calibers', label: 'Best for Elk', desc: 'Elk-specific calibers' },
-        { href: '/caliber-companion/best-self-defense-calibers', label: 'Self-Defense', desc: 'CCW & duty calibers' },
-        { href: '/caliber-companion/best-long-range-calibers', label: 'Long-Range', desc: 'Precision shooting' },
-        { href: '/caliber-companion/best-home-defense-calibers', label: 'Home Defense', desc: 'Handgun/rifle/shotgun' },
-        { href: '/caliber-companion/best-calibers-for-beginners', label: 'For Beginners', desc: 'First gun guide' },
-        { href: '/caliber-companion/hunting-regulations', label: 'Hunting Regs', desc: 'State caliber rules' },
-        { href: '/caliber-companion/about', label: 'About / Stats', desc: 'Site features & data' },
-        { href: '/caliber-companion/glossary', label: 'Glossary', desc: '70+ technical terms' },
-      ].map(link => (
+        {
+          href: '/calibers',
+          title: 'Calibers',
+          desc: `Browse and research ${calibers.length} calibers with detailed ballistic data, specs, and ${calibers.reduce((s, c) => s + c.data.loads.length, 0)} load profiles.`,
+          icon: 'M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z',
+          links: [
+            { href: '/calibers', label: 'Browse All' },
+            { href: '/calibers/ammo', label: 'Ammo Finder' },
+          ],
+        },
+        {
+          href: '/compare',
+          title: 'Compare',
+          desc: 'Side-by-side caliber comparisons with 48 pre-built head-to-head matchups and a custom comparison tool.',
+          icon: 'M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5',
+          links: [
+            { href: '/compare', label: 'Compare Tool' },
+          ],
+        },
+        {
+          href: '/tools',
+          title: 'Tools',
+          desc: '9 interactive calculators for ballistics, recoil, ammo cost, range cards, and more.',
+          icon: 'M11.42 15.17l-5.648-3.064a.64.64 0 01-.229-1.015l4.217-6.278a.75.75 0 011.259 0l4.217 6.278a.75.75 0 01-.229 1.015L9.42 15.17z',
+          links: [
+            { href: '/tools/ballistics-calculator', label: 'Ballistics Calc' },
+            { href: '/tools/recoil-calculator', label: 'Recoil Calc' },
+            { href: '/tools', label: 'All Tools' },
+          ],
+        },
+        {
+          href: '/guides',
+          title: 'Guides',
+          desc: 'Expert caliber recommendations for hunting, self-defense, home defense, long-range, and beginners.',
+          icon: 'M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25',
+          links: [
+            { href: '/guides/best-deer-calibers', label: 'Best for Deer' },
+            { href: '/guides/best-self-defense-calibers', label: 'Self-Defense' },
+            { href: '/guides/quiz', label: 'Find Your Caliber' },
+            { href: '/guides', label: 'All Guides' },
+          ],
+        },
+        {
+          href: '/reference',
+          title: 'Reference',
+          desc: 'Glossary, timeline, firearms database, NATO equivalents, reloading data, hunting regulations, and more.',
+          icon: 'M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125',
+          links: [
+            { href: '/reference/glossary', label: 'Glossary' },
+            { href: '/reference/timeline', label: 'Timeline' },
+            { href: '/reference/firearms', label: 'Firearms' },
+            { href: '/reference', label: 'All Reference' },
+          ],
+        },
+      ].map(section => (
         <a
-          href={link.href}
-          class="group border border-surface-border bg-surface p-3 transition-colors hover:border-accent/40 hover:bg-surface-raised"
+          href={section.href}
+          class="group rounded-lg border border-surface-border bg-surface p-6 transition-all hover:border-accent/40 hover:bg-surface-raised hover:shadow-md"
         >
-          <div class="font-mono text-sm font-medium text-text-primary group-hover:text-accent transition-colors">{link.label}</div>
-          <div class="mt-0.5 font-mono text-xs text-text-muted">{link.desc}</div>
+          <div class="flex items-start gap-4">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-accent/30 bg-accent/10 text-accent">
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d={section.icon} />
+              </svg>
+            </div>
+            <div class="min-w-0">
+              <h3 class="text-xl font-semibold text-text-primary group-hover:text-accent transition-colors">
+                {section.title}
+              </h3>
+              <p class="mt-1 text-sm text-text-muted leading-relaxed">{section.desc}</p>
+              <div class="mt-3 flex flex-wrap gap-x-3 gap-y-1">
+                {section.links.map(link => (
+                  <span class="text-xs font-medium text-accent">{link.label}</span>
+                ))}
+              </div>
+            </div>
+          </div>
         </a>
       ))}
     </div>
@@ -222,9 +262,9 @@ const caliberIndex = calibers.map(c => ({
         <svg class="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
         </svg>
-        <h2 class="font-display text-base tracking-[0.25em] uppercase text-text-muted">Stay Updated</h2>
+        <h2 class="text-sm font-semibold uppercase tracking-wide text-text-muted">Stay Updated</h2>
       </div>
-      <p class="mb-6 font-mono text-sm text-text-muted">
+      <p class="mb-6 text-sm text-text-muted">
         New caliber data, tool updates, and guides — no spam, unsubscribe anytime.
       </p>
       <NewsletterSignup client:idle />

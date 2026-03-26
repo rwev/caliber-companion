@@ -2,26 +2,26 @@
   "name": "Caliber Companion",
   "short_name": "CalComp",
   "description": "Research, compare, and understand firearm calibers. Detailed ballistic data, cartridge specifications, and side-by-side comparison tools.",
-  "start_url": "/caliber-companion/",
-  "scope": "/caliber-companion/",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#111111",
-  "theme_color": "#eb6b34",
+  "background_color": "#ffffff",
+  "theme_color": "#0d7c66",
   "orientation": "any",
   "categories": ["reference", "education"],
   "icons": [
     {
-      "src": "/caliber-companion/icon-192.svg",
+      "src": "/icon-192.svg",
       "sizes": "192x192",
       "type": "image/svg+xml"
     },
     {
-      "src": "/caliber-companion/icon-192.svg",
+      "src": "/icon-192.svg",
       "sizes": "512x512",
       "type": "image/svg+xml"
     },
     {
-      "src": "/caliber-companion/icon-192.svg",
+      "src": "/icon-192.svg",
       "sizes": "512x512",
       "type": "image/svg+xml",
       "purpose": "maskable"

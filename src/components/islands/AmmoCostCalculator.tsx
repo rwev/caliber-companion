@@ -73,8 +73,8 @@ export default function AmmoCostCalculator({ calibers }: Props) {
   return (
     <div class="space-y-6">
       {/* Trips per month */}
-      <div class="border border-surface-border p-4">
-        <label class="block font-mono text-sm tracking-wider uppercase text-text-muted mb-2">
+      <div class="rounded-lg border border-surface-border p-4">
+        <label class="block text-xs font-medium uppercase tracking-wide text-text-muted mb-2">
           Range Trips per Month
         </label>
         <div class="flex items-center gap-3">
@@ -95,7 +95,7 @@ export default function AmmoCostCalculator({ calibers }: Props) {
         <select
           value={addSlug}
           onChange={e => setAddSlug((e.target as HTMLSelectElement).value)}
-          class="flex-1 border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary"
+          class="flex-1 rounded-md border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary"
         >
           <option value="">Select a caliber to add...</option>
           {available.map(c => (
@@ -107,7 +107,7 @@ export default function AmmoCostCalculator({ calibers }: Props) {
         <button
           onClick={addCaliber}
           disabled={!addSlug}
-          class="border border-accent bg-accent/10 px-4 py-2 font-mono text-sm tracking-wider uppercase text-accent transition-colors hover:bg-accent/20 disabled:opacity-40 disabled:cursor-not-allowed"
+          class="rounded-md border border-accent bg-accent/10 px-4 py-2 text-sm font-medium text-accent transition-colors hover:bg-accent/20 disabled:opacity-40 disabled:cursor-not-allowed"
         >
           Add
         </button>
@@ -115,9 +115,9 @@ export default function AmmoCostCalculator({ calibers }: Props) {
 
       {/* Selected calibers table */}
       {selected.length > 0 && (
-        <div class="border border-surface-border">
+        <div class="rounded-lg border border-surface-border">
           <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
-            <h3 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">Your Calibers</h3>
+            <h3 class="text-base font-medium text-text-muted">Your Calibers</h3>
           </div>
 
           <div class="divide-y divide-surface-border-subtle">
@@ -140,7 +140,7 @@ export default function AmmoCostCalculator({ calibers }: Props) {
 
                   <div class="grid grid-cols-2 gap-3">
                     <div>
-                      <label class="block font-mono text-xs tracking-wider uppercase text-text-muted mb-1">
+                      <label class="block text-xs font-medium uppercase tracking-wide text-text-muted mb-1">
                         Rounds / Trip
                       </label>
                       <input
@@ -151,11 +151,11 @@ export default function AmmoCostCalculator({ calibers }: Props) {
                         onInput={e =>
                           updateField(r.slug, 'roundsPerTrip', Math.max(1, +(e.target as HTMLInputElement).value || 1))
                         }
-                        class="w-full border border-surface-border bg-surface-raised px-3 py-1.5 font-mono text-sm text-text-primary"
+                        class="w-full rounded-md border border-surface-border bg-surface-raised px-3 py-1.5 font-mono text-sm text-text-primary"
                       />
                     </div>
                     <div>
-                      <label class="block font-mono text-xs tracking-wider uppercase text-text-muted mb-1">
+                      <label class="block text-xs font-medium uppercase tracking-wide text-text-muted mb-1">
                         Cost / Round ($)
                       </label>
                       <input
@@ -167,7 +167,7 @@ export default function AmmoCostCalculator({ calibers }: Props) {
                         onInput={e =>
                           updateField(r.slug, 'costPerRound', Math.max(0.01, +(e.target as HTMLInputElement).value || 0.01))
                         }
-                        class="w-full border border-surface-border bg-surface-raised px-3 py-1.5 font-mono text-sm text-text-primary"
+                        class="w-full rounded-md border border-surface-border bg-surface-raised px-3 py-1.5 font-mono text-sm text-text-primary"
                       />
                       <div class="mt-0.5 font-mono text-xs text-text-muted">
                         Range: ${cal.costLow.toFixed(2)}–${cal.costHigh.toFixed(2)}
@@ -196,26 +196,26 @@ export default function AmmoCostCalculator({ calibers }: Props) {
 
       {/* Totals */}
       {selected.length > 0 && (
-        <div class="border border-accent/30 bg-accent/5 p-4">
+        <div class="rounded-lg border border-accent/30 bg-accent/5 p-4">
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
             <div>
-              <div class="font-mono text-xs tracking-wider uppercase text-text-muted">Monthly Rounds</div>
+              <div class="text-xs font-medium uppercase tracking-wide text-text-muted">Monthly Rounds</div>
               <div class="mt-1 font-mono text-xl font-bold text-text-primary">
                 {results.reduce((s, r) => s + r.monthlyRounds, 0).toLocaleString()}
               </div>
             </div>
             <div>
-              <div class="font-mono text-xs tracking-wider uppercase text-text-muted">Annual Rounds</div>
+              <div class="text-xs font-medium uppercase tracking-wide text-text-muted">Annual Rounds</div>
               <div class="mt-1 font-mono text-xl font-bold text-text-primary">
                 {(results.reduce((s, r) => s + r.monthlyRounds, 0) * 12).toLocaleString()}
               </div>
             </div>
             <div>
-              <div class="font-mono text-xs tracking-wider uppercase text-text-muted">Monthly Cost</div>
+              <div class="text-xs font-medium uppercase tracking-wide text-text-muted">Monthly Cost</div>
               <div class="mt-1 font-mono text-xl font-bold text-accent">${fmt(totalMonthly)}</div>
             </div>
             <div>
-              <div class="font-mono text-xs tracking-wider uppercase text-text-muted">Annual Cost</div>
+              <div class="text-xs font-medium uppercase tracking-wide text-text-muted">Annual Cost</div>
               <div class="mt-1 font-mono text-xl font-bold text-accent">${fmt(totalAnnual)}</div>
             </div>
           </div>
@@ -224,26 +224,26 @@ export default function AmmoCostCalculator({ calibers }: Props) {
 
       {/* Empty state */}
       {selected.length === 0 && (
-        <div class="border border-dashed border-surface-border p-8 text-center">
-          <p class="font-mono text-sm text-text-muted">
+        <div class="rounded-lg border border-dashed border-surface-border p-8 text-center">
+          <p class="text-sm text-text-muted">
             Select calibers above to calculate your ammunition costs.
           </p>
         </div>
       )}
 
       {/* Cost reference table */}
-      <div class="border border-surface-border">
+      <div class="rounded-lg border border-surface-border">
         <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
-          <h3 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">Cost Reference — All Calibers</h3>
+          <h3 class="text-base font-medium text-text-muted">Cost Reference — All Calibers</h3>
         </div>
         <div class="overflow-x-auto" tabindex={0} role="region" aria-label="Cost per round reference table">
           <table class="w-full text-left font-mono">
             <thead>
               <tr class="border-b border-surface-border-subtle bg-surface-overlay text-text-muted">
-                <th scope="col" class="px-4 py-2 font-medium tracking-wider uppercase text-sm">Caliber</th>
-                <th scope="col" class="px-4 py-2 font-medium tracking-wider uppercase text-sm text-right">Low</th>
-                <th scope="col" class="px-4 py-2 font-medium tracking-wider uppercase text-sm text-right">High</th>
-                <th scope="col" class="px-4 py-2 font-medium tracking-wider uppercase text-sm text-right">50 rds/trip, 2x/mo</th>
+                <th scope="col" class="px-4 py-2 text-xs font-medium uppercase tracking-wide">Caliber</th>
+                <th scope="col" class="px-4 py-2 text-xs font-medium uppercase tracking-wide text-right">Low</th>
+                <th scope="col" class="px-4 py-2 text-xs font-medium uppercase tracking-wide text-right">High</th>
+                <th scope="col" class="px-4 py-2 text-xs font-medium uppercase tracking-wide text-right">50 rds/trip, 2x/mo</th>
               </tr>
             </thead>
             <tbody>

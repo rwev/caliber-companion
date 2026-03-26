@@ -99,13 +99,13 @@ export default function ReloadingReference({ calibers, basePath }: Props) {
             value={search}
             onInput={e => setSearch((e.target as HTMLInputElement).value)}
             placeholder="Search calibers..."
-            class="w-full border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary placeholder:text-text-muted/50"
+            class="w-full border border-surface-border bg-surface-raised px-3 py-2 rounded-md font-mono text-sm text-text-primary placeholder:text-text-muted/50"
           />
         </div>
         <select
           value={filterPrimer}
           onChange={e => setFilterPrimer((e.target as HTMLSelectElement).value)}
-          class="border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary"
+          class="border border-surface-border bg-surface-raised px-3 py-2 rounded-md font-mono text-sm text-text-primary"
         >
           <option value="all">All Primers ({calibers.filter(c => c.primerType).length})</option>
           {primerTypes.map(([type, count]) => (
@@ -114,51 +114,51 @@ export default function ReloadingReference({ calibers, basePath }: Props) {
         </select>
       </div>
 
-      <p class="font-mono text-xs text-text-muted">
+      <p class="text-xs text-text-muted">
         {filtered.length} calibers shown · Click column headers to sort
       </p>
 
       {/* Table */}
-      <div class="border border-surface-border overflow-x-auto" tabindex={0} role="region" aria-label="Reloading reference data">
+      <div class="border border-surface-border rounded-lg overflow-x-auto" tabindex={0} role="region" aria-label="Reloading reference data">
         <table class="w-full text-left font-mono">
           <thead>
             <tr class="border-b border-surface-border bg-surface-overlay text-text-muted">
               <th
                 scope="col"
-                class="px-3 py-2 font-medium tracking-wider uppercase text-xs cursor-pointer hover:text-accent sticky left-0 bg-surface-overlay z-10"
+                class="px-3 py-2 text-xs font-medium uppercase tracking-wide cursor-pointer hover:text-accent sticky left-0 bg-surface-overlay z-10"
                 onClick={() => toggleSort('name')}
               >
                 Caliber{sortArrow('name')}
               </th>
               <th
                 scope="col"
-                class="px-3 py-2 font-medium tracking-wider uppercase text-xs cursor-pointer hover:text-accent"
+                class="px-3 py-2 text-xs font-medium uppercase tracking-wide cursor-pointer hover:text-accent"
                 onClick={() => toggleSort('bulletDia')}
               >
                 Bullet Ø{sortArrow('bulletDia')}
               </th>
               <th
                 scope="col"
-                class="px-3 py-2 font-medium tracking-wider uppercase text-xs cursor-pointer hover:text-accent"
+                class="px-3 py-2 text-xs font-medium uppercase tracking-wide cursor-pointer hover:text-accent"
                 onClick={() => toggleSort('primerType')}
               >
                 Primer{sortArrow('primerType')}
               </th>
               <th
                 scope="col"
-                class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right cursor-pointer hover:text-accent"
+                class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-right cursor-pointer hover:text-accent"
                 onClick={() => toggleSort('maxPressure')}
               >
                 SAAMI Max{sortArrow('maxPressure')}
               </th>
               <th
                 scope="col"
-                class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right cursor-pointer hover:text-accent"
+                class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-right cursor-pointer hover:text-accent"
                 onClick={() => toggleSort('powderMid')}
               >
                 Powder Charge{sortArrow('powderMid')}
               </th>
-              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">
+              <th scope="col" class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-right">
                 Bullet Wt
               </th>
             </tr>
@@ -192,9 +192,9 @@ export default function ReloadingReference({ calibers, basePath }: Props) {
       </div>
 
       {/* Safety disclaimer */}
-      <div class="border border-danger/30 bg-danger/5 p-3">
-        <p class="font-mono text-xs text-text-secondary leading-relaxed">
-          <span class="font-medium text-danger uppercase tracking-wider">Caution:</span> This data is for reference only.
+      <div class="border border-danger/30 bg-danger/5 p-3 rounded-lg">
+        <p class="text-xs text-text-secondary leading-relaxed">
+          <span class="font-medium text-danger uppercase tracking-wide">Caution:</span> This data is for reference only.
           Always consult a current reloading manual from a reputable source (Hodgdon, Sierra, Nosler, Hornady) before
           developing loads. Start at minimum published charges and work up carefully. Never exceed SAAMI maximum pressure.
         </p>

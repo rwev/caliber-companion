@@ -72,22 +72,22 @@ export default function RangeDayPlanner({ calibers }: Props) {
       {/* Header inputs */}
       <div class="grid gap-3 sm:grid-cols-2">
         <div>
-          <label class="block font-mono text-xs tracking-wider uppercase text-text-muted mb-1">Range / Location</label>
+          <label class="block text-xs font-medium uppercase tracking-wide text-text-muted mb-1">Range / Location</label>
           <input
             type="text"
             value={rangeName}
             onInput={e => setRangeName((e.target as HTMLInputElement).value)}
             placeholder="e.g., Blue Ridge Shooting Range"
-            class="w-full border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary placeholder:text-text-muted/50"
+            class="w-full rounded-md border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary placeholder:text-text-muted/50"
           />
         </div>
         <div>
-          <label class="block font-mono text-xs tracking-wider uppercase text-text-muted mb-1">Date</label>
+          <label class="block text-xs font-medium uppercase tracking-wide text-text-muted mb-1">Date</label>
           <input
             type="date"
             value={rangeDate}
             onInput={e => setRangeDate((e.target as HTMLInputElement).value)}
-            class="w-full border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary"
+            class="w-full rounded-md border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary"
           />
         </div>
       </div>
@@ -95,11 +95,11 @@ export default function RangeDayPlanner({ calibers }: Props) {
       {/* Add caliber */}
       <div class="flex flex-wrap gap-2 items-end">
         <div class="flex-1 min-w-[180px]">
-          <label class="block font-mono text-xs tracking-wider uppercase text-text-muted mb-1">Add Caliber</label>
+          <label class="block text-xs font-medium uppercase tracking-wide text-text-muted mb-1">Add Caliber</label>
           <select
             value={addSlug}
             onChange={e => { setAddSlug((e.target as HTMLSelectElement).value); setAddLoadIdx(0); }}
-            class="w-full border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary"
+            class="w-full rounded-md border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary"
           >
             <option value="">Select caliber...</option>
             {calibers.map(c => (
@@ -109,11 +109,11 @@ export default function RangeDayPlanner({ calibers }: Props) {
         </div>
         {addCaliber && (
           <div class="flex-1 min-w-[180px]">
-            <label class="block font-mono text-xs tracking-wider uppercase text-text-muted mb-1">Load</label>
+            <label class="block text-xs font-medium uppercase tracking-wide text-text-muted mb-1">Load</label>
             <select
               value={addLoadIdx}
               onChange={e => setAddLoadIdx(+(e.target as HTMLSelectElement).value)}
-              class="w-full border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary"
+              class="w-full rounded-md border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-primary"
             >
               {addCaliber.loads.map((l, i) => (
                 <option key={i} value={i}>{l.bullet_weight_gr}gr {l.bullet_type}</option>
@@ -124,7 +124,7 @@ export default function RangeDayPlanner({ calibers }: Props) {
         <button
           onClick={handleAdd}
           disabled={!addSlug}
-          class="border border-accent bg-accent/10 px-4 py-2 font-mono text-sm tracking-wider uppercase text-accent transition-colors hover:bg-accent/20 disabled:opacity-40 disabled:cursor-not-allowed"
+          class="rounded-md border border-accent bg-accent/10 px-4 py-2 text-sm font-medium text-accent transition-colors hover:bg-accent/20 disabled:opacity-40 disabled:cursor-not-allowed"
         >
           Add
         </button>
@@ -132,12 +132,12 @@ export default function RangeDayPlanner({ calibers }: Props) {
 
       {selected.length > 0 && (
         <div class="flex items-center justify-between">
-          <p class="font-mono text-xs text-text-muted">
+          <p class="text-xs text-text-muted">
             {selected.length} caliber{selected.length !== 1 ? 's' : ''} · {totalRounds.toLocaleString()} total rounds
           </p>
           <button
             onClick={() => window.print()}
-            class="border border-accent bg-accent/10 px-4 py-2 font-mono text-sm tracking-wider uppercase text-accent transition-colors hover:bg-accent/20"
+            class="rounded-md border border-accent bg-accent/10 px-4 py-2 text-sm font-medium text-accent transition-colors hover:bg-accent/20"
           >
             Print Cheat Sheet
           </button>
@@ -148,9 +148,9 @@ export default function RangeDayPlanner({ calibers }: Props) {
       {selected.length > 0 ? (
         <div class="range-card space-y-4">
           {/* Sheet header */}
-          <div class="border border-surface-border bg-surface-overlay px-4 py-3 flex items-start justify-between">
+          <div class="rounded-lg border border-surface-border bg-surface-overlay px-4 py-3 flex items-start justify-between">
             <div>
-              <div class="font-display text-xl font-bold text-text-primary">Range Day Cheat Sheet</div>
+              <div class="text-xl font-bold text-text-primary">Range Day Cheat Sheet</div>
               <div class="font-mono text-sm text-text-muted">
                 {rangeName && <span>{rangeName} · </span>}
                 {rangeDate && <span>{rangeDate} · </span>}
@@ -170,10 +170,10 @@ export default function RangeDayPlanner({ calibers }: Props) {
             if (!load) return null;
 
             return (
-              <div key={idx} class="border border-surface-border">
+              <div key={idx} class="rounded-lg border border-surface-border">
                 <div class="flex items-center justify-between bg-surface-overlay px-3 py-2 border-b border-surface-border">
                   <div>
-                    <span class="font-display text-base font-semibold text-text-primary">{cal.name}</span>
+                    <span class="text-base font-semibold text-text-primary">{cal.name}</span>
                     <span class="font-mono text-xs text-text-muted ml-2">{load.bullet_weight_gr}gr {load.bullet_type} · {load.muzzle_velocity_fps} fps</span>
                   </div>
                   <div class="flex items-center gap-2 no-print">
@@ -183,7 +183,7 @@ export default function RangeDayPlanner({ calibers }: Props) {
                       max={999}
                       value={s.rounds}
                       onInput={e => updateItem(idx, 'rounds', Math.max(0, +(e.target as HTMLInputElement).value || 0))}
-                      class="w-16 border border-surface-border bg-surface-raised px-2 py-1 font-mono text-xs text-text-primary text-right"
+                      class="w-16 rounded-md border border-surface-border bg-surface-raised px-2 py-1 font-mono text-xs text-text-primary text-right"
                     />
                     <span class="font-mono text-xs text-text-muted">rds</span>
                     <button onClick={() => handleRemove(idx)} class="ml-2 text-text-muted hover:text-danger transition-colors" aria-label="Remove">
@@ -196,10 +196,10 @@ export default function RangeDayPlanner({ calibers }: Props) {
                 <table class="w-full text-left font-mono">
                   <thead>
                     <tr class="bg-surface-overlay text-text-muted border-b border-surface-border-subtle">
-                      <th class="px-2 py-1 text-xs font-medium tracking-wider uppercase">Dist</th>
-                      <th class="px-2 py-1 text-xs font-medium tracking-wider uppercase text-right">Vel</th>
-                      <th class="px-2 py-1 text-xs font-medium tracking-wider uppercase text-right">Energy</th>
-                      <th class="px-2 py-1 text-xs font-medium tracking-wider uppercase text-right">Drop</th>
+                      <th class="px-2 py-1 text-xs font-medium uppercase tracking-wide">Dist</th>
+                      <th class="px-2 py-1 text-xs font-medium uppercase tracking-wide text-right">Vel</th>
+                      <th class="px-2 py-1 text-xs font-medium uppercase tracking-wide text-right">Energy</th>
+                      <th class="px-2 py-1 text-xs font-medium uppercase tracking-wide text-right">Drop</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -236,8 +236,8 @@ export default function RangeDayPlanner({ calibers }: Props) {
           })}
         </div>
       ) : (
-        <div class="border border-dashed border-surface-border p-8 text-center">
-          <p class="font-mono text-sm text-text-muted">
+        <div class="rounded-lg border border-dashed border-surface-border p-8 text-center">
+          <p class="text-sm text-text-muted">
             Add calibers above to build your range day cheat sheet.
           </p>
         </div>

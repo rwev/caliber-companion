@@ -113,7 +113,7 @@ export default function AmmoFinder({ loads, basePath }: Props) {
             value={search}
             onInput={(e) => setSearch((e.target as HTMLInputElement).value)}
             aria-label="Search ammunition loads"
-            class="w-full border border-surface-border bg-surface-raised py-3 pl-10 pr-4 font-mono text-base text-text-primary placeholder:text-text-muted focus:border-accent/50"
+            class="w-full rounded-md border border-surface-border bg-surface-raised py-3 pl-10 pr-4 text-base text-text-primary placeholder:text-text-muted focus:border-accent/50"
           />
         </div>
 
@@ -123,7 +123,7 @@ export default function AmmoFinder({ loads, basePath }: Props) {
             <button
               onClick={() => setCategoryFilter(null)}
               aria-pressed={!categoryFilter}
-              class={`px-3 py-1.5 font-mono text-sm tracking-wider uppercase transition-colors ${
+              class={`rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
                 !categoryFilter
                   ? 'border border-accent/30 bg-accent/15 text-accent'
                   : 'border border-surface-border text-text-muted hover:text-text-secondary'
@@ -136,7 +136,7 @@ export default function AmmoFinder({ loads, basePath }: Props) {
                 key={cat}
                 onClick={() => setCategoryFilter(categoryFilter === cat ? null : cat)}
                 aria-pressed={categoryFilter === cat}
-                class={`px-3 py-1.5 font-mono text-sm tracking-wider uppercase transition-colors ${
+                class={`rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
                   categoryFilter === cat
                     ? 'border border-accent/30 bg-accent/15 text-accent'
                     : 'border border-surface-border text-text-muted hover:text-text-secondary'
@@ -149,7 +149,7 @@ export default function AmmoFinder({ loads, basePath }: Props) {
 
           {/* Bullet type filter */}
           <div class="flex items-center gap-2">
-            <label for="bullet-type-select" class="font-mono text-sm tracking-wider uppercase text-text-muted">Type</label>
+            <label for="bullet-type-select" class="text-sm font-medium text-text-muted">Type</label>
             <select
               id="bullet-type-select"
               value={bulletTypeFilter ?? ''}
@@ -157,7 +157,7 @@ export default function AmmoFinder({ loads, basePath }: Props) {
                 const val = (e.target as HTMLSelectElement).value;
                 setBulletTypeFilter(val || null);
               }}
-              class="border border-surface-border bg-surface-raised px-2 py-1 font-mono text-sm text-text-secondary focus:border-accent/50"
+              class="rounded-md border border-surface-border bg-surface-raised px-2 py-1 text-sm text-text-secondary focus:border-accent/50"
             >
               <option value="">All Types</option>
               {bulletTypes.map(t => (
@@ -169,45 +169,45 @@ export default function AmmoFinder({ loads, basePath }: Props) {
       </div>
 
       {/* Results count */}
-      <div class="mb-4 font-mono text-sm text-text-muted">
+      <div class="mb-4 text-sm text-text-muted">
         {filtered.length} load{filtered.length !== 1 ? 's' : ''} found
       </div>
 
       {/* Table */}
       {filtered.length === 0 ? (
         <div class="py-12 text-center" role="status">
-          <div class="font-mono text-base text-text-muted">No loads match your search.</div>
+          <div class="text-base text-text-muted">No loads match your search.</div>
         </div>
       ) : (
-        <div class="overflow-x-auto border border-surface-border" tabindex={0} role="region" aria-label="Ammunition loads table">
-          <table class="w-full text-left font-mono">
+        <div class="overflow-x-auto rounded-lg border border-surface-border" tabindex={0} role="region" aria-label="Ammunition loads table">
+          <table class="w-full text-left">
             <thead>
               <tr class="border-b border-surface-border bg-surface-overlay text-text-muted">
-                <th scope="col" class="px-3 py-2.5 font-medium tracking-wider uppercase text-sm cursor-pointer hover:text-accent select-none" onClick={() => handleSort('caliber')}>
+                <th scope="col" class="px-3 py-2.5 text-xs font-medium uppercase tracking-wide cursor-pointer hover:text-accent select-none" onClick={() => handleSort('caliber')}>
                   Caliber{sortIndicator('caliber')}
                 </th>
-                <th scope="col" class="px-3 py-2.5 font-medium tracking-wider uppercase text-sm cursor-pointer hover:text-accent select-none" onClick={() => handleSort('load')}>
+                <th scope="col" class="px-3 py-2.5 text-xs font-medium uppercase tracking-wide cursor-pointer hover:text-accent select-none" onClick={() => handleSort('load')}>
                   Load{sortIndicator('load')}
                 </th>
-                <th scope="col" class="px-3 py-2.5 font-medium tracking-wider uppercase text-sm text-right cursor-pointer hover:text-accent select-none whitespace-nowrap" onClick={() => handleSort('weight')}>
+                <th scope="col" class="px-3 py-2.5 text-xs font-medium uppercase tracking-wide text-right cursor-pointer hover:text-accent select-none whitespace-nowrap" onClick={() => handleSort('weight')}>
                   Weight{sortIndicator('weight')}
                 </th>
-                <th scope="col" class="px-3 py-2.5 font-medium tracking-wider uppercase text-sm text-center select-none whitespace-nowrap">
+                <th scope="col" class="px-3 py-2.5 text-xs font-medium uppercase tracking-wide text-center select-none whitespace-nowrap">
                   Type
                 </th>
-                <th scope="col" class="px-3 py-2.5 font-medium tracking-wider uppercase text-sm text-right cursor-pointer hover:text-accent select-none whitespace-nowrap" onClick={() => handleSort('velocity')}>
+                <th scope="col" class="px-3 py-2.5 text-xs font-medium uppercase tracking-wide text-right cursor-pointer hover:text-accent select-none whitespace-nowrap" onClick={() => handleSort('velocity')}>
                   Velocity{sortIndicator('velocity')}
                 </th>
-                <th scope="col" class="px-3 py-2.5 font-medium tracking-wider uppercase text-sm text-right cursor-pointer hover:text-accent select-none whitespace-nowrap" onClick={() => handleSort('energy')}>
+                <th scope="col" class="px-3 py-2.5 text-xs font-medium uppercase tracking-wide text-right cursor-pointer hover:text-accent select-none whitespace-nowrap" onClick={() => handleSort('energy')}>
                   Energy{sortIndicator('energy')}
                 </th>
-                <th scope="col" class="px-3 py-2.5 font-medium tracking-wider uppercase text-sm text-right cursor-pointer hover:text-accent select-none whitespace-nowrap" onClick={() => handleSort('penetration')}>
+                <th scope="col" class="px-3 py-2.5 text-xs font-medium uppercase tracking-wide text-right cursor-pointer hover:text-accent select-none whitespace-nowrap" onClick={() => handleSort('penetration')}>
                   Gel{sortIndicator('penetration')}
                 </th>
-                <th scope="col" class="px-3 py-2.5 font-medium tracking-wider uppercase text-sm text-right select-none whitespace-nowrap">
+                <th scope="col" class="px-3 py-2.5 text-xs font-medium uppercase tracking-wide text-right select-none whitespace-nowrap">
                   Exp.
                 </th>
-                <th scope="col" class="px-3 py-2.5 font-medium tracking-wider uppercase text-sm text-center select-none whitespace-nowrap">
+                <th scope="col" class="px-3 py-2.5 text-xs font-medium uppercase tracking-wide text-center select-none whitespace-nowrap">
                   Barrel
                 </th>
               </tr>
@@ -223,27 +223,27 @@ export default function AmmoFinder({ loads, basePath }: Props) {
                   <td class="px-3 py-2 text-sm text-text-secondary max-w-[240px] truncate" title={l.loadName}>
                     {l.loadName}
                   </td>
-                  <td class="px-3 py-2 text-sm text-right text-text-primary whitespace-nowrap">
+                  <td class="px-3 py-2 font-mono text-sm text-right text-text-primary whitespace-nowrap">
                     {l.bulletWeight}<span class="text-text-muted text-xs ml-0.5">gr</span>
                   </td>
                   <td class="px-3 py-2 text-sm text-center">
-                    <span class="inline-block border border-surface-border px-1.5 py-0.5 text-xs tracking-wider uppercase text-text-muted">
+                    <span class="inline-block rounded-full bg-surface-overlay px-1.5 py-0.5 text-xs font-medium text-text-muted">
                       {l.bulletType}
                     </span>
                   </td>
-                  <td class="px-3 py-2 text-sm text-right text-text-primary whitespace-nowrap">
+                  <td class="px-3 py-2 font-mono text-sm text-right text-text-primary whitespace-nowrap">
                     {l.muzzleVelocity.toLocaleString()}<span class="text-text-muted text-xs ml-0.5">fps</span>
                   </td>
-                  <td class="px-3 py-2 text-sm text-right text-text-primary whitespace-nowrap">
+                  <td class="px-3 py-2 font-mono text-sm text-right text-text-primary whitespace-nowrap">
                     {l.muzzleEnergy.toLocaleString()}<span class="text-text-muted text-xs ml-0.5">ft·lbs</span>
                   </td>
-                  <td class="px-3 py-2 text-sm text-right text-text-primary whitespace-nowrap">
+                  <td class="px-3 py-2 font-mono text-sm text-right text-text-primary whitespace-nowrap">
                     {l.gelPenetration ? `${l.gelPenetration}"` : <span class="text-text-muted">—</span>}
                   </td>
-                  <td class="px-3 py-2 text-sm text-right text-text-primary whitespace-nowrap">
+                  <td class="px-3 py-2 font-mono text-sm text-right text-text-primary whitespace-nowrap">
                     {l.expansionDiameter ? `${l.expansionDiameter}"` : <span class="text-text-muted">—</span>}
                   </td>
-                  <td class="px-3 py-2 text-sm text-center text-text-muted whitespace-nowrap">
+                  <td class="px-3 py-2 font-mono text-sm text-center text-text-muted whitespace-nowrap">
                     {l.barrelLength}"
                   </td>
                 </tr>

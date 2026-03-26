@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import FilterBar from '../components/islands/FilterBar';
-import CaliberScatterPlot from '../components/islands/CaliberScatterPlot';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FilterBar from '../../components/islands/FilterBar';
+import CaliberScatterPlot from '../../components/islands/CaliberScatterPlot';
 import { getCollection } from 'astro:content';
 
 const calibers = await getCollection('caliberData');
@@ -33,19 +33,19 @@ const scatterPoints = calibers.map(c => ({
 }));
 ---
 
-<BaseLayout breadcrumbs={[{ label: 'Browse' }]} title="Browse Calibers" description="Browse, search, filter, and visualize 100 firearm calibers by category, performance, recoil, and cost.">
+<BaseLayout breadcrumbs={[{ label: 'Calibers' }]} title="Browse Calibers" description="Browse, search, filter, and visualize 100 firearm calibers by category, performance, recoil, and cost.">
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
     <div class="mb-8">
-      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+      <h1 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
         Browse Calibers
       </h1>
-      <p class="mt-2 font-mono text-base text-text-muted">
+      <p class="mt-2 text-base text-text-muted">
         {calibers.length} calibers · search, filter, sort, and visualize
       </p>
     </div>
 
-    <CaliberScatterPlot client:visible calibers={scatterPoints} basePath="/caliber-companion" />
+    <CaliberScatterPlot client:visible calibers={scatterPoints} basePath="" />
 
-    <FilterBar client:idle calibers={caliberSummaries} basePath="/caliber-companion" />
+    <FilterBar client:idle calibers={caliberSummaries} basePath="" />
   </div>
 </BaseLayout>

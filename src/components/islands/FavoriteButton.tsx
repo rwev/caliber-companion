@@ -45,7 +45,7 @@ export default function FavoriteButton({ slug, name }: Props) {
       aria-label={isFav ? `Remove ${name} from favorites` : `Add ${name} to favorites`}
       aria-pressed={isFav}
       title={isFav ? 'Remove from favorites' : 'Save to favorites'}
-      class={`inline-flex items-center gap-1.5 border px-3 py-1.5 font-mono text-sm tracking-wider uppercase transition-colors ${
+      class={`inline-flex items-center gap-1.5 rounded-md border px-3 py-1.5 text-sm font-medium transition-colors ${
         isFav
           ? 'border-accent/40 bg-accent/15 text-accent'
           : 'border-surface-border text-text-muted hover:border-accent/30 hover:text-accent'

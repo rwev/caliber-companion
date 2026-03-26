@@ -114,22 +114,22 @@ export default function RecoilCalculator() {
       {/* Input Section */}
       <div class="grid gap-6 lg:grid-cols-2">
         {/* Inputs */}
-        <div class="border border-surface-border">
+        <div class="rounded-lg border border-surface-border">
           <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
-            <h2 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">Input Parameters</h2>
+            <h2 class="text-base font-medium text-text-muted">Input Parameters</h2>
           </div>
 
           <div class="p-4 space-y-4">
             {/* Preset selector */}
             <div>
-              <label for="preset-select" class="block font-mono text-sm tracking-wider uppercase text-text-muted mb-1">Quick Preset</label>
+              <label for="preset-select" class="block text-xs font-medium uppercase tracking-wide text-text-muted mb-1">Quick Preset</label>
               <select
                 id="preset-select"
                 onChange={(e) => {
                   const val = (e.target as HTMLSelectElement).value;
                   if (val !== '') applyPreset(parseInt(val));
                 }}
-                class="w-full border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-secondary focus:border-accent/50"
+                class="w-full rounded-md border border-surface-border bg-surface-raised px-3 py-2 font-mono text-sm text-text-secondary focus:border-accent/50"
               >
                 <option value="">Select a preset...</option>
                 {PRESETS.map((p, i) => (
@@ -142,7 +142,7 @@ export default function RecoilCalculator() {
 
             <div class="grid grid-cols-2 gap-4">
               <div>
-                <label for="bullet-weight" class="block font-mono text-sm tracking-wider uppercase text-text-muted mb-1">Bullet Weight</label>
+                <label for="bullet-weight" class="block text-xs font-medium uppercase tracking-wide text-text-muted mb-1">Bullet Weight</label>
                 <div class="relative">
                   <input
                     id="bullet-weight"
@@ -152,14 +152,14 @@ export default function RecoilCalculator() {
                     min="10"
                     max="800"
                     step="1"
-                    class="w-full border border-surface-border bg-surface-raised px-3 py-2 pr-10 font-mono text-base text-text-primary focus:border-accent/50"
+                    class="w-full rounded-md border border-surface-border bg-surface-raised px-3 py-2 pr-10 font-mono text-base text-text-primary focus:border-accent/50"
                   />
                   <span class="absolute right-3 top-1/2 -translate-y-1/2 font-mono text-sm text-text-muted">gr</span>
                 </div>
               </div>
 
               <div>
-                <label for="powder-charge" class="block font-mono text-sm tracking-wider uppercase text-text-muted mb-1">Powder Charge</label>
+                <label for="powder-charge" class="block text-xs font-medium uppercase tracking-wide text-text-muted mb-1">Powder Charge</label>
                 <div class="relative">
                   <input
                     id="powder-charge"
@@ -169,14 +169,14 @@ export default function RecoilCalculator() {
                     min="0.5"
                     max="150"
                     step="0.5"
-                    class="w-full border border-surface-border bg-surface-raised px-3 py-2 pr-10 font-mono text-base text-text-primary focus:border-accent/50"
+                    class="w-full rounded-md border border-surface-border bg-surface-raised px-3 py-2 pr-10 font-mono text-base text-text-primary focus:border-accent/50"
                   />
                   <span class="absolute right-3 top-1/2 -translate-y-1/2 font-mono text-sm text-text-muted">gr</span>
                 </div>
               </div>
 
               <div>
-                <label for="muzzle-velocity" class="block font-mono text-sm tracking-wider uppercase text-text-muted mb-1">Muzzle Velocity</label>
+                <label for="muzzle-velocity" class="block text-xs font-medium uppercase tracking-wide text-text-muted mb-1">Muzzle Velocity</label>
                 <div class="relative">
                   <input
                     id="muzzle-velocity"
@@ -186,14 +186,14 @@ export default function RecoilCalculator() {
                     min="200"
                     max="5000"
                     step="10"
-                    class="w-full border border-surface-border bg-surface-raised px-3 py-2 pr-12 font-mono text-base text-text-primary focus:border-accent/50"
+                    class="w-full rounded-md border border-surface-border bg-surface-raised px-3 py-2 pr-12 font-mono text-base text-text-primary focus:border-accent/50"
                   />
                   <span class="absolute right-3 top-1/2 -translate-y-1/2 font-mono text-sm text-text-muted">fps</span>
                 </div>
               </div>
 
               <div>
-                <label for="gun-weight" class="block font-mono text-sm tracking-wider uppercase text-text-muted mb-1">Firearm Weight</label>
+                <label for="gun-weight" class="block text-xs font-medium uppercase tracking-wide text-text-muted mb-1">Firearm Weight</label>
                 <div class="relative">
                   <input
                     id="gun-weight"
@@ -203,7 +203,7 @@ export default function RecoilCalculator() {
                     min="0.5"
                     max="30"
                     step="0.1"
-                    class="w-full border border-surface-border bg-surface-raised px-3 py-2 pr-10 font-mono text-base text-text-primary focus:border-accent/50"
+                    class="w-full rounded-md border border-surface-border bg-surface-raised px-3 py-2 pr-10 font-mono text-base text-text-primary focus:border-accent/50"
                   />
                   <span class="absolute right-3 top-1/2 -translate-y-1/2 font-mono text-sm text-text-muted">lbs</span>
                 </div>
@@ -213,40 +213,40 @@ export default function RecoilCalculator() {
         </div>
 
         {/* Results */}
-        <div class="border border-surface-border">
+        <div class="rounded-lg border border-surface-border">
           <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
-            <h2 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">Recoil Results</h2>
+            <h2 class="text-base font-medium text-text-muted">Recoil Results</h2>
           </div>
 
           <div class="p-4">
             <div class="grid grid-cols-2 gap-6">
-              <div class="text-center p-4 border border-surface-border bg-surface-raised">
-                <div class="font-mono text-xs tracking-wider uppercase text-text-muted mb-1">Free Recoil Energy</div>
-                <div class="font-display text-3xl font-bold text-accent">{result.freeRecoilEnergy.toFixed(1)}</div>
+              <div class="text-center p-4 rounded-lg border border-surface-border bg-surface-raised">
+                <div class="text-xs font-medium uppercase tracking-wide text-text-muted mb-1">Free Recoil Energy</div>
+                <div class="font-mono text-3xl font-bold text-accent">{result.freeRecoilEnergy.toFixed(1)}</div>
                 <div class="font-mono text-sm text-text-muted">ft·lbs</div>
               </div>
 
-              <div class="text-center p-4 border border-surface-border bg-surface-raised">
-                <div class="font-mono text-xs tracking-wider uppercase text-text-muted mb-1">Recoil Velocity</div>
-                <div class="font-display text-3xl font-bold text-text-primary">{result.recoilVelocity.toFixed(1)}</div>
+              <div class="text-center p-4 rounded-lg border border-surface-border bg-surface-raised">
+                <div class="text-xs font-medium uppercase tracking-wide text-text-muted mb-1">Recoil Velocity</div>
+                <div class="font-mono text-3xl font-bold text-text-primary">{result.recoilVelocity.toFixed(1)}</div>
                 <div class="font-mono text-sm text-text-muted">fps</div>
               </div>
 
-              <div class="text-center p-4 border border-surface-border bg-surface-raised">
-                <div class="font-mono text-xs tracking-wider uppercase text-text-muted mb-1">Recoil Impulse</div>
-                <div class="font-display text-3xl font-bold text-text-primary">{result.recoilImpulse.toFixed(2)}</div>
+              <div class="text-center p-4 rounded-lg border border-surface-border bg-surface-raised">
+                <div class="text-xs font-medium uppercase tracking-wide text-text-muted mb-1">Recoil Impulse</div>
+                <div class="font-mono text-3xl font-bold text-text-primary">{result.recoilImpulse.toFixed(2)}</div>
                 <div class="font-mono text-sm text-text-muted">lb·s</div>
               </div>
 
-              <div class="text-center p-4 border border-surface-border bg-surface-raised">
-                <div class="font-mono text-xs tracking-wider uppercase text-text-muted mb-1">Subjective Rating</div>
-                <div class={`font-display text-2xl font-bold ${ratingColor(result.rating)}`}>{result.rating}</div>
+              <div class="text-center p-4 rounded-lg border border-surface-border bg-surface-raised">
+                <div class="text-xs font-medium uppercase tracking-wide text-text-muted mb-1">Subjective Rating</div>
+                <div class={`text-2xl font-bold ${ratingColor(result.rating)}`}>{result.rating}</div>
               </div>
             </div>
 
             {/* Recoil bar visual */}
             <div class="mt-4 p-3 border border-surface-border bg-surface">
-              <div class="font-mono text-xs tracking-wider uppercase text-text-muted mb-2">Recoil Scale</div>
+              <div class="text-xs font-medium uppercase tracking-wide text-text-muted mb-2">Recoil Scale</div>
               <div class="relative h-6 bg-surface-raised border border-surface-border-subtle overflow-hidden">
                 <div
                   class="h-full transition-all duration-300"
@@ -268,7 +268,7 @@ export default function RecoilCalculator() {
                   </div>
                 ))}
               </div>
-              <div class="flex justify-between mt-5 font-mono text-[10px] tracking-wider uppercase text-text-muted">
+              <div class="flex justify-between mt-5 text-[10px] font-medium uppercase tracking-wide text-text-muted">
                 <span>Light</span>
                 <span>Moderate</span>
                 <span>Heavy</span>
@@ -280,21 +280,21 @@ export default function RecoilCalculator() {
       </div>
 
       {/* Reference Comparison Table */}
-      <div class="border border-surface-border">
+      <div class="rounded-lg border border-surface-border">
         <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
-          <h2 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">Reference Comparison</h2>
+          <h2 class="text-base font-medium text-text-muted">Reference Comparison</h2>
         </div>
 
         <div class="overflow-x-auto" tabindex={0} role="region" aria-label="Recoil comparison table">
           <table class="w-full text-left font-mono">
             <thead>
               <tr class="border-b border-surface-border bg-surface-overlay text-text-muted">
-                <th scope="col" class="px-4 py-2 font-medium tracking-wider uppercase text-sm">Load</th>
-                <th scope="col" class="px-4 py-2 font-medium tracking-wider uppercase text-sm text-right whitespace-nowrap">Gun (lbs)</th>
-                <th scope="col" class="px-4 py-2 font-medium tracking-wider uppercase text-sm text-right whitespace-nowrap">Energy (ft·lbs)</th>
-                <th scope="col" class="px-4 py-2 font-medium tracking-wider uppercase text-sm text-right whitespace-nowrap">Vel (fps)</th>
-                <th scope="col" class="px-4 py-2 font-medium tracking-wider uppercase text-sm">Rating</th>
-                <th scope="col" class="px-4 py-2 font-medium tracking-wider uppercase text-sm min-w-[120px]"></th>
+                <th scope="col" class="px-4 py-2 text-xs font-medium uppercase tracking-wide">Load</th>
+                <th scope="col" class="px-4 py-2 text-xs font-medium uppercase tracking-wide text-right whitespace-nowrap">Gun (lbs)</th>
+                <th scope="col" class="px-4 py-2 text-xs font-medium uppercase tracking-wide text-right whitespace-nowrap">Energy (ft·lbs)</th>
+                <th scope="col" class="px-4 py-2 text-xs font-medium uppercase tracking-wide text-right whitespace-nowrap">Vel (fps)</th>
+                <th scope="col" class="px-4 py-2 text-xs font-medium uppercase tracking-wide">Rating</th>
+                <th scope="col" class="px-4 py-2 text-xs font-medium uppercase tracking-wide min-w-[120px]"></th>
               </tr>
             </thead>
             <tbody>
@@ -343,15 +343,15 @@ export default function RecoilCalculator() {
       </div>
 
       {/* Formula explanation */}
-      <div class="border border-surface-border">
+      <div class="rounded-lg border border-surface-border">
         <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
-          <h2 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">How It Works</h2>
+          <h2 class="text-base font-medium text-text-muted">How It Works</h2>
         </div>
-        <div class="p-4 font-mono text-sm text-text-secondary space-y-3">
+        <div class="p-4 text-sm text-text-secondary space-y-3">
           <p>
             Free recoil is computed using Newton's third law. The total momentum transferred to the firearm equals the bullet momentum plus the powder gas momentum:
           </p>
-          <div class="bg-surface-raised border border-surface-border-subtle p-3 text-text-primary">
+          <div class="bg-surface-raised border border-surface-border-subtle rounded-md p-3 font-mono text-text-primary">
             <div>Recoil Momentum = (Bullet Weight × Muzzle Velocity) + (Powder Charge × Gas Velocity)</div>
             <div class="mt-1">Recoil Velocity = Recoil Momentum ÷ Firearm Weight</div>
             <div class="mt-1">Free Recoil Energy = ½ × Firearm Weight × Recoil Velocity²</div>

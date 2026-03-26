@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 
 interface GlossaryEntry {
   term: string;
@@ -107,13 +107,13 @@ const sections: { title: string; entries: GlossaryEntry[] }[] = [
 ];
 ---
 
-<BaseLayout breadcrumbs={[{ label: 'Glossary' }]} title="Glossary" description="Definitions for ballistic, cartridge, reloading, and firearms terminology used throughout Caliber Companion.">
+<BaseLayout breadcrumbs={[{ label: 'Reference', href: '/reference' }, { label: 'Glossary' }]} title="Glossary" description="Definitions for ballistic, cartridge, reloading, and firearms terminology used throughout Caliber Companion.">
   <div class="mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-12">
     <div class="mb-8">
-      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+      <h1 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
         Glossary
       </h1>
-      <p class="mt-2 font-mono text-base text-text-muted">
+      <p class="mt-2 text-base text-text-muted">
         Definitions for ballistic, cartridge, reloading, and firearms terminology
       </p>
     </div>
@@ -123,7 +123,7 @@ const sections: { title: string; entries: GlossaryEntry[] }[] = [
       {sections.map(section => (
         <a
           href={`#${section.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
-          class="border border-surface-border bg-surface-raised px-3 py-1.5 font-mono text-sm text-text-secondary transition-colors hover:border-accent hover:text-accent"
+          class="rounded-full bg-surface-overlay px-2.5 py-0.5 text-xs font-medium text-text-secondary transition-colors hover:text-accent"
         >
           {section.title}
         </a>
@@ -133,10 +133,10 @@ const sections: { title: string; entries: GlossaryEntry[] }[] = [
     <div class="space-y-10">
       {sections.map(section => (
         <div id={section.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}>
-          <h2 class="font-display text-xl font-semibold tracking-[0.2em] uppercase text-accent border-b border-surface-border pb-3 mb-4">
+          <h2 class="text-xl font-semibold text-accent border-b border-surface-border pb-3 mb-4">
             {section.title}
           </h2>
-          <dl class="space-y-0 divide-y divide-surface-border-subtle">
+          <dl class="space-y-0 divide-y divide-surface-border-subtle rounded-lg overflow-hidden">
             {section.entries.map((entry, i) => (
               <div class={`px-4 py-3 ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
                 <dt class="font-mono text-base font-medium text-text-primary">
@@ -145,7 +145,7 @@ const sections: { title: string; entries: GlossaryEntry[] }[] = [
                     <span class="ml-2 text-sm text-accent">({entry.abbr})</span>
                   )}
                 </dt>
-                <dd class="mt-1 font-mono text-sm text-text-secondary leading-relaxed">
+                <dd class="mt-1 text-sm text-text-secondary leading-relaxed">
                   {entry.definition}
                 </dd>
               </div>

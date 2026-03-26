@@ -10,18 +10,59 @@ const caliberIndex = calibers.map(c => ({
   designation: c.data.designation,
 }));
 
-const links = [
-  { href: '/caliber-companion/browse', label: 'Browse' },
-  { href: '/caliber-companion/ammo', label: 'Ammo' },
-  { href: '/caliber-companion/compare', label: 'Compare' },
-  { href: '/caliber-companion/guides', label: 'Guides' },
-  { href: '/caliber-companion/firearms', label: 'Firearms' },
-  { href: '/caliber-companion/family-tree', label: 'Lineage' },
-  { href: '/caliber-companion/quiz', label: 'Quiz' },
-  { href: '/caliber-companion/tools', label: 'Tools' },
-  { href: '/caliber-companion/timeline', label: 'Timeline' },
-  { href: '/caliber-companion/nato-equivalents', label: 'NATO' },
-  { href: '/caliber-companion/glossary', label: 'Glossary' },
+const navSections = [
+  {
+    label: 'Calibers',
+    href: '/calibers',
+    pathPrefix: '/calibers',
+    children: [
+      { href: '/calibers', label: 'Browse All' },
+      { href: '/calibers/ammo', label: 'Ammo Finder' },
+    ],
+  },
+  {
+    label: 'Compare',
+    href: '/compare',
+    pathPrefix: '/compare',
+    children: [
+      { href: '/compare', label: 'Compare Tool' },
+    ],
+  },
+  {
+    label: 'Tools',
+    href: '/tools',
+    pathPrefix: '/tools',
+    children: [
+      { href: '/tools/ballistics-calculator', label: 'Ballistics Calculator' },
+      { href: '/tools/recoil-calculator', label: 'Recoil Calculator' },
+      { href: '/tools/drop-chart', label: 'Drop Chart' },
+      { href: '/tools', label: 'All Tools' },
+    ],
+  },
+  {
+    label: 'Guides',
+    href: '/guides',
+    pathPrefix: '/guides',
+    children: [
+      { href: '/guides', label: 'All Guides' },
+      { href: '/guides/best-deer-calibers', label: 'Best for Deer' },
+      { href: '/guides/best-self-defense-calibers', label: 'Best for Self-Defense' },
+      { href: '/guides/best-long-range-calibers', label: 'Best for Long-Range' },
+      { href: '/guides/quiz', label: 'Find Your Caliber' },
+    ],
+  },
+  {
+    label: 'Reference',
+    href: '/reference',
+    pathPrefix: '/reference',
+    children: [
+      { href: '/reference/glossary', label: 'Glossary' },
+      { href: '/reference/timeline', label: 'Timeline' },
+      { href: '/reference/firearms', label: 'Firearms Database' },
+      { href: '/reference/nato-equivalents', label: 'NATO Equivalents' },
+      { href: '/reference', label: 'All Reference' },
+    ],
+  },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -31,34 +72,57 @@ const currentPath = Astro.url.pathname;
   <div class="mx-auto max-w-7xl px-4 sm:px-6">
     <div class="flex h-14 items-center justify-between">
       <!-- Logo / Home -->
-      <a href="/caliber-companion/" class="group flex items-center gap-3">
-        <div class="flex h-8 w-8 items-center justify-center border border-accent/40 bg-accent/10 transition-colors group-hover:border-accent group-hover:bg-accent/20">
-          <span class="font-mono text-sm font-bold text-accent">CC</span>
-        </div>
-        <span class="hidden font-display text-base tracking-widest uppercase text-text-primary transition-colors group-hover:text-accent sm:inline">
+      <a href="/" class="group flex items-center gap-2.5">
+        <span class="text-base font-bold text-accent">CC</span>
+        <span class="hidden text-base font-semibold text-text-primary transition-colors group-hover:text-accent sm:inline">
           Caliber Companion
         </span>
       </a>
 
       <!-- Right side controls -->
       <div class="flex items-center gap-1">
-        <!-- Desktop nav links -->
-        {links.map(link => (
-          <a
-            href={link.href}
-            class={`hidden sm:inline-block px-3 py-1.5 font-mono text-sm tracking-wider uppercase transition-colors ${
-              currentPath.startsWith(link.href)
-                ? 'text-accent'
-                : 'text-text-secondary hover:text-accent'
-            }`}
-            aria-current={currentPath.startsWith(link.href) ? 'page' : undefined}
-          >
-            {link.label}
-          </a>
+        <!-- Desktop nav with dropdowns -->
+        {navSections.map(section => (
+          <div class="nav-dropdown relative hidden sm:block">
+            <a
+              href={section.href}
+              class={`nav-trigger inline-flex items-center gap-1 px-2.5 py-1.5 text-sm font-medium rounded-md transition-colors ${
+                currentPath.startsWith(section.pathPrefix)
+                  ? 'text-accent bg-accent/10'
+                  : 'text-text-secondary hover:text-accent hover:bg-accent/5'
+              }`}
+              aria-current={currentPath.startsWith(section.pathPrefix) ? 'page' : undefined}
+            >
+              {section.label}
+              {section.children.length > 1 && (
+                <svg class="h-3 w-3 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path d="M19 9l-7 7-7-7" />
+                </svg>
+              )}
+            </a>
+            {section.children.length > 1 && (
+              <div class="nav-panel absolute left-0 top-full z-50 hidden pt-1">
+                <div class="min-w-48 rounded-lg border border-surface-border bg-surface p-1.5 shadow-lg">
+                  {section.children.map(child => (
+                    <a
+                      href={child.href}
+                      class={`block rounded-md px-3 py-2 text-sm transition-colors ${
+                        currentPath === child.href || currentPath === child.href + '/'
+                          ? 'text-accent bg-accent/10 font-medium'
+                          : 'text-text-secondary hover:text-accent hover:bg-accent/5'
+                      }`}
+                    >
+                      {child.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
         ))}
 
         <div class="ml-2 border-l border-surface-border pl-3">
-          <CaliberSearch client:idle calibers={caliberIndex} basePath="/caliber-companion" />
+          <CaliberSearch client:idle calibers={caliberIndex} basePath="" />
         </div>
         <div class="ml-2 border-l border-surface-border pl-3">
           <ThemeToggle client:idle />
@@ -67,7 +131,7 @@ const currentPath = Astro.url.pathname;
         <!-- Mobile hamburger -->
         <button
           id="mobile-menu-btn"
-          class="ml-2 flex sm:hidden h-7 w-7 items-center justify-center border border-surface-border text-text-muted transition-colors hover:border-accent hover:text-accent"
+          class="ml-2 flex sm:hidden h-7 w-7 items-center justify-center rounded-md border border-surface-border text-text-muted transition-colors hover:border-accent hover:text-accent"
           aria-expanded="false"
           aria-controls="mobile-menu"
           aria-label="Toggle navigation menu"
@@ -82,28 +146,55 @@ const currentPath = Astro.url.pathname;
       </div>
     </div>
 
-    <!-- Mobile dropdown menu -->
+    <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden sm:hidden border-t border-surface-border pb-3">
-      <div class="flex flex-col gap-1 pt-2">
-        {links.map(link => (
-          <a
-            href={link.href}
-            class={`px-3 py-2 font-mono text-sm tracking-wider uppercase transition-colors ${
-              currentPath.startsWith(link.href)
-                ? 'text-accent bg-accent/10'
-                : 'text-text-secondary hover:text-accent'
-            }`}
-            aria-current={currentPath.startsWith(link.href) ? 'page' : undefined}
-          >
-            {link.label}
-          </a>
+      <div class="flex flex-col gap-0.5 pt-2">
+        {navSections.map(section => (
+          <div class="mobile-section">
+            <button
+              class={`mobile-section-btn flex w-full items-center justify-between px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                currentPath.startsWith(section.pathPrefix)
+                  ? 'text-accent bg-accent/10'
+                  : 'text-text-secondary hover:text-accent hover:bg-accent/5'
+              }`}
+              aria-expanded="false"
+            >
+              {section.label}
+              <svg class="mobile-chevron h-3.5 w-3.5 opacity-70 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="mobile-section-panel hidden pl-3">
+              {section.children.map(child => (
+                <a
+                  href={child.href}
+                  class={`block rounded-md px-3 py-1.5 text-sm transition-colors ${
+                    currentPath === child.href || currentPath === child.href + '/'
+                      ? 'text-accent font-medium'
+                      : 'text-text-muted hover:text-accent'
+                  }`}
+                >
+                  {child.label}
+                </a>
+              ))}
+            </div>
+          </div>
         ))}
       </div>
     </div>
   </div>
 </nav>
 
+<style>
+  /* Desktop dropdown: show panel on hover */
+  .nav-dropdown:hover .nav-panel,
+  .nav-dropdown:focus-within .nav-panel {
+    display: block;
+  }
+</style>
+
 <script>
+  // Mobile hamburger toggle
   const btn = document.getElementById('mobile-menu-btn');
   const menu = document.getElementById('mobile-menu');
   const hamburgerIcon = document.getElementById('hamburger-icon');
@@ -118,4 +209,16 @@ const currentPath = Astro.url.pathname;
       closeIcon.classList.toggle('hidden');
     });
   }
+
+  // Mobile section toggles
+  document.querySelectorAll('.mobile-section-btn').forEach(sectionBtn => {
+    sectionBtn.addEventListener('click', () => {
+      const expanded = sectionBtn.getAttribute('aria-expanded') === 'true';
+      sectionBtn.setAttribute('aria-expanded', String(!expanded));
+      const panel = sectionBtn.nextElementSibling as HTMLElement | null;
+      const chevron = sectionBtn.querySelector('.mobile-chevron') as HTMLElement | null;
+      if (panel) panel.classList.toggle('hidden');
+      if (chevron) chevron.classList.toggle('rotate-180');
+    });
+  });
 </script>

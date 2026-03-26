@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { fmtNumber, titleCase } from '../lib/format';
+import { fmtNumber, titleCase } from '../../lib/format';
 
 const allCalibers = await getCollection('caliberData');
 
@@ -75,22 +75,22 @@ terminalLoads.forEach(load => {
 const pageDescription = `Terminal ballistics comparison of ${terminalLoads.length} self-defense loads across ${new Set(terminalLoads.map(l => l.caliberSlug)).size} calibers. Gel penetration depth, expansion diameter, and FBI protocol compliance visualized.`;
 ---
 
-<BaseLayout title="Terminal Performance" description={pageDescription} breadcrumbs={[{ label: 'Terminal Performance' }]}>
+<BaseLayout title="Terminal Performance" description={pageDescription} breadcrumbs={[{ label: 'Reference', href: '/reference' }, { label: 'Terminal Performance' }]}>
   <div class="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
     <div class="mb-8">
-      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+      <h1 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
         Terminal Performance Comparison
       </h1>
-      <p class="mt-2 font-mono text-base text-text-muted max-w-3xl">
+      <p class="mt-2 text-base text-text-muted max-w-3xl">
         Gel penetration depth and bullet expansion for {terminalLoads.length} defensive loads across {new Set(terminalLoads.map(l => l.caliberSlug)).size} calibers.
         FBI protocol recommends 12–18 inches of penetration in calibrated ordnance gel.
       </p>
     </div>
 
     <!-- FBI Protocol Legend -->
-    <div class="mb-6 border border-surface-border p-4">
-      <div class="font-mono text-xs tracking-wider uppercase text-text-muted mb-2">FBI Penetration Standard</div>
-      <div class="flex items-center gap-4 font-mono text-sm">
+    <div class="mb-6 border border-surface-border rounded-lg p-4">
+      <div class="text-xs font-medium uppercase tracking-wide text-text-muted mb-2">FBI Penetration Standard</div>
+      <div class="flex items-center gap-4 text-sm">
         <span class="flex items-center gap-1.5">
           <span class="inline-block h-3 w-6 bg-danger/30 border border-danger/50"></span>
           Under 12" — Under-penetration
@@ -107,9 +107,9 @@ const pageDescription = `Terminal ballistics comparison of ${terminalLoads.lengt
     </div>
 
     <!-- Penetration Chart -->
-    <div class="border border-surface-border mb-8">
+    <div class="border border-surface-border rounded-lg mb-8">
       <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
-        <h2 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">Gel Penetration Depth</h2>
+        <h2 class="text-sm font-semibold uppercase tracking-wide text-text-muted">Gel Penetration Depth</h2>
       </div>
 
       <div class="relative">
@@ -126,7 +126,7 @@ const pageDescription = `Terminal ballistics comparison of ${terminalLoads.lengt
             return (
               <div class={`flex items-center gap-3 px-3 py-2 ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
                 <div class="w-28 sm:w-36 shrink-0">
-                  <a href={`/caliber-companion/calibers/${load.caliberSlug}`} class="font-mono text-sm text-text-primary hover:text-accent transition-colors truncate block">
+                  <a href={`/calibers/${load.caliberSlug}`} class="font-mono text-sm text-text-primary hover:text-accent transition-colors truncate block">
                     {load.caliberName}
                   </a>
                   <div class="font-mono text-xs text-text-muted truncate">{load.bulletWeight}gr {load.bulletType}</div>
@@ -172,24 +172,24 @@ const pageDescription = `Terminal ballistics comparison of ${terminalLoads.lengt
     </div>
 
     <!-- Expansion Table -->
-    <div class="border border-surface-border mb-8">
+    <div class="border border-surface-border rounded-lg mb-8">
       <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
-        <h2 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">Expansion & Performance Details</h2>
+        <h2 class="text-sm font-semibold uppercase tracking-wide text-text-muted">Expansion & Performance Details</h2>
       </div>
 
       <div class="overflow-x-auto" tabindex="0" role="region" aria-label="Terminal performance data">
         <table class="w-full text-left font-mono">
           <thead>
             <tr class="border-b border-surface-border bg-surface-overlay text-text-muted">
-              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs">Caliber</th>
-              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs">Load</th>
-              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Penetration</th>
-              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Expansion</th>
-              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Exp. Ratio</th>
-              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">MV</th>
-              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">ME</th>
-              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-center">Barrier</th>
-              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-center">FBI</th>
+              <th scope="col" class="px-3 py-2 text-xs font-medium uppercase tracking-wide">Caliber</th>
+              <th scope="col" class="px-3 py-2 text-xs font-medium uppercase tracking-wide">Load</th>
+              <th scope="col" class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-right">Penetration</th>
+              <th scope="col" class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-right">Expansion</th>
+              <th scope="col" class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-right">Exp. Ratio</th>
+              <th scope="col" class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-right">MV</th>
+              <th scope="col" class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-right">ME</th>
+              <th scope="col" class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-center">Barrier</th>
+              <th scope="col" class="px-3 py-2 text-xs font-medium uppercase tracking-wide text-center">FBI</th>
             </tr>
           </thead>
           <tbody>
@@ -204,7 +204,7 @@ const pageDescription = `Terminal ballistics comparison of ${terminalLoads.lengt
                 return (
                   <tr class={`border-b border-surface-border-subtle ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
                     <td class="px-3 py-2 text-sm">
-                      <a href={`/caliber-companion/calibers/${load.caliberSlug}`} class="text-text-primary hover:text-accent transition-colors">
+                      <a href={`/calibers/${load.caliberSlug}`} class="text-text-primary hover:text-accent transition-colors">
                         {load.caliberName}
                       </a>
                     </td>
@@ -229,9 +229,9 @@ const pageDescription = `Terminal ballistics comparison of ${terminalLoads.lengt
     </div>
 
     <!-- Notes -->
-    <div class="border border-surface-border-subtle bg-surface-overlay p-4">
-      <p class="font-mono text-xs text-text-muted leading-relaxed">
-        <span class="font-medium uppercase tracking-wider">About this data:</span> Penetration measured in 10% calibrated ordnance gelatin per FBI protocol. Expansion diameter measured as average of recovered bullet. "Barrier Blind" = consistent performance through heavy clothing, auto glass, plywood, and wallboard. "FBI" = meets 12–18" penetration standard. All data is representative — actual results vary with barrel length, lot variation, and test conditions.
+    <div class="border border-surface-border-subtle bg-surface-overlay rounded-lg p-4">
+      <p class="text-xs text-text-muted leading-relaxed">
+        <span class="font-medium uppercase tracking-wide">About this data:</span> Penetration measured in 10% calibrated ordnance gelatin per FBI protocol. Expansion diameter measured as average of recovered bullet. "Barrier Blind" = consistent performance through heavy clothing, auto glass, plywood, and wallboard. "FBI" = meets 12–18" penetration standard. All data is representative — actual results vary with barrel length, lot variation, and test conditions.
       </p>
     </div>
   </div>

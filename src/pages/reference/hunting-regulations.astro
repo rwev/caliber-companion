@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 
 // Major state caliber/cartridge regulations for deer hunting
 // Focused on caliber-specific rules that affect purchasing decisions
@@ -59,24 +59,24 @@ const faqJsonLd = {
 };
 ---
 
-<BaseLayout title="State Hunting Caliber Regulations" description={pageDescription} breadcrumbs={[{ label: 'Hunting Regulations' }]}>
+<BaseLayout title="State Hunting Caliber Regulations" description={pageDescription} breadcrumbs={[{ label: 'Reference', href: '/reference' }, { label: 'Hunting Regulations' }]}>
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
 
   <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
     <div class="mb-8">
-      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+      <h1 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
         State Hunting Caliber Regulations
       </h1>
-      <p class="mt-3 font-mono text-base text-text-muted max-w-3xl">
+      <p class="mt-3 text-base text-text-muted max-w-3xl">
         Quick reference for state-by-state caliber and cartridge requirements for deer hunting.
         Organized by regulation type: straight-wall states, minimum caliber rules, and shotgun-only zones.
       </p>
     </div>
 
     <!-- Disclaimer -->
-    <div class="mb-8 border border-warning/30 bg-warning/5 p-4">
-      <p class="font-mono text-xs text-text-secondary leading-relaxed">
-        <span class="font-medium text-warning uppercase tracking-wider">Important:</span> Regulations change frequently and vary by zone, season, weapon type, and game species.
+    <div class="mb-8 border border-warning/30 bg-warning/5 rounded-lg p-4">
+      <p class="text-xs text-text-secondary leading-relaxed">
+        <span class="font-medium text-warning uppercase tracking-wide">Important:</span> Regulations change frequently and vary by zone, season, weapon type, and game species.
         This is a general reference only — <strong>always verify current regulations</strong> with your state's
         wildlife agency before hunting. Violations can result in fines, loss of license, and criminal charges.
       </p>
@@ -84,24 +84,24 @@ const faqJsonLd = {
 
     {regions.map(region => (
       <section class="mb-10">
-        <h2 class="mb-2 font-display text-xl font-semibold tracking-[0.15em] uppercase text-accent border-b border-surface-border pb-3">
+        <h2 class="mb-2 text-xl font-semibold text-accent border-b border-surface-border pb-3">
           {region.title}
         </h2>
-        <p class="mb-4 font-mono text-sm text-text-muted">{region.description}</p>
+        <p class="mb-4 text-sm text-text-muted">{region.description}</p>
 
         <div class="space-y-3">
           {region.states.map(s => (
-            <div class="border border-surface-border">
+            <div class="border border-surface-border rounded-lg">
               <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5 flex items-center justify-between">
-                <span class="font-display text-base font-semibold text-text-primary">{s.state}</span>
+                <span class="text-base font-semibold text-text-primary">{s.state}</span>
               </div>
               <div class="p-4 space-y-2">
-                <p class="font-mono text-sm text-text-secondary leading-relaxed">{s.rule}</p>
+                <p class="text-sm text-text-secondary leading-relaxed">{s.rule}</p>
                 <div class="flex flex-wrap gap-2 pt-1">
-                  <span class="font-mono text-xs tracking-wider uppercase text-text-muted self-center">Popular compliant:</span>
+                  <span class="text-xs font-medium uppercase tracking-wide text-text-muted self-center">Popular compliant:</span>
                   {s.calibers.map(slug => (
                     <a
-                      href={`/caliber-companion/calibers/${slug}`}
+                      href={`/calibers/${slug}`}
                       class="font-mono text-xs text-accent hover:underline"
                     >
                       {slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()).replace(/(\d)x(\d)/g, '$1×$2')}
@@ -117,20 +117,20 @@ const faqJsonLd = {
 
     <!-- FAQ -->
     <section class="mt-12 border-t border-surface-border pt-8">
-      <h2 class="font-display text-xl font-semibold tracking-[0.2em] uppercase text-text-muted mb-4">Frequently Asked Questions</h2>
+      <h2 class="text-xl font-semibold text-text-muted mb-4">Frequently Asked Questions</h2>
       <div class="space-y-2">
         {[
           { q: 'What is a straight-wall cartridge?', a: 'A straight-wall cartridge has a case that does not taper significantly from base to mouth — as opposed to bottleneck cartridges like .308 Winchester where the case necks down. Examples include .350 Legend, .450 Bushmaster, .45-70 Government, and all common handgun cartridges (.44 Magnum, .357 Magnum).' },
           { q: 'Why do some states require straight-wall cartridges?', a: 'Safety. Straight-wall cartridges generally have shorter maximum range than bottleneck rifle cartridges, reducing the risk of stray bullets traveling dangerous distances in densely populated areas. This is the same logic behind shotgun-only zones.' },
           { q: 'What is the best straight-wall deer cartridge?', a: '.350 Legend was purpose-designed for straight-wall regulations and offers the best combination of flat trajectory, low recoil, and adequate energy for deer under 200 yards. For more power, .450 Bushmaster and .45-70 Government are excellent choices.' },
         ].map(faq => (
-          <details class="group border border-surface-border">
-            <summary class="flex cursor-pointer items-center justify-between bg-surface-raised px-4 py-3 font-mono text-sm text-text-primary transition-colors hover:bg-surface-overlay">
+          <details class="group border border-surface-border rounded-lg">
+            <summary class="flex cursor-pointer items-center justify-between bg-surface-raised px-4 py-3 text-sm text-text-primary transition-colors hover:bg-surface-overlay">
               <span>{faq.q}</span>
               <svg class="h-4 w-4 shrink-0 text-text-muted transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
             </summary>
             <div class="border-t border-surface-border-subtle bg-surface px-4 py-3">
-              <p class="font-mono text-sm text-text-secondary leading-relaxed">{faq.a}</p>
+              <p class="text-sm text-text-secondary leading-relaxed">{faq.a}</p>
             </div>
           </details>
         ))}
@@ -138,10 +138,10 @@ const faqJsonLd = {
     </section>
 
     <div class="mt-8 flex flex-wrap gap-3 border-t border-surface-border pt-6">
-      <span class="font-mono text-xs tracking-wider uppercase text-text-muted self-center">Related:</span>
-      <a href="/caliber-companion/best-deer-calibers" class="font-mono text-sm text-accent hover:underline">Best Deer Calibers</a>
-      <a href="/caliber-companion/guides/best-calibers-for-whitetail" class="font-mono text-sm text-accent hover:underline">Whitetail Guide</a>
-      <a href="/caliber-companion/tools/ethical-range" class="font-mono text-sm text-accent hover:underline">Ethical Range Calculator</a>
+      <span class="text-xs font-medium uppercase tracking-wide text-text-muted self-center">Related:</span>
+      <a href="/guides/best-deer-calibers" class="text-sm text-accent hover:underline">Best Deer Calibers</a>
+      <a href="/guides/best-calibers-for-whitetail" class="text-sm text-accent hover:underline">Whitetail Guide</a>
+      <a href="/tools/ethical-range" class="text-sm text-accent hover:underline">Ethical Range Calculator</a>
     </div>
   </div>
 </BaseLayout>

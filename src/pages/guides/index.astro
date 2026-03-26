@@ -4,36 +4,95 @@ import { getCollection } from 'astro:content';
 
 const guides = await getCollection('guides');
 const sorted = guides.sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+const bestOf = [
+  { href: '/guides/best-deer-calibers', title: 'Best Calibers for Deer', desc: 'Top picks across 5 tiers from all-around to budget' },
+  { href: '/guides/best-elk-calibers', title: 'Best Calibers for Elk', desc: 'All-around, modern, budget, and low-recoil choices' },
+  { href: '/guides/best-self-defense-calibers', title: 'Best for Self-Defense', desc: 'CCW, home defense, and recoil-sensitive options' },
+  { href: '/guides/best-home-defense-calibers', title: 'Best for Home Defense', desc: 'Handgun, rifle/carbine, and shotgun picks' },
+  { href: '/guides/best-bear-defense-calibers', title: 'Best for Bear Defense', desc: 'Handgun, rifle, and minimum-viable options' },
+  { href: '/guides/best-long-range-calibers', title: 'Best for Long-Range', desc: 'Precision tiers from 500 yards to ELR 1500+' },
+  { href: '/guides/best-calibers-for-beginners', title: 'Best for Beginners', desc: 'First handgun, rifle, shotgun, and budget picks' },
+];
 ---
 
 <BaseLayout breadcrumbs={[{ label: 'Guides' }]} title="Guides" description="Curated caliber recommendation guides for home defense, hunting, competition, concealed carry, and more.">
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
-    <div class="mb-8">
-      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+    <div class="mb-10">
+      <h1 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
         Caliber Guides
       </h1>
-      <p class="mt-2 font-mono text-base text-text-muted">
-        Curated recommendations for specific use cases
+      <p class="mt-2 text-base text-text-muted">
+        Curated recommendations and expert picks for every use case
       </p>
     </div>
 
-    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {sorted.map(guide => (
-        <a
-          href={`/caliber-companion/guides/${guide.data.slug}`}
-          class="group border border-surface-border bg-surface-raised p-5 transition-colors hover:border-accent"
-        >
-          <h2 class="font-display text-lg font-semibold tracking-wide text-text-primary group-hover:text-accent transition-colors">
-            {guide.data.title}
-          </h2>
-          <p class="mt-2 font-mono text-sm text-text-muted leading-relaxed">
-            {guide.data.summary}
-          </p>
-          <div class="mt-3 font-mono text-xs text-accent">
-            {guide.data.calibers.length} calibers reviewed →
-          </div>
-        </a>
-      ))}
+    <!-- Find Your Caliber Quiz -->
+    <div class="mb-10">
+      <a
+        href="/guides/quiz"
+        class="group flex items-center gap-4 rounded-lg border border-accent/30 bg-accent/5 p-5 transition-all hover:border-accent hover:bg-accent/10"
+      >
+        <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-accent text-white">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+          </svg>
+        </div>
+        <div>
+          <div class="text-lg font-semibold text-accent">Find Your Caliber</div>
+          <div class="text-sm text-text-muted">Answer a few questions and get personalized recommendations</div>
+        </div>
+        <svg class="ml-auto h-5 w-5 text-accent opacity-50 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+
+    <!-- Best-Of Recommendations -->
+    <div class="mb-10">
+      <h2 class="mb-4 text-xs font-semibold uppercase tracking-wide text-text-muted">
+        Best-Of Recommendations
+      </h2>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {bestOf.map(item => (
+          <a
+            href={item.href}
+            class="group rounded-lg border border-surface-border bg-surface-raised p-5 transition-colors hover:border-accent"
+          >
+            <h3 class="text-lg font-semibold text-text-primary group-hover:text-accent transition-colors">
+              {item.title}
+            </h3>
+            <p class="mt-2 text-sm text-text-muted leading-relaxed">
+              {item.desc}
+            </p>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- Buying Guides (from content collection) -->
+    <div>
+      <h2 class="mb-4 text-xs font-semibold uppercase tracking-wide text-text-muted">
+        Buying Guides
+      </h2>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {sorted.map(guide => (
+          <a
+            href={`/guides/${guide.data.slug}`}
+            class="group rounded-lg border border-surface-border bg-surface-raised p-5 transition-colors hover:border-accent"
+          >
+            <h3 class="text-lg font-semibold text-text-primary group-hover:text-accent transition-colors">
+              {guide.data.title}
+            </h3>
+            <p class="mt-2 text-sm text-text-muted leading-relaxed">
+              {guide.data.summary}
+            </p>
+            <div class="mt-3 text-xs font-medium text-accent">
+              {guide.data.calibers.length} calibers reviewed
+            </div>
+          </a>
+        ))}
+      </div>
     </div>
   </div>
 </BaseLayout>

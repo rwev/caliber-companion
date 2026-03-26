@@ -2,48 +2,70 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Project Overview
+## Commands
 
-Caliber Companion is a website for firearm enthusiasts — hobbyists, law enforcement, military operators, hunters, and other lawful users. The site enables users to research calibers, compare ballistics, projectiles, weapon dynamics, size/weight, popularity, and government/military usage across various sections.
-
-## Tech Stack
-
-- **Framework**: Astro 5 (static output, deployed to GitHub Pages)
-- **UI Islands**: Preact (interactive components hydrated via `client:idle` / `client:load` / `client:visible`)
-- **Styling**: Tailwind CSS 4 (via `@tailwindcss/vite` plugin) with `@tailwindcss/typography` for prose
-- **Charts**: Chart.js (ballistics line charts)
-- **Content**: MDX for prose, JSON for structured caliber data (both via Astro content collections)
-- **Config**: `astro.config.mjs` — `site: https://rwev.github.io`, `base: /caliber-companion`
-
-## Project Structure
-
-- `src/pages/` — Astro pages: `index.astro` (home), `browse.astro`, `compare.astro`, `calibers/[slug].astro` (detail)
-- `src/components/` — Astro components: `Nav`, `Footer`, `SpecTable`, `CaliberCard`, `UsageBadges`
-- `src/components/islands/` — Preact islands: `CaliberSearch`, `FilterBar`, `ComparisonTool`, `BallisticsChart`, `ThemeToggle`
-- `src/layouts/BaseLayout.astro` — Shared HTML shell with nav, footer, theme init script, font loading
-- `src/styles/global.css` — Theme variables (dark default + `[data-theme="light"]` overrides), focus styles, skip-link, scrollbar, prose
-- `src/data/calibers/` — 100 JSON files (structured caliber data with dimensions, ballistics, loads)
-- `src/content/calibers/` — 100 MDX files (prose content per caliber, rendered on detail pages)
-- `src/content.config.ts` — Zod schemas for `caliberData` and `caliberProse` collections
-- `src/lib/format.ts` — Formatting utilities (`fmtRange`, `fmtNumber`, `fmtCurrency`, `titleCase`)
-
-## Design System
-
-- **Fonts**: Barlow (body), Barlow Condensed (display/headings), JetBrains Mono (data/mono) — loaded from Google Fonts
-- **Theme**: Dark by default. Light theme via `[data-theme="light"]` on `<html>`. Persisted in `localStorage`. Colors defined as CSS custom properties in `global.css` under `@theme`.
-- **Color tokens**: `--color-surface[-raised|-overlay|-border|-border-subtle]`, `--color-text-[primary|secondary|muted]`, `--color-accent[-bright|-dim]`, `--color-info[-dim]`, `--color-danger`, `--color-success`
-- **Sizing convention**: Labels/tags use `text-sm`, data values use `text-base`, units stay `text-sm text-text-muted`
-
-## Build & Dev
-
-```sh
-npm run dev       # astro dev
-npm run build     # astro build (static to dist/)
-npm run preview   # astro preview
+```bash
+npm run dev       # Start dev server
+npm run build     # Production build (static output to dist/)
+npm run preview   # Preview built site locally
 ```
 
-All paths in the site are prefixed with `/caliber-companion` (the `base` config). Links and asset references must include this prefix.
+There are no tests or linter configured.
 
-## Caliber Categories
+## Architecture
 
-`handgun`, `rifle`, `shotgun`, `pdw`, `magnum_handgun`, `magnum_rifle`
+**Astro 5 static site** with **Preact islands** for interactivity, styled with **Tailwind CSS 4**.
+
+### Content & Data Pipeline
+
+Four content collections defined in `src/content.config.ts` with Zod validation:
+
+| Collection | Source | Loader | What |
+|---|---|---|---|
+| `caliberData` | `src/data/calibers/*.json` | glob (JSON) | 102 caliber specs, ballistics, loads |
+| `caliberProse` | `src/content/calibers/*.mdx` | glob (MDX) | Narrative prose per caliber |
+| `guides` | `src/content/guides/*.mdx` | glob (MDX) | Curated "best calibers for X" articles |
+| `firearmsData` | `src/data/firearms/*.json` | glob (JSON) | Firearm specs linked by caliber slug |
+
+All cross-references use **slug strings** (e.g. `parent_cartridge: "308-winchester"`), not IDs.
+
+### Page Silos
+
+Pages are organized into 5 thematic silos under `src/pages/`:
+
+- **`/calibers/`** — Browse hub (`index.astro`), individual pages (`[slug].astro`), ammo finder (`ammo.astro`)
+- **`/compare/`** — Comparison tool (`index.astro`), 48 pre-built matchups (`[slug].astro`)
+- **`/tools/`** — 9 interactive calculators (ballistics, recoil, cost, range card, etc.)
+- **`/guides/`** — Content collection guides (`[slug].astro`), 7 standalone best-of pages, quiz
+- **`/reference/`** — Glossary, timeline, firearms DB, NATO equivalents, reloading, hunting regs, myths, rankings, etc.
+
+Old root-level URLs redirect to new silo paths via `astro.config.mjs` `redirects`. The `/vs/[slug].astro` pages also redirect to `/compare/[slug]`.
+
+### Component Pattern
+
+- **Astro components** (`src/components/*.astro`) — Static layout: Nav, Footer, Breadcrumb, CaliberCard, SpecTable, UsageBadges, CartridgeLineage, AdoptionTimeline
+- **Preact islands** (`src/components/islands/*.tsx`) — Interactive widgets hydrated with `client:idle`, `client:load`, or `client:visible`. ~30 islands total.
+
+Islands receive serializable props from Astro pages. They read `data-theme` attribute for dark mode and use CSS variables from the theme. LocalStorage backs favorites, recently viewed, and theme preference.
+
+### Styling
+
+`src/styles/global.css` defines a design token system with CSS custom properties:
+- Surfaces: `--color-surface`, `--color-surface-raised`, `--color-surface-overlay`
+- Text: `--color-text-primary`, `--color-text-secondary`, `--color-text-muted`
+- Accent: `--color-accent` (teal `#0d7c66`)
+- Dark mode via `[data-theme="dark"]` attribute overrides
+- Fonts: Inter (sans), IBM Plex Mono (mono)
+
+### Utilities
+
+`src/lib/format.ts` — `fmtRange()`, `fmtNumber()`, `fmtCurrency()`, `titleCase()`
+
+## Key Conventions
+
+- **Schema changes must be backwards-compatible.** New fields on caliber/firearms JSON should be optional or have defaults so existing files still validate.
+- **Links are root-relative** (`/calibers/308-winchester`, not `./`). No base path prefix — the site deploys to a root domain.
+- **Dynamic routes** use `getStaticPaths()` pulling from content collections.
+- **Nav** uses 5 dropdown sections (Calibers, Compare, Tools, Guides, Reference) with CSS hover dropdowns on desktop and JS-toggled collapsible sections on mobile.
+- **Chart.js** is used for ballistic trajectory/energy charts in island components.
+- **Breadcrumbs** use a `breadcrumbs` prop on `BaseLayout`, rendered with JSON-LD BreadcrumbList schema. Spoke pages include their silo hub as parent (e.g., `[{ label: 'Reference', href: '/reference' }, { label: 'Glossary' }]`).

@@ -160,7 +160,7 @@ export default function CartridgeDiagram({ dimensions: d, name }: Props) {
           <text
             x={lineX + (side === 'right' ? 6 : -6)}
             y={(y1 + y2) / 2}
-            font-family="JetBrains Mono, monospace"
+            font-family="IBM Plex Mono, monospace"
             font-size="9"
             fill="currentColor"
             opacity="0.8"
@@ -184,7 +184,7 @@ export default function CartridgeDiagram({ dimensions: d, name }: Props) {
           <text
             x={(x1 + x2) / 2}
             y={lineY + 12}
-            font-family="JetBrains Mono, monospace"
+            font-family="IBM Plex Mono, monospace"
             font-size="9"
             fill="currentColor"
             opacity="0.8"
@@ -198,9 +198,9 @@ export default function CartridgeDiagram({ dimensions: d, name }: Props) {
   }
 
   return (
-    <div class="border border-surface-border">
+    <div class="border border-surface-border rounded-lg">
       <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
-        <h3 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">Cartridge Profile</h3>
+        <h3 class="text-base font-medium text-text-muted">Cartridge Profile</h3>
       </div>
       <div class="flex justify-center p-4 text-text-muted">
         <svg
@@ -268,7 +268,7 @@ export default function CartridgeDiagram({ dimensions: d, name }: Props) {
           <text
             x={svgWidth / 2}
             y={svgHeight - 5}
-            font-family="JetBrains Mono, monospace"
+            font-family="IBM Plex Mono, monospace"
             font-size="9"
             fill="currentColor"
             opacity="0.5"

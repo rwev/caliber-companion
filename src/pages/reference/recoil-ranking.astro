@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { titleCase, fmtNumber } from '../lib/format';
+import { titleCase, fmtNumber } from '../../lib/format';
 
 const allCalibers = await getCollection('caliberData');
 
@@ -44,20 +44,20 @@ const categories = [...new Set(entries.map(e => e.category))].sort();
 const pageDescription = `Compare free recoil energy across ${entries.length} calibers. Visual ranking from ${entries[0].recoilFtLbs} ft-lbs (${entries[0].name}) to ${entries[entries.length - 1].recoilFtLbs} ft-lbs (${entries[entries.length - 1].name}).`;
 ---
 
-<BaseLayout title="Recoil Ranking" description={pageDescription} breadcrumbs={[{ label: 'Recoil Ranking' }]}>
+<BaseLayout title="Recoil Ranking" description={pageDescription} breadcrumbs={[{ label: 'Reference', href: '/reference' }, { label: 'Recoil Ranking' }]}>
   <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
     <div class="mb-8">
-      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+      <h1 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
         Recoil Ranking
       </h1>
-      <p class="mt-2 font-mono text-base text-text-muted max-w-3xl">
-        All {entries.length} calibers ranked by free recoil energy (ft-lbs). Lower values = softer shooting.
+      <p class="mt-2 text-base text-text-muted max-w-3xl">
+        All <span class="font-mono">{entries.length}</span> calibers ranked by free recoil energy (<span class="font-mono">ft-lbs</span>). Lower values = softer shooting.
         Recoil measured from a reference firearm for each caliber.
       </p>
     </div>
 
     <!-- Legend -->
-    <div class="mb-6 flex flex-wrap items-center gap-3 font-mono text-xs text-text-muted">
+    <div class="mb-6 flex flex-wrap items-center gap-3 text-xs text-text-muted">
       <span>Rating:</span>
       <span class="flex items-center gap-1"><span class="inline-block h-3 w-6 bg-success rounded-sm"></span> Very Low / Low</span>
       <span class="flex items-center gap-1"><span class="inline-block h-3 w-6 bg-info rounded-sm"></span> Moderate</span>
@@ -70,16 +70,16 @@ const pageDescription = `Compare free recoil energy across ${entries.length} cal
       const catEntries = entries.filter(e => e.category === cat);
       return (
         <div class="mb-8">
-          <h2 class="mb-3 font-display text-lg font-semibold tracking-[0.2em] uppercase text-accent border-b border-surface-border pb-2">
+          <h2 class="mb-3 text-lg font-semibold text-accent border-b border-surface-border pb-2">
             {titleCase(cat)} ({catEntries.length})
           </h2>
 
-          <div class="border border-surface-border">
+          <div class="rounded-lg border border-surface-border">
             <div class="divide-y divide-surface-border-subtle">
               {catEntries.map((e, i) => (
                 <div class={`flex items-center gap-3 px-3 py-2 ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
                   <a
-                    href={`/caliber-companion/calibers/${e.slug}`}
+                    href={`/calibers/${e.slug}`}
                     class="w-32 sm:w-40 shrink-0 font-mono text-sm text-text-primary hover:text-accent transition-colors truncate"
                     title={e.name}
                   >
@@ -114,9 +114,9 @@ const pageDescription = `Compare free recoil energy across ${entries.length} cal
     })}
 
     <!-- Overall ranking -->
-    <div class="mt-12 border border-surface-border">
+    <div class="mt-12 rounded-lg border border-surface-border">
       <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
-        <h2 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">
+        <h2 class="text-base font-semibold text-text-muted">
           Full Ranking — All Categories (Lowest to Highest Recoil)
         </h2>
       </div>
@@ -125,7 +125,7 @@ const pageDescription = `Compare free recoil energy across ${entries.length} cal
           <div class={`flex items-center gap-3 px-3 py-1.5 ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
             <span class="w-8 shrink-0 font-mono text-xs text-text-muted text-right">{i + 1}.</span>
             <a
-              href={`/caliber-companion/calibers/${e.slug}`}
+              href={`/calibers/${e.slug}`}
               class="w-32 sm:w-40 shrink-0 font-mono text-sm text-text-primary hover:text-accent transition-colors truncate"
             >
               {e.name}
@@ -139,7 +139,7 @@ const pageDescription = `Compare free recoil energy across ${entries.length} cal
             </div>
 
             <span class="w-16 shrink-0 text-right font-mono text-sm text-text-primary">{e.recoilFtLbs}</span>
-            <span class="hidden sm:inline border border-surface-border px-1.5 py-0.5 font-mono text-xs tracking-wider uppercase text-text-muted shrink-0">
+            <span class="hidden sm:inline rounded-full bg-surface-overlay px-2.5 py-0.5 text-xs font-medium text-text-muted shrink-0">
               {titleCase(e.category)}
             </span>
           </div>
@@ -147,7 +147,7 @@ const pageDescription = `Compare free recoil energy across ${entries.length} cal
       </div>
     </div>
 
-    <p class="mt-4 font-mono text-xs text-text-muted">
+    <p class="mt-4 text-xs text-text-muted">
       Free recoil energy calculated using reference firearm weight for each caliber. Actual felt recoil varies
       with gun weight, stock design, muzzle device, and shooter technique.
     </p>

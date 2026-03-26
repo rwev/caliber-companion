@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { fmtRange, fmtNumber, titleCase } from '../lib/format';
+import { fmtRange, fmtNumber, titleCase } from '../../lib/format';
 
 const allCalibers = await getCollection('caliberData');
 const bySlug = new Map(allCalibers.map(c => [c.data.slug, c.data]));
@@ -103,17 +103,17 @@ const jsonLd = {
   'headline': 'NATO vs Civilian Caliber Equivalents — Complete Reference Guide',
   'description': pageDescription,
   'publisher': { '@type': 'Organization', 'name': 'Caliber Companion' },
-  'mainEntityOfPage': 'https://rwev.github.io/caliber-companion/nato-equivalents',
+  'mainEntityOfPage': 'https://rwev.github.io/reference/nato-equivalents',
 };
 ---
 
-<BaseLayout title="NATO vs Civilian Caliber Equivalents" description={pageDescription} jsonLd={jsonLd} breadcrumbs={[{ label: 'NATO Equivalents' }]}>
+<BaseLayout title="NATO vs Civilian Caliber Equivalents" description={pageDescription} jsonLd={jsonLd} breadcrumbs={[{ label: 'Reference', href: '/reference' }, { label: 'NATO Equivalents' }]}>
   <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
     <div class="mb-8">
-      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+      <h1 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
         NATO vs Civilian Caliber Equivalents
       </h1>
-      <p class="mt-3 font-mono text-base text-text-muted max-w-3xl">
+      <p class="mt-3 text-base text-text-muted max-w-3xl">
         NATO standardizes military cartridges under STANAG (Standardization Agreement) designations.
         Many have direct civilian equivalents — but interchangeability varies. This guide covers the key
         pairings, safety considerations, and technical differences.
@@ -121,14 +121,14 @@ const jsonLd = {
     </div>
 
     <!-- Safety Notice -->
-    <div class="mb-8 border border-danger/30 bg-danger/5 p-4">
+    <div class="mb-8 rounded-lg border border-danger/30 bg-danger/5 p-4">
       <div class="flex items-start gap-3">
         <svg class="h-5 w-5 shrink-0 text-danger mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
         </svg>
         <div>
-          <p class="font-mono text-sm font-medium text-danger uppercase tracking-wider">Safety Warning</p>
-          <p class="mt-1 font-mono text-sm text-text-secondary leading-relaxed">
+          <p class="text-sm font-semibold text-danger">Safety Warning</p>
+          <p class="mt-1 text-sm text-text-secondary leading-relaxed">
             "Equivalent" does not always mean "interchangeable." Some NATO/civilian pairs have different pressure
             specifications and chamber dimensions. Always verify your firearm's markings and consult the manufacturer
             before using ammunition not specifically listed as safe for your chamber.
@@ -141,7 +141,7 @@ const jsonLd = {
     <section class="mb-12">
       <div class="mb-6 flex items-center gap-4">
         <div class="h-px flex-1 bg-surface-border" aria-hidden="true"></div>
-        <h2 class="font-display text-base tracking-[0.25em] uppercase text-text-muted">NATO Standard Cartridges</h2>
+        <h2 class="text-sm font-semibold uppercase tracking-wide text-text-muted">NATO Standard Cartridges</h2>
         <div class="h-px flex-1 bg-surface-border" aria-hidden="true"></div>
       </div>
 
@@ -152,26 +152,26 @@ const jsonLd = {
           const primary = nato!;
 
           return (
-            <div class="border border-surface-border">
+            <div class="rounded-lg border border-surface-border">
               {/* Header */}
               <div class="flex flex-wrap items-center justify-between gap-2 border-b border-surface-border bg-surface-overlay px-4 py-3">
                 <div class="flex items-center gap-3">
-                  <span class="font-display text-lg font-semibold text-text-primary">{pair.natoDesignation}</span>
+                  <span class="font-mono text-lg font-semibold text-text-primary">{pair.natoDesignation}</span>
                   {pair.stanag && (
-                    <span class="border border-accent/30 bg-accent/10 px-2 py-0.5 font-mono text-xs tracking-wider uppercase text-accent">
+                    <span class="rounded-full bg-surface-overlay px-2.5 py-0.5 text-xs font-medium text-accent">
                       {pair.stanag}
                     </span>
                   )}
                 </div>
-                <span class="font-mono text-sm text-text-muted">{pair.role}</span>
+                <span class="text-sm text-text-muted">{pair.role}</span>
               </div>
 
               <div class="p-4 space-y-4">
                 {/* Caliber links */}
                 <div class="flex flex-wrap gap-2">
                   <a
-                    href={`/caliber-companion/calibers/${primary.slug}`}
-                    class="inline-flex items-center gap-1.5 border border-surface-border bg-surface-raised px-3 py-1.5 font-mono text-sm text-text-primary transition-colors hover:border-accent hover:text-accent"
+                    href={`/calibers/${primary.slug}`}
+                    class="inline-flex items-center gap-1.5 rounded-md border border-surface-border bg-surface-raised px-3 py-1.5 font-mono text-sm text-text-primary transition-colors hover:border-accent hover:text-accent"
                   >
                     <span class="text-accent font-medium">NATO</span>
                     {primary.name}
@@ -179,8 +179,8 @@ const jsonLd = {
                   </a>
                   {civilian && (
                     <a
-                      href={`/caliber-companion/calibers/${civilian.slug}`}
-                      class="inline-flex items-center gap-1.5 border border-surface-border bg-surface-raised px-3 py-1.5 font-mono text-sm text-text-primary transition-colors hover:border-accent hover:text-accent"
+                      href={`/calibers/${civilian.slug}`}
+                      class="inline-flex items-center gap-1.5 rounded-md border border-surface-border bg-surface-raised px-3 py-1.5 font-mono text-sm text-text-primary transition-colors hover:border-accent hover:text-accent"
                     >
                       <span class="text-text-muted font-medium">CIV</span>
                       {civilian.name}
@@ -192,33 +192,33 @@ const jsonLd = {
                 {/* Quick specs */}
                 <div class="grid grid-cols-2 gap-3 sm:grid-cols-4">
                   <div>
-                    <div class="font-mono text-xs tracking-wider uppercase text-text-muted">Velocity</div>
+                    <div class="text-xs font-medium uppercase tracking-wide text-text-muted">Velocity</div>
                     <div class="mt-0.5 font-mono text-sm text-text-secondary">
                       {fmtRange(primary.typical_velocity_fps, 'fps')}
                     </div>
                   </div>
                   <div>
-                    <div class="font-mono text-xs tracking-wider uppercase text-text-muted">Energy</div>
+                    <div class="text-xs font-medium uppercase tracking-wide text-text-muted">Energy</div>
                     <div class="mt-0.5 font-mono text-sm text-text-secondary">
                       {fmtRange(primary.typical_energy_ft_lbs, 'ft·lbs')}
                     </div>
                   </div>
                   <div>
-                    <div class="font-mono text-xs tracking-wider uppercase text-text-muted">Eff. Range</div>
+                    <div class="text-xs font-medium uppercase tracking-wide text-text-muted">Eff. Range</div>
                     <div class="mt-0.5 font-mono text-sm text-text-secondary">
                       {fmtNumber(primary.effective_range_yd)} yd
                     </div>
                   </div>
                   <div>
-                    <div class="font-mono text-xs tracking-wider uppercase text-text-muted">Introduced</div>
+                    <div class="text-xs font-medium uppercase tracking-wide text-text-muted">Introduced</div>
                     <div class="mt-0.5 font-mono text-sm text-text-secondary">{primary.year_introduced}</div>
                   </div>
                 </div>
 
                 {/* Interchangeability */}
                 <div class="border-t border-surface-border-subtle pt-3">
-                  <div class="font-mono text-xs tracking-wider uppercase text-text-muted mb-1.5">Interchangeability</div>
-                  <p class="font-mono text-sm text-text-secondary leading-relaxed">{pair.interchangeability}</p>
+                  <div class="text-xs font-medium uppercase tracking-wide text-text-muted mb-1.5">Interchangeability</div>
+                  <p class="text-sm text-text-secondary leading-relaxed">{pair.interchangeability}</p>
                   <div class="mt-2 flex flex-wrap gap-2">
                     {pair.safeDirection && (
                       <span class="inline-flex items-center gap-1 font-mono text-xs text-success">
@@ -245,7 +245,7 @@ const jsonLd = {
     <section class="mb-12">
       <div class="mb-6 flex items-center gap-4">
         <div class="h-px flex-1 bg-surface-border" aria-hidden="true"></div>
-        <h2 class="font-display text-base tracking-[0.25em] uppercase text-text-muted">Other Military Cartridges</h2>
+        <h2 class="text-sm font-semibold uppercase tracking-wide text-text-muted">Other Military Cartridges</h2>
         <div class="h-px flex-1 bg-surface-border" aria-hidden="true"></div>
       </div>
 
@@ -254,17 +254,17 @@ const jsonLd = {
           const cal = bySlug.get(item.slug);
           if (!cal) return null;
           return (
-            <div class="border border-surface-border">
+            <div class="rounded-lg border border-surface-border">
               <div class="flex flex-wrap items-center justify-between gap-2 border-b border-surface-border bg-surface-overlay px-4 py-2.5">
                 <div class="flex items-center gap-3">
-                  <span class="font-display text-base font-semibold text-text-primary">{item.natoDesignation}</span>
+                  <span class="font-mono text-base font-semibold text-text-primary">{item.natoDesignation}</span>
                 </div>
-                <span class="font-mono text-sm text-text-muted">{item.role}</span>
+                <span class="text-sm text-text-muted">{item.role}</span>
               </div>
               <div class="p-4 space-y-3">
                 <a
-                  href={`/caliber-companion/calibers/${cal.slug}`}
-                  class="inline-flex items-center gap-1.5 border border-surface-border bg-surface-raised px-3 py-1.5 font-mono text-sm text-text-primary transition-colors hover:border-accent hover:text-accent"
+                  href={`/calibers/${cal.slug}`}
+                  class="inline-flex items-center gap-1.5 rounded-md border border-surface-border bg-surface-raised px-3 py-1.5 font-mono text-sm text-text-primary transition-colors hover:border-accent hover:text-accent"
                 >
                   {cal.name}
                   <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7" /></svg>
@@ -272,24 +272,24 @@ const jsonLd = {
 
                 <div class="grid grid-cols-2 gap-3 sm:grid-cols-4">
                   <div>
-                    <div class="font-mono text-xs tracking-wider uppercase text-text-muted">Velocity</div>
+                    <div class="text-xs font-medium uppercase tracking-wide text-text-muted">Velocity</div>
                     <div class="mt-0.5 font-mono text-sm text-text-secondary">{fmtRange(cal.typical_velocity_fps, 'fps')}</div>
                   </div>
                   <div>
-                    <div class="font-mono text-xs tracking-wider uppercase text-text-muted">Energy</div>
+                    <div class="text-xs font-medium uppercase tracking-wide text-text-muted">Energy</div>
                     <div class="mt-0.5 font-mono text-sm text-text-secondary">{fmtRange(cal.typical_energy_ft_lbs, 'ft·lbs')}</div>
                   </div>
                   <div>
-                    <div class="font-mono text-xs tracking-wider uppercase text-text-muted">Eff. Range</div>
+                    <div class="text-xs font-medium uppercase tracking-wide text-text-muted">Eff. Range</div>
                     <div class="mt-0.5 font-mono text-sm text-text-secondary">{fmtNumber(cal.effective_range_yd)} yd</div>
                   </div>
                   <div>
-                    <div class="font-mono text-xs tracking-wider uppercase text-text-muted">Introduced</div>
+                    <div class="text-xs font-medium uppercase tracking-wide text-text-muted">Introduced</div>
                     <div class="mt-0.5 font-mono text-sm text-text-secondary">{cal.year_introduced}</div>
                   </div>
                 </div>
 
-                <p class="font-mono text-sm text-text-muted leading-relaxed border-t border-surface-border-subtle pt-3">{item.notes}</p>
+                <p class="text-sm text-text-muted leading-relaxed border-t border-surface-border-subtle pt-3">{item.notes}</p>
               </div>
             </div>
           );
@@ -301,18 +301,18 @@ const jsonLd = {
     <section>
       <div class="mb-6 flex items-center gap-4">
         <div class="h-px flex-1 bg-surface-border" aria-hidden="true"></div>
-        <h2 class="font-display text-base tracking-[0.25em] uppercase text-text-muted">Quick Reference</h2>
+        <h2 class="text-sm font-semibold uppercase tracking-wide text-text-muted">Quick Reference</h2>
         <div class="h-px flex-1 bg-surface-border" aria-hidden="true"></div>
       </div>
 
-      <div class="border border-surface-border overflow-x-auto" tabindex="0" role="region" aria-label="NATO vs civilian caliber quick reference">
+      <div class="rounded-lg border border-surface-border overflow-x-auto" tabindex="0" role="region" aria-label="NATO vs civilian caliber quick reference">
         <table class="w-full text-left font-mono">
           <thead>
             <tr class="border-b border-surface-border bg-surface-overlay text-text-muted">
-              <th scope="col" class="px-4 py-2.5 font-medium tracking-wider uppercase text-sm">NATO Designation</th>
-              <th scope="col" class="px-4 py-2.5 font-medium tracking-wider uppercase text-sm">Civilian Name</th>
-              <th scope="col" class="px-4 py-2.5 font-medium tracking-wider uppercase text-sm">STANAG</th>
-              <th scope="col" class="px-4 py-2.5 font-medium tracking-wider uppercase text-sm text-center">Interchangeable?</th>
+              <th scope="col" class="px-4 py-2.5 text-xs font-medium uppercase tracking-wide">NATO Designation</th>
+              <th scope="col" class="px-4 py-2.5 text-xs font-medium uppercase tracking-wide">Civilian Name</th>
+              <th scope="col" class="px-4 py-2.5 text-xs font-medium uppercase tracking-wide">STANAG</th>
+              <th scope="col" class="px-4 py-2.5 text-xs font-medium uppercase tracking-wide text-center">Interchangeable?</th>
             </tr>
           </thead>
           <tbody>
@@ -342,7 +342,7 @@ const jsonLd = {
           </tbody>
         </table>
       </div>
-      <p class="mt-2 font-mono text-xs text-text-muted">
+      <p class="mt-2 text-xs text-text-muted">
         * Partial: .223 Rem fires safely in 5.56 NATO chambers, but 5.56 NATO should not be fired in .223 Rem-only chambers. Use ".223 Wylde" chambers for full compatibility.
       </p>
     </section>

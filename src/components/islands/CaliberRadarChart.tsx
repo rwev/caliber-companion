@@ -103,8 +103,8 @@ export default function CaliberRadarChart({ energy, range, recoil, cost, availab
               borderWidth: 1,
               titleColor: getCSSVar('--color-text-primary'),
               bodyColor: getCSSVar('--color-text-secondary'),
-              titleFont: { family: '"JetBrains Mono", monospace', size: 12 },
-              bodyFont: { family: '"JetBrains Mono", monospace', size: 12 },
+              titleFont: { family: '"IBM Plex Mono", monospace', size: 12 },
+              bodyFont: { family: '"IBM Plex Mono", monospace', size: 12 },
               padding: 8,
               callbacks: {
                 label: (ctx) => ` ${Math.round(ctx.raw as number)}/100`,
@@ -119,7 +119,7 @@ export default function CaliberRadarChart({ energy, range, recoil, cost, availab
                 stepSize: 25,
                 color: textMuted,
                 backdropColor: 'transparent',
-                font: { family: '"JetBrains Mono", monospace', size: 10 },
+                font: { family: '"IBM Plex Mono", monospace', size: 10 },
               },
               pointLabels: {
                 color: textMuted,
@@ -142,10 +142,10 @@ export default function CaliberRadarChart({ energy, range, recoil, cost, availab
   }, [themeKey, ...scores]);
 
   return (
-    <div class="border border-surface-border">
+    <div class="border border-surface-border rounded-lg">
       <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
-        <h3 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">
-          Profile
+        <h3 class="text-sm font-semibold uppercase tracking-wide text-text-muted">
+          Characteristics
         </h3>
       </div>
       <div class="p-3" style={{ maxWidth: '320px', margin: '0 auto' }}>

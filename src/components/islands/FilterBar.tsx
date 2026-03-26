@@ -96,7 +96,7 @@ export default function FilterBar({ calibers, basePath }: Props) {
             value={search}
             onInput={(e) => setSearch((e.target as HTMLInputElement).value)}
             aria-label="Search calibers"
-            class="w-full border border-surface-border bg-surface-raised py-3 pl-10 pr-4 font-mono text-base text-text-primary placeholder:text-text-muted focus:border-accent/50"
+            class="w-full rounded-md border border-surface-border bg-surface-raised py-3 pl-10 pr-4 text-base text-text-primary placeholder:text-text-muted focus:border-accent/50"
           />
         </div>
 
@@ -106,7 +106,7 @@ export default function FilterBar({ calibers, basePath }: Props) {
             <button
               onClick={() => setActiveCategory(null)}
               aria-pressed={!activeCategory}
-              class={`px-3 py-1.5 font-mono text-sm tracking-wider uppercase transition-colors ${
+              class={`rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
                 !activeCategory
                   ? 'border border-accent/30 bg-accent/15 text-accent'
                   : 'border border-surface-border text-text-muted hover:text-text-secondary'
@@ -119,7 +119,7 @@ export default function FilterBar({ calibers, basePath }: Props) {
                 key={cat}
                 onClick={() => setActiveCategory(activeCategory === cat ? null : cat)}
                 aria-pressed={activeCategory === cat}
-                class={`px-3 py-1.5 font-mono text-sm tracking-wider uppercase transition-colors ${
+                class={`rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
                   activeCategory === cat
                     ? 'border border-accent/30 bg-accent/15 text-accent'
                     : 'border border-surface-border text-text-muted hover:text-text-secondary'
@@ -132,12 +132,12 @@ export default function FilterBar({ calibers, basePath }: Props) {
 
           {/* Sort */}
           <div class="flex items-center gap-2">
-            <label for="sort-select" class="font-mono text-sm tracking-wider uppercase text-text-muted">Sort</label>
+            <label for="sort-select" class="text-sm font-medium text-text-muted">Sort</label>
             <select
               id="sort-select"
               value={sortKey}
               onChange={(e) => setSortKey((e.target as HTMLSelectElement).value as SortKey)}
-              class="border border-surface-border bg-surface-raised px-2 py-1 font-mono text-sm text-text-secondary focus:border-accent/50"
+              class="rounded-md border border-surface-border bg-surface-raised px-2 py-1 text-sm text-text-secondary focus:border-accent/50"
             >
               <option value="name">Name</option>
               <option value="year">Year Introduced</option>
@@ -151,14 +151,14 @@ export default function FilterBar({ calibers, basePath }: Props) {
       {/* Results */}
       {filtered.length === 0 ? (
         <div class="py-12 text-center" role="status">
-          <div class="font-mono text-base text-text-muted">No calibers match your search.</div>
+          <div class="text-base text-text-muted">No calibers match your search.</div>
         </div>
       ) : (
         <div class="space-y-10">
           {grouped.map(([category, items]) => (
             <section key={category} aria-label={`${titleCase(category)} calibers`}>
               <div class="mb-4 flex items-center gap-4">
-                <h2 class="font-display text-base tracking-[0.25em] uppercase text-accent">
+                <h2 class="text-base font-semibold text-accent">
                   {titleCase(category)}
                 </h2>
                 <div class="h-px flex-1 bg-surface-border" aria-hidden="true"></div>
@@ -170,14 +170,14 @@ export default function FilterBar({ calibers, basePath }: Props) {
                   <a
                     key={c.slug}
                     href={`${basePath}/calibers/${c.slug}`}
-                    class="group block border border-surface-border bg-surface transition-all hover:border-accent/40 hover:bg-surface-raised hover:shadow-[0_0_24px_rgba(224,90,43,0.06)]"
+                    class="group block rounded-lg border border-surface-border bg-surface transition-all hover:border-accent/40 hover:bg-surface-raised hover:shadow-md"
                     style={{ contentVisibility: 'auto', containIntrinsicSize: 'auto 240px' }}
                   >
                     <div class="p-5">
                       <div class="flex items-start justify-between gap-3">
                         <div class="min-w-0">
                           <h3
-                            class="font-display text-xl font-semibold text-text-primary transition-colors group-hover:text-accent truncate"
+                            class="text-xl font-semibold text-text-primary transition-colors group-hover:text-accent truncate"
                           >
                             {c.name}
                           </h3>
@@ -185,32 +185,32 @@ export default function FilterBar({ calibers, basePath }: Props) {
                             {c.designation}
                           </div>
                         </div>
-                        <span class="shrink-0 border border-surface-border px-2 py-0.5 font-mono text-sm tracking-wider uppercase text-text-muted">
+                        <span class="shrink-0 rounded-full bg-surface-overlay px-2.5 py-0.5 text-xs font-medium text-text-muted">
                           {titleCase(c.category)}
                         </span>
                       </div>
 
                       <div class="mt-4 grid grid-cols-2 gap-x-4 gap-y-3">
                         <div>
-                          <div class="font-mono text-sm tracking-[0.15em] uppercase text-text-muted">Velocity</div>
+                          <div class="text-xs font-medium uppercase tracking-wide text-text-muted">Velocity</div>
                           <div class="font-mono text-base text-text-secondary">
                             {c.typical_velocity_fps[0]}–{c.typical_velocity_fps[1]} <span class="text-text-muted text-sm">fps</span>
                           </div>
                         </div>
                         <div>
-                          <div class="font-mono text-sm tracking-[0.15em] uppercase text-text-muted">Energy</div>
+                          <div class="text-xs font-medium uppercase tracking-wide text-text-muted">Energy</div>
                           <div class="font-mono text-base text-text-secondary">
                             {c.typical_energy_ft_lbs[0]}–{c.typical_energy_ft_lbs[1]} <span class="text-text-muted text-sm">ft·lbs</span>
                           </div>
                         </div>
                         <div>
-                          <div class="font-mono text-sm tracking-[0.15em] uppercase text-text-muted">Eff. Range</div>
+                          <div class="text-xs font-medium uppercase tracking-wide text-text-muted">Eff. Range</div>
                           <div class="font-mono text-base text-text-secondary">
                             {c.effective_range_yd} <span class="text-text-muted text-sm">yd</span>
                           </div>
                         </div>
                         <div>
-                          <div class="font-mono text-sm tracking-[0.15em] uppercase text-text-muted">Recoil</div>
+                          <div class="text-xs font-medium uppercase tracking-wide text-text-muted">Recoil</div>
                           <div class="font-mono text-base text-text-secondary">
                             {titleCase(c.recoil_subjective)}
                           </div>
@@ -218,10 +218,10 @@ export default function FilterBar({ calibers, basePath }: Props) {
                       </div>
 
                       <div class="mt-4 flex items-center justify-between border-t border-surface-border-subtle pt-3">
-                        <span class="font-mono text-sm tracking-wider uppercase text-text-muted">
+                        <span class="text-sm text-text-muted">
                           {titleCase(c.popularity_tier)}
                         </span>
-                        <span class="font-mono text-sm text-text-muted transition-colors group-hover:text-accent" aria-hidden="true">
+                        <span class="text-sm text-text-muted transition-colors group-hover:text-accent" aria-hidden="true">
                           View →
                         </span>
                       </div>
