@@ -177,6 +177,36 @@
           "drop_in": -1.6
         }
       ]
+    },
+    {
+      "name": "Fiocchi 73 gr FMJ",
+      "bullet_weight_gr": 73,
+      "bullet_type": "FMJ",
+      "muzzle_velocity_fps": 1000,
+      "muzzle_energy_ft_lbs": 162,
+      "barrel_length_in": 3.8,
+      "bc_g1": 0.115,
+      "sectional_density": 0.106,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1000,
+          "energy_ft_lbs": 162,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 958,
+          "energy_ft_lbs": 149,
+          "drop_in": -0.3
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 919,
+          "energy_ft_lbs": 137,
+          "drop_in": -1.5
+        }
+      ]
     }
   ],
   "max_pressure_psi": 20500,

@@ -49,7 +49,7 @@
   ],
   "popularity_tier": "common",
   "cost_per_round_usd": [
-    1.0,
+    1,
     2.5
   ],
   "common_firearms": [
@@ -99,7 +99,7 @@
       "bullet_type": "ELD Match",
       "muzzle_velocity_fps": 2750,
       "muzzle_energy_ft_lbs": 1813,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "bc_g1": 0.536,
       "bc_g7": 0.275,
       "sectional_density": 0.261,
@@ -108,13 +108,13 @@
           "distance_yd": 0,
           "velocity_fps": 2750,
           "energy_ft_lbs": 1813,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
           "velocity_fps": 2597,
           "energy_ft_lbs": 1617,
-          "drop_in": -2.0
+          "drop_in": -2
         },
         {
           "distance_yd": 200,
@@ -148,16 +148,16 @@
       "bullet_type": "BTHP",
       "muzzle_velocity_fps": 2650,
       "muzzle_energy_ft_lbs": 1639,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "bc_g1": 0.495,
-      "bc_g7": 0.250,
+      "bc_g7": 0.25,
       "sectional_density": 0.254,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2650,
           "energy_ft_lbs": 1639,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -197,7 +197,7 @@
       "bullet_type": "ELD-X",
       "muzzle_velocity_fps": 2800,
       "muzzle_energy_ft_lbs": 1793,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "bc_g1": 0.512,
       "bc_g7": 0.259,
       "sectional_density": 0.249,
@@ -206,7 +206,7 @@
           "distance_yd": 0,
           "velocity_fps": 2800,
           "energy_ft_lbs": 1793,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -239,6 +239,48 @@
           "drop_in": -56.6
         }
       ]
+    },
+    {
+      "name": "Federal Premium 80 gr Barnes TSX",
+      "bullet_weight_gr": 80,
+      "bullet_type": "Barnes TSX (Lead-Free)",
+      "muzzle_velocity_fps": 2950,
+      "muzzle_energy_ft_lbs": 1546,
+      "barrel_length_in": 24,
+      "bc_g1": 0.356,
+      "sectional_density": 0.193,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2950,
+          "energy_ft_lbs": 1546,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2720,
+          "energy_ft_lbs": 1315,
+          "drop_in": -1.6
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2501,
+          "energy_ft_lbs": 1112,
+          "drop_in": -7.2
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2294,
+          "energy_ft_lbs": 935,
+          "drop_in": -17.2
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2098,
+          "energy_ft_lbs": 782,
+          "drop_in": -32.6
+        }
+      ]
     }
   ],
   "recommended_game": [
@@ -266,8 +308,8 @@
   "max_pressure_psi": 52000,
   "primer_type": "Small Rifle",
   "powder_charge_range_gr": [
-    24.0,
-    30.0
+    24,
+    30
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",

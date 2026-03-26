@@ -344,6 +344,48 @@
           "drop_in": -49.6
         }
       ]
+    },
+    {
+      "name": "Federal Power-Shok 130 gr SP",
+      "bullet_weight_gr": 130,
+      "bullet_type": "Soft Point",
+      "muzzle_velocity_fps": 3060,
+      "muzzle_energy_ft_lbs": 2702,
+      "barrel_length_in": 24,
+      "bc_g1": 0.349,
+      "sectional_density": 0.242,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 3060,
+          "energy_ft_lbs": 2702,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2802,
+          "energy_ft_lbs": 2266,
+          "drop_in": -1.5
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2558,
+          "energy_ft_lbs": 1889,
+          "drop_in": -6.8
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2327,
+          "energy_ft_lbs": 1563,
+          "drop_in": -16.6
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2110,
+          "energy_ft_lbs": 1285,
+          "drop_in": -31.8
+        }
+      ]
     }
   ],
   "recommended_game": [

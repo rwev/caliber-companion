@@ -177,6 +177,36 @@
           "drop_in": -16.2
         }
       ]
+    },
+    {
+      "name": "Buffalo Bore Heavy 335 gr LFN",
+      "bullet_weight_gr": 335,
+      "bullet_type": "Hard Cast LFN",
+      "muzzle_velocity_fps": 2100,
+      "muzzle_energy_ft_lbs": 2279,
+      "barrel_length_in": 24,
+      "bc_g1": 0.205,
+      "sectional_density": 0.255,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2100,
+          "energy_ft_lbs": 2279,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1778,
+          "energy_ft_lbs": 1634,
+          "drop_in": -4
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1498,
+          "energy_ft_lbs": 1160,
+          "drop_in": -17.8
+        }
+      ]
     }
   ],
   "recommended_game": [

@@ -213,6 +213,55 @@
           "drop_in": -40.2
         }
       ]
+    },
+    {
+      "name": "Hornady Precision Hunter 162 gr ELD-X",
+      "bullet_weight_gr": 162,
+      "bullet_type": "ELD-X",
+      "muzzle_velocity_fps": 3150,
+      "muzzle_energy_ft_lbs": 3572,
+      "barrel_length_in": 26,
+      "bc_g1": 0.631,
+      "bc_g7": 0.315,
+      "sectional_density": 0.287,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 3150,
+          "energy_ft_lbs": 3572,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2981,
+          "energy_ft_lbs": 3198,
+          "drop_in": -1.2
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2818,
+          "energy_ft_lbs": 2856,
+          "drop_in": -5.4
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2660,
+          "energy_ft_lbs": 2547,
+          "drop_in": -12.8
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2508,
+          "energy_ft_lbs": 2264,
+          "drop_in": -23.6
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2361,
+          "energy_ft_lbs": 2008,
+          "drop_in": -38.4
+        }
+      ]
     }
   ],
   "recommended_game": [

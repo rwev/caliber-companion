@@ -162,6 +162,34 @@
           "drop_in": -0.6
         }
       ]
+    },
+    {
+      "name": "Federal Game Load 1-1/8oz #7.5",
+      "bullet_weight_gr": 492,
+      "bullet_type": "#7.5 Shot (2-3/4\")",
+      "muzzle_velocity_fps": 1200,
+      "muzzle_energy_ft_lbs": 1572,
+      "barrel_length_in": 28,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1200,
+          "energy_ft_lbs": 1572,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 20,
+          "velocity_fps": 1128,
+          "energy_ft_lbs": 1390,
+          "drop_in": -0.2
+        },
+        {
+          "distance_yd": 40,
+          "velocity_fps": 1064,
+          "energy_ft_lbs": 1237,
+          "drop_in": -0.6
+        }
+      ]
     }
   ],
   "recommended_game": [

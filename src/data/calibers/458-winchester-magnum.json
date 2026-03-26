@@ -181,6 +181,36 @@
           "drop_in": -18.2
         }
       ]
+    },
+    {
+      "name": "Federal Premium 500 gr Trophy Bonded Bear Claw",
+      "bullet_weight_gr": 500,
+      "bullet_type": "TBBC",
+      "muzzle_velocity_fps": 2090,
+      "muzzle_energy_ft_lbs": 4849,
+      "barrel_length_in": 24,
+      "bc_g1": 0.295,
+      "sectional_density": 0.341,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2090,
+          "energy_ft_lbs": 4849,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1820,
+          "energy_ft_lbs": 3678,
+          "drop_in": -4.4
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1578,
+          "energy_ft_lbs": 2764,
+          "drop_in": -18.8
+        }
+      ]
     }
   ],
   "recommended_game": [

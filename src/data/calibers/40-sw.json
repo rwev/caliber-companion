@@ -238,6 +238,42 @@
           "drop_in": -7.6
         }
       ]
+    },
+    {
+      "name": "Winchester USA 165 gr FMJ FN",
+      "bullet_weight_gr": 165,
+      "bullet_type": "FMJ FN",
+      "muzzle_velocity_fps": 1060,
+      "muzzle_energy_ft_lbs": 412,
+      "barrel_length_in": 4,
+      "bc_g1": 0.15,
+      "sectional_density": 0.147,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1060,
+          "energy_ft_lbs": 412,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1025,
+          "energy_ft_lbs": 385,
+          "drop_in": -0.3
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 992,
+          "energy_ft_lbs": 361,
+          "drop_in": -1.4
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 935,
+          "energy_ft_lbs": 320,
+          "drop_in": -6.8
+        }
+      ]
     }
   ],
   "max_pressure_psi": 35000,

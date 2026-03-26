@@ -236,6 +236,55 @@
           "drop_in": -54.8
         }
       ]
+    },
+    {
+      "name": "Norma Golden Target 300 gr HPBT",
+      "bullet_weight_gr": 300,
+      "bullet_type": "Golden Target HPBT",
+      "muzzle_velocity_fps": 2625,
+      "muzzle_energy_ft_lbs": 4590,
+      "barrel_length_in": 27,
+      "bc_g1": 0.768,
+      "bc_g7": 0.385,
+      "sectional_density": 0.375,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2625,
+          "energy_ft_lbs": 4590,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2504,
+          "energy_ft_lbs": 4180,
+          "drop_in": -2
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2387,
+          "energy_ft_lbs": 3797,
+          "drop_in": -8.4
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2273,
+          "energy_ft_lbs": 3443,
+          "drop_in": -19.2
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2163,
+          "energy_ft_lbs": 3118,
+          "drop_in": -34.8
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2056,
+          "energy_ft_lbs": 2817,
+          "drop_in": -55.8
+        }
+      ]
     }
   ],
   "recommended_game": [

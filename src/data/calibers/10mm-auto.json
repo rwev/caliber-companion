@@ -187,6 +187,42 @@
           "drop_in": -3.5
         }
       ]
+    },
+    {
+      "name": "Federal American Eagle 180 gr FMJ",
+      "bullet_weight_gr": 180,
+      "bullet_type": "FMJ",
+      "muzzle_velocity_fps": 1030,
+      "muzzle_energy_ft_lbs": 424,
+      "barrel_length_in": 5,
+      "bc_g1": 0.165,
+      "sectional_density": 0.161,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1030,
+          "energy_ft_lbs": 424,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 998,
+          "energy_ft_lbs": 398,
+          "drop_in": -0.3
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 967,
+          "energy_ft_lbs": 374,
+          "drop_in": -1.5
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 913,
+          "energy_ft_lbs": 333,
+          "drop_in": -7
+        }
+      ]
     }
   ],
   "max_pressure_psi": 37500,

@@ -202,6 +202,42 @@
           "drop_in": -10.4
         }
       ]
+    },
+    {
+      "name": "FN SS190 31 gr AP",
+      "bullet_weight_gr": 31,
+      "bullet_type": "AP (Armor Piercing)",
+      "muzzle_velocity_fps": 2350,
+      "muzzle_energy_ft_lbs": 380,
+      "barrel_length_in": 7.1,
+      "bc_g1": 0.155,
+      "sectional_density": 0.091,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2350,
+          "energy_ft_lbs": 380,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 2050,
+          "energy_ft_lbs": 289,
+          "drop_in": -0.1
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1780,
+          "energy_ft_lbs": 218,
+          "drop_in": -1.2
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1340,
+          "energy_ft_lbs": 124,
+          "drop_in": -8.4
+        }
+      ]
     }
   ],
   "max_pressure_psi": 58000,

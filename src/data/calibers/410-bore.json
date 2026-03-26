@@ -166,6 +166,28 @@
           "drop_in": -0.5
         }
       ]
+    },
+    {
+      "name": "Federal Personal Defense 3\" 000 Buck 5 pellet",
+      "bullet_weight_gr": 275,
+      "bullet_type": "000 Buck (5 pellet, 3\")",
+      "muzzle_velocity_fps": 775,
+      "muzzle_energy_ft_lbs": 367,
+      "barrel_length_in": 18.5,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 775,
+          "energy_ft_lbs": 367,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 15,
+          "velocity_fps": 725,
+          "energy_ft_lbs": 321,
+          "drop_in": -0.2
+        }
+      ]
     }
   ],
   "recommended_game": [

@@ -175,6 +175,42 @@
           "drop_in": -4.8
         }
       ]
+    },
+    {
+      "name": "Federal American Eagle 115 gr FMJ",
+      "bullet_weight_gr": 115,
+      "bullet_type": "FMJ",
+      "muzzle_velocity_fps": 1150,
+      "muzzle_energy_ft_lbs": 338,
+      "barrel_length_in": 3.5,
+      "bc_g1": 0.135,
+      "sectional_density": 0.152,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1150,
+          "energy_ft_lbs": 338,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1100,
+          "energy_ft_lbs": 309,
+          "drop_in": -0.2
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1055,
+          "energy_ft_lbs": 285,
+          "drop_in": -1.2
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 980,
+          "energy_ft_lbs": 245,
+          "drop_in": -6
+        }
+      ]
     }
   ],
   "max_pressure_psi": 45000,

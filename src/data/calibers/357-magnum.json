@@ -243,6 +243,42 @@
           "drop_in": -4.3
         }
       ]
+    },
+    {
+      "name": "Federal American Eagle 158 gr JSP",
+      "bullet_weight_gr": 158,
+      "bullet_type": "JSP",
+      "muzzle_velocity_fps": 1240,
+      "muzzle_energy_ft_lbs": 539,
+      "barrel_length_in": 4,
+      "bc_g1": 0.165,
+      "sectional_density": 0.177,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1240,
+          "energy_ft_lbs": 539,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1185,
+          "energy_ft_lbs": 493,
+          "drop_in": -0.2
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1135,
+          "energy_ft_lbs": 452,
+          "drop_in": -0.8
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1050,
+          "energy_ft_lbs": 387,
+          "drop_in": -4.6
+        }
+      ]
     }
   ],
   "recommended_game": [

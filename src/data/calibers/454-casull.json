@@ -187,6 +187,42 @@
           "drop_in": -10.2
         }
       ]
+    },
+    {
+      "name": "Hornady XTP 300 gr JHP",
+      "bullet_weight_gr": 300,
+      "bullet_type": "XTP JHP",
+      "muzzle_velocity_fps": 1650,
+      "muzzle_energy_ft_lbs": 1813,
+      "barrel_length_in": 7.5,
+      "bc_g1": 0.21,
+      "sectional_density": 0.211,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1650,
+          "energy_ft_lbs": 1813,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1520,
+          "energy_ft_lbs": 1540,
+          "drop_in": -0.2
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1402,
+          "energy_ft_lbs": 1310,
+          "drop_in": -1.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1205,
+          "energy_ft_lbs": 967,
+          "drop_in": -10.6
+        }
+      ]
     }
   ],
   "recommended_game": [

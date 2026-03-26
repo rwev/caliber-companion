@@ -178,6 +178,42 @@
           "drop_in": -3.2
         }
       ]
+    },
+    {
+      "name": "Federal Premium 100 gr JHP",
+      "bullet_weight_gr": 100,
+      "bullet_type": "JHP",
+      "muzzle_velocity_fps": 1500,
+      "muzzle_energy_ft_lbs": 500,
+      "barrel_length_in": 4,
+      "bc_g1": 0.142,
+      "sectional_density": 0.142,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1500,
+          "energy_ft_lbs": 500,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1420,
+          "energy_ft_lbs": 448,
+          "drop_in": -0.1
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1345,
+          "energy_ft_lbs": 402,
+          "drop_in": -0.4
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1215,
+          "energy_ft_lbs": 328,
+          "drop_in": -2.6
+        }
+      ]
     }
   ],
   "recommended_game": [

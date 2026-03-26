@@ -170,6 +170,34 @@
           "drop_in": -0.8
         }
       ]
+    },
+    {
+      "name": "Remington Express 2-3/4\" #6",
+      "bullet_weight_gr": 328,
+      "bullet_type": "#6 Shot (2-3/4\")",
+      "muzzle_velocity_fps": 1295,
+      "muzzle_energy_ft_lbs": 1222,
+      "barrel_length_in": 26,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1295,
+          "energy_ft_lbs": 1222,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 20,
+          "velocity_fps": 1210,
+          "energy_ft_lbs": 1067,
+          "drop_in": -0.1
+        },
+        {
+          "distance_yd": 40,
+          "velocity_fps": 1135,
+          "energy_ft_lbs": 939,
+          "drop_in": -0.5
+        }
+      ]
     }
   ],
   "recommended_game": [

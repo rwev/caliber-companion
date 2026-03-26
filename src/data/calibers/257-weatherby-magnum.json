@@ -196,6 +196,48 @@
           "drop_in": -34.6
         }
       ]
+    },
+    {
+      "name": "Weatherby Select Plus 100 gr Barnes TTSX",
+      "bullet_weight_gr": 100,
+      "bullet_type": "Barnes TTSX",
+      "muzzle_velocity_fps": 3602,
+      "muzzle_energy_ft_lbs": 2881,
+      "barrel_length_in": 26,
+      "bc_g1": 0.357,
+      "sectional_density": 0.216,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 3602,
+          "energy_ft_lbs": 2881,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 3344,
+          "energy_ft_lbs": 2486,
+          "drop_in": -0.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 3101,
+          "energy_ft_lbs": 2135,
+          "drop_in": -4
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2873,
+          "energy_ft_lbs": 1833,
+          "drop_in": -10.2
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2657,
+          "energy_ft_lbs": 1568,
+          "drop_in": -19.4
+        }
+      ]
     }
   ],
   "recommended_game": [

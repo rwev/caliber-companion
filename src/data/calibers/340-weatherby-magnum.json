@@ -188,6 +188,42 @@
           "drop_in": -30.4
         }
       ]
+    },
+    {
+      "name": "Hornady DGS 250 gr Solid",
+      "bullet_weight_gr": 250,
+      "bullet_type": "DGS (Dangerous Game Solid)",
+      "muzzle_velocity_fps": 2850,
+      "muzzle_energy_ft_lbs": 4510,
+      "barrel_length_in": 26,
+      "bc_g1": 0.34,
+      "sectional_density": 0.313,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2850,
+          "energy_ft_lbs": 4510,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2578,
+          "energy_ft_lbs": 3693,
+          "drop_in": -1.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2322,
+          "energy_ft_lbs": 2994,
+          "drop_in": -8.4
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2082,
+          "energy_ft_lbs": 2410,
+          "drop_in": -21
+        }
+      ]
     }
   ],
   "recommended_game": [

@@ -161,6 +161,34 @@
           "drop_in": -0.5
         }
       ]
+    },
+    {
+      "name": "Remington Sportsman Hi-Speed Steel 3-1/2\" T Shot",
+      "bullet_weight_gr": 700,
+      "bullet_type": "Steel T Shot (3-1/2\")",
+      "muzzle_velocity_fps": 1300,
+      "muzzle_energy_ft_lbs": 2630,
+      "barrel_length_in": 30,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1300,
+          "energy_ft_lbs": 2630,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 20,
+          "velocity_fps": 1220,
+          "energy_ft_lbs": 2314,
+          "drop_in": -0.1
+        },
+        {
+          "distance_yd": 40,
+          "velocity_fps": 1148,
+          "energy_ft_lbs": 2049,
+          "drop_in": -0.4
+        }
+      ]
     }
   ],
   "recommended_game": [

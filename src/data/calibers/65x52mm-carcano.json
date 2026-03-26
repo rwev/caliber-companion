@@ -186,6 +186,36 @@
           "drop_in": -25.2
         }
       ]
+    },
+    {
+      "name": "Hornady 160 gr InterLock RN",
+      "bullet_weight_gr": 160,
+      "bullet_type": "InterLock RN",
+      "muzzle_velocity_fps": 2430,
+      "muzzle_energy_ft_lbs": 2099,
+      "barrel_length_in": 20.9,
+      "bc_g1": 0.34,
+      "sectional_density": 0.328,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2430,
+          "energy_ft_lbs": 2099,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2170,
+          "energy_ft_lbs": 1672,
+          "drop_in": -3
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1928,
+          "energy_ft_lbs": 1321,
+          "drop_in": -12.6
+        }
+      ]
     }
   ],
   "recommended_game": [

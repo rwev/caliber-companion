@@ -210,6 +210,54 @@
           "drop_in": -42.8
         }
       ]
+    },
+    {
+      "name": "Federal Premium 130 gr Nosler AccuBond",
+      "bullet_weight_gr": 130,
+      "bullet_type": "Nosler AccuBond",
+      "muzzle_velocity_fps": 3275,
+      "muzzle_energy_ft_lbs": 3094,
+      "barrel_length_in": 24,
+      "bc_g1": 0.432,
+      "sectional_density": 0.242,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 3275,
+          "energy_ft_lbs": 3094,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 3055,
+          "energy_ft_lbs": 2694,
+          "drop_in": -1.1
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2846,
+          "energy_ft_lbs": 2338,
+          "drop_in": -5
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2647,
+          "energy_ft_lbs": 2023,
+          "drop_in": -12.2
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2457,
+          "energy_ft_lbs": 1743,
+          "drop_in": -23
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2276,
+          "energy_ft_lbs": 1496,
+          "drop_in": -38.4
+        }
+      ]
     }
   ],
   "recommended_game": [

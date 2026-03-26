@@ -191,6 +191,42 @@
           "drop_in": -5.6
         }
       ]
+    },
+    {
+      "name": "Hornady V-MAX 30 gr",
+      "bullet_weight_gr": 30,
+      "bullet_type": "V-MAX (Polymer Tip)",
+      "muzzle_velocity_fps": 2200,
+      "muzzle_energy_ft_lbs": 322,
+      "barrel_length_in": 24,
+      "bc_g1": 0.135,
+      "sectional_density": 0.085,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2200,
+          "energy_ft_lbs": 322,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1920,
+          "energy_ft_lbs": 246,
+          "drop_in": -0.1
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1668,
+          "energy_ft_lbs": 185,
+          "drop_in": -1
+        },
+        {
+          "distance_yd": 150,
+          "velocity_fps": 1446,
+          "energy_ft_lbs": 139,
+          "drop_in": -3.4
+        }
+      ]
     }
   ],
   "recommended_game": [

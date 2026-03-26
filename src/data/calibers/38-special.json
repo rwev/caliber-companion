@@ -236,6 +236,42 @@
           "drop_in": -9.6
         }
       ]
+    },
+    {
+      "name": "Winchester Super-X 158 gr LRN",
+      "bullet_weight_gr": 158,
+      "bullet_type": "Lead Round Nose",
+      "muzzle_velocity_fps": 755,
+      "muzzle_energy_ft_lbs": 200,
+      "barrel_length_in": 4,
+      "bc_g1": 0.13,
+      "sectional_density": 0.177,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 755,
+          "energy_ft_lbs": 200,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 730,
+          "energy_ft_lbs": 187,
+          "drop_in": -0.6
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 707,
+          "energy_ft_lbs": 175,
+          "drop_in": -2.8
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 665,
+          "energy_ft_lbs": 155,
+          "drop_in": -12.4
+        }
+      ]
     }
   ],
   "max_pressure_psi": 17000,

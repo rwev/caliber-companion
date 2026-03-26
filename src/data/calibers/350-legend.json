@@ -187,6 +187,36 @@
           "drop_in": -28
         }
       ]
+    },
+    {
+      "name": "Federal Non-Typical 180 gr SP",
+      "bullet_weight_gr": 180,
+      "bullet_type": "Non-Typical SP",
+      "muzzle_velocity_fps": 2100,
+      "muzzle_energy_ft_lbs": 1762,
+      "barrel_length_in": 20,
+      "bc_g1": 0.195,
+      "sectional_density": 0.206,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2100,
+          "energy_ft_lbs": 1762,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1730,
+          "energy_ft_lbs": 1196,
+          "drop_in": -4.4
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1412,
+          "energy_ft_lbs": 797,
+          "drop_in": -19.6
+        }
+      ]
     }
   ],
   "recommended_game": [

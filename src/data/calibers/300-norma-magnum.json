@@ -201,6 +201,55 @@
           "drop_in": -43
         }
       ]
+    },
+    {
+      "name": "Norma Match 230 gr Berger Hybrid Target",
+      "bullet_weight_gr": 230,
+      "bullet_type": "Berger Hybrid Target",
+      "muzzle_velocity_fps": 2920,
+      "muzzle_energy_ft_lbs": 4352,
+      "barrel_length_in": 26,
+      "bc_g1": 0.743,
+      "bc_g7": 0.378,
+      "sectional_density": 0.346,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2920,
+          "energy_ft_lbs": 4352,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2793,
+          "energy_ft_lbs": 3983,
+          "drop_in": -1.5
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2669,
+          "energy_ft_lbs": 3639,
+          "drop_in": -6.4
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2549,
+          "energy_ft_lbs": 3318,
+          "drop_in": -14.6
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2433,
+          "energy_ft_lbs": 3022,
+          "drop_in": -26.4
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2320,
+          "energy_ft_lbs": 2747,
+          "drop_in": -42.2
+        }
+      ]
     }
   ],
   "recommended_game": [

@@ -255,6 +255,40 @@
           "drop_in": -0.8
         }
       ]
+    },
+    {
+      "name": "Winchester Deer Season XP 3\" Slug 260 gr",
+      "bullet_weight_gr": 260,
+      "bullet_type": "Copper Sabot Slug (3\")",
+      "muzzle_velocity_fps": 1700,
+      "muzzle_energy_ft_lbs": 1668,
+      "barrel_length_in": 24,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1700,
+          "energy_ft_lbs": 1668,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1545,
+          "energy_ft_lbs": 1378,
+          "drop_in": -0.3
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1401,
+          "energy_ft_lbs": 1133,
+          "drop_in": -2.2
+        },
+        {
+          "distance_yd": 150,
+          "velocity_fps": 1273,
+          "energy_ft_lbs": 935,
+          "drop_in": -6.4
+        }
+      ]
     }
   ],
   "recommended_game": [

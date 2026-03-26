@@ -305,6 +305,42 @@
           "drop_in": -6.8
         }
       ]
+    },
+    {
+      "name": "Winchester Super-X 36 gr CPHP",
+      "bullet_weight_gr": 36,
+      "bullet_type": "Copper Plated HP",
+      "muzzle_velocity_fps": 1280,
+      "muzzle_energy_ft_lbs": 131,
+      "barrel_length_in": 18,
+      "bc_g1": 0.108,
+      "sectional_density": 0.102,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1280,
+          "energy_ft_lbs": 131,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1178,
+          "energy_ft_lbs": 111,
+          "drop_in": -0.2
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1091,
+          "energy_ft_lbs": 95,
+          "drop_in": -0.8
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 952,
+          "energy_ft_lbs": 72,
+          "drop_in": -4.8
+        }
+      ]
     }
   ],
   "max_pressure_psi": 24000,

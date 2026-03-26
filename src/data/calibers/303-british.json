@@ -197,6 +197,42 @@
           "drop_in": -51
         }
       ]
+    },
+    {
+      "name": "Hornady Interlock 150 gr SP",
+      "bullet_weight_gr": 150,
+      "bullet_type": "InterLock SP",
+      "muzzle_velocity_fps": 2685,
+      "muzzle_energy_ft_lbs": 2401,
+      "barrel_length_in": 24,
+      "bc_g1": 0.37,
+      "sectional_density": 0.226,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2685,
+          "energy_ft_lbs": 2401,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2441,
+          "energy_ft_lbs": 1984,
+          "drop_in": -2.2
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2210,
+          "energy_ft_lbs": 1626,
+          "drop_in": -9.4
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 1993,
+          "energy_ft_lbs": 1323,
+          "drop_in": -23
+        }
+      ]
     }
   ],
   "recommended_game": [

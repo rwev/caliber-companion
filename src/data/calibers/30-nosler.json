@@ -195,6 +195,54 @@
           "drop_in": -46.4
         }
       ]
+    },
+    {
+      "name": "Nosler Trophy Grade 200 gr AccuBond",
+      "bullet_weight_gr": 200,
+      "bullet_type": "AccuBond",
+      "muzzle_velocity_fps": 2900,
+      "muzzle_energy_ft_lbs": 3733,
+      "barrel_length_in": 26,
+      "bc_g1": 0.588,
+      "sectional_density": 0.301,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2900,
+          "energy_ft_lbs": 3733,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2730,
+          "energy_ft_lbs": 3310,
+          "drop_in": -1.6
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2566,
+          "energy_ft_lbs": 2924,
+          "drop_in": -6.8
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2408,
+          "energy_ft_lbs": 2577,
+          "drop_in": -16
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2256,
+          "energy_ft_lbs": 2262,
+          "drop_in": -29.8
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2110,
+          "energy_ft_lbs": 1978,
+          "drop_in": -48.8
+        }
+      ]
     }
   ],
   "recommended_game": [

@@ -88,16 +88,16 @@
       "bullet_type": "Accubond LR",
       "muzzle_velocity_fps": 2970,
       "muzzle_energy_ft_lbs": 3230,
-      "barrel_length_in": 24.0,
-      "bc_g1": 0.620,
-      "bc_g7": 0.310,
+      "barrel_length_in": 24,
+      "bc_g1": 0.62,
+      "bc_g7": 0.31,
       "sectional_density": 0.307,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2970,
           "energy_ft_lbs": 3230,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -137,7 +137,7 @@
       "bullet_type": "Sierra TGK",
       "muzzle_velocity_fps": 2835,
       "muzzle_energy_ft_lbs": 3122,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "bc_g1": 0.617,
       "bc_g7": 0.313,
       "sectional_density": 0.326,
@@ -146,7 +146,7 @@
           "distance_yd": 0,
           "velocity_fps": 2835,
           "energy_ft_lbs": 3122,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -170,7 +170,7 @@
           "distance_yd": 400,
           "velocity_fps": 2265,
           "energy_ft_lbs": 1993,
-          "drop_in": -33.0
+          "drop_in": -33
         },
         {
           "distance_yd": 500,
@@ -186,7 +186,7 @@
       "bullet_type": "Copper EP",
       "muzzle_velocity_fps": 2875,
       "muzzle_energy_ft_lbs": 2970,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "bc_g1": 0.564,
       "bc_g7": 0.285,
       "sectional_density": 0.302,
@@ -195,7 +195,7 @@
           "distance_yd": 0,
           "velocity_fps": 2875,
           "energy_ft_lbs": 2970,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -213,7 +213,7 @@
           "distance_yd": 300,
           "velocity_fps": 2389,
           "energy_ft_lbs": 2054,
-          "drop_in": -18.0
+          "drop_in": -18
         },
         {
           "distance_yd": 400,
@@ -226,6 +226,55 @@
           "velocity_fps": 2095,
           "energy_ft_lbs": 1578,
           "drop_in": -55.2
+        }
+      ]
+    },
+    {
+      "name": "Hornady Precision Hunter 162 gr ELD-X",
+      "bullet_weight_gr": 162,
+      "bullet_type": "ELD-X",
+      "muzzle_velocity_fps": 2875,
+      "muzzle_energy_ft_lbs": 2970,
+      "barrel_length_in": 24,
+      "bc_g1": 0.631,
+      "bc_g7": 0.315,
+      "sectional_density": 0.302,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2875,
+          "energy_ft_lbs": 2970,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2722,
+          "energy_ft_lbs": 2666,
+          "drop_in": -1.7
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2574,
+          "energy_ft_lbs": 2383,
+          "drop_in": -7.2
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2431,
+          "energy_ft_lbs": 2126,
+          "drop_in": -16.8
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2294,
+          "energy_ft_lbs": 1893,
+          "drop_in": -31
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2162,
+          "energy_ft_lbs": 1683,
+          "drop_in": -50.6
         }
       ]
     }
@@ -260,8 +309,8 @@
   "max_pressure_psi": 65000,
   "primer_type": "Large Rifle Magnum",
   "powder_charge_range_gr": [
-    56.0,
-    66.0
+    56,
+    66
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",

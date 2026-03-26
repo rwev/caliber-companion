@@ -194,6 +194,44 @@
           "drop_in": -8.8
         }
       ]
+    },
+    {
+      "name": "Winchester Defender 225 gr Bonded JHP",
+      "bullet_weight_gr": 225,
+      "bullet_type": "Bonded JHP",
+      "muzzle_velocity_fps": 850,
+      "muzzle_energy_ft_lbs": 361,
+      "barrel_length_in": 4,
+      "bc_g1": 0.158,
+      "sectional_density": 0.158,
+      "gel_penetration_in": 13.5,
+      "expansion_diameter_in": 0.62,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 850,
+          "energy_ft_lbs": 361,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 830,
+          "energy_ft_lbs": 344,
+          "drop_in": -0.5
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 811,
+          "energy_ft_lbs": 328,
+          "drop_in": -2.2
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 776,
+          "energy_ft_lbs": 301,
+          "drop_in": -9.8
+        }
+      ]
     }
   ],
   "recommended_game": [

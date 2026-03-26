@@ -196,6 +196,42 @@
           "drop_in": -43.4
         }
       ]
+    },
+    {
+      "name": "Wolf Military Classic 60 gr FMJ",
+      "bullet_weight_gr": 60,
+      "bullet_type": "FMJ (Steel Case)",
+      "muzzle_velocity_fps": 2936,
+      "muzzle_energy_ft_lbs": 1147,
+      "barrel_length_in": 16.3,
+      "bc_g1": 0.258,
+      "sectional_density": 0.143,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2936,
+          "energy_ft_lbs": 1147,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2600,
+          "energy_ft_lbs": 900,
+          "drop_in": -1.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2290,
+          "energy_ft_lbs": 699,
+          "drop_in": -8.2
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2005,
+          "energy_ft_lbs": 536,
+          "drop_in": -20.6
+        }
+      ]
     }
   ],
   "recommended_game": [

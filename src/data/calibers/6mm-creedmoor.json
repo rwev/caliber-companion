@@ -209,6 +209,55 @@
           "drop_in": -48.2
         }
       ]
+    },
+    {
+      "name": "Federal Premium 105 gr Berger Hybrid Hunter",
+      "bullet_weight_gr": 105,
+      "bullet_type": "Berger Hybrid Hunter",
+      "muzzle_velocity_fps": 3000,
+      "muzzle_energy_ft_lbs": 2099,
+      "barrel_length_in": 24,
+      "bc_g1": 0.519,
+      "bc_g7": 0.262,
+      "sectional_density": 0.254,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 3000,
+          "energy_ft_lbs": 2099,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2838,
+          "energy_ft_lbs": 1878,
+          "drop_in": -1.5
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2682,
+          "energy_ft_lbs": 1678,
+          "drop_in": -6.4
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2530,
+          "energy_ft_lbs": 1492,
+          "drop_in": -15.2
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2385,
+          "energy_ft_lbs": 1326,
+          "drop_in": -28.2
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2244,
+          "energy_ft_lbs": 1174,
+          "drop_in": -45.8
+        }
+      ]
     }
   ],
   "recommended_game": [

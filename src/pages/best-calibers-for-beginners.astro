@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { fmtRange, fmtNumber, fmtCurrency, titleCase } from '../lib/format';
+
+const allCalibers = await getCollection('caliberData');
+const bySlug = new Map(allCalibers.map(c => [c.data.slug, c.data]));
+
+const tiers = [
+  {
+    title: 'Best First Handgun Calibers',
+    calibers: ['9mm-luger', '22-lr', '380-acp', '38-special', '357-magnum'],
+    description: 'For a first handgun, start with 9mm — it offers manageable recoil, high capacity, the cheapest centerfire practice ammo, and is the standard for self-defense. If recoil is a concern, .380 ACP or .38 Special are gentler alternatives. A .22 LR pistol is the best training tool at any experience level.',
+  },
+  {
+    title: 'Best First Rifle Calibers',
+    calibers: ['22-lr', '223-remington', '556x45mm-nato', '243-winchester', '308-winchester'],
+    description: 'Every shooter should own a .22 LR rifle — it builds fundamentals with negligible recoil and cost. For a first centerfire rifle, .223 Remington or .243 Winchester offer mild recoil and versatility. .308 Winchester is the workhorse for those ready to step up to a do-everything hunting rifle.',
+  },
+  {
+    title: 'Best First Shotgun Gauges',
+    calibers: ['20-gauge', '12-gauge', '410-bore'],
+    description: '20 gauge is the ideal first shotgun — it handles everything from clays to deer with significantly less recoil than 12 gauge. Start with 20 gauge target loads, then graduate to 12 gauge when comfortable. The .410 bore is suitable only for very small/young shooters.',
+  },
+  {
+    title: 'Lowest Recoil Centerfire Options',
+    calibers: ['380-acp', '9mm-luger', '223-remington', '243-winchester', '350-legend'],
+    description: 'For shooters who are recoil-sensitive or building confidence, these calibers deliver real-world effectiveness with manageable recoil. The .380 ACP and 9mm are the softest-shooting defensive calibers, while .223 and .243 are the mildest deer-capable rifle cartridges.',
+  },
+  {
+    title: 'Best Budget Calibers (Cheapest to Shoot)',
+    calibers: ['22-lr', '9mm-luger', '223-remington', '762x39mm', '12-gauge'],
+    description: 'Practice makes proficient, and affordable ammo means more practice. .22 LR at $0.05-0.10/round is unbeatable for training. 9mm at $0.18-0.30/round is the cheapest centerfire practice. 7.62x39mm offers the cheapest centerfire rifle shooting with surplus availability.',
+  },
+];
+
+const pageDescription = 'Best calibers for beginners — handguns, rifles, and shotguns ranked by recoil, cost, and versatility. Data-driven recommendations for first-time gun buyers in 2026.';
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': [
+    { '@type': 'Question', 'name': 'What is the best caliber for a first gun?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For a first handgun: 9mm Luger. For a first rifle: .22 LR (for training) or .223 Remington (for versatility). For a first shotgun: 20 gauge. These calibers offer the best combination of low recoil, affordable ammunition, and real-world capability.' } },
+    { '@type': 'Question', 'name': 'Is 9mm good for beginners?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes — 9mm is the most recommended first handgun caliber. It produces only 5 ft-lbs of recoil (very manageable), holds 15-17 rounds in most pistols, costs $0.18-0.30/round for practice ammo, and is effective for self-defense with modern hollow point ammunition.' } },
+    { '@type': 'Question', 'name': 'Should I start with a .22 or 9mm?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ideally both. A .22 LR is the best training tool — near-zero recoil and $0.05-0.10/round lets you build fundamentals without developing a flinch. Then transition to 9mm for self-defense capability. Many instructors recommend 500-1,000 rounds of .22 LR before moving to centerfire.' } },
+    { '@type': 'Question', 'name': 'What caliber has the least recoil?', 'acceptedAnswer': { '@type': 'Answer', 'text': '.22 LR has essentially zero felt recoil (0.2 ft-lbs). Among centerfire handguns, .380 ACP (2.8 ft-lbs) and 9mm (5 ft-lbs) are the mildest. Among centerfire rifles, .223 Remington (3.5 ft-lbs) is the lightest-recoiling common caliber.' } },
+  ],
+};
+---
+
+<BaseLayout title="Best Calibers for Beginners (2026)" description={pageDescription} breadcrumbs={[{ label: 'Best Beginner Calibers' }]}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+
+  <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
+    <div class="mb-8">
+      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+        Best Calibers for Beginners
+      </h1>
+      <p class="mt-3 font-mono text-base text-text-muted max-w-3xl">
+        Data-driven recommendations for first-time gun buyers. Handgun, rifle, and shotgun calibers ranked by recoil, cost, and versatility — everything you need to make an informed first purchase.
+      </p>
+    </div>
+
+    {tiers.map(tier => {
+      const cals = tier.calibers.map(slug => bySlug.get(slug)).filter(Boolean);
+      return (
+        <section class="mb-10">
+          <h2 class="mb-2 font-display text-xl font-semibold tracking-[0.15em] uppercase text-accent border-b border-surface-border pb-3">{tier.title}</h2>
+          <p class="mb-4 font-mono text-sm text-text-muted">{tier.description}</p>
+          <div class="border border-surface-border overflow-x-auto" tabindex="0">
+            <table class="w-full text-left font-mono">
+              <thead>
+                <tr class="border-b border-surface-border bg-surface-overlay text-text-muted">
+                  <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs">Caliber</th>
+                  <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Recoil</th>
+                  <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Cost/Rd</th>
+                  <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-center">Avail.</th>
+                  <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Energy</th>
+                </tr>
+              </thead>
+              <tbody>
+                {cals.map((c, i) => (
+                  <tr class={`border-b border-surface-border-subtle ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
+                    <td class="px-3 py-2"><a href={`/caliber-companion/calibers/${c!.slug}`} class="text-sm font-medium text-text-primary hover:text-accent transition-colors">{c!.name}</a></td>
+                    <td class={`px-3 py-2 text-sm text-right ${c!.recoil.free_recoil_ft_lbs <= 5 ? 'text-success' : c!.recoil.free_recoil_ft_lbs <= 10 ? 'text-text-secondary' : 'text-warning'}`}>{c!.recoil.free_recoil_ft_lbs} ft·lbs</td>
+                    <td class="px-3 py-2 text-sm text-right text-text-muted">{fmtCurrency(c!.cost_per_round_usd)}</td>
+                    <td class="px-3 py-2 text-sm text-center text-text-muted">{c!.availability_rating ?? '—'}/5</td>
+                    <td class="px-3 py-2 text-sm text-right text-text-secondary">{fmtRange(c!.typical_energy_ft_lbs, 'ft·lbs')}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      );
+    })}
+
+    <!-- FAQ -->
+    <section class="mt-12 border-t border-surface-border pt-8">
+      <h2 class="font-display text-xl font-semibold tracking-[0.2em] uppercase text-text-muted mb-4">Frequently Asked Questions</h2>
+      <div class="space-y-2">
+        {[
+          { q: 'How much should I budget for ammunition as a beginner?', a: 'Budget 500-1,000 rounds for initial training. In .22 LR that is $25-100. In 9mm that is $90-300. Plan for ongoing practice of 50-100 rounds per month ($10-30/month in 9mm). A .22 LR trainer lets you practice for 10% of the cost of centerfire.' },
+          { q: 'What gun should a beginner buy first?', a: 'Many instructors recommend a .22 LR rifle (Ruger 10/22) as the absolute first firearm — it teaches all fundamentals with zero recoil. For a first defensive handgun, a 9mm full-size or compact (Glock 19, S&W M&P 9 M2.0, CZ P-10 C) offers the best learning experience.' },
+          { q: 'Is .45 ACP good for beginners?', a: 'Not recommended as a first caliber. .45 ACP produces 50% more recoil than 9mm (7.5 vs 5.0 ft-lbs) in lower-capacity pistols (8 vs 17 rounds). Start with 9mm, develop fundamentals, and try .45 ACP later if desired. Modern 9mm JHP matches .45 ACP terminal performance.' },
+        ].map(faq => (
+          <details class="group border border-surface-border">
+            <summary class="flex cursor-pointer items-center justify-between bg-surface-raised px-4 py-3 font-mono text-sm text-text-primary transition-colors hover:bg-surface-overlay">
+              <span>{faq.q}</span>
+              <svg class="h-4 w-4 shrink-0 text-text-muted transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <div class="border-t border-surface-border-subtle bg-surface px-4 py-3">
+              <p class="font-mono text-sm text-text-secondary leading-relaxed">{faq.a}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <div class="mt-8 flex flex-wrap gap-3 border-t border-surface-border pt-6">
+      <span class="font-mono text-xs tracking-wider uppercase text-text-muted self-center">Related:</span>
+      <a href="/caliber-companion/guides/best-calibers-for-beginners" class="font-mono text-sm text-accent hover:underline">Beginners Guide</a>
+      <a href="/caliber-companion/quiz" class="font-mono text-sm text-accent hover:underline">Caliber Quiz</a>
+      <a href="/caliber-companion/recoil-ranking" class="font-mono text-sm text-accent hover:underline">Recoil Ranking</a>
+      <a href="/caliber-companion/cost-comparison" class="font-mono text-sm text-accent hover:underline">Cost Comparison</a>
+    </div>
+  </div>
+</BaseLayout>

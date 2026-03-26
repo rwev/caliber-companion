@@ -205,6 +205,48 @@
           "drop_in": -41.4
         }
       ]
+    },
+    {
+      "name": "Hornady Superformance Varmint 50 gr V-MAX",
+      "bullet_weight_gr": 50,
+      "bullet_type": "V-MAX",
+      "muzzle_velocity_fps": 4000,
+      "muzzle_energy_ft_lbs": 1776,
+      "barrel_length_in": 24,
+      "bc_g1": 0.242,
+      "sectional_density": 0.143,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 4000,
+          "energy_ft_lbs": 1776,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 3545,
+          "energy_ft_lbs": 1396,
+          "drop_in": -0.6
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 3131,
+          "energy_ft_lbs": 1089,
+          "drop_in": -3.6
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2753,
+          "energy_ft_lbs": 842,
+          "drop_in": -9.8
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2407,
+          "energy_ft_lbs": 643,
+          "drop_in": -20.2
+        }
+      ]
     }
   ],
   "recommended_game": [

@@ -273,6 +273,103 @@
           "drop_in": -50.6
         }
       ]
+    },
+    {
+      "name": "Winchester Super-X 180 gr Power-Point",
+      "bullet_weight_gr": 180,
+      "bullet_type": "Power-Point SP",
+      "muzzle_velocity_fps": 2960,
+      "muzzle_energy_ft_lbs": 3501,
+      "barrel_length_in": 24,
+      "bc_g1": 0.435,
+      "sectional_density": 0.271,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2960,
+          "energy_ft_lbs": 3501,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2748,
+          "energy_ft_lbs": 3017,
+          "drop_in": -1.5
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2546,
+          "energy_ft_lbs": 2590,
+          "drop_in": -6.6
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2354,
+          "energy_ft_lbs": 2215,
+          "drop_in": -16
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2170,
+          "energy_ft_lbs": 1882,
+          "drop_in": -30.2
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1996,
+          "energy_ft_lbs": 1593,
+          "drop_in": -50.4
+        }
+      ]
+    },
+    {
+      "name": "Federal Premium 190 gr Sierra MatchKing",
+      "bullet_weight_gr": 190,
+      "bullet_type": "Sierra MatchKing HPBT",
+      "muzzle_velocity_fps": 2900,
+      "muzzle_energy_ft_lbs": 3547,
+      "barrel_length_in": 24,
+      "bc_g1": 0.533,
+      "bc_g7": 0.268,
+      "sectional_density": 0.286,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2900,
+          "energy_ft_lbs": 3547,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2735,
+          "energy_ft_lbs": 3155,
+          "drop_in": -1.6
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2576,
+          "energy_ft_lbs": 2800,
+          "drop_in": -6.6
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2423,
+          "energy_ft_lbs": 2477,
+          "drop_in": -15.6
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2275,
+          "energy_ft_lbs": 2184,
+          "drop_in": -28.8
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2133,
+          "energy_ft_lbs": 1919,
+          "drop_in": -46.6
+        }
+      ]
     }
   ],
   "recommended_game": [

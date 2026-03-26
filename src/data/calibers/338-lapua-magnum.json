@@ -230,6 +230,55 @@
           "drop_in": -49.4
         }
       ]
+    },
+    {
+      "name": "Federal Gold Medal 300 gr Sierra MatchKing",
+      "bullet_weight_gr": 300,
+      "bullet_type": "Sierra MatchKing HPBT",
+      "muzzle_velocity_fps": 2580,
+      "muzzle_energy_ft_lbs": 4434,
+      "barrel_length_in": 27,
+      "bc_g1": 0.768,
+      "bc_g7": 0.385,
+      "sectional_density": 0.375,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2580,
+          "energy_ft_lbs": 4434,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2461,
+          "energy_ft_lbs": 4034,
+          "drop_in": -2.2
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2346,
+          "energy_ft_lbs": 3667,
+          "drop_in": -8.8
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2234,
+          "energy_ft_lbs": 3328,
+          "drop_in": -20.2
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2126,
+          "energy_ft_lbs": 3014,
+          "drop_in": -36.8
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2021,
+          "energy_ft_lbs": 2723,
+          "drop_in": -58.8
+        }
+      ]
     }
   ],
   "recommended_game": [

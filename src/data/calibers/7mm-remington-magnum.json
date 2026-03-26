@@ -221,6 +221,102 @@
           "drop_in": -47
         }
       ]
+    },
+    {
+      "name": "Hornady American Whitetail 154 gr InterLock SP",
+      "bullet_weight_gr": 154,
+      "bullet_type": "InterLock SP",
+      "muzzle_velocity_fps": 3035,
+      "muzzle_energy_ft_lbs": 3149,
+      "barrel_length_in": 24,
+      "bc_g1": 0.433,
+      "sectional_density": 0.273,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 3035,
+          "energy_ft_lbs": 3149,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2822,
+          "energy_ft_lbs": 2724,
+          "drop_in": -1.4
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2619,
+          "energy_ft_lbs": 2347,
+          "drop_in": -6.2
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2426,
+          "energy_ft_lbs": 2014,
+          "drop_in": -15
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2241,
+          "energy_ft_lbs": 1718,
+          "drop_in": -28.2
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2066,
+          "energy_ft_lbs": 1460,
+          "drop_in": -47
+        }
+      ]
+    },
+    {
+      "name": "Nosler Trophy Grade 160 gr Partition",
+      "bullet_weight_gr": 160,
+      "bullet_type": "Nosler Partition",
+      "muzzle_velocity_fps": 2950,
+      "muzzle_energy_ft_lbs": 3091,
+      "barrel_length_in": 24,
+      "bc_g1": 0.475,
+      "sectional_density": 0.283,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2950,
+          "energy_ft_lbs": 3091,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2756,
+          "energy_ft_lbs": 2700,
+          "drop_in": -1.5
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2571,
+          "energy_ft_lbs": 2350,
+          "drop_in": -6.4
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2394,
+          "energy_ft_lbs": 2037,
+          "drop_in": -15.4
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2224,
+          "energy_ft_lbs": 1758,
+          "drop_in": -29
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2063,
+          "energy_ft_lbs": 1512,
+          "drop_in": -47.8
+        }
+      ]
     }
   ],
   "recommended_game": [

@@ -189,6 +189,42 @@
           "drop_in": -26
         }
       ]
+    },
+    {
+      "name": "Hornady Custom 165 gr SP",
+      "bullet_weight_gr": 165,
+      "bullet_type": "InterLock SP",
+      "muzzle_velocity_fps": 2650,
+      "muzzle_energy_ft_lbs": 2572,
+      "barrel_length_in": 25.7,
+      "bc_g1": 0.43,
+      "sectional_density": 0.244,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2650,
+          "energy_ft_lbs": 2572,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2441,
+          "energy_ft_lbs": 2183,
+          "drop_in": -2.2
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2242,
+          "energy_ft_lbs": 1842,
+          "drop_in": -9.4
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2053,
+          "energy_ft_lbs": 1544,
+          "drop_in": -22.8
+        }
+      ]
     }
   ],
   "recommended_game": [

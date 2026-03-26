@@ -207,6 +207,55 @@
           "drop_in": -53.4
         }
       ]
+    },
+    {
+      "name": "Berger Classic Hunter 130 gr",
+      "bullet_weight_gr": 130,
+      "bullet_type": "Classic Hunter",
+      "muzzle_velocity_fps": 2850,
+      "muzzle_energy_ft_lbs": 2343,
+      "barrel_length_in": 24,
+      "bc_g1": 0.556,
+      "bc_g7": 0.278,
+      "sectional_density": 0.266,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2850,
+          "energy_ft_lbs": 2343,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2692,
+          "energy_ft_lbs": 2091,
+          "drop_in": -1.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2539,
+          "energy_ft_lbs": 1860,
+          "drop_in": -7.4
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2392,
+          "energy_ft_lbs": 1651,
+          "drop_in": -17.2
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2250,
+          "energy_ft_lbs": 1462,
+          "drop_in": -31.8
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2114,
+          "energy_ft_lbs": 1289,
+          "drop_in": -51.8
+        }
+      ]
     }
   ],
   "recommended_game": [

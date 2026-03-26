@@ -338,6 +338,48 @@
           "drop_in": -37.2
         }
       ]
+    },
+    {
+      "name": "Winchester USA 55 gr FMJ",
+      "bullet_weight_gr": 55,
+      "bullet_type": "FMJ (Bulk)",
+      "muzzle_velocity_fps": 3240,
+      "muzzle_energy_ft_lbs": 1282,
+      "barrel_length_in": 24,
+      "bc_g1": 0.243,
+      "sectional_density": 0.157,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 3240,
+          "energy_ft_lbs": 1282,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2872,
+          "energy_ft_lbs": 1007,
+          "drop_in": -1.4
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2535,
+          "energy_ft_lbs": 785,
+          "drop_in": -6.8
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2225,
+          "energy_ft_lbs": 605,
+          "drop_in": -17.6
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 1940,
+          "energy_ft_lbs": 459,
+          "drop_in": -35
+        }
+      ]
     }
   ],
   "recommended_game": [

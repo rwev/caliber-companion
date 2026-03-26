@@ -377,6 +377,55 @@
           "drop_in": -60
         }
       ]
+    },
+    {
+      "name": "Nosler Custom Competition 168 gr HPBT",
+      "bullet_weight_gr": 168,
+      "bullet_type": "Custom Competition HPBT",
+      "muzzle_velocity_fps": 2650,
+      "muzzle_energy_ft_lbs": 2619,
+      "barrel_length_in": 24,
+      "bc_g1": 0.462,
+      "bc_g7": 0.224,
+      "sectional_density": 0.253,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2650,
+          "energy_ft_lbs": 2619,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2462,
+          "energy_ft_lbs": 2262,
+          "drop_in": -2
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2282,
+          "energy_ft_lbs": 1942,
+          "drop_in": -8.4
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2109,
+          "energy_ft_lbs": 1660,
+          "drop_in": -19.8
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 1944,
+          "energy_ft_lbs": 1410,
+          "drop_in": -37.4
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1787,
+          "energy_ft_lbs": 1192,
+          "drop_in": -62.2
+        }
+      ]
     }
   ],
   "recommended_game": [

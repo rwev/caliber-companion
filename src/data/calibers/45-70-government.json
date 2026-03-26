@@ -198,6 +198,36 @@
           "drop_in": -44.8
         }
       ]
+    },
+    {
+      "name": "Remington Core-Lokt 405 gr SP",
+      "bullet_weight_gr": 405,
+      "bullet_type": "Core-Lokt SP",
+      "muzzle_velocity_fps": 1330,
+      "muzzle_energy_ft_lbs": 1590,
+      "barrel_length_in": 22,
+      "bc_g1": 0.228,
+      "sectional_density": 0.275,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1330,
+          "energy_ft_lbs": 1590,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1133,
+          "energy_ft_lbs": 1155,
+          "drop_in": -6.6
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1003,
+          "energy_ft_lbs": 905,
+          "drop_in": -28
+        }
+      ]
     }
   ],
   "recommended_game": [

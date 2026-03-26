@@ -184,6 +184,44 @@
           "drop_in": -6.2
         }
       ]
+    },
+    {
+      "name": "Hornady Critical Defense 95 gr FTX",
+      "bullet_weight_gr": 95,
+      "bullet_type": "FTX",
+      "muzzle_velocity_fps": 1000,
+      "muzzle_energy_ft_lbs": 211,
+      "barrel_length_in": 3.8,
+      "bc_g1": 0.125,
+      "sectional_density": 0.108,
+      "gel_penetration_in": 11,
+      "expansion_diameter_in": 0.48,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1000,
+          "energy_ft_lbs": 211,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 960,
+          "energy_ft_lbs": 195,
+          "drop_in": -0.3
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 924,
+          "energy_ft_lbs": 180,
+          "drop_in": -1.5
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 860,
+          "energy_ft_lbs": 156,
+          "drop_in": -6.8
+        }
+      ]
     }
   ],
   "max_pressure_psi": 24100,

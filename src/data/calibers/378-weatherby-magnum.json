@@ -185,6 +185,36 @@
           "drop_in": -20
         }
       ]
+    },
+    {
+      "name": "Hornady DGX Bonded 300 gr",
+      "bullet_weight_gr": 300,
+      "bullet_type": "DGX Bonded",
+      "muzzle_velocity_fps": 2925,
+      "muzzle_energy_ft_lbs": 5698,
+      "barrel_length_in": 26,
+      "bc_g1": 0.348,
+      "sectional_density": 0.305,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2925,
+          "energy_ft_lbs": 5698,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2644,
+          "energy_ft_lbs": 4658,
+          "drop_in": -1.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2381,
+          "energy_ft_lbs": 3778,
+          "drop_in": -7.8
+        }
+      ]
     }
   ],
   "recommended_game": [

@@ -193,6 +193,44 @@
           "drop_in": -9.2
         }
       ]
+    },
+    {
+      "name": "Winchester Silvertip 200 gr JHP",
+      "bullet_weight_gr": 200,
+      "bullet_type": "Silvertip JHP",
+      "muzzle_velocity_fps": 900,
+      "muzzle_energy_ft_lbs": 360,
+      "barrel_length_in": 4,
+      "bc_g1": 0.142,
+      "sectional_density": 0.155,
+      "gel_penetration_in": 11.5,
+      "expansion_diameter_in": 0.58,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 900,
+          "energy_ft_lbs": 360,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 876,
+          "energy_ft_lbs": 341,
+          "drop_in": -0.4
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 853,
+          "energy_ft_lbs": 323,
+          "drop_in": -1.9
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 811,
+          "energy_ft_lbs": 292,
+          "drop_in": -9
+        }
+      ]
     }
   ],
   "recommended_game": [
