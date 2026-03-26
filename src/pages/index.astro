@@ -4,22 +4,16 @@ import FavoritesList from '../components/islands/FavoritesList';
 import RecentlyViewed from '../components/islands/RecentlyViewed';
 import NewsletterSignup from '../components/islands/NewsletterSignup';
 import { getCollection } from 'astro:content';
+import { fmtRange, fmtNumber, titleCase } from '../lib/format';
 
 const calibers = await getCollection('caliberData');
-const categories = [...new Set(calibers.map(c => c.data.category))];
+const firearms = await getCollection('firearmsData');
+const guides = await getCollection('guides');
 
-// Featured: most widely adopted military calibers
-const featuredSlugs = [
-  '9mm-luger',         // NATO standard sidearm
-  '556x45mm-nato',     // NATO standard rifle
-  '308-winchester',    // 7.62 NATO — GPMGs, battle rifles, sniper
-  '762x39mm',          // AK-47/AKM — most produced rifle cartridge
-  '12-gauge',          // Military breaching, close quarters
-  '50-bmg',            // Heavy machine guns, anti-materiel
-];
-const featured = featuredSlugs
-  .map(slug => calibers.find(c => c.data.slug === slug))
-  .filter(Boolean);
+const totalLoads = calibers.reduce((sum, c) => sum + c.data.loads.length, 0);
+const categories = [...new Set(calibers.map(c => c.data.category))];
+const yearMin = Math.min(...calibers.map(c => c.data.year_introduced));
+const yearMax = Math.max(...calibers.map(c => c.data.year_introduced));
 
 const caliberIndex = calibers.map(c => ({
   slug: c.data.slug,
@@ -27,143 +21,337 @@ const caliberIndex = calibers.map(c => ({
   designation: c.data.designation,
   category: c.data.category,
 }));
+
+// --- Hero cartridge silhouettes (build-time SVG path generation) ---
+
+interface Dimensions {
+  bullet_diameter_in: number;
+  neck_diameter_in: number;
+  case_length_in: number;
+  overall_length_in: number;
+  rim_diameter_in?: number;
+  case_type: string;
+}
+
+function buildStaticProfile(
+  d: Dimensions,
+  scale: number,
+  cx: number,
+  yBase: number,
+): string {
+  const {
+    bullet_diameter_in,
+    neck_diameter_in,
+    case_length_in,
+    overall_length_in,
+    rim_diameter_in,
+    case_type,
+  } = d;
+
+  const isBottleneck = case_type.includes('bottleneck');
+  const isRimmed = case_type.includes('rimmed') && !case_type.includes('rimless');
+  const isBelted = case_type.includes('belted');
+  const isTapered = case_type.includes('tapered');
+
+  const rimDia = rim_diameter_in || neck_diameter_in;
+  const yCaseTop = yBase - case_length_in * scale;
+  const yBulletTip = yBase - overall_length_in * scale;
+
+  const halfRim = (rimDia * scale) / 2;
+  const halfNeck = (neck_diameter_in * scale) / 2;
+  const halfBullet = (bullet_diameter_in * scale) / 2;
+
+  const bodyDia = isBottleneck ? rimDia * 0.95 : isTapered ? rimDia * 0.98 : neck_diameter_in;
+  const halfBody = (bodyDia * scale) / 2;
+
+  const yShoulder = yBase - case_length_in * scale * 0.75;
+  const rimHeight = isRimmed ? 8 : 4;
+  const grooveDepth = 3;
+  const grooveHeight = 4;
+  const beltHeight = 6;
+  const beltExtra = 4;
+
+  const points: [number, number][] = [];
+
+  points.push([cx + halfRim, yBase]);
+
+  if (isRimmed) {
+    points.push([cx + halfRim, yBase - rimHeight]);
+    points.push([cx + halfBody, yBase - rimHeight]);
+  } else {
+    points.push([cx + halfRim, yBase - rimHeight]);
+    points.push([cx + halfRim - grooveDepth, yBase - rimHeight]);
+    points.push([cx + halfRim - grooveDepth, yBase - rimHeight - grooveHeight]);
+    if (isBelted) {
+      points.push([cx + halfBody + beltExtra, yBase - rimHeight - grooveHeight]);
+      points.push([cx + halfBody + beltExtra, yBase - rimHeight - grooveHeight - beltHeight]);
+      points.push([cx + halfBody, yBase - rimHeight - grooveHeight - beltHeight]);
+    } else {
+      points.push([cx + halfBody, yBase - rimHeight - grooveHeight]);
+    }
+  }
+
+  if (isBottleneck) {
+    points.push([cx + halfBody, yShoulder]);
+    points.push([cx + halfNeck, yCaseTop + 8]);
+    points.push([cx + halfNeck, yCaseTop]);
+  } else {
+    points.push([cx + halfNeck, yCaseTop]);
+  }
+
+  points.push([cx + halfBullet, yCaseTop]);
+  points.push([cx + halfBullet, yCaseTop - (overall_length_in - case_length_in) * scale * 0.3]);
+  points.push([cx + 1, yBulletTip]);
+
+  const leftPoints: [number, number][] = points.map(([x, y]) => [cx - (x - cx), y]).reverse();
+  const allPoints = [...points, ...leftPoints.slice(1)];
+  return allPoints.map(([x, y], i) => `${i === 0 ? 'M' : 'L'}${x.toFixed(1)},${y.toFixed(1)}`).join(' ') + ' Z';
+}
+
+// Silhouette lineup: 5 cartridges spanning the full size range
+const heroSlugs = ['22-lr', '9mm-luger', '556x45mm-nato', '308-winchester', '50-bmg'];
+const heroCalibers = heroSlugs
+  .map(slug => calibers.find(c => c.data.slug === slug))
+  .filter(Boolean);
+
+const heroScale = 55; // px per inch
+const tallestOAL = Math.max(...heroCalibers.map(c => c!.data.dimensions.overall_length_in));
+const heroSvgPadTop = 30;
+const heroSvgPadBot = 40;
+const heroSvgHeight = tallestOAL * heroScale + heroSvgPadTop + heroSvgPadBot;
+const heroYBase = heroSvgHeight - heroSvgPadBot;
+
+// Compute horizontal positions: evenly spaced
+const heroSpacing = 80;
+const heroTotalWidth = (heroCalibers.length - 1) * heroSpacing;
+const heroSvgWidth = heroTotalWidth + 100; // padding on each side
+const heroStartX = 50;
+
+const heroProfiles = heroCalibers.map((c, i) => ({
+  name: c!.data.name,
+  slug: c!.data.slug,
+  oal: c!.data.dimensions.overall_length_in,
+  path: buildStaticProfile(c!.data.dimensions, heroScale, heroStartX + i * heroSpacing, heroYBase),
+  cx: heroStartX + i * heroSpacing,
+}));
+
+// --- Featured calibers for data table ---
+const featuredSlugs = [
+  '9mm-luger', '45-acp', '556x45mm-nato', '308-winchester',
+  '65-creedmoor', '300-winchester-magnum', '12-gauge', '50-bmg',
+];
+const featured = featuredSlugs
+  .map(slug => calibers.find(c => c.data.slug === slug))
+  .filter(Boolean);
 ---
 
 <BaseLayout title="Home">
-  <!-- Hero -->
+  <!-- Hero: Title + Cartridge Silhouettes -->
   <section class="relative overflow-hidden">
-    <div class="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:py-40">
-      <div class="max-w-3xl">
-        <!-- Category count tag -->
-        <div class="mb-6 inline-flex items-center gap-2 rounded-full bg-accent/10 px-3 py-1">
-          <span class="text-sm font-medium text-accent">
-            {calibers.length} Calibers · {categories.length} Categories
-          </span>
+    <div class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
+      <div class="lg:grid lg:grid-cols-2 lg:items-center lg:gap-12">
+        <!-- Left: Title and CTAs -->
+        <div>
+          <div class="mb-4 inline-flex items-center gap-2 rounded border border-surface-border bg-surface-raised px-3 py-1">
+            <span class="font-mono text-xs text-text-muted">
+              {calibers.length} calibers &middot; {fmtNumber(totalLoads)} loads &middot; {yearMin}&ndash;{yearMax}
+            </span>
+          </div>
+
+          <h1 class="font-display text-5xl font-bold tracking-tight text-text-primary sm:text-6xl lg:text-7xl">
+            <span class="block">Caliber</span>
+            <span class="block text-accent">Companion</span>
+          </h1>
+
+          <p class="mt-5 max-w-lg text-lg leading-relaxed text-text-secondary">
+            Ballistic data, cartridge specifications, and comparison tools.
+            Research any caliber from .22 LR to .50 BMG with detailed load profiles,
+            trajectory tables, and side-by-side analysis.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a
+              href="/calibers"
+              class="group inline-flex items-center gap-2 rounded-md bg-accent px-5 py-2.5 text-base font-semibold text-white shadow-sm transition-all hover:bg-accent-bright"
+            >
+              <span>Browse Calibers</span>
+              <svg class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a
+              href="/compare"
+              class="inline-flex items-center gap-2 rounded-md border border-surface-border px-5 py-2.5 text-base font-semibold text-text-secondary transition-all hover:border-accent/40 hover:text-text-primary"
+            >
+              Compare
+            </a>
+            <a
+              href="/tools"
+              class="inline-flex items-center gap-2 rounded-md border border-surface-border px-5 py-2.5 text-base font-semibold text-text-secondary transition-all hover:border-accent/40 hover:text-text-primary"
+            >
+              Tools
+            </a>
+          </div>
         </div>
 
-        <!-- Title -->
-        <h1 class="text-5xl font-bold tracking-tight text-text-primary sm:text-6xl lg:text-7xl">
-          <span class="block">Caliber</span>
-          <span class="block text-accent">Companion</span>
-        </h1>
-
-        <!-- Subtitle -->
-        <p class="mt-6 max-w-xl text-lg leading-relaxed text-text-secondary sm:text-xl">
-          Research, compare, and understand firearm calibers.
-          Detailed ballistic data, cartridge specifications, and
-          side-by-side comparison tools.
-        </p>
-
-        <!-- CTA Buttons -->
-        <div class="mt-10 flex flex-wrap gap-3">
-          <a
-            href="/calibers"
-            class="group inline-flex items-center gap-2 rounded-md bg-accent px-5 py-2.5 text-base font-semibold text-white shadow-sm transition-all hover:bg-accent-bright"
+        <!-- Right: Cartridge Silhouette Lineup SVG -->
+        <div class="mt-12 flex justify-center lg:mt-0">
+          <svg
+            width="100%"
+            viewBox={`0 0 ${heroSvgWidth} ${heroSvgHeight}`}
+            class="max-w-sm text-text-muted sm:max-w-md lg:max-w-lg"
+            role="img"
+            aria-label="Proportional cartridge silhouettes from .22 LR to .50 BMG"
           >
-            <span>Browse Calibers</span>
-            <svg class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
-          <a
-            href="/compare"
-            class="inline-flex items-center gap-2 rounded-md border border-surface-border px-5 py-2.5 text-base font-semibold text-text-secondary transition-all hover:border-accent/40 hover:text-text-primary"
-          >
-            <span>Compare</span>
-          </a>
+            {/* Baseline */}
+            <line
+              x1="10" y1={heroYBase}
+              x2={heroSvgWidth - 10} y2={heroYBase}
+              stroke="currentColor" stroke-width="0.5" opacity="0.3"
+            />
+
+            {heroProfiles.map((p, i) => (
+              <g class={i < 2 ? 'hidden sm:block' : ''}>
+                {/* Centerline */}
+                <line
+                  x1={p.cx} y1={heroYBase}
+                  x2={p.cx} y2={heroYBase - p.oal * heroScale}
+                  stroke="currentColor" stroke-width="0.5" opacity="0.15"
+                  stroke-dasharray="3,3"
+                />
+                {/* Profile fill */}
+                <path
+                  d={p.path}
+                  fill="currentColor"
+                  opacity="0.06"
+                />
+                {/* Profile stroke */}
+                <path
+                  d={p.path}
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.2"
+                  opacity="0.6"
+                />
+                {/* Label */}
+                <text
+                  x={p.cx}
+                  y={heroYBase + 14}
+                  font-family="'IBM Plex Mono', monospace"
+                  font-size="7"
+                  fill="currentColor"
+                  opacity="0.5"
+                  text-anchor="middle"
+                >
+                  {p.name}
+                </text>
+                {/* OAL annotation */}
+                <text
+                  x={p.cx}
+                  y={heroYBase + 24}
+                  font-family="'IBM Plex Mono', monospace"
+                  font-size="6"
+                  fill="currentColor"
+                  opacity="0.35"
+                  text-anchor="middle"
+                >
+                  {p.oal}"
+                </text>
+              </g>
+            ))}
+          </svg>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Quick Stats -->
+  <!-- Spec Ribbon -->
   <section class="border-y border-surface-border bg-surface-raised/50">
     <div class="mx-auto max-w-7xl px-4 sm:px-6">
-      <div class="grid grid-cols-2 divide-x divide-surface-border sm:grid-cols-4">
+      <div class="grid grid-cols-2 divide-x divide-surface-border sm:grid-cols-3 lg:grid-cols-5">
         {[
           { value: `${calibers.length}`, label: 'Calibers' },
-          { value: `${calibers.reduce((sum, c) => sum + c.data.loads.length, 0)}`, label: 'Load Profiles' },
-          { value: 'Full', label: 'Ballistic Tables' },
-          { value: 'Side×Side', label: 'Comparison Tool' },
+          { value: fmtNumber(totalLoads), label: 'Load Profiles' },
+          { value: `${firearms.length}`, label: 'Firearms' },
+          { value: `${yearMin}–${yearMax}`, label: 'Year Span' },
+          { value: `${categories.length}`, label: 'Categories' },
         ].map(stat => (
-          <div class="px-4 py-6 text-center sm:px-6 sm:py-8">
-            <div class="text-2xl font-bold text-accent sm:text-3xl">{stat.value}</div>
-            <div class="mt-1 text-sm font-medium text-text-muted">{stat.label}</div>
+          <div class="px-4 py-5 text-center sm:py-6">
+            <div class="font-mono text-xl font-bold text-accent sm:text-2xl">{stat.value}</div>
+            <div class="mt-0.5 text-xs font-medium uppercase tracking-wide text-text-muted">{stat.label}</div>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- Recently Viewed (client-side, renders only if user has history) -->
-  <RecentlyViewed client:idle allCalibers={caliberIndex} basePath="" />
+  <!-- Trajectory Arc Illustration -->
+  <section class="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16">
+    <svg
+      width="100%"
+      viewBox="0 0 600 110"
+      class="text-text-muted"
+      role="img"
+      aria-label="Bullet trajectory diagram showing drop over distance"
+    >
+      {/* Ground / baseline */}
+      <line x1="40" y1="85" x2="570" y2="85" stroke="currentColor" stroke-width="0.5" opacity="0.25" />
 
-  <!-- Saved Calibers (client-side, renders only if user has favorites) -->
-  <FavoritesList client:idle allCalibers={caliberIndex} basePath="" />
+      {/* Distance hash marks */}
+      {[0, 100, 200, 300, 400, 500].map((yd, i) => {
+        const x = 50 + i * 100;
+        return (
+          <g>
+            <line x1={x} y1="82" x2={x} y2="88" stroke="currentColor" stroke-width="0.5" opacity="0.3" />
+            <text x={x} y="97" font-family="'IBM Plex Mono', monospace" font-size="7" fill="currentColor" opacity="0.35" text-anchor="middle">
+              {yd} yd
+            </text>
+          </g>
+        );
+      })}
 
-  <!-- Featured Calibers Preview -->
-  <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
-    <div class="mb-8 flex items-center gap-4">
-      <div class="h-px flex-1 bg-surface-border" aria-hidden="true"></div>
-      <h2 class="text-sm font-semibold uppercase tracking-wide text-text-muted">Military Standard Calibers</h2>
-      <div class="h-px flex-1 bg-surface-border" aria-hidden="true"></div>
-    </div>
+      {/* Line of sight (flat dashed line) */}
+      <line x1="50" y1="48" x2="550" y2="48" stroke="currentColor" stroke-width="0.5" opacity="0.2" stroke-dasharray="4,4" />
+      <text x="555" y="51" font-family="'IBM Plex Mono', monospace" font-size="6" fill="currentColor" opacity="0.3" text-anchor="start">
+        LOS
+      </text>
 
-    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {featured.map(caliber => (
-        <a
-          href={`/calibers/${caliber.data.slug}`}
-          class="group rounded-lg border border-surface-border bg-surface p-6 transition-all hover:border-accent/40 hover:bg-surface-raised hover:shadow-md"
-        >
-          <div class="flex items-start justify-between">
-            <div>
-              <div class="text-xl font-semibold text-text-primary group-hover:text-accent transition-colors">
-                {caliber.data.name}
-              </div>
-              <div class="mt-0.5 font-mono text-sm text-text-muted">
-                {caliber.data.designation}
-              </div>
-            </div>
-            <span class="mt-1 rounded-full bg-surface-overlay px-2.5 py-0.5 text-xs font-medium text-text-muted">
-              {caliber.data.category.replace('_', ' ')}
-            </span>
-          </div>
+      {/* Trajectory arc: rises above LOS, crosses at ~50yd and ~200yd, drops after */}
+      <path
+        d="M 50,60 C 100,30 200,22 250,38 S 380,70 550,85"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.2"
+        opacity="0.5"
+      />
 
-          <div class="mt-4 grid grid-cols-3 gap-3">
-            <div>
-              <div class="text-xs font-medium uppercase tracking-wide text-text-muted">Velocity</div>
-              <div class="mt-0.5 font-mono text-base text-text-secondary">
-                {caliber.data.typical_velocity_fps[0]}–{caliber.data.typical_velocity_fps[1]} <span class="text-text-muted text-sm">fps</span>
-              </div>
-            </div>
-            <div>
-              <div class="text-xs font-medium uppercase tracking-wide text-text-muted">Energy</div>
-              <div class="mt-0.5 font-mono text-base text-text-secondary">
-                {caliber.data.typical_energy_ft_lbs[0]}–{caliber.data.typical_energy_ft_lbs[1]} <span class="text-text-muted text-sm">ft·lbs</span>
-              </div>
-            </div>
-            <div>
-              <div class="text-xs font-medium uppercase tracking-wide text-text-muted">Range</div>
-              <div class="mt-0.5 font-mono text-base text-text-secondary">
-                {caliber.data.effective_range_yd} <span class="text-text-muted text-sm">yd</span>
-              </div>
-            </div>
-          </div>
-        </a>
-      ))}
-    </div>
+      {/* Zero crossing marker at ~200yd */}
+      <circle cx="250" cy="48" r="3" fill="none" stroke="currentColor" stroke-width="0.8" opacity="0.5" />
+      <text x="250" y="40" font-family="'IBM Plex Mono', monospace" font-size="6" fill="currentColor" opacity="0.4" text-anchor="middle">
+        zero: 200 yd
+      </text>
 
-    <div class="mt-8 text-center">
-      <a
-        href="/calibers"
-        class="text-sm font-medium text-text-muted transition-colors hover:text-accent"
-      >
-        View all calibers →
-      </a>
-    </div>
+      {/* Drop annotation at 400yd */}
+      <line x1="450" y1="48" x2="450" y2="72" stroke="currentColor" stroke-width="0.5" opacity="0.3" stroke-dasharray="2,2" />
+      <text x="462" y="64" font-family="'IBM Plex Mono', monospace" font-size="6" fill="currentColor" opacity="0.4" text-anchor="start">
+        -12.3"
+      </text>
+
+      {/* Muzzle indicator */}
+      <polygon points="46,60 54,57 54,63" fill="currentColor" opacity="0.4" />
+    </svg>
+
+    <p class="mt-4 text-center text-sm leading-relaxed text-text-muted">
+      Every caliber includes muzzle velocity, energy, bullet drop tables, load profiles,
+      cartridge dimensions, recoil data, lineage, and adoption history.
+    </p>
   </section>
 
-  <!-- Explore by Section -->
+  <!-- Recently Viewed + Favorites (conditional, client-side) -->
+  <RecentlyViewed client:idle allCalibers={caliberIndex} basePath="" />
+  <FavoritesList client:idle allCalibers={caliberIndex} basePath="" />
+
+  <!-- Five Silo Navigation Panels -->
   <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16">
     <div class="mb-8 flex items-center gap-4">
       <div class="h-px flex-1 bg-surface-border" aria-hidden="true"></div>
@@ -172,86 +360,228 @@ const caliberIndex = calibers.map(c => ({
     </div>
 
     <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-      {[
-        {
-          href: '/calibers',
-          title: 'Calibers',
-          desc: `Browse and research ${calibers.length} calibers with detailed ballistic data, specs, and ${calibers.reduce((s, c) => s + c.data.loads.length, 0)} load profiles.`,
-          icon: 'M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z',
-          links: [
-            { href: '/calibers', label: 'Browse All' },
-            { href: '/calibers/ammo', label: 'Ammo Finder' },
-          ],
-        },
-        {
-          href: '/compare',
-          title: 'Compare',
-          desc: 'Side-by-side caliber comparisons with 48 pre-built head-to-head matchups and a custom comparison tool.',
-          icon: 'M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5',
-          links: [
-            { href: '/compare', label: 'Compare Tool' },
-          ],
-        },
-        {
-          href: '/tools',
-          title: 'Tools',
-          desc: '9 interactive calculators for ballistics, recoil, ammo cost, range cards, and more.',
-          icon: 'M11.42 15.17l-5.648-3.064a.64.64 0 01-.229-1.015l4.217-6.278a.75.75 0 011.259 0l4.217 6.278a.75.75 0 01-.229 1.015L9.42 15.17z',
-          links: [
-            { href: '/tools/ballistics-calculator', label: 'Ballistics Calc' },
-            { href: '/tools/recoil-calculator', label: 'Recoil Calc' },
-            { href: '/tools', label: 'All Tools' },
-          ],
-        },
-        {
-          href: '/guides',
-          title: 'Guides',
-          desc: 'Expert caliber recommendations for hunting, self-defense, home defense, long-range, and beginners.',
-          icon: 'M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25',
-          links: [
-            { href: '/guides/best-deer-calibers', label: 'Best for Deer' },
-            { href: '/guides/best-self-defense-calibers', label: 'Self-Defense' },
-            { href: '/guides/quiz', label: 'Find Your Caliber' },
-            { href: '/guides', label: 'All Guides' },
-          ],
-        },
-        {
-          href: '/reference',
-          title: 'Reference',
-          desc: 'Glossary, timeline, firearms database, NATO equivalents, reloading data, hunting regulations, and more.',
-          icon: 'M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125',
-          links: [
-            { href: '/reference/glossary', label: 'Glossary' },
-            { href: '/reference/timeline', label: 'Timeline' },
-            { href: '/reference/firearms', label: 'Firearms' },
-            { href: '/reference', label: 'All Reference' },
-          ],
-        },
-      ].map(section => (
-        <a
-          href={section.href}
-          class="group rounded-lg border border-surface-border bg-surface p-6 transition-all hover:border-accent/40 hover:bg-surface-raised hover:shadow-md"
-        >
-          <div class="flex items-start gap-4">
-            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-accent/30 bg-accent/10 text-accent">
-              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d={section.icon} />
-              </svg>
+
+      <!-- Calibers Panel -->
+      <div class="overflow-hidden rounded-lg border border-surface-border">
+        <div class="flex items-center justify-between border-b border-surface-border bg-surface-overlay px-5 py-3">
+          <h3 class="text-base font-semibold text-text-primary">Calibers</h3>
+          <span class="rounded-full bg-accent/10 px-2 py-0.5 font-mono text-xs text-accent">{calibers.length}</span>
+        </div>
+        <div class="p-5">
+          <p class="text-sm leading-relaxed text-text-muted">
+            Browse, search, and filter the complete database. Each entry includes ballistic tables, dimensional specs, load profiles, and adoption history.
+          </p>
+          <div class="mt-4 flex flex-col gap-1.5">
+            <a href="/calibers" class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Browse All Calibers</a>
+            <a href="/calibers/ammo" class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Ammo Finder</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Compare Panel -->
+      <div class="overflow-hidden rounded-lg border border-surface-border">
+        <div class="flex items-center justify-between border-b border-surface-border bg-surface-overlay px-5 py-3">
+          <h3 class="text-base font-semibold text-text-primary">Compare</h3>
+          <span class="rounded-full bg-accent/10 px-2 py-0.5 font-mono text-xs text-accent">48 matchups</span>
+        </div>
+        <div class="p-5">
+          <p class="text-sm leading-relaxed text-text-muted">
+            Side-by-side specs, ballistics charts, and trajectory overlays for any combination of calibers.
+          </p>
+          <div class="mt-4 flex flex-col gap-1.5">
+            <a href="/compare" class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Compare Tool</a>
+          </div>
+          <div class="mt-3">
+            <div class="mb-1.5 text-xs font-semibold uppercase tracking-wide text-text-muted">Popular</div>
+            <div class="flex flex-wrap gap-x-3 gap-y-1">
+              <a href="/compare/9mm-luger-vs-45-acp" class="text-xs text-text-muted transition-colors hover:text-accent">9mm vs .45</a>
+              <a href="/compare/308-winchester-vs-65-creedmoor" class="text-xs text-text-muted transition-colors hover:text-accent">.308 vs 6.5 CM</a>
+              <a href="/compare/556x45mm-nato-vs-300-blackout" class="text-xs text-text-muted transition-colors hover:text-accent">5.56 vs .300 BLK</a>
+              <a href="/compare/308-winchester-vs-30-06-springfield" class="text-xs text-text-muted transition-colors hover:text-accent">.308 vs .30-06</a>
             </div>
-            <div class="min-w-0">
-              <h3 class="text-xl font-semibold text-text-primary group-hover:text-accent transition-colors">
-                {section.title}
-              </h3>
-              <p class="mt-1 text-sm text-text-muted leading-relaxed">{section.desc}</p>
-              <div class="mt-3 flex flex-wrap gap-x-3 gap-y-1">
-                {section.links.map(link => (
-                  <span class="text-xs font-medium text-accent">{link.label}</span>
-                ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools Panel -->
+      <div class="overflow-hidden rounded-lg border border-surface-border">
+        <div class="flex items-center justify-between border-b border-surface-border bg-surface-overlay px-5 py-3">
+          <h3 class="text-base font-semibold text-text-primary">Tools</h3>
+          <span class="rounded-full bg-accent/10 px-2 py-0.5 font-mono text-xs text-accent">9 calculators</span>
+        </div>
+        <div class="p-5">
+          <p class="text-sm leading-relaxed text-text-muted">
+            Interactive calculators for trajectory, recoil, ammunition cost, range cards, and more.
+          </p>
+          <div class="mt-4 grid grid-cols-2 gap-x-4 gap-y-1.5">
+            <a href="/tools/ballistics-calculator" class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Ballistics Calc</a>
+            <a href="/tools/recoil-calculator" class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Recoil Calc</a>
+            <a href="/tools/drop-chart" class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Drop Chart</a>
+            <a href="/tools/ammo-cost-calculator" class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Ammo Cost Calc</a>
+            <a href="/tools/range-card" class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Range Card</a>
+            <a href="/tools/cartridge-overlay" class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Cartridge Overlay</a>
+            <a href="/tools/bc-estimator" class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">BC Estimator</a>
+            <a href="/tools/ethical-range" class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Ethical Range</a>
+            <a href="/tools/range-day" class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Range Day Planner</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guides Panel -->
+      <div class="overflow-hidden rounded-lg border border-surface-border sm:col-span-2 lg:col-span-1">
+        <div class="flex items-center justify-between border-b border-surface-border bg-surface-overlay px-5 py-3">
+          <h3 class="text-base font-semibold text-text-primary">Guides</h3>
+          <span class="rounded-full bg-accent/10 px-2 py-0.5 font-mono text-xs text-accent">{7 + guides.length}</span>
+        </div>
+        <div class="p-5">
+          <p class="text-sm leading-relaxed text-text-muted">
+            Expert caliber recommendations by use case, buying guides, and a quiz to find your ideal cartridge.
+          </p>
+
+          <div class="mt-4">
+            <div class="mb-1.5 text-xs font-semibold uppercase tracking-wide text-text-muted">Best-of Picks</div>
+            <div class="flex flex-wrap gap-x-3 gap-y-1">
+              <a href="/guides/best-deer-calibers" class="text-sm text-text-secondary transition-colors hover:text-accent">Deer</a>
+              <a href="/guides/best-elk-calibers" class="text-sm text-text-secondary transition-colors hover:text-accent">Elk</a>
+              <a href="/guides/best-self-defense-calibers" class="text-sm text-text-secondary transition-colors hover:text-accent">Self-Defense</a>
+              <a href="/guides/best-home-defense-calibers" class="text-sm text-text-secondary transition-colors hover:text-accent">Home Defense</a>
+              <a href="/guides/best-bear-defense-calibers" class="text-sm text-text-secondary transition-colors hover:text-accent">Bear</a>
+              <a href="/guides/best-long-range-calibers" class="text-sm text-text-secondary transition-colors hover:text-accent">Long-Range</a>
+              <a href="/guides/best-calibers-for-beginners" class="text-sm text-text-secondary transition-colors hover:text-accent">Beginners</a>
+            </div>
+          </div>
+
+          <div class="mt-3">
+            <div class="mb-1.5 text-xs font-semibold uppercase tracking-wide text-text-muted">Deep Dives</div>
+            <div class="flex flex-wrap gap-x-3 gap-y-1">
+              {guides.map(g => (
+                <a href={`/guides/${g.data.slug}`} class="text-xs text-text-muted transition-colors hover:text-accent">
+                  {g.data.title.replace('Best Calibers for ', '')}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <a
+              href="/guides/quiz"
+              class="inline-flex items-center gap-1.5 rounded border border-accent/30 bg-accent/5 px-3 py-1.5 text-sm font-medium text-accent transition-colors hover:bg-accent/10"
+            >
+              Find Your Caliber
+              <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reference Panel -->
+      <div class="overflow-hidden rounded-lg border border-surface-border sm:col-span-2">
+        <div class="flex items-center justify-between border-b border-surface-border bg-surface-overlay px-5 py-3">
+          <h3 class="text-base font-semibold text-text-primary">Reference</h3>
+          <span class="rounded-full bg-accent/10 px-2 py-0.5 font-mono text-xs text-accent">12 sections</span>
+        </div>
+        <div class="p-5">
+          <p class="text-sm leading-relaxed text-text-muted">
+            Encyclopedic technical reference: glossary, cartridge history, databases, rankings, and regulations.
+          </p>
+
+          <div class="mt-4 grid gap-4 sm:grid-cols-3">
+            <div>
+              <div class="mb-1.5 text-xs font-semibold uppercase tracking-wide text-text-muted">Data & Rankings</div>
+              <div class="flex flex-col gap-1">
+                <a href="/reference/recoil-ranking" class="text-sm text-text-secondary transition-colors hover:text-accent">Recoil Ranking</a>
+                <a href="/reference/terminal-performance" class="text-sm text-text-secondary transition-colors hover:text-accent">Terminal Performance</a>
+                <a href="/reference/cost-comparison" class="text-sm text-text-secondary transition-colors hover:text-accent">Cost Comparison</a>
+                <a href="/reference/use-cases" class="text-sm text-text-secondary transition-colors hover:text-accent">Use Case Heatmap</a>
+              </div>
+            </div>
+            <div>
+              <div class="mb-1.5 text-xs font-semibold uppercase tracking-wide text-text-muted">Databases</div>
+              <div class="flex flex-col gap-1">
+                <a href="/reference/firearms" class="text-sm text-text-secondary transition-colors hover:text-accent">Firearms Database</a>
+                <a href="/reference/family-tree" class="text-sm text-text-secondary transition-colors hover:text-accent">Cartridge Family Tree</a>
+                <a href="/reference/reloading" class="text-sm text-text-secondary transition-colors hover:text-accent">Reloading Reference</a>
+              </div>
+            </div>
+            <div>
+              <div class="mb-1.5 text-xs font-semibold uppercase tracking-wide text-text-muted">Knowledge</div>
+              <div class="flex flex-col gap-1">
+                <a href="/reference/glossary" class="text-sm text-text-secondary transition-colors hover:text-accent">Glossary</a>
+                <a href="/reference/timeline" class="text-sm text-text-secondary transition-colors hover:text-accent">Timeline</a>
+                <a href="/reference/myths" class="text-sm text-text-secondary transition-colors hover:text-accent">Myths Debunked</a>
+                <a href="/reference/nato-equivalents" class="text-sm text-text-secondary transition-colors hover:text-accent">NATO Equivalents</a>
+                <a href="/reference/hunting-regulations" class="text-sm text-text-secondary transition-colors hover:text-accent">Hunting Regulations</a>
               </div>
             </div>
           </div>
-        </a>
-      ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Featured Calibers Data Table -->
+  <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16">
+    <div class="mb-8 flex items-center gap-4">
+      <div class="h-px flex-1 bg-surface-border" aria-hidden="true"></div>
+      <h2 class="text-sm font-semibold uppercase tracking-wide text-text-muted">Featured Calibers</h2>
+      <div class="h-px flex-1 bg-surface-border" aria-hidden="true"></div>
+    </div>
+
+    <div class="overflow-x-auto rounded-lg border border-surface-border">
+      <table class="w-full text-left text-sm">
+        <thead>
+          <tr class="border-b border-surface-border bg-surface-overlay">
+            <th class="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-text-muted">Name</th>
+            <th class="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-text-muted">Designation</th>
+            <th class="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-text-muted">Category</th>
+            <th class="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-text-muted text-right">Velocity</th>
+            <th class="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-text-muted text-right">Energy</th>
+            <th class="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-text-muted text-right">Range</th>
+            <th class="px-4 py-3 text-xs font-semibold uppercase tracking-wide text-text-muted text-right">Recoil</th>
+          </tr>
+        </thead>
+        <tbody>
+          {featured.map(c => (
+            <tr class="data-row border-b border-surface-border-subtle last:border-0 transition-colors hover:bg-accent/5">
+              <td class="whitespace-nowrap px-4 py-3">
+                <a href={`/calibers/${c!.data.slug}`} class="font-medium text-text-primary transition-colors hover:text-accent">
+                  {c!.data.name}
+                </a>
+              </td>
+              <td class="whitespace-nowrap px-4 py-3 font-mono text-xs text-text-muted">{c!.data.designation}</td>
+              <td class="whitespace-nowrap px-4 py-3">
+                <span class="rounded-full bg-surface-overlay px-2 py-0.5 text-xs text-text-muted">
+                  {titleCase(c!.data.category)}
+                </span>
+              </td>
+              <td class="whitespace-nowrap px-4 py-3 text-right font-mono text-sm text-text-secondary">
+                {fmtRange(c!.data.typical_velocity_fps, 'fps')}
+              </td>
+              <td class="whitespace-nowrap px-4 py-3 text-right font-mono text-sm text-text-secondary">
+                {fmtRange(c!.data.typical_energy_ft_lbs, 'ft-lbs')}
+              </td>
+              <td class="whitespace-nowrap px-4 py-3 text-right font-mono text-sm text-text-secondary">
+                {fmtNumber(c!.data.effective_range_yd)} yd
+              </td>
+              <td class="whitespace-nowrap px-4 py-3 text-right font-mono text-sm text-text-secondary">
+                {c!.data.recoil.free_recoil_ft_lbs} ft-lbs
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-6 text-center">
+      <a
+        href="/calibers"
+        class="text-sm font-medium text-text-muted transition-colors hover:text-accent"
+      >
+        View all {calibers.length} calibers &rarr;
+      </a>
     </div>
   </section>
 

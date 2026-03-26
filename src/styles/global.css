@@ -3,7 +3,7 @@
 
 @theme {
   --font-sans: "Barlow", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
+  --font-mono: "IBM Plex Mono", monospace;
   --font-display: "Barlow Condensed", system-ui, sans-serif;
 
   --color-surface: #111111;
