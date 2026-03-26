@@ -14,9 +14,11 @@ const links = [
   { href: '/caliber-companion/browse', label: 'Browse' },
   { href: '/caliber-companion/compare', label: 'Compare' },
 ];
+
+const currentPath = Astro.url.pathname;
 ---
 
-<nav class="fixed top-0 left-0 right-0 z-50 border-b border-surface-border bg-surface/90 backdrop-blur-md">
+<nav class="fixed top-0 left-0 right-0 z-50 border-b border-surface-border bg-surface/90 backdrop-blur-md" aria-label="Main navigation">
   <div class="mx-auto max-w-7xl px-4 sm:px-6">
     <div class="flex h-14 items-center justify-between">
       <!-- Logo / Home -->
@@ -29,23 +31,82 @@ const links = [
         </span>
       </a>
 
-      <!-- Navigation Links + Search -->
+      <!-- Right side controls -->
       <div class="flex items-center gap-1">
+        <!-- Desktop nav links -->
         {links.map(link => (
           <a
             href={link.href}
-            class="px-3 py-1.5 font-mono text-sm tracking-wider uppercase text-text-secondary transition-colors hover:text-accent"
+            class={`hidden sm:inline-block px-3 py-1.5 font-mono text-sm tracking-wider uppercase transition-colors ${
+              currentPath.startsWith(link.href)
+                ? 'text-accent'
+                : 'text-text-secondary hover:text-accent'
+            }`}
+            aria-current={currentPath.startsWith(link.href) ? 'page' : undefined}
           >
             {link.label}
           </a>
         ))}
+
         <div class="ml-2 border-l border-surface-border pl-3">
           <CaliberSearch client:idle calibers={caliberIndex} basePath="/caliber-companion" />
         </div>
         <div class="ml-2 border-l border-surface-border pl-3">
           <ThemeToggle client:idle />
         </div>
+
+        <!-- Mobile hamburger -->
+        <button
+          id="mobile-menu-btn"
+          class="ml-2 flex sm:hidden h-7 w-7 items-center justify-center border border-surface-border text-text-muted transition-colors hover:border-accent hover:text-accent"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Toggle navigation menu"
+        >
+          <svg class="h-4 w-4" id="hamburger-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg class="h-4 w-4 hidden" id="close-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile dropdown menu -->
+    <div id="mobile-menu" class="hidden sm:hidden border-t border-surface-border pb-3">
+      <div class="flex flex-col gap-1 pt-2">
+        {links.map(link => (
+          <a
+            href={link.href}
+            class={`px-3 py-2 font-mono text-sm tracking-wider uppercase transition-colors ${
+              currentPath.startsWith(link.href)
+                ? 'text-accent bg-accent/10'
+                : 'text-text-secondary hover:text-accent'
+            }`}
+            aria-current={currentPath.startsWith(link.href) ? 'page' : undefined}
+          >
+            {link.label}
+          </a>
+        ))}
       </div>
     </div>
   </div>
 </nav>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  if (btn && menu && hamburgerIcon && closeIcon) {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('hidden');
+      hamburgerIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+  }
+</script>
