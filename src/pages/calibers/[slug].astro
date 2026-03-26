@@ -5,6 +5,7 @@ import UsageBadges from '../../components/UsageBadges.astro';
 import AdoptionTimeline from '../../components/AdoptionTimeline.astro';
 import CartridgeLineage from '../../components/CartridgeLineage.astro';
 import BallisticsChart from '../../components/islands/BallisticsChart';
+import CartridgeDiagram from '../../components/islands/CartridgeDiagram';
 import { getCollection, render } from 'astro:content';
 import { fmtRange, fmtNumber, fmtCurrency, titleCase } from '../../lib/format';
 
@@ -259,6 +260,9 @@ const marketRows = [
 
       <!-- Right Column: Sidebar -->
       <div class="space-y-6">
+        <!-- Cartridge Diagram -->
+        <CartridgeDiagram client:visible dimensions={d.dimensions} name={d.name} />
+
         <!-- Usage Badges -->
         <div class="border border-surface-border p-5">
           <UsageBadges
