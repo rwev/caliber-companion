@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+interface GlossaryEntry {
+  term: string;
+  abbr?: string;
+  definition: string;
+}
+
+const sections: { title: string; entries: GlossaryEntry[] }[] = [
+  {
+    title: 'Ballistics & Performance',
+    entries: [
+      { term: 'Muzzle Velocity', definition: 'The speed of a projectile as it exits the barrel, measured in feet per second (fps). Higher muzzle velocity generally means flatter trajectory and greater range.' },
+      { term: 'Muzzle Energy', definition: 'The kinetic energy of a projectile at the muzzle, measured in foot-pounds (ft·lbs). Calculated as (bullet weight × velocity²) / (2 × gravity × 7000). A key indicator of terminal effectiveness.' },
+      { term: 'Ballistic Coefficient', abbr: 'BC', definition: 'A measure of a bullet\'s ability to overcome air resistance in flight. Higher BC means less drag, flatter trajectory, and less wind drift. Expressed as G1 (standard drag model) or G7 (boat-tail optimized model).' },
+      { term: 'Sectional Density', abbr: 'SD', definition: 'The ratio of a bullet\'s weight to its cross-sectional area: SD = weight (gr) / (7000 × diameter²). Higher SD generally means better penetration. Values above 0.250 are considered good for hunting.' },
+      { term: 'Effective Range', definition: 'The maximum distance at which a cartridge can reliably hit a target and deliver adequate terminal performance for its intended purpose.' },
+      { term: 'Maximum Range', definition: 'The farthest distance a projectile can travel. Much greater than effective range — a bullet at maximum range has minimal accuracy and energy.' },
+      { term: 'Bullet Drop', definition: 'The vertical distance a bullet falls below the line of sight due to gravity, measured in inches. Increases exponentially with range.' },
+      { term: 'Wind Drift', definition: 'The horizontal displacement of a bullet caused by crosswind, measured in inches. Lower BC bullets are more affected. Critical for long-range shooting.' },
+      { term: 'MOA', abbr: 'Minute of Angle', definition: 'An angular measurement equal to 1/60th of a degree. At 100 yards, 1 MOA ≈ 1.047 inches. Used to express accuracy (e.g., "sub-MOA rifle") and scope adjustments.' },
+      { term: 'Time of Flight', abbr: 'ToF', definition: 'The time it takes a bullet to travel from the muzzle to a given range, measured in seconds. Longer ToF means more bullet drop and wind drift.' },
+      { term: 'Free Recoil Energy', definition: 'The kinetic energy transferred to the firearm (and shooter) upon firing, measured in foot-pounds. Determined by bullet weight, powder charge, and firearm weight.' },
+      { term: 'Power Factor', abbr: 'PF', definition: 'Used in competitive shooting (USPSA/IDPA): PF = bullet weight (gr) × velocity (fps) / 1000. Determines scoring division — e.g., Major PF ≥ 165, Minor PF ≥ 125.' },
+    ],
+  },
+  {
+    title: 'Terminal Ballistics',
+    entries: [
+      { term: 'Terminal Performance', definition: 'How a bullet behaves upon striking a target — including penetration depth, expansion, fragmentation, and energy transfer.' },
+      { term: 'Gel Penetration', definition: 'Penetration depth measured in calibrated 10% ordnance gelatin per FBI protocol. The FBI standard is 12"–18" for duty ammunition.' },
+      { term: 'Expansion', definition: 'The increase in bullet diameter upon impact. Hollow point bullets are designed to expand, creating a larger wound channel. Measured as expanded diameter in inches.' },
+      { term: 'Barrier Blind', definition: 'A bullet design that performs consistently after penetrating intermediate barriers (heavy clothing, auto glass, plywood, drywall, sheet metal) per FBI barrier protocol testing.' },
+      { term: 'Overpenetration', definition: 'When a bullet passes completely through a target and exits with residual energy. A concern in self-defense scenarios due to risk to bystanders.' },
+      { term: 'Fragmentation', definition: 'When a bullet breaks apart upon impact, creating multiple wound channels. Common with high-velocity rifle rounds like 5.56 NATO above ~2,700 fps.' },
+    ],
+  },
+  {
+    title: 'Bullet Types',
+    entries: [
+      { term: 'FMJ', abbr: 'Full Metal Jacket', definition: 'A bullet with a soft lead core enclosed in a harder metal shell (usually copper or gilding metal). The standard for military use and target shooting. Does not expand on impact.' },
+      { term: 'JHP', abbr: 'Jacketed Hollow Point', definition: 'A bullet with a hollowed-out tip designed to expand upon impact, increasing wound diameter. The standard for self-defense and law enforcement ammunition.' },
+      { term: 'SP', abbr: 'Soft Point', definition: 'A bullet with an exposed lead tip that promotes controlled expansion. Common in hunting ammunition, offering a balance between expansion and penetration.' },
+      { term: 'BTHP', abbr: 'Boat Tail Hollow Point', definition: 'A bullet combining a hollow point with a tapered (boat-tail) base for improved aerodynamics. Popular in precision rifle shooting — the hollow point aids accuracy, not necessarily expansion.' },
+      { term: 'ELD Match', definition: 'Hornady\'s Extremely Low Drag Match bullet featuring a heat-resistant polymer tip that maintains its BC at high velocities. Designed for long-range precision.' },
+      { term: 'ELD-X', definition: 'Hornady\'s Extremely Low Drag eXpanding bullet. Similar aerodynamics to ELD Match but engineered for controlled expansion at all velocities. A premium hunting bullet.' },
+      { term: 'HST', definition: 'Federal Premium\'s flagship law enforcement hollow point. The name is not an acronym. Known for consistent expansion and barrier-blind performance.' },
+      { term: 'Gold Dot', definition: 'Speer\'s bonded hollow point bullet where the jacket is electrochemically bonded to the core. Prevents jacket/core separation. Widely used by law enforcement.' },
+      { term: 'FTX', definition: 'Hornady\'s Flex Tip eXpanding bullet featuring a soft polymer tip in the hollow point cavity. Enables safe use of pointed bullets in tubular magazines (lever-action rifles).' },
+      { term: 'AccuBond', definition: 'Nosler\'s bonded core hunting bullet combining high BC with reliable expansion. The white polymer tip initiates expansion while the bonded core ensures weight retention.' },
+      { term: 'Partition', definition: 'Nosler\'s original premium hunting bullet with a dual-core design. The front core expands while the rear core provides deep penetration. Introduced in 1948.' },
+      { term: 'A-MAX / ELD Match', definition: 'Hornady\'s precision target bullets. A-MAX (older) used a polymer tip; ELD Match (current) uses a heat-resistant tip for consistent BC at all velocities.' },
+      { term: 'TMJ', abbr: 'Total Metal Jacket', definition: 'A bullet completely enclosed in metal, including the base. Reduces lead exposure during shooting. Common in indoor range ammunition.' },
+      { term: 'Wadcutter', abbr: 'WC', definition: 'A flat-fronted cylindrical bullet designed to cut clean, round holes in paper targets. Used in bullseye competition, typically in .38 Special.' },
+    ],
+  },
+  {
+    title: 'Cartridge Anatomy & Dimensions',
+    entries: [
+      { term: 'Bullet Diameter', definition: 'The external diameter of the projectile, measured in inches or millimeters. Determines which bore size the cartridge is designed for.' },
+      { term: 'Case Length', definition: 'The length of the cartridge case from base to mouth, not including the bullet. A key dimension for chamber specifications.' },
+      { term: 'Overall Length', abbr: 'OAL', definition: 'Total length of the assembled cartridge from base to bullet tip. Must fit within the firearm\'s magazine and chamber.' },
+      { term: 'Rim Diameter', definition: 'The diameter of the cartridge base rim. Used for extraction. In rimless cartridges, the rim is the same diameter as the case body.' },
+      { term: 'Neck Diameter', definition: 'The external diameter of the case at the mouth where it holds the bullet. Slightly larger than bullet diameter to provide grip.' },
+      { term: 'Rimless', definition: 'A case head design where the rim diameter equals the case body diameter, with an extraction groove cut into the case. Standard for semi-automatic firearms.' },
+      { term: 'Rimmed', definition: 'A case head with a rim that extends beyond the case body diameter. Common in revolver cartridges and older rifle designs. The rim provides headspacing.' },
+      { term: 'Belted', definition: 'A case with a raised belt near the base, originally designed to provide headspacing for magnum cartridges. Common in older magnum rifle calibers.' },
+      { term: 'Bottleneck', definition: 'A case design where the neck is narrower than the body, creating a shoulder. Allows a smaller bullet to be driven by a larger powder column. Standard for most rifle cartridges.' },
+      { term: 'Straight Wall', definition: 'A case with no shoulder — the body diameter is consistent from base to mouth. Common in pistol cartridges and some rifle cartridges required by certain state hunting regulations.' },
+      { term: 'Headspace', definition: 'The distance from the bolt face to the part of the chamber that stops the cartridge\'s forward movement. Critical for safe operation — excessive headspace can cause case separation.' },
+    ],
+  },
+  {
+    title: 'Reloading & Pressure',
+    entries: [
+      { term: 'SAAMI', abbr: 'Sporting Arms and Ammunition Manufacturers\' Institute', definition: 'The U.S. industry body that publishes voluntary standards for cartridge dimensions, chamber specs, and maximum average pressure. Founded in 1926.' },
+      { term: 'CIP', abbr: 'Commission Internationale Permanente', definition: 'The European counterpart to SAAMI, setting standards for firearms and ammunition. CIP pressure measurements use different methodology than SAAMI and are not directly comparable.' },
+      { term: 'Maximum Average Pressure', abbr: 'MAP', definition: 'The highest average chamber pressure allowed by SAAMI for a given cartridge, measured in pounds per square inch (psi). Exceeding MAP risks firearm damage or injury.' },
+      { term: 'Primer', definition: 'The impact-sensitive component in the cartridge base that ignites the powder charge when struck by the firing pin. Types: Small Pistol, Large Pistol, Small Rifle, Large Rifle, and Magnum variants.' },
+      { term: 'Powder Charge', definition: 'The weight of propellant powder in a cartridge, measured in grains. Different powders have different burn rates — fast powders for pistols, slow powders for magnums.' },
+      { term: 'Grain', abbr: 'gr', definition: 'The unit of weight used for bullets and powder charges. 1 grain = 1/7000 of a pound ≈ 0.0648 grams. A 9mm bullet typically weighs 115–147 grains.' },
+    ],
+  },
+  {
+    title: 'Firearm Actions & Types',
+    entries: [
+      { term: 'Semi-Automatic', definition: 'A firearm action that fires one round per trigger pull, automatically cycling the action to chamber the next round. Uses energy from firing (blowback, short recoil, or gas operation).' },
+      { term: 'Bolt Action', definition: 'A manual action where the shooter operates a bolt handle to unlock, extract, eject, reload, and lock the action. Valued for accuracy and strength in rifle applications.' },
+      { term: 'Lever Action', definition: 'A manual action operated by a lever (usually integrated with the trigger guard). Iconic in Western firearms like the Winchester Model 94 and Marlin 336.' },
+      { term: 'Striker-Fired', definition: 'A semi-automatic action where a spring-loaded striker (rather than a hammer) hits the primer. Popularized by Glock. Offers consistent trigger pull and simplified design.' },
+      { term: 'Double Action', abbr: 'DA', definition: 'A trigger mechanism that both cocks and releases the hammer/striker in a single trigger pull. Longer, heavier trigger pull but can fire from a decocked position.' },
+      { term: 'Single Action', abbr: 'SA', definition: 'A trigger mechanism that only releases an already-cocked hammer/striker. Shorter, lighter trigger pull. Requires manual cocking (revolver) or slide cycling (semi-auto).' },
+      { term: 'Gas-Operated', definition: 'A semi-automatic action that uses propellant gas tapped from the barrel to cycle the action. Common in rifles (AR-15 uses direct impingement or short-stroke piston).' },
+      { term: 'Blowback', definition: 'A semi-automatic action where the breechblock is held closed only by spring pressure and inertia. Simple but limited to lower-pressure cartridges. Common in .22 LR and 9mm pistols.' },
+    ],
+  },
+  {
+    title: 'Standards & Organizations',
+    entries: [
+      { term: 'NATO', abbr: 'North Atlantic Treaty Organization', definition: 'In the context of ammunition, NATO standardization (STANAG) ensures interoperability among member nations. NATO-spec ammunition (e.g., 5.56×45mm, 7.62×51mm) may have different pressure specs than commercial equivalents.' },
+      { term: 'STANAG', abbr: 'Standardization Agreement', definition: 'NATO standardization agreements that define interoperable specifications. STANAG 4172 covers 5.56mm, STANAG 2310 covers 7.62mm ammunition.' },
+      { term: '+P / +P+', definition: 'Ammunition loaded to higher-than-standard pressure. +P is a SAAMI-defined overpressure category (e.g., .38 Special +P). +P+ exceeds even +P limits and is not SAAMI-standardized — use only in firearms rated for it.' },
+      { term: 'Proof Load', definition: 'An intentionally overpressure cartridge used to test firearm strength during manufacturing. Typically 30% above maximum service pressure. Every new firearm should be proof-tested.' },
+    ],
+  },
+];
+---
+
+<BaseLayout title="Glossary" description="Definitions for ballistic, cartridge, reloading, and firearms terminology used throughout Caliber Companion.">
+  <div class="mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-12">
+    <div class="mb-8">
+      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+        Glossary
+      </h1>
+      <p class="mt-2 font-mono text-base text-text-muted">
+        Definitions for ballistic, cartridge, reloading, and firearms terminology
+      </p>
+    </div>
+
+    <!-- Quick nav -->
+    <div class="mb-8 flex flex-wrap gap-2">
+      {sections.map(section => (
+        <a
+          href={`#${section.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+          class="border border-surface-border bg-surface-raised px-3 py-1.5 font-mono text-sm text-text-secondary transition-colors hover:border-accent hover:text-accent"
+        >
+          {section.title}
+        </a>
+      ))}
+    </div>
+
+    <div class="space-y-10">
+      {sections.map(section => (
+        <div id={section.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}>
+          <h2 class="font-display text-xl font-semibold tracking-[0.2em] uppercase text-accent border-b border-surface-border pb-3 mb-4">
+            {section.title}
+          </h2>
+          <dl class="space-y-0 divide-y divide-surface-border-subtle">
+            {section.entries.map((entry, i) => (
+              <div class={`px-4 py-3 ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
+                <dt class="font-mono text-base font-medium text-text-primary">
+                  {entry.term}
+                  {entry.abbr && (
+                    <span class="ml-2 text-sm text-accent">({entry.abbr})</span>
+                  )}
+                </dt>
+                <dd class="mt-1 font-mono text-sm text-text-secondary leading-relaxed">
+                  {entry.definition}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

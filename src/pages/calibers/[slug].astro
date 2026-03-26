@@ -6,6 +6,8 @@ import AdoptionTimeline from '../../components/AdoptionTimeline.astro';
 import CartridgeLineage from '../../components/CartridgeLineage.astro';
 import BallisticsChart from '../../components/islands/BallisticsChart';
 import CartridgeDiagram from '../../components/islands/CartridgeDiagram';
+import CaliberRadarChart from '../../components/islands/CaliberRadarChart';
+import FavoriteButton from '../../components/islands/FavoriteButton';
 import { getCollection, render } from 'astro:content';
 import { fmtRange, fmtNumber, fmtCurrency, titleCase } from '../../lib/format';
 
@@ -44,6 +46,45 @@ const childRefs = (d.derived_cartridges ?? [])
   .map(slug => ({ slug, name: caliberBySlug.get(slug)?.name ?? slug }))
   .sort((a, b) => a.name.localeCompare(b.name));
 
+// Compute related calibers by similarity
+const relatedCalibers = allCalibers
+  .filter(c => c.data.slug !== d.slug)
+  .map(c => {
+    const other = c.data;
+    let score = 0;
+
+    // Same category bonus
+    if (other.category === d.category) score += 20;
+
+    // Overlapping use cases
+    const sharedUses = d.primary_use_cases.filter(u => other.primary_use_cases.includes(u)).length;
+    score += sharedUses * 8;
+
+    // Similar effective range (within 30%)
+    const rangeDiff = Math.abs(other.effective_range_yd - d.effective_range_yd) / Math.max(d.effective_range_yd, 1);
+    if (rangeDiff < 0.15) score += 15;
+    else if (rangeDiff < 0.30) score += 8;
+    else if (rangeDiff < 0.50) score += 3;
+
+    // Similar energy envelope (within 30%)
+    const avgEnergy = (d.typical_energy_ft_lbs[0] + d.typical_energy_ft_lbs[1]) / 2;
+    const otherAvgEnergy = (other.typical_energy_ft_lbs[0] + other.typical_energy_ft_lbs[1]) / 2;
+    const energyDiff = Math.abs(otherAvgEnergy - avgEnergy) / Math.max(avgEnergy, 1);
+    if (energyDiff < 0.15) score += 12;
+    else if (energyDiff < 0.30) score += 6;
+
+    // Same popularity tier bonus
+    if (other.popularity_tier === d.popularity_tier) score += 5;
+
+    // Penalize same lineage (parent/child already shown)
+    if (d.parent_cartridge === other.slug || d.derived_cartridges?.includes(other.slug)) score -= 30;
+
+    return { slug: other.slug, name: other.name, category: other.category, score };
+  })
+  .filter(c => c.score > 15)
+  .sort((a, b) => b.score - a.score)
+  .slice(0, 5);
+
 const dimensionRows = [
   { label: 'Bullet Diameter', value: `${d.dimensions.bullet_diameter_in}" (${(d.dimensions.bullet_diameter_in * 25.4).toFixed(2)}mm)` },
   { label: 'Neck Diameter', value: `${d.dimensions.neck_diameter_in}"` },
@@ -81,6 +122,22 @@ const marketRows = [
   { label: 'Country of Origin', value: d.country_of_origin },
 ];
 
+const caliberDescription = prose?.data.summary || `${d.name} (${d.designation}) — ${titleCase(d.category)} cartridge. Effective range: ${d.effective_range_yd} yd. Year introduced: ${d.year_introduced}.`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  'name': d.name,
+  'headline': `${d.name} — Caliber Specifications, Ballistics & History`,
+  'description': caliberDescription,
+  'dateModified': prose?.data.last_updated?.toISOString() || '2026-03-22',
+  'publisher': {
+    '@type': 'Organization',
+    'name': 'Caliber Companion',
+  },
+  'mainEntityOfPage': `https://rwev.github.io/caliber-companion/calibers/${d.slug}`,
+};
+
 const reloadingRows = [
   ...(d.max_pressure_psi ? [{ label: 'Max Pressure (SAAMI)', value: `${fmtNumber(d.max_pressure_psi)} psi` }] : []),
   ...(d.primer_type ? [{ label: 'Primer Type', value: d.primer_type }] : []),
@@ -88,7 +145,7 @@ const reloadingRows = [
 ];
 ---
 
-<BaseLayout title={d.name}>
+<BaseLayout title={d.name} description={caliberDescription} ogType="article" jsonLd={jsonLd}>
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
     <!-- Header -->
     <div class="mb-8 border-b border-surface-border pb-6">
@@ -102,9 +159,12 @@ const reloadingRows = [
         </span>
       </div>
 
-      <h1 class="font-display text-4xl font-bold tracking-tight text-text-primary sm:text-5xl">
-        {d.name}
-      </h1>
+      <div class="flex items-start justify-between gap-4">
+        <h1 class="font-display text-4xl font-bold tracking-tight text-text-primary sm:text-5xl">
+          {d.name}
+        </h1>
+        <FavoriteButton client:idle slug={d.slug} name={d.name} />
+      </div>
       <div class="mt-1 font-mono text-base text-text-muted">
         {d.designation}
         {d.aliases.length > 0 && (
@@ -321,6 +381,16 @@ const reloadingRows = [
         <!-- Cartridge Diagram -->
         <CartridgeDiagram client:visible dimensions={d.dimensions} name={d.name} />
 
+        <!-- Radar Profile -->
+        <CaliberRadarChart
+          client:visible
+          energy={(d.typical_energy_ft_lbs[0] + d.typical_energy_ft_lbs[1]) / 2}
+          range={d.effective_range_yd}
+          recoil={d.recoil.free_recoil_ft_lbs}
+          cost={(d.cost_per_round_usd[0] + d.cost_per_round_usd[1]) / 2}
+          availability={d.availability_rating ?? 3}
+        />
+
         <!-- Usage Badges -->
         <div class="border border-surface-border p-5">
           <UsageBadges
@@ -391,6 +461,28 @@ const reloadingRows = [
       <div class="mt-12 border-t border-surface-border pt-8">
         <div class="prose mx-auto max-w-3xl prose-headings:font-display prose-headings:tracking-[0.2em] prose-headings:uppercase prose-h2:text-2xl prose-h2:font-semibold prose-h2:text-accent prose-h2:border-b prose-h2:border-surface-border prose-h2:pb-3 prose-h2:mt-12 prose-h2:mb-5 prose-strong:text-text-primary">
           <Content />
+        </div>
+      </div>
+    )}
+
+    <!-- Related Calibers -->
+    {relatedCalibers.length > 0 && (
+      <div class="mt-12 border-t border-surface-border pt-8">
+        <h2 class="font-display text-xl font-semibold tracking-[0.2em] uppercase text-text-muted mb-4">You Might Also Consider</h2>
+        <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {relatedCalibers.map(rc => (
+            <a
+              href={`/caliber-companion/calibers/${rc.slug}`}
+              class="group border border-surface-border bg-surface-raised p-4 transition-colors hover:border-accent"
+            >
+              <div class="font-mono text-base font-medium text-text-primary group-hover:text-accent transition-colors">
+                {rc.name}
+              </div>
+              <div class="mt-1 font-mono text-xs text-text-muted">
+                {titleCase(rc.category)}
+              </div>
+            </a>
+          ))}
         </div>
       </div>
     )}

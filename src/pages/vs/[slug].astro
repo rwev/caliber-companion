@@ -1,0 +1,368 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { fmtRange, fmtNumber, fmtCurrency, titleCase } from '../../lib/format';
+
+export async function getStaticPaths() {
+  const matchups: [string, string][] = [
+    ['9mm-luger', '45-acp'],
+    ['9mm-luger', '40-sw'],
+    ['9mm-luger', '380-acp'],
+    ['9mm-luger', '10mm-auto'],
+    ['9mm-luger', '357-sig'],
+    ['45-acp', '10mm-auto'],
+    ['40-sw', '45-acp'],
+    ['380-acp', '38-special'],
+    ['357-magnum', '38-special'],
+    ['357-magnum', '44-magnum'],
+    ['556x45mm-nato', '762x39mm'],
+    ['556x45mm-nato', '300-blackout'],
+    ['556x45mm-nato', '308-winchester'],
+    ['556x45mm-nato', '65-creedmoor'],
+    ['308-winchester', '65-creedmoor'],
+    ['308-winchester', '30-06-springfield'],
+    ['308-winchester', '762x39mm'],
+    ['308-winchester', '300-win-mag'],
+    ['65-creedmoor', '6mm-creedmoor'],
+    ['65-creedmoor', '65-prc'],
+    ['65-creedmoor', '30-06-springfield'],
+    ['30-06-springfield', '270-winchester'],
+    ['30-06-springfield', '300-win-mag'],
+    ['300-blackout', '762x39mm'],
+    ['300-win-mag', '338-lapua-magnum'],
+    ['270-winchester', '7mm-rem-mag'],
+    ['7mm-rem-mag', '300-win-mag'],
+    ['22-lr', '22-wmr'],
+    ['12-gauge', '20-gauge'],
+    ['50-bmg', '338-lapua-magnum'],
+  ];
+
+  const { getCollection } = await import('astro:content');
+  const allCalibers = await getCollection('caliberData');
+  const slugSet = new Set(allCalibers.map(c => c.data.slug));
+
+  return matchups
+    .filter(([a, b]) => slugSet.has(a) && slugSet.has(b))
+    .map(([slugA, slugB]) => ({
+      params: { slug: `${slugA}-vs-${slugB}` },
+      props: { slugA, slugB, allMatchups: matchups },
+    }));
+}
+
+const { slugA, slugB, allMatchups: MATCHUPS } = Astro.props;
+const allCalibers = await getCollection('caliberData');
+const caliberMap = new Map(allCalibers.map(c => [c.data.slug, c.data]));
+
+const a = caliberMap.get(slugA);
+const b = caliberMap.get(slugB);
+
+if (!a || !b) {
+  return Astro.redirect('/caliber-companion/compare');
+}
+
+// Build comparison rows
+interface CompRow {
+  label: string;
+  valA: string;
+  valB: string;
+  winner?: 'a' | 'b' | 'tie';
+}
+
+function avg(range: [number, number]): number {
+  return (range[0] + range[1]) / 2;
+}
+
+const specRows: CompRow[] = [
+  { label: 'Category', valA: titleCase(a.category), valB: titleCase(b.category) },
+  { label: 'Designation', valA: a.designation, valB: b.designation },
+  { label: 'Year Introduced', valA: `${a.year_introduced}`, valB: `${b.year_introduced}` },
+  { label: 'Country', valA: a.country_of_origin, valB: b.country_of_origin },
+];
+
+const perfRows: CompRow[] = [
+  {
+    label: 'Muzzle Velocity',
+    valA: fmtRange(a.typical_velocity_fps, 'fps'),
+    valB: fmtRange(b.typical_velocity_fps, 'fps'),
+    winner: avg(a.typical_velocity_fps) > avg(b.typical_velocity_fps) ? 'a' : avg(a.typical_velocity_fps) < avg(b.typical_velocity_fps) ? 'b' : 'tie',
+  },
+  {
+    label: 'Muzzle Energy',
+    valA: fmtRange(a.typical_energy_ft_lbs, 'ft·lbs'),
+    valB: fmtRange(b.typical_energy_ft_lbs, 'ft·lbs'),
+    winner: avg(a.typical_energy_ft_lbs) > avg(b.typical_energy_ft_lbs) ? 'a' : avg(a.typical_energy_ft_lbs) < avg(b.typical_energy_ft_lbs) ? 'b' : 'tie',
+  },
+  {
+    label: 'Bullet Weight',
+    valA: fmtRange(a.typical_bullet_weight_gr, 'gr'),
+    valB: fmtRange(b.typical_bullet_weight_gr, 'gr'),
+  },
+  {
+    label: 'Effective Range',
+    valA: `${fmtNumber(a.effective_range_yd)} yd`,
+    valB: `${fmtNumber(b.effective_range_yd)} yd`,
+    winner: a.effective_range_yd > b.effective_range_yd ? 'a' : a.effective_range_yd < b.effective_range_yd ? 'b' : 'tie',
+  },
+  {
+    label: 'Recoil Energy',
+    valA: `${a.recoil.free_recoil_ft_lbs} ft·lbs`,
+    valB: `${b.recoil.free_recoil_ft_lbs} ft·lbs`,
+    winner: a.recoil.free_recoil_ft_lbs < b.recoil.free_recoil_ft_lbs ? 'a' : a.recoil.free_recoil_ft_lbs > b.recoil.free_recoil_ft_lbs ? 'b' : 'tie',
+  },
+  {
+    label: 'Recoil Rating',
+    valA: titleCase(a.recoil.subjective),
+    valB: titleCase(b.recoil.subjective),
+  },
+];
+
+const dimRows: CompRow[] = [
+  { label: 'Bullet Diameter', valA: `${a.dimensions.bullet_diameter_in}"`, valB: `${b.dimensions.bullet_diameter_in}"` },
+  { label: 'Case Length', valA: `${a.dimensions.case_length_in}"`, valB: `${b.dimensions.case_length_in}"` },
+  { label: 'Overall Length', valA: `${a.dimensions.overall_length_in}"`, valB: `${b.dimensions.overall_length_in}"` },
+  { label: 'Case Type', valA: a.dimensions.case_type, valB: b.dimensions.case_type },
+];
+
+const marketRows: CompRow[] = [
+  { label: 'Popularity', valA: titleCase(a.popularity_tier), valB: titleCase(b.popularity_tier) },
+  {
+    label: 'Cost Per Round',
+    valA: fmtCurrency(a.cost_per_round_usd),
+    valB: fmtCurrency(b.cost_per_round_usd),
+    winner: avg(a.cost_per_round_usd) < avg(b.cost_per_round_usd) ? 'a' : avg(a.cost_per_round_usd) > avg(b.cost_per_round_usd) ? 'b' : 'tie',
+  },
+  {
+    label: 'Availability',
+    valA: `${a.availability_rating ?? '—'}/5`,
+    valB: `${b.availability_rating ?? '—'}/5`,
+    winner: (a.availability_rating ?? 0) > (b.availability_rating ?? 0) ? 'a' : (a.availability_rating ?? 0) < (b.availability_rating ?? 0) ? 'b' : 'tie',
+  },
+];
+
+// Shared use cases
+const sharedUses = a.primary_use_cases.filter(u => b.primary_use_cases.includes(u));
+const aOnlyUses = a.primary_use_cases.filter(u => !b.primary_use_cases.includes(u));
+const bOnlyUses = b.primary_use_cases.filter(u => !a.primary_use_cases.includes(u));
+
+const pageTitle = `${a.name} vs ${b.name}`;
+const pageDescription = `Side-by-side comparison of ${a.name} and ${b.name}: ballistics, recoil, cost, dimensions, and use cases.`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  'name': pageTitle,
+  'headline': `${a.name} vs ${b.name} — Complete Caliber Comparison`,
+  'description': pageDescription,
+  'publisher': { '@type': 'Organization', 'name': 'Caliber Companion' },
+  'mainEntityOfPage': `https://rwev.github.io/caliber-companion/vs/${slugA}-vs-${slugB}`,
+};
+
+function renderTable(title: string, rows: CompRow[]) {
+  return { title, rows };
+}
+
+const tables = [
+  renderTable('Specifications', specRows),
+  renderTable('Performance', perfRows),
+  renderTable('Dimensions', dimRows),
+  renderTable('Market & Availability', marketRows),
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} ogType="article" jsonLd={jsonLd}>
+  <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
+    <!-- Header -->
+    <div class="mb-8 border-b border-surface-border pb-6">
+      <div class="flex items-center gap-3 mb-3">
+        <a href="/caliber-companion/compare" class="font-mono text-sm tracking-wider uppercase text-text-muted hover:text-accent transition-colors">
+          ← Compare Tool
+        </a>
+      </div>
+
+      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
+        <a href={`/caliber-companion/calibers/${a.slug}`} class="hover:text-accent transition-colors">{a.name}</a>
+        <span class="text-text-muted mx-2 text-2xl sm:text-3xl">vs</span>
+        <a href={`/caliber-companion/calibers/${b.slug}`} class="hover:text-accent transition-colors">{b.name}</a>
+      </h1>
+      <p class="mt-2 font-mono text-base text-text-muted max-w-2xl">
+        {a.designation} vs {b.designation} — complete side-by-side comparison
+      </p>
+    </div>
+
+    <!-- Quick verdict cards -->
+    <div class="grid gap-4 sm:grid-cols-2 mb-10">
+      <a href={`/caliber-companion/calibers/${a.slug}`} class="group border border-surface-border bg-surface-raised p-5 hover:border-accent/40 transition-colors">
+        <div class="font-display text-xl font-semibold text-text-primary group-hover:text-accent transition-colors">{a.name}</div>
+        <div class="mt-1 font-mono text-sm text-text-muted">{a.designation} · {titleCase(a.category)} · {a.year_introduced}</div>
+        <div class="mt-3 grid grid-cols-3 gap-3">
+          <div>
+            <div class="font-mono text-xs tracking-wider uppercase text-text-muted">Energy</div>
+            <div class="font-mono text-sm text-text-secondary">{fmtNumber(Math.round(avg(a.typical_energy_ft_lbs)))} ft·lbs</div>
+          </div>
+          <div>
+            <div class="font-mono text-xs tracking-wider uppercase text-text-muted">Range</div>
+            <div class="font-mono text-sm text-text-secondary">{fmtNumber(a.effective_range_yd)} yd</div>
+          </div>
+          <div>
+            <div class="font-mono text-xs tracking-wider uppercase text-text-muted">Recoil</div>
+            <div class="font-mono text-sm text-text-secondary">{a.recoil.free_recoil_ft_lbs} ft·lbs</div>
+          </div>
+        </div>
+      </a>
+
+      <a href={`/caliber-companion/calibers/${b.slug}`} class="group border border-surface-border bg-surface-raised p-5 hover:border-accent/40 transition-colors">
+        <div class="font-display text-xl font-semibold text-text-primary group-hover:text-accent transition-colors">{b.name}</div>
+        <div class="mt-1 font-mono text-sm text-text-muted">{b.designation} · {titleCase(b.category)} · {b.year_introduced}</div>
+        <div class="mt-3 grid grid-cols-3 gap-3">
+          <div>
+            <div class="font-mono text-xs tracking-wider uppercase text-text-muted">Energy</div>
+            <div class="font-mono text-sm text-text-secondary">{fmtNumber(Math.round(avg(b.typical_energy_ft_lbs)))} ft·lbs</div>
+          </div>
+          <div>
+            <div class="font-mono text-xs tracking-wider uppercase text-text-muted">Range</div>
+            <div class="font-mono text-sm text-text-secondary">{fmtNumber(b.effective_range_yd)} yd</div>
+          </div>
+          <div>
+            <div class="font-mono text-xs tracking-wider uppercase text-text-muted">Recoil</div>
+            <div class="font-mono text-sm text-text-secondary">{b.recoil.free_recoil_ft_lbs} ft·lbs</div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Comparison Tables -->
+    <div class="space-y-6">
+      {tables.map(({ title, rows }) => (
+        <div class="border border-surface-border">
+          <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
+            <h2 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">{title}</h2>
+          </div>
+
+          <!-- Column headers -->
+          <div class="grid grid-cols-3 border-b border-surface-border bg-surface-overlay">
+            <div class="px-4 py-2 font-mono text-sm tracking-wider uppercase text-text-muted"></div>
+            <div class="px-4 py-2 font-mono text-sm tracking-wider uppercase text-accent text-center border-l border-surface-border-subtle">{a.name}</div>
+            <div class="px-4 py-2 font-mono text-sm tracking-wider uppercase text-accent text-center border-l border-surface-border-subtle">{b.name}</div>
+          </div>
+
+          {rows.map((row, i) => (
+            <div class={`grid grid-cols-3 border-b border-surface-border-subtle last:border-b-0 ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
+              <div class="px-4 py-2.5 font-mono text-sm text-text-muted">{row.label}</div>
+              <div class={`px-4 py-2.5 font-mono text-sm text-center border-l border-surface-border-subtle ${row.winner === 'a' ? 'text-success font-medium' : 'text-text-secondary'}`}>
+                {row.valA}
+                {row.winner === 'a' && <span class="ml-1 text-xs">●</span>}
+              </div>
+              <div class={`px-4 py-2.5 font-mono text-sm text-center border-l border-surface-border-subtle ${row.winner === 'b' ? 'text-success font-medium' : 'text-text-secondary'}`}>
+                {row.valB}
+                {row.winner === 'b' && <span class="ml-1 text-xs">●</span>}
+              </div>
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+
+    <!-- Use Cases -->
+    <div class="mt-6 border border-surface-border">
+      <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
+        <h2 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">Use Cases</h2>
+      </div>
+
+      {sharedUses.length > 0 && (
+        <div class="px-4 py-3 border-b border-surface-border-subtle bg-surface">
+          <div class="font-mono text-xs tracking-wider uppercase text-text-muted mb-2">Shared Use Cases</div>
+          <div class="flex flex-wrap gap-1.5">
+            {sharedUses.map(u => (
+              <span class="border border-accent/30 bg-accent/10 px-2 py-0.5 font-mono text-xs tracking-wider uppercase text-accent">{titleCase(u)}</span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <div class="grid grid-cols-2">
+        <div class="px-4 py-3 border-r border-surface-border-subtle bg-surface-raised">
+          <div class="font-mono text-xs tracking-wider uppercase text-text-muted mb-2">{a.name} Only</div>
+          <div class="flex flex-wrap gap-1.5">
+            {aOnlyUses.length > 0 ? aOnlyUses.map(u => (
+              <span class="border border-surface-border px-2 py-0.5 font-mono text-xs tracking-wider uppercase text-text-secondary">{titleCase(u)}</span>
+            )) : (
+              <span class="font-mono text-xs text-text-muted">—</span>
+            )}
+          </div>
+        </div>
+        <div class="px-4 py-3 bg-surface-raised">
+          <div class="font-mono text-xs tracking-wider uppercase text-text-muted mb-2">{b.name} Only</div>
+          <div class="flex flex-wrap gap-1.5">
+            {bOnlyUses.length > 0 ? bOnlyUses.map(u => (
+              <span class="border border-surface-border px-2 py-0.5 font-mono text-xs tracking-wider uppercase text-text-secondary">{titleCase(u)}</span>
+            )) : (
+              <span class="font-mono text-xs text-text-muted">—</span>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Common Firearms -->
+    <div class="mt-6 border border-surface-border">
+      <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
+        <h2 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">Common Firearms</h2>
+      </div>
+      <div class="grid grid-cols-2">
+        <div class="px-4 py-3 border-r border-surface-border-subtle">
+          <div class="font-mono text-xs tracking-wider uppercase text-accent mb-2">{a.name}</div>
+          <ul class="space-y-1">
+            {a.common_firearms.slice(0, 5).map(f => (
+              <li class="font-mono text-sm text-text-secondary">{f}</li>
+            ))}
+          </ul>
+        </div>
+        <div class="px-4 py-3">
+          <div class="font-mono text-xs tracking-wider uppercase text-accent mb-2">{b.name}</div>
+          <ul class="space-y-1">
+            {b.common_firearms.slice(0, 5).map(f => (
+              <li class="font-mono text-sm text-text-secondary">{f}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Compare CTA -->
+    <div class="mt-8 text-center">
+      <a
+        href={`/caliber-companion/compare?c=${a.slug}&c=${b.slug}`}
+        class="inline-flex items-center gap-2 border border-accent bg-accent/10 px-6 py-3 font-mono text-base tracking-wider uppercase text-accent transition-all hover:bg-accent/20"
+      >
+        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+        </svg>
+        Compare with interactive charts
+      </a>
+    </div>
+
+    <!-- Other Popular Comparisons -->
+    <div class="mt-12 border-t border-surface-border pt-8">
+      <h2 class="font-display text-base tracking-[0.2em] uppercase text-text-muted mb-4">More Comparisons</h2>
+      <div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+        {MATCHUPS
+          .filter(([ma, mb]) => !(ma === slugA && mb === slugB))
+          .slice(0, 9)
+          .map(([ma, mb]) => {
+            const calA = caliberMap.get(ma);
+            const calB = caliberMap.get(mb);
+            if (!calA || !calB) return null;
+            return (
+              <a
+                href={`/caliber-companion/vs/${ma}-vs-${mb}`}
+                class="block border border-surface-border px-3 py-2 font-mono text-sm text-text-secondary hover:border-accent/30 hover:text-accent transition-colors"
+              >
+                {calA.name} vs {calB.name}
+              </a>
+            );
+          })
+        }
+      </div>
+    </div>
+  </div>
+</BaseLayout>

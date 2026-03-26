@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import FilterBar from '../components/islands/FilterBar';
+import CaliberScatterPlot from '../components/islands/CaliberScatterPlot';
 import { getCollection } from 'astro:content';
 
 const calibers = await getCollection('caliberData');
@@ -18,18 +19,32 @@ const caliberSummaries = calibers.map(c => ({
   recoil_subjective: c.data.recoil.subjective,
   year_introduced: c.data.year_introduced,
 }));
+
+const scatterPoints = calibers.map(c => ({
+  name: c.data.name,
+  slug: c.data.slug,
+  category: c.data.category,
+  typical_energy_ft_lbs: c.data.typical_energy_ft_lbs,
+  typical_velocity_fps: c.data.typical_velocity_fps,
+  effective_range_yd: c.data.effective_range_yd,
+  recoil_ft_lbs: c.data.recoil.free_recoil_ft_lbs,
+  cost_per_round: (c.data.cost_per_round_usd[0] + c.data.cost_per_round_usd[1]) / 2,
+  year_introduced: c.data.year_introduced,
+}));
 ---
 
-<BaseLayout title="Browse Calibers">
+<BaseLayout title="Browse Calibers" description="Browse, search, filter, and visualize 100 firearm calibers by category, performance, recoil, and cost.">
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
     <div class="mb-8">
       <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
         Browse Calibers
       </h1>
       <p class="mt-2 font-mono text-base text-text-muted">
-        {calibers.length} calibers · search, filter, and sort
+        {calibers.length} calibers · search, filter, sort, and visualize
       </p>
     </div>
+
+    <CaliberScatterPlot client:visible calibers={scatterPoints} basePath="/caliber-companion" />
 
     <FilterBar client:idle calibers={caliberSummaries} basePath="/caliber-companion" />
   </div>

@@ -6,10 +6,14 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  ogType?: string;
+  jsonLd?: Record<string, any>;
 }
 
-const { title, description = 'Research, compare, and understand firearm calibers.' } = Astro.props;
+const { title, description = 'Research, compare, and understand firearm calibers.', ogType = 'website', jsonLd } = Astro.props;
 const fullTitle = title === 'Home' ? 'Caliber Companion' : `${title} — Caliber Companion`;
+const siteUrl = 'https://rwev.github.io/caliber-companion';
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
 ---
 
 <!doctype html>
@@ -19,6 +23,27 @@ const fullTitle = title === 'Home' ? 'Caliber Companion' : `${title} — Caliber
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <title>{fullTitle}</title>
+
+    <!-- Canonical -->
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="Caliber Companion" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- JSON-LD Structured Data -->
+    {jsonLd && (
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    )}
 
     <script is:inline>
       (function() {

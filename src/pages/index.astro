@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import FavoritesList from '../components/islands/FavoritesList';
 import { getCollection } from 'astro:content';
 
 const calibers = await getCollection('caliberData');
@@ -17,6 +18,13 @@ const featuredSlugs = [
 const featured = featuredSlugs
   .map(slug => calibers.find(c => c.data.slug === slug))
   .filter(Boolean);
+
+const caliberIndex = calibers.map(c => ({
+  slug: c.data.slug,
+  name: c.data.name,
+  designation: c.data.designation,
+  category: c.data.category,
+}));
 ---
 
 <BaseLayout title="Home">
@@ -91,6 +99,9 @@ const featured = featuredSlugs
       </div>
     </div>
   </section>
+
+  <!-- Saved Calibers (client-side, renders only if user has favorites) -->
+  <FavoritesList client:idle allCalibers={caliberIndex} basePath="/caliber-companion" />
 
   <!-- Featured Calibers Preview -->
   <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
