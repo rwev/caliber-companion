@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const guides = await getCollection('guides');
+  return guides.map(guide => ({
+    params: { slug: guide.data.slug },
+    props: { guide },
+  }));
+}
+
+const { guide } = Astro.props;
+const g = guide.data;
+const { Content } = await render(guide);
+
+const calibers = await getCollection('caliberData');
+const referenced = g.calibers
+  .map(slug => calibers.find(c => c.data.slug === slug))
+  .filter(Boolean)
+  .map(c => c!.data);
+---
+
+<BaseLayout title={g.title}>
+  <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
+    <!-- Header -->
+    <div class="mb-8 border-b border-surface-border pb-6">
+      <a href="/caliber-companion/guides" class="font-mono text-sm tracking-wider uppercase text-text-muted hover:text-accent transition-colors">
+        ← All Guides
+      </a>
+      <h1 class="mt-3 font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+        {g.title}
+      </h1>
+      <p class="mt-2 font-mono text-base text-text-muted">
+        {g.summary}
+      </p>
+    </div>
+
+    <div class="grid gap-8 lg:grid-cols-4">
+      <!-- Main content -->
+      <div class="lg:col-span-3">
+        <div class="prose max-w-none prose-headings:font-display prose-headings:tracking-[0.2em] prose-headings:uppercase prose-h2:text-2xl prose-h2:font-semibold prose-h2:text-accent prose-h2:border-b prose-h2:border-surface-border prose-h2:pb-3 prose-h2:mt-12 prose-h2:mb-5 prose-h3:text-xl prose-h3:text-text-primary prose-h3:mt-8 prose-h3:mb-3 prose-strong:text-text-primary prose-a:text-accent prose-a:no-underline hover:prose-a:underline">
+          <Content />
+        </div>
+      </div>
+
+      <!-- Sidebar: calibers referenced -->
+      <div class="space-y-4">
+        <div class="border border-surface-border">
+          <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
+            <h3 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">Calibers in this Guide</h3>
+          </div>
+          <ul class="divide-y divide-surface-border-subtle">
+            {referenced.map((cal, i) => (
+              <li class={i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}>
+                <a
+                  href={`/caliber-companion/calibers/${cal.slug}`}
+                  class="flex items-baseline justify-between px-4 py-2.5 transition-colors hover:text-accent"
+                >
+                  <span class="font-mono text-base text-text-secondary">{cal.name}</span>
+                  <span class="font-mono text-xs text-text-muted">{cal.designation}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

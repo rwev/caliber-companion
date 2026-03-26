@@ -97,4 +97,15 @@ const caliberProse = defineCollection({
   }),
 });
 
-export const collections = { caliberData, caliberProse };
+const guides = defineCollection({
+  loader: glob({ pattern: '**/*.mdx', base: './src/content/guides' }),
+  schema: z.object({
+    slug: z.string(),
+    title: z.string(),
+    summary: z.string(),
+    calibers: z.array(z.string()),
+    last_updated: z.coerce.date(),
+  }),
+});
+
+export const collections = { caliberData, caliberProse, guides };
