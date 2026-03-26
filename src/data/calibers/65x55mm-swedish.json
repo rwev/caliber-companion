@@ -1,9 +1,9 @@
 {
-  "name": "6.5\u00d755mm Swedish",
-  "designation": "6.5\u00d755mm Swedish",
+  "name": "6.5×55mm Swedish",
+  "designation": "6.5×55mm Swedish",
   "aliases": [
     "6.5 Swede",
-    "6.5\u00d755 SE"
+    "6.5×55 SE"
   ],
   "category": "rifle",
   "slug": "65x55mm-swedish",
@@ -30,14 +30,14 @@
   "effective_range_yd": 700,
   "max_range_yd": 3800,
   "recoil": {
-    "free_recoil_ft_lbs": 11.0,
+    "free_recoil_ft_lbs": 11,
     "reference_firearm": "Swedish Mauser m/96 (29.1\" barrel, 9.0 lbs)",
     "subjective": "moderate"
   },
   "year_introduced": 1894,
   "country_of_origin": "Sweden/Norway",
   "military_usage": [
-    "Swedish military standard cartridge (1894\u20131960s)",
+    "Swedish military standard cartridge (1894–1960s)",
     "Norwegian military standard cartridge",
     "Swedish Mauser m/96 and Kg m/37 BAR"
   ],
@@ -67,13 +67,13 @@
       "bullet_type": "SP",
       "muzzle_velocity_fps": 2789,
       "muzzle_energy_ft_lbs": 2419,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2789,
           "energy_ft_lbs": 2419,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -91,7 +91,7 @@
           "distance_yd": 300,
           "velocity_fps": 2236,
           "energy_ft_lbs": 1555,
-          "drop_in": -22.0
+          "drop_in": -22
         },
         {
           "distance_yd": 400,
@@ -113,13 +113,13 @@
       "bullet_type": "OTM",
       "muzzle_velocity_fps": 2854,
       "muzzle_energy_ft_lbs": 2225,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2854,
           "energy_ft_lbs": 2225,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -152,6 +152,55 @@
           "drop_in": -64.5
         }
       ]
+    },
+    {
+      "name": "Hornady ELD-X 140 gr",
+      "bullet_weight_gr": 140,
+      "bullet_type": "ELD-X",
+      "muzzle_velocity_fps": 2735,
+      "muzzle_energy_ft_lbs": 2325,
+      "barrel_length_in": 24,
+      "bc_g1": 0.613,
+      "bc_g7": 0.305,
+      "sectional_density": 0.287,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2735,
+          "energy_ft_lbs": 2325,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2582,
+          "energy_ft_lbs": 2074,
+          "drop_in": -2
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2434,
+          "energy_ft_lbs": 1843,
+          "drop_in": -8.2
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2292,
+          "energy_ft_lbs": 1634,
+          "drop_in": -19.2
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2155,
+          "energy_ft_lbs": 1444,
+          "drop_in": -35.4
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2024,
+          "energy_ft_lbs": 1274,
+          "drop_in": -57.4
+        }
+      ]
     }
   ],
   "recommended_game": [
@@ -179,8 +228,8 @@
   "max_pressure_psi": 51000,
   "primer_type": "Large Rifle",
   "powder_charge_range_gr": [
-    38.0,
-    48.0
+    38,
+    48
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",

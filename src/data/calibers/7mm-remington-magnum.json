@@ -30,7 +30,7 @@
   "effective_range_yd": 1000,
   "max_range_yd": 5200,
   "recoil": {
-    "free_recoil_ft_lbs": 20.0,
+    "free_recoil_ft_lbs": 20,
     "reference_firearm": "Remington 700 (24\" barrel, 8.5 lbs)",
     "subjective": "heavy"
   },
@@ -69,7 +69,7 @@
       "bullet_type": "Polymer Tip (Bonded)",
       "muzzle_velocity_fps": 2940,
       "muzzle_energy_ft_lbs": 3071,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "bc_g1": 0.48,
       "bc_g7": 0.24,
       "sectional_density": 0.283,
@@ -78,7 +78,7 @@
           "distance_yd": 0,
           "velocity_fps": 2940,
           "energy_ft_lbs": 3071,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -124,7 +124,7 @@
       "bullet_type": "ELD-X",
       "muzzle_velocity_fps": 2940,
       "muzzle_energy_ft_lbs": 3110,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "bc_g1": 0.631,
       "bc_g7": 0.315,
       "sectional_density": 0.287,
@@ -133,7 +133,7 @@
           "distance_yd": 0,
           "velocity_fps": 2940,
           "energy_ft_lbs": 3110,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -170,6 +170,55 @@
           "velocity_fps": 2003,
           "energy_ft_lbs": 1443,
           "drop_in": -59.5
+        }
+      ]
+    },
+    {
+      "name": "Federal Premium 168 gr Berger Hybrid Hunter",
+      "bullet_weight_gr": 168,
+      "bullet_type": "Berger Hybrid Hunter",
+      "muzzle_velocity_fps": 2900,
+      "muzzle_energy_ft_lbs": 3138,
+      "barrel_length_in": 24,
+      "bc_g1": 0.617,
+      "bc_g7": 0.311,
+      "sectional_density": 0.298,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2900,
+          "energy_ft_lbs": 3138,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2749,
+          "energy_ft_lbs": 2821,
+          "drop_in": -1.6
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2604,
+          "energy_ft_lbs": 2530,
+          "drop_in": -6.8
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2463,
+          "energy_ft_lbs": 2264,
+          "drop_in": -15.8
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2327,
+          "energy_ft_lbs": 2020,
+          "drop_in": -29
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2197,
+          "energy_ft_lbs": 1800,
+          "drop_in": -47
         }
       ]
     }
@@ -209,8 +258,8 @@
   "max_pressure_psi": 61000,
   "primer_type": "Large Rifle Magnum",
   "powder_charge_range_gr": [
-    55.0,
-    70.0
+    55,
+    70
   ],
   "availability_rating": 4,
   "annual_production_estimate": "high",

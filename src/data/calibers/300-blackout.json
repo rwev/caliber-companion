@@ -241,6 +241,78 @@
           "drop_in": -28.8
         }
       ]
+    },
+    {
+      "name": "Federal American Eagle 150 gr FMJ BT",
+      "bullet_weight_gr": 150,
+      "bullet_type": "FMJ BT (Supersonic)",
+      "muzzle_velocity_fps": 1900,
+      "muzzle_energy_ft_lbs": 1202,
+      "barrel_length_in": 16,
+      "bc_g1": 0.346,
+      "sectional_density": 0.226,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1900,
+          "energy_ft_lbs": 1202,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1687,
+          "energy_ft_lbs": 948,
+          "drop_in": -4.2
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1496,
+          "energy_ft_lbs": 745,
+          "drop_in": -17.4
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 1329,
+          "energy_ft_lbs": 588,
+          "drop_in": -42.4
+        }
+      ]
+    },
+    {
+      "name": "Barnes VOR-TX 120 gr TAC-TX",
+      "bullet_weight_gr": 120,
+      "bullet_type": "TAC-TX (All-Copper)",
+      "muzzle_velocity_fps": 2200,
+      "muzzle_energy_ft_lbs": 1289,
+      "barrel_length_in": 16,
+      "bc_g1": 0.31,
+      "sectional_density": 0.181,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2200,
+          "energy_ft_lbs": 1289,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1958,
+          "energy_ft_lbs": 1021,
+          "drop_in": -3.4
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1735,
+          "energy_ft_lbs": 802,
+          "drop_in": -14.4
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 1534,
+          "energy_ft_lbs": 627,
+          "drop_in": -35.2
+        }
+      ]
     }
   ],
   "recommended_game": [

@@ -29,7 +29,7 @@
   "effective_range_yd": 400,
   "max_range_yd": 3800,
   "recoil": {
-    "free_recoil_ft_lbs": 22.0,
+    "free_recoil_ft_lbs": 22,
     "reference_firearm": "Remington 700 (22\" barrel, 8.0 lbs)",
     "subjective": "heavy"
   },
@@ -62,13 +62,13 @@
       "bullet_type": "TBBC (Trophy Bonded Bear Claw)",
       "muzzle_velocity_fps": 2600,
       "muzzle_energy_ft_lbs": 3378,
-      "barrel_length_in": 22.0,
+      "barrel_length_in": 22,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2600,
           "energy_ft_lbs": 3378,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -108,13 +108,13 @@
       "bullet_type": "PSP (Pointed Soft Point)",
       "muzzle_velocity_fps": 2400,
       "muzzle_energy_ft_lbs": 3197,
-      "barrel_length_in": 22.0,
+      "barrel_length_in": 22,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2400,
           "energy_ft_lbs": 3197,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -132,7 +132,7 @@
           "distance_yd": 300,
           "velocity_fps": 1796,
           "energy_ft_lbs": 1791,
-          "drop_in": -26.0
+          "drop_in": -26
         },
         {
           "distance_yd": 400,
@@ -145,6 +145,42 @@
           "velocity_fps": 1464,
           "energy_ft_lbs": 1190,
           "drop_in": -85.3
+        }
+      ]
+    },
+    {
+      "name": "Hornady Superformance 200 gr SP",
+      "bullet_weight_gr": 200,
+      "bullet_type": "InterLock SP",
+      "muzzle_velocity_fps": 2910,
+      "muzzle_energy_ft_lbs": 3760,
+      "barrel_length_in": 24,
+      "bc_g1": 0.338,
+      "sectional_density": 0.223,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2910,
+          "energy_ft_lbs": 3760,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2620,
+          "energy_ft_lbs": 3048,
+          "drop_in": -1.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2350,
+          "energy_ft_lbs": 2452,
+          "drop_in": -8
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2100,
+          "energy_ft_lbs": 1959,
+          "drop_in": -20.2
         }
       ]
     }
@@ -179,8 +215,8 @@
   "max_pressure_psi": 52000,
   "primer_type": "Large Rifle",
   "powder_charge_range_gr": [
-    48.0,
-    62.0
+    48,
+    62
   ],
   "availability_rating": 2,
   "annual_production_estimate": "limited",

@@ -4,7 +4,7 @@
   "aliases": [
     "7.65mm Browning",
     ".32 Auto",
-    "7.65\u00d717mmSR"
+    "7.65×17mmSR"
   ],
   "category": "handgun",
   "slug": "32-acp",
@@ -77,7 +77,7 @@
           "distance_yd": 0,
           "velocity_fps": 1000,
           "energy_ft_lbs": 162,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 25,
@@ -120,7 +120,7 @@
           "distance_yd": 0,
           "velocity_fps": 1000,
           "energy_ft_lbs": 133,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 25,
@@ -144,7 +144,37 @@
           "distance_yd": 100,
           "velocity_fps": 824,
           "energy_ft_lbs": 91,
-          "drop_in": -10.0
+          "drop_in": -10
+        }
+      ]
+    },
+    {
+      "name": "Hornady XTP 60 gr JHP",
+      "bullet_weight_gr": 60,
+      "bullet_type": "XTP JHP",
+      "muzzle_velocity_fps": 1000,
+      "muzzle_energy_ft_lbs": 133,
+      "barrel_length_in": 3.8,
+      "bc_g1": 0.108,
+      "sectional_density": 0.087,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1000,
+          "energy_ft_lbs": 133,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 952,
+          "energy_ft_lbs": 121,
+          "drop_in": -0.3
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 909,
+          "energy_ft_lbs": 110,
+          "drop_in": -1.6
         }
       ]
     }
@@ -152,7 +182,7 @@
   "max_pressure_psi": 20500,
   "primer_type": "Small Pistol",
   "powder_charge_range_gr": [
-    2.0,
+    2,
     3.5
   ],
   "availability_rating": 3,

@@ -244,6 +244,81 @@
           "drop_in": -5.4
         }
       ]
+    },
+    {
+      "name": "Winchester USA Forged 115 gr FMJ",
+      "bullet_weight_gr": 115,
+      "bullet_type": "FMJ (Steel Case)",
+      "muzzle_velocity_fps": 1190,
+      "muzzle_energy_ft_lbs": 362,
+      "barrel_length_in": 4,
+      "bc_g1": 0.129,
+      "sectional_density": 0.13,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1190,
+          "energy_ft_lbs": 362,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1142,
+          "energy_ft_lbs": 333,
+          "drop_in": -0.2
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1098,
+          "energy_ft_lbs": 308,
+          "drop_in": -1
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1027,
+          "energy_ft_lbs": 270,
+          "drop_in": -5.8
+        }
+      ]
+    },
+    {
+      "name": "Hornady Critical Duty 135 gr +P FlexLock",
+      "bullet_weight_gr": 135,
+      "bullet_type": "FlexLock JHP +P",
+      "muzzle_velocity_fps": 1110,
+      "muzzle_energy_ft_lbs": 369,
+      "barrel_length_in": 4,
+      "bc_g1": 0.155,
+      "sectional_density": 0.153,
+      "gel_penetration_in": 14.5,
+      "expansion_diameter_in": 0.53,
+      "barrier_blind": true,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1110,
+          "energy_ft_lbs": 369,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1068,
+          "energy_ft_lbs": 342,
+          "drop_in": -0.2
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1029,
+          "energy_ft_lbs": 318,
+          "drop_in": -1.2
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 966,
+          "energy_ft_lbs": 280,
+          "drop_in": -6
+        }
+      ]
     }
   ],
   "max_pressure_psi": 35000,

@@ -29,7 +29,7 @@
   "effective_range_yd": 200,
   "max_range_yd": 1800,
   "recoil": {
-    "free_recoil_ft_lbs": 25.0,
+    "free_recoil_ft_lbs": 25,
     "reference_firearm": "AR-15 platform (16\" barrel, 7.5 lbs)",
     "subjective": "heavy"
   },
@@ -51,7 +51,7 @@
   "popularity_tier": "niche",
   "cost_per_round_usd": [
     1.5,
-    4.0
+    4
   ],
   "common_firearms": [
     "AR-15 upper receivers (Rock River Arms, Wilson Combat, Tromix)",
@@ -65,7 +65,7 @@
       "bullet_type": "JHP",
       "muzzle_velocity_fps": 1850,
       "muzzle_energy_ft_lbs": 2280,
-      "barrel_length_in": 16.0,
+      "barrel_length_in": 16,
       "gel_penetration_in": 17.5,
       "expansion_diameter_in": 0.72,
       "barrier_blind": true,
@@ -74,7 +74,7 @@
           "distance_yd": 0,
           "velocity_fps": 1850,
           "energy_ft_lbs": 2280,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -86,7 +86,7 @@
           "distance_yd": 200,
           "velocity_fps": 1342,
           "energy_ft_lbs": 1200,
-          "drop_in": -25.0
+          "drop_in": -25
         },
         {
           "distance_yd": 300,
@@ -98,13 +98,13 @@
           "distance_yd": 400,
           "velocity_fps": 1030,
           "energy_ft_lbs": 707,
-          "drop_in": -121.0
+          "drop_in": -121
         },
         {
           "distance_yd": 500,
           "velocity_fps": 942,
           "energy_ft_lbs": 592,
-          "drop_in": -210.0
+          "drop_in": -210
         }
       ]
     },
@@ -114,43 +114,73 @@
       "bullet_type": "FMJ",
       "muzzle_velocity_fps": 1050,
       "muzzle_energy_ft_lbs": 1224,
-      "barrel_length_in": 16.0,
+      "barrel_length_in": 16,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 1050,
           "energy_ft_lbs": 1224,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
           "velocity_fps": 953,
           "energy_ft_lbs": 1009,
-          "drop_in": -17.0
+          "drop_in": -17
         },
         {
           "distance_yd": 200,
           "velocity_fps": 873,
           "energy_ft_lbs": 846,
-          "drop_in": -62.0
+          "drop_in": -62
         },
         {
           "distance_yd": 300,
           "velocity_fps": 806,
           "energy_ft_lbs": 722,
-          "drop_in": -142.0
+          "drop_in": -142
         },
         {
           "distance_yd": 400,
           "velocity_fps": 749,
           "energy_ft_lbs": 624,
-          "drop_in": -264.0
+          "drop_in": -264
         },
         {
           "distance_yd": 500,
           "velocity_fps": 700,
           "energy_ft_lbs": 544,
-          "drop_in": -438.0
+          "drop_in": -438
+        }
+      ]
+    },
+    {
+      "name": "SBR 300 gr JHP",
+      "bullet_weight_gr": 300,
+      "bullet_type": "JHP",
+      "muzzle_velocity_fps": 1900,
+      "muzzle_energy_ft_lbs": 2405,
+      "barrel_length_in": 16,
+      "bc_g1": 0.215,
+      "sectional_density": 0.204,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1900,
+          "energy_ft_lbs": 2405,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1592,
+          "energy_ft_lbs": 1689,
+          "drop_in": -4.6
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1334,
+          "energy_ft_lbs": 1186,
+          "drop_in": -20.6
         }
       ]
     }
@@ -175,8 +205,8 @@
   "max_pressure_psi": 35000,
   "primer_type": "Large Rifle",
   "powder_charge_range_gr": [
-    26.0,
-    38.0
+    26,
+    38
   ],
   "availability_rating": 2,
   "annual_production_estimate": "limited",

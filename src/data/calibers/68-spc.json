@@ -30,7 +30,7 @@
   "effective_range_yd": 500,
   "max_range_yd": 3200,
   "recoil": {
-    "free_recoil_ft_lbs": 7.0,
+    "free_recoil_ft_lbs": 7,
     "reference_firearm": "AR-15 platform (16\" barrel, 7.0 lbs)",
     "subjective": "low"
   },
@@ -73,7 +73,7 @@
       "bullet_type": "SST",
       "muzzle_velocity_fps": 2460,
       "muzzle_energy_ft_lbs": 1612,
-      "barrel_length_in": 16.0,
+      "barrel_length_in": 16,
       "bc_g1": 0.4,
       "bc_g7": 0.2,
       "sectional_density": 0.223,
@@ -82,7 +82,7 @@
           "distance_yd": 0,
           "velocity_fps": 2460,
           "energy_ft_lbs": 1612,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -100,7 +100,7 @@
           "distance_yd": 300,
           "velocity_fps": 1907,
           "energy_ft_lbs": 969,
-          "drop_in": -30.0
+          "drop_in": -30
         },
         {
           "distance_yd": 400,
@@ -112,7 +112,7 @@
           "distance_yd": 500,
           "velocity_fps": 1591,
           "energy_ft_lbs": 674,
-          "drop_in": -94.0
+          "drop_in": -94
         }
       ]
     },
@@ -122,7 +122,7 @@
       "bullet_type": "OTM",
       "muzzle_velocity_fps": 2620,
       "muzzle_energy_ft_lbs": 1676,
-      "barrel_length_in": 16.0,
+      "barrel_length_in": 16,
       "bc_g1": 0.37,
       "bc_g7": 0.185,
       "sectional_density": 0.205,
@@ -131,7 +131,7 @@
           "distance_yd": 0,
           "velocity_fps": 2620,
           "energy_ft_lbs": 1676,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -164,6 +164,48 @@
           "drop_in": -83.5
         }
       ]
+    },
+    {
+      "name": "Hornady BLACK 110 gr V-MAX",
+      "bullet_weight_gr": 110,
+      "bullet_type": "V-MAX",
+      "muzzle_velocity_fps": 2570,
+      "muzzle_energy_ft_lbs": 1613,
+      "barrel_length_in": 16,
+      "bc_g1": 0.37,
+      "sectional_density": 0.212,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2570,
+          "energy_ft_lbs": 1613,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2352,
+          "energy_ft_lbs": 1352,
+          "drop_in": -2.4
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2147,
+          "energy_ft_lbs": 1126,
+          "drop_in": -10
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 1953,
+          "energy_ft_lbs": 931,
+          "drop_in": -24.2
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 1773,
+          "energy_ft_lbs": 768,
+          "drop_in": -46.4
+        }
+      ]
     }
   ],
   "recommended_game": [
@@ -186,8 +228,8 @@
   "max_pressure_psi": 55000,
   "primer_type": "Small Rifle",
   "powder_charge_range_gr": [
-    24.0,
-    30.0
+    24,
+    30
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",

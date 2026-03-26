@@ -29,7 +29,7 @@
   "effective_range_yd": 300,
   "max_range_yd": 3000,
   "recoil": {
-    "free_recoil_ft_lbs": 52.0,
+    "free_recoil_ft_lbs": 52,
     "reference_firearm": "Remington 700 Safari (24\" barrel, 9.5 lbs)",
     "subjective": "very_heavy"
   },
@@ -45,8 +45,8 @@
   ],
   "popularity_tier": "niche",
   "cost_per_round_usd": [
-    5.0,
-    11.0
+    5,
+    11
   ],
   "common_firearms": [
     "Remington 700 Safari",
@@ -62,13 +62,13 @@
       "bullet_type": "TBBC (Trophy Bonded Bear Claw)",
       "muzzle_velocity_fps": 2400,
       "muzzle_energy_ft_lbs": 5115,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2400,
           "energy_ft_lbs": 5115,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -108,13 +108,13 @@
       "bullet_type": "DGX Bonded (Dangerous Game Expanding)",
       "muzzle_velocity_fps": 2400,
       "muzzle_energy_ft_lbs": 5115,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2400,
           "energy_ft_lbs": 5115,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -138,13 +138,43 @@
           "distance_yd": 400,
           "velocity_fps": 1618,
           "energy_ft_lbs": 2326,
-          "drop_in": -52.0
+          "drop_in": -52
         },
         {
           "distance_yd": 500,
           "velocity_fps": 1460,
           "energy_ft_lbs": 1893,
           "drop_in": -87.6
+        }
+      ]
+    },
+    {
+      "name": "Federal Premium 400 gr Trophy Bonded Sledgehammer",
+      "bullet_weight_gr": 400,
+      "bullet_type": "TBSS (Solid)",
+      "muzzle_velocity_fps": 2400,
+      "muzzle_energy_ft_lbs": 5115,
+      "barrel_length_in": 24,
+      "bc_g1": 0.31,
+      "sectional_density": 0.33,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2400,
+          "energy_ft_lbs": 5115,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2130,
+          "energy_ft_lbs": 4028,
+          "drop_in": -2.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1882,
+          "energy_ft_lbs": 3147,
+          "drop_in": -12.6
         }
       ]
     }
@@ -174,8 +204,8 @@
   "max_pressure_psi": 62000,
   "primer_type": "Large Rifle Magnum",
   "powder_charge_range_gr": [
-    85.0,
-    105.0
+    85,
+    105
   ],
   "availability_rating": 2,
   "annual_production_estimate": "limited",

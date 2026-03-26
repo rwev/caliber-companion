@@ -255,6 +255,104 @@
           "drop_in": -55
         }
       ]
+    },
+    {
+      "name": "Federal American Eagle 140 gr OTM",
+      "bullet_weight_gr": 140,
+      "bullet_type": "OTM",
+      "muzzle_velocity_fps": 2700,
+      "muzzle_energy_ft_lbs": 2266,
+      "barrel_length_in": 24,
+      "bc_g1": 0.585,
+      "bc_g7": 0.295,
+      "sectional_density": 0.287,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2700,
+          "energy_ft_lbs": 2266,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2545,
+          "energy_ft_lbs": 2014,
+          "drop_in": -2
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2395,
+          "energy_ft_lbs": 1784,
+          "drop_in": -8.4
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2251,
+          "energy_ft_lbs": 1576,
+          "drop_in": -19.6
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2113,
+          "energy_ft_lbs": 1389,
+          "drop_in": -36
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1981,
+          "energy_ft_lbs": 1220,
+          "drop_in": -58.4
+        }
+      ]
+    },
+    {
+      "name": "Barnes VOR-TX LR 127 gr LRX",
+      "bullet_weight_gr": 127,
+      "bullet_type": "LRX (Long Range X)",
+      "muzzle_velocity_fps": 2825,
+      "muzzle_energy_ft_lbs": 2250,
+      "barrel_length_in": 24,
+      "bc_g1": 0.53,
+      "bc_g7": 0.264,
+      "sectional_density": 0.26,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2825,
+          "energy_ft_lbs": 2250,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2667,
+          "energy_ft_lbs": 2005,
+          "drop_in": -1.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2514,
+          "energy_ft_lbs": 1782,
+          "drop_in": -7.4
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2367,
+          "energy_ft_lbs": 1580,
+          "drop_in": -17.4
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2225,
+          "energy_ft_lbs": 1396,
+          "drop_in": -32
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2088,
+          "energy_ft_lbs": 1230,
+          "drop_in": -52.2
+        }
+      ]
     }
   ],
   "recommended_game": [

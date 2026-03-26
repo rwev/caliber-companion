@@ -3,7 +3,7 @@
   "designation": ".303 British",
   "aliases": [
     ".303 Brit",
-    "7.7\u00d756mmR"
+    "7.7×56mmR"
   ],
   "category": "rifle",
   "slug": "303-british",
@@ -30,14 +30,14 @@
   "effective_range_yd": 600,
   "max_range_yd": 3500,
   "recoil": {
-    "free_recoil_ft_lbs": 13.0,
+    "free_recoil_ft_lbs": 13,
     "reference_firearm": "Lee-Enfield No. 4 Mk I (25.2\" barrel, 9.1 lbs)",
     "subjective": "moderate"
   },
   "year_introduced": 1889,
   "country_of_origin": "United Kingdom",
   "military_usage": [
-    "British Empire standard rifle cartridge (1889\u20131957)",
+    "British Empire standard rifle cartridge (1889–1957)",
     "Commonwealth forces through both World Wars",
     "Lee-Enfield, Vickers, and Bren gun platforms",
     "Indian military (into the 1960s)"
@@ -76,7 +76,7 @@
           "distance_yd": 0,
           "velocity_fps": 2400,
           "energy_ft_lbs": 2225,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -100,7 +100,7 @@
           "distance_yd": 400,
           "velocity_fps": 1742,
           "energy_ft_lbs": 1173,
-          "drop_in": -57.0
+          "drop_in": -57
         },
         {
           "distance_yd": 500,
@@ -122,7 +122,7 @@
           "distance_yd": 0,
           "velocity_fps": 2685,
           "energy_ft_lbs": 2401,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -134,13 +134,13 @@
           "distance_yd": 200,
           "velocity_fps": 2210,
           "energy_ft_lbs": 1627,
-          "drop_in": -11.0
+          "drop_in": -11
         },
         {
           "distance_yd": 300,
           "velocity_fps": 1993,
           "energy_ft_lbs": 1324,
-          "drop_in": -26.0
+          "drop_in": -26
         },
         {
           "distance_yd": 400,
@@ -153,6 +153,48 @@
           "velocity_fps": 1607,
           "energy_ft_lbs": 860,
           "drop_in": -83.5
+        }
+      ]
+    },
+    {
+      "name": "PPU 174 gr FMJ BT",
+      "bullet_weight_gr": 174,
+      "bullet_type": "FMJ BT",
+      "muzzle_velocity_fps": 2400,
+      "muzzle_energy_ft_lbs": 2225,
+      "barrel_length_in": 24,
+      "bc_g1": 0.43,
+      "sectional_density": 0.261,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2400,
+          "energy_ft_lbs": 2225,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2212,
+          "energy_ft_lbs": 1890,
+          "drop_in": -2.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2034,
+          "energy_ft_lbs": 1599,
+          "drop_in": -11.4
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 1866,
+          "energy_ft_lbs": 1346,
+          "drop_in": -27
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 1710,
+          "energy_ft_lbs": 1130,
+          "drop_in": -51
         }
       ]
     }
@@ -182,8 +224,8 @@
   "max_pressure_psi": 49000,
   "primer_type": "Large Rifle",
   "powder_charge_range_gr": [
-    38.0,
-    48.0
+    38,
+    48
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",
@@ -191,8 +233,18 @@
   "suppressor_friendly": false,
   "subsonic_loads_available": false,
   "military_adoption_detail": [
-    { "organization": "British Empire", "designation": "Mk VII", "year_adopted": 1910, "role": "Standard rifle cartridge", "status": "retired" },
-    { "organization": "Indian Armed Forces", "role": "Reserve/police legacy cartridge", "status": "retired" }
+    {
+      "organization": "British Empire",
+      "designation": "Mk VII",
+      "year_adopted": 1910,
+      "role": "Standard rifle cartridge",
+      "status": "retired"
+    },
+    {
+      "organization": "Indian Armed Forces",
+      "role": "Reserve/police legacy cartridge",
+      "status": "retired"
+    }
   ],
   "le_adoption_detail": []
 }

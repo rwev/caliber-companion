@@ -262,6 +262,96 @@
           "drop_in": -58
         }
       ]
+    },
+    {
+      "name": "Remington Core-Lokt 150 gr PSP",
+      "bullet_weight_gr": 150,
+      "bullet_type": "Core-Lokt PSP",
+      "muzzle_velocity_fps": 2910,
+      "muzzle_energy_ft_lbs": 2820,
+      "barrel_length_in": 24,
+      "bc_g1": 0.362,
+      "sectional_density": 0.226,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2910,
+          "energy_ft_lbs": 2820,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2680,
+          "energy_ft_lbs": 2393,
+          "drop_in": -1.6
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2462,
+          "energy_ft_lbs": 2018,
+          "drop_in": -7.2
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2255,
+          "energy_ft_lbs": 1694,
+          "drop_in": -17.4
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2060,
+          "energy_ft_lbs": 1413,
+          "drop_in": -33.2
+        }
+      ]
+    },
+    {
+      "name": "Barnes VOR-TX 168 gr TTSX",
+      "bullet_weight_gr": 168,
+      "bullet_type": "TTSX (All-Copper)",
+      "muzzle_velocity_fps": 2800,
+      "muzzle_energy_ft_lbs": 2924,
+      "barrel_length_in": 24,
+      "bc_g1": 0.47,
+      "sectional_density": 0.253,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2800,
+          "energy_ft_lbs": 2924,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2614,
+          "energy_ft_lbs": 2550,
+          "drop_in": -1.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2435,
+          "energy_ft_lbs": 2213,
+          "drop_in": -7.8
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2264,
+          "energy_ft_lbs": 1913,
+          "drop_in": -18.4
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2101,
+          "energy_ft_lbs": 1646,
+          "drop_in": -34.4
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1946,
+          "energy_ft_lbs": 1412,
+          "drop_in": -56.6
+        }
+      ]
     }
   ],
   "recommended_game": [

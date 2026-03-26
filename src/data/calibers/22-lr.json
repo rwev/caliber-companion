@@ -233,6 +233,78 @@
           "drop_in": -3.4
         }
       ]
+    },
+    {
+      "name": "Federal AutoMatch 40 gr LRN",
+      "bullet_weight_gr": 40,
+      "bullet_type": "LRN (Target)",
+      "muzzle_velocity_fps": 1200,
+      "muzzle_energy_ft_lbs": 128,
+      "barrel_length_in": 18,
+      "bc_g1": 0.115,
+      "sectional_density": 0.114,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1200,
+          "energy_ft_lbs": 128,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1115,
+          "energy_ft_lbs": 110,
+          "drop_in": -0.2
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1040,
+          "energy_ft_lbs": 96,
+          "drop_in": -1
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 921,
+          "energy_ft_lbs": 75,
+          "drop_in": -5.6
+        }
+      ]
+    },
+    {
+      "name": "Eley Match 40 gr LFN",
+      "bullet_weight_gr": 40,
+      "bullet_type": "Lead Flat Nose (Match)",
+      "muzzle_velocity_fps": 1085,
+      "muzzle_energy_ft_lbs": 105,
+      "barrel_length_in": 24,
+      "bc_g1": 0.118,
+      "sectional_density": 0.114,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1085,
+          "energy_ft_lbs": 105,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1025,
+          "energy_ft_lbs": 93,
+          "drop_in": -0.3
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 972,
+          "energy_ft_lbs": 84,
+          "drop_in": -1.4
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 885,
+          "energy_ft_lbs": 70,
+          "drop_in": -6.8
+        }
+      ]
     }
   ],
   "max_pressure_psi": 24000,

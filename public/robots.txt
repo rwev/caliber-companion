@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rwev.github.io/caliber-companion/sitemap-index.xml

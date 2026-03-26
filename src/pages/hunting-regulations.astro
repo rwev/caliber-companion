@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Major state caliber/cartridge regulations for deer hunting
+// Focused on caliber-specific rules that affect purchasing decisions
+const regions = [
+  {
+    title: 'Straight-Wall Cartridge Only States',
+    description: 'These states restrict deer hunting with rifles to straight-wall cartridges only (no bottleneck rifle cartridges) in some or all zones. This regulation has driven enormous demand for calibers like .350 Legend, .450 Bushmaster, and .45-70 Government.',
+    states: [
+      { state: 'Ohio', rule: 'Straight-wall cartridges only for rifle deer. Min .357" bullet, max 1.800" case length. Shotguns also allowed.', calibers: ['350-legend', '450-bushmaster', '45-70-government', '44-magnum'] },
+      { state: 'Iowa', rule: 'Straight-wall pistol cartridges only for rifle deer. Min .357" bullet, case length 1.16"–1.80".', calibers: ['350-legend', '450-bushmaster', '44-magnum', '45-colt'] },
+      { state: 'Indiana', rule: 'Rifles with pistol cartridges or straight-wall cartridges. Min .243" bullet, max 1.80" case length.', calibers: ['350-legend', '450-bushmaster', '44-magnum', '45-70-government'] },
+      { state: 'Michigan (Zone 3)', rule: 'Southern Michigan: straight-wall cartridges only. Min .35 caliber (now .30 cal for 2024+), max 1.80" case length.', calibers: ['350-legend', '450-bushmaster', '44-magnum'] },
+    ],
+  },
+  {
+    title: 'Minimum Caliber Requirements',
+    description: 'Many states set a minimum caliber or energy requirement for deer-sized game to ensure ethical harvests.',
+    states: [
+      { state: 'Colorado', rule: 'Centerfire only, min .24 caliber for deer/elk/pronghorn. No FMJ for big game.', calibers: ['243-winchester', '65-creedmoor', '308-winchester'] },
+      { state: 'Virginia', rule: 'Centerfire only for deer, min .23 caliber.', calibers: ['223-remington', '243-winchester'] },
+      { state: 'Montana', rule: 'Centerfire cartridge, expanding bullet, generating 1,000+ ft-lbs at 100 yards for deer/elk.', calibers: ['308-winchester', '270-winchester', '65-creedmoor'] },
+      { state: 'Wyoming', rule: 'Min .24 caliber for deer/antelope, min .27 caliber for elk/moose/bighorn sheep.', calibers: ['270-winchester', '308-winchester', '300-win-mag'] },
+      { state: 'Alaska', rule: 'No caliber minimum for deer. Min .24 caliber for sheep/goat, min .27 caliber for caribou/moose/bear.', calibers: ['270-winchester', '30-06-springfield', '375-hh-magnum'] },
+    ],
+  },
+  {
+    title: 'Shotgun-Only Zones',
+    description: 'Some states or zones restrict deer hunting to shotguns only (with slugs), muzzleloaders, or handguns — no centerfire rifles allowed.',
+    states: [
+      { state: 'Illinois', rule: 'No centerfire rifles for deer. Shotguns (slugs), muzzleloaders, handguns, and some straight-wall rifles allowed.', calibers: ['12-gauge', '20-gauge', '450-bushmaster'] },
+      { state: 'New Jersey', rule: 'Shotguns only in most zones for deer. Permits for muzzleloader. No centerfire rifles.', calibers: ['12-gauge', '20-gauge'] },
+      { state: 'Massachusetts', rule: 'Shotgun or primitive firearms in most zones. Rifles allowed in some western zones.', calibers: ['12-gauge', '20-gauge'] },
+    ],
+  },
+  {
+    title: 'No Minimum Caliber / Liberal Rules',
+    description: 'These states have minimal caliber restrictions, allowing most centerfire cartridges for deer hunting.',
+    states: [
+      { state: 'Texas', rule: 'No minimum caliber for deer. Any centerfire cartridge legal. Rimfire also legal for some game.', calibers: ['223-remington', '243-winchester', '308-winchester', '65-creedmoor'] },
+      { state: 'Pennsylvania', rule: 'Centerfire rifles .24 caliber or larger. Semi-auto rifles now legal (2017+). Straight-wall not required.', calibers: ['243-winchester', '308-winchester', '30-06-springfield'] },
+      { state: 'Wisconsin', rule: 'No minimum caliber for deer. Any centerfire legal. .22 WMR allowed. Zone restrictions for rifles vs shotguns.', calibers: ['22-wmr', '223-remington', '308-winchester'] },
+      { state: 'Georgia', rule: 'Any centerfire firearm legal for deer. Min .22 caliber centerfire.', calibers: ['223-remington', '243-winchester', '308-winchester'] },
+    ],
+  },
+];
+
+const pageDescription = 'State-by-state hunting caliber regulations reference. Straight-wall cartridge states, minimum caliber requirements, and shotgun-only zones for deer hunting across the U.S.';
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': [
+    { '@type': 'Question', 'name': 'What states require straight-wall cartridges for deer hunting?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ohio, Iowa, Indiana, and southern Michigan (Zone 3) require or previously required straight-wall cartridges for rifle deer hunting. Popular compliant calibers include .350 Legend, .450 Bushmaster, .45-70 Government, and .44 Magnum.' } },
+    { '@type': 'Question', 'name': 'What is the minimum caliber for deer hunting?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Minimum caliber varies by state. Most states with restrictions set the minimum at .22 or .24 caliber centerfire (.223 Remington or .243 Winchester). Some western states like Wyoming require .27 caliber minimum for elk. Many states like Texas have no minimum caliber requirement at all.' } },
+    { '@type': 'Question', 'name': 'Can you hunt deer with .223 Remington?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'In many states, yes — Texas, Georgia, Wisconsin, and others allow .223 for deer. However, some states like Colorado require .24 caliber minimum, and Wyoming requires .24 for deer. Check your state regulations. Most experienced hunters recommend .243 Winchester as the practical minimum.' } },
+  ],
+};
+---
+
+<BaseLayout title="State Hunting Caliber Regulations" description={pageDescription} breadcrumbs={[{ label: 'Hunting Regulations' }]}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+
+  <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
+    <div class="mb-8">
+      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+        State Hunting Caliber Regulations
+      </h1>
+      <p class="mt-3 font-mono text-base text-text-muted max-w-3xl">
+        Quick reference for state-by-state caliber and cartridge requirements for deer hunting.
+        Organized by regulation type: straight-wall states, minimum caliber rules, and shotgun-only zones.
+      </p>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="mb-8 border border-warning/30 bg-warning/5 p-4">
+      <p class="font-mono text-xs text-text-secondary leading-relaxed">
+        <span class="font-medium text-warning uppercase tracking-wider">Important:</span> Regulations change frequently and vary by zone, season, weapon type, and game species.
+        This is a general reference only — <strong>always verify current regulations</strong> with your state's
+        wildlife agency before hunting. Violations can result in fines, loss of license, and criminal charges.
+      </p>
+    </div>
+
+    {regions.map(region => (
+      <section class="mb-10">
+        <h2 class="mb-2 font-display text-xl font-semibold tracking-[0.15em] uppercase text-accent border-b border-surface-border pb-3">
+          {region.title}
+        </h2>
+        <p class="mb-4 font-mono text-sm text-text-muted">{region.description}</p>
+
+        <div class="space-y-3">
+          {region.states.map(s => (
+            <div class="border border-surface-border">
+              <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5 flex items-center justify-between">
+                <span class="font-display text-base font-semibold text-text-primary">{s.state}</span>
+              </div>
+              <div class="p-4 space-y-2">
+                <p class="font-mono text-sm text-text-secondary leading-relaxed">{s.rule}</p>
+                <div class="flex flex-wrap gap-2 pt-1">
+                  <span class="font-mono text-xs tracking-wider uppercase text-text-muted self-center">Popular compliant:</span>
+                  {s.calibers.map(slug => (
+                    <a
+                      href={`/caliber-companion/calibers/${slug}`}
+                      class="font-mono text-xs text-accent hover:underline"
+                    >
+                      {slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()).replace(/(\d)x(\d)/g, '$1×$2')}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    ))}
+
+    <!-- FAQ -->
+    <section class="mt-12 border-t border-surface-border pt-8">
+      <h2 class="font-display text-xl font-semibold tracking-[0.2em] uppercase text-text-muted mb-4">Frequently Asked Questions</h2>
+      <div class="space-y-2">
+        {[
+          { q: 'What is a straight-wall cartridge?', a: 'A straight-wall cartridge has a case that does not taper significantly from base to mouth — as opposed to bottleneck cartridges like .308 Winchester where the case necks down. Examples include .350 Legend, .450 Bushmaster, .45-70 Government, and all common handgun cartridges (.44 Magnum, .357 Magnum).' },
+          { q: 'Why do some states require straight-wall cartridges?', a: 'Safety. Straight-wall cartridges generally have shorter maximum range than bottleneck rifle cartridges, reducing the risk of stray bullets traveling dangerous distances in densely populated areas. This is the same logic behind shotgun-only zones.' },
+          { q: 'What is the best straight-wall deer cartridge?', a: '.350 Legend was purpose-designed for straight-wall regulations and offers the best combination of flat trajectory, low recoil, and adequate energy for deer under 200 yards. For more power, .450 Bushmaster and .45-70 Government are excellent choices.' },
+        ].map(faq => (
+          <details class="group border border-surface-border">
+            <summary class="flex cursor-pointer items-center justify-between bg-surface-raised px-4 py-3 font-mono text-sm text-text-primary transition-colors hover:bg-surface-overlay">
+              <span>{faq.q}</span>
+              <svg class="h-4 w-4 shrink-0 text-text-muted transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <div class="border-t border-surface-border-subtle bg-surface px-4 py-3">
+              <p class="font-mono text-sm text-text-secondary leading-relaxed">{faq.a}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <div class="mt-8 flex flex-wrap gap-3 border-t border-surface-border pt-6">
+      <span class="font-mono text-xs tracking-wider uppercase text-text-muted self-center">Related:</span>
+      <a href="/caliber-companion/best-deer-calibers" class="font-mono text-sm text-accent hover:underline">Best Deer Calibers</a>
+      <a href="/caliber-companion/guides/best-calibers-for-whitetail" class="font-mono text-sm text-accent hover:underline">Whitetail Guide</a>
+      <a href="/caliber-companion/tools/ethical-range" class="font-mono text-sm text-accent hover:underline">Ethical Range Calculator</a>
+    </div>
+  </div>
+</BaseLayout>

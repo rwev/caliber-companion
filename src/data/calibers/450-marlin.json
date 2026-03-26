@@ -29,7 +29,7 @@
   "effective_range_yd": 200,
   "max_range_yd": 2500,
   "recoil": {
-    "free_recoil_ft_lbs": 35.0,
+    "free_recoil_ft_lbs": 35,
     "reference_firearm": "Marlin 1895M (18.5\" barrel, 7.0 lbs)",
     "subjective": "very_heavy"
   },
@@ -45,7 +45,7 @@
   ],
   "popularity_tier": "niche",
   "cost_per_round_usd": [
-    2.0,
+    2,
     4.5
   ],
   "common_firearms": [
@@ -61,7 +61,7 @@
       "muzzle_velocity_fps": 2225,
       "muzzle_energy_ft_lbs": 3572,
       "barrel_length_in": 18.5,
-      "gel_penetration_in": 18.0,
+      "gel_penetration_in": 18,
       "expansion_diameter_in": 0.72,
       "barrier_blind": true,
       "ballistics": [
@@ -69,13 +69,13 @@
           "distance_yd": 0,
           "velocity_fps": 2225,
           "energy_ft_lbs": 3572,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
           "velocity_fps": 1887,
           "energy_ft_lbs": 2569,
-          "drop_in": -3.0
+          "drop_in": -3
         },
         {
           "distance_yd": 200,
@@ -87,7 +87,7 @@
           "distance_yd": 300,
           "velocity_fps": 1331,
           "energy_ft_lbs": 1278,
-          "drop_in": -36.0
+          "drop_in": -36
         },
         {
           "distance_yd": 400,
@@ -99,7 +99,7 @@
           "distance_yd": 500,
           "velocity_fps": 1015,
           "energy_ft_lbs": 743,
-          "drop_in": -136.0
+          "drop_in": -136
         }
       ]
     },
@@ -115,7 +115,7 @@
           "distance_yd": 0,
           "velocity_fps": 2100,
           "energy_ft_lbs": 3427,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -139,13 +139,43 @@
           "distance_yd": 400,
           "velocity_fps": 1010,
           "energy_ft_lbs": 793,
-          "drop_in": -98.0
+          "drop_in": -98
         },
         {
           "distance_yd": 500,
           "velocity_fps": 921,
           "energy_ft_lbs": 659,
-          "drop_in": -178.0
+          "drop_in": -178
+        }
+      ]
+    },
+    {
+      "name": "Hornady LEVERevolution 325 gr FTX",
+      "bullet_weight_gr": 325,
+      "bullet_type": "FTX",
+      "muzzle_velocity_fps": 2225,
+      "muzzle_energy_ft_lbs": 3572,
+      "barrel_length_in": 24,
+      "bc_g1": 0.23,
+      "sectional_density": 0.221,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2225,
+          "energy_ft_lbs": 3572,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1887,
+          "energy_ft_lbs": 2569,
+          "drop_in": -3.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1590,
+          "energy_ft_lbs": 1825,
+          "drop_in": -17.4
         }
       ]
     }
@@ -180,8 +210,8 @@
   "max_pressure_psi": 43500,
   "primer_type": "Large Rifle",
   "powder_charge_range_gr": [
-    45.0,
-    58.0
+    45,
+    58
   ],
   "availability_rating": 2,
   "annual_production_estimate": "limited",

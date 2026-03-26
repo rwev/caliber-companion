@@ -170,6 +170,44 @@ const caliberIndex = calibers.map(c => ({
     </div>
   </section>
 
+  <!-- Explore the Site -->
+  <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16">
+    <div class="mb-8 flex items-center gap-4">
+      <div class="h-px flex-1 bg-surface-border" aria-hidden="true"></div>
+      <h2 class="font-display text-base tracking-[0.25em] uppercase text-text-muted">Explore</h2>
+      <div class="h-px flex-1 bg-surface-border" aria-hidden="true"></div>
+    </div>
+
+    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      {[
+        { href: '/caliber-companion/tools', label: 'Interactive Tools', desc: '10 calculators & generators' },
+        { href: '/caliber-companion/ammo', label: 'Ammo Finder', desc: 'Search all load profiles' },
+        { href: '/caliber-companion/firearms', label: 'Firearms Database', desc: '100 iconic firearms' },
+        { href: '/caliber-companion/guides', label: 'Buying Guides', desc: '13 use-case guides' },
+        { href: '/caliber-companion/family-tree', label: 'Cartridge Lineage', desc: 'Parent-child relationships' },
+        { href: '/caliber-companion/timeline', label: 'Timeline', desc: '200+ years of calibers' },
+        { href: '/caliber-companion/compare', label: 'Side-by-Side', desc: 'Compare any calibers' },
+        { href: '/caliber-companion/cost-comparison', label: 'Cost Comparison', desc: 'Price per round ranking' },
+        { href: '/caliber-companion/recoil-ranking', label: 'Recoil Ranking', desc: 'Softest to hardest' },
+        { href: '/caliber-companion/use-cases', label: 'Use Case Heatmap', desc: 'Caliber × purpose matrix' },
+        { href: '/caliber-companion/terminal-performance', label: 'Terminal Performance', desc: 'Gel penetration data' },
+        { href: '/caliber-companion/myths', label: 'Myths Debunked', desc: '7 common myths vs data' },
+        { href: '/caliber-companion/nato-equivalents', label: 'NATO Equivalents', desc: 'Military ↔ civilian' },
+        { href: '/caliber-companion/reloading', label: 'Reloading Reference', desc: 'Primers, pressure, powder' },
+        { href: '/caliber-companion/best-deer-calibers', label: 'Best for Deer', desc: 'Hunting recommendations' },
+        { href: '/caliber-companion/glossary', label: 'Glossary', desc: '70+ technical terms' },
+      ].map(link => (
+        <a
+          href={link.href}
+          class="group border border-surface-border bg-surface p-3 transition-colors hover:border-accent/40 hover:bg-surface-raised"
+        >
+          <div class="font-mono text-sm font-medium text-text-primary group-hover:text-accent transition-colors">{link.label}</div>
+          <div class="mt-0.5 font-mono text-xs text-text-muted">{link.desc}</div>
+        </a>
+      ))}
+    </div>
+  </section>
+
   <!-- Newsletter Signup -->
   <section class="border-t border-surface-border bg-surface-raised/50">
     <div class="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16 text-center">

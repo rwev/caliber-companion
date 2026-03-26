@@ -1,10 +1,10 @@
 {
   "name": "8mm Mauser",
-  "designation": "7.92\u00d757mm Mauser",
+  "designation": "7.92×57mm Mauser",
   "aliases": [
-    "8\u00d757mm JS",
+    "8×57mm JS",
     "8mm Mauser",
-    "7.92\u00d757mm IS"
+    "7.92×57mm IS"
   ],
   "category": "rifle",
   "slug": "8mm-mauser",
@@ -31,7 +31,7 @@
   "effective_range_yd": 800,
   "max_range_yd": 4000,
   "recoil": {
-    "free_recoil_ft_lbs": 17.0,
+    "free_recoil_ft_lbs": 17,
     "reference_firearm": "Mauser K98k (23.6\" barrel, 8.2 lbs)",
     "subjective": "heavy"
   },
@@ -53,7 +53,7 @@
   "popularity_tier": "common",
   "cost_per_round_usd": [
     0.5,
-    2.0
+    2
   ],
   "common_firearms": [
     "Mauser K98k",
@@ -76,7 +76,7 @@
           "distance_yd": 0,
           "velocity_fps": 2425,
           "energy_ft_lbs": 2585,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -88,13 +88,13 @@
           "distance_yd": 200,
           "velocity_fps": 2086,
           "energy_ft_lbs": 1913,
-          "drop_in": -13.0
+          "drop_in": -13
         },
         {
           "distance_yd": 300,
           "velocity_fps": 1928,
           "energy_ft_lbs": 1635,
-          "drop_in": -30.0
+          "drop_in": -30
         },
         {
           "distance_yd": 400,
@@ -106,7 +106,7 @@
           "distance_yd": 500,
           "velocity_fps": 1639,
           "energy_ft_lbs": 1181,
-          "drop_in": -92.0
+          "drop_in": -92
         }
       ]
     },
@@ -122,7 +122,7 @@
           "distance_yd": 0,
           "velocity_fps": 2591,
           "energy_ft_lbs": 2922,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -146,13 +146,55 @@
           "distance_yd": 400,
           "velocity_fps": 1838,
           "energy_ft_lbs": 1470,
-          "drop_in": -50.0
+          "drop_in": -50
         },
         {
           "distance_yd": 500,
           "velocity_fps": 1676,
           "energy_ft_lbs": 1223,
-          "drop_in": -83.0
+          "drop_in": -83
+        }
+      ]
+    },
+    {
+      "name": "PPU Metric 198 gr FMJ BT",
+      "bullet_weight_gr": 198,
+      "bullet_type": "FMJ BT",
+      "muzzle_velocity_fps": 2425,
+      "muzzle_energy_ft_lbs": 2585,
+      "barrel_length_in": 24,
+      "bc_g1": 0.413,
+      "sectional_density": 0.271,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2425,
+          "energy_ft_lbs": 2585,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2230,
+          "energy_ft_lbs": 2187,
+          "drop_in": -2.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2046,
+          "energy_ft_lbs": 1841,
+          "drop_in": -11.4
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 1873,
+          "energy_ft_lbs": 1542,
+          "drop_in": -27.4
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 1712,
+          "energy_ft_lbs": 1289,
+          "drop_in": -52
         }
       ]
     }
@@ -187,8 +229,8 @@
   "max_pressure_psi": 50000,
   "primer_type": "Large Rifle",
   "powder_charge_range_gr": [
-    44.0,
-    56.0
+    44,
+    56
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",

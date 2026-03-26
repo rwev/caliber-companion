@@ -30,7 +30,7 @@
   "effective_range_yd": 500,
   "max_range_yd": 4800,
   "recoil": {
-    "free_recoil_ft_lbs": 35.0,
+    "free_recoil_ft_lbs": 35,
     "reference_firearm": "CZ 550 Safari Magnum (25\" barrel, 9.5 lbs)",
     "subjective": "very_heavy"
   },
@@ -50,7 +50,7 @@
   "popularity_tier": "common",
   "cost_per_round_usd": [
     2.5,
-    7.0
+    7
   ],
   "common_firearms": [
     "CZ 550 Safari Magnum",
@@ -75,7 +75,7 @@
       "bullet_type": "TBBC (Trophy Bonded Bear Claw)",
       "muzzle_velocity_fps": 2530,
       "muzzle_energy_ft_lbs": 4263,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "bc_g1": 0.398,
       "sectional_density": 0.305,
       "ballistics": [
@@ -83,7 +83,7 @@
           "distance_yd": 0,
           "velocity_fps": 2530,
           "energy_ft_lbs": 4263,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -113,13 +113,13 @@
           "distance_yd": 500,
           "velocity_fps": 1676,
           "energy_ft_lbs": 1872,
-          "drop_in": -66.0
+          "drop_in": -66
         },
         {
           "distance_yd": 600,
           "velocity_fps": 1535,
           "energy_ft_lbs": 1570,
-          "drop_in": -102.0
+          "drop_in": -102
         }
       ]
     },
@@ -129,7 +129,7 @@
       "bullet_type": "DGX Bonded (Dangerous Game Expanding)",
       "muzzle_velocity_fps": 2530,
       "muzzle_energy_ft_lbs": 4263,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "bc_g1": 0.356,
       "sectional_density": 0.305,
       "ballistics": [
@@ -137,7 +137,7 @@
           "distance_yd": 0,
           "velocity_fps": 2530,
           "energy_ft_lbs": 4263,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -176,6 +176,48 @@
           "drop_in": -108.5
         }
       ]
+    },
+    {
+      "name": "Federal Premium 300 gr Trophy Bonded Bear Claw",
+      "bullet_weight_gr": 300,
+      "bullet_type": "Trophy Bonded Bear Claw",
+      "muzzle_velocity_fps": 2530,
+      "muzzle_energy_ft_lbs": 4263,
+      "barrel_length_in": 24,
+      "bc_g1": 0.398,
+      "sectional_density": 0.305,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2530,
+          "energy_ft_lbs": 4263,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2330,
+          "energy_ft_lbs": 3618,
+          "drop_in": -2.6
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2140,
+          "energy_ft_lbs": 3050,
+          "drop_in": -10.8
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 1960,
+          "energy_ft_lbs": 2559,
+          "drop_in": -25.8
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 1793,
+          "energy_ft_lbs": 2140,
+          "drop_in": -49
+        }
+      ]
     }
   ],
   "recommended_game": [
@@ -208,8 +250,8 @@
   "max_pressure_psi": 62000,
   "primer_type": "Large Rifle Magnum",
   "powder_charge_range_gr": [
-    65.0,
-    85.0
+    65,
+    85
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",

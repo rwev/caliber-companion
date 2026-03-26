@@ -235,6 +235,81 @@
           "drop_in": -8.8
         }
       ]
+    },
+    {
+      "name": "Winchester White Box 230 gr FMJ",
+      "bullet_weight_gr": 230,
+      "bullet_type": "FMJ",
+      "muzzle_velocity_fps": 835,
+      "muzzle_energy_ft_lbs": 356,
+      "barrel_length_in": 5,
+      "bc_g1": 0.195,
+      "sectional_density": 0.162,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 835,
+          "energy_ft_lbs": 356,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 814,
+          "energy_ft_lbs": 338,
+          "drop_in": -0.5
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 795,
+          "energy_ft_lbs": 323,
+          "drop_in": -2.2
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 758,
+          "energy_ft_lbs": 294,
+          "drop_in": -9.8
+        }
+      ]
+    },
+    {
+      "name": "Hornady Critical Defense 185 gr FTX",
+      "bullet_weight_gr": 185,
+      "bullet_type": "FTX",
+      "muzzle_velocity_fps": 950,
+      "muzzle_energy_ft_lbs": 371,
+      "barrel_length_in": 5,
+      "bc_g1": 0.165,
+      "sectional_density": 0.13,
+      "gel_penetration_in": 13.8,
+      "expansion_diameter_in": 0.68,
+      "barrier_blind": false,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 950,
+          "energy_ft_lbs": 371,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 925,
+          "energy_ft_lbs": 352,
+          "drop_in": -0.4
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 901,
+          "energy_ft_lbs": 334,
+          "drop_in": -1.8
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 857,
+          "energy_ft_lbs": 302,
+          "drop_in": -8.2
+        }
+      ]
     }
   ],
   "max_pressure_psi": 21000,

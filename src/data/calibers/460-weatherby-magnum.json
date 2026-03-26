@@ -29,7 +29,7 @@
   "effective_range_yd": 300,
   "max_range_yd": 3000,
   "recoil": {
-    "free_recoil_ft_lbs": 100.0,
+    "free_recoil_ft_lbs": 100,
     "reference_firearm": "Weatherby Mark V Dangerous Game Rifle (26\" barrel, 10.5 lbs)",
     "subjective": "very_heavy"
   },
@@ -46,8 +46,8 @@
   ],
   "popularity_tier": "rare",
   "cost_per_round_usd": [
-    8.0,
-    18.0
+    8,
+    18
   ],
   "common_firearms": [
     "Weatherby Mark V Dangerous Game Rifle",
@@ -61,13 +61,13 @@
       "bullet_type": "TSX (Triple-Shock X)",
       "muzzle_velocity_fps": 2600,
       "muzzle_energy_ft_lbs": 7504,
-      "barrel_length_in": 26.0,
+      "barrel_length_in": 26,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2600,
           "energy_ft_lbs": 7504,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -107,19 +107,19 @@
       "bullet_type": "DGX Bonded (Dangerous Game Expanding)",
       "muzzle_velocity_fps": 2660,
       "muzzle_energy_ft_lbs": 7069,
-      "barrel_length_in": 26.0,
+      "barrel_length_in": 26,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2660,
           "energy_ft_lbs": 7069,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
           "velocity_fps": 2420,
           "energy_ft_lbs": 5853,
-          "drop_in": -2.0
+          "drop_in": -2
         },
         {
           "distance_yd": 200,
@@ -143,7 +143,37 @@
           "distance_yd": 500,
           "velocity_fps": 1609,
           "energy_ft_lbs": 2587,
-          "drop_in": -68.0
+          "drop_in": -68
+        }
+      ]
+    },
+    {
+      "name": "Weatherby 500 gr RN Expanding",
+      "bullet_weight_gr": 500,
+      "bullet_type": "RN Expanding",
+      "muzzle_velocity_fps": 2600,
+      "muzzle_energy_ft_lbs": 7504,
+      "barrel_length_in": 26,
+      "bc_g1": 0.31,
+      "sectional_density": 0.341,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2600,
+          "energy_ft_lbs": 7504,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2301,
+          "energy_ft_lbs": 5880,
+          "drop_in": -2.4
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2025,
+          "energy_ft_lbs": 4554,
+          "drop_in": -10.6
         }
       ]
     }
@@ -168,8 +198,8 @@
   "max_pressure_psi": 65000,
   "primer_type": "Large Rifle Magnum",
   "powder_charge_range_gr": [
-    100.0,
-    130.0
+    100,
+    130
   ],
   "availability_rating": 1,
   "annual_production_estimate": "minimal",

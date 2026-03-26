@@ -1,8 +1,8 @@
 {
-  "name": "6.5\u00d747mm Lapua",
-  "designation": "6.5\u00d747mm Lapua",
+  "name": "6.5×47mm Lapua",
+  "designation": "6.5×47mm Lapua",
   "aliases": [
-    "6.5\u00d747 Lapua",
+    "6.5×47 Lapua",
     "6.5 Lapua"
   ],
   "category": "rifle",
@@ -30,7 +30,7 @@
   "effective_range_yd": 1000,
   "max_range_yd": 3200,
   "recoil": {
-    "free_recoil_ft_lbs": 11.0,
+    "free_recoil_ft_lbs": 11,
     "reference_firearm": "Tikka T3x TAC A1 (24\" barrel, 10.3 lbs)",
     "subjective": "moderate"
   },
@@ -46,7 +46,7 @@
   "popularity_tier": "niche",
   "cost_per_round_usd": [
     1.25,
-    3.0
+    3
   ],
   "common_firearms": [
     "Tikka T3x",
@@ -61,13 +61,13 @@
       "bullet_type": "OTM (Scenar-L)",
       "muzzle_velocity_fps": 2790,
       "muzzle_energy_ft_lbs": 2401,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2790,
           "energy_ft_lbs": 2401,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -113,13 +113,13 @@
       "bullet_type": "Hybrid OTM Tactical",
       "muzzle_velocity_fps": 2880,
       "muzzle_energy_ft_lbs": 2393,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2880,
           "energy_ft_lbs": 2393,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -158,6 +158,55 @@
           "drop_in": -62.2
         }
       ]
+    },
+    {
+      "name": "Lapua Scenar-L 130 gr OTM",
+      "bullet_weight_gr": 130,
+      "bullet_type": "Scenar-L OTM",
+      "muzzle_velocity_fps": 2820,
+      "muzzle_energy_ft_lbs": 2294,
+      "barrel_length_in": 24,
+      "bc_g1": 0.547,
+      "bc_g7": 0.274,
+      "sectional_density": 0.266,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2820,
+          "energy_ft_lbs": 2294,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2665,
+          "energy_ft_lbs": 2049,
+          "drop_in": -1.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2516,
+          "energy_ft_lbs": 1827,
+          "drop_in": -7.6
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2372,
+          "energy_ft_lbs": 1624,
+          "drop_in": -17.8
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2233,
+          "energy_ft_lbs": 1439,
+          "drop_in": -32.8
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2100,
+          "energy_ft_lbs": 1273,
+          "drop_in": -53.4
+        }
+      ]
     }
   ],
   "recommended_game": [
@@ -180,8 +229,8 @@
   "max_pressure_psi": 63000,
   "primer_type": "Small Rifle",
   "powder_charge_range_gr": [
-    34.0,
-    42.0
+    34,
+    42
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",

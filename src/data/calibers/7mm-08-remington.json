@@ -30,7 +30,7 @@
   "effective_range_yd": 600,
   "max_range_yd": 4200,
   "recoil": {
-    "free_recoil_ft_lbs": 13.0,
+    "free_recoil_ft_lbs": 13,
     "reference_firearm": "Remington Model Seven (20\" barrel, 6.5 lbs)",
     "subjective": "moderate"
   },
@@ -51,7 +51,7 @@
   ],
   "popularity_tier": "common",
   "cost_per_round_usd": [
-    1.0,
+    1,
     2.8
   ],
   "common_firearms": [
@@ -69,7 +69,7 @@
       "bullet_type": "SST",
       "muzzle_velocity_fps": 2950,
       "muzzle_energy_ft_lbs": 2686,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "bc_g1": 0.486,
       "bc_g7": 0.243,
       "sectional_density": 0.246,
@@ -78,7 +78,7 @@
           "distance_yd": 0,
           "velocity_fps": 2950,
           "energy_ft_lbs": 2686,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -102,7 +102,7 @@
           "distance_yd": 400,
           "velocity_fps": 2221,
           "energy_ft_lbs": 1523,
-          "drop_in": -33.0
+          "drop_in": -33
         },
         {
           "distance_yd": 500,
@@ -118,7 +118,7 @@
       "bullet_type": "AccuBond",
       "muzzle_velocity_fps": 2800,
       "muzzle_energy_ft_lbs": 2437,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "bc_g1": 0.485,
       "bc_g7": 0.242,
       "sectional_density": 0.248,
@@ -127,7 +127,7 @@
           "distance_yd": 0,
           "velocity_fps": 2800,
           "energy_ft_lbs": 2437,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -160,6 +160,55 @@
           "drop_in": -62.5
         }
       ]
+    },
+    {
+      "name": "Hornady Precision Hunter 150 gr ELD-X",
+      "bullet_weight_gr": 150,
+      "bullet_type": "ELD-X",
+      "muzzle_velocity_fps": 2770,
+      "muzzle_energy_ft_lbs": 2553,
+      "barrel_length_in": 24,
+      "bc_g1": 0.574,
+      "bc_g7": 0.283,
+      "sectional_density": 0.266,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2770,
+          "energy_ft_lbs": 2553,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2603,
+          "energy_ft_lbs": 2258,
+          "drop_in": -1.9
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2441,
+          "energy_ft_lbs": 1985,
+          "drop_in": -8
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2285,
+          "energy_ft_lbs": 1739,
+          "drop_in": -18.8
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2135,
+          "energy_ft_lbs": 1518,
+          "drop_in": -35
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1992,
+          "energy_ft_lbs": 1322,
+          "drop_in": -57.4
+        }
+      ]
     }
   ],
   "recommended_game": [
@@ -187,8 +236,8 @@
   "max_pressure_psi": 61000,
   "primer_type": "Large Rifle",
   "powder_charge_range_gr": [
-    38.0,
-    48.0
+    38,
+    48
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",

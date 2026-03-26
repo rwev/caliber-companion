@@ -4,7 +4,7 @@
   "aliases": [
     "6.35mm Browning",
     ".25 Auto",
-    "6.35\u00d715.5mmSR"
+    "6.35×15.5mmSR"
   ],
   "category": "handgun",
   "slug": "25-acp",
@@ -51,7 +51,7 @@
   "popularity_tier": "niche",
   "cost_per_round_usd": [
     0.35,
-    1.0
+    1
   ],
   "common_firearms": [
     "Beretta 950 Jetfire",
@@ -67,13 +67,13 @@
       "bullet_type": "FMJ",
       "muzzle_velocity_fps": 760,
       "muzzle_energy_ft_lbs": 64,
-      "barrel_length_in": 2.0,
+      "barrel_length_in": 2,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 760,
           "energy_ft_lbs": 64,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 25,
@@ -107,7 +107,7 @@
       "bullet_type": "JHP",
       "muzzle_velocity_fps": 900,
       "muzzle_energy_ft_lbs": 63,
-      "barrel_length_in": 2.0,
+      "barrel_length_in": 2,
       "gel_penetration_in": 6.5,
       "expansion_diameter_in": 0.3,
       "barrier_blind": false,
@@ -116,7 +116,7 @@
           "distance_yd": 0,
           "velocity_fps": 900,
           "energy_ft_lbs": 63,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 25,
@@ -143,13 +143,43 @@
           "drop_in": -13.8
         }
       ]
+    },
+    {
+      "name": "Hornady XTP 35 gr JHP",
+      "bullet_weight_gr": 35,
+      "bullet_type": "XTP JHP",
+      "muzzle_velocity_fps": 900,
+      "muzzle_energy_ft_lbs": 63,
+      "barrel_length_in": 2,
+      "bc_g1": 0.08,
+      "sectional_density": 0.063,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 900,
+          "energy_ft_lbs": 63,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 848,
+          "energy_ft_lbs": 56,
+          "drop_in": -0.6
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 800,
+          "energy_ft_lbs": 50,
+          "drop_in": -2.8
+        }
+      ]
     }
   ],
   "max_pressure_psi": 25000,
   "primer_type": "Small Pistol",
   "powder_charge_range_gr": [
-    1.0,
-    2.0
+    1,
+    2
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",

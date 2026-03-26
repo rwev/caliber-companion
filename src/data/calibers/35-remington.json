@@ -29,7 +29,7 @@
   "effective_range_yd": 200,
   "max_range_yd": 2500,
   "recoil": {
-    "free_recoil_ft_lbs": 14.0,
+    "free_recoil_ft_lbs": 14,
     "reference_firearm": "Marlin 336 (20\" barrel, 7.0 lbs)",
     "subjective": "moderate"
   },
@@ -51,7 +51,7 @@
   "popularity_tier": "niche",
   "cost_per_round_usd": [
     1.2,
-    3.0
+    3
   ],
   "common_firearms": [
     "Marlin 336",
@@ -66,8 +66,8 @@
       "bullet_type": "FTX",
       "muzzle_velocity_fps": 2225,
       "muzzle_energy_ft_lbs": 2198,
-      "barrel_length_in": 24.0,
-      "gel_penetration_in": 16.0,
+      "barrel_length_in": 24,
+      "gel_penetration_in": 16,
       "expansion_diameter_in": 0.55,
       "barrier_blind": true,
       "ballistics": [
@@ -75,13 +75,13 @@
           "distance_yd": 0,
           "velocity_fps": 2225,
           "energy_ft_lbs": 2198,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
           "velocity_fps": 1963,
           "energy_ft_lbs": 1711,
-          "drop_in": -4.0
+          "drop_in": -4
         },
         {
           "distance_yd": 200,
@@ -99,13 +99,13 @@
           "distance_yd": 400,
           "velocity_fps": 1318,
           "energy_ft_lbs": 772,
-          "drop_in": -80.0
+          "drop_in": -80
         },
         {
           "distance_yd": 500,
           "velocity_fps": 1175,
           "energy_ft_lbs": 613,
-          "drop_in": -140.0
+          "drop_in": -140
         }
       ]
     },
@@ -115,19 +115,19 @@
       "bullet_type": "SP",
       "muzzle_velocity_fps": 2080,
       "muzzle_energy_ft_lbs": 1921,
-      "barrel_length_in": 20.0,
+      "barrel_length_in": 20,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2080,
           "energy_ft_lbs": 1921,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
           "velocity_fps": 1798,
           "energy_ft_lbs": 1436,
-          "drop_in": -5.0
+          "drop_in": -5
         },
         {
           "distance_yd": 200,
@@ -139,19 +139,49 @@
           "distance_yd": 300,
           "velocity_fps": 1330,
           "energy_ft_lbs": 786,
-          "drop_in": -51.0
+          "drop_in": -51
         },
         {
           "distance_yd": 400,
           "velocity_fps": 1168,
           "energy_ft_lbs": 606,
-          "drop_in": -102.0
+          "drop_in": -102
         },
         {
           "distance_yd": 500,
           "velocity_fps": 1055,
           "energy_ft_lbs": 495,
-          "drop_in": -180.0
+          "drop_in": -180
+        }
+      ]
+    },
+    {
+      "name": "Hornady LEVERevolution 200 gr FTX",
+      "bullet_weight_gr": 200,
+      "bullet_type": "FTX",
+      "muzzle_velocity_fps": 2225,
+      "muzzle_energy_ft_lbs": 2198,
+      "barrel_length_in": 24,
+      "bc_g1": 0.285,
+      "sectional_density": 0.223,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2225,
+          "energy_ft_lbs": 2198,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1963,
+          "energy_ft_lbs": 1711,
+          "drop_in": -3.4
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1724,
+          "energy_ft_lbs": 1320,
+          "drop_in": -14.8
         }
       ]
     }
@@ -176,8 +206,8 @@
   "max_pressure_psi": 33500,
   "primer_type": "Large Rifle",
   "powder_charge_range_gr": [
-    33.0,
-    44.0
+    33,
+    44
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",

@@ -2,7 +2,7 @@
   "name": ".30 Carbine",
   "designation": ".30 Carbine",
   "aliases": [
-    "7.62\u00d733mm"
+    "7.62×33mm"
   ],
   "category": "rifle",
   "slug": "30-carbine",
@@ -29,7 +29,7 @@
   "effective_range_yd": 200,
   "max_range_yd": 2000,
   "recoil": {
-    "free_recoil_ft_lbs": 4.0,
+    "free_recoil_ft_lbs": 4,
     "reference_firearm": "M1 Carbine (18\" barrel, 5.2 lbs)",
     "subjective": "very_low"
   },
@@ -41,7 +41,7 @@
     "Various allied and post-war militaries worldwide"
   ],
   "le_usage": [
-    "U.S. police departments (1950s\u20131970s)"
+    "U.S. police departments (1950s–1970s)"
   ],
   "primary_use_cases": [
     "military carbine",
@@ -71,13 +71,13 @@
       "bullet_type": "FMJ",
       "muzzle_velocity_fps": 1990,
       "muzzle_energy_ft_lbs": 967,
-      "barrel_length_in": 18.0,
+      "barrel_length_in": 18,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 1990,
           "energy_ft_lbs": 967,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -89,7 +89,7 @@
           "distance_yd": 200,
           "velocity_fps": 1541,
           "energy_ft_lbs": 580,
-          "drop_in": -21.0
+          "drop_in": -21
         },
         {
           "distance_yd": 300,
@@ -101,13 +101,13 @@
           "distance_yd": 400,
           "velocity_fps": 1205,
           "energy_ft_lbs": 355,
-          "drop_in": -99.0
+          "drop_in": -99
         },
         {
           "distance_yd": 500,
           "velocity_fps": 1094,
           "energy_ft_lbs": 292,
-          "drop_in": -172.0
+          "drop_in": -172
         }
       ]
     },
@@ -117,8 +117,8 @@
       "bullet_type": "FTX",
       "muzzle_velocity_fps": 2000,
       "muzzle_energy_ft_lbs": 977,
-      "barrel_length_in": 18.0,
-      "gel_penetration_in": 11.0,
+      "barrel_length_in": 18,
+      "gel_penetration_in": 11,
       "expansion_diameter_in": 0.45,
       "barrier_blind": false,
       "ballistics": [
@@ -126,7 +126,7 @@
           "distance_yd": 0,
           "velocity_fps": 2000,
           "energy_ft_lbs": 977,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -144,7 +144,7 @@
           "distance_yd": 300,
           "velocity_fps": 1422,
           "energy_ft_lbs": 494,
-          "drop_in": -47.0
+          "drop_in": -47
         },
         {
           "distance_yd": 400,
@@ -156,7 +156,37 @@
           "distance_yd": 500,
           "velocity_fps": 1152,
           "energy_ft_lbs": 324,
-          "drop_in": -158.0
+          "drop_in": -158
+        }
+      ]
+    },
+    {
+      "name": "Hornady Critical Defense 110 gr FTX",
+      "bullet_weight_gr": 110,
+      "bullet_type": "FTX",
+      "muzzle_velocity_fps": 1990,
+      "muzzle_energy_ft_lbs": 967,
+      "barrel_length_in": 18,
+      "bc_g1": 0.26,
+      "sectional_density": 0.166,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1990,
+          "energy_ft_lbs": 967,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1741,
+          "energy_ft_lbs": 740,
+          "drop_in": -3.6
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1519,
+          "energy_ft_lbs": 564,
+          "drop_in": -15.8
         }
       ]
     }
@@ -176,8 +206,8 @@
   "max_pressure_psi": 40000,
   "primer_type": "Small Rifle",
   "powder_charge_range_gr": [
-    13.0,
-    16.0
+    13,
+    16
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",
@@ -185,7 +215,13 @@
   "suppressor_friendly": false,
   "subsonic_loads_available": false,
   "military_adoption_detail": [
-    { "organization": "U.S. Military", "designation": "M1 Carbine", "year_adopted": 1942, "role": "Personal defense weapon cartridge (WWII/Korea)", "status": "retired" }
+    {
+      "organization": "U.S. Military",
+      "designation": "M1 Carbine",
+      "year_adopted": 1942,
+      "role": "Personal defense weapon cartridge (WWII/Korea)",
+      "status": "retired"
+    }
   ],
   "le_adoption_detail": []
 }

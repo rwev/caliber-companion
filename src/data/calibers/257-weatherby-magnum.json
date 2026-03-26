@@ -29,7 +29,7 @@
   "effective_range_yd": 500,
   "max_range_yd": 4200,
   "recoil": {
-    "free_recoil_ft_lbs": 14.0,
+    "free_recoil_ft_lbs": 14,
     "reference_firearm": "Weatherby Mark V Deluxe (26\" barrel, 8.0 lbs)",
     "subjective": "moderate"
   },
@@ -63,19 +63,19 @@
       "bullet_type": "Nosler Ballistic Tip",
       "muzzle_velocity_fps": 3400,
       "muzzle_energy_ft_lbs": 2952,
-      "barrel_length_in": 26.0,
+      "barrel_length_in": 26,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 3400,
           "energy_ft_lbs": 2952,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
           "velocity_fps": 3170,
           "energy_ft_lbs": 2567,
-          "drop_in": -1.0
+          "drop_in": -1
         },
         {
           "distance_yd": 200,
@@ -109,13 +109,13 @@
       "bullet_type": "TTSX (Tipped Triple-Shock X)",
       "muzzle_velocity_fps": 3602,
       "muzzle_energy_ft_lbs": 2880,
-      "barrel_length_in": 26.0,
+      "barrel_length_in": 26,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 3602,
           "energy_ft_lbs": 2880,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -148,6 +148,54 @@
           "drop_in": -29.2
         }
       ]
+    },
+    {
+      "name": "Hornady Precision Hunter 110 gr ELD-X",
+      "bullet_weight_gr": 110,
+      "bullet_type": "ELD-X",
+      "muzzle_velocity_fps": 3460,
+      "muzzle_energy_ft_lbs": 2925,
+      "barrel_length_in": 26,
+      "bc_g1": 0.465,
+      "sectional_density": 0.238,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 3460,
+          "energy_ft_lbs": 2925,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 3234,
+          "energy_ft_lbs": 2556,
+          "drop_in": -0.9
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 3019,
+          "energy_ft_lbs": 2226,
+          "drop_in": -4.4
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2814,
+          "energy_ft_lbs": 1933,
+          "drop_in": -11
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2619,
+          "energy_ft_lbs": 1674,
+          "drop_in": -20.8
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2433,
+          "energy_ft_lbs": 1446,
+          "drop_in": -34.6
+        }
+      ]
     }
   ],
   "recommended_game": [
@@ -175,8 +223,8 @@
   "max_pressure_psi": 65000,
   "primer_type": "Large Rifle Magnum",
   "powder_charge_range_gr": [
-    55.0,
-    72.0
+    55,
+    72
   ],
   "availability_rating": 2,
   "annual_production_estimate": "limited",

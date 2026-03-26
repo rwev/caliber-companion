@@ -29,7 +29,7 @@
   "effective_range_yd": 100,
   "max_range_yd": 2500,
   "recoil": {
-    "free_recoil_ft_lbs": 30.0,
+    "free_recoil_ft_lbs": 30,
     "reference_firearm": "Ruger Super Redhawk (7.5\" barrel, 53 oz)",
     "subjective": "very_heavy"
   },
@@ -50,7 +50,7 @@
   "popularity_tier": "niche",
   "cost_per_round_usd": [
     1.25,
-    3.0
+    3
   ],
   "common_firearms": [
     "Freedom Arms Model 83",
@@ -78,7 +78,7 @@
           "distance_yd": 0,
           "velocity_fps": 1900,
           "energy_ft_lbs": 1923,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 25,
@@ -118,7 +118,7 @@
           "distance_yd": 0,
           "velocity_fps": 1520,
           "energy_ft_lbs": 1539,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 25,
@@ -143,6 +143,48 @@
           "velocity_fps": 1316,
           "energy_ft_lbs": 1154,
           "drop_in": -3.5
+        }
+      ]
+    },
+    {
+      "name": "Federal Fusion 260 gr SP",
+      "bullet_weight_gr": 260,
+      "bullet_type": "Fusion SP",
+      "muzzle_velocity_fps": 1750,
+      "muzzle_energy_ft_lbs": 1767,
+      "barrel_length_in": 7.5,
+      "bc_g1": 0.195,
+      "sectional_density": 0.183,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1750,
+          "energy_ft_lbs": 1767,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1610,
+          "energy_ft_lbs": 1497,
+          "drop_in": -0.2
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1484,
+          "energy_ft_lbs": 1272,
+          "drop_in": -1.6
+        },
+        {
+          "distance_yd": 150,
+          "velocity_fps": 1372,
+          "energy_ft_lbs": 1087,
+          "drop_in": -4.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1274,
+          "energy_ft_lbs": 937,
+          "drop_in": -10.2
         }
       ]
     }
@@ -172,8 +214,8 @@
   "max_pressure_psi": 65000,
   "primer_type": "Large Pistol",
   "powder_charge_range_gr": [
-    28.0,
-    36.0
+    28,
+    36
   ],
   "availability_rating": 2,
   "annual_production_estimate": "limited",

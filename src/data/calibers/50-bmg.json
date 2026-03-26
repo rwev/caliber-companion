@@ -3,7 +3,7 @@
   "designation": ".50 Browning Machine Gun",
   "aliases": [
     ".50 Cal",
-    "12.7\u00d799mm NATO"
+    "12.7×99mm NATO"
   ],
   "category": "magnum_rifle",
   "slug": "50-bmg",
@@ -30,7 +30,7 @@
   "effective_range_yd": 2000,
   "max_range_yd": 7400,
   "recoil": {
-    "free_recoil_ft_lbs": 100.0,
+    "free_recoil_ft_lbs": 100,
     "reference_firearm": "Barrett M82A1 (29\" barrel, 30.9 lbs)",
     "subjective": "very_heavy"
   },
@@ -55,8 +55,8 @@
   ],
   "popularity_tier": "niche",
   "cost_per_round_usd": [
-    3.0,
-    8.0
+    3,
+    8
   ],
   "common_firearms": [
     "Barrett M82A1/M107",
@@ -72,7 +72,7 @@
       "bullet_type": "A-MAX",
       "muzzle_velocity_fps": 2820,
       "muzzle_energy_ft_lbs": 13241,
-      "barrel_length_in": 29.0,
+      "barrel_length_in": 29,
       "bc_g1": 1.05,
       "bc_g7": 0.535,
       "sectional_density": 0.412,
@@ -81,7 +81,7 @@
           "distance_yd": 0,
           "velocity_fps": 2820,
           "energy_ft_lbs": 13241,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -111,7 +111,7 @@
           "distance_yd": 500,
           "velocity_fps": 2377,
           "energy_ft_lbs": 9377,
-          "drop_in": -43.0
+          "drop_in": -43
         },
         {
           "distance_yd": 600,
@@ -139,7 +139,7 @@
       "bullet_type": "FMJ-BT",
       "muzzle_velocity_fps": 3050,
       "muzzle_energy_ft_lbs": 13631,
-      "barrel_length_in": 45.0,
+      "barrel_length_in": 45,
       "bc_g1": 0.7,
       "bc_g7": 0.356,
       "sectional_density": 0.362,
@@ -148,7 +148,7 @@
           "distance_yd": 0,
           "velocity_fps": 3050,
           "energy_ft_lbs": 13631,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -190,7 +190,7 @@
           "distance_yd": 800,
           "velocity_fps": 2001,
           "energy_ft_lbs": 5871,
-          "drop_in": -112.0
+          "drop_in": -112
         },
         {
           "distance_yd": 1000,
@@ -199,13 +199,62 @@
           "drop_in": -195.6
         }
       ]
+    },
+    {
+      "name": "Hornady A-MAX 750 gr",
+      "bullet_weight_gr": 750,
+      "bullet_type": "A-MAX",
+      "muzzle_velocity_fps": 2820,
+      "muzzle_energy_ft_lbs": 13241,
+      "barrel_length_in": 45,
+      "bc_g1": 1.05,
+      "bc_g7": 0.53,
+      "sectional_density": 0.412,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2820,
+          "energy_ft_lbs": 13241,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2728,
+          "energy_ft_lbs": 12396,
+          "drop_in": -1.6
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2638,
+          "energy_ft_lbs": 11590,
+          "drop_in": -6.6
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2550,
+          "energy_ft_lbs": 10823,
+          "drop_in": -15
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2464,
+          "energy_ft_lbs": 10094,
+          "drop_in": -27
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2380,
+          "energy_ft_lbs": 9417,
+          "drop_in": -42.8
+        }
+      ]
     }
   ],
   "max_pressure_psi": 54923,
   "primer_type": ".50 BMG",
   "powder_charge_range_gr": [
-    200.0,
-    250.0
+    200,
+    250
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",
@@ -213,9 +262,24 @@
   "suppressor_friendly": true,
   "subsonic_loads_available": false,
   "military_adoption_detail": [
-    { "organization": "U.S. Military", "designation": "M33 Ball", "year_adopted": 1921, "role": "Heavy machine gun/anti-materiel cartridge", "status": "active" },
-    { "organization": "NATO", "role": "Standard heavy machine gun cartridge", "status": "active" },
-    { "organization": "U.S. Military", "designation": "Mk 211 Mod 0 HEIAP", "role": "Anti-materiel cartridge", "status": "active" }
+    {
+      "organization": "U.S. Military",
+      "designation": "M33 Ball",
+      "year_adopted": 1921,
+      "role": "Heavy machine gun/anti-materiel cartridge",
+      "status": "active"
+    },
+    {
+      "organization": "NATO",
+      "role": "Standard heavy machine gun cartridge",
+      "status": "active"
+    },
+    {
+      "organization": "U.S. Military",
+      "designation": "Mk 211 Mod 0 HEIAP",
+      "role": "Anti-materiel cartridge",
+      "status": "active"
+    }
   ],
   "le_adoption_detail": []
 }
