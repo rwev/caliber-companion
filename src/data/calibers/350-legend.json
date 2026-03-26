@@ -217,6 +217,36 @@
           "drop_in": -19.6
         }
       ]
+    },
+    {
+      "name": "Hornady American Whitetail 170 gr InterLock",
+      "bullet_weight_gr": 170,
+      "bullet_type": "InterLock SP",
+      "muzzle_velocity_fps": 2200,
+      "muzzle_energy_ft_lbs": 1826,
+      "barrel_length_in": 20,
+      "bc_g1": 0.21,
+      "sectional_density": 0.194,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2200,
+          "energy_ft_lbs": 1826,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1842,
+          "energy_ft_lbs": 1280,
+          "drop_in": -4
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1530,
+          "energy_ft_lbs": 884,
+          "drop_in": -18
+        }
+      ]
     }
   ],
   "recommended_game": [

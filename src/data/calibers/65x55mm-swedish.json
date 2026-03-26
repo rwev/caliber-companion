@@ -237,6 +237,42 @@
           "drop_in": -23.2
         }
       ]
+    },
+    {
+      "name": "Federal Premium 140 gr Nosler Partition",
+      "bullet_weight_gr": 140,
+      "bullet_type": "Nosler Partition",
+      "muzzle_velocity_fps": 2550,
+      "muzzle_energy_ft_lbs": 2022,
+      "barrel_length_in": 24,
+      "bc_g1": 0.434,
+      "sectional_density": 0.287,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2550,
+          "energy_ft_lbs": 2022,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2365,
+          "energy_ft_lbs": 1739,
+          "drop_in": -2.4
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2189,
+          "energy_ft_lbs": 1490,
+          "drop_in": -10
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2022,
+          "energy_ft_lbs": 1272,
+          "drop_in": -24.2
+        }
+      ]
     }
   ],
   "recommended_game": [

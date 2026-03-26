@@ -222,6 +222,42 @@
           "drop_in": -9.8
         }
       ]
+    },
+    {
+      "name": "Federal Premium 262 gr HST JHP",
+      "bullet_weight_gr": 262,
+      "bullet_type": "HST JHP",
+      "muzzle_velocity_fps": 1845,
+      "muzzle_energy_ft_lbs": 1981,
+      "barrel_length_in": 8.38,
+      "bc_g1": 0.15,
+      "sectional_density": 0.15,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1845,
+          "energy_ft_lbs": 1981,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1771,
+          "energy_ft_lbs": 1823,
+          "drop_in": -0.3
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1716,
+          "energy_ft_lbs": 1684,
+          "drop_in": -1.4
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1605,
+          "energy_ft_lbs": 1466,
+          "drop_in": -6.2
+        }
+      ]
     }
   ],
   "recommended_game": [

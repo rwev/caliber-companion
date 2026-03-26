@@ -266,6 +266,40 @@
           "drop_in": -2.8
         }
       ]
+    },
+    {
+      "name": "Hornady Critical Defense 00 Buck 8 pellet",
+      "bullet_weight_gr": 425,
+      "bullet_type": "00 Buckshot (8 pellet, 2-3/4\")",
+      "muzzle_velocity_fps": 1600,
+      "muzzle_energy_ft_lbs": 2415,
+      "barrel_length_in": 18,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1600,
+          "energy_ft_lbs": 2415,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 15,
+          "velocity_fps": 1485,
+          "energy_ft_lbs": 2083,
+          "drop_in": -0.1
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1410,
+          "energy_ft_lbs": 1876,
+          "drop_in": -0.2
+        },
+        {
+          "distance_yd": 40,
+          "velocity_fps": 1310,
+          "energy_ft_lbs": 1620,
+          "drop_in": -0.6
+        }
+      ]
     }
   ],
   "recommended_game": [

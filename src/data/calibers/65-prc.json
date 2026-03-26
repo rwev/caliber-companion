@@ -255,6 +255,55 @@
           "drop_in": -48.2
         }
       ]
+    },
+    {
+      "name": "Barnes VOR-TX LR 127 gr LRX",
+      "bullet_weight_gr": 127,
+      "bullet_type": "LRX (Lead-Free)",
+      "muzzle_velocity_fps": 3050,
+      "muzzle_energy_ft_lbs": 2624,
+      "barrel_length_in": 24,
+      "bc_g1": 0.53,
+      "bc_g7": 0.264,
+      "sectional_density": 0.26,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 3050,
+          "energy_ft_lbs": 2624,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2884,
+          "energy_ft_lbs": 2347,
+          "drop_in": -1.4
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2724,
+          "energy_ft_lbs": 2093,
+          "drop_in": -6.2
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2569,
+          "energy_ft_lbs": 1860,
+          "drop_in": -14.6
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2420,
+          "energy_ft_lbs": 1651,
+          "drop_in": -27
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2276,
+          "energy_ft_lbs": 1462,
+          "drop_in": -44
+        }
+      ]
     }
   ],
   "recommended_game": [

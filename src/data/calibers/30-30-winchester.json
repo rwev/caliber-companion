@@ -275,6 +275,36 @@
           "drop_in": -35.4
         }
       ]
+    },
+    {
+      "name": "Federal Fusion 170 gr SP",
+      "bullet_weight_gr": 170,
+      "bullet_type": "Fusion SP (Flat Nose)",
+      "muzzle_velocity_fps": 2200,
+      "muzzle_energy_ft_lbs": 1827,
+      "barrel_length_in": 24,
+      "bc_g1": 0.267,
+      "sectional_density": 0.256,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2200,
+          "energy_ft_lbs": 1827,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1895,
+          "energy_ft_lbs": 1356,
+          "drop_in": -3.6
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1622,
+          "energy_ft_lbs": 993,
+          "drop_in": -16.2
+        }
+      ]
     }
   ],
   "recommended_game": [

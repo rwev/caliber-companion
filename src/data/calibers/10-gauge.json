@@ -189,6 +189,34 @@
           "drop_in": -0.4
         }
       ]
+    },
+    {
+      "name": "Federal Top Gun 2-3/4\" Target",
+      "bullet_weight_gr": 637,
+      "bullet_type": "Target Shot (2-3/4\")",
+      "muzzle_velocity_fps": 1238,
+      "muzzle_energy_ft_lbs": 2239,
+      "barrel_length_in": 28,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1238,
+          "energy_ft_lbs": 2239,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 20,
+          "velocity_fps": 1134,
+          "energy_ft_lbs": 1903,
+          "drop_in": -0.2
+        },
+        {
+          "distance_yd": 40,
+          "velocity_fps": 1042,
+          "energy_ft_lbs": 1623,
+          "drop_in": -0.7
+        }
+      ]
     }
   ],
   "recommended_game": [

@@ -219,6 +219,42 @@
           "drop_in": -17.4
         }
       ]
+    },
+    {
+      "name": "Hornady Outfitter 116 gr CX",
+      "bullet_weight_gr": 116,
+      "bullet_type": "CX (Copper Alloy)",
+      "muzzle_velocity_fps": 1933,
+      "muzzle_energy_ft_lbs": 963,
+      "barrel_length_in": 18,
+      "bc_g1": 0.26,
+      "sectional_density": 0.25,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1933,
+          "energy_ft_lbs": 963,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1798,
+          "energy_ft_lbs": 828,
+          "drop_in": -2
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1662,
+          "energy_ft_lbs": 713,
+          "drop_in": -8.6
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 1546,
+          "energy_ft_lbs": 607,
+          "drop_in": -20.4
+        }
+      ]
     }
   ],
   "recommended_game": [

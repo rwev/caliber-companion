@@ -223,6 +223,44 @@
           "drop_in": -7
         }
       ]
+    },
+    {
+      "name": "Hornady XTP 180 gr JHP",
+      "bullet_weight_gr": 180,
+      "bullet_type": "XTP JHP",
+      "muzzle_velocity_fps": 1275,
+      "muzzle_energy_ft_lbs": 650,
+      "barrel_length_in": 5,
+      "bc_g1": 0.165,
+      "sectional_density": 0.161,
+      "gel_penetration_in": 16.5,
+      "expansion_diameter_in": 0.58,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1275,
+          "energy_ft_lbs": 650,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1222,
+          "energy_ft_lbs": 597,
+          "drop_in": -0.2
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1173,
+          "energy_ft_lbs": 550,
+          "drop_in": -0.7
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1090,
+          "energy_ft_lbs": 475,
+          "drop_in": -3.8
+        }
+      ]
     }
   ],
   "max_pressure_psi": 37500,

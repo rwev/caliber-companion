@@ -279,6 +279,55 @@
           "drop_in": -58.8
         }
       ]
+    },
+    {
+      "name": "Berger Hybrid OTM Tactical 300 gr",
+      "bullet_weight_gr": 300,
+      "bullet_type": "Hybrid OTM Tactical",
+      "muzzle_velocity_fps": 2650,
+      "muzzle_energy_ft_lbs": 4677,
+      "barrel_length_in": 27,
+      "bc_g1": 0.789,
+      "bc_g7": 0.391,
+      "sectional_density": 0.375,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2650,
+          "energy_ft_lbs": 4677,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2533,
+          "energy_ft_lbs": 4276,
+          "drop_in": -2
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2419,
+          "energy_ft_lbs": 3902,
+          "drop_in": -8.2
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2308,
+          "energy_ft_lbs": 3551,
+          "drop_in": -18.8
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2200,
+          "energy_ft_lbs": 3226,
+          "drop_in": -34.2
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2095,
+          "energy_ft_lbs": 2924,
+          "drop_in": -54.6
+        }
+      ]
     }
   ],
   "recommended_game": [

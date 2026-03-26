@@ -278,6 +278,42 @@
           "drop_in": -8.2
         }
       ]
+    },
+    {
+      "name": "Federal Fusion 240 gr SP",
+      "bullet_weight_gr": 240,
+      "bullet_type": "Fusion SP",
+      "muzzle_velocity_fps": 1290,
+      "muzzle_energy_ft_lbs": 887,
+      "barrel_length_in": 7.5,
+      "bc_g1": 0.185,
+      "sectional_density": 0.186,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1290,
+          "energy_ft_lbs": 887,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1196,
+          "energy_ft_lbs": 762,
+          "drop_in": -0.4
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1116,
+          "energy_ft_lbs": 663,
+          "drop_in": -2.6
+        },
+        {
+          "distance_yd": 150,
+          "velocity_fps": 1050,
+          "energy_ft_lbs": 587,
+          "drop_in": -7.2
+        }
+      ]
     }
   ],
   "recommended_game": [

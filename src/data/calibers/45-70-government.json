@@ -228,6 +228,36 @@
           "drop_in": -28
         }
       ]
+    },
+    {
+      "name": "Federal HammerDown 300 gr Bonded SP",
+      "bullet_weight_gr": 300,
+      "bullet_type": "Bonded SP (Lever-Action)",
+      "muzzle_velocity_fps": 1850,
+      "muzzle_energy_ft_lbs": 2280,
+      "barrel_length_in": 24,
+      "bc_g1": 0.21,
+      "sectional_density": 0.204,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1850,
+          "energy_ft_lbs": 2280,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1570,
+          "energy_ft_lbs": 1643,
+          "drop_in": -4.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1332,
+          "energy_ft_lbs": 1182,
+          "drop_in": -20.8
+        }
+      ]
     }
   ],
   "recommended_game": [

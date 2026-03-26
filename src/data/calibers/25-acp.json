@@ -203,6 +203,42 @@
           "drop_in": -3.4
         }
       ]
+    },
+    {
+      "name": "Federal Premium 47 gr HST JHP",
+      "bullet_weight_gr": 47,
+      "bullet_type": "HST JHP",
+      "muzzle_velocity_fps": 764,
+      "muzzle_energy_ft_lbs": 61,
+      "barrel_length_in": 2,
+      "bc_g1": 0.15,
+      "sectional_density": 0.15,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 764,
+          "energy_ft_lbs": 61,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 733,
+          "energy_ft_lbs": 56,
+          "drop_in": -0.3
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 711,
+          "energy_ft_lbs": 52,
+          "drop_in": -1.4
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 665,
+          "energy_ft_lbs": 45,
+          "drop_in": -6.2
+        }
+      ]
     }
   ],
   "max_pressure_psi": 25000,

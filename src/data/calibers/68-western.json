@@ -277,6 +277,55 @@
           "drop_in": -50.6
         }
       ]
+    },
+    {
+      "name": "Federal Premium 162 gr Terminal Ascent",
+      "bullet_weight_gr": 162,
+      "bullet_type": "Terminal Ascent",
+      "muzzle_velocity_fps": 2970,
+      "muzzle_energy_ft_lbs": 3173,
+      "barrel_length_in": 24,
+      "bc_g1": 0.6,
+      "bc_g7": 0.303,
+      "sectional_density": 0.302,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2970,
+          "energy_ft_lbs": 3173,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2808,
+          "energy_ft_lbs": 2838,
+          "drop_in": -1.5
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2651,
+          "energy_ft_lbs": 2530,
+          "drop_in": -6.6
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2500,
+          "energy_ft_lbs": 2251,
+          "drop_in": -15.4
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2354,
+          "energy_ft_lbs": 1996,
+          "drop_in": -28.4
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2213,
+          "energy_ft_lbs": 1763,
+          "drop_in": -46.2
+        }
+      ]
     }
   ],
   "recommended_game": [

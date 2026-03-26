@@ -274,6 +274,45 @@
           "drop_in": -6.8
         }
       ]
+    },
+    {
+      "name": "Speer Gold Dot 165 gr JHP",
+      "bullet_weight_gr": 165,
+      "bullet_type": "Gold Dot JHP",
+      "muzzle_velocity_fps": 1150,
+      "muzzle_energy_ft_lbs": 484,
+      "barrel_length_in": 4,
+      "bc_g1": 0.152,
+      "sectional_density": 0.147,
+      "gel_penetration_in": 13.2,
+      "expansion_diameter_in": 0.66,
+      "barrier_blind": true,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1150,
+          "energy_ft_lbs": 484,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1108,
+          "energy_ft_lbs": 450,
+          "drop_in": -0.2
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1070,
+          "energy_ft_lbs": 419,
+          "drop_in": -1.2
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1004,
+          "energy_ft_lbs": 369,
+          "drop_in": -5.8
+        }
+      ]
     }
   ],
   "max_pressure_psi": 35000,

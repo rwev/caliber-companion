@@ -260,6 +260,48 @@
           "drop_in": -48.6
         }
       ]
+    },
+    {
+      "name": "Barnes VOR-TX 140 gr TTSX",
+      "bullet_weight_gr": 140,
+      "bullet_type": "TTSX (All-Copper)",
+      "muzzle_velocity_fps": 3020,
+      "muzzle_energy_ft_lbs": 2836,
+      "barrel_length_in": 24,
+      "bc_g1": 0.435,
+      "sectional_density": 0.248,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 3020,
+          "energy_ft_lbs": 2836,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2810,
+          "energy_ft_lbs": 2456,
+          "drop_in": -1.5
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2610,
+          "energy_ft_lbs": 2120,
+          "drop_in": -6.6
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2419,
+          "energy_ft_lbs": 1820,
+          "drop_in": -15.8
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2237,
+          "energy_ft_lbs": 1556,
+          "drop_in": -29.8
+        }
+      ]
     }
   ],
   "recommended_game": [

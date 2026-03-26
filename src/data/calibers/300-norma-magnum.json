@@ -250,6 +250,55 @@
           "drop_in": -42.2
         }
       ]
+    },
+    {
+      "name": "Federal Gold Medal 215 gr Berger Hybrid",
+      "bullet_weight_gr": 215,
+      "bullet_type": "Berger Hybrid Target",
+      "muzzle_velocity_fps": 2950,
+      "muzzle_energy_ft_lbs": 4153,
+      "barrel_length_in": 26,
+      "bc_g1": 0.715,
+      "bc_g7": 0.36,
+      "sectional_density": 0.323,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2950,
+          "energy_ft_lbs": 4153,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2820,
+          "energy_ft_lbs": 3798,
+          "drop_in": -1.5
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2694,
+          "energy_ft_lbs": 3467,
+          "drop_in": -6.4
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2572,
+          "energy_ft_lbs": 3159,
+          "drop_in": -14.6
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2453,
+          "energy_ft_lbs": 2874,
+          "drop_in": -26.4
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2338,
+          "energy_ft_lbs": 2608,
+          "drop_in": -42.4
+        }
+      ]
     }
   ],
   "recommended_game": [

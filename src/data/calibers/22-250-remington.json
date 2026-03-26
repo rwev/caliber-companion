@@ -247,6 +247,42 @@
           "drop_in": -20.2
         }
       ]
+    },
+    {
+      "name": "Hornady V-MAX 40 gr",
+      "bullet_weight_gr": 40,
+      "bullet_type": "V-MAX (Ultralight)",
+      "muzzle_velocity_fps": 4150,
+      "muzzle_energy_ft_lbs": 1530,
+      "barrel_length_in": 24,
+      "bc_g1": 0.2,
+      "sectional_density": 0.114,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 4150,
+          "energy_ft_lbs": 1530,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 3546,
+          "energy_ft_lbs": 1117,
+          "drop_in": -0.4
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 3006,
+          "energy_ft_lbs": 803,
+          "drop_in": -3
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2525,
+          "energy_ft_lbs": 567,
+          "drop_in": -9
+        }
+      ]
     }
   ],
   "recommended_game": [
