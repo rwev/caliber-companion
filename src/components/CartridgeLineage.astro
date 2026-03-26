@@ -1,0 +1,64 @@
+---
+interface CaliberRef {
+  slug: string;
+  name: string;
+}
+
+interface Props {
+  currentName: string;
+  parent?: CaliberRef;
+  children?: CaliberRef[];
+}
+
+const { currentName, parent, children = [] } = Astro.props;
+const hasLineage = parent || children.length > 0;
+---
+
+{hasLineage && (
+  <div class="border border-surface-border">
+    <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
+      <h3 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">Cartridge Lineage</h3>
+    </div>
+    <div class="px-4 py-4 space-y-3">
+      {/* Parent */}
+      {parent && (
+        <div class="flex items-center gap-2">
+          <span class="font-mono text-sm uppercase tracking-wider text-text-muted flex-shrink-0">Parent</span>
+          <span class="text-text-muted" aria-hidden="true">→</span>
+          <a
+            href={`/caliber-companion/calibers/${parent.slug}`}
+            class="font-mono text-base text-accent hover:underline"
+          >
+            {parent.name}
+          </a>
+        </div>
+      )}
+
+      {/* Current */}
+      <div class="flex items-center gap-2">
+        {parent && <div class="w-px h-4 bg-surface-border ml-3" aria-hidden="true"></div>}
+        <span class="font-mono text-base font-medium text-text-primary border-l-2 border-accent pl-2">
+          {currentName}
+        </span>
+      </div>
+
+      {/* Children */}
+      {children.length > 0 && (
+        <div class="space-y-1.5 ml-3 border-l border-surface-border pl-3">
+          <span class="font-mono text-sm uppercase tracking-wider text-text-muted">Derived</span>
+          {children.map((child) => (
+            <div class="flex items-center gap-2">
+              <span class="text-text-muted" aria-hidden="true">↳</span>
+              <a
+                href={`/caliber-companion/calibers/${child.slug}`}
+                class="font-mono text-base text-accent hover:underline"
+              >
+                {child.name}
+              </a>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  </div>
+)}

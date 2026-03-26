@@ -36,6 +36,8 @@
   "cost_per_round_usd": [0.80, 2.50],
   "common_firearms": ["Mauser M1893", "Mauser M1895", "Rigby Highland Stalker", "Ruger No. 1", "CZ 550"],
 
+  "derived_cartridges": ["30-06-springfield", "8mm-mauser", "257-roberts"],
+
   "loads": [
     {
       "name": "Hornady InterLock 139 gr SP",
@@ -69,5 +71,12 @@
         { "distance_yd": 500, "velocity_fps": 1693, "energy_ft_lbs": 1113, "drop_in": -89.0 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 300 yd", "notes": "139-160gr controlled expansion bullets; classic and proven" },
+    { "game": "Mule Deer", "range": "Under 300 yd", "notes": "150-160gr bonded or partition bullets recommended" },
+    { "game": "Elk", "range": "Under 250 yd", "notes": "160-175gr premium partition or bonded bullets; W.D.M. Bell used it on elephant" },
+    { "game": "African Plains Game", "range": "Under 250 yd", "notes": "160-175gr premium controlled expansion bullets; storied African cartridge" },
+    { "game": "Black Bear", "range": "Under 250 yd", "notes": "160gr bonded bullets for reliable penetration" }
   ]
 }

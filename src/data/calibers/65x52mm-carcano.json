@@ -69,5 +69,9 @@
         { "distance_yd": 500, "velocity_fps": 1196, "energy_ft_lbs": 508, "drop_in": -152.0 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 200 yd", "notes": "139-160gr soft point bullets; limited modern ammunition availability" },
+    { "game": "Feral Hogs", "range": "Under 150 yd", "notes": "156-160gr soft point bullets; adequate for moderate-sized hogs" }
   ]
 }

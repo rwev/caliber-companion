@@ -4,38 +4,33 @@
   "aliases": ["6.5 Grendel", "6.5x39mm"],
   "category": "rifle",
   "slug": "65-grendel",
-
   "dimensions": {
     "bullet_diameter_in": 0.264,
     "neck_diameter_in": 0.293,
-    "case_length_in": 1.520,
-    "overall_length_in": 2.260,
+    "case_length_in": 1.52,
+    "overall_length_in": 2.26,
     "rim_diameter_in": 0.441,
     "case_type": "rimless, bottleneck"
   },
-
   "typical_velocity_fps": [2500, 2850],
   "typical_energy_ft_lbs": [1500, 1900],
   "typical_bullet_weight_gr": [90, 130],
   "effective_range_yd": 700,
   "max_range_yd": 4000,
-
   "recoil": {
     "free_recoil_ft_lbs": 6.0,
     "reference_firearm": "AR-15 platform (20\" barrel, 7.5 lbs)",
     "subjective": "low"
   },
-
   "year_introduced": 2003,
   "country_of_origin": "USA",
   "military_usage": ["Serbian military (limited adoption)", "Evaluated by U.S. military"],
   "le_usage": ["No significant law enforcement adoption"],
   "primary_use_cases": ["long-range shooting from AR-15", "deer hunting", "precision target shooting", "hog hunting"],
-
   "popularity_tier": "niche",
-  "cost_per_round_usd": [0.70, 2.50],
+  "cost_per_round_usd": [0.7, 2.5],
   "common_firearms": ["AR-15 variants (dedicated bolt)", "Alexander Arms Ulfberht", "Ruger American Ranch", "CZ 527", "Howa Mini Action"],
-
+  "parent_cartridge": "762x39mm",
   "loads": [
     {
       "name": "Hornady BLACK 123 gr ELD Match",
@@ -44,6 +39,9 @@
       "muzzle_velocity_fps": 2580,
       "muzzle_energy_ft_lbs": 1818,
       "barrel_length_in": 24.0,
+      "bc_g1": 0.506,
+      "bc_g7": 0.255,
+      "sectional_density": 0.252,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 2580, "energy_ft_lbs": 1818, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 2420, "energy_ft_lbs": 1601, "drop_in": -2.6 },
@@ -60,6 +58,8 @@
       "muzzle_velocity_fps": 2800,
       "muzzle_energy_ft_lbs": 1741,
       "barrel_length_in": 24.0,
+      "bc_g1": 0.360,
+      "sectional_density": 0.205,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 2800, "energy_ft_lbs": 1741, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 2565, "energy_ft_lbs": 1461, "drop_in": -2.0 },
@@ -69,5 +69,11 @@
         { "distance_yd": 500, "velocity_fps": 1746, "energy_ft_lbs": 677, "drop_in": -67.0 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 250 yd", "notes": "120-130gr controlled expansion bullets; effective AR-15 deer cartridge" },
+    { "game": "Feral Hogs", "range": "Under 200 yd", "notes": "120-130gr bonded or soft point bullets" },
+    { "game": "Coyote", "range": "Under 300 yd", "notes": "90-100gr varmint bullets; good accuracy from AR-15 platform" },
+    { "game": "Pronghorn", "range": "Under 250 yd", "notes": "120-123gr polymer tip bullets" }
   ]
 }

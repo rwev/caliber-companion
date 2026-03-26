@@ -36,6 +36,8 @@
   "cost_per_round_usd": [1.50, 3.00],
   "common_firearms": ["Ruger M77 Hawkeye", "Winchester Model 70", "Remington 700", "Kimber 84M"],
 
+  "parent_cartridge": "7x57mm-mauser",
+
   "loads": [
     {
       "name": "Nosler Trophy Grade 110 gr AccuBond",
@@ -69,5 +71,11 @@
         { "distance_yd": 500, "velocity_fps": 1698, "energy_ft_lbs": 769, "drop_in": -60.0 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 300 yd", "notes": "100-120gr controlled expansion bullets; classic deer cartridge" },
+    { "game": "Pronghorn", "range": "Under 300 yd", "notes": "100-115gr polymer tip or ballistic tip bullets" },
+    { "game": "Mule Deer", "range": "Under 250 yd", "notes": "115-120gr premium bullets for adequate penetration" },
+    { "game": "Varmints", "range": "Under 300 yd", "notes": "75-87gr hollow point bullets" }
   ]
 }

@@ -44,6 +44,9 @@
       "muzzle_velocity_fps": 1850,
       "muzzle_energy_ft_lbs": 2280,
       "barrel_length_in": 16.0,
+      "gel_penetration_in": 17.5,
+      "expansion_diameter_in": 0.72,
+      "barrier_blind": true,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 1850, "energy_ft_lbs": 2280, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 1578, "energy_ft_lbs": 1660, "drop_in": -6.2 },
@@ -69,5 +72,10 @@
         { "distance_yd": 500, "velocity_fps": 700, "energy_ft_lbs": 544, "drop_in": -438.0 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Feral Hogs", "range": "Under 150 yd", "notes": "250-350gr bonded or expanding bullets; devastating close-range performance" },
+    { "game": "Whitetail Deer", "range": "Under 150 yd", "notes": "250-300gr controlled expansion bullets" },
+    { "game": "Black Bear", "range": "Under 100 yd", "notes": "300-350gr bonded or hard-cast bullets for deep penetration" }
   ]
 }

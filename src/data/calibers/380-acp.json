@@ -36,6 +36,19 @@
   "cost_per_round_usd": [0.22, 0.80],
   "common_firearms": ["Glock 42", "Ruger LCP II/MAX", "Smith & Wesson Bodyguard", "SIG Sauer P238", "Beretta 84", "Walther PPK"],
 
+  "adoption_timeline": [
+    { "year": 1908, "event": "John Browning designs the .380 ACP; Colt introduces it in the Model 1908 Pocket Hammerless" },
+    { "year": 1929, "event": "Walther introduces the PP pistol in .380 ACP, adopted by German police" },
+    { "year": 1934, "event": "Beretta M1934 in .380 ACP adopted by the Italian military" },
+    { "year": 1935, "event": "Walther PPK becomes standard for European plainclothes police and intelligence services" },
+    { "year": 1968, "event": "SAAMI standardizes .380 ACP specifications" },
+    { "year": 1983, "event": "Beretta 84 Cheetah gains popularity as a .380 ACP duty pistol for European agencies" },
+    { "year": 2003, "event": "Kel-Tec P-3AT popularizes the micro-compact .380 ACP pistol category" },
+    { "year": 2008, "event": "Ruger LCP launched, igniting the modern concealed carry .380 ACP boom" },
+    { "year": 2014, "event": "Glock 42 introduced as Glock's first .380 ACP, validating the pocket pistol market" },
+    { "year": 2020, "event": "Ruger LCP MAX introduced with increased capacity, continuing .380 ACP CCW dominance" }
+  ],
+
   "loads": [
     {
       "name": "Remington UMC 95 gr FMJ",
@@ -59,6 +72,9 @@
       "muzzle_velocity_fps": 1000,
       "muzzle_energy_ft_lbs": 200,
       "barrel_length_in": 3.75,
+      "gel_penetration_in": 10.5,
+      "expansion_diameter_in": 0.50,
+      "barrier_blind": false,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 1000, "energy_ft_lbs": 200, "drop_in": 0.0 },
         { "distance_yd": 25, "velocity_fps": 955, "energy_ft_lbs": 182, "drop_in": -0.3 },

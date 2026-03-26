@@ -36,6 +36,8 @@
   "cost_per_round_usd": [3.00, 7.00],
   "common_firearms": ["Barrett MRAD", "Accuracy International AX", "Cadex CDX-40 Shadow", "Sako TRG M10"],
 
+  "parent_cartridge": "338-lapua-magnum",
+
   "loads": [
     {
       "name": "Berger 215 gr Hybrid Target",
@@ -69,5 +71,11 @@
         { "distance_yd": 500, "velocity_fps": 2365, "energy_ft_lbs": 2855, "drop_in": -37.6 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Elk", "range": "Under 600 yd", "notes": "200-230gr premium bonded or hybrid target/hunting bullets" },
+    { "game": "Moose", "range": "Under 500 yd", "notes": "215-230gr premium bonded bullets for deep penetration" },
+    { "game": "Mule Deer", "range": "Under 600 yd", "notes": "200-215gr controlled expansion bullets" },
+    { "game": "African Plains Game", "range": "Under 400 yd", "notes": "215-230gr premium bonded bullets" }
   ]
 }

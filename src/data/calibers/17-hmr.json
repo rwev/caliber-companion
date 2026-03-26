@@ -36,6 +36,8 @@
   "cost_per_round_usd": [0.20, 0.45],
   "common_firearms": ["Savage 93R17", "Ruger 77/17", "CZ 455", "Marlin 917", "Henry Varmint Express"],
 
+  "parent_cartridge": "22-wmr",
+
   "loads": [
     {
       "name": "Hornady V-Max 17 gr",
@@ -69,5 +71,10 @@
         { "distance_yd": 500, "velocity_fps": 886, "energy_ft_lbs": 30, "drop_in": -164.5 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Squirrels", "range": "Under 150 yd", "notes": "17gr V-Max or similar polymer tip bullets for clean kills" },
+    { "game": "Prairie Dogs", "range": "Under 200 yd", "notes": "17gr ballistic tip bullets; excellent accuracy for small targets" },
+    { "game": "Rabbits", "range": "Under 150 yd", "notes": "17-20gr hollow point or polymer tip bullets" }
   ]
 }

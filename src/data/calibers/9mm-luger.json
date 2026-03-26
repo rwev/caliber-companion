@@ -1,41 +1,48 @@
 {
   "name": "9mm Luger",
-  "designation": "9×19mm Parabellum",
-  "aliases": ["9mm Parabellum", "9mm NATO", "9×19mm"],
+  "designation": "9\u00d719mm Parabellum",
+  "aliases": ["9mm Parabellum", "9mm NATO", "9\u00d719mm"],
   "category": "handgun",
   "slug": "9mm-luger",
-
   "dimensions": {
     "bullet_diameter_in": 0.355,
-    "neck_diameter_in": 0.380,
+    "neck_diameter_in": 0.38,
     "case_length_in": 0.754,
     "overall_length_in": 1.169,
     "rim_diameter_in": 0.392,
     "case_type": "rimless, tapered"
   },
-
   "typical_velocity_fps": [1050, 1400],
   "typical_energy_ft_lbs": [300, 500],
   "typical_bullet_weight_gr": [115, 147],
   "effective_range_yd": 55,
   "max_range_yd": 2300,
-
   "recoil": {
     "free_recoil_ft_lbs": 5.0,
     "reference_firearm": "Glock 17 (4.49\" barrel, 25 oz)",
     "subjective": "low"
   },
-
   "year_introduced": 1902,
   "country_of_origin": "Germany",
   "military_usage": ["NATO standard sidearm cartridge", "U.S. Military (M17/M18)", "Most European militaries"],
   "le_usage": ["FBI", "Most U.S. police departments", "Europol agencies"],
   "primary_use_cases": ["self-defense", "law enforcement", "military sidearm", "target shooting", "competition"],
-
   "popularity_tier": "ubiquitous",
   "cost_per_round_usd": [0.18, 0.75],
   "common_firearms": ["Glock 17/19", "SIG Sauer P320/M17", "Smith & Wesson M&P 9", "Beretta 92FS", "CZ 75", "Springfield Hellcat"],
-
+  "adoption_timeline": [
+    { "year": 1902, "event": "Designed by Georg Luger for the German Navy" },
+    { "year": 1904, "event": "Adopted by the Imperial German Navy as the Pistole 04" },
+    { "year": 1908, "event": "Adopted by the German Army with the Luger P08 pistol" },
+    { "year": 1935, "event": "Widespread European military adoption including Belgium and France" },
+    { "year": 1955, "event": "Standardized as the NATO pistol cartridge (STANAG 4090)" },
+    { "year": 1974, "event": "CIP international standardization finalized" },
+    { "year": 1985, "event": "U.S. military adopts the Beretta M9 in 9mm, replacing .45 ACP" },
+    { "year": 2013, "event": "FBI conducts extensive ballistic testing favoring modern 9mm JHP over .40 S&W" },
+    { "year": 2014, "event": "FBI officially returns to 9mm as its standard duty cartridge" },
+    { "year": 2017, "event": "U.S. Army adopts the SIG Sauer M17/M18 (Modular Handgun System) in 9mm" }
+  ],
+  "derived_cartridges": ["30-super-carry"],
   "loads": [
     {
       "name": "Federal American Eagle 115 gr FMJ",
@@ -44,6 +51,8 @@
       "muzzle_velocity_fps": 1180,
       "muzzle_energy_ft_lbs": 356,
       "barrel_length_in": 4.0,
+      "bc_g1": 0.129,
+      "sectional_density": 0.130,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 1180, "energy_ft_lbs": 356, "drop_in": 0.0 },
         { "distance_yd": 25, "velocity_fps": 1130, "energy_ft_lbs": 326, "drop_in": -0.2 },
@@ -59,6 +68,11 @@
       "muzzle_velocity_fps": 1000,
       "muzzle_energy_ft_lbs": 326,
       "barrel_length_in": 4.0,
+      "bc_g1": 0.167,
+      "sectional_density": 0.167,
+      "gel_penetration_in": 14.2,
+      "expansion_diameter_in": 0.61,
+      "barrier_blind": true,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 1000, "energy_ft_lbs": 326, "drop_in": 0.0 },
         { "distance_yd": 25, "velocity_fps": 970, "energy_ft_lbs": 307, "drop_in": -0.3 },

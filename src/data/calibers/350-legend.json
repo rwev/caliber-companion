@@ -69,5 +69,10 @@
         { "distance_yd": 500, "velocity_fps": 1127, "energy_ft_lbs": 508, "drop_in": -148.0 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 200 yd", "notes": "150-180gr controlled expansion bullets; designed for straight-wall cartridge states" },
+    { "game": "Feral Hogs", "range": "Under 150 yd", "notes": "150-180gr soft point or bonded bullets" },
+    { "game": "Black Bear", "range": "Under 100 yd", "notes": "180gr bonded bullets; adequate at close range with proper bullet selection" }
   ]
 }

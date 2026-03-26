@@ -2,6 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SpecTable from '../../components/SpecTable.astro';
 import UsageBadges from '../../components/UsageBadges.astro';
+import AdoptionTimeline from '../../components/AdoptionTimeline.astro';
+import CartridgeLineage from '../../components/CartridgeLineage.astro';
 import BallisticsChart from '../../components/islands/BallisticsChart';
 import { getCollection, render } from 'astro:content';
 import { fmtRange, fmtNumber, fmtCurrency, titleCase } from '../../lib/format';
@@ -22,6 +24,18 @@ const proseEntries = await getCollection('caliberProse');
 const prose = proseEntries.find(p => p.data.slug === d.slug);
 const rendered = prose ? await render(prose) : null;
 const Content = rendered?.Content;
+
+// Resolve cartridge lineage
+const allCalibers = await getCollection('caliberData');
+const caliberBySlug = new Map(allCalibers.map(c => [c.data.slug, c.data]));
+
+const parentRef = d.parent_cartridge
+  ? { slug: d.parent_cartridge, name: caliberBySlug.get(d.parent_cartridge)?.name ?? d.parent_cartridge }
+  : undefined;
+
+const childRefs = (d.derived_cartridges ?? [])
+  .map(slug => ({ slug, name: caliberBySlug.get(slug)?.name ?? slug }))
+  .sort((a, b) => a.name.localeCompare(b.name));
 
 const dimensionRows = [
   { label: 'Bullet Diameter', value: `${d.dimensions.bullet_diameter_in}" (${(d.dimensions.bullet_diameter_in * 25.4).toFixed(2)}mm)` },
@@ -108,6 +122,41 @@ const marketRows = [
                 </span>
               </div>
 
+              {(load.bc_g1 || load.bc_g7 || load.sectional_density || load.gel_penetration_in || load.expansion_diameter_in || load.barrier_blind !== undefined) && (
+                <div class="flex flex-wrap gap-x-6 gap-y-1 px-4 py-2 bg-surface-overlay border-b border-surface-border-subtle">
+                  {load.bc_g1 && (
+                    <span class="font-mono text-sm text-text-secondary">
+                      <span class="text-text-muted">BC (G1):</span> {load.bc_g1.toFixed(3)}
+                    </span>
+                  )}
+                  {load.bc_g7 && (
+                    <span class="font-mono text-sm text-text-secondary">
+                      <span class="text-text-muted">BC (G7):</span> {load.bc_g7.toFixed(3)}
+                    </span>
+                  )}
+                  {load.sectional_density && (
+                    <span class="font-mono text-sm text-text-secondary">
+                      <span class="text-text-muted">SD:</span> {load.sectional_density.toFixed(3)}
+                    </span>
+                  )}
+                  {load.gel_penetration_in && (
+                    <span class="font-mono text-sm text-text-secondary">
+                      <span class="text-text-muted">Gel:</span> {load.gel_penetration_in}"
+                    </span>
+                  )}
+                  {load.expansion_diameter_in && (
+                    <span class="font-mono text-sm text-text-secondary">
+                      <span class="text-text-muted">Exp:</span> {load.expansion_diameter_in}"
+                    </span>
+                  )}
+                  {load.barrier_blind !== undefined && (
+                    <span class={`font-mono text-sm ${load.barrier_blind ? 'text-success' : 'text-text-muted'}`}>
+                      {load.barrier_blind ? '● Barrier Blind' : '○ Not Barrier Blind'}
+                    </span>
+                  )}
+                </div>
+              )}
+
               <div class="overflow-x-auto" tabindex="0" role="region" aria-label={`Ballistic data for ${load.name}`}>
                 <table class="w-full text-left font-mono">
                   <thead>
@@ -136,8 +185,70 @@ const marketRows = [
           ))}
         </div>
 
+        <!-- Terminal Performance -->
+        {d.loads.some(l => l.gel_penetration_in || l.expansion_diameter_in || l.barrier_blind !== undefined) && (
+          <div class="border border-surface-border">
+            <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
+              <h3 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">Terminal Performance</h3>
+            </div>
+            <div class="overflow-x-auto" tabindex="0" role="region" aria-label="Terminal ballistics data">
+              <table class="w-full text-left font-mono">
+                <thead>
+                  <tr class="border-b border-surface-border-subtle bg-surface-overlay text-text-muted">
+                    <th scope="col" class="px-4 py-2 font-medium tracking-wider uppercase text-sm">Load</th>
+                    <th scope="col" class="px-4 py-2 font-medium tracking-wider uppercase text-sm text-right">Penetration</th>
+                    <th scope="col" class="px-4 py-2 font-medium tracking-wider uppercase text-sm text-right">Expansion</th>
+                    <th scope="col" class="px-4 py-2 font-medium tracking-wider uppercase text-sm text-center">Barrier</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {d.loads.filter(l => l.gel_penetration_in || l.expansion_diameter_in || l.barrier_blind !== undefined).map((load, i) => (
+                    <tr class={`border-b border-surface-border-subtle ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
+                      <td class="px-4 py-2 text-base text-text-secondary">{load.name}</td>
+                      <td class="px-4 py-2 text-right text-base text-text-primary">
+                        {load.gel_penetration_in ? `${load.gel_penetration_in}"` : '—'}
+                      </td>
+                      <td class="px-4 py-2 text-right text-base text-text-primary">
+                        {load.expansion_diameter_in ? `${load.expansion_diameter_in}"` : '—'}
+                      </td>
+                      <td class={`px-4 py-2 text-center text-base ${load.barrier_blind === true ? 'text-success' : load.barrier_blind === false ? 'text-danger' : 'text-text-muted'}`}>
+                        {load.barrier_blind === true ? 'Yes' : load.barrier_blind === false ? 'No' : '—'}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div class="px-4 py-2 bg-surface-overlay border-t border-surface-border-subtle">
+              <p class="font-mono text-xs text-text-muted">
+                FBI protocol: 10-caliber ordnance gel, penetration measured in inches. "Barrier Blind" = consistent performance through heavy clothing, auto glass, plywood, and wallboard.
+              </p>
+            </div>
+          </div>
+        )}
+
         <!-- Ballistics Chart -->
         <BallisticsChart client:visible loads={d.loads} />
+
+        <!-- Hunting Applications -->
+        {d.recommended_game && d.recommended_game.length > 0 && (
+          <div class="border border-surface-border">
+            <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
+              <h3 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">Hunting Applications</h3>
+            </div>
+            <div class="divide-y divide-surface-border-subtle">
+              {d.recommended_game.map((rec, i) => (
+                <div class={`px-4 py-3 ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
+                  <div class="flex items-baseline justify-between gap-4">
+                    <span class="font-mono text-base font-medium text-text-primary">{rec.game}</span>
+                    <span class="font-mono text-sm text-accent flex-shrink-0">{rec.range}</span>
+                  </div>
+                  <p class="font-mono text-sm text-text-muted mt-1">{rec.notes}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
 
       <!-- Right Column: Sidebar -->
@@ -164,6 +275,18 @@ const marketRows = [
             ))}
           </ul>
         </div>
+
+        <!-- Adoption Timeline -->
+        {d.adoption_timeline && d.adoption_timeline.length > 0 && (
+          <AdoptionTimeline events={d.adoption_timeline} />
+        )}
+
+        <!-- Cartridge Lineage -->
+        <CartridgeLineage
+          currentName={d.name}
+          parent={parentRef}
+          children={childRefs}
+        />
 
         <!-- Compare Link -->
         <a

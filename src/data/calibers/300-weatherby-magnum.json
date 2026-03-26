@@ -36,6 +36,8 @@
   "cost_per_round_usd": [2.00, 5.50],
   "common_firearms": ["Weatherby Mark V", "Weatherby Vanguard", "Weatherby Backcountry 2.0", "Custom Mauser actions"],
 
+  "parent_cartridge": "375-hh-magnum",
+
   "loads": [
     {
       "name": "Weatherby Select Plus 180 gr Nosler AccuBond",
@@ -71,5 +73,12 @@
         { "distance_yd": 600, "velocity_fps": 1908, "energy_ft_lbs": 1617, "drop_in": -61.8 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Elk", "range": "Under 500 yd", "notes": "180-200gr premium bonded or partition bullets; high velocity extends effective range" },
+    { "game": "Moose", "range": "Under 400 yd", "notes": "200-220gr premium bonded bullets for deep penetration" },
+    { "game": "Mule Deer", "range": "Under 500 yd", "notes": "165-180gr controlled expansion bullets" },
+    { "game": "African Plains Game", "range": "Under 400 yd", "notes": "180-200gr premium bonded bullets" },
+    { "game": "Caribou", "range": "Under 500 yd", "notes": "180-200gr bonded or partition bullets" }
   ]
 }

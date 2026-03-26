@@ -44,6 +44,9 @@
       "muzzle_velocity_fps": 1350,
       "muzzle_energy_ft_lbs": 1315,
       "barrel_length_in": 7.5,
+      "gel_penetration_in": 15.0,
+      "expansion_diameter_in": 0.62,
+      "barrier_blind": true,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 1350, "energy_ft_lbs": 1315, "drop_in": 0.0 },
         { "distance_yd": 25, "velocity_fps": 1298, "energy_ft_lbs": 1216, "drop_in": -0.1 },
@@ -67,5 +70,11 @@
         { "distance_yd": 100, "velocity_fps": 1140, "energy_ft_lbs": 1068, "drop_in": -4.6 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 75 yd", "notes": "275-325gr JHP or hard-cast bullets; powerful with manageable recoil vs .500 S&W" },
+    { "game": "Black Bear", "range": "Under 75 yd", "notes": "325gr hard-cast or bonded bullets for deep penetration" },
+    { "game": "Feral Hogs", "range": "Under 75 yd", "notes": "275-325gr JHP or hard-cast bullets" },
+    { "game": "Elk", "range": "Under 50 yd", "notes": "325gr hard-cast bullets; marginal but capable at very close range" }
   ]
 }

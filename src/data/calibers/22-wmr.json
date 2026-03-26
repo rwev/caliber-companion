@@ -36,6 +36,9 @@
   "cost_per_round_usd": [0.15, 0.40],
   "common_firearms": ["Ruger 77/22", "Savage 93", "CZ 455/457", "Marlin 925M", "Henry Lever Action", "Kel-Tec PMR-30"],
 
+  "parent_cartridge": "22-lr",
+  "derived_cartridges": ["17-hmr"],
+
   "loads": [
     {
       "name": "CCI Maxi-Mag 40 gr JHP",
@@ -69,5 +72,10 @@
         { "distance_yd": 500, "velocity_fps": 810, "energy_ft_lbs": 58, "drop_in": -218.0 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Squirrels", "range": "Under 100 yd", "notes": "30-33gr V-Max or hollow point bullets" },
+    { "game": "Rabbits", "range": "Under 125 yd", "notes": "40gr JHP for reliable expansion at moderate range" },
+    { "game": "Coyote", "range": "Under 125 yd", "notes": "30gr polymer tip bullets; marginal but effective with precise shot placement" }
   ]
 }

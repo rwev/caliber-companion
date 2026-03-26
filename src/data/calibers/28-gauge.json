@@ -67,5 +67,10 @@
         { "distance_yd": 100, "velocity_fps": 760, "energy_ft_lbs": 421, "drop_in": -18.5 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Upland Birds", "range": "Under 30 yd", "notes": "#7.5-8 shot in 2\u00be\" shells; superb handling for quail, grouse, and woodcock" },
+    { "game": "Rabbits", "range": "Under 25 yd", "notes": "#6-7.5 shot; light and fast-handling for close cover" },
+    { "game": "Dove", "range": "Under 30 yd", "notes": "#7.5-8 shot; a favorite among experienced wingshooters" }
   ]
 }

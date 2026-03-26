@@ -67,5 +67,10 @@
         { "distance_yd": 100, "velocity_fps": 1040, "energy_ft_lbs": 1050, "drop_in": -11.0 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Upland Birds", "range": "Under 35 yd", "notes": "#6-7.5 shot in 2\u00be\" shells; the 'gentleman's gauge' for upland hunting" },
+    { "game": "Waterfowl", "range": "Under 40 yd", "notes": "Steel or bismuth #2-4 shot; effective over decoys" },
+    { "game": "Rabbits", "range": "Under 30 yd", "notes": "#6-7.5 shot; excellent balance of power and weight" }
   ]
 }

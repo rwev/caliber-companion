@@ -67,5 +67,11 @@
         { "distance_yd": 100, "velocity_fps": 1155, "energy_ft_lbs": 258, "drop_in": -7.8 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Upland Birds", "range": "Under 25 yd", "notes": "#7.5-8 shot in 2.5\" or 3\" shells; requires close flushes and precise shooting" },
+    { "game": "Squirrels", "range": "Under 25 yd", "notes": "#6 shot; ideal for tree squirrels with minimal meat damage" },
+    { "game": "Rabbits", "range": "Under 20 yd", "notes": "#6-7.5 shot; close-range only due to light shot payload" },
+    { "game": "Wild Turkey", "range": "Under 25 yd", "notes": "TSS #9 shot in 3\" shells; modern TSS loads make .410 viable for turkey" }
   ]
 }

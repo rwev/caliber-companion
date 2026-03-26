@@ -36,6 +36,21 @@
   "cost_per_round_usd": [0.05, 0.20],
   "common_firearms": ["Ruger 10/22", "Ruger Mark IV", "Smith & Wesson M&P 15-22", "CZ 457", "Browning Buck Mark", "Walther P22"],
 
+  "adoption_timeline": [
+    { "year": 1887, "event": "Introduced by J. Stevens Arms as the .22 Long Rifle cartridge" },
+    { "year": 1914, "event": "Widely adopted for military marksmanship training in World War I" },
+    { "year": 1919, "event": "First used in Olympic shooting events at the Antwerp Games" },
+    { "year": 1930, "event": "Boy Scouts of America adopt .22 LR for marksmanship merit badge programs" },
+    { "year": 1949, "event": "Remington introduces the Nylon 66, a landmark .22 LR autoloader" },
+    { "year": 1964, "event": "Ruger introduces the 10/22, which becomes the best-selling .22 LR rifle in history" },
+    { "year": 1977, "event": "SAAMI standardizes .22 LR specifications including CCI Stinger high-velocity variant" },
+    { "year": 1982, "event": "Ruger Mark series pistols become the standard for competitive .22 LR target shooting" },
+    { "year": 2004, "event": "Smith & Wesson introduces the M&P 15-22, bringing AR-style training to .22 LR" },
+    { "year": 2013, "event": "Massive civilian demand causes a nationwide .22 LR ammunition shortage" }
+  ],
+
+  "derived_cartridges": ["22-wmr"],
+
   "loads": [
     {
       "name": "CCI Standard Velocity 40 gr LRN",

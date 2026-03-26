@@ -69,5 +69,10 @@
         { "distance_yd": 500, "velocity_fps": 1807, "energy_ft_lbs": 1088, "drop_in": -72.0 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 300 yd", "notes": "150-180gr soft point or controlled expansion bullets" },
+    { "game": "Mule Deer", "range": "Under 250 yd", "notes": "165-180gr bonded or partition bullets recommended" },
+    { "game": "Black Bear", "range": "Under 200 yd", "notes": "180gr bonded or partition bullets for reliable penetration" }
   ]
 }

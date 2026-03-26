@@ -69,5 +69,11 @@
         { "distance_yd": 500, "velocity_fps": 1918, "energy_ft_lbs": 1144, "drop_in": -45.0 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Mule Deer", "range": "Under 400 yd", "notes": "130-140gr controlled expansion bullets; flat-shooting long-range cartridge" },
+    { "game": "Whitetail Deer", "range": "Under 500 yd", "notes": "120-140gr polymer tip or bonded bullets" },
+    { "game": "Pronghorn", "range": "Under 500 yd", "notes": "120-130gr ballistic tip bullets; excellent for open country" },
+    { "game": "Elk", "range": "Under 300 yd", "notes": "140gr premium bonded or partition bullets; adequate with precise placement" }
   ]
 }

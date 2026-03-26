@@ -36,6 +36,8 @@
   "cost_per_round_usd": [8.00, 18.00],
   "common_firearms": ["Weatherby Mark V Dangerous Game Rifle", "Weatherby Mark V Safari Custom"],
 
+  "parent_cartridge": "378-weatherby-magnum",
+
   "loads": [
     {
       "name": "Weatherby Select Plus 500 gr Barnes TSX",
@@ -69,5 +71,10 @@
         { "distance_yd": 500, "velocity_fps": 1609, "energy_ft_lbs": 2587, "drop_in": -68.0 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "African Dangerous Game", "range": "Under 100 yd", "notes": "500gr premium solids and soft points; most powerful commercial sporting cartridge" },
+    { "game": "Cape Buffalo", "range": "Under 100 yd", "notes": "500gr FMJ solids; extreme velocity and energy for dangerous game" },
+    { "game": "Elephant", "range": "Under 50 yd", "notes": "500gr premium monolithic solids; devastating energy delivery" }
   ]
 }

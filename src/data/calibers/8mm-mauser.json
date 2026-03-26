@@ -36,6 +36,8 @@
   "cost_per_round_usd": [0.50, 2.00],
   "common_firearms": ["Mauser K98k", "Gewehr 98", "FN Model 1924", "Yugoslav M48", "MG 42"],
 
+  "parent_cartridge": "7x57mm-mauser",
+
   "loads": [
     {
       "name": "PPU 198 gr FMJ-BT",
@@ -69,5 +71,12 @@
         { "distance_yd": 500, "velocity_fps": 1676, "energy_ft_lbs": 1223, "drop_in": -83.0 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 300 yd", "notes": "170-200gr soft point or controlled expansion bullets" },
+    { "game": "Mule Deer", "range": "Under 300 yd", "notes": "195-200gr bonded or partition bullets recommended" },
+    { "game": "Elk", "range": "Under 250 yd", "notes": "200-220gr premium bonded or partition bullets; powerful medium bore" },
+    { "game": "Black Bear", "range": "Under 250 yd", "notes": "195-220gr bonded bullets for deep penetration" },
+    { "game": "Feral Hogs", "range": "Under 250 yd", "notes": "170-200gr soft point bullets" }
   ]
 }

@@ -69,5 +69,9 @@
         { "distance_yd": 500, "velocity_fps": 1743, "energy_ft_lbs": 405, "drop_in": -76.0 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Coyote", "range": "Under 200 yd", "notes": "60gr soft point bullets; limited hunting ammunition availability" },
+    { "game": "Varmints", "range": "Under 200 yd", "notes": "60gr hollow point or soft point bullets; check ammunition availability" }
   ]
 }

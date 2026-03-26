@@ -36,6 +36,8 @@
   "cost_per_round_usd": [2.50, 5.50],
   "common_firearms": ["Weatherby Mark V", "Weatherby Vanguard", "Remington 700 (custom)", "Browning X-Bolt"],
 
+  "parent_cartridge": "375-hh-magnum",
+
   "loads": [
     {
       "name": "Weatherby Select Plus 115 gr Nosler Ballistic Tip",
@@ -69,5 +71,11 @@
         { "distance_yd": 500, "velocity_fps": 2465, "energy_ft_lbs": 1349, "drop_in": -29.2 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Mule Deer", "range": "Under 400 yd", "notes": "100-120gr controlled expansion bullets; fastest commercial .25 caliber" },
+    { "game": "Whitetail Deer", "range": "Under 450 yd", "notes": "100-115gr polymer tip bullets; flat trajectory" },
+    { "game": "Pronghorn", "range": "Under 500 yd", "notes": "100-110gr ballistic tip bullets; outstanding open-country cartridge" },
+    { "game": "Coyote", "range": "Under 400 yd", "notes": "87gr varmint bullets for rapid expansion" }
   ]
 }

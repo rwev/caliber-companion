@@ -4,38 +4,34 @@
   "aliases": [".280 Rem", "7mm Express Remington"],
   "category": "rifle",
   "slug": "280-remington",
-
   "dimensions": {
     "bullet_diameter_in": 0.284,
     "neck_diameter_in": 0.315,
-    "case_length_in": 2.540,
-    "overall_length_in": 3.330,
+    "case_length_in": 2.54,
+    "overall_length_in": 3.33,
     "rim_diameter_in": 0.473,
     "case_type": "rimless, bottleneck"
   },
-
   "typical_velocity_fps": [2700, 3100],
   "typical_energy_ft_lbs": [2500, 2900],
   "typical_bullet_weight_gr": [120, 175],
   "effective_range_yd": 700,
   "max_range_yd": 4800,
-
   "recoil": {
     "free_recoil_ft_lbs": 15.0,
     "reference_firearm": "Remington 700 (24\" barrel, 8.0 lbs)",
     "subjective": "moderate"
   },
-
   "year_introduced": 1957,
   "country_of_origin": "USA",
   "military_usage": ["No significant military adoption"],
   "le_usage": ["No significant law enforcement adoption"],
   "primary_use_cases": ["deer hunting", "elk hunting", "long-range hunting", "target shooting", "mountain hunting"],
-
   "popularity_tier": "common",
-  "cost_per_round_usd": [1.20, 3.00],
+  "cost_per_round_usd": [1.2, 3.0],
   "common_firearms": ["Remington 700", "Winchester Model 70", "Browning X-Bolt", "Kimber Mountain Ascent", "Nosler M48"],
-
+  "parent_cartridge": "30-06-springfield",
+  "derived_cartridges": ["280-ackley-improved", "7mm-remington-magnum"],
   "loads": [
     {
       "name": "Remington Core-Lokt 140 gr PSP",
@@ -44,6 +40,8 @@
       "muzzle_velocity_fps": 3000,
       "muzzle_energy_ft_lbs": 2797,
       "barrel_length_in": 24.0,
+      "bc_g1": 0.390,
+      "sectional_density": 0.248,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 3000, "energy_ft_lbs": 2797, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 2758, "energy_ft_lbs": 2363, "drop_in": -1.7 },
@@ -60,6 +58,9 @@
       "muzzle_velocity_fps": 2800,
       "muzzle_energy_ft_lbs": 2785,
       "barrel_length_in": 24.0,
+      "bc_g1": 0.531,
+      "bc_g7": 0.265,
+      "sectional_density": 0.283,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 2800, "energy_ft_lbs": 2785, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 2625, "energy_ft_lbs": 2448, "drop_in": -2.0 },
@@ -69,5 +70,12 @@
         { "distance_yd": 500, "velocity_fps": 1989, "energy_ft_lbs": 1405, "drop_in": -60.5 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 400 yd", "notes": "140-160gr controlled expansion bullets" },
+    { "game": "Mule Deer", "range": "Under 400 yd", "notes": "140-160gr bonded or partition bullets recommended" },
+    { "game": "Elk", "range": "Under 350 yd", "notes": "150-160gr premium bonded or partition bullets; excellent elk medicine" },
+    { "game": "Black Bear", "range": "Under 300 yd", "notes": "150-160gr bonded bullets for reliable penetration" },
+    { "game": "Pronghorn", "range": "Under 400 yd", "notes": "140gr polymer tip bullets; flat trajectory" }
   ]
 }

@@ -71,5 +71,10 @@
         { "distance_yd": 600, "velocity_fps": 2181, "energy_ft_lbs": 1370, "drop_in": -62.2 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 400 yd", "notes": "120-140gr controlled expansion bullets; outstanding accuracy" },
+    { "game": "Mule Deer", "range": "Under 350 yd", "notes": "130-140gr bonded bullets recommended" },
+    { "game": "Pronghorn", "range": "Under 400 yd", "notes": "120-130gr polymer tip bullets; flat trajectory" }
   ]
 }

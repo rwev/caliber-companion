@@ -4,38 +4,44 @@
   "aliases": [".243 Win", "6mm-08"],
   "category": "rifle",
   "slug": "243-winchester",
-
   "dimensions": {
     "bullet_diameter_in": 0.243,
     "neck_diameter_in": 0.276,
     "case_length_in": 2.045,
-    "overall_length_in": 2.710,
+    "overall_length_in": 2.71,
     "rim_diameter_in": 0.473,
     "case_type": "rimless, bottleneck"
   },
-
   "typical_velocity_fps": [2800, 3500],
   "typical_energy_ft_lbs": [1500, 1950],
   "typical_bullet_weight_gr": [55, 105],
   "effective_range_yd": 500,
   "max_range_yd": 4300,
-
   "recoil": {
     "free_recoil_ft_lbs": 8.0,
     "reference_firearm": "Remington 700 (22\" barrel, 7.5 lbs)",
     "subjective": "low"
   },
-
   "year_introduced": 1955,
   "country_of_origin": "USA",
   "military_usage": ["No significant military adoption"],
   "le_usage": ["Used by some law enforcement sniper teams as a light-recoil precision option"],
   "primary_use_cases": ["deer hunting", "varmint hunting", "target shooting", "youth and beginner hunting", "predator hunting"],
-
   "popularity_tier": "very_common",
-  "cost_per_round_usd": [0.80, 2.50],
+  "cost_per_round_usd": [0.8, 2.5],
   "common_firearms": ["Remington 700", "Winchester Model 70", "Ruger American", "Tikka T3x", "Savage Axis"],
-
+  "adoption_timeline": [
+    { "year": 1955, "event": "Winchester introduces the .243 Winchester in the Model 70 and Model 88 rifles" },
+    { "year": 1955, "event": "Warren Page of Field & Stream champions .243 Win as a dual-purpose varmint and deer cartridge" },
+    { "year": 1958, "event": "Remington 700 series adds .243 Win, broadening its availability" },
+    { "year": 1962, "event": "SAAMI standardizes .243 Winchester specifications" },
+    { "year": 1975, "event": "Becomes the most popular cartridge for introducing youth and smaller-framed hunters to deer hunting" },
+    { "year": 1980, "event": "Widely adopted by predator hunters for coyote and varmint control" },
+    { "year": 1998, "event": "Savage introduces the Axis in .243 Win as an affordable entry-level deer rifle" },
+    { "year": 2005, "event": "Hornady introduces SST and Interbond bullets in .243 Win for improved terminal performance" },
+    { "year": 2015, "event": "Remains the top recommendation by state wildlife agencies for youth deer hunting programs" }
+  ],
+  "parent_cartridge": "308-winchester",
   "loads": [
     {
       "name": "Hornady Superformance 58 gr V-MAX",
@@ -44,6 +50,8 @@
       "muzzle_velocity_fps": 3750,
       "muzzle_energy_ft_lbs": 1811,
       "barrel_length_in": 24.0,
+      "bc_g1": 0.250,
+      "sectional_density": 0.140,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 3750, "energy_ft_lbs": 1811, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 3397, "energy_ft_lbs": 1485, "drop_in": -0.9 },
@@ -60,6 +68,8 @@
       "muzzle_velocity_fps": 2960,
       "muzzle_energy_ft_lbs": 1945,
       "barrel_length_in": 24.0,
+      "bc_g1": 0.384,
+      "sectional_density": 0.242,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 2960, "energy_ft_lbs": 1945, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 2728, "energy_ft_lbs": 1653, "drop_in": -1.8 },
@@ -69,5 +79,11 @@
         { "distance_yd": 500, "velocity_fps": 1911, "energy_ft_lbs": 811, "drop_in": -59.5 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 300 yd", "notes": "95-100gr Nosler Partition or Hornady SST for controlled expansion" },
+    { "game": "Pronghorn", "range": "Under 350 yd", "notes": "85-100gr ballistic tip bullets; flat trajectory suits open country" },
+    { "game": "Coyote", "range": "Under 400 yd", "notes": "55-80gr V-Max or polymer tip bullets for varmint loads" },
+    { "game": "Varmints", "range": "Under 400 yd", "notes": "55-70gr hollow point or ballistic tip bullets" }
   ]
 }

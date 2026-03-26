@@ -36,6 +36,8 @@
   "cost_per_round_usd": [0.40, 1.20],
   "common_firearms": ["M1 Carbine", "M2 Carbine", "Ruger Blackhawk revolver", "Auto-Ordnance M1 Carbine", "Inland M1 Carbine"],
 
+  "derived_cartridges": ["68-spc"],
+
   "loads": [
     {
       "name": "Federal American Eagle 110 gr FMJ",
@@ -60,6 +62,9 @@
       "muzzle_velocity_fps": 2000,
       "muzzle_energy_ft_lbs": 977,
       "barrel_length_in": 18.0,
+      "gel_penetration_in": 11.0,
+      "expansion_diameter_in": 0.45,
+      "barrier_blind": false,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 2000, "energy_ft_lbs": 977, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 1789, "energy_ft_lbs": 782, "drop_in": -5.3 },
@@ -69,5 +74,9 @@
         { "distance_yd": 500, "velocity_fps": 1152, "energy_ft_lbs": 324, "drop_in": -158.0 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Coyote", "range": "Under 100 yd", "notes": "110gr soft point or hollow point bullets; limited hunting application" },
+    { "game": "Varmints", "range": "Under 100 yd", "notes": "110gr hollow point bullets; historical cartridge with limited modern hunting use" }
   ]
 }

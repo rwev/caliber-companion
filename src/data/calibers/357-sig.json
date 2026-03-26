@@ -36,6 +36,8 @@
   "cost_per_round_usd": [0.40, 1.10],
   "common_firearms": ["SIG Sauer P229/P226", "Glock 31/32/33", "Smith & Wesson M&P .357 SIG", "Springfield XD .357 SIG"],
 
+  "parent_cartridge": "357-magnum",
+
   "loads": [
     {
       "name": "Speer Gold Dot 125 gr JHP",
@@ -44,6 +46,9 @@
       "muzzle_velocity_fps": 1375,
       "muzzle_energy_ft_lbs": 525,
       "barrel_length_in": 4.0,
+      "gel_penetration_in": 13.0,
+      "expansion_diameter_in": 0.60,
+      "barrier_blind": true,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 1375, "energy_ft_lbs": 525, "drop_in": 0.0 },
         { "distance_yd": 25, "velocity_fps": 1315, "energy_ft_lbs": 480, "drop_in": -0.1 },

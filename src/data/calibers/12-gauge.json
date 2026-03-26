@@ -36,6 +36,19 @@
   "cost_per_round_usd": [0.25, 3.00],
   "common_firearms": ["Remington 870", "Mossberg 500/590", "Benelli M4", "Beretta 1301 Tactical"],
 
+  "adoption_timeline": [
+    { "year": 1870, "event": "12 gauge standardized as the dominant bore size for sporting shotguns" },
+    { "year": 1897, "event": "Winchester Model 1897 pump-action shotgun introduced, later used in combat" },
+    { "year": 1918, "event": "U.S. Army deploys trench shotguns in World War I with devastating effect" },
+    { "year": 1935, "event": "FBI formally adopts 12-gauge shotguns for law enforcement operations" },
+    { "year": 1950, "event": "Remington introduces the Model 870, which becomes the best-selling shotgun in history" },
+    { "year": 1961, "event": "Mossberg 500 introduced, becoming a staple of military and LE shotgun programs" },
+    { "year": 1975, "event": "SAAMI standardizes 12 gauge 2¾\" and 3\" magnum shell specifications" },
+    { "year": 1986, "event": "Benelli introduces the Super Black Eagle, pioneering inertia-driven semi-auto shotguns" },
+    { "year": 1999, "event": "U.S. Marine Corps adopts the Benelli M4 (M1014) as its Joint Service Combat Shotgun" },
+    { "year": 2005, "event": "Federal introduces FliteControl wad technology, revolutionizing buckshot patterning" }
+  ],
+
   "loads": [
     {
       "name": "Federal Power-Shok 00 Buckshot (2¾\")",
@@ -67,5 +80,13 @@
         { "distance_yd": 100, "velocity_fps": 1180, "energy_ft_lbs": 1352, "drop_in": -8.7 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 100 yd", "notes": "1 oz rifled slugs or saboted slugs; extremely effective in dense cover and slug-only zones" },
+    { "game": "Waterfowl", "range": "Under 50 yd", "notes": "Steel or bismuth shot #2-BB in 3\" shells; non-toxic shot required for waterfowl" },
+    { "game": "Upland Birds", "range": "Under 40 yd", "notes": "#6-7.5 shot in 2\u00be\" shells; the standard upland gauge" },
+    { "game": "Wild Turkey", "range": "Under 40 yd", "notes": "#4-6 shot in 3\" or 3.5\" shells; TSS loads extend range to 50+ yd" },
+    { "game": "Feral Hogs", "range": "Under 50 yd", "notes": "Brenneke or hard-cast slugs; buckshot effective under 25 yd" },
+    { "game": "Rabbits", "range": "Under 30 yd", "notes": "#6-7.5 shot; light loads in 2\u00be\" shells" }
   ]
 }

@@ -1,10 +1,9 @@
 {
-  "name": "7.62×39mm",
-  "designation": "7.62×39mm",
-  "aliases": ["7.62 Soviet", "7.62×39", "M43"],
+  "name": "7.62\u00d739mm",
+  "designation": "7.62\u00d739mm",
+  "aliases": ["7.62 Soviet", "7.62\u00d739", "M43"],
   "category": "rifle",
   "slug": "762x39mm",
-
   "dimensions": {
     "bullet_diameter_in": 0.312,
     "neck_diameter_in": 0.339,
@@ -13,29 +12,37 @@
     "rim_diameter_in": 0.447,
     "case_type": "rimless, bottleneck"
   },
-
   "typical_velocity_fps": [2100, 2400],
   "typical_energy_ft_lbs": [1450, 1550],
   "typical_bullet_weight_gr": [120, 154],
   "effective_range_yd": 400,
   "max_range_yd": 2500,
-
   "recoil": {
     "free_recoil_ft_lbs": 8.0,
     "reference_firearm": "AKM (16.3\" barrel, 7.7 lbs)",
     "subjective": "moderate"
   },
-
   "year_introduced": 1944,
   "country_of_origin": "Soviet Union",
-  "military_usage": ["Soviet/Russian standard intermediate cartridge (1949–1974)", "Warsaw Pact standard rifle cartridge", "Widely used by militaries and insurgent forces globally", "Chinese PLA (Type 56 rifle)"],
+  "military_usage": ["Soviet/Russian standard intermediate cartridge (1949\u20131974)", "Warsaw Pact standard rifle cartridge", "Widely used by militaries and insurgent forces globally", "Chinese PLA (Type 56 rifle)"],
   "le_usage": ["Russian police forces", "Various developing-nation police agencies"],
   "primary_use_cases": ["military service rifle", "hunting (medium game)", "home defense", "target shooting", "militia/irregular forces"],
-
   "popularity_tier": "very_common",
-  "cost_per_round_usd": [0.25, 0.80],
+  "cost_per_round_usd": [0.25, 0.8],
   "common_firearms": ["AK-47/AKM variants", "SKS", "Ruger Mini-30", "CZ Bren 2", "Zastava ZPAP M70"],
-
+  "adoption_timeline": [
+    { "year": 1944, "event": "Developed in the Soviet Union as the M43 intermediate cartridge" },
+    { "year": 1945, "event": "SKS semi-automatic carbine adopted as the first fielded platform in 7.62\u00d739mm" },
+    { "year": 1949, "event": "AK-47 officially adopted by the Soviet Army as the standard assault rifle" },
+    { "year": 1959, "event": "AKM modernized variant enters mass production, reducing manufacturing costs" },
+    { "year": 1963, "event": "China produces the Type 56 rifle and begins global export of 7.62\u00d739mm arms" },
+    { "year": 1974, "event": "Soviet military transitions to 5.45\u00d739mm with the AK-74, but 7.62\u00d739mm remains in reserve" },
+    { "year": 1990, "event": "Surplus Chinese and Eastern Bloc 7.62\u00d739mm ammunition floods the U.S. civilian market" },
+    { "year": 1992, "event": "Ruger introduces the Mini-30, bringing 7.62\u00d739mm to American sporting rifles" },
+    { "year": 2007, "event": "Zastava ZPAP M70 gains popularity as an affordable, quality AK-pattern rifle in the U.S." },
+    { "year": 2014, "event": "CIP updates international specifications for 7.62\u00d739mm" }
+  ],
+  "derived_cartridges": ["65-grendel"],
   "loads": [
     {
       "name": "Wolf Military Classic 123 gr FMJ",
@@ -44,6 +51,8 @@
       "muzzle_velocity_fps": 2396,
       "muzzle_energy_ft_lbs": 1568,
       "barrel_length_in": 16.3,
+      "bc_g1": 0.300,
+      "sectional_density": 0.181,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 2396, "energy_ft_lbs": 1568, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 2138, "energy_ft_lbs": 1249, "drop_in": -3.8 },
@@ -60,6 +69,8 @@
       "muzzle_velocity_fps": 2104,
       "muzzle_energy_ft_lbs": 1513,
       "barrel_length_in": 16.3,
+      "bc_g1": 0.310,
+      "sectional_density": 0.226,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 2104, "energy_ft_lbs": 1513, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 1880, "energy_ft_lbs": 1209, "drop_in": -4.9 },
@@ -69,5 +80,10 @@
         { "distance_yd": 500, "velocity_fps": 1184, "energy_ft_lbs": 479, "drop_in": -141.0 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 150 yd", "notes": "123-154gr soft point bullets; effective short-range deer cartridge" },
+    { "game": "Feral Hogs", "range": "Under 150 yd", "notes": "123-154gr soft point bullets; adequate with proper shot placement" },
+    { "game": "Black Bear", "range": "Under 100 yd", "notes": "154gr soft point bullets; marginal, requires precise shot placement" }
   ]
 }

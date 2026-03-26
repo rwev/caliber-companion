@@ -69,5 +69,11 @@
         { "distance_yd": 500, "velocity_fps": 1954, "energy_ft_lbs": 1043, "drop_in": -64.5 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 350 yd", "notes": "129-140gr controlled expansion bullets; legendary Scandinavian hunting cartridge" },
+    { "game": "Mule Deer", "range": "Under 300 yd", "notes": "140gr bonded or partition bullets recommended" },
+    { "game": "Elk", "range": "Under 250 yd", "notes": "140-156gr premium partition or bonded bullets; proven on Scandinavian moose" },
+    { "game": "Moose", "range": "Under 200 yd", "notes": "140-156gr Nosler Partition or Swift A-Frame; traditional Scandinavian moose cartridge" }
   ]
 }

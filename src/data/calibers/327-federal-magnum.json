@@ -59,6 +59,9 @@
       "muzzle_velocity_fps": 1380,
       "muzzle_energy_ft_lbs": 487,
       "barrel_length_in": 3.06,
+      "gel_penetration_in": 12.5,
+      "expansion_diameter_in": 0.48,
+      "barrier_blind": false,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 1380, "energy_ft_lbs": 487, "drop_in": 0.0 },
         { "distance_yd": 25, "velocity_fps": 1310, "energy_ft_lbs": 439, "drop_in": -0.2 },
@@ -67,5 +70,10 @@
         { "distance_yd": 100, "velocity_fps": 1140, "energy_ft_lbs": 332, "drop_in": -4.2 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Rabbits", "range": "Under 50 yd", "notes": "85-100gr JHP bullets; small game capable from 4\"+ barrel" },
+    { "game": "Coyote", "range": "Under 50 yd", "notes": "85-100gr JHP bullets; marginal but effective at close range" },
+    { "game": "Squirrels", "range": "Under 25 yd", "notes": "85gr JHP bullets; primarily a self-defense cartridge with limited hunting use" }
   ]
 }

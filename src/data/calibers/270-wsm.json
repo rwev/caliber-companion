@@ -71,5 +71,12 @@
         { "distance_yd": 600, "velocity_fps": 2114, "energy_ft_lbs": 1439, "drop_in": -52.4 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 450 yd", "notes": "130-150gr controlled expansion bullets; faster than .270 Win" },
+    { "game": "Mule Deer", "range": "Under 400 yd", "notes": "140-150gr bonded or partition bullets recommended" },
+    { "game": "Elk", "range": "Under 350 yd", "notes": "150gr premium bonded or partition bullets; short-action magnum performance" },
+    { "game": "Pronghorn", "range": "Under 500 yd", "notes": "130gr polymer tip bullets; flat trajectory for open terrain" },
+    { "game": "Black Bear", "range": "Under 300 yd", "notes": "150gr bonded bullets for adequate penetration" }
   ]
 }

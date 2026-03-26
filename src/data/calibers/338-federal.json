@@ -36,6 +36,8 @@
   "cost_per_round_usd": [1.50, 3.50],
   "common_firearms": ["Sako 85", "Kimber 84M", "Ruger Hawkeye", "Montana Rifle Company ASR", "Savage 16"],
 
+  "parent_cartridge": "308-winchester",
+
   "loads": [
     {
       "name": "Federal Fusion 200 gr Bonded Soft Point",
@@ -69,5 +71,12 @@
         { "distance_yd": 500, "velocity_fps": 1754, "energy_ft_lbs": 1231, "drop_in": -58.5 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 300 yd", "notes": "180-200gr controlled expansion bullets; hard-hitting short-action cartridge" },
+    { "game": "Elk", "range": "Under 250 yd", "notes": "200-210gr premium bonded or partition bullets; excellent timber elk cartridge" },
+    { "game": "Black Bear", "range": "Under 250 yd", "notes": "200-210gr bonded bullets for reliable penetration" },
+    { "game": "Moose", "range": "Under 200 yd", "notes": "210gr Nosler Partition or bonded bullets; adequate at close range" },
+    { "game": "Feral Hogs", "range": "Under 250 yd", "notes": "180-200gr soft point or bonded bullets" }
   ]
 }

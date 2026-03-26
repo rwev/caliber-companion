@@ -1,41 +1,48 @@
 {
-  "name": "5.56×45mm NATO",
-  "designation": "5.56×45mm",
+  "name": "5.56\u00d745mm NATO",
+  "designation": "5.56\u00d745mm",
   "aliases": ["5.56 NATO", ".223 Remington (commercial equivalent)"],
   "category": "rifle",
   "slug": "556x45mm-nato",
-
   "dimensions": {
     "bullet_diameter_in": 0.224,
     "neck_diameter_in": 0.253,
-    "case_length_in": 1.760,
-    "overall_length_in": 2.260,
+    "case_length_in": 1.76,
+    "overall_length_in": 2.26,
     "rim_diameter_in": 0.378,
     "case_type": "rimless, bottleneck"
   },
-
   "typical_velocity_fps": [2750, 3260],
   "typical_energy_ft_lbs": [1100, 1380],
   "typical_bullet_weight_gr": [55, 77],
   "effective_range_yd": 500,
   "max_range_yd": 3600,
-
   "recoil": {
     "free_recoil_ft_lbs": 3.8,
     "reference_firearm": "M4 Carbine (14.5\" barrel, 6.4 lbs)",
     "subjective": "low"
   },
-
   "year_introduced": 1964,
   "country_of_origin": "USA",
   "military_usage": ["NATO standard rifle cartridge", "U.S. Military (M4 Carbine, M16, M249 SAW)", "Most NATO and allied armed forces"],
   "le_usage": ["FBI", "U.S. Border Patrol", "Most U.S. police patrol rifles"],
   "primary_use_cases": ["military service rifle", "law enforcement patrol rifle", "home defense", "target shooting", "varmint hunting", "competition"],
-
   "popularity_tier": "ubiquitous",
-  "cost_per_round_usd": [0.30, 1.20],
+  "cost_per_round_usd": [0.3, 1.2],
   "common_firearms": ["AR-15 variants", "M4 Carbine", "FN SCAR 16S", "Ruger Mini-14", "IWI Tavor"],
-
+  "adoption_timeline": [
+    { "year": 1957, "event": "ArmaLite and Remington develop the .223 Remington as the basis for the cartridge" },
+    { "year": 1964, "event": "U.S. Air Force adopts the M16 rifle chambered in 5.56\u00d745mm for base security" },
+    { "year": 1965, "event": "Deployed with U.S. Army forces in the Vietnam War" },
+    { "year": 1969, "event": "M16A1 becomes the standard U.S. infantry rifle, solidifying 5.56mm adoption" },
+    { "year": 1980, "event": "NATO standardizes 5.56\u00d745mm with STANAG 4172 and the SS109/M855 ball round" },
+    { "year": 1982, "event": "M16A2 adopted with 1:7 twist barrel optimized for the heavier 62 gr NATO round" },
+    { "year": 1994, "event": "M4 Carbine adopted by U.S. military as the standard-issue carbine" },
+    { "year": 2003, "event": "Mk 262 Mod 1 77 gr OTM adopted by USSOCOM for improved range and accuracy" },
+    { "year": 2010, "event": "M855A1 Enhanced Performance Round adopted by the U.S. Army" },
+    { "year": 2015, "event": "M855A1 fielded across all U.S. Army combat units as the standard ball round" }
+  ],
+  "parent_cartridge": "223-remington",
   "loads": [
     {
       "name": "Federal XM193 55 gr FMJ",
@@ -44,6 +51,8 @@
       "muzzle_velocity_fps": 3165,
       "muzzle_energy_ft_lbs": 1225,
       "barrel_length_in": 20.0,
+      "bc_g1": 0.243,
+      "sectional_density": 0.157,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 3165, "energy_ft_lbs": 1225, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 2854, "energy_ft_lbs": 996, "drop_in": -2.0 },
@@ -60,6 +69,9 @@
       "muzzle_velocity_fps": 2720,
       "muzzle_energy_ft_lbs": 1265,
       "barrel_length_in": 20.0,
+      "bc_g1": 0.372,
+      "bc_g7": 0.190,
+      "sectional_density": 0.219,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 2720, "energy_ft_lbs": 1265, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 2511, "energy_ft_lbs": 1079, "drop_in": -2.6 },
@@ -69,5 +81,10 @@
         { "distance_yd": 500, "velocity_fps": 1767, "energy_ft_lbs": 534, "drop_in": -75.6 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Coyote", "range": "Under 300 yd", "notes": "50-55gr polymer tip or hollow point bullets; identical to .223 Rem for hunting" },
+    { "game": "Prairie Dogs", "range": "Under 350 yd", "notes": "40-55gr varmint bullets for explosive fragmentation" },
+    { "game": "Varmints", "range": "Under 300 yd", "notes": "40-55gr hollow point or polymer tip bullets" }
   ]
 }

@@ -4,38 +4,32 @@
   "aliases": [".22-250 Rem", ".22-250"],
   "category": "rifle",
   "slug": "22-250-remington",
-
   "dimensions": {
     "bullet_diameter_in": 0.224,
     "neck_diameter_in": 0.254,
     "case_length_in": 1.912,
-    "overall_length_in": 2.350,
+    "overall_length_in": 2.35,
     "rim_diameter_in": 0.473,
     "case_type": "rimless, bottleneck"
   },
-
   "typical_velocity_fps": [3500, 4200],
   "typical_energy_ft_lbs": [1200, 1650],
   "typical_bullet_weight_gr": [40, 64],
   "effective_range_yd": 500,
   "max_range_yd": 4000,
-
   "recoil": {
     "free_recoil_ft_lbs": 5.0,
     "reference_firearm": "Remington 700 Varmint SF (26\" barrel, 8.5 lbs)",
     "subjective": "low"
   },
-
   "year_introduced": 1965,
   "country_of_origin": "USA",
   "military_usage": ["No significant military adoption"],
   "le_usage": ["No significant law enforcement adoption"],
   "primary_use_cases": ["varmint hunting", "predator hunting", "prairie dog shooting", "target shooting", "benchrest competition"],
-
   "popularity_tier": "common",
-  "cost_per_round_usd": [0.80, 2.50],
+  "cost_per_round_usd": [0.8, 2.5],
   "common_firearms": ["Remington 700 Varmint", "Savage 12 FV", "Browning X-Bolt Varmint", "Tikka T3x Varmint", "Ruger M77 Hawkeye Varmint"],
-
   "loads": [
     {
       "name": "Hornady Superformance Varmint 50 gr V-MAX",
@@ -44,6 +38,8 @@
       "muzzle_velocity_fps": 4000,
       "muzzle_energy_ft_lbs": 1776,
       "barrel_length_in": 24.0,
+      "bc_g1": 0.242,
+      "sectional_density": 0.142,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 4000, "energy_ft_lbs": 1776, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 3597, "energy_ft_lbs": 1437, "drop_in": -0.7 },
@@ -60,6 +56,8 @@
       "muzzle_velocity_fps": 3680,
       "muzzle_energy_ft_lbs": 1654,
       "barrel_length_in": 24.0,
+      "bc_g1": 0.276,
+      "sectional_density": 0.157,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 3680, "energy_ft_lbs": 1654, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 3354, "energy_ft_lbs": 1374, "drop_in": -0.9 },
@@ -69,5 +67,10 @@
         { "distance_yd": 500, "velocity_fps": 2254, "energy_ft_lbs": 621, "drop_in": -38.5 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Coyote", "range": "Under 400 yd", "notes": "50-55gr ballistic tip or V-Max bullets for rapid expansion" },
+    { "game": "Prairie Dogs", "range": "Under 500 yd", "notes": "40-50gr polymer tip bullets; exceptional flat trajectory" },
+    { "game": "Groundhog", "range": "Under 400 yd", "notes": "50-55gr hollow point or polymer tip bullets" }
   ]
 }

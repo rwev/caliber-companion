@@ -36,6 +36,8 @@
   "cost_per_round_usd": [3.50, 7.00],
   "common_firearms": ["Weatherby Mark V", "Weatherby Mark V Accumark", "Weatherby Vanguard"],
 
+  "parent_cartridge": "338-winchester-magnum",
+
   "loads": [
     {
       "name": "Weatherby Select Plus 225 gr Barnes TTSX",
@@ -69,5 +71,11 @@
         { "distance_yd": 500, "velocity_fps": 1955, "energy_ft_lbs": 2123, "drop_in": -51.5 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Elk", "range": "Under 500 yd", "notes": "225-250gr premium bonded or partition bullets; hot-rod .338" },
+    { "game": "Moose", "range": "Under 400 yd", "notes": "250gr Nosler Partition or Swift A-Frame for deep penetration" },
+    { "game": "Grizzly/Brown Bear", "range": "Under 250 yd", "notes": "250gr premium bonded bullets; high velocity extends killing authority" },
+    { "game": "African Plains Game", "range": "Under 400 yd", "notes": "225-250gr premium bonded bullets for eland and similar large game" }
   ]
 }

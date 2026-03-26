@@ -36,6 +36,8 @@
   "cost_per_round_usd": [4.00, 10.00],
   "common_firearms": ["Winchester Model 70 Safari Express", "Ruger RSM", "CZ 550 Safari Magnum", "Remington 700 Safari"],
 
+  "parent_cartridge": "375-hh-magnum",
+
   "loads": [
     {
       "name": "Hornady Dangerous Game 500 gr DGS",
@@ -69,5 +71,11 @@
         { "distance_yd": 500, "velocity_fps": 1203, "energy_ft_lbs": 1607, "drop_in": -126.0 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "African Dangerous Game", "range": "Under 75 yd", "notes": "500gr premium solids and soft points; classic African stopping rifle cartridge" },
+    { "game": "Cape Buffalo", "range": "Under 75 yd", "notes": "500gr FMJ solids for deep straight-line penetration" },
+    { "game": "Elephant", "range": "Under 50 yd", "notes": "500gr premium monolithic solids; the standard for elephant" },
+    { "game": "Grizzly/Brown Bear", "range": "Under 75 yd", "notes": "500gr premium soft point bullets; extreme stopping power" }
   ]
 }

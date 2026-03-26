@@ -36,6 +36,8 @@
   "cost_per_round_usd": [5.00, 11.00],
   "common_firearms": ["Remington 700 Safari", "CZ 550 Safari Magnum", "Montana Rifle Company 1999", "Winchester Model 70 Safari Express"],
 
+  "parent_cartridge": "416-rigby",
+
   "loads": [
     {
       "name": "Federal Premium Cape-Shok 400 gr Trophy Bonded Bear Claw",
@@ -69,5 +71,11 @@
         { "distance_yd": 500, "velocity_fps": 1460, "energy_ft_lbs": 1893, "drop_in": -87.6 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "African Dangerous Game", "range": "Under 100 yd", "notes": "400gr premium solids and soft points; .416 Rigby ballistics in a standard action" },
+    { "game": "Cape Buffalo", "range": "Under 75 yd", "notes": "400gr FMJ solids for deep straight-line penetration" },
+    { "game": "Elephant", "range": "Under 50 yd", "notes": "400gr premium solids; brain shots require precise placement" },
+    { "game": "Grizzly/Brown Bear", "range": "Under 100 yd", "notes": "400gr premium soft point or bonded bullets" }
   ]
 }

@@ -75,5 +75,9 @@
         { "distance_yd": 1000, "velocity_fps": 2242, "energy_ft_lbs": 3340, "drop_in": -161.0 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Elk", "range": "Under 500 yd", "notes": "305-419gr controlled expansion bullets; primarily an extreme long-range target cartridge" },
+    { "game": "Moose", "range": "Under 400 yd", "notes": "305-419gr premium bonded bullets; significant overkill but effective" }
   ]
 }

@@ -36,6 +36,8 @@
   "cost_per_round_usd": [3.50, 7.00],
   "common_firearms": ["Barrett MRAD", "Accuracy International AX", "Sako TRG M10", "Cadex Defence CDX-40 Shadow"],
 
+  "parent_cartridge": "338-lapua-magnum",
+
   "loads": [
     {
       "name": "Hornady 300 gr A-TIP Match",
@@ -75,5 +77,10 @@
         { "distance_yd": 1000, "velocity_fps": 1884, "energy_ft_lbs": 1971, "drop_in": -192.5 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Elk", "range": "Under 600 yd", "notes": "250-300gr premium bonded bullets; military long-range cartridge with hunting capability" },
+    { "game": "Moose", "range": "Under 500 yd", "notes": "250-300gr premium bonded or partition bullets" },
+    { "game": "African Plains Game", "range": "Under 400 yd", "notes": "250-300gr premium bonded bullets for large-bodied game" }
   ]
 }

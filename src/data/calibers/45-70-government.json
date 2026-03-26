@@ -36,6 +36,8 @@
   "cost_per_round_usd": [1.00, 3.50],
   "common_firearms": ["Marlin 1895", "Henry .45-70", "Ruger No. 1", "Springfield Trapdoor", "Shiloh Sharps 1874"],
 
+  "derived_cartridges": ["450-marlin", "450-bushmaster"],
+
   "loads": [
     {
       "name": "Hornady LEVERevolution 325 gr FTX",
@@ -44,6 +46,9 @@
       "muzzle_velocity_fps": 2050,
       "muzzle_energy_ft_lbs": 3032,
       "barrel_length_in": 24.0,
+      "gel_penetration_in": 18.0,
+      "expansion_diameter_in": 0.70,
+      "barrier_blind": true,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 2050, "energy_ft_lbs": 3032, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 1831, "energy_ft_lbs": 2420, "drop_in": -3.7 },
@@ -60,6 +65,9 @@
       "muzzle_velocity_fps": 1850,
       "muzzle_energy_ft_lbs": 2281,
       "barrel_length_in": 24.0,
+      "gel_penetration_in": 17.0,
+      "expansion_diameter_in": 0.68,
+      "barrier_blind": true,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 1850, "energy_ft_lbs": 2281, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 1593, "energy_ft_lbs": 1690, "drop_in": -5.1 },
@@ -69,5 +77,13 @@
         { "distance_yd": 500, "velocity_fps": 986, "energy_ft_lbs": 648, "drop_in": -170.3 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 200 yd", "notes": "300-405gr flat nose or Hornady FTX bullets; classic big bore lever-action" },
+    { "game": "Black Bear", "range": "Under 200 yd", "notes": "300-405gr hard-cast or bonded bullets; extremely effective" },
+    { "game": "Moose", "range": "Under 150 yd", "notes": "350-405gr premium hard-cast or bonded bullets for maximum penetration" },
+    { "game": "Grizzly/Brown Bear", "range": "Under 100 yd", "notes": "400-405gr hard-cast flat nose bullets at modern pressures; proven bear stopper" },
+    { "game": "Feral Hogs", "range": "Under 200 yd", "notes": "300-350gr soft point or flat nose bullets" },
+    { "game": "Elk", "range": "Under 150 yd", "notes": "325-405gr premium hard-cast or bonded bullets; devastating at close range" }
   ]
 }

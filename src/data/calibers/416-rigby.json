@@ -36,6 +36,8 @@
   "cost_per_round_usd": [5.00, 12.00],
   "common_firearms": ["CZ 550 Safari Magnum", "Rigby Big Game Rifle", "Dakota 76 Safari", "Mauser M98 Magnum"],
 
+  "derived_cartridges": ["416-remington-magnum"],
+
   "loads": [
     {
       "name": "Hornady Dangerous Game 400 gr DGS",
@@ -69,5 +71,11 @@
         { "distance_yd": 500, "velocity_fps": 1422, "energy_ft_lbs": 1796, "drop_in": -92.0 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "African Dangerous Game", "range": "Under 100 yd", "notes": "400gr premium solids and soft points; the original dangerous game cartridge" },
+    { "game": "Cape Buffalo", "range": "Under 75 yd", "notes": "400gr FMJ solids for deep straight-line penetration" },
+    { "game": "Elephant", "range": "Under 50 yd", "notes": "400gr premium solids; brain shots require precise placement" },
+    { "game": "Grizzly/Brown Bear", "range": "Under 100 yd", "notes": "400gr premium soft point or bonded bullets" }
   ]
 }

@@ -69,5 +69,11 @@
         { "distance_yd": 500, "velocity_fps": 1607, "energy_ft_lbs": 860, "drop_in": -83.5 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 250 yd", "notes": "150-180gr soft point or controlled expansion bullets" },
+    { "game": "Mule Deer", "range": "Under 200 yd", "notes": "180gr bonded or partition bullets recommended" },
+    { "game": "Black Bear", "range": "Under 200 yd", "notes": "180gr bonded or partition bullets; historically popular Canadian bush cartridge" },
+    { "game": "Feral Hogs", "range": "Under 200 yd", "notes": "150-180gr soft point bullets" }
   ]
 }

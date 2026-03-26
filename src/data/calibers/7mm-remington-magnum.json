@@ -4,38 +4,32 @@
   "aliases": ["7mm Rem Mag", "7mm Mag"],
   "category": "magnum_rifle",
   "slug": "7mm-remington-magnum",
-
   "dimensions": {
     "bullet_diameter_in": 0.284,
     "neck_diameter_in": 0.315,
-    "case_length_in": 2.50,
+    "case_length_in": 2.5,
     "overall_length_in": 3.29,
     "rim_diameter_in": 0.532,
     "case_type": "belted, bottleneck"
   },
-
   "typical_velocity_fps": [2800, 3200],
   "typical_energy_ft_lbs": [2900, 3500],
   "typical_bullet_weight_gr": [120, 175],
   "effective_range_yd": 1000,
   "max_range_yd": 5200,
-
   "recoil": {
     "free_recoil_ft_lbs": 20.0,
     "reference_firearm": "Remington 700 (24\" barrel, 8.5 lbs)",
     "subjective": "heavy"
   },
-
   "year_introduced": 1962,
   "country_of_origin": "USA",
   "military_usage": ["Limited military sniper use"],
   "le_usage": ["Occasional law enforcement precision rifle use"],
   "primary_use_cases": ["long-range hunting", "elk hunting", "mule deer hunting", "target shooting", "long-range competition"],
-
   "popularity_tier": "very_common",
-  "cost_per_round_usd": [1.25, 3.50],
+  "cost_per_round_usd": [1.25, 3.5],
   "common_firearms": ["Remington 700", "Browning X-Bolt", "Winchester Model 70", "Weatherby Vanguard", "Tikka T3x", "Ruger Hawkeye"],
-
   "loads": [
     {
       "name": "Federal Trophy Bonded Tip 160 gr",
@@ -44,6 +38,9 @@
       "muzzle_velocity_fps": 2940,
       "muzzle_energy_ft_lbs": 3071,
       "barrel_length_in": 24.0,
+      "bc_g1": 0.480,
+      "bc_g7": 0.240,
+      "sectional_density": 0.283,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 2940, "energy_ft_lbs": 3071, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 2756, "energy_ft_lbs": 2697, "drop_in": -1.3 },
@@ -61,6 +58,9 @@
       "muzzle_velocity_fps": 2940,
       "muzzle_energy_ft_lbs": 3110,
       "barrel_length_in": 24.0,
+      "bc_g1": 0.631,
+      "bc_g7": 0.315,
+      "sectional_density": 0.287,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 2940, "energy_ft_lbs": 3110, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 2770, "energy_ft_lbs": 2760, "drop_in": -1.3 },
@@ -71,5 +71,13 @@
         { "distance_yd": 600, "velocity_fps": 2003, "energy_ft_lbs": 1443, "drop_in": -59.5 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Elk", "range": "Under 500 yd", "notes": "160-175gr premium bonded or partition bullets; one of the finest elk cartridges" },
+    { "game": "Mule Deer", "range": "Under 500 yd", "notes": "150-160gr controlled expansion bullets" },
+    { "game": "Whitetail Deer", "range": "Under 500 yd", "notes": "140-160gr controlled expansion bullets" },
+    { "game": "Mountain Goat", "range": "Under 400 yd", "notes": "160-175gr premium bonded bullets; flat trajectory for mountain hunting" },
+    { "game": "Caribou", "range": "Under 400 yd", "notes": "150-175gr bonded or partition bullets" },
+    { "game": "African Plains Game", "range": "Under 300 yd", "notes": "160-175gr premium bonded bullets for medium to large plains game" }
   ]
 }

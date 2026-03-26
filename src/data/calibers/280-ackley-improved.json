@@ -4,38 +4,33 @@
   "aliases": [".280 AI"],
   "category": "rifle",
   "slug": "280-ackley-improved",
-
   "dimensions": {
     "bullet_diameter_in": 0.284,
     "neck_diameter_in": 0.315,
-    "case_length_in": 2.540,
-    "overall_length_in": 3.330,
+    "case_length_in": 2.54,
+    "overall_length_in": 3.33,
     "rim_diameter_in": 0.473,
     "case_type": "rimless, bottleneck (40-degree shoulder)"
   },
-
   "typical_velocity_fps": [2800, 3200],
   "typical_energy_ft_lbs": [2600, 3100],
   "typical_bullet_weight_gr": [120, 175],
   "effective_range_yd": 800,
   "max_range_yd": 4900,
-
   "recoil": {
     "free_recoil_ft_lbs": 16.0,
     "reference_firearm": "Nosler M48 (24\" barrel, 8.0 lbs)",
     "subjective": "moderate"
   },
-
   "year_introduced": 1957,
   "country_of_origin": "USA",
   "military_usage": ["No significant military adoption"],
   "le_usage": ["No significant law enforcement adoption"],
   "primary_use_cases": ["elk hunting", "long-range hunting", "mountain hunting", "deer hunting", "handloading"],
-
   "popularity_tier": "common",
-  "cost_per_round_usd": [1.50, 3.50],
+  "cost_per_round_usd": [1.5, 3.5],
   "common_firearms": ["Nosler M48", "Kimber Mountain Ascent", "Browning X-Bolt", "Cooper Model 52", "Christensen Arms Ridgeline"],
-
+  "parent_cartridge": "280-remington",
   "loads": [
     {
       "name": "Nosler Trophy Grade 150 gr AccuBond",
@@ -44,6 +39,9 @@
       "muzzle_velocity_fps": 3000,
       "muzzle_energy_ft_lbs": 2997,
       "barrel_length_in": 24.0,
+      "bc_g1": 0.493,
+      "bc_g7": 0.246,
+      "sectional_density": 0.266,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 3000, "energy_ft_lbs": 2997, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 2808, "energy_ft_lbs": 2626, "drop_in": -1.6 },
@@ -60,6 +58,9 @@
       "muzzle_velocity_fps": 2850,
       "muzzle_energy_ft_lbs": 2922,
       "barrel_length_in": 24.0,
+      "bc_g1": 0.631,
+      "bc_g7": 0.315,
+      "sectional_density": 0.287,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 2850, "energy_ft_lbs": 2922, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 2680, "energy_ft_lbs": 2583, "drop_in": -1.8 },
@@ -69,5 +70,12 @@
         { "distance_yd": 500, "velocity_fps": 2057, "energy_ft_lbs": 1522, "drop_in": -54.8 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 400 yd", "notes": "140-160gr controlled expansion bullets" },
+    { "game": "Mule Deer", "range": "Under 450 yd", "notes": "150-160gr bonded or partition bullets recommended" },
+    { "game": "Elk", "range": "Under 400 yd", "notes": "160-175gr premium bonded or partition bullets; ballistically superior to .280 Rem" },
+    { "game": "Black Bear", "range": "Under 300 yd", "notes": "160gr bonded bullets for deep penetration" },
+    { "game": "Pronghorn", "range": "Under 500 yd", "notes": "140gr polymer tip bullets; excellent long-range trajectory" }
   ]
 }

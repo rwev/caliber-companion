@@ -59,6 +59,9 @@
       "muzzle_velocity_fps": 1000,
       "muzzle_energy_ft_lbs": 133,
       "barrel_length_in": 3.8,
+      "gel_penetration_in": 8.5,
+      "expansion_diameter_in": 0.38,
+      "barrier_blind": false,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 1000, "energy_ft_lbs": 133, "drop_in": 0.0 },
         { "distance_yd": 25, "velocity_fps": 948, "energy_ft_lbs": 120, "drop_in": -0.3 },

@@ -36,6 +36,8 @@
   "cost_per_round_usd": [2.00, 5.00],
   "common_firearms": ["Nosler Model 48", "Christensen Arms Ridgeline", "Browning X-Bolt", "Fierce Firearms CT Edge", "Gunwerks Nexus"],
 
+  "derived_cartridges": ["30-nosler", "33-nosler"],
+
   "loads": [
     {
       "name": "Nosler Trophy Grade 160 gr AccuBond",
@@ -71,5 +73,12 @@
         { "distance_yd": 600, "velocity_fps": 2237, "energy_ft_lbs": 1800, "drop_in": -47.4 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Elk", "range": "Under 600 yd", "notes": "160-175gr premium bonded or AccuBond Long Range bullets" },
+    { "game": "Mule Deer", "range": "Under 600 yd", "notes": "150-162gr controlled expansion bullets" },
+    { "game": "Whitetail Deer", "range": "Under 500 yd", "notes": "150-160gr polymer tip or bonded bullets" },
+    { "game": "Mountain Goat", "range": "Under 500 yd", "notes": "160-175gr premium bonded bullets; flat trajectory for alpine hunting" },
+    { "game": "Caribou", "range": "Under 500 yd", "notes": "160-175gr bonded or partition bullets" }
   ]
 }

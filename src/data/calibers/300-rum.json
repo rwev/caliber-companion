@@ -36,6 +36,9 @@
   "cost_per_round_usd": [2.50, 6.00],
   "common_firearms": ["Remington 700", "Remington Model 700 Sendero", "Custom long-action builds", "Savage 110"],
 
+  "parent_cartridge": "300-winchester-magnum",
+  "derived_cartridges": ["65-prc"],
+
   "loads": [
     {
       "name": "Remington Premier 200 gr Swift A-Frame",
@@ -71,5 +74,12 @@
         { "distance_yd": 600, "velocity_fps": 2180, "energy_ft_lbs": 2215, "drop_in": -49.0 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Elk", "range": "Under 600 yd", "notes": "180-200gr premium bonded or AccuBond Long Range bullets" },
+    { "game": "Moose", "range": "Under 500 yd", "notes": "200-220gr premium bonded bullets for deep penetration" },
+    { "game": "Mule Deer", "range": "Under 600 yd", "notes": "165-180gr controlled expansion bullets" },
+    { "game": "African Plains Game", "range": "Under 400 yd", "notes": "200-220gr premium bonded bullets for large-bodied game" },
+    { "game": "Caribou", "range": "Under 500 yd", "notes": "180-200gr bonded or partition bullets" }
   ]
 }

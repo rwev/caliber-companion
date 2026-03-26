@@ -36,6 +36,8 @@
   "cost_per_round_usd": [0.40, 1.20],
   "common_firearms": ["Glock 20/29/40", "Colt Delta Elite", "Dan Wesson Bruin", "SIG Sauer P220 10mm", "Springfield XD-M 10mm"],
 
+  "derived_cartridges": ["40-sw"],
+
   "loads": [
     {
       "name": "Federal American Eagle 180 gr FMJ",

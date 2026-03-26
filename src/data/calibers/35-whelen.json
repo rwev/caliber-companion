@@ -36,6 +36,8 @@
   "cost_per_round_usd": [1.50, 3.50],
   "common_firearms": ["Remington 700", "Ruger M77 Hawkeye", "CVA Paramount", "Cooper Model 52"],
 
+  "parent_cartridge": "30-06-springfield",
+
   "loads": [
     {
       "name": "Federal Premium 225 gr Trophy Bonded Bear Claw",
@@ -69,5 +71,12 @@
         { "distance_yd": 500, "velocity_fps": 1464, "energy_ft_lbs": 1190, "drop_in": -85.3 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Elk", "range": "Under 300 yd", "notes": "225-250gr premium bonded or partition bullets; excellent timber elk cartridge" },
+    { "game": "Moose", "range": "Under 250 yd", "notes": "250gr Nosler Partition or Swift A-Frame for deep penetration" },
+    { "game": "Whitetail Deer", "range": "Under 300 yd", "notes": "200-225gr controlled expansion bullets; more power than necessary but effective" },
+    { "game": "Black Bear", "range": "Under 300 yd", "notes": "225-250gr bonded bullets for heavy bone and muscle" },
+    { "game": "Grizzly/Brown Bear", "range": "Under 150 yd", "notes": "250gr premium bonded or hard-cast bullets; marginal but usable as backup" }
   ]
 }

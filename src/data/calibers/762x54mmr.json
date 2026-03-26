@@ -69,5 +69,11 @@
         { "distance_yd": 500, "velocity_fps": 1742, "energy_ft_lbs": 1227, "drop_in": -80.6 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 300 yd", "notes": "150-180gr soft point bullets; ballistically similar to .308 Winchester" },
+    { "game": "Mule Deer", "range": "Under 250 yd", "notes": "180gr soft point or controlled expansion bullets" },
+    { "game": "Elk", "range": "Under 200 yd", "notes": "180-200gr soft point bullets; adequate with good shot placement" },
+    { "game": "Black Bear", "range": "Under 200 yd", "notes": "180gr soft point bullets; ensure quality expanding ammunition" }
   ]
 }

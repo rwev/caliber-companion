@@ -69,5 +69,11 @@
         { "distance_yd": 500, "velocity_fps": 1070, "energy_ft_lbs": 610, "drop_in": -131.0 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 200 yd", "notes": "240-265gr flat nose or Hornady FTX bullets; hard-hitting lever-action cartridge" },
+    { "game": "Black Bear", "range": "Under 200 yd", "notes": "265-300gr bonded or hard-cast bullets for deep penetration" },
+    { "game": "Feral Hogs", "range": "Under 200 yd", "notes": "240-265gr soft point or flat nose bullets" },
+    { "game": "Elk", "range": "Under 150 yd", "notes": "265-300gr premium bonded or hard-cast bullets; effective in timber" }
   ]
 }

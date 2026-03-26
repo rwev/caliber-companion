@@ -36,6 +36,8 @@
   "cost_per_round_usd": [2.50, 5.00],
   "common_firearms": ["Nosler M48", "Christensen Arms Ridgeline", "Fierce Firearms CT Edge", "Browning X-Bolt"],
 
+  "parent_cartridge": "28-nosler",
+
   "loads": [
     {
       "name": "Nosler Trophy Grade 180 gr AccuBond",
@@ -69,5 +71,12 @@
         { "distance_yd": 500, "velocity_fps": 2147, "energy_ft_lbs": 2148, "drop_in": -42.0 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Elk", "range": "Under 600 yd", "notes": "180-210gr premium AccuBond or partition bullets" },
+    { "game": "Moose", "range": "Under 450 yd", "notes": "200-210gr premium bonded bullets for deep penetration" },
+    { "game": "Mule Deer", "range": "Under 600 yd", "notes": "165-180gr controlled expansion bullets" },
+    { "game": "Caribou", "range": "Under 500 yd", "notes": "180-200gr bonded or partition bullets" },
+    { "game": "African Plains Game", "range": "Under 400 yd", "notes": "200-210gr premium bonded bullets" }
   ]
 }

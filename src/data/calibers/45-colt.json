@@ -36,6 +36,8 @@
   "cost_per_round_usd": [0.50, 1.75],
   "common_firearms": ["Ruger Vaquero", "Colt Single Action Army", "Smith & Wesson Model 25", "Ruger Blackhawk", "Taurus Judge", "Henry Big Boy"],
 
+  "derived_cartridges": ["454-casull"],
+
   "loads": [
     {
       "name": "Federal American Eagle 225 gr JSP",
@@ -59,6 +61,9 @@
       "muzzle_velocity_fps": 960,
       "muzzle_energy_ft_lbs": 460,
       "barrel_length_in": 4.75,
+      "gel_penetration_in": 13.5,
+      "expansion_diameter_in": 0.60,
+      "barrier_blind": false,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 960, "energy_ft_lbs": 460, "drop_in": 0.0 },
         { "distance_yd": 25, "velocity_fps": 925, "energy_ft_lbs": 428, "drop_in": -0.3 },
@@ -67,5 +72,10 @@
         { "distance_yd": 100, "velocity_fps": 833, "energy_ft_lbs": 347, "drop_in": -8.3 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 50 yd", "notes": "250-300gr JHP or hard-cast bullets with proper +P loads in strong firearms" },
+    { "game": "Feral Hogs", "range": "Under 50 yd", "notes": "255-300gr hard-cast or bonded bullets; adequate at close range" },
+    { "game": "Black Bear", "range": "Under 50 yd", "notes": "300-325gr hard-cast bullets in +P loads from Ruger or T/C firearms only" }
   ]
 }

@@ -4,38 +4,33 @@
   "aliases": ["6.5 PRC"],
   "category": "rifle",
   "slug": "65-prc",
-
   "dimensions": {
     "bullet_diameter_in": 0.264,
     "neck_diameter_in": 0.297,
-    "case_length_in": 2.030,
+    "case_length_in": 2.03,
     "overall_length_in": 2.955,
     "rim_diameter_in": 0.532,
     "case_type": "rimless, bottleneck"
   },
-
   "typical_velocity_fps": [2800, 3000],
   "typical_energy_ft_lbs": [2500, 2900],
   "typical_bullet_weight_gr": [130, 156],
   "effective_range_yd": 1200,
   "max_range_yd": 6000,
-
   "recoil": {
     "free_recoil_ft_lbs": 15.0,
     "reference_firearm": "Browning X-Bolt (24\" barrel, 8.0 lbs)",
     "subjective": "moderate"
   },
-
   "year_introduced": 2018,
   "country_of_origin": "USA",
   "military_usage": ["No major military adoption to date"],
   "le_usage": ["Limited adoption in precision rifle roles"],
   "primary_use_cases": ["long-range hunting", "precision rifle competition", "extended-range target shooting", "western big game hunting"],
-
   "popularity_tier": "common",
-  "cost_per_round_usd": [1.50, 3.50],
+  "cost_per_round_usd": [1.5, 3.5],
   "common_firearms": ["Browning X-Bolt", "Christensen Arms Mesa", "Bergara B-14 HMR Pro", "Tikka T3x Lite", "Savage 110 High Country"],
-
+  "parent_cartridge": "300-rum",
   "loads": [
     {
       "name": "Hornady ELD Match 147 gr",
@@ -44,6 +39,9 @@
       "muzzle_velocity_fps": 2910,
       "muzzle_energy_ft_lbs": 2764,
       "barrel_length_in": 24.0,
+      "bc_g1": 0.697,
+      "bc_g7": 0.351,
+      "sectional_density": 0.301,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 2910, "energy_ft_lbs": 2764, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 2756, "energy_ft_lbs": 2479, "drop_in": -1.7 },
@@ -60,6 +58,9 @@
       "muzzle_velocity_fps": 2960,
       "muzzle_energy_ft_lbs": 2782,
       "barrel_length_in": 24.0,
+      "bc_g1": 0.625,
+      "bc_g7": 0.315,
+      "sectional_density": 0.293,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 2960, "energy_ft_lbs": 2782, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 2798, "energy_ft_lbs": 2486, "drop_in": -1.6 },
@@ -69,5 +70,12 @@
         { "distance_yd": 500, "velocity_fps": 2203, "energy_ft_lbs": 1540, "drop_in": -48.7 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 500 yd", "notes": "140-143gr ELD-X or AccuBond bullets for excellent terminal performance" },
+    { "game": "Mule Deer", "range": "Under 500 yd", "notes": "140-143gr bonded or partition bullets recommended" },
+    { "game": "Elk", "range": "Under 400 yd", "notes": "140-143gr premium bonded bullets; adequate energy for ethical elk harvest" },
+    { "game": "Pronghorn", "range": "Under 600 yd", "notes": "140gr polymer tip bullets; flat trajectory for open country" },
+    { "game": "Caribou", "range": "Under 400 yd", "notes": "143gr ELD-X or AccuBond for reliable penetration" }
   ]
 }

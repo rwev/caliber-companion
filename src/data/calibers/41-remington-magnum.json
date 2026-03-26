@@ -67,5 +67,10 @@
         { "distance_yd": 100, "velocity_fps": 1172, "energy_ft_lbs": 808, "drop_in": -4.2 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 75 yd", "notes": "210-265gr JHP or JSP bullets; excellent handgun hunting cartridge" },
+    { "game": "Feral Hogs", "range": "Under 75 yd", "notes": "210-265gr JHP or hard-cast bullets" },
+    { "game": "Black Bear", "range": "Under 50 yd", "notes": "265gr hard-cast or bonded bullets; adequate with proper shot placement" }
   ]
 }

@@ -36,6 +36,8 @@
   "cost_per_round_usd": [2.00, 5.00],
   "common_firearms": ["Smith & Wesson Model 460XVR", "Magnum Research BFR"],
 
+  "parent_cartridge": "454-casull",
+
   "loads": [
     {
       "name": "Hornady SST 200 gr FTX",
@@ -44,6 +46,9 @@
       "muzzle_velocity_fps": 2300,
       "muzzle_energy_ft_lbs": 2350,
       "barrel_length_in": 8.38,
+      "gel_penetration_in": 18.5,
+      "expansion_diameter_in": 0.70,
+      "barrier_blind": true,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 2300, "energy_ft_lbs": 2350, "drop_in": 0.0 },
         { "distance_yd": 25, "velocity_fps": 2200, "energy_ft_lbs": 2149, "drop_in": 0.0 },
@@ -59,6 +64,9 @@
       "muzzle_velocity_fps": 1800,
       "muzzle_energy_ft_lbs": 1979,
       "barrel_length_in": 8.38,
+      "gel_penetration_in": 19.0,
+      "expansion_diameter_in": 0.72,
+      "barrier_blind": true,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 1800, "energy_ft_lbs": 1979, "drop_in": 0.0 },
         { "distance_yd": 25, "velocity_fps": 1725, "energy_ft_lbs": 1817, "drop_in": -0.1 },
@@ -67,5 +75,11 @@
         { "distance_yd": 100, "velocity_fps": 1522, "energy_ft_lbs": 1414, "drop_in": -2.3 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 100 yd", "notes": "200-250gr JHP bullets; extremely powerful handgun cartridge" },
+    { "game": "Elk", "range": "Under 75 yd", "notes": "300-360gr hard-cast or bonded bullets; capable of taking elk-sized game" },
+    { "game": "Black Bear", "range": "Under 100 yd", "notes": "250-300gr hard-cast or bonded bullets; excellent stopping power" },
+    { "game": "Feral Hogs", "range": "Under 100 yd", "notes": "200-250gr JHP or bonded bullets" }
   ]
 }

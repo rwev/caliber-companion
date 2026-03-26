@@ -67,5 +67,10 @@
         { "distance_yd": 100, "velocity_fps": 885, "energy_ft_lbs": 1332, "drop_in": -14.5 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Waterfowl", "range": "Under 60 yd", "notes": "Steel or bismuth BB-T shot in 3.5\" shells; maximum range for high geese and sea ducks" },
+    { "game": "Wild Turkey", "range": "Under 50 yd", "notes": "#4-5 shot in 3.5\" shells; devastating payload for longest ethical turkey shots" },
+    { "game": "Feral Hogs", "range": "Under 50 yd", "notes": "Slugs or heavy buckshot; limited slug availability but extremely effective" }
   ]
 }

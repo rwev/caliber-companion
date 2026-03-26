@@ -4,38 +4,33 @@
   "aliases": ["6mm CM", "6 Creedmoor"],
   "category": "rifle",
   "slug": "6mm-creedmoor",
-
   "dimensions": {
     "bullet_diameter_in": 0.243,
     "neck_diameter_in": 0.272,
-    "case_length_in": 1.920,
-    "overall_length_in": 2.800,
+    "case_length_in": 1.92,
+    "overall_length_in": 2.8,
     "rim_diameter_in": 0.473,
     "case_type": "rimless, bottleneck"
   },
-
   "typical_velocity_fps": [2900, 3300],
   "typical_energy_ft_lbs": [1700, 2100],
   "typical_bullet_weight_gr": [87, 115],
   "effective_range_yd": 900,
   "max_range_yd": 5000,
-
   "recoil": {
     "free_recoil_ft_lbs": 9.0,
     "reference_firearm": "Ruger Precision Rifle (24\" barrel, 9.7 lbs)",
     "subjective": "low"
   },
-
   "year_introduced": 2017,
   "country_of_origin": "USA",
   "military_usage": ["No military adoption"],
   "le_usage": ["No significant law enforcement adoption"],
   "primary_use_cases": ["precision rifle competition", "long-range target shooting", "varmint hunting", "predator hunting", "deer hunting"],
-
   "popularity_tier": "common",
-  "cost_per_round_usd": [1.20, 3.00],
+  "cost_per_round_usd": [1.2, 3.0],
   "common_firearms": ["Ruger Precision Rifle", "Bergara B-14 HMR", "Savage 110 Tactical", "Tikka T3x Varmint", "Browning X-Bolt"],
-
+  "parent_cartridge": "65-creedmoor",
   "loads": [
     {
       "name": "Hornady ELD Match 108 gr",
@@ -44,6 +39,9 @@
       "muzzle_velocity_fps": 2960,
       "muzzle_energy_ft_lbs": 2099,
       "barrel_length_in": 24.0,
+      "bc_g1": 0.536,
+      "bc_g7": 0.275,
+      "sectional_density": 0.261,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 2960, "energy_ft_lbs": 2099, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 2802, "energy_ft_lbs": 1882, "drop_in": -1.6 },
@@ -60,6 +58,9 @@
       "muzzle_velocity_fps": 3240,
       "muzzle_energy_ft_lbs": 2028,
       "barrel_length_in": 24.0,
+      "bc_g1": 0.400,
+      "bc_g7": 0.200,
+      "sectional_density": 0.210,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 3240, "energy_ft_lbs": 2028, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 2975, "energy_ft_lbs": 1710, "drop_in": -1.3 },
@@ -69,5 +70,11 @@
         { "distance_yd": 500, "velocity_fps": 2056, "energy_ft_lbs": 817, "drop_in": -45.6 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 400 yd", "notes": "90-103gr controlled expansion bullets; excellent accuracy" },
+    { "game": "Pronghorn", "range": "Under 500 yd", "notes": "90-103gr polymer tip bullets; flat trajectory ideal for open terrain" },
+    { "game": "Coyote", "range": "Under 500 yd", "notes": "70-87gr varmint bullets; outstanding long-range accuracy" },
+    { "game": "Varmints", "range": "Under 500 yd", "notes": "70-87gr hollow point or polymer tip bullets" }
   ]
 }

@@ -36,6 +36,8 @@
   "cost_per_round_usd": [2.00, 4.50],
   "common_firearms": ["Marlin 1895M", "Ruger No. 1"],
 
+  "parent_cartridge": "45-70-government",
+
   "loads": [
     {
       "name": "Hornady LEVERevolution 325 gr FTX",
@@ -44,6 +46,9 @@
       "muzzle_velocity_fps": 2225,
       "muzzle_energy_ft_lbs": 3572,
       "barrel_length_in": 18.5,
+      "gel_penetration_in": 18.0,
+      "expansion_diameter_in": 0.72,
+      "barrier_blind": true,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 2225, "energy_ft_lbs": 3572, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 1887, "energy_ft_lbs": 2569, "drop_in": -3.0 },
@@ -69,5 +74,12 @@
         { "distance_yd": 500, "velocity_fps": 921, "energy_ft_lbs": 659, "drop_in": -178.0 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 200 yd", "notes": "325-350gr flat nose or FTX bullets; lever-action powerhouse" },
+    { "game": "Black Bear", "range": "Under 200 yd", "notes": "325-350gr bonded or hard-cast bullets for reliable penetration" },
+    { "game": "Moose", "range": "Under 150 yd", "notes": "350gr premium bonded or hard-cast bullets; designed as a modern .45-70 upgrade" },
+    { "game": "Elk", "range": "Under 150 yd", "notes": "325-350gr premium bonded or hard-cast bullets; devastating at timber ranges" },
+    { "game": "Grizzly/Brown Bear", "range": "Under 100 yd", "notes": "350gr hard-cast or premium bonded bullets; adequate at close range" }
   ]
 }

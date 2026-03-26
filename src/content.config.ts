@@ -16,7 +16,24 @@ const loadSchema = z.object({
   muzzle_velocity_fps: z.number(),
   muzzle_energy_ft_lbs: z.number(),
   barrel_length_in: z.number(),
+  bc_g1: z.number().optional(),
+  bc_g7: z.number().optional(),
+  sectional_density: z.number().optional(),
+  gel_penetration_in: z.number().optional(),
+  expansion_diameter_in: z.number().optional(),
+  barrier_blind: z.boolean().optional(),
   ballistics: z.array(ballisticsPointSchema),
+});
+
+const gameRecommendationSchema = z.object({
+  game: z.string(),
+  range: z.string(),
+  notes: z.string(),
+});
+
+const adoptionEventSchema = z.object({
+  year: z.number(),
+  event: z.string(),
 });
 
 const caliberData = defineCollection({
@@ -60,6 +77,13 @@ const caliberData = defineCollection({
     common_firearms: z.array(z.string()),
 
     loads: z.array(loadSchema),
+
+    adoption_timeline: z.array(adoptionEventSchema).optional(),
+
+    parent_cartridge: z.string().optional(),
+    derived_cartridges: z.array(z.string()).optional(),
+
+    recommended_game: z.array(gameRecommendationSchema).optional(),
   }),
 });
 

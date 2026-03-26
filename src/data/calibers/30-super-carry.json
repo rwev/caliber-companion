@@ -36,6 +36,8 @@
   "cost_per_round_usd": [0.45, 1.10],
   "common_firearms": ["Smith & Wesson M&P Shield Plus", "Nighthawk Custom President", "Smith & Wesson M&P Shield EZ"],
 
+  "parent_cartridge": "9mm-luger",
+
   "loads": [
     {
       "name": "Federal American Eagle 100 gr FMJ",
@@ -59,6 +61,9 @@
       "muzzle_velocity_fps": 1200,
       "muzzle_energy_ft_lbs": 320,
       "barrel_length_in": 3.1,
+      "gel_penetration_in": 14.0,
+      "expansion_diameter_in": 0.50,
+      "barrier_blind": true,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 1200, "energy_ft_lbs": 320, "drop_in": 0.0 },
         { "distance_yd": 25, "velocity_fps": 1150, "energy_ft_lbs": 294, "drop_in": -0.2 },

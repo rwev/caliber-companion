@@ -1,10 +1,9 @@
 {
   "name": ".308 Winchester",
-  "designation": "7.62×51mm NATO",
-  "aliases": ["7.62 NATO", "7.62×51mm"],
+  "designation": "7.62\u00d751mm NATO",
+  "aliases": ["7.62 NATO", "7.62\u00d751mm"],
   "category": "rifle",
   "slug": "308-winchester",
-
   "dimensions": {
     "bullet_diameter_in": 0.308,
     "neck_diameter_in": 0.3433,
@@ -13,29 +12,38 @@
     "rim_diameter_in": 0.4728,
     "case_type": "rimless, bottleneck"
   },
-
   "typical_velocity_fps": [2600, 2900],
   "typical_energy_ft_lbs": [2400, 2900],
   "typical_bullet_weight_gr": [147, 180],
   "effective_range_yd": 800,
   "max_range_yd": 4600,
-
   "recoil": {
     "free_recoil_ft_lbs": 15.0,
     "reference_firearm": "Remington 700 (24\" barrel, 8.5 lbs)",
     "subjective": "heavy"
   },
-
   "year_introduced": 1952,
   "country_of_origin": "USA",
   "military_usage": ["NATO standard battle rifle/GPMG cartridge", "U.S. Military (M14, M60, M240)", "U.S. sniper platforms (M24, M40)", "Most NATO militaries"],
   "le_usage": ["FBI HRT", "SWAT precision rifle teams", "U.S. Secret Service Counter Sniper Team"],
   "primary_use_cases": ["hunting", "long-range precision", "military sniping", "target shooting", "competition"],
-
   "popularity_tier": "very_common",
-  "cost_per_round_usd": [0.50, 2.50],
+  "cost_per_round_usd": [0.5, 2.5],
   "common_firearms": ["Remington 700", "Ruger American", "Savage 110", "AR-10/SR-25", "FN SCAR 17", "Springfield M1A"],
-
+  "adoption_timeline": [
+    { "year": 1952, "event": "Winchester introduces .308 Winchester as the commercial version of the T65 experimental cartridge" },
+    { "year": 1954, "event": "NATO standardizes the 7.62\u00d751mm cartridge (STANAG 2310)" },
+    { "year": 1957, "event": "U.S. Army adopts the M14 rifle and M60 machine gun in 7.62\u00d751mm" },
+    { "year": 1962, "event": "Remington 700 introduced, becoming the definitive .308 bolt-action platform" },
+    { "year": 1966, "event": "U.S. Marine Corps adopts the Remington 700 as the M40 sniper rifle" },
+    { "year": 1975, "event": "SAAMI publishes definitive .308 Winchester specifications" },
+    { "year": 1988, "event": "U.S. Army adopts the M24 Sniper Weapon System in .308/7.62mm" },
+    { "year": 2002, "event": "Knight's Armament SR-25 adopted by USSOCOM, popularizing semi-auto .308 platforms" },
+    { "year": 2009, "event": "FN SCAR 17S released to civilian market, driving modern battle rifle interest" },
+    { "year": 2014, "event": ".308 Win dominates NRA High Power and Palma competition circuits" }
+  ],
+  "parent_cartridge": "30-06-springfield",
+  "derived_cartridges": ["243-winchester", "260-remington", "7mm-08-remington", "338-federal"],
   "loads": [
     {
       "name": "Federal Gold Medal 168 gr Sierra MatchKing",
@@ -44,6 +52,9 @@
       "muzzle_velocity_fps": 2650,
       "muzzle_energy_ft_lbs": 2619,
       "barrel_length_in": 24.0,
+      "bc_g1": 0.462,
+      "bc_g7": 0.224,
+      "sectional_density": 0.253,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 2650, "energy_ft_lbs": 2619, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 2461, "energy_ft_lbs": 2260, "drop_in": -1.9 },
@@ -61,6 +72,8 @@
       "muzzle_velocity_fps": 2820,
       "muzzle_energy_ft_lbs": 2648,
       "barrel_length_in": 24.0,
+      "bc_g1": 0.338,
+      "sectional_density": 0.226,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 2820, "energy_ft_lbs": 2648, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 2533, "energy_ft_lbs": 2137, "drop_in": -1.6 },
@@ -71,5 +84,12 @@
         { "distance_yd": 600, "velocity_fps": 1370, "energy_ft_lbs": 625, "drop_in": -100.5 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 400 yd", "notes": "150gr+ controlled expansion bullets such as Nosler AccuBond" },
+    { "game": "Mule Deer", "range": "Under 350 yd", "notes": "165-180gr bonded or partition bullets recommended" },
+    { "game": "Elk", "range": "Under 300 yd", "notes": "180gr+ premium bonded or partition bullets; ideal shot placement critical" },
+    { "game": "Black Bear", "range": "Under 300 yd", "notes": "165-180gr bonded or partition bullets" },
+    { "game": "Feral Hogs", "range": "Under 300 yd", "notes": "150-168gr soft point or bonded bullets; very effective" }
   ]
 }

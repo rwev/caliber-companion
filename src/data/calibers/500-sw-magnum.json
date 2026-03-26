@@ -44,6 +44,9 @@
       "muzzle_velocity_fps": 2075,
       "muzzle_energy_ft_lbs": 2868,
       "barrel_length_in": 8.38,
+      "gel_penetration_in": 21.0,
+      "expansion_diameter_in": 0.80,
+      "barrier_blind": true,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 2075, "energy_ft_lbs": 2868, "drop_in": 0.0 },
         { "distance_yd": 25, "velocity_fps": 1980, "energy_ft_lbs": 2613, "drop_in": -0.1 },
@@ -59,6 +62,9 @@
       "muzzle_velocity_fps": 1660,
       "muzzle_energy_ft_lbs": 1682,
       "barrel_length_in": 8.38,
+      "gel_penetration_in": 20.0,
+      "expansion_diameter_in": 0.78,
+      "barrier_blind": true,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 1660, "energy_ft_lbs": 1682, "drop_in": 0.0 },
         { "distance_yd": 25, "velocity_fps": 1588, "energy_ft_lbs": 1540, "drop_in": -0.1 },
@@ -67,5 +73,11 @@
         { "distance_yd": 100, "velocity_fps": 1393, "energy_ft_lbs": 1185, "drop_in": -2.9 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Black Bear", "range": "Under 75 yd", "notes": "350-500gr hard-cast or bonded bullets; world's most powerful production handgun cartridge" },
+    { "game": "Feral Hogs", "range": "Under 75 yd", "notes": "275-350gr JHP or bonded bullets; overwhelming stopping power" },
+    { "game": "Whitetail Deer", "range": "Under 75 yd", "notes": "275-350gr JHP bullets; excessive but effective" },
+    { "game": "Elk", "range": "Under 50 yd", "notes": "400-500gr hard-cast bullets; capable of largest North American game at close range" }
   ]
 }

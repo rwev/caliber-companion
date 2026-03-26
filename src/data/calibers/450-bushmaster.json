@@ -36,6 +36,8 @@
   "cost_per_round_usd": [1.20, 3.00],
   "common_firearms": ["Ruger American Ranch", "Savage 110 Brush Hunter", "Bushmaster XM-15", "AR-15 upper receivers", "Ruger Scout"],
 
+  "parent_cartridge": "45-70-government",
+
   "loads": [
     {
       "name": "Hornady BLACK 250 gr FTX",
@@ -44,6 +46,9 @@
       "muzzle_velocity_fps": 2200,
       "muzzle_energy_ft_lbs": 2686,
       "barrel_length_in": 20.0,
+      "gel_penetration_in": 17.0,
+      "expansion_diameter_in": 0.70,
+      "barrier_blind": true,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 2200, "energy_ft_lbs": 2686, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 1934, "energy_ft_lbs": 2078, "drop_in": -4.0 },
@@ -60,6 +65,9 @@
       "muzzle_velocity_fps": 1900,
       "muzzle_energy_ft_lbs": 2405,
       "barrel_length_in": 20.0,
+      "gel_penetration_in": 18.0,
+      "expansion_diameter_in": 0.72,
+      "barrier_blind": true,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 1900, "energy_ft_lbs": 2405, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 1651, "energy_ft_lbs": 1817, "drop_in": -5.6 },
@@ -69,5 +77,10 @@
         { "distance_yd": 500, "velocity_fps": 1005, "energy_ft_lbs": 673, "drop_in": -188.0 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 200 yd", "notes": "250-260gr controlled expansion bullets; popular in straight-wall cartridge states" },
+    { "game": "Feral Hogs", "range": "Under 200 yd", "notes": "250-260gr bonded or soft point bullets; hard-hitting" },
+    { "game": "Black Bear", "range": "Under 150 yd", "notes": "260-300gr bonded or hard-cast bullets for reliable penetration" }
   ]
 }

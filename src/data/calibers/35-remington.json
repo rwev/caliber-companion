@@ -44,6 +44,9 @@
       "muzzle_velocity_fps": 2225,
       "muzzle_energy_ft_lbs": 2198,
       "barrel_length_in": 24.0,
+      "gel_penetration_in": 16.0,
+      "expansion_diameter_in": 0.55,
+      "barrier_blind": true,
       "ballistics": [
         { "distance_yd": 0, "velocity_fps": 2225, "energy_ft_lbs": 2198, "drop_in": 0.0 },
         { "distance_yd": 100, "velocity_fps": 1963, "energy_ft_lbs": 1711, "drop_in": -4.0 },
@@ -69,5 +72,10 @@
         { "distance_yd": 500, "velocity_fps": 1055, "energy_ft_lbs": 495, "drop_in": -180.0 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "Whitetail Deer", "range": "Under 200 yd", "notes": "200gr Hornady FTX or soft point bullets; classic lever-action brush cartridge" },
+    { "game": "Black Bear", "range": "Under 150 yd", "notes": "200gr bonded or flat nose bullets for adequate penetration" },
+    { "game": "Feral Hogs", "range": "Under 150 yd", "notes": "200gr soft point or flat nose bullets" }
   ]
 }

@@ -69,5 +69,12 @@
         { "distance_yd": 500, "velocity_fps": 1873, "energy_ft_lbs": 2101, "drop_in": -55.8 }
       ]
     }
+  ],
+  "recommended_game": [
+    { "game": "African Dangerous Game", "range": "Under 100 yd", "notes": "300gr premium solids and soft points; ballistic twin of .375 H&H in a standard-length action" },
+    { "game": "Grizzly/Brown Bear", "range": "Under 200 yd", "notes": "270-300gr premium bonded or partition bullets" },
+    { "game": "Moose", "range": "Under 250 yd", "notes": "270-300gr controlled expansion bullets" },
+    { "game": "Elk", "range": "Under 300 yd", "notes": "270gr controlled expansion bullets; extremely effective" },
+    { "game": "African Plains Game", "range": "Under 300 yd", "notes": "270-300gr controlled expansion bullets for all plains game species" }
   ]
 }
