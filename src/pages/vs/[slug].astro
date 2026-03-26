@@ -35,6 +35,25 @@ export async function getStaticPaths() {
     ['22-lr', '22-wmr'],
     ['12-gauge', '20-gauge'],
     ['50-bmg', '338-lapua-magnum'],
+    // New caliber matchups
+    ['65-creedmoor', '6mm-arc'],
+    ['6mm-arc', '556x45mm-nato'],
+    ['6mm-arc', '65-grendel'],
+    ['6mm-creedmoor', '6mm-arc'],
+    ['68-western', '270-winchester'],
+    ['68-western', '270-wsm'],
+    ['68-western', '65-prc'],
+    ['68-western', '7mm-rem-mag'],
+    ['280-ackley-improved', '280-remington'],
+    ['280-ackley-improved', '7mm-rem-mag'],
+    ['280-ackley-improved', '65-creedmoor'],
+    ['65-prc', '300-win-mag'],
+    ['308-winchester', '6mm-arc'],
+    ['300-blackout', '556x45mm-nato'],
+    ['10mm-auto', '357-magnum'],
+    ['44-magnum', '45-colt'],
+    ['300-win-mag', '300-wsm'],
+    ['338-lapua-magnum', '300-prc'],
   ];
 
   const { getCollection } = await import('astro:content');
@@ -169,7 +188,7 @@ const tables = [
 ];
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription} ogType="article" jsonLd={jsonLd}>
+<BaseLayout title={pageTitle} description={pageDescription} ogType="article" jsonLd={jsonLd} breadcrumbs={[{ label: 'Compare', href: '/caliber-companion/compare' }, { label: `${a.name} vs ${b.name}` }]}>
   <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
     <!-- Header -->
     <div class="mb-8 border-b border-surface-border pb-6">

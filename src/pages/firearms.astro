@@ -20,7 +20,7 @@ const sortedGroups = typeOrder
   .map(t => ({ type: t, items: groups.get(t)! }));
 ---
 
-<BaseLayout title="Firearms" description="Database of 50 iconic firearms with specs, caliber cross-references, and manufacturer details.">
+<BaseLayout title="Firearms" description="Database of 50 iconic firearms with specs, caliber cross-references, and manufacturer details." breadcrumbs={[{ label: 'Firearms' }]}>
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
     <div class="mb-8">
       <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
@@ -47,6 +47,7 @@ const sortedGroups = typeOrder
                 <th scope="col" class="px-4 py-2 font-medium tracking-wider uppercase text-sm text-right">Barrel</th>
                 <th scope="col" class="px-4 py-2 font-medium tracking-wider uppercase text-sm text-right">Weight</th>
                 <th scope="col" class="px-4 py-2 font-medium tracking-wider uppercase text-sm text-right">Year</th>
+                <th scope="col" class="px-4 py-2 font-medium tracking-wider uppercase text-sm text-center">Find</th>
               </tr>
             </thead>
             <tbody>
@@ -65,6 +66,21 @@ const sortedGroups = typeOrder
                   <td class="px-4 py-2.5 text-right text-base text-text-primary">{f.data.barrel_length_in}"</td>
                   <td class="px-4 py-2.5 text-right text-base text-text-primary">{(f.data.weight_oz / 16).toFixed(1)} lb</td>
                   <td class="px-4 py-2.5 text-right text-base text-text-muted">{f.data.year_introduced}</td>
+                  <td class="px-4 py-2.5 text-center">
+                    <div class="flex items-center justify-center gap-1.5">
+                      <a
+                        href={`https://www.brownells.com/search?q=${encodeURIComponent(f.data.manufacturer + ' ' + f.data.name)}`}
+                        target="_blank"
+                        rel="noopener noreferrer nofollow"
+                        class="text-text-muted hover:text-accent transition-colors"
+                        title={`Search Brownells for ${f.data.name}`}
+                      >
+                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                        </svg>
+                      </a>
+                    </div>
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -72,5 +88,9 @@ const sortedGroups = typeOrder
         </div>
       </div>
     ))}
+
+    <p class="mt-4 font-mono text-xs text-text-muted">
+      External links open retailer search results. Prices and availability vary by retailer and location.
+    </p>
   </div>
 </BaseLayout>

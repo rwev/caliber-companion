@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AmmoCostCalculator from '../../components/islands/AmmoCostCalculator';
+import { getCollection } from 'astro:content';
+
+const allCalibers = await getCollection('caliberData');
+const caliberCosts = allCalibers
+  .map(c => ({
+    slug: c.data.slug,
+    name: c.data.name,
+    costLow: c.data.cost_per_round_usd[0],
+    costHigh: c.data.cost_per_round_usd[1],
+  }))
+  .sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<BaseLayout title="Ammunition Cost Calculator" description="Calculate your annual ammunition costs. Select calibers, set rounds per trip and trips per month to see monthly and yearly spending." breadcrumbs={[{ label: 'Tools', href: '/caliber-companion/tools' }, { label: 'Ammo Cost Calculator' }]}>
+  <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
+    <div class="mb-2">
+      <a href="/caliber-companion/tools" class="font-mono text-sm tracking-wider uppercase text-text-muted hover:text-accent transition-colors">
+        ← Tools
+      </a>
+    </div>
+    <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+      Ammunition Cost Calculator
+    </h1>
+    <p class="mt-2 font-mono text-base text-text-muted max-w-2xl">
+      Estimate your monthly and annual ammunition spending. Add the calibers you shoot, enter rounds per trip, and adjust cost per round to match your preferred loads.
+    </p>
+
+    <div class="mt-8">
+      <AmmoCostCalculator client:idle calibers={caliberCosts} />
+    </div>
+  </div>
+</BaseLayout>

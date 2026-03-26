@@ -201,5 +201,6 @@
   "annual_production_estimate": "moderate",
   "price_trend": "stable",
   "suppressor_friendly": false,
-  "subsonic_loads_available": false
+  "subsonic_loads_available": false,
+  "derived_cartridges": ["68-western"]
 }

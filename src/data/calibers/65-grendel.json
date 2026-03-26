@@ -193,5 +193,6 @@
   "annual_production_estimate": "moderate",
   "price_trend": "stable",
   "suppressor_friendly": true,
-  "subsonic_loads_available": false
+  "subsonic_loads_available": false,
+  "derived_cartridges": ["6mm-arc"]
 }

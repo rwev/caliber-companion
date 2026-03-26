@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CaliberTimeline from '../components/islands/CaliberTimeline';
+import { getCollection } from 'astro:content';
+
+const allCalibers = await getCollection('caliberData');
+const caliberEntries = allCalibers
+  .map(c => ({
+    name: c.data.name,
+    slug: c.data.slug,
+    year: c.data.year_introduced,
+    category: c.data.category,
+    country: c.data.country_of_origin,
+  }))
+  .sort((a, b) => a.year - b.year || a.name.localeCompare(b.name));
+
+const earliest = caliberEntries[0];
+const latest = caliberEntries[caliberEntries.length - 1];
+
+const pageDescription = `Interactive timeline of ${caliberEntries.length} calibers from ${earliest.year} to ${latest.year}. Filter by category and explore over 200 years of cartridge development.`;
+---
+
+<BaseLayout title="Caliber Timeline" description={pageDescription} breadcrumbs={[{ label: 'Timeline' }]}>
+  <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
+    <div class="mb-8">
+      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+        Caliber Timeline
+      </h1>
+      <p class="mt-2 font-mono text-base text-text-muted max-w-3xl">
+        Over 200 years of cartridge development — from the earliest black powder rounds to modern precision cartridges.
+        {caliberEntries.length} calibers from {earliest.year} to {latest.year}.
+      </p>
+    </div>
+
+    <CaliberTimeline client:idle calibers={caliberEntries} basePath="/caliber-companion" />
+  </div>
+</BaseLayout>

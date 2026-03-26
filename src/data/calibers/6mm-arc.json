@@ -1,0 +1,283 @@
+{
+  "name": "6mm ARC",
+  "designation": "6mm Advanced Rifle Cartridge",
+  "aliases": [
+    "6mm ARC",
+    "6mm Advanced Rifle Cartridge"
+  ],
+  "category": "rifle",
+  "slug": "6mm-arc",
+  "dimensions": {
+    "bullet_diameter_in": 0.243,
+    "neck_diameter_in": 0.271,
+    "case_length_in": 1.49,
+    "overall_length_in": 2.26,
+    "rim_diameter_in": 0.441,
+    "case_type": "rimless, bottleneck"
+  },
+  "typical_velocity_fps": [
+    2600,
+    2800
+  ],
+  "typical_energy_ft_lbs": [
+    1550,
+    1850
+  ],
+  "typical_bullet_weight_gr": [
+    103,
+    108
+  ],
+  "effective_range_yd": 800,
+  "max_range_yd": 4200,
+  "recoil": {
+    "free_recoil_ft_lbs": 7.5,
+    "reference_firearm": "AR-15 platform (24\" barrel, 7.5 lbs)",
+    "subjective": "low"
+  },
+  "year_introduced": 2020,
+  "country_of_origin": "USA",
+  "military_usage": [
+    "Developed for U.S. Department of Defense requirements",
+    "Designed to extend AR-15 effective range beyond 5.56 NATO"
+  ],
+  "le_usage": [],
+  "primary_use_cases": [
+    "precision rifle competition",
+    "long-range target shooting",
+    "hunting (deer, antelope, hogs)",
+    "designated marksman rifle"
+  ],
+  "popularity_tier": "common",
+  "cost_per_round_usd": [
+    1.0,
+    2.5
+  ],
+  "common_firearms": [
+    "Hornady/CMMG Resolute",
+    "Barrett REC7 DI",
+    "Christensen Arms CA-15 G2",
+    "Seekins Precision SP15",
+    "Wilson Combat Recon Tactical",
+    "Aero Precision M4E1"
+  ],
+  "adoption_timeline": [
+    {
+      "year": 2017,
+      "event": "Hornady begins developing a long-range 6mm cartridge for the AR-15 platform at DoD request"
+    },
+    {
+      "year": 2020,
+      "event": "Hornady officially introduces the 6mm ARC to the commercial market"
+    },
+    {
+      "year": 2020,
+      "event": "SAAMI standardizes the 6mm ARC cartridge specifications"
+    },
+    {
+      "year": 2020,
+      "event": "Barrett Firearms introduces the REC7 DI in 6mm ARC"
+    },
+    {
+      "year": 2021,
+      "event": "Rapidly adopted by PRS and NRL competitors as an AR-15 match cartridge"
+    },
+    {
+      "year": 2022,
+      "event": "Multiple major rifle manufacturers add 6mm ARC to their AR-15 lineups"
+    },
+    {
+      "year": 2023,
+      "event": "Gains strong following among deer and hog hunters seeking AR-15 precision"
+    }
+  ],
+  "parent_cartridge": "65-grendel",
+  "derived_cartridges": [],
+  "loads": [
+    {
+      "name": "Hornady ELD Match 108 gr",
+      "bullet_weight_gr": 108,
+      "bullet_type": "ELD Match",
+      "muzzle_velocity_fps": 2750,
+      "muzzle_energy_ft_lbs": 1813,
+      "barrel_length_in": 24.0,
+      "bc_g1": 0.536,
+      "bc_g7": 0.275,
+      "sectional_density": 0.261,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2750,
+          "energy_ft_lbs": 1813,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2597,
+          "energy_ft_lbs": 1617,
+          "drop_in": -2.0
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2450,
+          "energy_ft_lbs": 1439,
+          "drop_in": -8.3
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2307,
+          "energy_ft_lbs": 1276,
+          "drop_in": -19.5
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2169,
+          "energy_ft_lbs": 1128,
+          "drop_in": -36.2
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2036,
+          "energy_ft_lbs": 994,
+          "drop_in": -59.3
+        }
+      ]
+    },
+    {
+      "name": "Hornady BLACK 105 gr BTHP",
+      "bullet_weight_gr": 105,
+      "bullet_type": "BTHP",
+      "muzzle_velocity_fps": 2650,
+      "muzzle_energy_ft_lbs": 1639,
+      "barrel_length_in": 24.0,
+      "bc_g1": 0.495,
+      "bc_g7": 0.250,
+      "sectional_density": 0.254,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2650,
+          "energy_ft_lbs": 1639,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2490,
+          "energy_ft_lbs": 1446,
+          "drop_in": -2.3
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2336,
+          "energy_ft_lbs": 1273,
+          "drop_in": -9.4
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2188,
+          "energy_ft_lbs": 1117,
+          "drop_in": -21.9
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2046,
+          "energy_ft_lbs": 977,
+          "drop_in": -40.5
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 1910,
+          "energy_ft_lbs": 851,
+          "drop_in": -66.2
+        }
+      ]
+    },
+    {
+      "name": "Hornady Precision Hunter 103 gr ELD-X",
+      "bullet_weight_gr": 103,
+      "bullet_type": "ELD-X",
+      "muzzle_velocity_fps": 2800,
+      "muzzle_energy_ft_lbs": 1793,
+      "barrel_length_in": 24.0,
+      "bc_g1": 0.512,
+      "bc_g7": 0.259,
+      "sectional_density": 0.249,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2800,
+          "energy_ft_lbs": 1793,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2640,
+          "energy_ft_lbs": 1595,
+          "drop_in": -1.9
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2486,
+          "energy_ft_lbs": 1414,
+          "drop_in": -7.9
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2338,
+          "energy_ft_lbs": 1250,
+          "drop_in": -18.6
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2195,
+          "energy_ft_lbs": 1102,
+          "drop_in": -34.6
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2058,
+          "energy_ft_lbs": 968,
+          "drop_in": -56.6
+        }
+      ]
+    }
+  ],
+  "recommended_game": [
+    {
+      "game": "Whitetail Deer",
+      "range": "Under 400 yd",
+      "notes": "103gr ELD-X provides excellent controlled expansion for medium game"
+    },
+    {
+      "game": "Pronghorn",
+      "range": "Under 450 yd",
+      "notes": "Flat trajectory and high BC make it ideal for open-country antelope hunting"
+    },
+    {
+      "game": "Feral Hogs",
+      "range": "Under 300 yd",
+      "notes": "AR-15 platform allows quick follow-up shots; use 103-108gr controlled expansion"
+    },
+    {
+      "game": "Coyotes / Varmint",
+      "range": "Under 500 yd",
+      "notes": "80gr V-MAX at ~3,150 fps provides explosive fragmentation on small targets"
+    }
+  ],
+  "max_pressure_psi": 52000,
+  "primer_type": "Small Rifle",
+  "powder_charge_range_gr": [
+    24.0,
+    30.0
+  ],
+  "availability_rating": 3,
+  "annual_production_estimate": "moderate",
+  "price_trend": "stable",
+  "suppressor_friendly": true,
+  "subsonic_loads_available": false,
+  "dangerous_substitutions": [
+    {
+      "caliber": "6.5 Grendel",
+      "danger": "6.5 Grendel rounds may partially chamber in a 6mm ARC chamber due to shared parent case. The larger .264\" bullet will not properly engage 6mm ARC rifling — risk of dangerous overpressure."
+    }
+  ]
+}

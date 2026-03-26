@@ -131,3 +131,120 @@ body::before {
 .skip-link:focus {
   top: 0.5rem;
 }
+
+/* Print-friendly styles */
+@media print {
+  /* Reset colors for ink efficiency */
+  :root {
+    --color-surface: #ffffff !important;
+    --color-surface-raised: #ffffff !important;
+    --color-surface-overlay: #f5f5f5 !important;
+    --color-surface-border: #cccccc !important;
+    --color-surface-border-subtle: #dddddd !important;
+    --color-text-primary: #000000 !important;
+    --color-text-secondary: #333333 !important;
+    --color-text-muted: #666666 !important;
+    --color-accent: #333333 !important;
+    --color-accent-bright: #333333 !important;
+    --color-accent-dim: #555555 !important;
+    --color-danger: #990000 !important;
+    --color-success: #006600 !important;
+  }
+
+  /* Hide non-essential elements */
+  nav[aria-label="Main navigation"],
+  footer,
+  .skip-link,
+  body::before {
+    display: none !important;
+  }
+
+  /* Remove fixed positioning and padding from nav-hidden main */
+  main {
+    padding-top: 0 !important;
+  }
+
+  /* Hide interactive islands that don't make sense on paper */
+  [data-astro-island] button,
+  [data-astro-island] canvas {
+    display: none !important;
+  }
+
+  /* But keep static content within islands visible */
+  [data-astro-island] table,
+  [data-astro-island] svg:not([class*="h-4"]) {
+    display: block !important;
+  }
+
+  /* Hide share, favorite, compare buttons, and "Find Ammo" links */
+  a[href*="/compare?c="],
+  a[target="_blank"][rel*="nofollow"] {
+    display: none !important;
+  }
+
+  /* Page layout */
+  body {
+    font-size: 10pt !important;
+    line-height: 1.4 !important;
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Ensure tables don't break across pages */
+  table {
+    page-break-inside: avoid;
+  }
+  tr {
+    page-break-inside: avoid;
+  }
+
+  /* Section breaks */
+  .border-t {
+    border-top: 1px solid #ccc !important;
+  }
+
+  /* Remove shadows and hover effects */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Show URL after external links */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    color: #666;
+    word-break: break-all;
+  }
+
+  /* Don't show URL for internal nav links */
+  nav a::after,
+  a[href*="/caliber-companion/"]::after {
+    content: "" !important;
+  }
+
+  /* Print page header */
+  @page {
+    margin: 1.5cm;
+    size: auto;
+  }
+
+  /* Ensure borders are visible */
+  .border {
+    border: 1px solid #ccc !important;
+  }
+
+  /* Range card print optimization */
+  .range-card {
+    border: 2px solid #000 !important;
+    page-break-inside: avoid;
+  }
+  .range-card table {
+    font-size: 9pt !important;
+  }
+  .range-card th,
+  .range-card td {
+    border-bottom: 1px solid #ccc !important;
+    padding: 2px 6px !important;
+  }
+}

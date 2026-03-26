@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CostComparison from '../components/islands/CostComparison';
+import { getCollection } from 'astro:content';
+
+const allCalibers = await getCollection('caliberData');
+const caliberCosts = allCalibers
+  .map(c => ({
+    name: c.data.name,
+    slug: c.data.slug,
+    category: c.data.category,
+    costLow: c.data.cost_per_round_usd[0],
+    costHigh: c.data.cost_per_round_usd[1],
+    costMid: +((c.data.cost_per_round_usd[0] + c.data.cost_per_round_usd[1]) / 2).toFixed(2),
+  }))
+  .sort((a, b) => a.costMid - b.costMid);
+
+const cheapest = caliberCosts[0];
+const priciest = caliberCosts[caliberCosts.length - 1];
+
+const pageDescription = `Compare ammunition costs across ${caliberCosts.length} calibers. Interactive dot plot showing price ranges from $${cheapest.costLow.toFixed(2)}/rd (${cheapest.name}) to $${priciest.costHigh.toFixed(2)}/rd (${priciest.name}).`;
+---
+
+<BaseLayout title="Cost Per Round Comparison" description={pageDescription} breadcrumbs={[{ label: 'Cost Comparison' }]}>
+  <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
+    <div class="mb-8">
+      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+        Cost Per Round Comparison
+      </h1>
+      <p class="mt-2 font-mono text-base text-text-muted max-w-3xl">
+        Compare ammunition prices across {caliberCosts.length} calibers. Each caliber shows its typical
+        price range (low–high) with a midpoint dot. Filter by category and sort by low, average, or high price.
+      </p>
+    </div>
+
+    <CostComparison client:idle calibers={caliberCosts} basePath="/caliber-companion" />
+  </div>
+</BaseLayout>

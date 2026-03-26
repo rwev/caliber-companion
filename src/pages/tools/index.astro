@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const tools = [
+  {
+    title: 'Ballistics Calculator',
+    description: 'Point mass trajectory calculator with wind drift, drop in MOA, and atmospheric corrections.',
+    href: '/caliber-companion/tools/ballistics-calculator',
+    icon: 'M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z',
+  },
+  {
+    title: 'Recoil Calculator',
+    description: 'Compute free recoil energy, velocity, and impulse for any firearm and load combination.',
+    href: '/caliber-companion/tools/recoil-calculator',
+    icon: 'M13 10V3L4 14h7v7l9-11h-7z',
+  },
+  {
+    title: 'Ammo Cost Calculator',
+    description: 'Estimate monthly and annual ammunition spending across all calibers you shoot.',
+    href: '/caliber-companion/tools/ammo-cost-calculator',
+    icon: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+  },
+  {
+    title: 'Range Card Generator',
+    description: 'Generate printable range cards with trajectory, drop, and energy data for any caliber and load.',
+    href: '/caliber-companion/tools/range-card',
+    icon: 'M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z',
+  },
+  {
+    title: 'Cartridge Size Overlay',
+    description: 'Overlay up to 6 cartridge profiles at true proportional scale to compare dimensions.',
+    href: '/caliber-companion/tools/cartridge-overlay',
+    icon: 'M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15',
+  },
+  {
+    title: 'Bullet Drop Comparison',
+    description: 'Overlay trajectory, energy, and velocity curves for multiple calibers on an interactive chart.',
+    href: '/caliber-companion/tools/drop-chart',
+    icon: 'M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941',
+  },
+];
+---
+
+<BaseLayout title="Tools" description="Interactive calculators for ballistics, recoil, and more.">
+  <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
+    <div class="mb-8">
+      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+        Tools
+      </h1>
+      <p class="mt-2 font-mono text-base text-text-muted">
+        Interactive calculators for shooters and reloaders
+      </p>
+    </div>
+
+    <div class="grid gap-4 sm:grid-cols-2">
+      {tools.map(tool => (
+        <a
+          href={tool.href}
+          class="group border border-surface-border bg-surface p-6 transition-all hover:border-accent/40 hover:bg-surface-raised hover:shadow-[0_0_24px_rgba(224,90,43,0.06)]"
+        >
+          <div class="flex items-start gap-4">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center border border-accent/30 bg-accent/10 text-accent">
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d={tool.icon} />
+              </svg>
+            </div>
+            <div>
+              <h2 class="font-display text-xl font-semibold text-text-primary group-hover:text-accent transition-colors">
+                {tool.title}
+              </h2>
+              <p class="mt-1 font-mono text-sm text-text-muted">{tool.description}</p>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

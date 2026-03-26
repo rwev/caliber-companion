@@ -1,0 +1,350 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { fmtRange, fmtNumber, titleCase } from '../lib/format';
+
+const allCalibers = await getCollection('caliberData');
+const bySlug = new Map(allCalibers.map(c => [c.data.slug, c.data]));
+
+// NATO standard cartridges paired with civilian equivalents
+const natoPairs = [
+  {
+    natoSlug: '556x45mm-nato',
+    civilianSlug: '223-remington',
+    natoDesignation: '5.56×45mm NATO',
+    stanag: 'STANAG 4172',
+    role: 'Standard infantry rifle cartridge',
+    interchangeability: '.223 Rem can be safely fired in 5.56 NATO chambers. 5.56 NATO should NOT be fired in .223 Rem-only chambers due to higher pressure (~62,000 psi vs ~55,000 psi) and longer leade dimensions. Rifles marked ".223 Wylde" safely accept both.',
+    safeDirection: '.223 → 5.56 chamber',
+    unsafeDirection: '5.56 → .223-only chamber',
+  },
+  {
+    natoSlug: '308-winchester',
+    civilianSlug: null,
+    natoDesignation: '7.62×51mm NATO',
+    stanag: 'STANAG 2310',
+    role: 'Battle rifle, GPMG, and sniper cartridge',
+    interchangeability: '.308 Winchester and 7.62×51mm NATO are very similar but not identical. .308 Win is loaded to slightly higher SAAMI pressures (~62,000 psi vs ~60,200 psi). Both can generally be fired in either chamber, but .308 Win brass may have thinner walls. Most modern rifles handle both safely.',
+    safeDirection: 'Generally interchangeable',
+    unsafeDirection: 'Use caution with older 7.62 NATO chambers',
+  },
+  {
+    natoSlug: '9mm-luger',
+    civilianSlug: null,
+    natoDesignation: '9×19mm NATO',
+    stanag: 'STANAG 4090',
+    role: 'Standard pistol and submachine gun cartridge',
+    interchangeability: '9mm Luger / 9mm Parabellum and 9mm NATO are functionally identical. NATO-spec loads tend to use hotter 124gr FMJ at ~1,260 fps compared to typical commercial 115gr at ~1,180 fps. All 9mm Luger firearms safely handle NATO-spec ammunition.',
+    safeDirection: 'Fully interchangeable',
+    unsafeDirection: null,
+  },
+  {
+    natoSlug: '50-bmg',
+    civilianSlug: null,
+    natoDesignation: '12.7×99mm NATO',
+    stanag: 'STANAG 4383',
+    role: 'Heavy machine gun and anti-materiel rifle cartridge',
+    interchangeability: '.50 BMG and 12.7×99mm NATO are the same cartridge. Military designations include M33 Ball, M8 API, and Mk 211 Raufoss. Civilian and military ammunition are fully interchangeable in any .50 BMG-chambered firearm.',
+    safeDirection: 'Fully interchangeable',
+    unsafeDirection: null,
+  },
+  {
+    natoSlug: '300-blackout',
+    civilianSlug: null,
+    natoDesignation: '7.62×35mm',
+    stanag: null,
+    role: 'Special operations suppressed/CQB cartridge',
+    interchangeability: '.300 Blackout is the civilian designation for 7.62×35mm. Used by U.S. SOCOM and select NATO special operations units. Fully interchangeable — same cartridge, different naming conventions.',
+    safeDirection: 'Fully interchangeable',
+    unsafeDirection: null,
+  },
+];
+
+// Additional NATO/military cartridges without direct civilian pairs
+const militaryOnly = [
+  {
+    slug: '57x28mm',
+    natoDesignation: '5.7×28mm (STANAG 4509)',
+    role: 'NATO PDW cartridge',
+    notes: 'Developed by FN Herstal for the P90 PDW and Five-seveN pistol. NATO standardized under STANAG 4509 as the Personal Defence Weapon cartridge. No separate civilian equivalent — the same cartridge serves both markets.',
+  },
+  {
+    slug: '46x30mm',
+    natoDesignation: '4.6×30mm',
+    role: 'NATO PDW cartridge (alternate)',
+    notes: 'Developed by Heckler & Koch for the MP7 PDW. Competed against 5.7×28mm in NATO PDW trials. Adopted by German Bundeswehr and select NATO special operations units. Limited civilian availability.',
+  },
+  {
+    slug: '762x39mm',
+    natoDesignation: '7.62×39mm M43',
+    role: 'Soviet/Warsaw Pact standard intermediate cartridge',
+    notes: 'Standard cartridge for the AK-47/AKM family from 1949–1974. Not a NATO cartridge — it is the primary adversary equivalent to 5.56 NATO. Widely available on the civilian market worldwide.',
+  },
+  {
+    slug: '762x54mmr',
+    natoDesignation: '7.62×54mmR',
+    role: 'Russian/Soviet MG and sniper cartridge',
+    notes: 'In continuous military service since 1891 — the oldest military cartridge still in front-line use. Powers the PKM machine gun, SVD Dragunov, and SV-98. The Russian/Soviet equivalent to 7.62×51mm NATO.',
+  },
+  {
+    slug: '45-acp',
+    natoDesignation: '11.43×23mm',
+    role: 'NATO secondary sidearm cartridge',
+    notes: 'Used by NATO members as a secondary/legacy pistol cartridge. Standard U.S. military sidearm cartridge from 1911–1985 (M1911). Still used by some special operations units who prefer .45 ACP platforms.',
+  },
+];
+
+const pageDescription = 'Complete reference guide to NATO military cartridge designations and their civilian equivalents. Covers interchangeability, safety considerations, and STANAG specifications.';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  'name': 'NATO vs Civilian Caliber Equivalents',
+  'headline': 'NATO vs Civilian Caliber Equivalents — Complete Reference Guide',
+  'description': pageDescription,
+  'publisher': { '@type': 'Organization', 'name': 'Caliber Companion' },
+  'mainEntityOfPage': 'https://rwev.github.io/caliber-companion/nato-equivalents',
+};
+---
+
+<BaseLayout title="NATO vs Civilian Caliber Equivalents" description={pageDescription} jsonLd={jsonLd} breadcrumbs={[{ label: 'NATO Equivalents' }]}>
+  <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
+    <div class="mb-8">
+      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+        NATO vs Civilian Caliber Equivalents
+      </h1>
+      <p class="mt-3 font-mono text-base text-text-muted max-w-3xl">
+        NATO standardizes military cartridges under STANAG (Standardization Agreement) designations.
+        Many have direct civilian equivalents — but interchangeability varies. This guide covers the key
+        pairings, safety considerations, and technical differences.
+      </p>
+    </div>
+
+    <!-- Safety Notice -->
+    <div class="mb-8 border border-danger/30 bg-danger/5 p-4">
+      <div class="flex items-start gap-3">
+        <svg class="h-5 w-5 shrink-0 text-danger mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+        </svg>
+        <div>
+          <p class="font-mono text-sm font-medium text-danger uppercase tracking-wider">Safety Warning</p>
+          <p class="mt-1 font-mono text-sm text-text-secondary leading-relaxed">
+            "Equivalent" does not always mean "interchangeable." Some NATO/civilian pairs have different pressure
+            specifications and chamber dimensions. Always verify your firearm's markings and consult the manufacturer
+            before using ammunition not specifically listed as safe for your chamber.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- NATO Standard Pairings -->
+    <section class="mb-12">
+      <div class="mb-6 flex items-center gap-4">
+        <div class="h-px flex-1 bg-surface-border" aria-hidden="true"></div>
+        <h2 class="font-display text-base tracking-[0.25em] uppercase text-text-muted">NATO Standard Cartridges</h2>
+        <div class="h-px flex-1 bg-surface-border" aria-hidden="true"></div>
+      </div>
+
+      <div class="space-y-4">
+        {natoPairs.map(pair => {
+          const nato = bySlug.get(pair.natoSlug);
+          const civilian = pair.civilianSlug ? bySlug.get(pair.civilianSlug) : null;
+          const primary = nato!;
+
+          return (
+            <div class="border border-surface-border">
+              {/* Header */}
+              <div class="flex flex-wrap items-center justify-between gap-2 border-b border-surface-border bg-surface-overlay px-4 py-3">
+                <div class="flex items-center gap-3">
+                  <span class="font-display text-lg font-semibold text-text-primary">{pair.natoDesignation}</span>
+                  {pair.stanag && (
+                    <span class="border border-accent/30 bg-accent/10 px-2 py-0.5 font-mono text-xs tracking-wider uppercase text-accent">
+                      {pair.stanag}
+                    </span>
+                  )}
+                </div>
+                <span class="font-mono text-sm text-text-muted">{pair.role}</span>
+              </div>
+
+              <div class="p-4 space-y-4">
+                {/* Caliber links */}
+                <div class="flex flex-wrap gap-2">
+                  <a
+                    href={`/caliber-companion/calibers/${primary.slug}`}
+                    class="inline-flex items-center gap-1.5 border border-surface-border bg-surface-raised px-3 py-1.5 font-mono text-sm text-text-primary transition-colors hover:border-accent hover:text-accent"
+                  >
+                    <span class="text-accent font-medium">NATO</span>
+                    {primary.name}
+                    <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7" /></svg>
+                  </a>
+                  {civilian && (
+                    <a
+                      href={`/caliber-companion/calibers/${civilian.slug}`}
+                      class="inline-flex items-center gap-1.5 border border-surface-border bg-surface-raised px-3 py-1.5 font-mono text-sm text-text-primary transition-colors hover:border-accent hover:text-accent"
+                    >
+                      <span class="text-text-muted font-medium">CIV</span>
+                      {civilian.name}
+                      <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7" /></svg>
+                    </a>
+                  )}
+                </div>
+
+                {/* Quick specs */}
+                <div class="grid grid-cols-2 gap-3 sm:grid-cols-4">
+                  <div>
+                    <div class="font-mono text-xs tracking-wider uppercase text-text-muted">Velocity</div>
+                    <div class="mt-0.5 font-mono text-sm text-text-secondary">
+                      {fmtRange(primary.typical_velocity_fps, 'fps')}
+                    </div>
+                  </div>
+                  <div>
+                    <div class="font-mono text-xs tracking-wider uppercase text-text-muted">Energy</div>
+                    <div class="mt-0.5 font-mono text-sm text-text-secondary">
+                      {fmtRange(primary.typical_energy_ft_lbs, 'ft·lbs')}
+                    </div>
+                  </div>
+                  <div>
+                    <div class="font-mono text-xs tracking-wider uppercase text-text-muted">Eff. Range</div>
+                    <div class="mt-0.5 font-mono text-sm text-text-secondary">
+                      {fmtNumber(primary.effective_range_yd)} yd
+                    </div>
+                  </div>
+                  <div>
+                    <div class="font-mono text-xs tracking-wider uppercase text-text-muted">Introduced</div>
+                    <div class="mt-0.5 font-mono text-sm text-text-secondary">{primary.year_introduced}</div>
+                  </div>
+                </div>
+
+                {/* Interchangeability */}
+                <div class="border-t border-surface-border-subtle pt-3">
+                  <div class="font-mono text-xs tracking-wider uppercase text-text-muted mb-1.5">Interchangeability</div>
+                  <p class="font-mono text-sm text-text-secondary leading-relaxed">{pair.interchangeability}</p>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    {pair.safeDirection && (
+                      <span class="inline-flex items-center gap-1 font-mono text-xs text-success">
+                        <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        {pair.safeDirection}
+                      </span>
+                    )}
+                    {pair.unsafeDirection && (
+                      <span class="inline-flex items-center gap-1 font-mono text-xs text-danger">
+                        <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" /></svg>
+                        {pair.unsafeDirection}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+
+    <!-- Additional Military Cartridges -->
+    <section class="mb-12">
+      <div class="mb-6 flex items-center gap-4">
+        <div class="h-px flex-1 bg-surface-border" aria-hidden="true"></div>
+        <h2 class="font-display text-base tracking-[0.25em] uppercase text-text-muted">Other Military Cartridges</h2>
+        <div class="h-px flex-1 bg-surface-border" aria-hidden="true"></div>
+      </div>
+
+      <div class="space-y-3">
+        {militaryOnly.map(item => {
+          const cal = bySlug.get(item.slug);
+          if (!cal) return null;
+          return (
+            <div class="border border-surface-border">
+              <div class="flex flex-wrap items-center justify-between gap-2 border-b border-surface-border bg-surface-overlay px-4 py-2.5">
+                <div class="flex items-center gap-3">
+                  <span class="font-display text-base font-semibold text-text-primary">{item.natoDesignation}</span>
+                </div>
+                <span class="font-mono text-sm text-text-muted">{item.role}</span>
+              </div>
+              <div class="p-4 space-y-3">
+                <a
+                  href={`/caliber-companion/calibers/${cal.slug}`}
+                  class="inline-flex items-center gap-1.5 border border-surface-border bg-surface-raised px-3 py-1.5 font-mono text-sm text-text-primary transition-colors hover:border-accent hover:text-accent"
+                >
+                  {cal.name}
+                  <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7" /></svg>
+                </a>
+
+                <div class="grid grid-cols-2 gap-3 sm:grid-cols-4">
+                  <div>
+                    <div class="font-mono text-xs tracking-wider uppercase text-text-muted">Velocity</div>
+                    <div class="mt-0.5 font-mono text-sm text-text-secondary">{fmtRange(cal.typical_velocity_fps, 'fps')}</div>
+                  </div>
+                  <div>
+                    <div class="font-mono text-xs tracking-wider uppercase text-text-muted">Energy</div>
+                    <div class="mt-0.5 font-mono text-sm text-text-secondary">{fmtRange(cal.typical_energy_ft_lbs, 'ft·lbs')}</div>
+                  </div>
+                  <div>
+                    <div class="font-mono text-xs tracking-wider uppercase text-text-muted">Eff. Range</div>
+                    <div class="mt-0.5 font-mono text-sm text-text-secondary">{fmtNumber(cal.effective_range_yd)} yd</div>
+                  </div>
+                  <div>
+                    <div class="font-mono text-xs tracking-wider uppercase text-text-muted">Introduced</div>
+                    <div class="mt-0.5 font-mono text-sm text-text-secondary">{cal.year_introduced}</div>
+                  </div>
+                </div>
+
+                <p class="font-mono text-sm text-text-muted leading-relaxed border-t border-surface-border-subtle pt-3">{item.notes}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+
+    <!-- Quick Reference Table -->
+    <section>
+      <div class="mb-6 flex items-center gap-4">
+        <div class="h-px flex-1 bg-surface-border" aria-hidden="true"></div>
+        <h2 class="font-display text-base tracking-[0.25em] uppercase text-text-muted">Quick Reference</h2>
+        <div class="h-px flex-1 bg-surface-border" aria-hidden="true"></div>
+      </div>
+
+      <div class="border border-surface-border overflow-x-auto" tabindex="0" role="region" aria-label="NATO vs civilian caliber quick reference">
+        <table class="w-full text-left font-mono">
+          <thead>
+            <tr class="border-b border-surface-border bg-surface-overlay text-text-muted">
+              <th scope="col" class="px-4 py-2.5 font-medium tracking-wider uppercase text-sm">NATO Designation</th>
+              <th scope="col" class="px-4 py-2.5 font-medium tracking-wider uppercase text-sm">Civilian Name</th>
+              <th scope="col" class="px-4 py-2.5 font-medium tracking-wider uppercase text-sm">STANAG</th>
+              <th scope="col" class="px-4 py-2.5 font-medium tracking-wider uppercase text-sm text-center">Interchangeable?</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              { nato: '5.56×45mm', civ: '.223 Remington', stanag: '4172', safe: 'partial' },
+              { nato: '7.62×51mm', civ: '.308 Winchester', stanag: '2310', safe: 'yes' },
+              { nato: '9×19mm', civ: '9mm Luger / Parabellum', stanag: '4090', safe: 'yes' },
+              { nato: '12.7×99mm', civ: '.50 BMG', stanag: '4383', safe: 'yes' },
+              { nato: '7.62×35mm', civ: '.300 Blackout', stanag: '—', safe: 'yes' },
+              { nato: '5.7×28mm', civ: '5.7×28mm (same)', stanag: '4509', safe: 'yes' },
+              { nato: '4.6×30mm', civ: '4.6×30mm (same)', stanag: '—', safe: 'yes' },
+              { nato: '11.43×23mm', civ: '.45 ACP', stanag: '—', safe: 'yes' },
+            ].map((row, i) => (
+              <tr class={`border-b border-surface-border-subtle ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
+                <td class="px-4 py-2.5 text-sm text-text-primary font-medium">{row.nato}</td>
+                <td class="px-4 py-2.5 text-sm text-text-secondary">{row.civ}</td>
+                <td class="px-4 py-2.5 text-sm text-text-muted">{row.stanag}</td>
+                <td class="px-4 py-2.5 text-sm text-center">
+                  {row.safe === 'yes' ? (
+                    <span class="text-success">Yes</span>
+                  ) : (
+                    <span class="text-warning">Partial *</span>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-2 font-mono text-xs text-text-muted">
+        * Partial: .223 Rem fires safely in 5.56 NATO chambers, but 5.56 NATO should not be fired in .223 Rem-only chambers. Use ".223 Wylde" chambers for full compatibility.
+      </p>
+    </section>
+  </div>
+</BaseLayout>

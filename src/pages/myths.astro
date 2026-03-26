@@ -1,0 +1,204 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { fmtRange, fmtNumber, fmtCurrency, titleCase } from '../lib/format';
+
+const allCalibers = await getCollection('caliberData');
+const bySlug = new Map(allCalibers.map(c => [c.data.slug, c.data]));
+
+const nine = bySlug.get('9mm-luger')!;
+const fortyfive = bySlug.get('45-acp')!;
+const twotwothree = bySlug.get('223-remington')!;
+const fivefivesix = bySlug.get('556x45mm-nato')!;
+const threeooeight = bySlug.get('308-winchester')!;
+const creedmoor = bySlug.get('65-creedmoor')!;
+const threeHundredWM = bySlug.get('300-winchester-magnum')!;
+const fiftyBMG = bySlug.get('50-bmg')!;
+const twentytwo = bySlug.get('22-lr')!;
+
+const myths = [
+  {
+    myth: '.45 ACP has way more "stopping power" than 9mm',
+    verdict: 'Mostly False',
+    verdictColor: 'text-danger',
+    explanation: `Modern 9mm JHP ammunition has closed the terminal performance gap. FBI testing in 2014 concluded that with modern hollow points, 9mm provides adequate penetration and expansion while offering lower recoil, higher capacity, and cheaper training costs.`,
+    data: [
+      { label: '9mm Energy', value: fmtRange(nine.typical_energy_ft_lbs, 'ft·lbs') },
+      { label: '.45 ACP Energy', value: fmtRange(fortyfive.typical_energy_ft_lbs, 'ft·lbs') },
+      { label: '9mm Recoil', value: `${nine.recoil.free_recoil_ft_lbs} ft·lbs` },
+      { label: '.45 ACP Recoil', value: `${fortyfive.recoil.free_recoil_ft_lbs} ft·lbs (50% more)` },
+      { label: '9mm Cost', value: fmtCurrency(nine.cost_per_round_usd) + '/rd' },
+      { label: '.45 ACP Cost', value: fmtCurrency(fortyfive.cost_per_round_usd) + '/rd' },
+    ],
+    calibers: ['9mm-luger', '45-acp'],
+  },
+  {
+    myth: '.223 Remington / 5.56 NATO is too small for deer hunting',
+    verdict: 'Mostly False',
+    verdictColor: 'text-warning',
+    explanation: `While .223/5.56 isn't ideal for large deer at long range, modern 62-77gr controlled-expansion bullets are effective on whitetail deer under 200 yards with proper shot placement. Many states allow it, and it's one of the lowest-recoil options available. The key is bullet selection — match/FMJ rounds are inadequate, but bonded soft points and copper solids are very effective.`,
+    data: [
+      { label: '.223 Muzzle Energy', value: fmtRange(twotwothree.typical_energy_ft_lbs, 'ft·lbs') },
+      { label: 'Effective Range', value: `${fmtNumber(twotwothree.effective_range_yd)} yd` },
+      { label: 'Bullet Weight', value: fmtRange(twotwothree.typical_bullet_weight_gr, 'gr') },
+      { label: 'Recoil', value: `${twotwothree.recoil.free_recoil_ft_lbs} ft·lbs (very manageable)` },
+    ],
+    calibers: ['223-remington', '556x45mm-nato'],
+  },
+  {
+    myth: 'You need a magnum cartridge for elk',
+    verdict: 'False',
+    verdictColor: 'text-danger',
+    explanation: `Cartridges like .308 Winchester, 6.5 Creedmoor, and .270 Winchester have taken thousands of elk cleanly within their effective ranges. The key factors are bullet construction, shot placement, and knowing your distance limits — not raw energy. A .308 with a 165gr bonded bullet at 200 yards is more effective than a .300 Win Mag miss at 400 yards.`,
+    data: [
+      { label: '.308 Win Energy', value: fmtRange(threeooeight.typical_energy_ft_lbs, 'ft·lbs') },
+      { label: '.308 Win Recoil', value: `${threeooeight.recoil.free_recoil_ft_lbs} ft·lbs` },
+      { label: '.300 WM Recoil', value: `${threeHundredWM.recoil.free_recoil_ft_lbs} ft·lbs (67% more)` },
+      { label: '6.5 CM Eff. Range', value: `${fmtNumber(creedmoor.effective_range_yd)} yd` },
+    ],
+    calibers: ['308-winchester', '300-winchester-magnum', '65-creedmoor'],
+  },
+  {
+    myth: 'Bigger bullets always travel farther',
+    verdict: 'False',
+    verdictColor: 'text-danger',
+    explanation: `Effective range is determined by ballistic coefficient, velocity, and energy retention — not bullet diameter. The 6.5 Creedmoor's high-BC 140gr bullets maintain energy and resist wind far better at distance than many larger cartridges, despite being physically smaller. Bullet shape (ogive, boat tail) matters more than size.`,
+    data: [
+      { label: '.50 BMG Eff. Range', value: `${fmtNumber(fiftyBMG.effective_range_yd)} yd` },
+      { label: '6.5 CM Eff. Range', value: `${fmtNumber(creedmoor.effective_range_yd)} yd` },
+      { label: '.308 Win Eff. Range', value: `${fmtNumber(threeooeight.effective_range_yd)} yd` },
+      { label: '6.5 CM Bullet Weight', value: fmtRange(creedmoor.typical_bullet_weight_gr, 'gr') },
+    ],
+    calibers: ['65-creedmoor', '308-winchester', '50-bmg'],
+  },
+  {
+    myth: '.22 LR is not dangerous / is just a "toy"',
+    verdict: 'Dangerously False',
+    verdictColor: 'text-danger',
+    explanation: `.22 LR is lethal. It causes more firearm deaths in the United States than any other caliber. Its small size, quiet report, and "harmless" reputation lead to complacency. A .22 LR bullet can travel over a mile, penetrate skull bone at 100+ yards, and cause fatal internal injuries. Every firearm safety rule applies equally to .22 LR.`,
+    data: [
+      { label: 'Muzzle Energy', value: fmtRange(twentytwo.typical_energy_ft_lbs, 'ft·lbs') },
+      { label: 'Max Range', value: `${fmtNumber(twentytwo.max_range_yd ?? 0)} yd (${((twentytwo.max_range_yd ?? 0) * 3 / 5280).toFixed(1)} mi)` },
+      { label: 'Muzzle Velocity', value: fmtRange(twentytwo.typical_velocity_fps, 'fps') },
+    ],
+    calibers: ['22-lr'],
+  },
+  {
+    myth: '5.56 NATO and .223 Remington are the same thing',
+    verdict: 'Partially True',
+    verdictColor: 'text-warning',
+    explanation: `While dimensionally very similar, they are NOT identical. 5.56 NATO is loaded to higher pressures (~62,000 psi vs ~55,000 psi) and has different chamber dimensions (longer leade). Firing 5.56 NATO in a .223 Rem-only chamber can produce dangerous overpressure. .223 Rem in a 5.56 NATO chamber is always safe. Rifles marked ".223 Wylde" handle both.`,
+    data: [
+      { label: '5.56 NATO Pressure', value: '~62,000 psi' },
+      { label: '.223 Rem Pressure', value: '~55,000 psi' },
+      { label: 'Safe Direction', value: '.223 → 5.56 chamber ✓' },
+      { label: 'Unsafe Direction', value: '5.56 → .223-only chamber ✗' },
+    ],
+    calibers: ['556x45mm-nato', '223-remington'],
+  },
+  {
+    myth: 'More recoil = more power downrange',
+    verdict: 'Misleading',
+    verdictColor: 'text-warning',
+    explanation: `Recoil is a function of bullet weight, velocity, powder charge, AND gun weight. A heavy rifle in .300 Win Mag can recoil less than a light rifle in .308 Win. Additionally, high-BC bullets retain energy better than heavier, slower bullets — so a "softer shooting" cartridge with efficient bullets can outperform a harder-kicking one at distance. The 6.5 Creedmoor exemplifies this: moderate recoil with excellent long-range performance.`,
+    data: [
+      { label: '6.5 CM Recoil', value: `${creedmoor.recoil.free_recoil_ft_lbs} ft·lbs` },
+      { label: '6.5 CM Eff. Range', value: `${fmtNumber(creedmoor.effective_range_yd)} yd` },
+      { label: '.308 Win Recoil', value: `${threeooeight.recoil.free_recoil_ft_lbs} ft·lbs` },
+      { label: '.308 Win Eff. Range', value: `${fmtNumber(threeooeight.effective_range_yd)} yd` },
+    ],
+    calibers: ['65-creedmoor', '308-winchester', '300-winchester-magnum'],
+  },
+];
+
+const pageDescription = `${myths.length} common caliber and ammunition myths debunked with real ballistic data. From stopping power debates to cartridge interchangeability — get the facts.`;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': myths.map(m => ({
+    '@type': 'Question',
+    'name': `Is it true that ${m.myth.toLowerCase()}?`,
+    'acceptedAnswer': {
+      '@type': 'Answer',
+      'text': `${m.verdict}. ${m.explanation}`,
+    },
+  })),
+};
+---
+
+<BaseLayout title="Caliber Myths & Misconceptions" description={pageDescription} breadcrumbs={[{ label: 'Myths & Misconceptions' }]}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+
+  <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
+    <div class="mb-8">
+      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+        Caliber Myths & Misconceptions
+      </h1>
+      <p class="mt-2 font-mono text-base text-text-muted max-w-3xl">
+        {myths.length} common beliefs about calibers and ammunition, examined against real ballistic data.
+        Some are flat wrong, others are more nuanced than the gun-counter wisdom suggests.
+      </p>
+    </div>
+
+    <div class="space-y-6">
+      {myths.map((m, idx) => (
+        <div class="border border-surface-border">
+          {/* Header */}
+          <div class="border-b border-surface-border bg-surface-overlay px-4 py-3 sm:px-5">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <div class="font-mono text-xs tracking-wider uppercase text-text-muted mb-1">
+                  Myth #{idx + 1}
+                </div>
+                <h2 class="font-display text-lg font-semibold text-text-primary sm:text-xl">
+                  "{m.myth}"
+                </h2>
+              </div>
+              <span class={`shrink-0 border px-3 py-1 font-mono text-sm font-medium tracking-wider uppercase ${
+                m.verdictColor === 'text-danger'
+                  ? 'border-danger/30 bg-danger/10 text-danger'
+                  : 'border-warning/30 bg-warning/10 text-warning'
+              }`}>
+                {m.verdict}
+              </span>
+            </div>
+          </div>
+
+          <div class="p-4 sm:p-5 space-y-4">
+            {/* Explanation */}
+            <p class="font-mono text-sm text-text-secondary leading-relaxed">
+              {m.explanation}
+            </p>
+
+            {/* Data points */}
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              {m.data.map(d => (
+                <div class="border border-surface-border-subtle bg-surface-raised px-3 py-2">
+                  <div class="font-mono text-xs tracking-wider uppercase text-text-muted">{d.label}</div>
+                  <div class="mt-0.5 font-mono text-sm text-text-primary">{d.value}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Caliber links */}
+            <div class="flex flex-wrap gap-2 pt-2 border-t border-surface-border-subtle">
+              <span class="font-mono text-xs tracking-wider uppercase text-text-muted self-center">Related:</span>
+              {m.calibers.map(slug => {
+                const cal = bySlug.get(slug);
+                return cal ? (
+                  <a
+                    href={`/caliber-companion/calibers/${slug}`}
+                    class="font-mono text-sm text-text-secondary hover:text-accent transition-colors"
+                  >
+                    {cal.name}
+                  </a>
+                ) : null;
+              })}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,154 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CartridgeFamilyTree from '../components/islands/CartridgeFamilyTree';
+import { getCollection } from 'astro:content';
+
+const calibers = await getCollection('caliberData');
+
+// Build a lookup map
+const caliberMap = new Map(calibers.map(c => [c.data.slug, c.data]));
+
+// Build tree structure
+interface TreeNode {
+  slug: string;
+  name: string;
+  category: string;
+  year: number;
+  children: TreeNode[];
+}
+
+// Find all calibers that have children (derived_cartridges) or parents (parent_cartridge)
+const childOf = new Map<string, string>(); // child slug -> parent slug
+for (const c of calibers) {
+  if (c.data.parent_cartridge) {
+    childOf.set(c.data.slug, c.data.parent_cartridge);
+  }
+}
+
+// Also use derived_cartridges to fill in gaps
+for (const c of calibers) {
+  if (c.data.derived_cartridges) {
+    for (const childSlug of c.data.derived_cartridges) {
+      if (!childOf.has(childSlug)) {
+        childOf.set(childSlug, c.data.slug);
+      }
+    }
+  }
+}
+
+// Build nodes
+function buildNode(slug: string): TreeNode | null {
+  const data = caliberMap.get(slug);
+  if (!data) return null;
+
+  // Find children of this node
+  const childSlugs = [...childOf.entries()]
+    .filter(([_, parent]) => parent === slug)
+    .map(([child, _]) => child);
+
+  const children = childSlugs
+    .map(buildNode)
+    .filter(Boolean) as TreeNode[];
+
+  children.sort((a, b) => a.year - b.year);
+
+  return {
+    slug: data.slug,
+    name: data.name,
+    category: data.category,
+    year: data.year_introduced,
+    children,
+  };
+}
+
+// Root nodes are calibers that have no parent (or whose parent isn't in our database)
+// AND have at least one descendant
+const rootSlugs = new Set<string>();
+for (const c of calibers) {
+  const slug = c.data.slug;
+  // Trace to root
+  let current = slug;
+  while (childOf.has(current)) {
+    const parent = childOf.get(current)!;
+    if (caliberMap.has(parent)) {
+      current = parent;
+    } else {
+      break;
+    }
+  }
+  rootSlugs.add(current);
+}
+
+// Build trees, only include those with descendants
+const trees = [...rootSlugs]
+  .map(buildNode)
+  .filter(Boolean)
+  .filter(node => node!.children.length > 0) as TreeNode[];
+
+// Also gather standalone calibers (no parent, no children) into an "Independent" section
+const linkedSlugs = new Set<string>();
+function collectSlugs(node: TreeNode) {
+  linkedSlugs.add(node.slug);
+  node.children.forEach(collectSlugs);
+}
+trees.forEach(collectSlugs);
+
+const standaloneCalibers = calibers
+  .filter(c => !linkedSlugs.has(c.data.slug))
+  .map(c => ({
+    slug: c.data.slug,
+    name: c.data.name,
+    category: c.data.category,
+    year: c.data.year_introduced,
+    children: [] as TreeNode[],
+  }));
+---
+
+<BaseLayout title="Cartridge Family Tree" description="Interactive visualization of cartridge lineage showing parent-child relationships across 100+ calibers. Explore how modern cartridges evolved from their ancestors.">
+  <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
+    <div class="mb-8">
+      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+        Cartridge Family Tree
+      </h1>
+      <p class="mt-2 font-mono text-base text-text-muted">
+        {trees.reduce((sum, t) => {
+          let count = 0;
+          function walk(n: TreeNode) { count++; n.children.forEach(walk); }
+          walk(t);
+          return sum + count;
+        }, 0)} linked calibers across {trees.length} families · {standaloneCalibers.length} independent cartridges
+      </p>
+      <p class="mt-1 font-mono text-xs text-text-muted">
+        Click +/− to expand or collapse branches · click any caliber to view its detail page
+      </p>
+    </div>
+
+    <CartridgeFamilyTree client:idle trees={trees} basePath="/caliber-companion" />
+
+    {standaloneCalibers.length > 0 && (
+      <div class="mt-10 border-t border-surface-border pt-8">
+        <h2 class="font-display text-base tracking-[0.2em] uppercase text-text-muted mb-4">
+          Independent Cartridges
+          <span class="font-mono text-sm ml-2">({standaloneCalibers.length})</span>
+        </h2>
+        <p class="font-mono text-xs text-text-muted mb-4">
+          Cartridges without recorded parent or derived cartridge relationships in our database.
+        </p>
+        <div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+          {standaloneCalibers
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .map(c => (
+              <a
+                href={`/caliber-companion/calibers/${c.slug}`}
+                class="flex items-center justify-between border border-surface-border px-3 py-2 font-mono text-sm text-text-secondary hover:border-accent/30 hover:text-accent transition-colors"
+              >
+                <span>{c.name}</span>
+                <span class="text-text-muted text-xs">{c.year}</span>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    )}
+  </div>
+</BaseLayout>

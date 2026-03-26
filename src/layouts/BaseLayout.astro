@@ -1,16 +1,23 @@
 ---
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 import '../styles/global.css';
+
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
 
 interface Props {
   title: string;
   description?: string;
   ogType?: string;
   jsonLd?: Record<string, any>;
+  breadcrumbs?: BreadcrumbItem[];
 }
 
-const { title, description = 'Research, compare, and understand firearm calibers.', ogType = 'website', jsonLd } = Astro.props;
+const { title, description = 'Research, compare, and understand firearm calibers.', ogType = 'website', jsonLd, breadcrumbs } = Astro.props;
 const fullTitle = title === 'Home' ? 'Caliber Companion' : `${title} — Caliber Companion`;
 const siteUrl = 'https://rwev.github.io/caliber-companion';
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
@@ -62,14 +69,30 @@ const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
     />
 
     <link rel="icon" type="image/svg+xml" href="/caliber-companion/favicon.svg" />
+
+    <!-- PWA -->
+    <link rel="manifest" href="/caliber-companion/manifest.json" />
+    <meta name="theme-color" content="#eb6b34" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="CalComp" />
+    <link rel="apple-touch-icon" href="/caliber-companion/icon-192.svg" />
   </head>
 
   <body class="min-h-screen bg-surface text-text-primary antialiased">
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <Nav />
     <main id="main-content" class="pt-14">
+      {breadcrumbs && <Breadcrumb items={breadcrumbs} />}
       <slot />
     </main>
     <Footer />
+    <script is:inline>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/caliber-companion/sw.js').catch(function() {});
+        });
+      }
+    </script>
   </body>
 </html>

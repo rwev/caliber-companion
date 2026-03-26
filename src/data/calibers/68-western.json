@@ -1,0 +1,277 @@
+{
+  "name": "6.8 Western",
+  "designation": "6.8 Western",
+  "aliases": [
+    "6.8 Western",
+    "6.8 Win Western"
+  ],
+  "category": "rifle",
+  "slug": "68-western",
+  "dimensions": {
+    "bullet_diameter_in": 0.277,
+    "neck_diameter_in": 0.309,
+    "case_length_in": 2.02,
+    "overall_length_in": 2.955,
+    "rim_diameter_in": 0.535,
+    "case_type": "rimless, bottleneck"
+  },
+  "typical_velocity_fps": [
+    2750,
+    2970
+  ],
+  "typical_energy_ft_lbs": [
+    2900,
+    3400
+  ],
+  "typical_bullet_weight_gr": [
+    162,
+    175
+  ],
+  "effective_range_yd": 700,
+  "max_range_yd": 4800,
+  "recoil": {
+    "free_recoil_ft_lbs": 22.5,
+    "reference_firearm": "Winchester Model 70 (24\" barrel, 8.0 lbs)",
+    "subjective": "heavy"
+  },
+  "year_introduced": 2021,
+  "country_of_origin": "USA",
+  "military_usage": [],
+  "le_usage": [],
+  "primary_use_cases": [
+    "big game hunting (elk, moose)",
+    "long-range hunting",
+    "mountain hunting",
+    "precision shooting"
+  ],
+  "popularity_tier": "common",
+  "cost_per_round_usd": [
+    1.75,
+    3.5
+  ],
+  "common_firearms": [
+    "Winchester Model 70",
+    "Browning X-Bolt",
+    "Christensen Arms Mesa",
+    "Weatherby Vanguard",
+    "Springfield Waypoint",
+    "Bergara B-14 HMR"
+  ],
+  "adoption_timeline": [
+    {
+      "year": 2019,
+      "event": "Winchester and Browning begin joint development of a short-action .277-caliber cartridge optimized for heavy, high-BC bullets"
+    },
+    {
+      "year": 2021,
+      "event": "6.8 Western officially introduced at SHOT Show with Winchester and Browning rifle support"
+    },
+    {
+      "year": 2021,
+      "event": "SAAMI standardizes the 6.8 Western cartridge specifications"
+    },
+    {
+      "year": 2022,
+      "event": "Third-party rifle manufacturers begin offering 6.8 Western chamberings (Christensen Arms, Weatherby)"
+    },
+    {
+      "year": 2023,
+      "event": "Gains strong following among Western elk and mule deer hunters as a short-action magnum alternative"
+    }
+  ],
+  "parent_cartridge": "270-wsm",
+  "derived_cartridges": [],
+  "loads": [
+    {
+      "name": "Winchester Expedition Big Game LR 165 gr Accubond LR",
+      "bullet_weight_gr": 165,
+      "bullet_type": "Accubond LR",
+      "muzzle_velocity_fps": 2970,
+      "muzzle_energy_ft_lbs": 3230,
+      "barrel_length_in": 24.0,
+      "bc_g1": 0.620,
+      "bc_g7": 0.310,
+      "sectional_density": 0.307,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2970,
+          "energy_ft_lbs": 3230,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2812,
+          "energy_ft_lbs": 2897,
+          "drop_in": -1.6
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2660,
+          "energy_ft_lbs": 2593,
+          "drop_in": -6.9
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2513,
+          "energy_ft_lbs": 2314,
+          "drop_in": -16.2
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2371,
+          "energy_ft_lbs": 2059,
+          "drop_in": -30.1
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2234,
+          "energy_ft_lbs": 1828,
+          "drop_in": -49.3
+        }
+      ]
+    },
+    {
+      "name": "Browning Long Range Pro 175 gr Sierra Tipped GameKing",
+      "bullet_weight_gr": 175,
+      "bullet_type": "Sierra TGK",
+      "muzzle_velocity_fps": 2835,
+      "muzzle_energy_ft_lbs": 3122,
+      "barrel_length_in": 24.0,
+      "bc_g1": 0.617,
+      "bc_g7": 0.313,
+      "sectional_density": 0.326,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2835,
+          "energy_ft_lbs": 3122,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2685,
+          "energy_ft_lbs": 2800,
+          "drop_in": -1.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2540,
+          "energy_ft_lbs": 2506,
+          "drop_in": -7.6
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2400,
+          "energy_ft_lbs": 2238,
+          "drop_in": -17.8
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2265,
+          "energy_ft_lbs": 1993,
+          "drop_in": -33.0
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2134,
+          "energy_ft_lbs": 1768,
+          "drop_in": -53.8
+        }
+      ]
+    },
+    {
+      "name": "Winchester Copper Impact 162 gr Copper Extreme Point",
+      "bullet_weight_gr": 162,
+      "bullet_type": "Copper EP",
+      "muzzle_velocity_fps": 2875,
+      "muzzle_energy_ft_lbs": 2970,
+      "barrel_length_in": 24.0,
+      "bc_g1": 0.564,
+      "bc_g7": 0.285,
+      "sectional_density": 0.302,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2875,
+          "energy_ft_lbs": 2970,
+          "drop_in": 0.0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2707,
+          "energy_ft_lbs": 2636,
+          "drop_in": -1.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2545,
+          "energy_ft_lbs": 2331,
+          "drop_in": -7.6
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2389,
+          "energy_ft_lbs": 2054,
+          "drop_in": -18.0
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2239,
+          "energy_ft_lbs": 1803,
+          "drop_in": -33.6
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2095,
+          "energy_ft_lbs": 1578,
+          "drop_in": -55.2
+        }
+      ]
+    }
+  ],
+  "recommended_game": [
+    {
+      "game": "Elk",
+      "range": "Under 500 yd",
+      "notes": "Primary design purpose — 165-175gr bonded or monolithic bullets provide deep penetration on large body frames"
+    },
+    {
+      "game": "Moose",
+      "range": "Under 400 yd",
+      "notes": "175gr bullets with high sectional density deliver reliable penetration on the largest North American game"
+    },
+    {
+      "game": "Mule Deer",
+      "range": "Under 600 yd",
+      "notes": "Excellent long-range trajectory with ample energy; 162-165gr bullets ideal"
+    },
+    {
+      "game": "Mountain Goat / Sheep",
+      "range": "Under 500 yd",
+      "notes": "Flat trajectory and retained energy make it well-suited for mountain hunting at extended range"
+    },
+    {
+      "game": "Whitetail Deer",
+      "range": "Under 500 yd",
+      "notes": "More cartridge than needed for whitetail but excels at long range in open country"
+    }
+  ],
+  "max_pressure_psi": 65000,
+  "primer_type": "Large Rifle Magnum",
+  "powder_charge_range_gr": [
+    56.0,
+    66.0
+  ],
+  "availability_rating": 3,
+  "annual_production_estimate": "moderate",
+  "price_trend": "stable",
+  "suppressor_friendly": false,
+  "subsonic_loads_available": false,
+  "dangerous_substitutions": [
+    {
+      "caliber": ".270 WSM",
+      "danger": "While based on the .270 WSM case, the 6.8 Western has a shorter case and different headspace. .270 WSM rounds WILL NOT chamber in 6.8 Western rifles, but using the wrong ammunition could damage the firearm."
+    }
+  ]
+}

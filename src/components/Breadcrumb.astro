@@ -1,0 +1,55 @@
+---
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+interface Props {
+  items: BreadcrumbItem[];
+}
+
+const { items } = Astro.props;
+const basePath = '/caliber-companion';
+
+// Build full breadcrumb list with Home prepended
+const crumbs: BreadcrumbItem[] = [
+  { label: 'Home', href: basePath },
+  ...items,
+];
+
+// BreadcrumbList JSON-LD schema
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  'itemListElement': crumbs.map((crumb, i) => ({
+    '@type': 'ListItem',
+    'position': i + 1,
+    'name': crumb.label,
+    ...(crumb.href ? { 'item': `https://rwev.github.io${crumb.href}` } : {}),
+  })),
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+<nav aria-label="Breadcrumb" class="mx-auto max-w-7xl px-4 pt-6 sm:px-6">
+  <ol class="flex flex-wrap items-center gap-1 font-mono text-sm text-text-muted">
+    {crumbs.map((crumb, i) => (
+      <li class="flex items-center gap-1">
+        {i > 0 && (
+          <svg class="h-3 w-3 shrink-0 text-surface-border" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        )}
+        {crumb.href && i < crumbs.length - 1 ? (
+          <a href={crumb.href} class="tracking-wider uppercase hover:text-accent transition-colors">
+            {crumb.label}
+          </a>
+        ) : (
+          <span class="tracking-wider uppercase text-text-primary" aria-current={i === crumbs.length - 1 ? 'page' : undefined}>
+            {crumb.label}
+          </span>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>

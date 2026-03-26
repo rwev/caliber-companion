@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BulletDropChart from '../../components/islands/BulletDropChart';
+import { getCollection } from 'astro:content';
+
+const allCalibers = await getCollection('caliberData');
+const caliberEntries = allCalibers
+  .map(c => ({
+    name: c.data.name,
+    slug: c.data.slug,
+    loads: c.data.loads.map(l => ({
+      name: l.name,
+      bullet_weight_gr: l.bullet_weight_gr,
+      bullet_type: l.bullet_type,
+      muzzle_velocity_fps: l.muzzle_velocity_fps,
+      ballistics: l.ballistics,
+    })),
+  }))
+  .sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<BaseLayout title="Bullet Drop Comparison" description="Compare bullet drop, energy retention, and velocity curves across multiple calibers on an interactive chart." breadcrumbs={[{ label: 'Tools', href: '/caliber-companion/tools' }, { label: 'Drop Chart' }]}>
+  <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
+    <div class="mb-8">
+      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+        Bullet Drop Comparison
+      </h1>
+      <p class="mt-2 font-mono text-base text-text-muted max-w-2xl">
+        Overlay trajectory curves for up to 6 calibers. Compare bullet drop, energy retention, and velocity at distance. Select specific loads to see real-world ballistic data.
+      </p>
+    </div>
+
+    <BulletDropChart client:idle calibers={caliberEntries} />
+  </div>
+</BaseLayout>

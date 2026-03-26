@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ReloadingReference from '../components/islands/ReloadingReference';
+import { getCollection } from 'astro:content';
+
+const allCalibers = await getCollection('caliberData');
+const caliberReload = allCalibers
+  .map(c => ({
+    name: c.data.name,
+    slug: c.data.slug,
+    category: c.data.category,
+    primerType: c.data.primer_type ?? null,
+    maxPressure: c.data.max_pressure_psi ?? null,
+    powderLow: c.data.powder_charge_range_gr?.[0] ?? null,
+    powderHigh: c.data.powder_charge_range_gr?.[1] ?? null,
+    bulletDia: c.data.dimensions.bullet_diameter_in,
+    bulletWeightLow: c.data.typical_bullet_weight_gr[0],
+    bulletWeightHigh: c.data.typical_bullet_weight_gr[1],
+  }))
+  .sort((a, b) => a.name.localeCompare(b.name));
+
+const withData = caliberReload.filter(c => c.primerType || c.maxPressure);
+
+const pageDescription = `Reloading reference for ${withData.length} calibers — primer types, SAAMI max pressure, powder charge ranges, and bullet weights. Searchable and sortable table for handloaders.`;
+---
+
+<BaseLayout title="Reloading Reference" description={pageDescription} breadcrumbs={[{ label: 'Reloading Reference' }]}>
+  <div class="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+    <div class="mb-8">
+      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+        Reloading Reference
+      </h1>
+      <p class="mt-2 font-mono text-base text-text-muted max-w-3xl">
+        Quick-reference table of reloading specifications for {withData.length} calibers.
+        Primer types, SAAMI maximum pressures, typical powder charge ranges, and bullet weight ranges — all in one searchable view.
+      </p>
+    </div>
+
+    <ReloadingReference client:idle calibers={caliberReload} basePath="/caliber-companion" />
+  </div>
+</BaseLayout>
