@@ -1,0 +1,20 @@
+{
+  "name": "Savage Impulse",
+  "slug": "savage-impulse",
+  "manufacturer": "Savage Arms",
+  "country_of_origin": "USA",
+  "caliber": "308-winchester",
+  "type": "rifle",
+  "action": "Straight-pull bolt-action",
+  "capacity": 4,
+  "barrel_length_in": 22,
+  "overall_length_in": 42.5,
+  "weight_oz": 136,
+  "year_introduced": 2021,
+  "notable_features": [
+    "Hexlock straight-pull bolt action",
+    "AccuFit adjustable stock system",
+    "Faster cycling than traditional bolt actions"
+  ],
+  "summary": "The Savage Impulse brought straight-pull bolt-action technology to the American market at an accessible price, offering faster follow-up shots than conventional bolt rifles."
+}

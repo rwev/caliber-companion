@@ -1,0 +1,20 @@
+{
+  "name": "Shadow Systems DR920",
+  "slug": "shadow-systems-dr920",
+  "manufacturer": "Shadow Systems",
+  "country_of_origin": "USA",
+  "caliber": "9mm-luger",
+  "type": "pistol",
+  "action": "Striker-fired semi-automatic",
+  "capacity": 17,
+  "barrel_length_in": 4.5,
+  "overall_length_in": 7.9,
+  "weight_oz": 23.4,
+  "year_introduced": 2021,
+  "notable_features": [
+    "Glock magazine compatible",
+    "Multi-footprint optics cut",
+    "Bronze spiral-fluted match barrel"
+  ],
+  "summary": "The Shadow Systems DR920 is a premium Glock-compatible pistol that combines aftermarket-level features — optics cuts, match barrel, enhanced ergonomics — into a factory package."
+}

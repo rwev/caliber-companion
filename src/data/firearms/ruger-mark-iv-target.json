@@ -1,0 +1,20 @@
+{
+  "name": "Ruger Mark IV Target",
+  "slug": "ruger-mark-iv-target",
+  "manufacturer": "Sturm, Ruger & Co.",
+  "country_of_origin": "USA",
+  "caliber": "22-lr",
+  "type": "pistol",
+  "action": "Blowback semi-automatic",
+  "capacity": 10,
+  "barrel_length_in": 5.5,
+  "overall_length_in": 9.75,
+  "weight_oz": 35.6,
+  "year_introduced": 2016,
+  "notable_features": [
+    "One-button takedown",
+    "Adjustable rear sight",
+    "Bull barrel for accuracy"
+  ],
+  "summary": "The Ruger Mark IV Target continues the 75-year lineage of Ruger .22 pistols with a dramatically simplified one-button takedown that solved the famously difficult disassembly of previous generations."
+}

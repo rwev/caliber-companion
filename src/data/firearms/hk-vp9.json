@@ -1,0 +1,20 @@
+{
+  "name": "HK VP9",
+  "slug": "hk-vp9",
+  "manufacturer": "Heckler & Koch",
+  "country_of_origin": "Germany",
+  "caliber": "9mm-luger",
+  "type": "pistol",
+  "action": "Striker-fired semi-automatic",
+  "capacity": 17,
+  "barrel_length_in": 4.09,
+  "overall_length_in": 7.34,
+  "weight_oz": 25.56,
+  "year_introduced": 2014,
+  "notable_features": [
+    "Customizable grip panels (27 configurations)",
+    "Ambidextrous controls",
+    "Unique charging supports on slide"
+  ],
+  "summary": "The HK VP9 is Heckler & Koch's first striker-fired polymer pistol, combining German precision engineering with an ergonomic design that offers 27 different grip configurations."
+}

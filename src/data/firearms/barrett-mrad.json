@@ -1,0 +1,20 @@
+{
+  "name": "Barrett MRAD",
+  "slug": "barrett-mrad",
+  "manufacturer": "Barrett Firearms",
+  "country_of_origin": "USA",
+  "caliber": "338-lapua-magnum",
+  "type": "rifle",
+  "action": "Bolt-action",
+  "capacity": 10,
+  "barrel_length_in": 26,
+  "overall_length_in": 50,
+  "weight_oz": 229,
+  "year_introduced": 2011,
+  "notable_features": [
+    "Multi-caliber conversion capability",
+    "Folding stock",
+    "U.S. SOCOM Mk 22 ASR selected"
+  ],
+  "summary": "The Barrett MRAD (Multi-Role Adaptive Design) is the U.S. military's Mk 22 Advanced Sniper Rifle, a multi-caliber precision system that can convert between .338 Lapua, .300 Norma, and .300 Win Mag."
+}

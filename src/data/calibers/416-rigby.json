@@ -29,7 +29,7 @@
   "effective_range_yd": 300,
   "max_range_yd": 3000,
   "recoil": {
-    "free_recoil_ft_lbs": 55.0,
+    "free_recoil_ft_lbs": 55,
     "reference_firearm": "CZ 550 Safari Magnum (25\" barrel, 10.5 lbs)",
     "subjective": "very_heavy"
   },
@@ -47,8 +47,8 @@
   ],
   "popularity_tier": "niche",
   "cost_per_round_usd": [
-    5.0,
-    12.0
+    5,
+    12
   ],
   "common_firearms": [
     "CZ 550 Safari Magnum",
@@ -66,13 +66,13 @@
       "bullet_type": "DGS (Dangerous Game Solid)",
       "muzzle_velocity_fps": 2400,
       "muzzle_energy_ft_lbs": 5115,
-      "barrel_length_in": 25.0,
+      "barrel_length_in": 25,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2400,
           "energy_ft_lbs": 5115,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -90,7 +90,7 @@
           "distance_yd": 300,
           "velocity_fps": 1802,
           "energy_ft_lbs": 2884,
-          "drop_in": -27.0
+          "drop_in": -27
         },
         {
           "distance_yd": 400,
@@ -112,13 +112,13 @@
       "bullet_type": "Solid (Trophy Bonded Sledgehammer)",
       "muzzle_velocity_fps": 2370,
       "muzzle_energy_ft_lbs": 4988,
-      "barrel_length_in": 25.0,
+      "barrel_length_in": 25,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2370,
           "energy_ft_lbs": 4988,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -148,7 +148,43 @@
           "distance_yd": 500,
           "velocity_fps": 1422,
           "energy_ft_lbs": 1796,
-          "drop_in": -92.0
+          "drop_in": -92
+        }
+      ]
+    },
+    {
+      "name": "Federal Premium 400 gr Trophy Bonded Bear Claw",
+      "bullet_weight_gr": 400,
+      "bullet_type": "TBBC",
+      "muzzle_velocity_fps": 2400,
+      "muzzle_energy_ft_lbs": 5115,
+      "barrel_length_in": 24,
+      "bc_g1": 0.348,
+      "sectional_density": 0.33,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2400,
+          "energy_ft_lbs": 5115,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2165,
+          "energy_ft_lbs": 4166,
+          "drop_in": -2.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1945,
+          "energy_ft_lbs": 3359,
+          "drop_in": -12
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 1742,
+          "energy_ft_lbs": 2695,
+          "drop_in": -29.6
         }
       ]
     }
@@ -178,8 +214,8 @@
   "max_pressure_psi": 47000,
   "primer_type": "Large Rifle Magnum",
   "powder_charge_range_gr": [
-    90.0,
-    110.0
+    90,
+    110
   ],
   "availability_rating": 1,
   "annual_production_estimate": "minimal",

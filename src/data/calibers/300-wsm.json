@@ -30,7 +30,7 @@
   "effective_range_yd": 1000,
   "max_range_yd": 5200,
   "recoil": {
-    "free_recoil_ft_lbs": 22.0,
+    "free_recoil_ft_lbs": 22,
     "reference_firearm": "Browning X-Bolt (23\" barrel, 7.5 lbs)",
     "subjective": "heavy"
   },
@@ -50,7 +50,7 @@
   "popularity_tier": "common",
   "cost_per_round_usd": [
     1.5,
-    4.0
+    4
   ],
   "common_firearms": [
     "Browning X-Bolt",
@@ -68,7 +68,7 @@
       "bullet_type": "AccuBond",
       "muzzle_velocity_fps": 2960,
       "muzzle_energy_ft_lbs": 3501,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "bc_g1": 0.507,
       "bc_g7": 0.254,
       "sectional_density": 0.271,
@@ -77,7 +77,7 @@
           "distance_yd": 0,
           "velocity_fps": 2960,
           "energy_ft_lbs": 3501,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -107,7 +107,7 @@
           "distance_yd": 500,
           "velocity_fps": 2100,
           "energy_ft_lbs": 1762,
-          "drop_in": -41.0
+          "drop_in": -41
         },
         {
           "distance_yd": 600,
@@ -123,7 +123,7 @@
       "bullet_type": "AccuBond Long Range",
       "muzzle_velocity_fps": 2900,
       "muzzle_energy_ft_lbs": 3547,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "bc_g1": 0.64,
       "bc_g7": 0.322,
       "sectional_density": 0.286,
@@ -132,7 +132,7 @@
           "distance_yd": 0,
           "velocity_fps": 2900,
           "energy_ft_lbs": 3547,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -171,6 +171,54 @@
           "drop_in": -63.5
         }
       ]
+    },
+    {
+      "name": "Barnes VOR-TX 165 gr TTSX",
+      "bullet_weight_gr": 165,
+      "bullet_type": "TTSX (Tipped Triple-Shock)",
+      "muzzle_velocity_fps": 3120,
+      "muzzle_energy_ft_lbs": 3567,
+      "barrel_length_in": 24,
+      "bc_g1": 0.47,
+      "sectional_density": 0.248,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 3120,
+          "energy_ft_lbs": 3567,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2911,
+          "energy_ft_lbs": 3105,
+          "drop_in": -1.4
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2712,
+          "energy_ft_lbs": 2695,
+          "drop_in": -6.2
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2521,
+          "energy_ft_lbs": 2329,
+          "drop_in": -15
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2339,
+          "energy_ft_lbs": 2005,
+          "drop_in": -28.2
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2166,
+          "energy_ft_lbs": 1719,
+          "drop_in": -46.6
+        }
+      ]
     }
   ],
   "recommended_game": [
@@ -203,8 +251,8 @@
   "max_pressure_psi": 65000,
   "primer_type": "Large Rifle Magnum",
   "powder_charge_range_gr": [
-    58.0,
-    74.0
+    58,
+    74
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",

@@ -1,0 +1,238 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { fmtNumber, titleCase } from '../lib/format';
+
+const allCalibers = await getCollection('caliberData');
+
+interface TerminalLoad {
+  caliberName: string;
+  caliberSlug: string;
+  loadName: string;
+  bulletWeight: number;
+  bulletType: string;
+  bulletDiameter: number;
+  gelPenetration: number | null;
+  expansionDiameter: number | null;
+  barrierBlind: boolean | null;
+  muzzleVelocity: number;
+  muzzleEnergy: number;
+}
+
+const terminalLoads: TerminalLoad[] = [];
+
+allCalibers.forEach(c => {
+  const d = c.data;
+  d.loads.forEach(l => {
+    if (l.gel_penetration_in || l.expansion_diameter_in) {
+      terminalLoads.push({
+        caliberName: d.name,
+        caliberSlug: d.slug,
+        loadName: l.name,
+        bulletWeight: l.bullet_weight_gr,
+        bulletType: l.bullet_type,
+        bulletDiameter: d.dimensions.bullet_diameter_in,
+        gelPenetration: l.gel_penetration_in ?? null,
+        expansionDiameter: l.expansion_diameter_in ?? null,
+        barrierBlind: l.barrier_blind ?? null,
+        muzzleVelocity: l.muzzle_velocity_fps,
+        muzzleEnergy: l.muzzle_energy_ft_lbs,
+      });
+    }
+  });
+});
+
+// Sort by penetration depth
+terminalLoads.sort((a, b) => (a.gelPenetration ?? 0) - (b.gelPenetration ?? 0));
+
+const maxPenetration = Math.max(...terminalLoads.map(l => l.gelPenetration ?? 0));
+const maxExpansion = Math.max(...terminalLoads.map(l => l.expansionDiameter ?? 0));
+
+// FBI standard: 12-18 inches of penetration is ideal
+const fbiMinIn = 12;
+const fbiMaxIn = 18;
+
+// Pre-compute per-load derived values to avoid < in template expressions
+const loadMeta = new Map<string, { penPct: number; barColor: string; inFBI: boolean }>();
+terminalLoads.forEach(load => {
+  const pen = load.gelPenetration ?? 0;
+  const penPct = maxPenetration > 0 ? (pen / maxPenetration) * 100 : 0;
+  const inFBI = pen >= fbiMinIn && pen <= fbiMaxIn;
+  const under = pen > 0 && pen < fbiMinIn;
+  const barColor = pen === 0 ? 'bg-text-muted' : inFBI ? 'bg-success' : under ? 'bg-danger' : 'bg-warning';
+  loadMeta.set(load.caliberSlug + ':' + load.loadName, { penPct, barColor, inFBI });
+});
+
+// Pre-compute expansion ratios
+const loadExpRatio = new Map<string, string | null>();
+terminalLoads.forEach(load => {
+  const ratio = load.expansionDiameter && load.bulletDiameter
+    ? (load.expansionDiameter / load.bulletDiameter).toFixed(2)
+    : null;
+  loadExpRatio.set(load.caliberSlug + ':' + load.loadName, ratio);
+});
+
+const pageDescription = `Terminal ballistics comparison of ${terminalLoads.length} self-defense loads across ${new Set(terminalLoads.map(l => l.caliberSlug)).size} calibers. Gel penetration depth, expansion diameter, and FBI protocol compliance visualized.`;
+---
+
+<BaseLayout title="Terminal Performance" description={pageDescription} breadcrumbs={[{ label: 'Terminal Performance' }]}>
+  <div class="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+    <div class="mb-8">
+      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+        Terminal Performance Comparison
+      </h1>
+      <p class="mt-2 font-mono text-base text-text-muted max-w-3xl">
+        Gel penetration depth and bullet expansion for {terminalLoads.length} defensive loads across {new Set(terminalLoads.map(l => l.caliberSlug)).size} calibers.
+        FBI protocol recommends 12–18 inches of penetration in calibrated ordnance gel.
+      </p>
+    </div>
+
+    <!-- FBI Protocol Legend -->
+    <div class="mb-6 border border-surface-border p-4">
+      <div class="font-mono text-xs tracking-wider uppercase text-text-muted mb-2">FBI Penetration Standard</div>
+      <div class="flex items-center gap-4 font-mono text-sm">
+        <span class="flex items-center gap-1.5">
+          <span class="inline-block h-3 w-6 bg-danger/30 border border-danger/50"></span>
+          Under 12" — Under-penetration
+        </span>
+        <span class="flex items-center gap-1.5">
+          <span class="inline-block h-3 w-6 bg-success/30 border border-success/50"></span>
+          12–18" — Ideal
+        </span>
+        <span class="flex items-center gap-1.5">
+          <span class="inline-block h-3 w-6 bg-warning/30 border border-warning/50"></span>
+          Over 18" — Over-penetration risk
+        </span>
+      </div>
+    </div>
+
+    <!-- Penetration Chart -->
+    <div class="border border-surface-border mb-8">
+      <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
+        <h2 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">Gel Penetration Depth</h2>
+      </div>
+
+      <div class="relative">
+        <!-- FBI ideal zone background -->
+        <div class="absolute top-0 bottom-0 bg-success/5 border-x border-success/20"
+          style={`left: ${(fbiMinIn / maxPenetration) * 100}%; width: ${((fbiMaxIn - fbiMinIn) / maxPenetration) * 100}%;`}>
+        </div>
+
+        <div class="relative divide-y divide-surface-border-subtle">
+          {terminalLoads.map((load, i) => {
+            const key = load.caliberSlug + ':' + load.loadName;
+            const meta = loadMeta.get(key)!;
+
+            return (
+              <div class={`flex items-center gap-3 px-3 py-2 ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
+                <div class="w-28 sm:w-36 shrink-0">
+                  <a href={`/caliber-companion/calibers/${load.caliberSlug}`} class="font-mono text-sm text-text-primary hover:text-accent transition-colors truncate block">
+                    {load.caliberName}
+                  </a>
+                  <div class="font-mono text-xs text-text-muted truncate">{load.bulletWeight}gr {load.bulletType}</div>
+                </div>
+
+                <div class="flex-1 relative h-6">
+                  {load.gelPenetration && (
+                    <div
+                      class={`absolute top-1 h-4 ${meta.barColor} opacity-70 rounded-r-sm transition-all`}
+                      style={`width: ${meta.penPct}%;`}
+                    />
+                  )}
+                </div>
+
+                <div class="w-20 shrink-0 text-right">
+                  <span class="font-mono text-sm font-medium text-text-primary">
+                    {load.gelPenetration ? `${load.gelPenetration}"` : '—'}
+                  </span>
+                </div>
+
+                <div class="w-6 shrink-0 text-center">
+                  {load.barrierBlind === true && (
+                    <span class="text-success" title="Barrier Blind">●</span>
+                  )}
+                  {load.barrierBlind === false && (
+                    <span class="text-text-muted/30" title="Not Barrier Blind">○</span>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <!-- Scale -->
+      <div class="border-t border-surface-border px-3 py-1.5 flex justify-between font-mono text-xs text-text-muted">
+        <span>0"</span>
+        <span>{Math.round(maxPenetration / 4)}"</span>
+        <span>{Math.round(maxPenetration / 2)}"</span>
+        <span>{Math.round(maxPenetration * 3 / 4)}"</span>
+        <span>{maxPenetration}"</span>
+      </div>
+    </div>
+
+    <!-- Expansion Table -->
+    <div class="border border-surface-border mb-8">
+      <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
+        <h2 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">Expansion & Performance Details</h2>
+      </div>
+
+      <div class="overflow-x-auto" tabindex="0" role="region" aria-label="Terminal performance data">
+        <table class="w-full text-left font-mono">
+          <thead>
+            <tr class="border-b border-surface-border bg-surface-overlay text-text-muted">
+              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs">Caliber</th>
+              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs">Load</th>
+              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Penetration</th>
+              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Expansion</th>
+              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Exp. Ratio</th>
+              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">MV</th>
+              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">ME</th>
+              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-center">Barrier</th>
+              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-center">FBI</th>
+            </tr>
+          </thead>
+          <tbody>
+            {terminalLoads
+              .sort((a, b) => a.caliberName.localeCompare(b.caliberName))
+              .map((load, i) => {
+                const key = load.caliberSlug + ':' + load.loadName;
+                const meta = loadMeta.get(key)!;
+                const expRatio = loadExpRatio.get(key);
+                const inFBI = meta.inFBI;
+
+                return (
+                  <tr class={`border-b border-surface-border-subtle ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
+                    <td class="px-3 py-2 text-sm">
+                      <a href={`/caliber-companion/calibers/${load.caliberSlug}`} class="text-text-primary hover:text-accent transition-colors">
+                        {load.caliberName}
+                      </a>
+                    </td>
+                    <td class="px-3 py-2 text-sm text-text-secondary truncate max-w-[200px]">{load.bulletWeight}gr {load.bulletType}</td>
+                    <td class="px-3 py-2 text-sm text-right text-text-primary">{load.gelPenetration ? `${load.gelPenetration}"` : '—'}</td>
+                    <td class="px-3 py-2 text-sm text-right text-text-primary">{load.expansionDiameter ? `${load.expansionDiameter}"` : '—'}</td>
+                    <td class="px-3 py-2 text-sm text-right text-text-muted">{expRatio ? `${expRatio}×` : '—'}</td>
+                    <td class="px-3 py-2 text-sm text-right text-text-secondary">{fmtNumber(load.muzzleVelocity)}</td>
+                    <td class="px-3 py-2 text-sm text-right text-text-secondary">{fmtNumber(load.muzzleEnergy)}</td>
+                    <td class={`px-3 py-2 text-sm text-center ${load.barrierBlind === true ? 'text-success' : load.barrierBlind === false ? 'text-danger' : 'text-text-muted'}`}>
+                      {load.barrierBlind === true ? 'Yes' : load.barrierBlind === false ? 'No' : '—'}
+                    </td>
+                    <td class={`px-3 py-2 text-sm text-center ${inFBI ? 'text-success' : load.gelPenetration ? 'text-danger' : 'text-text-muted'}`}>
+                      {inFBI ? '✓' : load.gelPenetration ? '✗' : '—'}
+                    </td>
+                  </tr>
+                );
+              })}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Notes -->
+    <div class="border border-surface-border-subtle bg-surface-overlay p-4">
+      <p class="font-mono text-xs text-text-muted leading-relaxed">
+        <span class="font-medium uppercase tracking-wider">About this data:</span> Penetration measured in 10% calibrated ordnance gelatin per FBI protocol. Expansion diameter measured as average of recovered bullet. "Barrier Blind" = consistent performance through heavy clothing, auto glass, plywood, and wallboard. "FBI" = meets 12–18" penetration standard. All data is representative — actual results vary with barrel length, lot variation, and test conditions.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

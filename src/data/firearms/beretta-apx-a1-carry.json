@@ -1,0 +1,20 @@
+{
+  "name": "Beretta APX A1 Carry",
+  "slug": "beretta-apx-a1-carry",
+  "manufacturer": "Beretta",
+  "country_of_origin": "Italy",
+  "caliber": "9mm-luger",
+  "type": "pistol",
+  "action": "Striker-fired semi-automatic",
+  "capacity": 8,
+  "barrel_length_in": 3,
+  "overall_length_in": 6,
+  "weight_oz": 17.5,
+  "year_introduced": 2022,
+  "notable_features": [
+    "Sub-compact concealed carry",
+    "Flat-face trigger",
+    "Optics-ready slide"
+  ],
+  "summary": "The Beretta APX A1 Carry is Beretta's entry into the micro-compact CCW market, bringing Italian craftsmanship and the Beretta name to the most competitive segment of the pistol market."
+}

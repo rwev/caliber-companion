@@ -1,0 +1,20 @@
+{
+  "name": "LWRC IC-DI",
+  "slug": "lwrc-ic-di",
+  "manufacturer": "LWRC International",
+  "country_of_origin": "USA",
+  "caliber": "556x45mm-nato",
+  "type": "rifle",
+  "action": "Direct impingement semi-automatic",
+  "capacity": 30,
+  "barrel_length_in": 16.1,
+  "overall_length_in": 32.75,
+  "weight_oz": 104,
+  "year_introduced": 2017,
+  "notable_features": [
+    "NiCorr-treated cold hammer forged barrel",
+    "Fully ambidextrous lower",
+    "Monoforge upper receiver"
+  ],
+  "summary": "The LWRC IC-DI is a premium AR-15 with a cold hammer forged, NiCorr-treated barrel and fully ambidextrous controls, representing the pinnacle of direct-impingement AR-15 manufacturing."
+}

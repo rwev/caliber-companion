@@ -1,0 +1,20 @@
+{
+  "name": "Daniel Defense Delta 5",
+  "slug": "daniel-defense-delta5",
+  "manufacturer": "Daniel Defense",
+  "country_of_origin": "USA",
+  "caliber": "65-creedmoor",
+  "type": "rifle",
+  "action": "Bolt-action",
+  "capacity": 5,
+  "barrel_length_in": 24,
+  "overall_length_in": 44,
+  "weight_oz": 152,
+  "year_introduced": 2019,
+  "notable_features": [
+    "Three-lug bolt",
+    "Modular stock system",
+    "AI-pattern magazine compatible"
+  ],
+  "summary": "The Daniel Defense Delta 5 marked the AR-15 giant's entry into bolt-action precision rifles, combining a three-lug action with DD's barrel-making expertise for a sub-MOA precision system."
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Marlin 1895 SBL",
+  "slug": "marlin-1895-sbl",
+  "manufacturer": "Marlin (Ruger)",
+  "country_of_origin": "USA",
+  "caliber": "45-70-government",
+  "type": "rifle",
+  "action": "Lever-action",
+  "capacity": 6,
+  "barrel_length_in": 19.1,
+  "overall_length_in": 37.5,
+  "weight_oz": 128,
+  "year_introduced": 2022,
+  "notable_features": [
+    "Stainless steel with gray laminate stock",
+    "Ruger-era quality improvements",
+    "Threaded muzzle and Picatinny rail"
+  ],
+  "summary": "The Marlin 1895 SBL in .45-70 was the first lever-action produced after Ruger acquired Marlin, featuring improved fit, finish, and accuracy that revitalized the iconic guide gun platform."
+}

@@ -12,7 +12,7 @@
     "bullet_diameter_in": 0.223,
     "neck_diameter_in": 0.226,
     "case_length_in": 0.613,
-    "overall_length_in": 1.0,
+    "overall_length_in": 1,
     "rim_diameter_in": 0.278,
     "case_type": "rimmed, straight (rimfire)"
   },
@@ -124,7 +124,7 @@
           "distance_yd": 0,
           "velocity_fps": 1070,
           "energy_ft_lbs": 102,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 25,
@@ -164,7 +164,7 @@
           "distance_yd": 0,
           "velocity_fps": 1260,
           "energy_ft_lbs": 127,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 25,
@@ -188,7 +188,49 @@
           "distance_yd": 100,
           "velocity_fps": 990,
           "energy_ft_lbs": 78,
-          "drop_in": -7.0
+          "drop_in": -7
+        }
+      ]
+    },
+    {
+      "name": "CCI Stinger 32 gr CPHP",
+      "bullet_weight_gr": 32,
+      "bullet_type": "CPHP (Hyper-velocity)",
+      "muzzle_velocity_fps": 1640,
+      "muzzle_energy_ft_lbs": 191,
+      "barrel_length_in": 18,
+      "bc_g1": 0.102,
+      "sectional_density": 0.091,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1640,
+          "energy_ft_lbs": 191,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1505,
+          "energy_ft_lbs": 161,
+          "drop_in": -0.1
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1382,
+          "energy_ft_lbs": 136,
+          "drop_in": -0.5
+        },
+        {
+          "distance_yd": 75,
+          "velocity_fps": 1274,
+          "energy_ft_lbs": 115,
+          "drop_in": -1.5
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1181,
+          "energy_ft_lbs": 99,
+          "drop_in": -3.4
         }
       ]
     }
@@ -196,7 +238,7 @@
   "max_pressure_psi": 24000,
   "primer_type": "Rimfire",
   "powder_charge_range_gr": [
-    1.0,
+    1,
     1.5
   ],
   "availability_rating": 5,

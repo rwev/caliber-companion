@@ -82,7 +82,7 @@
           "distance_yd": 0,
           "velocity_fps": 830,
           "energy_ft_lbs": 344,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 25,
@@ -125,7 +125,7 @@
           "distance_yd": 0,
           "velocity_fps": 960,
           "energy_ft_lbs": 460,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 25,
@@ -152,6 +152,48 @@
           "drop_in": -8.3
         }
       ]
+    },
+    {
+      "name": "Hornady LEVERevolution 225 gr FTX",
+      "bullet_weight_gr": 225,
+      "bullet_type": "FTX (Flex Tip)",
+      "muzzle_velocity_fps": 960,
+      "muzzle_energy_ft_lbs": 460,
+      "barrel_length_in": 7.5,
+      "bc_g1": 0.175,
+      "sectional_density": 0.158,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 960,
+          "energy_ft_lbs": 460,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 930,
+          "energy_ft_lbs": 432,
+          "drop_in": -0.4
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 902,
+          "energy_ft_lbs": 406,
+          "drop_in": -1.8
+        },
+        {
+          "distance_yd": 75,
+          "velocity_fps": 876,
+          "energy_ft_lbs": 383,
+          "drop_in": -4.5
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 852,
+          "energy_ft_lbs": 363,
+          "drop_in": -8.8
+        }
+      ]
     }
   ],
   "recommended_game": [
@@ -174,7 +216,7 @@
   "max_pressure_psi": 14000,
   "primer_type": "Large Pistol",
   "powder_charge_range_gr": [
-    7.0,
+    7,
     10.5
   ],
   "availability_rating": 3,

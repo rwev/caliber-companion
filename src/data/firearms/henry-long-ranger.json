@@ -1,0 +1,20 @@
+{
+  "name": "Henry Long Ranger",
+  "slug": "henry-long-ranger",
+  "manufacturer": "Henry Repeating Arms",
+  "country_of_origin": "USA",
+  "caliber": "308-winchester",
+  "type": "rifle",
+  "action": "Lever-action",
+  "capacity": 4,
+  "barrel_length_in": 20,
+  "overall_length_in": 40.5,
+  "weight_oz": 112,
+  "year_introduced": 2016,
+  "notable_features": [
+    "Gear-driven lever action for modern cartridges",
+    "Side-loading gate",
+    "Drilled and tapped for optics"
+  ],
+  "summary": "The Henry Long Ranger modernized the lever-action concept for high-pressure cartridges like .308 Winchester, using a geared action that safely handles rounds previously reserved for bolt-actions."
+}

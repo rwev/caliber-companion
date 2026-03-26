@@ -70,7 +70,7 @@
       "bullet_type": "LSWCHP",
       "muzzle_velocity_fps": 875,
       "muzzle_energy_ft_lbs": 340,
-      "barrel_length_in": 4.0,
+      "barrel_length_in": 4,
       "gel_penetration_in": 12.5,
       "expansion_diameter_in": 0.55,
       "barrier_blind": false,
@@ -79,7 +79,7 @@
           "distance_yd": 0,
           "velocity_fps": 875,
           "energy_ft_lbs": 340,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 25,
@@ -91,7 +91,7 @@
           "distance_yd": 50,
           "velocity_fps": 817,
           "energy_ft_lbs": 297,
-          "drop_in": -2.0
+          "drop_in": -2
         },
         {
           "distance_yd": 75,
@@ -113,8 +113,8 @@
       "bullet_type": "FTX",
       "muzzle_velocity_fps": 900,
       "muzzle_energy_ft_lbs": 324,
-      "barrel_length_in": 4.0,
-      "gel_penetration_in": 12.0,
+      "barrel_length_in": 4,
+      "gel_penetration_in": 12,
       "expansion_diameter_in": 0.54,
       "barrier_blind": false,
       "ballistics": [
@@ -122,7 +122,7 @@
           "distance_yd": 0,
           "velocity_fps": 900,
           "energy_ft_lbs": 324,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 25,
@@ -147,6 +147,50 @@
           "velocity_fps": 791,
           "energy_ft_lbs": 250,
           "drop_in": -9.6
+        }
+      ]
+    },
+    {
+      "name": "Federal Premium Personal Defense 200 gr LSWCHP",
+      "bullet_weight_gr": 200,
+      "bullet_type": "LSWCHP (Lead Semi-Wadcutter HP)",
+      "muzzle_velocity_fps": 900,
+      "muzzle_energy_ft_lbs": 360,
+      "barrel_length_in": 4,
+      "bc_g1": 0.142,
+      "sectional_density": 0.155,
+      "gel_penetration_in": 12.5,
+      "expansion_diameter_in": 0.55,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 900,
+          "energy_ft_lbs": 360,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 875,
+          "energy_ft_lbs": 340,
+          "drop_in": -0.4
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 851,
+          "energy_ft_lbs": 322,
+          "drop_in": -1.9
+        },
+        {
+          "distance_yd": 75,
+          "velocity_fps": 829,
+          "energy_ft_lbs": 305,
+          "drop_in": -4.7
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 808,
+          "energy_ft_lbs": 290,
+          "drop_in": -9.2
         }
       ]
     }

@@ -1,0 +1,20 @@
+{
+  "name": "Winchester SXP Defender",
+  "slug": "winchester-sxp-defender",
+  "manufacturer": "Winchester (Browning)",
+  "country_of_origin": "USA",
+  "caliber": "12-gauge",
+  "type": "shotgun",
+  "action": "Pump-action",
+  "capacity": 5,
+  "barrel_length_in": 18,
+  "overall_length_in": 38.3,
+  "weight_oz": 105.6,
+  "year_introduced": 2009,
+  "notable_features": [
+    "Inertia-assisted pump action",
+    "Rotary bolt",
+    "Ghost ring sights available"
+  ],
+  "summary": "The Winchester SXP Defender is a fast-cycling pump shotgun with an inertia-assisted action that begins unlocking during recoil, allowing faster follow-up shots than traditional pump designs."
+}

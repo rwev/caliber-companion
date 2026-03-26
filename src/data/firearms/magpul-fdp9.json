@@ -1,0 +1,20 @@
+{
+  "name": "Magpul FDP-9",
+  "slug": "magpul-fdp9",
+  "manufacturer": "Magpul",
+  "country_of_origin": "USA",
+  "caliber": "9mm-luger",
+  "type": "pistol",
+  "action": "Blowback semi-automatic",
+  "capacity": 21,
+  "barrel_length_in": 6.5,
+  "overall_length_in": 14.94,
+  "weight_oz": 48,
+  "year_introduced": 2024,
+  "notable_features": [
+    "Folding design for 6.5\" collapsed length",
+    "Glock magazine compatible",
+    "Integral Picatinny rail"
+  ],
+  "summary": "The Magpul FDP-9 is a folding 9mm pistol designed as a compact personal defense weapon, using widely available Glock magazines and collapsing to just 6.5 inches for ultimate portability."
+}

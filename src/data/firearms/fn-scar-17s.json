@@ -1,0 +1,20 @@
+{
+  "name": "FN SCAR 17S",
+  "slug": "fn-scar-17s",
+  "manufacturer": "FN Herstal",
+  "country_of_origin": "Belgium",
+  "caliber": "308-winchester",
+  "type": "rifle",
+  "action": "Short-stroke gas piston semi-automatic",
+  "capacity": 20,
+  "barrel_length_in": 16.25,
+  "overall_length_in": 38.5,
+  "weight_oz": 128,
+  "year_introduced": 2009,
+  "notable_features": [
+    "USSOCOM selected battle rifle",
+    "Folding adjustable stock",
+    "Monolithic upper receiver"
+  ],
+  "summary": "The FN SCAR 17S is the civilian variant of the U.S. Special Operations Command's standard battle rifle, prized for its reliability, accuracy, and modular design in 7.62 NATO."
+}

@@ -1,0 +1,20 @@
+{
+  "name": "CZ P-10 C",
+  "slug": "cz-p10c",
+  "manufacturer": "CZ (Česká zbrojovka)",
+  "country_of_origin": "Czech Republic",
+  "caliber": "9mm-luger",
+  "type": "pistol",
+  "action": "Striker-fired semi-automatic",
+  "capacity": 15,
+  "barrel_length_in": 4.02,
+  "overall_length_in": 7.3,
+  "weight_oz": 26,
+  "year_introduced": 2017,
+  "notable_features": [
+    "Excellent factory trigger",
+    "Swappable backstraps",
+    "Reversible magazine release"
+  ],
+  "summary": "The CZ P-10 C is CZ's striker-fired answer to the Glock 19, earning widespread acclaim for its trigger quality and ergonomics right out of the box."
+}

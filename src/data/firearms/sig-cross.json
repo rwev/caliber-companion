@@ -1,0 +1,20 @@
+{
+  "name": "Sig Sauer Cross",
+  "slug": "sig-cross",
+  "manufacturer": "SIG Sauer",
+  "country_of_origin": "USA",
+  "caliber": "308-winchester",
+  "type": "rifle",
+  "action": "Bolt-action",
+  "capacity": 5,
+  "barrel_length_in": 16,
+  "overall_length_in": 35.5,
+  "weight_oz": 101.6,
+  "year_introduced": 2020,
+  "notable_features": [
+    "Folding precision stock",
+    "AR-15 style trigger",
+    "Free-floating stainless barrel"
+  ],
+  "summary": "The SIG Cross bridges the gap between precision rifles and mountain hunting rifles with a folding stock, AR-style controls, and a sub-6.5 pound weight in a precision chassis design."
+}

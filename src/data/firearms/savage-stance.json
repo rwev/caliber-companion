@@ -1,0 +1,20 @@
+{
+  "name": "Savage Stance",
+  "slug": "savage-stance",
+  "manufacturer": "Savage Arms",
+  "country_of_origin": "USA",
+  "caliber": "9mm-luger",
+  "type": "pistol",
+  "action": "Striker-fired semi-automatic",
+  "capacity": 8,
+  "barrel_length_in": 3.2,
+  "overall_length_in": 6.1,
+  "weight_oz": 20,
+  "year_introduced": 2019,
+  "notable_features": [
+    "GRIT (Grip Integrated Trigger) system",
+    "TangoDown GripStop texture",
+    "Manual safety option"
+  ],
+  "summary": "The Savage Stance marked the legendary rifle maker's first entry into the handgun market, offering a budget-friendly micro-compact 9mm with an innovative integrated trigger safety system."
+}

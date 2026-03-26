@@ -1,0 +1,20 @@
+{
+  "name": "Smith & Wesson CSX",
+  "slug": "sw-csx",
+  "manufacturer": "Smith & Wesson",
+  "country_of_origin": "USA",
+  "caliber": "9mm-luger",
+  "type": "pistol",
+  "action": "Single-action semi-automatic",
+  "capacity": 12,
+  "barrel_length_in": 3.1,
+  "overall_length_in": 6.1,
+  "weight_oz": 19.5,
+  "year_introduced": 2022,
+  "notable_features": [
+    "Metal frame micro-compact",
+    "Ambidextrous safety",
+    "Flat-face trigger"
+  ],
+  "summary": "The S&W CSX brought the all-metal micro-compact pistol to market, combining an aluminum alloy frame with single-action trigger for a premium carry experience at an accessible price."
+}

@@ -72,13 +72,13 @@
       "bullet_type": "FMJ",
       "muzzle_velocity_fps": 1030,
       "muzzle_energy_ft_lbs": 424,
-      "barrel_length_in": 5.0,
+      "barrel_length_in": 5,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 1030,
           "energy_ft_lbs": 424,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 25,
@@ -112,13 +112,13 @@
       "bullet_type": "Hardcast",
       "muzzle_velocity_fps": 1250,
       "muzzle_energy_ft_lbs": 694,
-      "barrel_length_in": 5.0,
+      "barrel_length_in": 5,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 1250,
           "energy_ft_lbs": 694,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 25,
@@ -145,12 +145,54 @@
           "drop_in": -5.2
         }
       ]
+    },
+    {
+      "name": "Underwood Xtreme Penetrator 140 gr",
+      "bullet_weight_gr": 140,
+      "bullet_type": "Xtreme Penetrator (Lehigh)",
+      "muzzle_velocity_fps": 1400,
+      "muzzle_energy_ft_lbs": 609,
+      "barrel_length_in": 5,
+      "bc_g1": 0.155,
+      "sectional_density": 0.125,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1400,
+          "energy_ft_lbs": 609,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1335,
+          "energy_ft_lbs": 554,
+          "drop_in": -0.1
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1275,
+          "energy_ft_lbs": 506,
+          "drop_in": -0.6
+        },
+        {
+          "distance_yd": 75,
+          "velocity_fps": 1220,
+          "energy_ft_lbs": 463,
+          "drop_in": -1.6
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1172,
+          "energy_ft_lbs": 427,
+          "drop_in": -3.5
+        }
+      ]
     }
   ],
   "max_pressure_psi": 37500,
   "primer_type": "Large Pistol",
   "powder_charge_range_gr": [
-    7.0,
+    7,
     12.5
   ],
   "availability_rating": 3,

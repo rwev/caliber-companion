@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RangeDayPlanner from '../../components/islands/RangeDayPlanner';
+import { getCollection } from 'astro:content';
+
+const allCalibers = await getCollection('caliberData');
+const caliberEntries = allCalibers
+  .map(c => ({
+    name: c.data.name,
+    slug: c.data.slug,
+    effective_range_yd: c.data.effective_range_yd,
+    loads: c.data.loads.map(l => ({
+      name: l.name,
+      bullet_weight_gr: l.bullet_weight_gr,
+      bullet_type: l.bullet_type,
+      muzzle_velocity_fps: l.muzzle_velocity_fps,
+      muzzle_energy_ft_lbs: l.muzzle_energy_ft_lbs,
+      barrel_length_in: l.barrel_length_in,
+      ballistics: l.ballistics,
+    })),
+  }))
+  .sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<BaseLayout title="Range Day Planner" description="Build a printable cheat sheet for your range trip. Select the calibers you're bringing, choose loads, and print a consolidated ballistic reference card." breadcrumbs={[{ label: 'Tools', href: '/caliber-companion/tools' }, { label: 'Range Day Planner' }]}>
+  <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
+    <div class="mb-8">
+      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+        Range Day Planner
+      </h1>
+      <p class="mt-2 font-mono text-base text-text-muted max-w-2xl">
+        Build a printable cheat sheet for your range trip. Add every caliber you're bringing,
+        set round counts, add notes about zero distances or scope settings, then print one consolidated sheet.
+      </p>
+    </div>
+
+    <RangeDayPlanner client:idle calibers={caliberEntries} />
+  </div>
+</BaseLayout>

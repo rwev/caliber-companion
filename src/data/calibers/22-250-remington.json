@@ -30,7 +30,7 @@
   "effective_range_yd": 500,
   "max_range_yd": 4000,
   "recoil": {
-    "free_recoil_ft_lbs": 5.0,
+    "free_recoil_ft_lbs": 5,
     "reference_firearm": "Remington 700 Varmint SF (26\" barrel, 8.5 lbs)",
     "subjective": "low"
   },
@@ -68,7 +68,7 @@
       "bullet_type": "V-MAX",
       "muzzle_velocity_fps": 4000,
       "muzzle_energy_ft_lbs": 1776,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "bc_g1": 0.242,
       "sectional_density": 0.142,
       "ballistics": [
@@ -76,7 +76,7 @@
           "distance_yd": 0,
           "velocity_fps": 4000,
           "energy_ft_lbs": 1776,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -106,7 +106,7 @@
           "distance_yd": 500,
           "velocity_fps": 2263,
           "energy_ft_lbs": 569,
-          "drop_in": -34.0
+          "drop_in": -34
         }
       ]
     },
@@ -116,7 +116,7 @@
       "bullet_type": "Ballistic Tip",
       "muzzle_velocity_fps": 3680,
       "muzzle_energy_ft_lbs": 1654,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "bc_g1": 0.276,
       "sectional_density": 0.157,
       "ballistics": [
@@ -124,7 +124,7 @@
           "distance_yd": 0,
           "velocity_fps": 3680,
           "energy_ft_lbs": 1654,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -157,6 +157,54 @@
           "drop_in": -38.5
         }
       ]
+    },
+    {
+      "name": "Federal Premium 55 gr Nosler Ballistic Tip",
+      "bullet_weight_gr": 55,
+      "bullet_type": "Nosler Ballistic Tip",
+      "muzzle_velocity_fps": 3680,
+      "muzzle_energy_ft_lbs": 1654,
+      "barrel_length_in": 24,
+      "bc_g1": 0.276,
+      "sectional_density": 0.157,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 3680,
+          "energy_ft_lbs": 1654,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 3315,
+          "energy_ft_lbs": 1342,
+          "drop_in": -0.9
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2979,
+          "energy_ft_lbs": 1084,
+          "drop_in": -4.6
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2669,
+          "energy_ft_lbs": 870,
+          "drop_in": -12
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2382,
+          "energy_ft_lbs": 693,
+          "drop_in": -23.8
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2117,
+          "energy_ft_lbs": 547,
+          "drop_in": -41.4
+        }
+      ]
     }
   ],
   "recommended_game": [
@@ -179,8 +227,8 @@
   "max_pressure_psi": 65000,
   "primer_type": "Large Rifle",
   "powder_charge_range_gr": [
-    28.0,
-    40.0
+    28,
+    40
   ],
   "availability_rating": 3,
   "annual_production_estimate": "high",

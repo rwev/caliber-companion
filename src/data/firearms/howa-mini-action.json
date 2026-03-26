@@ -1,0 +1,20 @@
+{
+  "name": "Howa Mini Action",
+  "slug": "howa-mini-action",
+  "manufacturer": "Howa (Legacy Sports)",
+  "country_of_origin": "Japan",
+  "caliber": "6mm-arc",
+  "type": "rifle",
+  "action": "Bolt-action",
+  "capacity": 10,
+  "barrel_length_in": 20,
+  "overall_length_in": 38.5,
+  "weight_oz": 96,
+  "year_introduced": 2021,
+  "notable_features": [
+    "Mini-action for short cartridges",
+    "HACT two-stage trigger",
+    "Uses AR-15 type magazines"
+  ],
+  "summary": "The Howa Mini Action in 6mm ARC pairs a compact, lightweight bolt action with AR-15 magazine compatibility, creating an ideal lightweight precision hunting rifle for the trending 6mm ARC cartridge."
+}

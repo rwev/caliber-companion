@@ -1,0 +1,20 @@
+{
+  "name": "Colt Python (2020)",
+  "slug": "colt-python-2020",
+  "manufacturer": "Colt",
+  "country_of_origin": "USA",
+  "caliber": "357-magnum",
+  "type": "revolver",
+  "action": "Double-action revolver",
+  "capacity": 6,
+  "barrel_length_in": 4.25,
+  "overall_length_in": 9.75,
+  "weight_oz": 42,
+  "year_introduced": 2020,
+  "notable_features": [
+    "Re-engineered V-spring trigger",
+    "Stainless steel construction",
+    "Reintroduction of legendary Python"
+  ],
+  "summary": "The 2020 Colt Python is the modern reintroduction of what many consider the finest production revolver ever made, featuring an updated action with the same iconic lines and smooth trigger pull."
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Sig Sauer P229 Legion",
+  "slug": "sig-p229-legion",
+  "manufacturer": "SIG Sauer",
+  "country_of_origin": "USA",
+  "caliber": "9mm-luger",
+  "type": "pistol",
+  "action": "DA/SA semi-automatic",
+  "capacity": 15,
+  "barrel_length_in": 3.9,
+  "overall_length_in": 7.1,
+  "weight_oz": 34.4,
+  "year_introduced": 2015,
+  "notable_features": [
+    "Legion gray PVD finish",
+    "X-RAY3 day/night sights",
+    "Custom G10 grips with Legion medallion"
+  ],
+  "summary": "The SIG P229 Legion is the premium expression of SIG's compact DA/SA pistol, finished to a higher standard with the best sights, trigger, and ergonomics SIG offers for concealed carry and duty use."
+}

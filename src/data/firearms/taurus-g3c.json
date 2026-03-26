@@ -1,0 +1,20 @@
+{
+  "name": "Taurus G3C",
+  "slug": "taurus-g3c",
+  "manufacturer": "Taurus",
+  "country_of_origin": "Brazil",
+  "caliber": "9mm-luger",
+  "type": "pistol",
+  "action": "Striker-fired semi-automatic",
+  "capacity": 12,
+  "barrel_length_in": 3.2,
+  "overall_length_in": 6.3,
+  "weight_oz": 22,
+  "year_introduced": 2020,
+  "notable_features": [
+    "Sub- MSRP",
+    "Manual safety option",
+    "Restrike capability on light primer strikes"
+  ],
+  "summary": "The Taurus G3C is one of the best-selling handguns in America, offering reliable 9mm concealed carry performance at the lowest price point in its class."
+}

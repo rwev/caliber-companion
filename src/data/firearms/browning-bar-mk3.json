@@ -1,0 +1,20 @@
+{
+  "name": "Browning BAR MK3",
+  "slug": "browning-bar-mk3",
+  "manufacturer": "Browning",
+  "country_of_origin": "Belgium",
+  "caliber": "30-06-springfield",
+  "type": "rifle",
+  "action": "Gas-operated semi-automatic",
+  "capacity": 4,
+  "barrel_length_in": 22,
+  "overall_length_in": 43,
+  "weight_oz": 117,
+  "year_introduced": 2016,
+  "notable_features": [
+    "Detachable box magazine",
+    "Hammer-forged barrel",
+    "Oil-finished walnut stock"
+  ],
+  "summary": "The Browning BAR MK3 is a premium semi-automatic hunting rifle that brings rapid follow-up shots and classic Browning craftsmanship to the big game field in a refined, walnut-stocked package."
+}

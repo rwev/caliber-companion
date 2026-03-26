@@ -1,0 +1,209 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { fmtRange, fmtNumber, fmtCurrency, titleCase } from '../lib/format';
+
+const allCalibers = await getCollection('caliberData');
+const bySlug = new Map(allCalibers.map(c => [c.data.slug, c.data]));
+
+const tiers = [
+  {
+    title: 'Best Concealed Carry Calibers',
+    calibers: ['9mm-luger', '380-acp', '38-special', '30-super-carry', '327-federal-magnum'],
+    description: 'For everyday concealed carry, the ideal caliber balances terminal effectiveness with controllability in compact pistols. Low recoil enables faster follow-up shots and more practice. The FBI concluded in 2014 that modern 9mm JHP is the optimal duty caliber — and the same logic applies to CCW.',
+  },
+  {
+    title: 'Best Home Defense Calibers',
+    calibers: ['9mm-luger', '45-acp', '12-gauge', '556x45mm-nato', '300-blackout'],
+    description: 'Home defense priorities differ from carry: capacity, stopping power, and managing over-penetration matter more than concealment. 9mm and .45 ACP in full-size pistols offer maximum capacity, while 5.56 NATO fragments quickly in drywall and .300 Blackout excels suppressed.',
+  },
+  {
+    title: 'Best Overall Self-Defense',
+    calibers: ['9mm-luger', '45-acp', '40-sw', '357-sig', '10mm-auto'],
+    description: 'When pure stopping power is the priority — duty carry, woods defense, or nightstand gun. These calibers offer the best combination of energy, penetration, and expansion with premium defensive ammunition.',
+  },
+  {
+    title: 'Best for Recoil-Sensitive Shooters',
+    calibers: ['380-acp', '38-special', '30-super-carry', '327-federal-magnum', '9mm-luger'],
+    description: 'For shooters with hand injuries, arthritis, or limited grip strength. These calibers are controllable in lightweight pistols while still meeting FBI minimum penetration standards with proper ammunition.',
+  },
+];
+
+// Build terminal performance comparison for top calibers
+const defenseCalSlugs = ['9mm-luger', '45-acp', '380-acp', '40-sw', '357-magnum', '357-sig', '38-special'];
+const terminalData = defenseCalSlugs.map(slug => {
+  const cal = bySlug.get(slug);
+  if (!cal) return null;
+  const gelLoads = cal.loads.filter(l => l.gel_penetration_in);
+  if (gelLoads.length === 0) return null;
+  const best = gelLoads[0];
+  return {
+    name: cal.name,
+    slug: cal.slug,
+    loadName: best.name,
+    weight: best.bullet_weight_gr,
+    type: best.bullet_type,
+    velocity: best.muzzle_velocity_fps,
+    energy: best.muzzle_energy_ft_lbs,
+    penetration: best.gel_penetration_in,
+    expansion: best.expansion_diameter_in,
+    barrier: best.barrier_blind,
+    recoil: cal.recoil.free_recoil_ft_lbs,
+    costLow: cal.cost_per_round_usd[0],
+    costHigh: cal.cost_per_round_usd[1],
+  };
+}).filter(Boolean);
+
+const fbiMin = 12;
+const fbiMax = 18;
+
+// Pre-compute FBI compliance to avoid < in template
+const fbiCompliance = new Map<string, boolean>();
+terminalData.forEach(t => {
+  if (t) fbiCompliance.set(t.slug, t.penetration >= fbiMin && t.penetration <= fbiMax);
+});
+
+const pageDescription = 'Best calibers for self-defense, concealed carry, and home defense in 2026. FBI-protocol gel test data, penetration depths, expansion ratios, and recoil comparison for the top defensive handgun calibers.';
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': [
+    { '@type': 'Question', 'name': 'What is the best caliber for self-defense?', 'acceptedAnswer': { '@type': 'Answer', 'text': '9mm Luger is the best all-around self-defense caliber. The FBI, most U.S. police departments, and the U.S. military (M17/M18) all standardized on 9mm. Modern hollow point ammunition like Federal HST and Speer Gold Dot provides reliable expansion to .50-.60 inches with 13-15 inches of penetration — meeting FBI protocol standards.' } },
+    { '@type': 'Question', 'name': 'Is .45 ACP better than 9mm for self-defense?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Not necessarily. While .45 ACP makes a larger wound channel, modern 9mm JHP ammunition has closed the terminal performance gap. 9mm offers higher capacity (typically 15-17 rounds vs 7-8), lower recoil for faster follow-up shots, cheaper practice ammunition, and equally effective expansion with premium loads.' } },
+    { '@type': 'Question', 'name': 'What is the FBI minimum penetration standard?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'The FBI requires 12-18 inches of penetration in calibrated 10% ordnance gelatin. Less than 12 inches risks failing to reach vital organs through intermediate barriers. More than 18 inches risks over-penetration and collateral damage.' } },
+    { '@type': 'Question', 'name': 'Is .380 ACP enough for self-defense?', 'acceptedAnswer': { '@type': 'Answer', 'text': '.380 ACP with modern ammunition (Hornady Critical Defense, Federal HST Micro) can meet minimum FBI penetration standards, though with less margin than 9mm. It is a valid choice when a small, low-recoil pistol is the only option that will actually be carried consistently.' } },
+  ],
+};
+---
+
+<BaseLayout title="Best Calibers for Self-Defense (2026)" description={pageDescription} breadcrumbs={[{ label: 'Best Self-Defense Calibers' }]}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+
+  <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
+    <div class="mb-8">
+      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+        Best Calibers for Self-Defense
+      </h1>
+      <p class="mt-3 font-mono text-base text-text-muted max-w-3xl">
+        Data-driven defensive caliber recommendations backed by FBI-protocol gel test results, recoil measurements, and real-world adoption data. Covers concealed carry, home defense, and duty use.
+      </p>
+    </div>
+
+    <!-- FBI Standard callout -->
+    <div class="mb-8 border border-info/30 bg-info/5 p-4">
+      <div class="font-mono text-xs font-medium uppercase tracking-wider text-info mb-1">FBI Penetration Standard</div>
+      <p class="font-mono text-sm text-text-secondary">
+        The FBI requires <strong>12–18 inches</strong> of penetration in 10% ordnance gelatin through clothing, auto glass, plywood, and wallboard barriers. All calibers below are evaluated against this standard with premium defensive ammunition.
+      </p>
+    </div>
+
+    <!-- Terminal performance table -->
+    <section class="mb-10">
+      <h2 class="mb-3 font-display text-xl font-semibold tracking-[0.15em] uppercase text-accent border-b border-surface-border pb-3">
+        Terminal Performance Comparison
+      </h2>
+      <div class="border border-surface-border overflow-x-auto" tabindex="0" role="region" aria-label="Defensive caliber terminal performance">
+        <table class="w-full text-left font-mono">
+          <thead>
+            <tr class="border-b border-surface-border bg-surface-overlay text-text-muted">
+              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs">Caliber</th>
+              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs">Load</th>
+              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Pen.</th>
+              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Exp.</th>
+              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-center">Barrier</th>
+              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">MV</th>
+              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">ME</th>
+              <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Recoil</th>
+            </tr>
+          </thead>
+          <tbody>
+            {terminalData.map((t, i) => {
+              const meetsFBI = fbiCompliance.get(t!.slug) ?? false;
+              return (
+                <tr class={`border-b border-surface-border-subtle ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
+                  <td class="px-3 py-2">
+                    <a href={`/caliber-companion/calibers/${t!.slug}`} class="text-sm font-medium text-text-primary hover:text-accent transition-colors">{t!.name}</a>
+                  </td>
+                  <td class="px-3 py-2 text-xs text-text-muted">{t!.weight}gr {t!.type}</td>
+                  <td class={`px-3 py-2 text-sm text-right font-medium ${meetsFBI ? 'text-success' : 'text-warning'}`}>{t!.penetration}"</td>
+                  <td class="px-3 py-2 text-sm text-right text-text-secondary">{t!.expansion ? t!.expansion + '"' : '—'}</td>
+                  <td class={`px-3 py-2 text-sm text-center ${t!.barrier ? 'text-success' : 'text-text-muted'}`}>{t!.barrier ? 'Yes' : 'No'}</td>
+                  <td class="px-3 py-2 text-sm text-right text-text-secondary">{t!.velocity.toLocaleString()}</td>
+                  <td class="px-3 py-2 text-sm text-right text-text-secondary">{t!.energy}</td>
+                  <td class="px-3 py-2 text-sm text-right text-text-muted">{t!.recoil} ft·lbs</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Recommendation tiers -->
+    {tiers.map(tier => {
+      const cals = tier.calibers.map(slug => bySlug.get(slug)).filter(Boolean);
+      return (
+        <section class="mb-10">
+          <h2 class="mb-2 font-display text-xl font-semibold tracking-[0.15em] uppercase text-accent border-b border-surface-border pb-3">{tier.title}</h2>
+          <p class="mb-4 font-mono text-sm text-text-muted">{tier.description}</p>
+          <div class="border border-surface-border overflow-x-auto" tabindex="0">
+            <table class="w-full text-left font-mono">
+              <thead>
+                <tr class="border-b border-surface-border bg-surface-overlay text-text-muted">
+                  <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs">Caliber</th>
+                  <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Energy</th>
+                  <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Recoil</th>
+                  <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-right">Cost/Rd</th>
+                  <th scope="col" class="px-3 py-2 font-medium tracking-wider uppercase text-xs text-center">Avail.</th>
+                </tr>
+              </thead>
+              <tbody>
+                {cals.map((c, i) => (
+                  <tr class={`border-b border-surface-border-subtle ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
+                    <td class="px-3 py-2"><a href={`/caliber-companion/calibers/${c!.slug}`} class="text-sm font-medium text-text-primary hover:text-accent transition-colors">{c!.name}</a></td>
+                    <td class="px-3 py-2 text-sm text-right text-text-secondary">{fmtRange(c!.typical_energy_ft_lbs, 'ft·lbs')}</td>
+                    <td class="px-3 py-2 text-sm text-right text-text-secondary">{c!.recoil.free_recoil_ft_lbs} ft·lbs</td>
+                    <td class="px-3 py-2 text-sm text-right text-text-muted">{fmtCurrency(c!.cost_per_round_usd)}</td>
+                    <td class="px-3 py-2 text-sm text-center text-text-muted">{c!.availability_rating ?? '—'}/5</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      );
+    })}
+
+    <!-- FAQ -->
+    <section class="mt-12 border-t border-surface-border pt-8">
+      <h2 class="font-display text-xl font-semibold tracking-[0.2em] uppercase text-text-muted mb-4">Frequently Asked Questions</h2>
+      <div class="space-y-2">
+        {[
+          { q: 'What is the best caliber for concealed carry?', a: '9mm Luger. It offers the best combination of capacity, controllability, ammunition selection, and terminal effectiveness. Modern 9mm JHP expands reliably to .50-.60 inches while penetrating 13-15 inches in gel. Most CCW pistols in 9mm hold 10-17 rounds.' },
+          { q: 'What caliber do most police carry?', a: '9mm Luger. The FBI switched back to 9mm in 2014 after comprehensive testing showed modern JHP ammunition eliminated the terminal performance gap with .40 S&W while offering better shootability and capacity. Most U.S. law enforcement agencies followed suit.' },
+          { q: 'Is .380 ACP enough for self-defense?', a: '.380 ACP with modern defensive ammunition (Hornady Critical Defense, Federal HST Micro) meets minimum FBI penetration in bare gelatin and light clothing, though it has less margin through barriers. It is a viable choice when concealability and low recoil are critical priorities.' },
+          { q: 'What is the best home defense caliber?', a: 'For handguns, 9mm offers the best balance of stopping power and capacity. For long guns, 5.56 NATO in an AR-15 provides devastating terminal effect with less wall penetration risk than pistol calibers or buckshot. 12 gauge 00 buckshot remains the traditional choice.' },
+        ].map(faq => (
+          <details class="group border border-surface-border">
+            <summary class="flex cursor-pointer items-center justify-between bg-surface-raised px-4 py-3 font-mono text-sm text-text-primary transition-colors hover:bg-surface-overlay">
+              <span>{faq.q}</span>
+              <svg class="h-4 w-4 shrink-0 text-text-muted transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <div class="border-t border-surface-border-subtle bg-surface px-4 py-3">
+              <p class="font-mono text-sm text-text-secondary leading-relaxed">{faq.a}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <div class="mt-8 flex flex-wrap gap-3 border-t border-surface-border pt-6">
+      <span class="font-mono text-xs tracking-wider uppercase text-text-muted self-center">Related:</span>
+      <a href="/caliber-companion/guides/best-calibers-for-concealed-carry" class="font-mono text-sm text-accent hover:underline">CCW Guide</a>
+      <a href="/caliber-companion/guides/best-calibers-for-home-defense" class="font-mono text-sm text-accent hover:underline">Home Defense Guide</a>
+      <a href="/caliber-companion/terminal-performance" class="font-mono text-sm text-accent hover:underline">Terminal Performance Data</a>
+      <a href="/caliber-companion/myths" class="font-mono text-sm text-accent hover:underline">Caliber Myths</a>
+    </div>
+  </div>
+</BaseLayout>

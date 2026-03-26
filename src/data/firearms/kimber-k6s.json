@@ -1,0 +1,20 @@
+{
+  "name": "Kimber K6s",
+  "slug": "kimber-k6s",
+  "manufacturer": "Kimber",
+  "country_of_origin": "USA",
+  "caliber": "357-magnum",
+  "type": "revolver",
+  "action": "Double-action revolver",
+  "capacity": 6,
+  "barrel_length_in": 2,
+  "overall_length_in": 6.6,
+  "weight_oz": 23,
+  "year_introduced": 2016,
+  "notable_features": [
+    "Smallest 6-shot .357 Magnum revolver",
+    "Match-grade trigger",
+    "Stainless steel construction"
+  ],
+  "summary": "The Kimber K6s is the lightest and smallest 6-shot .357 Magnum revolver, combining concealed carry size with the stopping power of a full-power magnum round."
+}

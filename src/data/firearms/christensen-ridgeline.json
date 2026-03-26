@@ -1,0 +1,20 @@
+{
+  "name": "Christensen Arms Ridgeline",
+  "slug": "christensen-ridgeline",
+  "manufacturer": "Christensen Arms",
+  "country_of_origin": "USA",
+  "caliber": "308-winchester",
+  "type": "rifle",
+  "action": "Bolt-action",
+  "capacity": 4,
+  "barrel_length_in": 24,
+  "overall_length_in": 44,
+  "weight_oz": 104,
+  "year_introduced": 2016,
+  "notable_features": [
+    "Carbon fiber wrapped stainless barrel",
+    "Sub-MOA accuracy guarantee",
+    "Under 6.5 lbs total weight"
+  ],
+  "summary": "The Christensen Arms Ridgeline pioneered affordable carbon fiber barrel technology in hunting rifles, delivering sub-MOA accuracy in a mountain-ready package under 6.5 pounds."
+}

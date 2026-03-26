@@ -30,7 +30,7 @@
   "effective_range_yd": 700,
   "max_range_yd": 4800,
   "recoil": {
-    "free_recoil_ft_lbs": 15.0,
+    "free_recoil_ft_lbs": 15,
     "reference_firearm": "Remington 700 (24\" barrel, 8.0 lbs)",
     "subjective": "moderate"
   },
@@ -52,7 +52,7 @@
   "popularity_tier": "common",
   "cost_per_round_usd": [
     1.2,
-    3.0
+    3
   ],
   "common_firearms": [
     "Remington 700",
@@ -73,7 +73,7 @@
       "bullet_type": "PSP",
       "muzzle_velocity_fps": 3000,
       "muzzle_energy_ft_lbs": 2797,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "bc_g1": 0.39,
       "sectional_density": 0.248,
       "ballistics": [
@@ -81,7 +81,7 @@
           "distance_yd": 0,
           "velocity_fps": 3000,
           "energy_ft_lbs": 2797,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -121,7 +121,7 @@
       "bullet_type": "AccuBond",
       "muzzle_velocity_fps": 2800,
       "muzzle_energy_ft_lbs": 2785,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "bc_g1": 0.531,
       "bc_g7": 0.265,
       "sectional_density": 0.283,
@@ -130,13 +130,13 @@
           "distance_yd": 0,
           "velocity_fps": 2800,
           "energy_ft_lbs": 2785,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
           "velocity_fps": 2625,
           "energy_ft_lbs": 2448,
-          "drop_in": -2.0
+          "drop_in": -2
         },
         {
           "distance_yd": 200,
@@ -161,6 +161,54 @@
           "velocity_fps": 1989,
           "energy_ft_lbs": 1405,
           "drop_in": -60.5
+        }
+      ]
+    },
+    {
+      "name": "Nosler Trophy Grade 140 gr AccuBond",
+      "bullet_weight_gr": 140,
+      "bullet_type": "AccuBond",
+      "muzzle_velocity_fps": 3000,
+      "muzzle_energy_ft_lbs": 2799,
+      "barrel_length_in": 24,
+      "bc_g1": 0.485,
+      "sectional_density": 0.248,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 3000,
+          "energy_ft_lbs": 2799,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2808,
+          "energy_ft_lbs": 2454,
+          "drop_in": -1.5
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2624,
+          "energy_ft_lbs": 2140,
+          "drop_in": -6.6
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2449,
+          "energy_ft_lbs": 1865,
+          "drop_in": -15.8
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2281,
+          "energy_ft_lbs": 1618,
+          "drop_in": -29.8
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2121,
+          "energy_ft_lbs": 1400,
+          "drop_in": -49.4
         }
       ]
     }
@@ -195,8 +243,8 @@
   "max_pressure_psi": 60000,
   "primer_type": "Large Rifle",
   "powder_charge_range_gr": [
-    48.0,
-    60.0
+    48,
+    60
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",

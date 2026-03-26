@@ -1,0 +1,20 @@
+{
+  "name": "Weatherby Mark V Backcountry 2.0",
+  "slug": "weatherby-mark-v-backcountry",
+  "manufacturer": "Weatherby",
+  "country_of_origin": "USA",
+  "caliber": "300-win-mag",
+  "type": "rifle",
+  "action": "Bolt-action",
+  "capacity": 3,
+  "barrel_length_in": 26,
+  "overall_length_in": 46.5,
+  "weight_oz": 100.8,
+  "year_introduced": 2022,
+  "notable_features": [
+    "Peak 44 Blacktooth carbon fiber stock",
+    "Spiral fluted bolt and barrel",
+    "Sub-MOA guarantee"
+  ],
+  "summary": "The Weatherby Mark V Backcountry 2.0 combines the legendary Mark V action with a carbon fiber stock and spiral-fluted barrel for a mountain hunting rifle under 6.5 pounds with guaranteed accuracy."
+}

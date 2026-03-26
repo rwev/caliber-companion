@@ -29,7 +29,7 @@
   "effective_range_yd": 1200,
   "max_range_yd": 6000,
   "recoil": {
-    "free_recoil_ft_lbs": 15.0,
+    "free_recoil_ft_lbs": 15,
     "reference_firearm": "Browning X-Bolt (24\" barrel, 8.0 lbs)",
     "subjective": "moderate"
   },
@@ -67,7 +67,7 @@
       "bullet_type": "ELD Match",
       "muzzle_velocity_fps": 2910,
       "muzzle_energy_ft_lbs": 2764,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "bc_g1": 0.697,
       "bc_g7": 0.351,
       "sectional_density": 0.301,
@@ -76,7 +76,7 @@
           "distance_yd": 0,
           "velocity_fps": 2910,
           "energy_ft_lbs": 2764,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -116,7 +116,7 @@
       "bullet_type": "ELD-X",
       "muzzle_velocity_fps": 2960,
       "muzzle_energy_ft_lbs": 2782,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "bc_g1": 0.625,
       "bc_g7": 0.315,
       "sectional_density": 0.293,
@@ -125,7 +125,7 @@
           "distance_yd": 0,
           "velocity_fps": 2960,
           "energy_ft_lbs": 2782,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -156,6 +156,55 @@
           "velocity_fps": 2203,
           "energy_ft_lbs": 1540,
           "drop_in": -48.7
+        }
+      ]
+    },
+    {
+      "name": "Hornady ELD Match 147 gr",
+      "bullet_weight_gr": 147,
+      "bullet_type": "ELD Match",
+      "muzzle_velocity_fps": 2910,
+      "muzzle_energy_ft_lbs": 2764,
+      "barrel_length_in": 24,
+      "bc_g1": 0.697,
+      "bc_g7": 0.351,
+      "sectional_density": 0.301,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2910,
+          "energy_ft_lbs": 2764,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2761,
+          "energy_ft_lbs": 2488,
+          "drop_in": -1.6
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2617,
+          "energy_ft_lbs": 2234,
+          "drop_in": -6.8
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2478,
+          "energy_ft_lbs": 2005,
+          "drop_in": -15.8
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2344,
+          "energy_ft_lbs": 1794,
+          "drop_in": -29
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2215,
+          "energy_ft_lbs": 1602,
+          "drop_in": -46.8
         }
       ]
     }
@@ -190,8 +239,8 @@
   "max_pressure_psi": 65000,
   "primer_type": "Large Rifle Magnum",
   "powder_charge_range_gr": [
-    48.0,
-    58.0
+    48,
+    58
   ],
   "availability_rating": 3,
   "annual_production_estimate": "moderate",

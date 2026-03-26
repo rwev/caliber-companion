@@ -29,7 +29,7 @@
   "effective_range_yd": 75,
   "max_range_yd": 2000,
   "recoil": {
-    "free_recoil_ft_lbs": 20.0,
+    "free_recoil_ft_lbs": 20,
     "reference_firearm": "Ruger Super Redhawk (7.5\" barrel, 53 oz)",
     "subjective": "heavy"
   },
@@ -65,7 +65,7 @@
       "muzzle_velocity_fps": 1350,
       "muzzle_energy_ft_lbs": 1315,
       "barrel_length_in": 7.5,
-      "gel_penetration_in": 15.0,
+      "gel_penetration_in": 15,
       "expansion_diameter_in": 0.62,
       "barrier_blind": true,
       "ballistics": [
@@ -73,7 +73,7 @@
           "distance_yd": 0,
           "velocity_fps": 1350,
           "energy_ft_lbs": 1315,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 25,
@@ -91,7 +91,7 @@
           "distance_yd": 75,
           "velocity_fps": 1205,
           "energy_ft_lbs": 1048,
-          "drop_in": -2.0
+          "drop_in": -2
         },
         {
           "distance_yd": 100,
@@ -113,7 +113,7 @@
           "distance_yd": 0,
           "velocity_fps": 1300,
           "energy_ft_lbs": 1389,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 25,
@@ -138,6 +138,42 @@
           "velocity_fps": 1140,
           "energy_ft_lbs": 1068,
           "drop_in": -4.6
+        }
+      ]
+    },
+    {
+      "name": "Hornady XTP 325 gr",
+      "bullet_weight_gr": 325,
+      "bullet_type": "XTP JHP",
+      "muzzle_velocity_fps": 1350,
+      "muzzle_energy_ft_lbs": 1315,
+      "barrel_length_in": 7.5,
+      "bc_g1": 0.185,
+      "sectional_density": 0.227,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1350,
+          "energy_ft_lbs": 1315,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1265,
+          "energy_ft_lbs": 1156,
+          "drop_in": -0.4
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1190,
+          "energy_ft_lbs": 1022,
+          "drop_in": -2.4
+        },
+        {
+          "distance_yd": 150,
+          "velocity_fps": 1126,
+          "energy_ft_lbs": 914,
+          "drop_in": -6.6
         }
       ]
     }
@@ -167,8 +203,8 @@
   "max_pressure_psi": 48000,
   "primer_type": "Large Pistol",
   "powder_charge_range_gr": [
-    22.0,
-    30.0
+    22,
+    30
   ],
   "availability_rating": 1,
   "annual_production_estimate": "minimal",

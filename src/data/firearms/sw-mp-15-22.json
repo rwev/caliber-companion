@@ -1,0 +1,20 @@
+{
+  "name": "Smith & Wesson M&P 15-22 Sport",
+  "slug": "sw-mp-15-22",
+  "manufacturer": "Smith & Wesson",
+  "country_of_origin": "USA",
+  "caliber": "22-lr",
+  "type": "rifle",
+  "action": "Blowback semi-automatic",
+  "capacity": 25,
+  "barrel_length_in": 16.5,
+  "overall_length_in": 34.5,
+  "weight_oz": 76.8,
+  "year_introduced": 2009,
+  "notable_features": [
+    "AR-15 ergonomics in .22 LR",
+    "25-round magazine",
+    "M-LOK handguard"
+  ],
+  "summary": "The S&W M&P 15-22 is the gold standard for .22 LR training rifles, replicating the AR-15 platform's controls and ergonomics at a fraction of the cost to operate."
+}

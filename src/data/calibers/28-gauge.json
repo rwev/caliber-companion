@@ -30,7 +30,7 @@
   "effective_range_yd": 30,
   "max_range_yd": 125,
   "recoil": {
-    "free_recoil_ft_lbs": 10.0,
+    "free_recoil_ft_lbs": 10,
     "reference_firearm": "Browning Citori 28 GA (28\" barrel, 5.75 lbs)",
     "subjective": "low"
   },
@@ -58,18 +58,18 @@
   ],
   "loads": [
     {
-      "name": "Federal Game-Shok 28 GA #6 Shot (2\u00be\")",
+      "name": "Federal Game-Shok 28 GA #6 Shot (2¾\")",
       "bullet_weight_gr": 328,
       "bullet_type": "#6 Lead Shot (3/4 oz)",
       "muzzle_velocity_fps": 1295,
       "muzzle_energy_ft_lbs": 1222,
-      "barrel_length_in": 28.0,
+      "barrel_length_in": 28,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 1295,
           "energy_ft_lbs": 1222,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 25,
@@ -98,18 +98,18 @@
       ]
     },
     {
-      "name": "Winchester AA 28 GA #9 Target Load (2\u00be\")",
+      "name": "Winchester AA 28 GA #9 Target Load (2¾\")",
       "bullet_weight_gr": 328,
       "bullet_type": "#9 Lead Shot (3/4 oz)",
       "muzzle_velocity_fps": 1200,
       "muzzle_energy_ft_lbs": 1050,
-      "barrel_length_in": 28.0,
+      "barrel_length_in": 28,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 1200,
           "energy_ft_lbs": 1050,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 25,
@@ -136,13 +136,47 @@
           "drop_in": -18.5
         }
       ]
+    },
+    {
+      "name": "Federal Premium TSS #9 Turkey",
+      "bullet_weight_gr": 312,
+      "bullet_type": "TSS #9 Shot (3\" shell)",
+      "muzzle_velocity_fps": 1100,
+      "muzzle_energy_ft_lbs": 838,
+      "barrel_length_in": 26,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1100,
+          "energy_ft_lbs": 838,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 20,
+          "velocity_fps": 1050,
+          "energy_ft_lbs": 764,
+          "drop_in": -0.2
+        },
+        {
+          "distance_yd": 30,
+          "velocity_fps": 1020,
+          "energy_ft_lbs": 721,
+          "drop_in": -0.4
+        },
+        {
+          "distance_yd": 40,
+          "velocity_fps": 990,
+          "energy_ft_lbs": 679,
+          "drop_in": -0.8
+        }
+      ]
     }
   ],
   "recommended_game": [
     {
       "game": "Upland Birds",
       "range": "Under 30 yd",
-      "notes": "#7.5-8 shot in 2\u00be\" shells; superb handling for quail, grouse, and woodcock"
+      "notes": "#7.5-8 shot in 2¾\" shells; superb handling for quail, grouse, and woodcock"
     },
     {
       "game": "Rabbits",

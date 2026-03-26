@@ -1,0 +1,20 @@
+{
+  "name": "Savage 110 Ultralite",
+  "slug": "savage-110-ultralite",
+  "manufacturer": "Savage Arms",
+  "country_of_origin": "USA",
+  "caliber": "65-creedmoor",
+  "type": "rifle",
+  "action": "Bolt-action",
+  "capacity": 4,
+  "barrel_length_in": 22,
+  "overall_length_in": 42,
+  "weight_oz": 95.2,
+  "year_introduced": 2020,
+  "notable_features": [
+    "Carbon fiber wrapped barrel",
+    "PROOF Research barrel",
+    "Under 6 lbs total weight"
+  ],
+  "summary": "The Savage 110 Ultralite pairs Savage's AccuTrigger with a PROOF Research carbon fiber barrel, delivering sub-MOA accuracy in one of the lightest production bolt rifles on the market."
+}

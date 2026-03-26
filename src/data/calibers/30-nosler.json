@@ -29,7 +29,7 @@
   "effective_range_yd": 1200,
   "max_range_yd": 5200,
   "recoil": {
-    "free_recoil_ft_lbs": 28.0,
+    "free_recoil_ft_lbs": 28,
     "reference_firearm": "Nosler M48 (26\" barrel, 8.0 lbs)",
     "subjective": "heavy"
   },
@@ -46,7 +46,7 @@
   "popularity_tier": "niche",
   "cost_per_round_usd": [
     2.5,
-    5.0
+    5
   ],
   "common_firearms": [
     "Nosler M48",
@@ -62,13 +62,13 @@
       "bullet_type": "AccuBond",
       "muzzle_velocity_fps": 3050,
       "muzzle_energy_ft_lbs": 3717,
-      "barrel_length_in": 26.0,
+      "barrel_length_in": 26,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 3050,
           "energy_ft_lbs": 3717,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -108,13 +108,13 @@
       "bullet_type": "AccuBond Long Range",
       "muzzle_velocity_fps": 2900,
       "muzzle_energy_ft_lbs": 3922,
-      "barrel_length_in": 26.0,
+      "barrel_length_in": 26,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2900,
           "energy_ft_lbs": 3922,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -126,13 +126,13 @@
           "distance_yd": 200,
           "velocity_fps": 2585,
           "energy_ft_lbs": 3117,
-          "drop_in": -6.0
+          "drop_in": -6
         },
         {
           "distance_yd": 300,
           "velocity_fps": 2434,
           "energy_ft_lbs": 2764,
-          "drop_in": -14.0
+          "drop_in": -14
         },
         {
           "distance_yd": 400,
@@ -144,7 +144,55 @@
           "distance_yd": 500,
           "velocity_fps": 2147,
           "energy_ft_lbs": 2148,
-          "drop_in": -42.0
+          "drop_in": -42
+        }
+      ]
+    },
+    {
+      "name": "Nosler Trophy Grade 180 gr AccuBond",
+      "bullet_weight_gr": 180,
+      "bullet_type": "AccuBond",
+      "muzzle_velocity_fps": 3050,
+      "muzzle_energy_ft_lbs": 3716,
+      "barrel_length_in": 26,
+      "bc_g1": 0.507,
+      "sectional_density": 0.271,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 3050,
+          "energy_ft_lbs": 3716,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2864,
+          "energy_ft_lbs": 3280,
+          "drop_in": -1.4
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2685,
+          "energy_ft_lbs": 2879,
+          "drop_in": -6.2
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2514,
+          "energy_ft_lbs": 2525,
+          "drop_in": -15
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2350,
+          "energy_ft_lbs": 2208,
+          "drop_in": -28.2
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2193,
+          "energy_ft_lbs": 1921,
+          "drop_in": -46.4
         }
       ]
     }
@@ -179,8 +227,8 @@
   "max_pressure_psi": 65000,
   "primer_type": "Large Rifle Magnum",
   "powder_charge_range_gr": [
-    68.0,
-    82.0
+    68,
+    82
   ],
   "availability_rating": 2,
   "annual_production_estimate": "limited",

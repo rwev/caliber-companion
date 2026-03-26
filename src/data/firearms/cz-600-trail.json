@@ -1,0 +1,20 @@
+{
+  "name": "CZ 600 Trail",
+  "slug": "cz-600-trail",
+  "manufacturer": "CZ (Česká zbrojovka)",
+  "country_of_origin": "Czech Republic",
+  "caliber": "762x39mm",
+  "type": "rifle",
+  "action": "Bolt-action",
+  "capacity": 5,
+  "barrel_length_in": 16.5,
+  "overall_length_in": 34.8,
+  "weight_oz": 91.2,
+  "year_introduced": 2022,
+  "notable_features": [
+    "Bolt-action in 7.62x39mm",
+    "Threaded barrel",
+    "Uses Bren 2 magazines"
+  ],
+  "summary": "The CZ 600 Trail is a compact bolt-action rifle in 7.62x39mm that brings precision accuracy to the world's most affordable centerfire cartridge, using widely available Bren 2 magazines."
+}

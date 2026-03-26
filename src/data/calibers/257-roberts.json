@@ -30,7 +30,7 @@
   "effective_range_yd": 400,
   "max_range_yd": 3800,
   "recoil": {
-    "free_recoil_ft_lbs": 10.0,
+    "free_recoil_ft_lbs": 10,
     "reference_firearm": "Ruger M77 (22\" barrel, 7.5 lbs)",
     "subjective": "low"
   },
@@ -47,7 +47,7 @@
   "popularity_tier": "niche",
   "cost_per_round_usd": [
     1.5,
-    3.0
+    3
   ],
   "common_firearms": [
     "Ruger M77 Hawkeye",
@@ -63,13 +63,13 @@
       "bullet_type": "AccuBond (Polymer Tip Bonded)",
       "muzzle_velocity_fps": 2950,
       "muzzle_energy_ft_lbs": 2125,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2950,
           "energy_ft_lbs": 2125,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -109,13 +109,13 @@
       "bullet_type": "SP (Soft Point)",
       "muzzle_velocity_fps": 2780,
       "muzzle_energy_ft_lbs": 2060,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 2780,
           "energy_ft_lbs": 2060,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -133,19 +133,61 @@
           "distance_yd": 300,
           "velocity_fps": 2090,
           "energy_ft_lbs": 1165,
-          "drop_in": -18.0
+          "drop_in": -18
         },
         {
           "distance_yd": 400,
           "velocity_fps": 1887,
           "energy_ft_lbs": 949,
-          "drop_in": -35.0
+          "drop_in": -35
         },
         {
           "distance_yd": 500,
           "velocity_fps": 1698,
           "energy_ft_lbs": 769,
-          "drop_in": -60.0
+          "drop_in": -60
+        }
+      ]
+    },
+    {
+      "name": "Hornady Superformance 117 gr SST",
+      "bullet_weight_gr": 117,
+      "bullet_type": "SST",
+      "muzzle_velocity_fps": 2945,
+      "muzzle_energy_ft_lbs": 2253,
+      "barrel_length_in": 24,
+      "bc_g1": 0.39,
+      "sectional_density": 0.253,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2945,
+          "energy_ft_lbs": 2253,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2726,
+          "energy_ft_lbs": 1930,
+          "drop_in": -1.6
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2517,
+          "energy_ft_lbs": 1646,
+          "drop_in": -7
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2319,
+          "energy_ft_lbs": 1397,
+          "drop_in": -17
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2130,
+          "energy_ft_lbs": 1178,
+          "drop_in": -32.4
         }
       ]
     }
@@ -175,8 +217,8 @@
   "max_pressure_psi": 54000,
   "primer_type": "Large Rifle",
   "powder_charge_range_gr": [
-    36.0,
-    48.0
+    36,
+    48
   ],
   "availability_rating": 2,
   "annual_production_estimate": "limited",

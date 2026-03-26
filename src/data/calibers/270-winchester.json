@@ -29,7 +29,7 @@
   "effective_range_yd": 700,
   "max_range_yd": 4700,
   "recoil": {
-    "free_recoil_ft_lbs": 15.0,
+    "free_recoil_ft_lbs": 15,
     "reference_firearm": "Winchester Model 70 (24\" barrel, 8.0 lbs)",
     "subjective": "moderate"
   },
@@ -109,7 +109,7 @@
       "bullet_type": "BST",
       "muzzle_velocity_fps": 3060,
       "muzzle_energy_ft_lbs": 2702,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "bc_g1": 0.433,
       "bc_g7": 0.216,
       "sectional_density": 0.242,
@@ -118,7 +118,7 @@
           "distance_yd": 0,
           "velocity_fps": 3060,
           "energy_ft_lbs": 2702,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -130,7 +130,7 @@
           "distance_yd": 200,
           "velocity_fps": 2639,
           "energy_ft_lbs": 2010,
-          "drop_in": -7.0
+          "drop_in": -7
         },
         {
           "distance_yd": 300,
@@ -148,7 +148,7 @@
           "distance_yd": 500,
           "velocity_fps": 2079,
           "energy_ft_lbs": 1248,
-          "drop_in": -53.0
+          "drop_in": -53
         }
       ]
     },
@@ -158,7 +158,7 @@
       "bullet_type": "AccuBond",
       "muzzle_velocity_fps": 2850,
       "muzzle_energy_ft_lbs": 2705,
-      "barrel_length_in": 24.0,
+      "barrel_length_in": 24,
       "bc_g1": 0.496,
       "bc_g7": 0.246,
       "sectional_density": 0.279,
@@ -167,13 +167,13 @@
           "distance_yd": 0,
           "velocity_fps": 2850,
           "energy_ft_lbs": 2705,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
           "velocity_fps": 2659,
           "energy_ft_lbs": 2354,
-          "drop_in": -2.0
+          "drop_in": -2
         },
         {
           "distance_yd": 200,
@@ -198,6 +198,54 @@
           "velocity_fps": 1970,
           "energy_ft_lbs": 1292,
           "drop_in": -60.5
+        }
+      ]
+    },
+    {
+      "name": "Nosler Partition 150 gr",
+      "bullet_weight_gr": 150,
+      "bullet_type": "Partition",
+      "muzzle_velocity_fps": 2850,
+      "muzzle_energy_ft_lbs": 2705,
+      "barrel_length_in": 24,
+      "bc_g1": 0.496,
+      "sectional_density": 0.279,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2850,
+          "energy_ft_lbs": 2705,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2671,
+          "energy_ft_lbs": 2375,
+          "drop_in": -1.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2499,
+          "energy_ft_lbs": 2080,
+          "drop_in": -7.6
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2334,
+          "energy_ft_lbs": 1814,
+          "drop_in": -18
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2176,
+          "energy_ft_lbs": 1577,
+          "drop_in": -33.6
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2025,
+          "energy_ft_lbs": 1366,
+          "drop_in": -55.4
         }
       ]
     }
@@ -232,8 +280,8 @@
   "max_pressure_psi": 65000,
   "primer_type": "Large Rifle",
   "powder_charge_range_gr": [
-    46.0,
-    60.0
+    46,
+    60
   ],
   "availability_rating": 4,
   "annual_production_estimate": "high",

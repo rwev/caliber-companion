@@ -1,0 +1,20 @@
+{
+  "name": "Stoeger M3000",
+  "slug": "stoeger-m3000",
+  "manufacturer": "Stoeger (Benelli Group)",
+  "country_of_origin": "Turkey",
+  "caliber": "12-gauge",
+  "type": "shotgun",
+  "action": "Inertia-driven semi-automatic",
+  "capacity": 4,
+  "barrel_length_in": 28,
+  "overall_length_in": 49.5,
+  "weight_oz": 116,
+  "year_introduced": 2013,
+  "notable_features": [
+    "Benelli inertia system at budget price",
+    "Cycles 2-3/4\" and 3\" shells",
+    "Red-bar front sight"
+  ],
+  "summary": "The Stoeger M3000 brings the proven Benelli inertia-driven action to a budget-friendly price point, making it the most recommended entry-level semi-automatic shotgun for hunting and 3-gun."
+}

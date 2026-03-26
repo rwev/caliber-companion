@@ -1,0 +1,20 @@
+{
+  "name": "Walther PDP",
+  "slug": "walther-pdp",
+  "manufacturer": "Carl Walther",
+  "country_of_origin": "Germany",
+  "caliber": "9mm-luger",
+  "type": "pistol",
+  "action": "Striker-fired semi-automatic",
+  "capacity": 18,
+  "barrel_length_in": 4.5,
+  "overall_length_in": 8,
+  "weight_oz": 24.6,
+  "year_introduced": 2021,
+  "notable_features": [
+    "Performance Duty Trigger",
+    "SuperTerrain slide serrations",
+    "Red-dot optics ready"
+  ],
+  "summary": "The Walther PDP (Performance Duty Pistol) set a new benchmark for factory striker-fired triggers, combining German engineering with modern features at a competitive price point."
+}

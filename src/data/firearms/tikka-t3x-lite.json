@@ -1,0 +1,20 @@
+{
+  "name": "Tikka T3x Lite",
+  "slug": "tikka-t3x-lite",
+  "manufacturer": "Tikka (Sako)",
+  "country_of_origin": "Finland",
+  "caliber": "270-winchester",
+  "type": "rifle",
+  "action": "Bolt-action",
+  "capacity": 3,
+  "barrel_length_in": 22.4,
+  "overall_length_in": 42.5,
+  "weight_oz": 102.4,
+  "year_introduced": 2016,
+  "notable_features": [
+    "Modular synthetic stock",
+    "Single-stage adjustable trigger",
+    "Sub-MOA accuracy guarantee"
+  ],
+  "summary": "The Tikka T3x Lite is one of the most recommended hunting rifles worldwide, offering Finnish precision and a legendary smooth bolt action at a price point that punches well above its weight."
+}

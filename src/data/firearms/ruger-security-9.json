@@ -1,0 +1,20 @@
+{
+  "name": "Ruger Security-9",
+  "slug": "ruger-security-9",
+  "manufacturer": "Sturm, Ruger & Co.",
+  "country_of_origin": "USA",
+  "caliber": "9mm-luger",
+  "type": "pistol",
+  "action": "Hammer-fired semi-automatic",
+  "capacity": 15,
+  "barrel_length_in": 4,
+  "overall_length_in": 7.24,
+  "weight_oz": 23.8,
+  "year_introduced": 2017,
+  "notable_features": [
+    "Bladed trigger safety",
+    "Secure Action hammer-fired mechanism",
+    "Ruger Security-9 magazines"
+  ],
+  "summary": "The Ruger Security-9 brought Ruger's renowned reliability to the budget-conscious full-size 9mm market, becoming one of the best-selling handguns in America at its price point."
+}

@@ -30,7 +30,7 @@
   "effective_range_yd": 1200,
   "max_range_yd": 5600,
   "recoil": {
-    "free_recoil_ft_lbs": 25.0,
+    "free_recoil_ft_lbs": 25,
     "reference_firearm": "Remington 700 (26\" barrel, 8.5 lbs)",
     "subjective": "heavy"
   },
@@ -56,7 +56,7 @@
   "popularity_tier": "very_common",
   "cost_per_round_usd": [
     1.25,
-    4.0
+    4
   ],
   "common_firearms": [
     "Remington 700",
@@ -121,7 +121,7 @@
       "bullet_type": "BTHP (Sierra MatchKing)",
       "muzzle_velocity_fps": 2900,
       "muzzle_energy_ft_lbs": 3547,
-      "barrel_length_in": 26.0,
+      "barrel_length_in": 26,
       "bc_g1": 0.533,
       "bc_g7": 0.264,
       "sectional_density": 0.286,
@@ -130,7 +130,7 @@
           "distance_yd": 0,
           "velocity_fps": 2900,
           "energy_ft_lbs": 3547,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -176,7 +176,7 @@
       "bullet_type": "ELD-X",
       "muzzle_velocity_fps": 2850,
       "muzzle_energy_ft_lbs": 3607,
-      "barrel_length_in": 26.0,
+      "barrel_length_in": 26,
       "bc_g1": 0.597,
       "bc_g7": 0.29,
       "sectional_density": 0.301,
@@ -185,7 +185,7 @@
           "distance_yd": 0,
           "velocity_fps": 2850,
           "energy_ft_lbs": 3607,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -203,25 +203,74 @@
           "distance_yd": 300,
           "velocity_fps": 2369,
           "energy_ft_lbs": 2494,
-          "drop_in": -15.0
+          "drop_in": -15
         },
         {
           "distance_yd": 400,
           "velocity_fps": 2219,
           "energy_ft_lbs": 2189,
-          "drop_in": -28.0
+          "drop_in": -28
         },
         {
           "distance_yd": 500,
           "velocity_fps": 2075,
           "energy_ft_lbs": 1912,
-          "drop_in": -46.0
+          "drop_in": -46
         },
         {
           "distance_yd": 600,
           "velocity_fps": 1936,
           "energy_ft_lbs": 1664,
           "drop_in": -70.2
+        }
+      ]
+    },
+    {
+      "name": "Hornady Precision Hunter 200 gr ELD-X",
+      "bullet_weight_gr": 200,
+      "bullet_type": "ELD-X",
+      "muzzle_velocity_fps": 2850,
+      "muzzle_energy_ft_lbs": 3607,
+      "barrel_length_in": 24,
+      "bc_g1": 0.597,
+      "bc_g7": 0.3,
+      "sectional_density": 0.301,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2850,
+          "energy_ft_lbs": 3607,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2694,
+          "energy_ft_lbs": 3224,
+          "drop_in": -1.7
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2543,
+          "energy_ft_lbs": 2874,
+          "drop_in": -7.2
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2397,
+          "energy_ft_lbs": 2553,
+          "drop_in": -16.8
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2257,
+          "energy_ft_lbs": 2262,
+          "drop_in": -31
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2122,
+          "energy_ft_lbs": 2000,
+          "drop_in": -50.6
         }
       ]
     }
@@ -261,8 +310,8 @@
   "max_pressure_psi": 64000,
   "primer_type": "Large Rifle Magnum",
   "powder_charge_range_gr": [
-    60.0,
-    80.0
+    60,
+    80
   ],
   "availability_rating": 4,
   "annual_production_estimate": "high",
@@ -270,8 +319,20 @@
   "suppressor_friendly": true,
   "subsonic_loads_available": false,
   "military_adoption_detail": [
-    { "organization": "U.S. Military", "designation": "Mk 248 Mod 1", "year_adopted": 2009, "role": "Long-range sniper cartridge", "status": "active" },
-    { "organization": "U.S. Army", "designation": "M2010 ESR", "year_adopted": 2011, "role": "Sniper rifle cartridge", "status": "active" }
+    {
+      "organization": "U.S. Military",
+      "designation": "Mk 248 Mod 1",
+      "year_adopted": 2009,
+      "role": "Long-range sniper cartridge",
+      "status": "active"
+    },
+    {
+      "organization": "U.S. Army",
+      "designation": "M2010 ESR",
+      "year_adopted": 2011,
+      "role": "Sniper rifle cartridge",
+      "status": "active"
+    }
   ],
   "le_adoption_detail": []
 }

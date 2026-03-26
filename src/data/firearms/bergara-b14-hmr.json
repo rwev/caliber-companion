@@ -1,0 +1,20 @@
+{
+  "name": "Bergara B-14 HMR",
+  "slug": "bergara-b14-hmr",
+  "manufacturer": "Bergara",
+  "country_of_origin": "Spain",
+  "caliber": "65-creedmoor",
+  "type": "rifle",
+  "action": "Bolt-action",
+  "capacity": 5,
+  "barrel_length_in": 22,
+  "overall_length_in": 43.5,
+  "weight_oz": 144,
+  "year_introduced": 2017,
+  "notable_features": [
+    "Remington 700 footprint action",
+    "Mini-chassis stock with adjustable cheek riser",
+    "Sub-MOA accuracy guarantee"
+  ],
+  "summary": "The Bergara B-14 HMR brought precision rifle performance to the sub- price point, making it one of the most recommended entry-level precision rifles in the shooting community."
+}

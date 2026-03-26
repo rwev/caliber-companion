@@ -30,7 +30,7 @@
   "effective_range_yd": 75,
   "max_range_yd": 2200,
   "recoil": {
-    "free_recoil_ft_lbs": 10.0,
+    "free_recoil_ft_lbs": 10,
     "reference_firearm": "Smith & Wesson Model 686 (4\" barrel, 38 oz)",
     "subjective": "moderate"
   },
@@ -118,7 +118,7 @@
       "bullet_type": "JSP",
       "muzzle_velocity_fps": 1240,
       "muzzle_energy_ft_lbs": 539,
-      "barrel_length_in": 4.0,
+      "barrel_length_in": 4,
       "bc_g1": 0.164,
       "sectional_density": 0.177,
       "ballistics": [
@@ -126,7 +126,7 @@
           "distance_yd": 0,
           "velocity_fps": 1240,
           "energy_ft_lbs": 539,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 25,
@@ -160,7 +160,7 @@
       "bullet_type": "FTX",
       "muzzle_velocity_fps": 1500,
       "muzzle_energy_ft_lbs": 624,
-      "barrel_length_in": 4.0,
+      "barrel_length_in": 4,
       "bc_g1": 0.155,
       "sectional_density": 0.14,
       "gel_penetration_in": 12.5,
@@ -171,7 +171,7 @@
           "distance_yd": 0,
           "velocity_fps": 1500,
           "energy_ft_lbs": 624,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 25,
@@ -198,6 +198,51 @@
           "drop_in": -3.6
         }
       ]
+    },
+    {
+      "name": "Hornady Critical Duty 135 gr FlexLock",
+      "bullet_weight_gr": 135,
+      "bullet_type": "FlexLock JHP",
+      "muzzle_velocity_fps": 1275,
+      "muzzle_energy_ft_lbs": 487,
+      "barrel_length_in": 4,
+      "bc_g1": 0.155,
+      "sectional_density": 0.151,
+      "gel_penetration_in": 15.2,
+      "expansion_diameter_in": 0.54,
+      "barrier_blind": true,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1275,
+          "energy_ft_lbs": 487,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1210,
+          "energy_ft_lbs": 439,
+          "drop_in": -0.2
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1152,
+          "energy_ft_lbs": 398,
+          "drop_in": -0.7
+        },
+        {
+          "distance_yd": 75,
+          "velocity_fps": 1100,
+          "energy_ft_lbs": 363,
+          "drop_in": -2
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1055,
+          "energy_ft_lbs": 334,
+          "drop_in": -4.3
+        }
+      ]
     }
   ],
   "recommended_game": [
@@ -220,8 +265,8 @@
   "max_pressure_psi": 35000,
   "primer_type": "Small Pistol",
   "powder_charge_range_gr": [
-    13.0,
-    18.0
+    13,
+    18
   ],
   "availability_rating": 4,
   "annual_production_estimate": "high",

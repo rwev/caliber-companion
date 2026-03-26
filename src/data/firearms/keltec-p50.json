@@ -1,0 +1,20 @@
+{
+  "name": "KelTec P50",
+  "slug": "keltec-p50",
+  "manufacturer": "Kel-Tec",
+  "country_of_origin": "USA",
+  "caliber": "57x28mm",
+  "type": "pistol",
+  "action": "Delayed blowback semi-automatic",
+  "capacity": 50,
+  "barrel_length_in": 9.6,
+  "overall_length_in": 15,
+  "weight_oz": 51,
+  "year_introduced": 2021,
+  "notable_features": [
+    "50-round FN P90 magazine",
+    "Top-mounted Picatinny rail",
+    "Unique clamshell design for cleaning"
+  ],
+  "summary": "The Kel-Tec P50 is one of the most unconventional handguns on the market — a 5.7x28mm pistol that uses 50-round FN P90 magazines, offering unprecedented capacity in a surprisingly compact package."
+}

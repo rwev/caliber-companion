@@ -30,7 +30,7 @@
   "effective_range_yd": 900,
   "max_range_yd": 5000,
   "recoil": {
-    "free_recoil_ft_lbs": 18.0,
+    "free_recoil_ft_lbs": 18,
     "reference_firearm": "Winchester Model 70 (26\" barrel, 8.5 lbs)",
     "subjective": "heavy"
   },
@@ -46,7 +46,7 @@
   ],
   "popularity_tier": "niche",
   "cost_per_round_usd": [
-    2.0,
+    2,
     4.5
   ],
   "common_firearms": [
@@ -61,13 +61,13 @@
       "bullet_type": "AccuBond",
       "muzzle_velocity_fps": 3100,
       "muzzle_energy_ft_lbs": 2773,
-      "barrel_length_in": 26.0,
+      "barrel_length_in": 26,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 3100,
           "energy_ft_lbs": 2773,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -107,13 +107,13 @@
       "bullet_type": "SP",
       "muzzle_velocity_fps": 3030,
       "muzzle_energy_ft_lbs": 2854,
-      "barrel_length_in": 26.0,
+      "barrel_length_in": 26,
       "ballistics": [
         {
           "distance_yd": 0,
           "velocity_fps": 3030,
           "energy_ft_lbs": 2854,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 100,
@@ -131,7 +131,7 @@
           "distance_yd": 300,
           "velocity_fps": 2326,
           "energy_ft_lbs": 1682,
-          "drop_in": -14.0
+          "drop_in": -14
         },
         {
           "distance_yd": 400,
@@ -143,7 +143,55 @@
           "distance_yd": 500,
           "velocity_fps": 1918,
           "energy_ft_lbs": 1144,
-          "drop_in": -45.0
+          "drop_in": -45
+        }
+      ]
+    },
+    {
+      "name": "Nosler Trophy Grade 130 gr AccuBond",
+      "bullet_weight_gr": 130,
+      "bullet_type": "AccuBond",
+      "muzzle_velocity_fps": 3100,
+      "muzzle_energy_ft_lbs": 2773,
+      "barrel_length_in": 26,
+      "bc_g1": 0.488,
+      "sectional_density": 0.266,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 3100,
+          "energy_ft_lbs": 2773,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2893,
+          "energy_ft_lbs": 2416,
+          "drop_in": -1.4
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2695,
+          "energy_ft_lbs": 2097,
+          "drop_in": -6.2
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2506,
+          "energy_ft_lbs": 1813,
+          "drop_in": -14.8
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2326,
+          "energy_ft_lbs": 1562,
+          "drop_in": -28
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2155,
+          "energy_ft_lbs": 1340,
+          "drop_in": -46.2
         }
       ]
     }
@@ -173,8 +221,8 @@
   "max_pressure_psi": 64000,
   "primer_type": "Large Rifle Magnum",
   "powder_charge_range_gr": [
-    52.0,
-    66.0
+    52,
+    66
   ],
   "availability_rating": 2,
   "annual_production_estimate": "limited",

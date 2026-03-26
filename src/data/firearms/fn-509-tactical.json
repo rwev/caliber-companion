@@ -1,0 +1,20 @@
+{
+  "name": "FN 509 Tactical",
+  "slug": "fn-509-tactical",
+  "manufacturer": "FN Herstal",
+  "country_of_origin": "Belgium",
+  "caliber": "9mm-luger",
+  "type": "pistol",
+  "action": "Striker-fired semi-automatic",
+  "capacity": 24,
+  "barrel_length_in": 4.5,
+  "overall_length_in": 8.2,
+  "weight_oz": 26.9,
+  "year_introduced": 2018,
+  "notable_features": [
+    "Threaded barrel",
+    "24-round extended magazine",
+    "Low-profile optics mounting system"
+  ],
+  "summary": "The FN 509 Tactical is a suppressor-ready duty pistol with 24+1 capacity, designed for military and law enforcement users who need a host platform for red dots and suppressors."
+}

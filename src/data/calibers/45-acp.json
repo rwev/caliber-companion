@@ -3,7 +3,7 @@
   "designation": ".45 Auto",
   "aliases": [
     ".45 Auto",
-    "11.43\u00d723mm"
+    "11.43×23mm"
   ],
   "category": "handgun",
   "slug": "45-acp",
@@ -56,7 +56,7 @@
   "popularity_tier": "very_common",
   "cost_per_round_usd": [
     0.3,
-    1.0
+    1
   ],
   "common_firearms": [
     "1911 (various manufacturers)",
@@ -110,7 +110,7 @@
       "bullet_type": "FMJ",
       "muzzle_velocity_fps": 890,
       "muzzle_energy_ft_lbs": 405,
-      "barrel_length_in": 5.0,
+      "barrel_length_in": 5,
       "bc_g1": 0.195,
       "sectional_density": 0.161,
       "ballistics": [
@@ -118,7 +118,7 @@
           "distance_yd": 0,
           "velocity_fps": 890,
           "energy_ft_lbs": 405,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 25,
@@ -152,10 +152,10 @@
       "bullet_type": "JHP",
       "muzzle_velocity_fps": 890,
       "muzzle_energy_ft_lbs": 405,
-      "barrel_length_in": 5.0,
+      "barrel_length_in": 5,
       "bc_g1": 0.186,
       "sectional_density": 0.161,
-      "gel_penetration_in": 14.0,
+      "gel_penetration_in": 14,
       "expansion_diameter_in": 0.85,
       "barrier_blind": true,
       "ballistics": [
@@ -163,7 +163,7 @@
           "distance_yd": 0,
           "velocity_fps": 890,
           "energy_ft_lbs": 405,
-          "drop_in": 0.0
+          "drop_in": 0
         },
         {
           "distance_yd": 25,
@@ -190,13 +190,58 @@
           "drop_in": -9.7
         }
       ]
+    },
+    {
+      "name": "Federal HST 230 gr JHP",
+      "bullet_weight_gr": 230,
+      "bullet_type": "JHP",
+      "muzzle_velocity_fps": 890,
+      "muzzle_energy_ft_lbs": 404,
+      "barrel_length_in": 5,
+      "bc_g1": 0.195,
+      "sectional_density": 0.162,
+      "gel_penetration_in": 14.6,
+      "expansion_diameter_in": 0.85,
+      "barrier_blind": true,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 890,
+          "energy_ft_lbs": 404,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 867,
+          "energy_ft_lbs": 384,
+          "drop_in": -0.4
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 845,
+          "energy_ft_lbs": 365,
+          "drop_in": -1.8
+        },
+        {
+          "distance_yd": 75,
+          "velocity_fps": 824,
+          "energy_ft_lbs": 347,
+          "drop_in": -4.5
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 804,
+          "energy_ft_lbs": 330,
+          "drop_in": -8.8
+        }
+      ]
     }
   ],
   "max_pressure_psi": 21000,
   "primer_type": "Large Pistol",
   "powder_charge_range_gr": [
     4.5,
-    8.0
+    8
   ],
   "availability_rating": 4,
   "annual_production_estimate": "high",
@@ -204,11 +249,32 @@
   "suppressor_friendly": true,
   "subsonic_loads_available": true,
   "military_adoption_detail": [
-    { "organization": "U.S. Army", "designation": "M1911", "year_adopted": 1911, "role": "Standard sidearm cartridge", "status": "retired" },
-    { "organization": "U.S. Marine Corps MARSOC", "designation": "M45A1", "year_adopted": 2012, "role": "Special operations sidearm cartridge", "status": "active" },
-    { "organization": "U.S. Special Forces", "role": "Special operations sidearm cartridge (select units)", "status": "active" }
+    {
+      "organization": "U.S. Army",
+      "designation": "M1911",
+      "year_adopted": 1911,
+      "role": "Standard sidearm cartridge",
+      "status": "retired"
+    },
+    {
+      "organization": "U.S. Marine Corps MARSOC",
+      "designation": "M45A1",
+      "year_adopted": 2012,
+      "role": "Special operations sidearm cartridge",
+      "status": "active"
+    },
+    {
+      "organization": "U.S. Special Forces",
+      "role": "Special operations sidearm cartridge (select units)",
+      "status": "active"
+    }
   ],
   "le_adoption_detail": [
-    { "organization": "Various U.S. agencies", "year_adopted": 1911, "role": "Standard duty cartridge", "status": "retired" }
+    {
+      "organization": "Various U.S. agencies",
+      "year_adopted": 1911,
+      "role": "Standard duty cartridge",
+      "status": "retired"
+    }
   ]
 }

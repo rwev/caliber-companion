@@ -1,0 +1,20 @@
+{
+  "name": "Staccato P",
+  "slug": "staccato-p",
+  "manufacturer": "Staccato (STI)",
+  "country_of_origin": "USA",
+  "caliber": "9mm-luger",
+  "type": "pistol",
+  "action": "Short recoil semi-automatic (2011)",
+  "capacity": 20,
+  "barrel_length_in": 4.4,
+  "overall_length_in": 8,
+  "weight_oz": 35,
+  "year_introduced": 2019,
+  "notable_features": [
+    "2011 double-stack 1911 design",
+    "20+1 capacity in 9mm",
+    "Standard on many LE tactical teams"
+  ],
+  "summary": "The Staccato P is the modern evolution of the 1911, combining double-stack capacity with the crisp single-action trigger and steel frame that made the 1911 legendary. Widely adopted by law enforcement tactical units."
+}

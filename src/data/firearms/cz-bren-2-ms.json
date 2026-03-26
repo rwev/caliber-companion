@@ -1,0 +1,20 @@
+{
+  "name": "CZ Bren 2 Ms",
+  "slug": "cz-bren-2-ms",
+  "manufacturer": "CZ (Česká zbrojovka)",
+  "country_of_origin": "Czech Republic",
+  "caliber": "556x45mm-nato",
+  "type": "carbine",
+  "action": "Gas-operated semi-automatic",
+  "capacity": 30,
+  "barrel_length_in": 11.1,
+  "overall_length_in": 32.7,
+  "weight_oz": 109,
+  "year_introduced": 2020,
+  "notable_features": [
+    "Standard issue Czech military rifle",
+    "Modular caliber conversion",
+    "Non-reciprocating charging handle"
+  ],
+  "summary": "The CZ Bren 2 Ms is the civilian semi-auto version of the Czech military's standard issue rifle, a modern modular platform that competes with the best military rifles in NATO service."
+}

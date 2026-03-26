@@ -1,0 +1,20 @@
+{
+  "name": "Remington V3",
+  "slug": "remington-v3",
+  "manufacturer": "Remington (RemArms)",
+  "country_of_origin": "USA",
+  "caliber": "12-gauge",
+  "type": "shotgun",
+  "action": "Gas-operated semi-automatic",
+  "capacity": 3,
+  "barrel_length_in": 28,
+  "overall_length_in": 48.5,
+  "weight_oz": 116,
+  "year_introduced": 2015,
+  "notable_features": [
+    "VersaPort gas system cycles all loads",
+    "Light contour barrel",
+    "Supercell recoil pad"
+  ],
+  "summary": "The Remington V3 brought reliable gas-operated cycling of everything from light target loads to 3-inch magnums in a lightweight, affordable hunting and sporting shotgun."
+}

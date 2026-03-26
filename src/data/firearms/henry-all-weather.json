@@ -1,0 +1,20 @@
+{
+  "name": "Henry All-Weather",
+  "slug": "henry-all-weather",
+  "manufacturer": "Henry Repeating Arms",
+  "country_of_origin": "USA",
+  "caliber": "45-70-government",
+  "type": "rifle",
+  "action": "Lever-action",
+  "capacity": 4,
+  "barrel_length_in": 18.4,
+  "overall_length_in": 36.5,
+  "weight_oz": 112,
+  "year_introduced": 2018,
+  "notable_features": [
+    "Hard chrome plating for corrosion resistance",
+    "Side loading gate",
+    "Coated hardwood stock"
+  ],
+  "summary": "The Henry All-Weather in .45-70 Government is the quintessential brush gun for bear country — a hard-chrome lever-action that laughs at rain, mud, and the punishing recoil of heavy .45-70 loads."
+}

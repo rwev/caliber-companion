@@ -1,0 +1,20 @@
+{
+  "name": "Ruger SFAR",
+  "slug": "ruger-sfar",
+  "manufacturer": "Sturm, Ruger & Co.",
+  "country_of_origin": "USA",
+  "caliber": "308-winchester",
+  "type": "rifle",
+  "action": "Gas-operated semi-automatic",
+  "capacity": 20,
+  "barrel_length_in": 16.1,
+  "overall_length_in": 34,
+  "weight_oz": 112,
+  "year_introduced": 2022,
+  "notable_features": [
+    ".308 Win in AR-15 sized platform",
+    "Adjustable gas block",
+    "Sub-7 lb weight"
+  ],
+  "summary": "The Ruger SFAR (Small Frame Autoloading Rifle) achieved the remarkable feat of chambering .308 Winchester in a rifle the size and weight of a typical 5.56 AR-15."
+}

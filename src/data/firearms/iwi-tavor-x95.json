@@ -1,0 +1,20 @@
+{
+  "name": "IWI Tavor X95",
+  "slug": "iwi-tavor-x95",
+  "manufacturer": "Israel Weapon Industries",
+  "country_of_origin": "Israel",
+  "caliber": "556x45mm-nato",
+  "type": "rifle",
+  "action": "Gas-operated semi-automatic (bullpup)",
+  "capacity": 30,
+  "barrel_length_in": 16.5,
+  "overall_length_in": 26.1,
+  "weight_oz": 127.2,
+  "year_introduced": 2016,
+  "notable_features": [
+    "Bullpup design with 16.5\" barrel in 26\" OAL",
+    "Standard issue IDF infantry rifle",
+    "Fully ambidextrous controls"
+  ],
+  "summary": "The IWI Tavor X95 is the standard infantry rifle of the Israel Defense Forces, bringing a full-length 16.5-inch barrel into an ultra-compact 26-inch bullpup package."
+}

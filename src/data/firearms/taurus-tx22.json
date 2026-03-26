@@ -1,0 +1,20 @@
+{
+  "name": "Taurus TX22",
+  "slug": "taurus-tx22",
+  "manufacturer": "Taurus",
+  "country_of_origin": "Brazil",
+  "caliber": "22-lr",
+  "type": "pistol",
+  "action": "Blowback semi-automatic",
+  "capacity": 16,
+  "barrel_length_in": 4.1,
+  "overall_length_in": 7.06,
+  "weight_oz": 17.3,
+  "year_introduced": 2019,
+  "notable_features": [
+    "16+1 capacity in .22 LR",
+    "Full-size grip with adjustable backstraps",
+    "Threaded barrel option"
+  ],
+  "summary": "The Taurus TX22 redefined expectations for .22 LR pistols with 16+1 capacity, exceptional reliability, and a full-size ergonomic design that makes it the best-selling .22 pistol in the market."
+}

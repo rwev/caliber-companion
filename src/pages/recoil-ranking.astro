@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { titleCase, fmtNumber } from '../lib/format';
+
+const allCalibers = await getCollection('caliberData');
+
+interface RecoilEntry {
+  name: string;
+  slug: string;
+  category: string;
+  recoilFtLbs: number;
+  subjective: string;
+  referenceFirearm: string;
+  barPct: number;
+  barColor: string;
+}
+
+const maxRecoil = Math.max(...allCalibers.map(c => c.data.recoil.free_recoil_ft_lbs));
+
+const recoilColors: Record<string, string> = {
+  very_low: 'bg-success',
+  low: 'bg-success',
+  moderate: 'bg-info',
+  heavy: 'bg-warning',
+  very_heavy: 'bg-danger',
+};
+
+const entries: RecoilEntry[] = allCalibers
+  .map(c => ({
+    name: c.data.name,
+    slug: c.data.slug,
+    category: c.data.category,
+    recoilFtLbs: c.data.recoil.free_recoil_ft_lbs,
+    subjective: c.data.recoil.subjective,
+    referenceFirearm: c.data.recoil.reference_firearm,
+    barPct: (c.data.recoil.free_recoil_ft_lbs / maxRecoil) * 100,
+    barColor: recoilColors[c.data.recoil.subjective] || 'bg-info',
+  }))
+  .sort((a, b) => a.recoilFtLbs - b.recoilFtLbs);
+
+const categories = [...new Set(entries.map(e => e.category))].sort();
+
+const pageDescription = `Compare free recoil energy across ${entries.length} calibers. Visual ranking from ${entries[0].recoilFtLbs} ft-lbs (${entries[0].name}) to ${entries[entries.length - 1].recoilFtLbs} ft-lbs (${entries[entries.length - 1].name}).`;
+---
+
+<BaseLayout title="Recoil Ranking" description={pageDescription} breadcrumbs={[{ label: 'Recoil Ranking' }]}>
+  <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
+    <div class="mb-8">
+      <h1 class="font-display text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
+        Recoil Ranking
+      </h1>
+      <p class="mt-2 font-mono text-base text-text-muted max-w-3xl">
+        All {entries.length} calibers ranked by free recoil energy (ft-lbs). Lower values = softer shooting.
+        Recoil measured from a reference firearm for each caliber.
+      </p>
+    </div>
+
+    <!-- Legend -->
+    <div class="mb-6 flex flex-wrap items-center gap-3 font-mono text-xs text-text-muted">
+      <span>Rating:</span>
+      <span class="flex items-center gap-1"><span class="inline-block h-3 w-6 bg-success rounded-sm"></span> Very Low / Low</span>
+      <span class="flex items-center gap-1"><span class="inline-block h-3 w-6 bg-info rounded-sm"></span> Moderate</span>
+      <span class="flex items-center gap-1"><span class="inline-block h-3 w-6 bg-warning rounded-sm"></span> Heavy</span>
+      <span class="flex items-center gap-1"><span class="inline-block h-3 w-6 bg-danger rounded-sm"></span> Very Heavy</span>
+    </div>
+
+    <!-- Category sections -->
+    {categories.map(cat => {
+      const catEntries = entries.filter(e => e.category === cat);
+      return (
+        <div class="mb-8">
+          <h2 class="mb-3 font-display text-lg font-semibold tracking-[0.2em] uppercase text-accent border-b border-surface-border pb-2">
+            {titleCase(cat)} ({catEntries.length})
+          </h2>
+
+          <div class="border border-surface-border">
+            <div class="divide-y divide-surface-border-subtle">
+              {catEntries.map((e, i) => (
+                <div class={`flex items-center gap-3 px-3 py-2 ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
+                  <a
+                    href={`/caliber-companion/calibers/${e.slug}`}
+                    class="w-32 sm:w-40 shrink-0 font-mono text-sm text-text-primary hover:text-accent transition-colors truncate"
+                    title={e.name}
+                  >
+                    {e.name}
+                  </a>
+
+                  <div class="flex-1 relative h-5">
+                    <div
+                      class={`absolute top-0.5 h-4 ${e.barColor} opacity-60 rounded-r-sm transition-all`}
+                      style={`width: ${e.barPct}%;`}
+                    />
+                  </div>
+
+                  <div class="w-20 shrink-0 text-right">
+                    <span class="font-mono text-sm font-medium text-text-primary">{e.recoilFtLbs}</span>
+                    <span class="font-mono text-xs text-text-muted"> ft·lbs</span>
+                  </div>
+
+                  <span class={`hidden sm:inline w-20 shrink-0 text-right font-mono text-xs ${
+                    e.subjective === 'very_low' || e.subjective === 'low' ? 'text-success' :
+                    e.subjective === 'moderate' ? 'text-info' :
+                    e.subjective === 'heavy' ? 'text-warning' : 'text-danger'
+                  }`}>
+                    {titleCase(e.subjective)}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      );
+    })}
+
+    <!-- Overall ranking -->
+    <div class="mt-12 border border-surface-border">
+      <div class="border-b border-surface-border bg-surface-overlay px-4 py-2.5">
+        <h2 class="font-display text-base tracking-[0.2em] uppercase text-text-muted">
+          Full Ranking — All Categories (Lowest to Highest Recoil)
+        </h2>
+      </div>
+      <div class="divide-y divide-surface-border-subtle">
+        {entries.map((e, i) => (
+          <div class={`flex items-center gap-3 px-3 py-1.5 ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
+            <span class="w-8 shrink-0 font-mono text-xs text-text-muted text-right">{i + 1}.</span>
+            <a
+              href={`/caliber-companion/calibers/${e.slug}`}
+              class="w-32 sm:w-40 shrink-0 font-mono text-sm text-text-primary hover:text-accent transition-colors truncate"
+            >
+              {e.name}
+            </a>
+
+            <div class="flex-1 relative h-4">
+              <div
+                class={`absolute top-0 h-4 ${e.barColor} opacity-50 rounded-r-sm`}
+                style={`width: ${e.barPct}%;`}
+              />
+            </div>
+
+            <span class="w-16 shrink-0 text-right font-mono text-sm text-text-primary">{e.recoilFtLbs}</span>
+            <span class="hidden sm:inline border border-surface-border px-1.5 py-0.5 font-mono text-xs tracking-wider uppercase text-text-muted shrink-0">
+              {titleCase(e.category)}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <p class="mt-4 font-mono text-xs text-text-muted">
+      Free recoil energy calculated using reference firearm weight for each caliber. Actual felt recoil varies
+      with gun weight, stock design, muzzle device, and shooter technique.
+    </p>
+  </div>
+</BaseLayout>

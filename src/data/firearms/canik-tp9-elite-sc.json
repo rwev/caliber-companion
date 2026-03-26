@@ -1,0 +1,20 @@
+{
+  "name": "Canik TP9 Elite SC",
+  "slug": "canik-tp9-elite-sc",
+  "manufacturer": "Canik",
+  "country_of_origin": "Turkey",
+  "caliber": "9mm-luger",
+  "type": "pistol",
+  "action": "Striker-fired semi-automatic",
+  "capacity": 12,
+  "barrel_length_in": 3.6,
+  "overall_length_in": 6.7,
+  "weight_oz": 24.8,
+  "year_introduced": 2019,
+  "notable_features": [
+    "Best-in-class trigger for the price",
+    "Optics-ready slide",
+    "Includes holster and multiple backstraps"
+  ],
+  "summary": "The Canik TP9 Elite SC redefined the budget concealed carry market with a competition-grade trigger, optics-ready slide, and comprehensive accessory package at a fraction of competitors' prices."
+}
