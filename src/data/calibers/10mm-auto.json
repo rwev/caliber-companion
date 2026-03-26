@@ -261,6 +261,42 @@
           "drop_in": -3.8
         }
       ]
+    },
+    {
+      "name": "Sig Sauer V-Crown 180 gr JHP",
+      "bullet_weight_gr": 180,
+      "bullet_type": "V-Crown JHP",
+      "muzzle_velocity_fps": 1250,
+      "muzzle_energy_ft_lbs": 624,
+      "barrel_length_in": 5,
+      "bc_g1": 0.165,
+      "sectional_density": 0.161,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1250,
+          "energy_ft_lbs": 624,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1198,
+          "energy_ft_lbs": 574,
+          "drop_in": -0.2
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1150,
+          "energy_ft_lbs": 529,
+          "drop_in": -0.7
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1070,
+          "energy_ft_lbs": 457,
+          "drop_in": -3.6
+        }
+      ]
     }
   ],
   "max_pressure_psi": 37500,

@@ -261,6 +261,42 @@
           "drop_in": -20.4
         }
       ]
+    },
+    {
+      "name": "Norma Whitetail 172 gr SP",
+      "bullet_weight_gr": 172,
+      "bullet_type": "Soft Point",
+      "muzzle_velocity_fps": 2582,
+      "muzzle_energy_ft_lbs": 2547,
+      "barrel_length_in": 25.7,
+      "bc_g1": 0.43,
+      "sectional_density": 0.24,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2582,
+          "energy_ft_lbs": 2547,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2401,
+          "energy_ft_lbs": 2190,
+          "drop_in": -2
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2221,
+          "energy_ft_lbs": 1885,
+          "drop_in": -8.4
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2066,
+          "energy_ft_lbs": 1605,
+          "drop_in": -20
+        }
+      ]
     }
   ],
   "recommended_game": [

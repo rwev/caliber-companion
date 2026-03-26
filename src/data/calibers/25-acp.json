@@ -239,6 +239,42 @@
           "drop_in": -6.2
         }
       ]
+    },
+    {
+      "name": "Sig Sauer Elite Performance 39 gr FMJ",
+      "bullet_weight_gr": 39,
+      "bullet_type": "FMJ (Range)",
+      "muzzle_velocity_fps": 858,
+      "muzzle_energy_ft_lbs": 64,
+      "barrel_length_in": 2,
+      "bc_g1": 0.14,
+      "sectional_density": 0.13,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 858,
+          "energy_ft_lbs": 64,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 832,
+          "energy_ft_lbs": 60,
+          "drop_in": -0.2
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 807,
+          "energy_ft_lbs": 56,
+          "drop_in": -1.2
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 755,
+          "energy_ft_lbs": 49,
+          "drop_in": -5.8
+        }
+      ]
     }
   ],
   "max_pressure_psi": 25000,

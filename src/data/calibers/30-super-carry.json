@@ -247,6 +247,42 @@
           "drop_in": -6.2
         }
       ]
+    },
+    {
+      "name": "PMC Bronze 111 gr FMJ",
+      "bullet_weight_gr": 111,
+      "bullet_type": "FMJ (Range)",
+      "muzzle_velocity_fps": 1133,
+      "muzzle_energy_ft_lbs": 316,
+      "barrel_length_in": 3.1,
+      "bc_g1": 0.14,
+      "sectional_density": 0.13,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1133,
+          "energy_ft_lbs": 316,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1099,
+          "energy_ft_lbs": 294,
+          "drop_in": -0.2
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1065,
+          "energy_ft_lbs": 275,
+          "drop_in": -1.2
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 997,
+          "energy_ft_lbs": 240,
+          "drop_in": -5.6
+        }
+      ]
     }
   ],
   "max_pressure_psi": 45000,

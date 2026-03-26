@@ -263,6 +263,42 @@
           "drop_in": -20.4
         }
       ]
+    },
+    {
+      "name": "Federal Fusion 36 gr SP",
+      "bullet_weight_gr": 36,
+      "bullet_type": "Fusion SP",
+      "muzzle_velocity_fps": 1992,
+      "muzzle_energy_ft_lbs": 317,
+      "barrel_length_in": 24,
+      "bc_g1": 0.124,
+      "sectional_density": 0.24,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1992,
+          "energy_ft_lbs": 317,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1853,
+          "energy_ft_lbs": 273,
+          "drop_in": -1.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1733,
+          "energy_ft_lbs": 235,
+          "drop_in": -7.8
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 1614,
+          "energy_ft_lbs": 203,
+          "drop_in": -18.6
+        }
+      ]
     }
   ],
   "recommended_game": [

@@ -305,6 +305,36 @@
           "drop_in": -16.2
         }
       ]
+    },
+    {
+      "name": "Federal Power-Shok 150 gr SP FN",
+      "bullet_weight_gr": 150,
+      "bullet_type": "SP Flat Nose",
+      "muzzle_velocity_fps": 2390,
+      "muzzle_energy_ft_lbs": 1902,
+      "barrel_length_in": 24,
+      "bc_g1": 0.254,
+      "sectional_density": 0.226,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2390,
+          "energy_ft_lbs": 1902,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2018,
+          "energy_ft_lbs": 1356,
+          "drop_in": -3.4
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 1685,
+          "energy_ft_lbs": 945,
+          "drop_in": -15.4
+        }
+      ]
     }
   ],
   "recommended_game": [

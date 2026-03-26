@@ -216,6 +216,28 @@
           "drop_in": -0.7
         }
       ]
+    },
+    {
+      "name": "Fiocchi Field Dynamics 2-3/4\"",
+      "bullet_weight_gr": 155,
+      "bullet_type": "Field Load (2-3/4\")",
+      "muzzle_velocity_fps": 1089,
+      "muzzle_energy_ft_lbs": 347,
+      "barrel_length_in": 24,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1089,
+          "energy_ft_lbs": 347,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 20,
+          "velocity_fps": 996,
+          "energy_ft_lbs": 289,
+          "drop_in": -0.2
+        }
+      ]
     }
   ],
   "recommended_game": [

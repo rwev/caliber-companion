@@ -402,6 +402,55 @@
           "drop_in": -52.2
         }
       ]
+    },
+    {
+      "name": "Sig Sauer Elite Hunter 130 gr Tipped",
+      "bullet_weight_gr": 130,
+      "bullet_type": "Tipped Hunting",
+      "muzzle_velocity_fps": 2850,
+      "muzzle_energy_ft_lbs": 2343,
+      "barrel_length_in": 24,
+      "bc_g1": 0.51,
+      "bc_g7": 0.26,
+      "sectional_density": 0.266,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2850,
+          "energy_ft_lbs": 2343,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2688,
+          "energy_ft_lbs": 2084,
+          "drop_in": -1.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2531,
+          "energy_ft_lbs": 1849,
+          "drop_in": -7.4
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2380,
+          "energy_ft_lbs": 1634,
+          "drop_in": -17.4
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2234,
+          "energy_ft_lbs": 1441,
+          "drop_in": -32.2
+        },
+        {
+          "distance_yd": 500,
+          "velocity_fps": 2094,
+          "energy_ft_lbs": 1266,
+          "drop_in": -52.4
+        }
+      ]
     }
   ],
   "recommended_game": [

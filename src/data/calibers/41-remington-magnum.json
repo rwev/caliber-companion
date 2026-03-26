@@ -243,6 +243,42 @@
           "drop_in": -6.2
         }
       ]
+    },
+    {
+      "name": "PMC Bronze 239 gr FMJ",
+      "bullet_weight_gr": 239,
+      "bullet_type": "FMJ (Range)",
+      "muzzle_velocity_fps": 1210,
+      "muzzle_energy_ft_lbs": 777,
+      "barrel_length_in": 6,
+      "bc_g1": 0.14,
+      "sectional_density": 0.13,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1210,
+          "energy_ft_lbs": 777,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1174,
+          "energy_ft_lbs": 723,
+          "drop_in": -0.2
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1137,
+          "energy_ft_lbs": 676,
+          "drop_in": -1.2
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1065,
+          "energy_ft_lbs": 591,
+          "drop_in": -5.6
+        }
+      ]
     }
   ],
   "recommended_game": [

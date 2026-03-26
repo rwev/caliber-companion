@@ -313,6 +313,45 @@
           "drop_in": -5.8
         }
       ]
+    },
+    {
+      "name": "Hornady Critical Duty 175 gr FlexLock +P",
+      "bullet_weight_gr": 175,
+      "bullet_type": "FlexLock +P",
+      "muzzle_velocity_fps": 1010,
+      "muzzle_energy_ft_lbs": 396,
+      "barrel_length_in": 4,
+      "bc_g1": 0.16,
+      "sectional_density": 0.156,
+      "gel_penetration_in": 14.8,
+      "expansion_diameter_in": 0.6,
+      "barrier_blind": true,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1010,
+          "energy_ft_lbs": 396,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 978,
+          "energy_ft_lbs": 372,
+          "drop_in": -0.3
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 948,
+          "energy_ft_lbs": 349,
+          "drop_in": -1.4
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 895,
+          "energy_ft_lbs": 311,
+          "drop_in": -6.6
+        }
+      ]
     }
   ],
   "max_pressure_psi": 35000,

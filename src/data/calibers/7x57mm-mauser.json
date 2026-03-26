@@ -284,6 +284,42 @@
           "drop_in": -20.4
         }
       ]
+    },
+    {
+      "name": "Norma Whitetail 155 gr SP",
+      "bullet_weight_gr": 155,
+      "bullet_type": "Soft Point",
+      "muzzle_velocity_fps": 2579,
+      "muzzle_energy_ft_lbs": 2290,
+      "barrel_length_in": 24,
+      "bc_g1": 0.486,
+      "sectional_density": 0.24,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2579,
+          "energy_ft_lbs": 2290,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2398,
+          "energy_ft_lbs": 1969,
+          "drop_in": -2
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2218,
+          "energy_ft_lbs": 1695,
+          "drop_in": -8.4
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2063,
+          "energy_ft_lbs": 1443,
+          "drop_in": -20
+        }
+      ]
     }
   ],
   "recommended_game": [

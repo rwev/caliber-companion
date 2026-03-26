@@ -300,6 +300,46 @@
           "drop_in": -0.6
         }
       ]
+    },
+    {
+      "name": "Winchester Super-X 1oz Rifled Slug",
+      "bullet_weight_gr": 437,
+      "bullet_type": "Rifled Slug (Foster)",
+      "muzzle_velocity_fps": 1600,
+      "muzzle_energy_ft_lbs": 2485,
+      "barrel_length_in": 26,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1600,
+          "energy_ft_lbs": 2485,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 1490,
+          "energy_ft_lbs": 2157,
+          "drop_in": -0.1
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 1388,
+          "energy_ft_lbs": 1872,
+          "drop_in": -0.6
+        },
+        {
+          "distance_yd": 75,
+          "velocity_fps": 1295,
+          "energy_ft_lbs": 1630,
+          "drop_in": -1.6
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 1212,
+          "energy_ft_lbs": 1427,
+          "drop_in": -3.2
+        }
+      ]
     }
   ],
   "recommended_game": [

@@ -217,6 +217,28 @@
           "drop_in": -0.7
         }
       ]
+    },
+    {
+      "name": "Winchester AA 2-3/4\" Target",
+      "bullet_weight_gr": 654,
+      "bullet_type": "Target Load (2-3/4\")",
+      "muzzle_velocity_fps": 1187,
+      "muzzle_energy_ft_lbs": 2015,
+      "barrel_length_in": 28,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1187,
+          "energy_ft_lbs": 2015,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 20,
+          "velocity_fps": 1084,
+          "energy_ft_lbs": 1666,
+          "drop_in": -0.2
+        }
+      ]
     }
   ],
   "recommended_game": [

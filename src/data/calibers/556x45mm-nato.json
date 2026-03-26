@@ -381,6 +381,49 @@
           "drop_in": -33.4
         }
       ]
+    },
+    {
+      "name": "Hornady TAP CQB 75 gr BTHP",
+      "bullet_weight_gr": 75,
+      "bullet_type": "BTHP (LE/Defense)",
+      "muzzle_velocity_fps": 2790,
+      "muzzle_energy_ft_lbs": 1296,
+      "barrel_length_in": 20,
+      "bc_g1": 0.395,
+      "bc_g7": 0.198,
+      "sectional_density": 0.214,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 2790,
+          "energy_ft_lbs": 1296,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 2588,
+          "energy_ft_lbs": 1115,
+          "drop_in": -1.8
+        },
+        {
+          "distance_yd": 200,
+          "velocity_fps": 2395,
+          "energy_ft_lbs": 955,
+          "drop_in": -8
+        },
+        {
+          "distance_yd": 300,
+          "velocity_fps": 2210,
+          "energy_ft_lbs": 813,
+          "drop_in": -18.8
+        },
+        {
+          "distance_yd": 400,
+          "velocity_fps": 2034,
+          "energy_ft_lbs": 689,
+          "drop_in": -35
+        }
+      ]
     }
   ],
   "recommended_game": [

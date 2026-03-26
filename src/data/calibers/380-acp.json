@@ -309,6 +309,42 @@
           "drop_in": -7.4
         }
       ]
+    },
+    {
+      "name": "Winchester Silvertip 85 gr JHP",
+      "bullet_weight_gr": 85,
+      "bullet_type": "Silvertip JHP",
+      "muzzle_velocity_fps": 1000,
+      "muzzle_energy_ft_lbs": 189,
+      "barrel_length_in": 3.75,
+      "bc_g1": 0.11,
+      "sectional_density": 0.096,
+      "ballistics": [
+        {
+          "distance_yd": 0,
+          "velocity_fps": 1000,
+          "energy_ft_lbs": 189,
+          "drop_in": 0
+        },
+        {
+          "distance_yd": 25,
+          "velocity_fps": 958,
+          "energy_ft_lbs": 173,
+          "drop_in": -0.3
+        },
+        {
+          "distance_yd": 50,
+          "velocity_fps": 920,
+          "energy_ft_lbs": 160,
+          "drop_in": -1.5
+        },
+        {
+          "distance_yd": 100,
+          "velocity_fps": 852,
+          "energy_ft_lbs": 137,
+          "drop_in": -7.2
+        }
+      ]
     }
   ],
   "max_pressure_psi": 21500,
