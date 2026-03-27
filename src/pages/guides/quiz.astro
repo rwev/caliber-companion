@@ -16,6 +16,8 @@ const caliberInfos = calibers.map(c => ({
   cost_per_round_usd: c.data.cost_per_round_usd,
   primary_use_cases: c.data.primary_use_cases,
 }));
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout breadcrumbs={[{ label: 'Guides', href: '/guides' }, { label: 'Caliber Quiz' }]} title="Caliber Quiz" description="Answer a few questions and get personalized caliber recommendations from our database of 100 cartridges.">
@@ -29,6 +31,6 @@ const caliberInfos = calibers.map(c => ({
       </p>
     </div>
 
-    <CaliberQuiz client:load calibers={caliberInfos} basePath="" />
+    <CaliberQuiz client:load calibers={caliberInfos} basePath={base} />
   </div>
 </BaseLayout>

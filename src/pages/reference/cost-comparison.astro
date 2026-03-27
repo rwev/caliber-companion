@@ -18,6 +18,8 @@ const caliberCosts = allCalibers
 const cheapest = caliberCosts[0];
 const priciest = caliberCosts[caliberCosts.length - 1];
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const pageDescription = `Compare ammunition costs across ${caliberCosts.length} calibers. Interactive dot plot showing price ranges from $${cheapest.costLow.toFixed(2)}/rd (${cheapest.name}) to $${priciest.costHigh.toFixed(2)}/rd (${priciest.name}).`;
 ---
 
@@ -33,6 +35,6 @@ const pageDescription = `Compare ammunition costs across ${caliberCosts.length} 
       </p>
     </div>
 
-    <CostComparison client:idle calibers={caliberCosts} basePath="" />
+    <CostComparison client:idle calibers={caliberCosts} basePath={base} />
   </div>
 </BaseLayout>

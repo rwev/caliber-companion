@@ -37,6 +37,8 @@ const tiers = [
 
 const pageDescription = 'The best calibers for deer hunting in 2026 — from under-200-yard whitetail to long-range, low-recoil, straight-wall, and budget options. Data-driven recommendations with ballistic comparisons.';
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const faqJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -65,7 +67,7 @@ const faqJsonLd = {
 };
 ---
 
-<BaseLayout title="Best Calibers for Deer Hunting (2026)" description={pageDescription} breadcrumbs={[{ label: 'Guides', href: '/guides' }, { label: 'Best Deer Calibers' }]}>
+<BaseLayout title="Best Calibers for Deer Hunting (2026)" description={pageDescription} breadcrumbs={[{ label: 'Guides', href: `${base}/guides` }, { label: 'Best Deer Calibers' }]}>
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
 
   <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
@@ -104,7 +106,7 @@ const faqJsonLd = {
                 {cals.map((c, i) => (
                   <tr class={`border-b border-surface-border-subtle ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
                     <td class="px-3 py-2">
-                      <a href={`/calibers/${c!.slug}`} class="text-sm font-medium text-text-primary hover:text-accent transition-colors">
+                      <a href={`${base}/calibers/${c!.slug}`} class="text-sm font-medium text-text-primary hover:text-accent transition-colors">
                         {c!.name}
                       </a>
                     </td>
@@ -150,11 +152,11 @@ const faqJsonLd = {
     <!-- Related -->
     <div class="mt-8 flex flex-wrap gap-3 border-t border-surface-border pt-6">
       <span class="text-xs font-medium uppercase tracking-wide text-text-muted self-center">Related:</span>
-      <a href="/guides/best-calibers-for-whitetail" class="text-sm text-accent hover:underline">Whitetail Guide</a>
-      <a href="/guides/best-calibers-for-elk" class="text-sm text-accent hover:underline">Elk Guide</a>
-      <a href="/tools/ethical-range" class="text-sm text-accent hover:underline">Ethical Range Calculator</a>
-      <a href="/compare" class="text-sm text-accent hover:underline">Compare Calibers</a>
-      <a href="/reference/recoil-ranking" class="text-sm text-accent hover:underline">Recoil Ranking</a>
+      <a href={`${base}/guides/best-calibers-for-whitetail`} class="text-sm text-accent hover:underline">Whitetail Guide</a>
+      <a href={`${base}/guides/best-calibers-for-elk`} class="text-sm text-accent hover:underline">Elk Guide</a>
+      <a href={`${base}/tools/ethical-range`} class="text-sm text-accent hover:underline">Ethical Range Calculator</a>
+      <a href={`${base}/compare`} class="text-sm text-accent hover:underline">Compare Calibers</a>
+      <a href={`${base}/reference/recoil-ranking`} class="text-sm text-accent hover:underline">Recoil Ranking</a>
     </div>
   </div>
 </BaseLayout>

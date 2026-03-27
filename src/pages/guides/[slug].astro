@@ -14,6 +14,8 @@ const { guide } = Astro.props;
 const g = guide.data;
 const { Content } = await render(guide);
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const calibers = await getCollection('caliberData');
 const referenced = g.calibers
   .map(slug => calibers.find(c => c.data.slug === slug))
@@ -30,7 +32,7 @@ const jsonLd = {
       description: g.summary,
       dateModified: g.last_updated?.toISOString(),
       publisher: { '@type': 'Organization', name: 'Caliber Companion' },
-      mainEntityOfPage: `https://rwev.github.io/guides/${g.slug}`,
+      mainEntityOfPage: `https://rwev.github.io${base}/guides/${g.slug}`,
     },
     {
       '@type': 'FAQPage',
@@ -49,11 +51,11 @@ const jsonLd = {
 };
 ---
 
-<BaseLayout title={g.title} description={g.summary} ogType="article" breadcrumbs={[{ label: 'Guides', href: '/guides' }, { label: g.title }]} jsonLd={jsonLd}>
+<BaseLayout title={g.title} description={g.summary} ogType="article" breadcrumbs={[{ label: 'Guides', href: `${base}/guides` }, { label: g.title }]} jsonLd={jsonLd}>
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
     <!-- Header -->
     <div class="mb-8 border-b border-surface-border pb-6">
-      <a href="/guides" class="text-sm font-medium text-text-muted hover:text-accent transition-colors">
+      <a href={`${base}/guides`} class="text-sm font-medium text-text-muted hover:text-accent transition-colors">
         ← All Guides
       </a>
       <h1 class="mt-3 text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
@@ -82,7 +84,7 @@ const jsonLd = {
             {referenced.map((cal, i) => (
               <li class={i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}>
                 <a
-                  href={`/calibers/${cal.slug}`}
+                  href={`${base}/calibers/${cal.slug}`}
                   class="flex items-baseline justify-between px-4 py-2.5 transition-colors hover:text-accent"
                 >
                   <span class="font-mono text-base text-text-secondary">{cal.name}</span>

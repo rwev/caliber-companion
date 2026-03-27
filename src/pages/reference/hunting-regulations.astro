@@ -48,6 +48,8 @@ const regions = [
 
 const pageDescription = 'State-by-state hunting caliber regulations reference. Straight-wall cartridge states, minimum caliber requirements, and shotgun-only zones for deer hunting across the U.S.';
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const faqJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -59,7 +61,7 @@ const faqJsonLd = {
 };
 ---
 
-<BaseLayout title="State Hunting Caliber Regulations" description={pageDescription} breadcrumbs={[{ label: 'Reference', href: '/reference' }, { label: 'Hunting Regulations' }]}>
+<BaseLayout title="State Hunting Caliber Regulations" description={pageDescription} breadcrumbs={[{ label: 'Reference', href: `${base}/reference` }, { label: 'Hunting Regulations' }]}>
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
 
   <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
@@ -101,7 +103,7 @@ const faqJsonLd = {
                   <span class="text-xs font-medium uppercase tracking-wide text-text-muted self-center">Popular compliant:</span>
                   {s.calibers.map(slug => (
                     <a
-                      href={`/calibers/${slug}`}
+                      href={`${base}/calibers/${slug}`}
                       class="font-mono text-xs text-accent hover:underline"
                     >
                       {slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()).replace(/(\d)x(\d)/g, '$1×$2')}
@@ -139,9 +141,9 @@ const faqJsonLd = {
 
     <div class="mt-8 flex flex-wrap gap-3 border-t border-surface-border pt-6">
       <span class="text-xs font-medium uppercase tracking-wide text-text-muted self-center">Related:</span>
-      <a href="/guides/best-deer-calibers" class="text-sm text-accent hover:underline">Best Deer Calibers</a>
-      <a href="/guides/best-calibers-for-whitetail" class="text-sm text-accent hover:underline">Whitetail Guide</a>
-      <a href="/tools/ethical-range" class="text-sm text-accent hover:underline">Ethical Range Calculator</a>
+      <a href={`${base}/guides/best-deer-calibers`} class="text-sm text-accent hover:underline">Best Deer Calibers</a>
+      <a href={`${base}/guides/best-calibers-for-whitetail`} class="text-sm text-accent hover:underline">Whitetail Guide</a>
+      <a href={`${base}/tools/ethical-range`} class="text-sm text-accent hover:underline">Ethical Range Calculator</a>
     </div>
   </div>
 </BaseLayout>

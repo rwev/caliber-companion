@@ -9,12 +9,15 @@ interface Props {
 }
 
 const { items } = Astro.props;
-const basePath = '/';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
-// Build full breadcrumb list with Home prepended
+// Build full breadcrumb list with Home prepended, prefixing hrefs with base
 const crumbs: BreadcrumbItem[] = [
-  { label: 'Home', href: basePath },
-  ...items,
+  { label: 'Home', href: `${base}/` },
+  ...items.map(item => ({
+    ...item,
+    href: item.href ? `${base}${item.href}` : undefined,
+  })),
 ];
 
 // BreadcrumbList JSON-LD schema

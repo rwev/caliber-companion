@@ -10,69 +10,71 @@ const caliberIndex = calibers.map(c => ({
   designation: c.data.designation,
 }));
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const navSections = [
   {
     label: 'Calibers',
-    href: '/calibers',
+    href: `${base}/calibers`,
     pathPrefix: '/calibers',
     children: [
-      { href: '/calibers', label: 'Browse All' },
-      { href: '/calibers/ammo', label: 'Ammo Finder' },
+      { href: `${base}/calibers`, label: 'Browse All' },
+      { href: `${base}/calibers/ammo`, label: 'Ammo Finder' },
     ],
   },
   {
     label: 'Compare',
-    href: '/compare',
+    href: `${base}/compare`,
     pathPrefix: '/compare',
     children: [
-      { href: '/compare', label: 'Compare Tool' },
+      { href: `${base}/compare`, label: 'Compare Tool' },
     ],
   },
   {
     label: 'Tools',
-    href: '/tools',
+    href: `${base}/tools`,
     pathPrefix: '/tools',
     children: [
-      { href: '/tools/ballistics-calculator', label: 'Ballistics Calculator' },
-      { href: '/tools/recoil-calculator', label: 'Recoil Calculator' },
-      { href: '/tools/drop-chart', label: 'Drop Chart' },
-      { href: '/tools', label: 'All Tools' },
+      { href: `${base}/tools/ballistics-calculator`, label: 'Ballistics Calculator' },
+      { href: `${base}/tools/recoil-calculator`, label: 'Recoil Calculator' },
+      { href: `${base}/tools/drop-chart`, label: 'Drop Chart' },
+      { href: `${base}/tools`, label: 'All Tools' },
     ],
   },
   {
     label: 'Guides',
-    href: '/guides',
+    href: `${base}/guides`,
     pathPrefix: '/guides',
     children: [
-      { href: '/guides', label: 'All Guides' },
-      { href: '/guides/best-deer-calibers', label: 'Best for Deer' },
-      { href: '/guides/best-self-defense-calibers', label: 'Best for Self-Defense' },
-      { href: '/guides/best-long-range-calibers', label: 'Best for Long-Range' },
-      { href: '/guides/quiz', label: 'Find Your Caliber' },
+      { href: `${base}/guides`, label: 'All Guides' },
+      { href: `${base}/guides/best-deer-calibers`, label: 'Best for Deer' },
+      { href: `${base}/guides/best-self-defense-calibers`, label: 'Best for Self-Defense' },
+      { href: `${base}/guides/best-long-range-calibers`, label: 'Best for Long-Range' },
+      { href: `${base}/guides/quiz`, label: 'Find Your Caliber' },
     ],
   },
   {
     label: 'Reference',
-    href: '/reference',
+    href: `${base}/reference`,
     pathPrefix: '/reference',
     children: [
-      { href: '/reference/glossary', label: 'Glossary' },
-      { href: '/reference/timeline', label: 'Timeline' },
-      { href: '/reference/firearms', label: 'Firearms Database' },
-      { href: '/reference/nato-equivalents', label: 'NATO Equivalents' },
-      { href: '/reference', label: 'All Reference' },
+      { href: `${base}/reference/glossary`, label: 'Glossary' },
+      { href: `${base}/reference/timeline`, label: 'Timeline' },
+      { href: `${base}/reference/firearms`, label: 'Firearms Database' },
+      { href: `${base}/reference/nato-equivalents`, label: 'NATO Equivalents' },
+      { href: `${base}/reference`, label: 'All Reference' },
     ],
   },
 ];
 
-const currentPath = Astro.url.pathname;
+const currentPath = Astro.url.pathname.replace(base, '') || '/';
 ---
 
 <nav class="fixed top-0 left-0 right-0 z-50 border-b border-surface-border bg-surface/90 backdrop-blur-md" aria-label="Main navigation">
   <div class="mx-auto max-w-7xl px-4 sm:px-6">
     <div class="flex h-14 items-center justify-between">
       <!-- Logo / Home -->
-      <a href="/" class="group flex items-center gap-2.5">
+      <a href={`${base}/`} class="group flex items-center gap-2.5">
         <span class="text-base font-bold text-accent">CC</span>
         <span class="hidden text-base font-semibold text-text-primary transition-colors group-hover:text-accent sm:inline">
           Caliber Companion
@@ -107,7 +109,7 @@ const currentPath = Astro.url.pathname;
                     <a
                       href={child.href}
                       class={`block rounded-md px-3 py-2 text-sm transition-colors ${
-                        currentPath === child.href || currentPath === child.href + '/'
+                        (() => { const childPath = child.href.replace(base, '') || '/'; return currentPath === childPath || currentPath === childPath + '/'; })()
                           ? 'text-accent bg-accent/10 font-medium'
                           : 'text-text-secondary hover:text-accent hover:bg-accent/5'
                       }`}
@@ -122,7 +124,7 @@ const currentPath = Astro.url.pathname;
         ))}
 
         <div class="ml-2 border-l border-surface-border pl-3">
-          <CaliberSearch client:idle calibers={caliberIndex} basePath="" />
+          <CaliberSearch client:idle calibers={caliberIndex} basePath={base} />
         </div>
         <div class="ml-2 border-l border-surface-border pl-3">
           <ThemeToggle client:idle />
@@ -169,7 +171,7 @@ const currentPath = Astro.url.pathname;
                 <a
                   href={child.href}
                   class={`block rounded-md px-3 py-1.5 text-sm transition-colors ${
-                    currentPath === child.href || currentPath === child.href + '/'
+                    (() => { const childPath = child.href.replace(base, '') || '/'; return currentPath === childPath || currentPath === childPath + '/'; })()
                       ? 'text-accent font-medium'
                       : 'text-text-muted hover:text-accent'
                   }`}

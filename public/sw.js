@@ -3,10 +3,10 @@ const CACHE_NAME = 'caliber-companion-v1';
 // Core pages to cache on install
 const PRECACHE_URLS = [
   '/caliber-companion/',
-  '/caliber-companion/browse',
+  '/caliber-companion/calibers',
   '/caliber-companion/compare',
   '/caliber-companion/tools',
-  '/caliber-companion/glossary',
+  '/caliber-companion/reference/glossary',
 ];
 
 // Install: cache core pages

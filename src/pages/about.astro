@@ -13,6 +13,8 @@ const totalGelLoads = calibers.reduce((sum, c) => sum + c.data.loads.filter(l =>
 const withReloading = calibers.filter(c => c.data.primer_type).length;
 const firearmsManufacturers = [...new Set(firearms.map(f => f.data.manufacturer))].length;
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const stats = [
   { value: calibers.length, label: 'Calibers', desc: 'From .17 HMR to .50 BMG' },
   { value: totalLoads, label: 'Load Profiles', desc: 'With full ballistic trajectories' },
@@ -33,9 +35,9 @@ const stats = [
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Caliber Companion',
-  url: 'https://rwev.github.io/',
+  url: 'https://rwev.github.io/caliber-companion/',
   description: 'The most comprehensive free firearm caliber reference online. Ballistic data, cartridge specifications, and comparison tools.',
-  logo: 'https://rwev.github.io/favicon.svg',
+  logo: 'https://rwev.github.io/caliber-companion/favicon.svg',
 }}>
   <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
     <div class="mb-8">
@@ -126,7 +128,7 @@ const stats = [
     <!-- Explore CTA -->
     <div class="text-center border-t border-surface-border pt-8">
       <a
-        href="/calibers"
+        href={`${base}/calibers`}
         class="inline-flex items-center gap-2 rounded-md border border-accent bg-accent/10 px-6 py-3 text-base font-medium text-accent transition-all hover:bg-accent/20"
       >
         Start Exploring

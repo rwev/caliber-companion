@@ -14,13 +14,15 @@ for (const f of sorted) {
   groups.get(type)!.push(f);
 }
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const typeOrder = ['pistol', 'revolver', 'rifle', 'carbine', 'shotgun', 'submachine_gun'];
 const sortedGroups = typeOrder
   .filter(t => groups.has(t))
   .map(t => ({ type: t, items: groups.get(t)! }));
 ---
 
-<BaseLayout title="Firearms" description="Database of 50 iconic firearms with specs, caliber cross-references, and manufacturer details." breadcrumbs={[{ label: 'Reference', href: '/reference' }, { label: 'Firearms' }]}>
+<BaseLayout title="Firearms" description="Database of 50 iconic firearms with specs, caliber cross-references, and manufacturer details." breadcrumbs={[{ label: 'Reference', href: `${base}/reference` }, { label: 'Firearms' }]}>
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
     <div class="mb-8">
       <h1 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
@@ -58,7 +60,7 @@ const sortedGroups = typeOrder
                   </td>
                   <td class="px-4 py-2.5 text-sm text-text-secondary">{f.data.manufacturer}</td>
                   <td class="px-4 py-2.5">
-                    <a href={`/calibers/${f.data.caliber}`} class="font-mono text-sm text-accent hover:underline">
+                    <a href={`${base}/calibers/${f.data.caliber}`} class="font-mono text-sm text-accent hover:underline">
                       {f.data.caliber}
                     </a>
                   </td>

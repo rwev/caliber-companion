@@ -34,6 +34,8 @@ const tiers = [
   },
 ];
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const pageDescription = 'Best calibers for beginners — handguns, rifles, and shotguns ranked by recoil, cost, and versatility. Data-driven recommendations for first-time gun buyers in 2026.';
 
 const faqJsonLd = {
@@ -48,7 +50,7 @@ const faqJsonLd = {
 };
 ---
 
-<BaseLayout title="Best Calibers for Beginners (2026)" description={pageDescription} breadcrumbs={[{ label: 'Guides', href: '/guides' }, { label: 'Best Beginner Calibers' }]}>
+<BaseLayout title="Best Calibers for Beginners (2026)" description={pageDescription} breadcrumbs={[{ label: 'Guides', href: `${base}/guides` }, { label: 'Best Beginner Calibers' }]}>
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
 
   <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
@@ -81,7 +83,7 @@ const faqJsonLd = {
               <tbody>
                 {cals.map((c, i) => (
                   <tr class={`border-b border-surface-border-subtle ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
-                    <td class="px-3 py-2"><a href={`/calibers/${c!.slug}`} class="text-sm font-medium text-text-primary hover:text-accent transition-colors">{c!.name}</a></td>
+                    <td class="px-3 py-2"><a href={`${base}/calibers/${c!.slug}`} class="text-sm font-medium text-text-primary hover:text-accent transition-colors">{c!.name}</a></td>
                     <td class={`px-3 py-2 text-sm text-right ${c!.recoil.free_recoil_ft_lbs <= 5 ? 'text-success' : c!.recoil.free_recoil_ft_lbs <= 10 ? 'text-text-secondary' : 'text-warning'}`}>{c!.recoil.free_recoil_ft_lbs} ft·lbs</td>
                     <td class="px-3 py-2 text-sm text-right text-text-muted">{fmtCurrency(c!.cost_per_round_usd)}</td>
                     <td class="px-3 py-2 text-sm text-center text-text-muted">{c!.availability_rating ?? '—'}/5</td>
@@ -119,10 +121,10 @@ const faqJsonLd = {
 
     <div class="mt-8 flex flex-wrap gap-3 border-t border-surface-border pt-6">
       <span class="text-xs font-medium uppercase tracking-wide text-text-muted self-center">Related:</span>
-      <a href="/guides/best-calibers-for-beginners" class="text-sm text-accent hover:underline">Beginners Guide</a>
-      <a href="/guides/quiz" class="text-sm text-accent hover:underline">Caliber Quiz</a>
-      <a href="/reference/recoil-ranking" class="text-sm text-accent hover:underline">Recoil Ranking</a>
-      <a href="/reference/cost-comparison" class="text-sm text-accent hover:underline">Cost Comparison</a>
+      <a href={`${base}/guides/best-calibers-for-beginners`} class="text-sm text-accent hover:underline">Beginners Guide</a>
+      <a href={`${base}/guides/quiz`} class="text-sm text-accent hover:underline">Caliber Quiz</a>
+      <a href={`${base}/reference/recoil-ranking`} class="text-sm text-accent hover:underline">Recoil Ranking</a>
+      <a href={`${base}/reference/cost-comparison`} class="text-sm text-accent hover:underline">Cost Comparison</a>
     </div>
   </div>
 </BaseLayout>

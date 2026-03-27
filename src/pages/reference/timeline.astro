@@ -17,6 +17,8 @@ const caliberEntries = allCalibers
 const earliest = caliberEntries[0];
 const latest = caliberEntries[caliberEntries.length - 1];
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const pageDescription = `Interactive timeline of ${caliberEntries.length} calibers from ${earliest.year} to ${latest.year}. Filter by category and explore over 200 years of cartridge development.`;
 ---
 
@@ -32,6 +34,6 @@ const pageDescription = `Interactive timeline of ${caliberEntries.length} calibe
       </p>
     </div>
 
-    <CaliberTimeline client:idle calibers={caliberEntries} basePath="" />
+    <CaliberTimeline client:idle calibers={caliberEntries} basePath={base} />
   </div>
 </BaseLayout>

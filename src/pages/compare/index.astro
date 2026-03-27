@@ -31,6 +31,8 @@ const matchups: [string, string][] = [
 
 const caliberNames = new Map(calibers.map(c => [c.data.slug, c.data.name]));
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
@@ -43,7 +45,7 @@ const jsonLd = {
       '@type': 'ListItem',
       position: i + 1,
       name: `${caliberNames.get(a) ?? a} vs ${caliberNames.get(b) ?? b}`,
-      url: `https://rwev.github.io/compare/${a}-vs-${b}`,
+      url: `https://rwev.github.io${base}/compare/${a}-vs-${b}`,
     })),
   },
 };
@@ -86,7 +88,7 @@ const allCaliberData = calibers.map(c => ({
       </p>
     </div>
 
-    <ComparisonTool client:load calibers={allCaliberData} basePath="" />
+    <ComparisonTool client:load calibers={allCaliberData} basePath={base} />
 
     <!-- Pre-built comparisons (static links for SEO) -->
     <div class="mt-12">

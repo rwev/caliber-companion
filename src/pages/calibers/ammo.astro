@@ -23,6 +23,8 @@ const loads = calibers.flatMap(c =>
     barrierBlind: load.barrier_blind ?? null,
   }))
 );
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout breadcrumbs={[{ label: 'Calibers', href: '/calibers' }, { label: 'Ammo Finder' }]} title="Ammunition Finder" description="Search, filter, and compare ammunition loads across 100+ calibers. Find the right load by bullet type, weight, velocity, energy, and terminal performance.">
@@ -36,6 +38,6 @@ const loads = calibers.flatMap(c =>
       </p>
     </div>
 
-    <AmmoFinder client:idle loads={loads} basePath="" />
+    <AmmoFinder client:idle loads={loads} basePath={base} />
   </div>
 </BaseLayout>

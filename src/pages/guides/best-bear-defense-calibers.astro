@@ -24,6 +24,8 @@ const tiers = [
   },
 ];
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const pageDescription = 'Best calibers for bear defense — handguns and rifles rated for stopping grizzly, brown, and black bears. Minimum caliber recommendations and ammunition selection for bear country.';
 
 const faqJsonLd = {
@@ -37,7 +39,7 @@ const faqJsonLd = {
 };
 ---
 
-<BaseLayout title="Best Calibers for Bear Defense (2026)" description={pageDescription} breadcrumbs={[{ label: 'Guides', href: '/guides' }, { label: 'Best Bear Defense Calibers' }]}>
+<BaseLayout title="Best Calibers for Bear Defense (2026)" description={pageDescription} breadcrumbs={[{ label: 'Guides', href: `${base}/guides` }, { label: 'Best Bear Defense Calibers' }]}>
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
 
   <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
@@ -69,7 +71,7 @@ const faqJsonLd = {
               <tbody>
                 {cals.map((c, i) => (
                   <tr class={`border-b border-surface-border-subtle ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
-                    <td class="px-3 py-2"><a href={`/calibers/${c!.slug}`} class="text-sm font-medium text-text-primary hover:text-accent transition-colors">{c!.name}</a></td>
+                    <td class="px-3 py-2"><a href={`${base}/calibers/${c!.slug}`} class="text-sm font-medium text-text-primary hover:text-accent transition-colors">{c!.name}</a></td>
                     <td class="px-3 py-2 font-mono text-sm text-right text-text-secondary">{fmtRange(c!.typical_energy_ft_lbs, 'ft·lbs')}</td>
                     <td class="px-3 py-2 font-mono text-sm text-right text-text-secondary">{c!.recoil.free_recoil_ft_lbs} ft·lbs</td>
                     <td class="px-3 py-2 font-mono text-sm text-right text-text-muted">{fmtCurrency(c!.cost_per_round_usd)}</td>
@@ -105,10 +107,10 @@ const faqJsonLd = {
 
     <div class="mt-8 flex flex-wrap gap-3 border-t border-surface-border pt-6">
       <span class="text-xs font-medium uppercase tracking-wide text-text-muted self-center">Related:</span>
-      <a href="/guides/best-calibers-for-bear-defense" class="text-sm text-accent hover:underline">Bear Defense Guide</a>
-      <a href="/guides/best-elk-calibers" class="text-sm text-accent hover:underline">Elk Calibers</a>
-      <a href="/tools/ethical-range" class="text-sm text-accent hover:underline">Ethical Range Calculator</a>
-      <a href="/reference/recoil-ranking" class="text-sm text-accent hover:underline">Recoil Ranking</a>
+      <a href={`${base}/guides/best-calibers-for-bear-defense`} class="text-sm text-accent hover:underline">Bear Defense Guide</a>
+      <a href={`${base}/guides/best-elk-calibers`} class="text-sm text-accent hover:underline">Elk Calibers</a>
+      <a href={`${base}/tools/ethical-range`} class="text-sm text-accent hover:underline">Ethical Range Calculator</a>
+      <a href={`${base}/reference/recoil-ranking`} class="text-sm text-accent hover:underline">Recoil Ranking</a>
     </div>
   </div>
 </BaseLayout>

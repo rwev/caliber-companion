@@ -64,8 +64,8 @@ Islands receive serializable props from Astro pages. They read `data-theme` attr
 ## Key Conventions
 
 - **Schema changes must be backwards-compatible.** New fields on caliber/firearms JSON should be optional or have defaults so existing files still validate.
-- **Links are root-relative** (`/calibers/308-winchester`, not `./`). No base path prefix — the site deploys to a root domain.
+- **Links use base path prefix.** The site deploys to GitHub Pages at `/caliber-companion/`. Use `const base = import.meta.env.BASE_URL.replace(/\/$/, '')` in Astro frontmatter and prefix hrefs: `` href={`${base}/calibers/308-winchester`} ``. Preact islands receive the base via `basePath` prop.
 - **Dynamic routes** use `getStaticPaths()` pulling from content collections.
 - **Nav** uses 5 dropdown sections (Calibers, Compare, Tools, Guides, Reference) with CSS hover dropdowns on desktop and JS-toggled collapsible sections on mobile.
 - **Chart.js** is used for ballistic trajectory/energy charts in island components.
-- **Breadcrumbs** use a `breadcrumbs` prop on `BaseLayout`, rendered with JSON-LD BreadcrumbList schema. Spoke pages include their silo hub as parent (e.g., `[{ label: 'Reference', href: '/reference' }, { label: 'Glossary' }]`).
+- **Breadcrumbs** use a `breadcrumbs` prop on `BaseLayout`, rendered with JSON-LD BreadcrumbList schema. Spoke pages include their silo hub as parent (e.g., `[{ label: 'Reference', href: '/reference' }, { label: 'Glossary' }]`). The Breadcrumb component auto-prefixes hrefs with the base path, so pass paths without the base prefix.

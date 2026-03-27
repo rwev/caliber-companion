@@ -41,10 +41,12 @@ const entries: RecoilEntry[] = allCalibers
 
 const categories = [...new Set(entries.map(e => e.category))].sort();
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const pageDescription = `Compare free recoil energy across ${entries.length} calibers. Visual ranking from ${entries[0].recoilFtLbs} ft-lbs (${entries[0].name}) to ${entries[entries.length - 1].recoilFtLbs} ft-lbs (${entries[entries.length - 1].name}).`;
 ---
 
-<BaseLayout title="Recoil Ranking" description={pageDescription} breadcrumbs={[{ label: 'Reference', href: '/reference' }, { label: 'Recoil Ranking' }]}>
+<BaseLayout title="Recoil Ranking" description={pageDescription} breadcrumbs={[{ label: 'Reference', href: `${base}/reference` }, { label: 'Recoil Ranking' }]}>
   <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
     <div class="mb-8">
       <h1 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
@@ -79,7 +81,7 @@ const pageDescription = `Compare free recoil energy across ${entries.length} cal
               {catEntries.map((e, i) => (
                 <div class={`flex items-center gap-3 px-3 py-2 ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
                   <a
-                    href={`/calibers/${e.slug}`}
+                    href={`${base}/calibers/${e.slug}`}
                     class="w-32 sm:w-40 shrink-0 font-mono text-sm text-text-primary hover:text-accent transition-colors truncate"
                     title={e.name}
                   >
@@ -125,7 +127,7 @@ const pageDescription = `Compare free recoil energy across ${entries.length} cal
           <div class={`flex items-center gap-3 px-3 py-1.5 ${i % 2 === 0 ? 'bg-surface' : 'bg-surface-raised'}`}>
             <span class="w-8 shrink-0 font-mono text-xs text-text-muted text-right">{i + 1}.</span>
             <a
-              href={`/calibers/${e.slug}`}
+              href={`${base}/calibers/${e.slug}`}
               class="w-32 sm:w-40 shrink-0 font-mono text-sm text-text-primary hover:text-accent transition-colors truncate"
             >
               {e.name}

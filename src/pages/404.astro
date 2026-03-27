@@ -9,6 +9,8 @@ const caliberIndex = calibers.map(c => ({
   slug: c.data.slug,
   designation: c.data.designation,
 }));
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="Page Not Found" description="The page you're looking for doesn't exist. Search our caliber database or explore our tools and guides.">
@@ -27,7 +29,7 @@ const caliberIndex = calibers.map(c => ({
     <!-- Search -->
     <div class="mb-10 max-w-md mx-auto">
       <p class="mb-2 text-sm text-text-muted">Search for a caliber:</p>
-      <CaliberSearch client:idle calibers={caliberIndex} basePath="" />
+      <CaliberSearch client:idle calibers={caliberIndex} basePath={base} />
     </div>
 
     <!-- Quick links -->
@@ -35,14 +37,14 @@ const caliberIndex = calibers.map(c => ({
       <h2 class="text-sm font-semibold uppercase tracking-wide text-text-muted mb-4 text-center">Popular Destinations</h2>
       <div class="grid gap-2 sm:grid-cols-2">
         {[
-          { href: '/calibers', label: 'Browse All Calibers', desc: '102 calibers with full data' },
-          { href: '/compare', label: 'Compare Calibers', desc: 'Side-by-side comparison' },
-          { href: '/tools', label: 'Interactive Tools', desc: '10 calculators and generators' },
-          { href: '/guides', label: 'Buying Guides', desc: '13 use-case guides' },
-          { href: '/reference/firearms', label: 'Firearms Database', desc: '100 iconic firearms' },
-          { href: '/guides/quiz', label: 'Caliber Quiz', desc: 'Find your ideal caliber' },
-          { href: '/guides/best-deer-calibers', label: 'Best for Deer', desc: 'Hunting recommendations' },
-          { href: '/guides/best-self-defense-calibers', label: 'Best for Self-Defense', desc: 'Defensive caliber guide' },
+          { href: `${base}/calibers`, label: 'Browse All Calibers', desc: '102 calibers with full data' },
+          { href: `${base}/compare`, label: 'Compare Calibers', desc: 'Side-by-side comparison' },
+          { href: `${base}/tools`, label: 'Interactive Tools', desc: '10 calculators and generators' },
+          { href: `${base}/guides`, label: 'Buying Guides', desc: '13 use-case guides' },
+          { href: `${base}/reference/firearms`, label: 'Firearms Database', desc: '100 iconic firearms' },
+          { href: `${base}/guides/quiz`, label: 'Caliber Quiz', desc: 'Find your ideal caliber' },
+          { href: `${base}/guides/best-deer-calibers`, label: 'Best for Deer', desc: 'Hunting recommendations' },
+          { href: `${base}/guides/best-self-defense-calibers`, label: 'Best for Self-Defense', desc: 'Defensive caliber guide' },
         ].map(link => (
           <a
             href={link.href}
@@ -63,7 +65,7 @@ const caliberIndex = calibers.map(c => ({
     <!-- Home link -->
     <div class="mt-8">
       <a
-        href="/"
+        href={`${base}/`}
         class="inline-flex items-center gap-2 text-base font-medium text-text-muted transition-colors hover:text-accent"
       >
         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">

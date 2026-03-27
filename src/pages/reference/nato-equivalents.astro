@@ -94,6 +94,8 @@ const militaryOnly = [
   },
 ];
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const pageDescription = 'Complete reference guide to NATO military cartridge designations and their civilian equivalents. Covers interchangeability, safety considerations, and STANAG specifications.';
 
 const jsonLd = {
@@ -103,11 +105,11 @@ const jsonLd = {
   'headline': 'NATO vs Civilian Caliber Equivalents — Complete Reference Guide',
   'description': pageDescription,
   'publisher': { '@type': 'Organization', 'name': 'Caliber Companion' },
-  'mainEntityOfPage': 'https://rwev.github.io/reference/nato-equivalents',
+  'mainEntityOfPage': `https://rwev.github.io${base}/reference/nato-equivalents`,
 };
 ---
 
-<BaseLayout title="NATO vs Civilian Caliber Equivalents" description={pageDescription} jsonLd={jsonLd} breadcrumbs={[{ label: 'Reference', href: '/reference' }, { label: 'NATO Equivalents' }]}>
+<BaseLayout title="NATO vs Civilian Caliber Equivalents" description={pageDescription} jsonLd={jsonLd} breadcrumbs={[{ label: 'Reference', href: `${base}/reference` }, { label: 'NATO Equivalents' }]}>
   <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
     <div class="mb-8">
       <h1 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
@@ -170,7 +172,7 @@ const jsonLd = {
                 {/* Caliber links */}
                 <div class="flex flex-wrap gap-2">
                   <a
-                    href={`/calibers/${primary.slug}`}
+                    href={`${base}/calibers/${primary.slug}`}
                     class="inline-flex items-center gap-1.5 rounded-md border border-surface-border bg-surface-raised px-3 py-1.5 font-mono text-sm text-text-primary transition-colors hover:border-accent hover:text-accent"
                   >
                     <span class="text-accent font-medium">NATO</span>
@@ -179,7 +181,7 @@ const jsonLd = {
                   </a>
                   {civilian && (
                     <a
-                      href={`/calibers/${civilian.slug}`}
+                      href={`${base}/calibers/${civilian.slug}`}
                       class="inline-flex items-center gap-1.5 rounded-md border border-surface-border bg-surface-raised px-3 py-1.5 font-mono text-sm text-text-primary transition-colors hover:border-accent hover:text-accent"
                     >
                       <span class="text-text-muted font-medium">CIV</span>
@@ -263,7 +265,7 @@ const jsonLd = {
               </div>
               <div class="p-4 space-y-3">
                 <a
-                  href={`/calibers/${cal.slug}`}
+                  href={`${base}/calibers/${cal.slug}`}
                   class="inline-flex items-center gap-1.5 rounded-md border border-surface-border bg-surface-raised px-3 py-1.5 font-mono text-sm text-text-primary transition-colors hover:border-accent hover:text-accent"
                 >
                   {cal.name}

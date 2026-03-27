@@ -7,6 +7,7 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://rwev.github.io',
+  base: '/caliber-companion',
   output: 'static',
   redirects: {
     '/browse': '/calibers',

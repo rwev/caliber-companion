@@ -143,6 +143,8 @@ const featuredSlugs = [
 const featured = featuredSlugs
   .map(slug => calibers.find(c => c.data.slug === slug))
   .filter(Boolean);
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout
@@ -152,11 +154,11 @@ const featured = featuredSlugs
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'Caliber Companion',
-    url: 'https://rwev.github.io/',
+    url: 'https://rwev.github.io/caliber-companion/',
     description: 'Ballistic data, cartridge specifications, and comparison tools for 102 firearm calibers.',
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://rwev.github.io/calibers?q={search_term_string}',
+      target: 'https://rwev.github.io/caliber-companion/calibers?q={search_term_string}',
       'query-input': 'required name=search_term_string',
     },
   }}
@@ -186,7 +188,7 @@ const featured = featuredSlugs
 
           <div class="mt-8 flex flex-wrap gap-3">
             <a
-              href="/calibers"
+              href={`${base}/calibers`}
               class="group inline-flex items-center gap-2 rounded-md bg-accent px-5 py-2.5 text-base font-semibold text-white shadow-sm transition-all hover:bg-accent-bright"
             >
               <span>Browse Calibers</span>
@@ -195,13 +197,13 @@ const featured = featuredSlugs
               </svg>
             </a>
             <a
-              href="/compare"
+              href={`${base}/compare`}
               class="inline-flex items-center gap-2 rounded-md border border-surface-border px-5 py-2.5 text-base font-semibold text-text-secondary transition-all hover:border-accent/40 hover:text-text-primary"
             >
               Compare
             </a>
             <a
-              href="/tools"
+              href={`${base}/tools`}
               class="inline-flex items-center gap-2 rounded-md border border-surface-border px-5 py-2.5 text-base font-semibold text-text-secondary transition-all hover:border-accent/40 hover:text-text-primary"
             >
               Tools
@@ -363,8 +365,8 @@ const featured = featuredSlugs
   </section>
 
   <!-- Recently Viewed + Favorites (conditional, client-side) -->
-  <RecentlyViewed client:idle allCalibers={caliberIndex} basePath="" />
-  <FavoritesList client:idle allCalibers={caliberIndex} basePath="" />
+  <RecentlyViewed client:idle allCalibers={caliberIndex} basePath={base} />
+  <FavoritesList client:idle allCalibers={caliberIndex} basePath={base} />
 
   <!-- Five Silo Navigation Panels -->
   <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16">
@@ -387,8 +389,8 @@ const featured = featuredSlugs
             Browse, search, and filter the complete database. Each entry includes ballistic tables, dimensional specs, load profiles, and adoption history.
           </p>
           <div class="mt-4 flex flex-col gap-1.5">
-            <a href="/calibers" class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Browse All Calibers</a>
-            <a href="/calibers/ammo" class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Ammo Finder</a>
+            <a href={`${base}/calibers`} class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Browse All Calibers</a>
+            <a href={`${base}/calibers/ammo`} class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Ammo Finder</a>
           </div>
         </div>
       </div>
@@ -404,15 +406,15 @@ const featured = featuredSlugs
             Side-by-side specs, ballistics charts, and trajectory overlays for any combination of calibers.
           </p>
           <div class="mt-4 flex flex-col gap-1.5">
-            <a href="/compare" class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Compare Tool</a>
+            <a href={`${base}/compare`} class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Compare Tool</a>
           </div>
           <div class="mt-3">
             <div class="mb-1.5 text-xs font-semibold uppercase tracking-wide text-text-muted">Popular</div>
             <div class="flex flex-wrap gap-x-3 gap-y-1">
-              <a href="/compare/9mm-luger-vs-45-acp" class="text-xs text-text-muted transition-colors hover:text-accent">9mm vs .45</a>
-              <a href="/compare/308-winchester-vs-65-creedmoor" class="text-xs text-text-muted transition-colors hover:text-accent">.308 vs 6.5 CM</a>
-              <a href="/compare/556x45mm-nato-vs-300-blackout" class="text-xs text-text-muted transition-colors hover:text-accent">5.56 vs .300 BLK</a>
-              <a href="/compare/308-winchester-vs-30-06-springfield" class="text-xs text-text-muted transition-colors hover:text-accent">.308 vs .30-06</a>
+              <a href={`${base}/compare/9mm-luger-vs-45-acp`} class="text-xs text-text-muted transition-colors hover:text-accent">9mm vs .45</a>
+              <a href={`${base}/compare/308-winchester-vs-65-creedmoor`} class="text-xs text-text-muted transition-colors hover:text-accent">.308 vs 6.5 CM</a>
+              <a href={`${base}/compare/556x45mm-nato-vs-300-blackout`} class="text-xs text-text-muted transition-colors hover:text-accent">5.56 vs .300 BLK</a>
+              <a href={`${base}/compare/308-winchester-vs-30-06-springfield`} class="text-xs text-text-muted transition-colors hover:text-accent">.308 vs .30-06</a>
             </div>
           </div>
         </div>
@@ -429,15 +431,15 @@ const featured = featuredSlugs
             Interactive calculators for trajectory, recoil, ammunition cost, range cards, and more.
           </p>
           <div class="mt-4 grid grid-cols-2 gap-x-4 gap-y-1.5">
-            <a href="/tools/ballistics-calculator" class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Ballistics Calc</a>
-            <a href="/tools/recoil-calculator" class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Recoil Calc</a>
-            <a href="/tools/drop-chart" class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Drop Chart</a>
-            <a href="/tools/ammo-cost-calculator" class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Ammo Cost Calc</a>
-            <a href="/tools/range-card" class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Range Card</a>
-            <a href="/tools/cartridge-overlay" class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Cartridge Overlay</a>
-            <a href="/tools/bc-estimator" class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">BC Estimator</a>
-            <a href="/tools/ethical-range" class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Ethical Range</a>
-            <a href="/tools/range-day" class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Range Day Planner</a>
+            <a href={`${base}/tools/ballistics-calculator`} class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Ballistics Calc</a>
+            <a href={`${base}/tools/recoil-calculator`} class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Recoil Calc</a>
+            <a href={`${base}/tools/drop-chart`} class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Drop Chart</a>
+            <a href={`${base}/tools/ammo-cost-calculator`} class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Ammo Cost Calc</a>
+            <a href={`${base}/tools/range-card`} class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Range Card</a>
+            <a href={`${base}/tools/cartridge-overlay`} class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Cartridge Overlay</a>
+            <a href={`${base}/tools/bc-estimator`} class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">BC Estimator</a>
+            <a href={`${base}/tools/ethical-range`} class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Ethical Range</a>
+            <a href={`${base}/tools/range-day`} class="text-sm font-medium text-text-secondary transition-colors hover:text-accent">Range Day Planner</a>
           </div>
         </div>
       </div>
@@ -456,13 +458,13 @@ const featured = featuredSlugs
           <div class="mt-4">
             <div class="mb-1.5 text-xs font-semibold uppercase tracking-wide text-text-muted">Best-of Picks</div>
             <div class="flex flex-wrap gap-x-3 gap-y-1">
-              <a href="/guides/best-deer-calibers" class="text-sm text-text-secondary transition-colors hover:text-accent">Deer</a>
-              <a href="/guides/best-elk-calibers" class="text-sm text-text-secondary transition-colors hover:text-accent">Elk</a>
-              <a href="/guides/best-self-defense-calibers" class="text-sm text-text-secondary transition-colors hover:text-accent">Self-Defense</a>
-              <a href="/guides/best-home-defense-calibers" class="text-sm text-text-secondary transition-colors hover:text-accent">Home Defense</a>
-              <a href="/guides/best-bear-defense-calibers" class="text-sm text-text-secondary transition-colors hover:text-accent">Bear</a>
-              <a href="/guides/best-long-range-calibers" class="text-sm text-text-secondary transition-colors hover:text-accent">Long-Range</a>
-              <a href="/guides/best-calibers-for-beginners" class="text-sm text-text-secondary transition-colors hover:text-accent">Beginners</a>
+              <a href={`${base}/guides/best-deer-calibers`} class="text-sm text-text-secondary transition-colors hover:text-accent">Deer</a>
+              <a href={`${base}/guides/best-elk-calibers`} class="text-sm text-text-secondary transition-colors hover:text-accent">Elk</a>
+              <a href={`${base}/guides/best-self-defense-calibers`} class="text-sm text-text-secondary transition-colors hover:text-accent">Self-Defense</a>
+              <a href={`${base}/guides/best-home-defense-calibers`} class="text-sm text-text-secondary transition-colors hover:text-accent">Home Defense</a>
+              <a href={`${base}/guides/best-bear-defense-calibers`} class="text-sm text-text-secondary transition-colors hover:text-accent">Bear</a>
+              <a href={`${base}/guides/best-long-range-calibers`} class="text-sm text-text-secondary transition-colors hover:text-accent">Long-Range</a>
+              <a href={`${base}/guides/best-calibers-for-beginners`} class="text-sm text-text-secondary transition-colors hover:text-accent">Beginners</a>
             </div>
           </div>
 
@@ -470,7 +472,7 @@ const featured = featuredSlugs
             <div class="mb-1.5 text-xs font-semibold uppercase tracking-wide text-text-muted">Deep Dives</div>
             <div class="flex flex-wrap gap-x-3 gap-y-1">
               {guides.map(g => (
-                <a href={`/guides/${g.data.slug}`} class="text-xs text-text-muted transition-colors hover:text-accent">
+                <a href={`${base}/guides/${g.data.slug}`} class="text-xs text-text-muted transition-colors hover:text-accent">
                   {g.data.title.replace('Best Calibers for ', '')}
                 </a>
               ))}
@@ -479,7 +481,7 @@ const featured = featuredSlugs
 
           <div class="mt-4">
             <a
-              href="/guides/quiz"
+              href={`${base}/guides/quiz`}
               class="inline-flex items-center gap-1.5 rounded border border-accent/30 bg-accent/5 px-3 py-1.5 text-sm font-medium text-accent transition-colors hover:bg-accent/10"
             >
               Find Your Caliber
@@ -506,28 +508,28 @@ const featured = featuredSlugs
             <div>
               <div class="mb-1.5 text-xs font-semibold uppercase tracking-wide text-text-muted">Data & Rankings</div>
               <div class="flex flex-col gap-1">
-                <a href="/reference/recoil-ranking" class="text-sm text-text-secondary transition-colors hover:text-accent">Recoil Ranking</a>
-                <a href="/reference/terminal-performance" class="text-sm text-text-secondary transition-colors hover:text-accent">Terminal Performance</a>
-                <a href="/reference/cost-comparison" class="text-sm text-text-secondary transition-colors hover:text-accent">Cost Comparison</a>
-                <a href="/reference/use-cases" class="text-sm text-text-secondary transition-colors hover:text-accent">Use Case Heatmap</a>
+                <a href={`${base}/reference/recoil-ranking`} class="text-sm text-text-secondary transition-colors hover:text-accent">Recoil Ranking</a>
+                <a href={`${base}/reference/terminal-performance`} class="text-sm text-text-secondary transition-colors hover:text-accent">Terminal Performance</a>
+                <a href={`${base}/reference/cost-comparison`} class="text-sm text-text-secondary transition-colors hover:text-accent">Cost Comparison</a>
+                <a href={`${base}/reference/use-cases`} class="text-sm text-text-secondary transition-colors hover:text-accent">Use Case Heatmap</a>
               </div>
             </div>
             <div>
               <div class="mb-1.5 text-xs font-semibold uppercase tracking-wide text-text-muted">Databases</div>
               <div class="flex flex-col gap-1">
-                <a href="/reference/firearms" class="text-sm text-text-secondary transition-colors hover:text-accent">Firearms Database</a>
-                <a href="/reference/family-tree" class="text-sm text-text-secondary transition-colors hover:text-accent">Cartridge Family Tree</a>
-                <a href="/reference/reloading" class="text-sm text-text-secondary transition-colors hover:text-accent">Reloading Reference</a>
+                <a href={`${base}/reference/firearms`} class="text-sm text-text-secondary transition-colors hover:text-accent">Firearms Database</a>
+                <a href={`${base}/reference/family-tree`} class="text-sm text-text-secondary transition-colors hover:text-accent">Cartridge Family Tree</a>
+                <a href={`${base}/reference/reloading`} class="text-sm text-text-secondary transition-colors hover:text-accent">Reloading Reference</a>
               </div>
             </div>
             <div>
               <div class="mb-1.5 text-xs font-semibold uppercase tracking-wide text-text-muted">Knowledge</div>
               <div class="flex flex-col gap-1">
-                <a href="/reference/glossary" class="text-sm text-text-secondary transition-colors hover:text-accent">Glossary</a>
-                <a href="/reference/timeline" class="text-sm text-text-secondary transition-colors hover:text-accent">Timeline</a>
-                <a href="/reference/myths" class="text-sm text-text-secondary transition-colors hover:text-accent">Myths Debunked</a>
-                <a href="/reference/nato-equivalents" class="text-sm text-text-secondary transition-colors hover:text-accent">NATO Equivalents</a>
-                <a href="/reference/hunting-regulations" class="text-sm text-text-secondary transition-colors hover:text-accent">Hunting Regulations</a>
+                <a href={`${base}/reference/glossary`} class="text-sm text-text-secondary transition-colors hover:text-accent">Glossary</a>
+                <a href={`${base}/reference/timeline`} class="text-sm text-text-secondary transition-colors hover:text-accent">Timeline</a>
+                <a href={`${base}/reference/myths`} class="text-sm text-text-secondary transition-colors hover:text-accent">Myths Debunked</a>
+                <a href={`${base}/reference/nato-equivalents`} class="text-sm text-text-secondary transition-colors hover:text-accent">NATO Equivalents</a>
+                <a href={`${base}/reference/hunting-regulations`} class="text-sm text-text-secondary transition-colors hover:text-accent">Hunting Regulations</a>
               </div>
             </div>
           </div>
@@ -562,7 +564,7 @@ const featured = featuredSlugs
           {featured.map(c => (
             <tr class="data-row border-b border-surface-border-subtle last:border-0 transition-colors hover:bg-accent/5">
               <td class="whitespace-nowrap px-4 py-3">
-                <a href={`/calibers/${c!.data.slug}`} class="font-medium text-text-primary transition-colors hover:text-accent">
+                <a href={`${base}/calibers/${c!.data.slug}`} class="font-medium text-text-primary transition-colors hover:text-accent">
                   {c!.data.name}
                 </a>
               </td>
@@ -592,7 +594,7 @@ const featured = featuredSlugs
 
     <div class="mt-6 text-center">
       <a
-        href="/calibers"
+        href={`${base}/calibers`}
         class="text-sm font-medium text-text-muted transition-colors hover:text-accent"
       >
         View all {calibers.length} calibers &rarr;

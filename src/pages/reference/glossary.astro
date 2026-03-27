@@ -106,6 +106,8 @@ const sections: { title: string; entries: GlossaryEntry[] }[] = [
   },
 ];
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const allEntries = sections.flatMap(s => s.entries);
 const faqJsonLd = {
   '@context': 'https://schema.org',
@@ -121,7 +123,7 @@ const faqJsonLd = {
 };
 ---
 
-<BaseLayout breadcrumbs={[{ label: 'Reference', href: '/reference' }, { label: 'Glossary' }]} title="Glossary" description="Definitions for ballistic, cartridge, reloading, and firearms terminology used throughout Caliber Companion." jsonLd={faqJsonLd}>
+<BaseLayout breadcrumbs={[{ label: 'Reference', href: `${base}/reference` }, { label: 'Glossary' }]} title="Glossary" description="Definitions for ballistic, cartridge, reloading, and firearms terminology used throughout Caliber Companion." jsonLd={faqJsonLd}>
   <div class="mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-12">
     <div class="mb-8">
       <h1 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">

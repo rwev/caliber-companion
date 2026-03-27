@@ -12,12 +12,14 @@ const caliberCosts = allCalibers
     costHigh: c.data.cost_per_round_usd[1],
   }))
   .sort((a, b) => a.name.localeCompare(b.name));
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
-<BaseLayout title="Ammunition Cost Calculator" description="Calculate your annual ammunition costs. Select calibers, set rounds per trip and trips per month to see monthly and yearly spending." breadcrumbs={[{ label: 'Tools', href: '/tools' }, { label: 'Ammo Cost Calculator' }]}>
+<BaseLayout title="Ammunition Cost Calculator" description="Calculate your annual ammunition costs. Select calibers, set rounds per trip and trips per month to see monthly and yearly spending." breadcrumbs={[{ label: 'Tools', href: `${base}/tools` }, { label: 'Ammo Cost Calculator' }]}>
   <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
     <div class="mb-2">
-      <a href="/tools" class="text-sm font-medium text-text-muted hover:text-accent transition-colors">
+      <a href={`${base}/tools`} class="text-sm font-medium text-text-muted hover:text-accent transition-colors">
         ← Tools
       </a>
     </div>

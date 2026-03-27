@@ -72,11 +72,13 @@ const { slugA, slugB, allMatchups: MATCHUPS } = Astro.props;
 const allCalibers = await getCollection('caliberData');
 const caliberMap = new Map(allCalibers.map(c => [c.data.slug, c.data]));
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const a = caliberMap.get(slugA);
 const b = caliberMap.get(slugB);
 
 if (!a || !b) {
-  return Astro.redirect('/compare');
+  return Astro.redirect(`${base}/compare`);
 }
 
 // Build comparison rows
@@ -179,7 +181,7 @@ const jsonLd = {
       'headline': `${a.name} vs ${b.name} — Complete Caliber Comparison`,
       'description': pageDescription,
       'publisher': { '@type': 'Organization', 'name': 'Caliber Companion' },
-      'mainEntityOfPage': `https://rwev.github.io/compare/${slugA}-vs-${slugB}`,
+      'mainEntityOfPage': `https://rwev.github.io${base}/compare/${slugA}-vs-${slugB}`,
     },
     {
       '@type': 'FAQPage',
@@ -225,20 +227,20 @@ const tables = [
 ];
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription} ogType="article" jsonLd={jsonLd} breadcrumbs={[{ label: 'Compare', href: '/compare' }, { label: `${a.name} vs ${b.name}` }]}>
+<BaseLayout title={pageTitle} description={pageDescription} ogType="article" jsonLd={jsonLd} breadcrumbs={[{ label: 'Compare', href: `${base}/compare` }, { label: `${a.name} vs ${b.name}` }]}>
   <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-12">
     <!-- Header -->
     <div class="mb-8 border-b border-surface-border pb-6">
       <div class="flex items-center gap-3 mb-3">
-        <a href="/compare" class="text-sm font-medium text-text-muted hover:text-accent transition-colors">
+        <a href={`${base}/compare`} class="text-sm font-medium text-text-muted hover:text-accent transition-colors">
           ← Compare Tool
         </a>
       </div>
 
       <h1 class="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
-        <a href={`/calibers/${a.slug}`} class="hover:text-accent transition-colors">{a.name}</a>
+        <a href={`${base}/calibers/${a.slug}`} class="hover:text-accent transition-colors">{a.name}</a>
         <span class="text-text-muted mx-2 text-2xl sm:text-3xl">vs</span>
-        <a href={`/calibers/${b.slug}`} class="hover:text-accent transition-colors">{b.name}</a>
+        <a href={`${base}/calibers/${b.slug}`} class="hover:text-accent transition-colors">{b.name}</a>
       </h1>
       <p class="mt-2 text-base text-text-muted max-w-2xl">
         <span class="font-mono">{a.designation}</span> vs <span class="font-mono">{b.designation}</span> — complete side-by-side comparison
@@ -247,7 +249,7 @@ const tables = [
 
     <!-- Quick verdict cards -->
     <div class="grid gap-4 sm:grid-cols-2 mb-10">
-      <a href={`/calibers/${a.slug}`} class="group rounded-lg border border-surface-border bg-surface-raised p-5 hover:border-accent/40 transition-colors">
+      <a href={`${base}/calibers/${a.slug}`} class="group rounded-lg border border-surface-border bg-surface-raised p-5 hover:border-accent/40 transition-colors">
         <div class="text-xl font-semibold text-text-primary group-hover:text-accent transition-colors">{a.name}</div>
         <div class="mt-1 font-mono text-sm text-text-muted">{a.designation} · {titleCase(a.category)} · {a.year_introduced}</div>
         <div class="mt-3 grid grid-cols-3 gap-3">
@@ -266,7 +268,7 @@ const tables = [
         </div>
       </a>
 
-      <a href={`/calibers/${b.slug}`} class="group rounded-lg border border-surface-border bg-surface-raised p-5 hover:border-accent/40 transition-colors">
+      <a href={`${base}/calibers/${b.slug}`} class="group rounded-lg border border-surface-border bg-surface-raised p-5 hover:border-accent/40 transition-colors">
         <div class="text-xl font-semibold text-text-primary group-hover:text-accent transition-colors">{b.name}</div>
         <div class="mt-1 font-mono text-sm text-text-muted">{b.designation} · {titleCase(b.category)} · {b.year_introduced}</div>
         <div class="mt-3 grid grid-cols-3 gap-3">
@@ -387,7 +389,7 @@ const tables = [
     <!-- Interactive Compare CTA -->
     <div class="mt-8 text-center">
       <a
-        href={`/compare?c=${a.slug}&c=${b.slug}`}
+        href={`${base}/compare?c=${a.slug}&c=${b.slug}`}
         class="inline-flex items-center gap-2 rounded-md border border-accent bg-accent/10 px-6 py-3 text-base font-medium text-accent transition-all hover:bg-accent/20"
       >
         <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -410,7 +412,7 @@ const tables = [
             if (!calA || !calB) return null;
             return (
               <a
-                href={`/compare/${ma}-vs-${mb}`}
+                href={`${base}/compare/${ma}-vs-${mb}`}
                 class="block rounded-md border border-surface-border px-3 py-2 text-sm text-text-secondary hover:border-accent/30 hover:text-accent transition-colors"
               >
                 {calA.name} vs {calB.name}

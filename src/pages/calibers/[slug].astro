@@ -126,6 +126,8 @@ const marketRows = [
 
 const caliberDescription = prose?.data.summary || `${d.name} (${d.designation}) — ${titleCase(d.category)} cartridge. Effective range: ${d.effective_range_yd} yd. Year introduced: ${d.year_introduced}.`;
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -137,7 +139,7 @@ const jsonLd = {
     '@type': 'Organization',
     'name': 'Caliber Companion',
   },
-  'mainEntityOfPage': `https://rwev.github.io/calibers/${d.slug}`,
+  'mainEntityOfPage': `https://rwev.github.io${base}/calibers/${d.slug}`,
 };
 
 const reloadingRows = [
@@ -202,13 +204,13 @@ const faqJsonLd = {
 };
 ---
 
-<BaseLayout title={d.name} description={caliberDescription} ogType="article" jsonLd={jsonLd} breadcrumbs={[{ label: 'Calibers', href: '/calibers' }, { label: d.name }]}>
+<BaseLayout title={d.name} description={caliberDescription} ogType="article" jsonLd={jsonLd} breadcrumbs={[{ label: 'Calibers', href: `${base}/calibers` }, { label: d.name }]}>
   <RecentlyViewedTracker client:idle slug={d.slug} />
   <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12">
     <!-- Header -->
     <div class="mb-8 border-b border-surface-border pb-6">
       <div class="flex items-center gap-3 mb-2">
-        <a href="/calibers" class="text-sm font-medium text-text-muted hover:text-accent transition-colors">
+        <a href={`${base}/calibers`} class="text-sm font-medium text-text-muted hover:text-accent transition-colors">
           ← All Calibers
         </a>
         <span class="text-text-muted">·</span>
@@ -222,7 +224,7 @@ const faqJsonLd = {
           {d.name}
         </h1>
         <div class="flex items-center gap-2 shrink-0">
-          <ShareButton client:idle title={`${d.name} — Caliber Companion`} url={`https://rwev.github.io/calibers/${d.slug}`} />
+          <ShareButton client:idle title={`${d.name} — Caliber Companion`} url={`https://rwev.github.io${base}/calibers/${d.slug}`} />
           <FavoriteButton client:idle slug={d.slug} name={d.name} />
         </div>
       </div>
@@ -543,7 +545,7 @@ const faqJsonLd = {
 
         <!-- Compare Link -->
         <a
-          href={`/compare?c=${d.slug}`}
+          href={`${base}/compare?c=${d.slug}`}
           class="flex items-center justify-center gap-2 rounded-md border border-surface-border bg-surface-raised px-4 py-3 text-base font-medium text-text-secondary transition-colors hover:border-accent hover:text-accent"
         >
           <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -593,7 +595,7 @@ const faqJsonLd = {
         <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {relatedCalibers.map(rc => (
             <a
-              href={`/calibers/${rc.slug}`}
+              href={`${base}/calibers/${rc.slug}`}
               class="group rounded-lg border border-surface-border bg-surface-raised p-4 transition-colors hover:border-accent"
             >
               <div class="text-base font-medium text-text-primary group-hover:text-accent transition-colors">

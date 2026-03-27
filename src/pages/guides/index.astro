@@ -5,17 +5,19 @@ import { getCollection } from 'astro:content';
 const guides = await getCollection('guides');
 const sorted = guides.sort((a, b) => a.data.title.localeCompare(b.data.title));
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const bestOf = [
-  { href: '/guides/best-deer-calibers', title: 'Best Calibers for Deer', desc: 'Top picks across 5 tiers from all-around to budget' },
-  { href: '/guides/best-elk-calibers', title: 'Best Calibers for Elk', desc: 'All-around, modern, budget, and low-recoil choices' },
-  { href: '/guides/best-self-defense-calibers', title: 'Best for Self-Defense', desc: 'CCW, home defense, and recoil-sensitive options' },
-  { href: '/guides/best-home-defense-calibers', title: 'Best for Home Defense', desc: 'Handgun, rifle/carbine, and shotgun picks' },
-  { href: '/guides/best-bear-defense-calibers', title: 'Best for Bear Defense', desc: 'Handgun, rifle, and minimum-viable options' },
-  { href: '/guides/best-long-range-calibers', title: 'Best for Long-Range', desc: 'Precision tiers from 500 yards to ELR 1500+' },
-  { href: '/guides/best-calibers-for-beginners', title: 'Best for Beginners', desc: 'First handgun, rifle, shotgun, and budget picks' },
+  { href: `${base}/guides/best-deer-calibers`, title: 'Best Calibers for Deer', desc: 'Top picks across 5 tiers from all-around to budget' },
+  { href: `${base}/guides/best-elk-calibers`, title: 'Best Calibers for Elk', desc: 'All-around, modern, budget, and low-recoil choices' },
+  { href: `${base}/guides/best-self-defense-calibers`, title: 'Best for Self-Defense', desc: 'CCW, home defense, and recoil-sensitive options' },
+  { href: `${base}/guides/best-home-defense-calibers`, title: 'Best for Home Defense', desc: 'Handgun, rifle/carbine, and shotgun picks' },
+  { href: `${base}/guides/best-bear-defense-calibers`, title: 'Best for Bear Defense', desc: 'Handgun, rifle, and minimum-viable options' },
+  { href: `${base}/guides/best-long-range-calibers`, title: 'Best for Long-Range', desc: 'Precision tiers from 500 yards to ELR 1500+' },
+  { href: `${base}/guides/best-calibers-for-beginners`, title: 'Best for Beginners', desc: 'First handgun, rifle, shotgun, and budget picks' },
 ];
 
-const allItems = [...bestOf, ...sorted.map(g => ({ href: `/guides/${g.data.slug}`, title: g.data.title, desc: g.data.summary }))];
+const allItems = [...bestOf, ...sorted.map(g => ({ href: `${base}/guides/${g.data.slug}`, title: g.data.title, desc: g.data.summary }))];
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
@@ -48,7 +50,7 @@ const jsonLd = {
     <!-- Find Your Caliber Quiz -->
     <div class="mb-10">
       <a
-        href="/guides/quiz"
+        href={`${base}/guides/quiz`}
         class="group flex items-center gap-4 rounded-lg border border-accent/30 bg-accent/5 p-5 transition-all hover:border-accent hover:bg-accent/10"
       >
         <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-accent text-white">
@@ -96,7 +98,7 @@ const jsonLd = {
       <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {sorted.map(guide => (
           <a
-            href={`/guides/${guide.data.slug}`}
+            href={`${base}/guides/${guide.data.slug}`}
             class="group rounded-lg border border-surface-border bg-surface-raised p-5 transition-colors hover:border-accent"
           >
             <h3 class="text-lg font-semibold text-text-primary group-hover:text-accent transition-colors">

@@ -20,6 +20,8 @@ const caliberSummaries = calibers.map(c => ({
   year_introduced: c.data.year_introduced,
 }));
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
@@ -32,7 +34,7 @@ const jsonLd = {
       '@type': 'ListItem',
       position: i + 1,
       name: c.data.name,
-      url: `https://rwev.github.io/calibers/${c.data.slug}`,
+      url: `https://rwev.github.io${base}/calibers/${c.data.slug}`,
     })),
   },
 };
@@ -61,8 +63,8 @@ const scatterPoints = calibers.map(c => ({
       </p>
     </div>
 
-    <CaliberScatterPlot client:visible calibers={scatterPoints} basePath="" />
+    <CaliberScatterPlot client:visible calibers={scatterPoints} basePath={base} />
 
-    <FilterBar client:idle calibers={caliberSummaries} basePath="" />
+    <FilterBar client:idle calibers={caliberSummaries} basePath={base} />
   </div>
 </BaseLayout>

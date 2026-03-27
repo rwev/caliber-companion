@@ -21,6 +21,8 @@ const caliberReload = allCalibers
 
 const withData = caliberReload.filter(c => c.primerType || c.maxPressure);
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const pageDescription = `Reloading reference for ${withData.length} calibers — primer types, SAAMI max pressure, powder charge ranges, and bullet weights. Searchable and sortable table for handloaders.`;
 ---
 
@@ -36,6 +38,6 @@ const pageDescription = `Reloading reference for ${withData.length} calibers —
       </p>
     </div>
 
-    <ReloadingReference client:idle calibers={caliberReload} basePath="" />
+    <ReloadingReference client:idle calibers={caliberReload} basePath={base} />
   </div>
 </BaseLayout>
